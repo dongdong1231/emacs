@@ -1,0 +1,137 @@
+// Copyright (c) 2015 YesDat Inc.
+// Author: Jiaxiong Xu (ric@yesdat.com)
+
+#ifndef DSP_IMPORT_HBASE_HBASE_CLIENT_H_
+#define DSP_IMPORT_HBASE_HBASE_CLIENT_H_
+
+#include <stdint.h>
+
+#include <map>
+#include <mutex>
+#include <string>
+#include <vector>
+
+#include "thirdparty/thrift/transport/TSocket.h"
+#include "thirdparty/thrift/transport/TBufferTransports.h"
+#include "thirdparty/thrift/protocol/TBinaryProtocol.h"
+#include "dsp/import_hbase/gen-cpp/Hbase.h"
+
+using apache::hadoop::hbase::thrift::ColumnDescriptor;
+using apache::hadoop::hbase::thrift::TRegionInfo;
+using apache::thrift::transport::TSocket;
+using apache::thrift::transport::TTransport;
+using apache::thrift::transport::TBufferedTransport;
+using apache::thrift::protocol::TProtocol;
+using apache::thrift::protocol::TBinaryProtocol;
+using apache::hadoop::hbase::thrift::HbaseClient;
+using apache::hadoop::hbase::thrift::TRowResult;
+using apache::hadoop::hbase::thrift::Mutation;
+using apache::hadoop::hbase::thrift::BatchMutation;
+using apache::hadoop::hbase::thrift::TCell;
+using apache::hadoop::hbase::thrift::ScannerID;
+
+
+namespace dsp {
+namespace hbase_client {
+class HbaseClient {
+ public:
+  HbaseClient(const std::string &server_ip,
+              int32_t server_port);
+  HBaseClient(const std::vector<std::pair<std::string, int32_t>> &server_info);
+  virtual ~HbaseClient();
+
+  void EnableTable(const std::string &table_name);
+  void DisableTable(const std::string &table_name);
+  bool TableExist(const std::string &table_name);
+  void CreateTable(
+      const std::string &table_name,
+      const std::vector<ColumnDescriptor> &column_families);
+  void DeleteTable(const std::string &table_name);
+
+  bool Exist(const std::string &table_name, const std::string &row);
+  int64_t AtomicIncrement(
+      const std::string &table_name,
+      const std::string &row, const std::string &column, int64_t value);
+  void GetColumn(std::string &result,
+                 const std::string &table_name,
+                 const std::string &row, const std::string &column,
+                 const std::map<std::string, std::string> &attributes);
+  void GetColumns(
+      std::vector<apache::hadoop::hbase::thrift::TRowResult> &result,
+      const std::string &table_name,
+      const std::string &row,
+      const std::vector<std::string> &columns,
+      const std::map<std::string, std::string> &attributes);
+  void GetRow(std::vector<apache::hadoop::hbase::thrift::TRowResult> &result,
+              const std::string &table_name,
+              const std::string &row,
+              const std::map<std::string, std::string> &attributes);
+  void GetRows(std::vector<apache::hadoop::hbase::thrift::TRowResult> &result,
+               const std::string &table_name,
+               const std::vector<std::string> &rows,
+               const std::map<std::string, std::string> &attributes);
+  void MutateRow(
+      const std::string &table_name,
+      const std::string &row,
+      const std::vector<Mutation> &mutations,
+      const std::map<std::string, std::string> &attributes);
+  void MutateRows(
+      const std::string &table_name,
+      const std::vector<BatchMutation> &row_batches,
+      const std::map<std::string, std::string> &attributes);
+  bool CheckAndPut(const std::string &table_name,
+                   const std::string &row,
+                   const std::string &column,
+                   const std::string &value,
+                   const apache::hadoop::hbase::thrift::Mutation &mput,
+                   const std::map<std::string, std::string> &attributes);
+  void GetTableRegionInfo(
+      std::vector<apache::hadoop::hbase::thrift::TRegionInfo> &result,
+      const std::string &table_name);
+
+  apache::hadoop::hbase::thrift::ScannerID OpenScanner(
+      const std::string &table_name,
+      const apache::hadoop::hbase::thrift::TScan &scan,
+      const std::map<std::string, std::string> &attributes);
+  void GetNextSingleRow(
+      std::vector<apache::hadoop::hbase::thrift::TRowResult> &result,
+      apache::hadoop::hbase::thrift::ScannerID id);
+  void GetNextBatchRow(
+      std::vector<apache::hadoop::hbase::thrift::TRowResult> &result,
+      const apache::hadoop::hbase::thrift::ScannerID id,
+      int32_t batch_rows);
+  void CloseScanner(apache::hadoop::hbase::thrift::ScannerID id);
+
+ private:
+  struct HBaseClientRep {
+    boost::shared_ptr<apache::thrift::transport::TSocket> socket_;
+    boost::shared_ptr<apache::thrift::transport::TTransport> transport_;
+    boost::shared_ptr<apache::thrift::protocol::TProtocol> protocol_;
+    boost::shared_ptr<apache::hadoop::hbase::thrift::HbaseClient> client_;
+  };
+
+  std::vector<HBaseClientRep> clients_;
+
+  class HbaseClientRAII {
+   public:
+    HbaseClientRAII();
+    HBaseClientRep
+
+
+  };
+
+ protected:
+  boost::shared_ptr<apache::thrift::transport::TSocket> socket_;
+  boost::shared_ptr<apache::thrift::transport::TTransport> transport_;
+  boost::shared_ptr<apache::thrift::protocol::TProtocol> protocol_;
+  boost::shared_ptr<apache::hadoop::hbase::thrift::HbaseClient> client_;
+  std::mutex mutex_;
+
+  std::string server_ip_;
+  int32_t server_port_;
+};
+
+}  // namespace hbase_client
+}  // namespace dsp
+
+#endif  // DSP_IMPORT_HBASE_HBASE_CLIENT_H_

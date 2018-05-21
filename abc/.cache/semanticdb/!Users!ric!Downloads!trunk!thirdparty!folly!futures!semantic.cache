@@ -1,0 +1,1344 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("atomic" include (:system-flag t) nil [612 629])
+            ("cstdint" include (:system-flag t) nil [630 648])
+            ("folly/futures/Future.h" include (:system-flag t) nil [650 683])
+            ("folly/futures/Promise.h" include (:system-flag t) nil [684 718])
+            ("folly" type
+               (:members 
+                  ( ("futures" type
+                       (:members 
+                          ( ("Barrier" type
+                               (:members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [1558 1565])
+                                    ("Barrier" function
+                                       (:prototype-flag t
+                                        :constructor-flag t
+                                        :arguments 
+                                          ( ("n" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1585 1596]))                                          
+                                        :type ("Barrier" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1577 1597])
+                                    ("Barrier" function
+                                       (:prototype-flag t
+                                        :destructor-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1600 1611])
+                                    ("wait" function
+                                       (:prototype-flag t
+                                        :type ("folly::Future" type
+                                             (:template-specifier 
+                                                ( ("bool" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol classsubparts) [1615 1642])
+                                    ("private" label nil (reparse-symbol classsubparts) [1645 1653])
+                                    ("BoolPromise" type
+                                       (:typedef ("folly::Promise" type
+                                             (:template-specifier 
+                                                ( ("bool" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil)
+                                        :type "typedef")
+                                        (reparse-symbol classsubparts) [1656 1697])
+                                    ("kReaderShift" variable
+                                       (:default-value "32"
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1718 1745])
+                                    ("kReaderShift" variable (:type "int") (reparse-symbol classsubparts) [1799 1812])
+                                    ("kValueMask" variable
+                                       (:default-value "kReader - 1"
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1832 1866])
+                                    ("ControlBlock" type
+                                       (:members 
+                                          ( ("valueAndReaderCount" variable (:type ("std::atomic" type
+                                                 (:template-specifier 
+                                                    ( ("uint64_t" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol classsubparts) [2514 2556]))                                          
+                                        :type "struct")
+                                        (reparse-symbol classsubparts) [2398 2561])
+                                    ("ControlBlockAndPromise" type
+                                       (:members 
+                                          ( ("cb" variable (:type ("ControlBlock" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2601 2617])
+                                            ("promises" variable
+                                               (:dereference 1
+                                                :type ("BoolPromise" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [2622 2646]))                                          
+                                        :type "struct")
+                                        (reparse-symbol classsubparts) [2565 2651])
+                                    ("promises" function
+                                       (:pointer 1
+                                        :typemodifiers ("static")
+                                        :arguments 
+                                          ( ("cb" variable
+                                               (:pointer 1
+                                                :type ("ControlBlock" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2684 2701]))                                          
+                                        :type ("BoolPromise" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [2655 2775])
+                                    ("controlBlockSize" function
+                                       (:typemodifiers ("static")
+                                        :arguments 
+                                          ( ("n" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2810 2819]))                                          
+                                        :type ("size_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [2779 2906])
+                                    ("allocateControlBlock" function
+                                       (:prototype-flag t
+                                        :pointer 1
+                                        :type ("ControlBlock" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [2910 2947])
+                                    ("freeControlBlock" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("b" variable
+                                               (:pointer 1
+                                                :type ("ControlBlock" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2972 2988]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [2950 2989])
+                                    ("size_" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2993 3008])
+                                    ("controlBlock_" variable (:type ("std::atomic" type
+                                         (:template-specifier 
+                                            ( ("ControlBlock" type (:pointer 1) nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [3011 3052]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [1541 3055]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [738 3058]))                  
+                :type "namespace")
+                nil [720 3059]))          
+      :file "Barrier.h"
+      :pointmax 3075
+      :fsize 3074
+      :lastmodtime '(22913 34676 0 0)
+      :unmatched-syntax '((symbol 1822 . 1831) (STATIC 1815 . 1821) (punctuation 1797 . 1798) (punctuation 1796 . 1797) (semantic-list 1792 . 1795) (symbol 1784 . 1792) (number 1793 . 1794) (punctuation 1782 . 1783) (symbol 1774 . 1781) (symbol 1765 . 1773) (symbol 1755 . 1764) (STATIC 1748 . 1754) (symbol 1708 . 1717) (STATIC 1701 . 1707) (EXPLICIT 1568 . 1576) (symbol 606 . 610) (symbol 599 . 605) (punctuation 598 . 599)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("folly/Portability.h" include (:system-flag t) nil [612 642])
+            ("folly/Try.h" include (:system-flag t) nil [643 665])
+            ("functional" include (:system-flag t) nil [666 687])
+            ("folly" type
+               (:members 
+                  ( ("Future" type
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type "class"
+                        :prototype t)
+                        (reparse-symbol namespacesubparts) [731 763])
+                    ("futures" type
+                       (:members 
+                          ( ("detail" type
+                               (:members 
+                                  ( ("EmptyConstruct" type (:type "struct") (reparse-symbol namespacesubparts) [804 829])
+                                    ("CoreCallbackState" type
+                                       (:template 
+                                          ( ("T" type (:type "class") nil nil)
+                                            ("F" type (:type "class") nil nil))                                          
+                                        :type "class"
+                                        :prototype t)
+                                        (reparse-symbol namespacesubparts) [830 888]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [785 890]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [765 912])
+                    ("Promise" type
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type "class"
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [971 978])
+                            ("noexcept" variable (:type "int") (reparse-symbol classsubparts) [1011 1020])
+                            ("Promise" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :type ("Promise" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1052 1062])
+                            ("Promise" function
+                               (:prototype-flag t
+                                :destructor-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [1065 1076])
+                            ("noexcept" variable (:type "int") (reparse-symbol classsubparts) [1217 1226])
+                            ("noexcept" variable (:type "int") (reparse-symbol classsubparts) [1262 1271])
+                            ("getFuture" function
+                               (:prototype-flag t
+                                :type ("Future" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [1427 1449])
+                            ("setException" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("ew" variable (:type ("exception_wrapper" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1526 1547]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1508 1548])
+                            ("setException" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::exception_ptr" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1783 1809]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1765 1810])
+                            ("setException" function
+                               (:template 
+                                  ( ("E" type (:type "class") nil nil))                                  
+                                :type ("std::enable_if::type" type (:type "class") nil nil)
+                                :arguments 
+                                  ( ("" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("E" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2150 2159]))                                  
+                                :typemodifiers ("typename")
+                                :prototype-flag t)
+                                (reparse-symbol classsubparts) [2041 2160])
+                            ("setInterruptHandler" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("" variable (:type ("std::function" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2507 2521])
+                                    ("" variable (:type "void") (reparse-symbol arg-sub-list) [2521 2551]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2482 2554])
+                            ("setValue" function
+                               (:template 
+                                  ( ("B" type (:type "class") nil nil))                                  
+                                :type ("std::enable_if::type" type (:type "class") nil nil)
+                                :typemodifiers ("typename"))
+                                (reparse-symbol classsubparts) [2600 2734])
+                            ("setValue" function
+                               (:template 
+                                  ( ("M" type (:type "class") nil nil))                                  
+                                :type "void"
+                                :arguments 
+                                  ( ("" variable
+                                       (:reference 1
+                                        :type ("M" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2844 2847])
+                                    ("" variable (:type ("value" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2848 2854]))                                  
+                                :prototype-flag t)
+                                (reparse-symbol classsubparts) [2809 2855])
+                            ("setTry" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("" variable
+                                       (:reference 1
+                                        :type ("Try" type
+                                             (:template-specifier 
+                                                ( ("T" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [2871 2879])
+                                    ("" variable (:type ("t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2880 2882]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2859 2883])
+                            ("setWith" function
+                               (:template 
+                                  ( ("F" type (:type "class") nil nil))                                  
+                                :type "void"
+                                :arguments 
+                                  ( ("" variable
+                                       (:reference 1
+                                        :type ("F" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3157 3160])
+                                    ("" variable (:type ("func" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3161 3166]))                                  
+                                :prototype-flag t)
+                                (reparse-symbol classsubparts) [3123 3167])
+                            ("noexcept" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol classsubparts) [3190 3205])
+                            ("private" label nil (reparse-symbol classsubparts) [3208 3216])
+                            ("corePtr" variable (:type ("corePtr" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3247 3263])
+                            ("Future" type
+                               (:template 
+                                  ( ("" type nil nil nil))                                  
+                                :type "class"
+                                :prototype t)
+                                (reparse-symbol classsubparts) [3266 3303])
+                            ("CoreCallbackState" type
+                               (:template 
+                                  ( ("" type nil nil nil)
+                                    ("" type nil nil nil))                                  
+                                :type "class"
+                                :prototype t
+                                :parent "futures::detail")
+                                (reparse-symbol classsubparts) [3306 3380])
+                            ("retrieved_" variable (:type "bool") (reparse-symbol classsubparts) [3451 3467])
+                            ("core_" variable (:type ("corePtr" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3501 3515])
+                            ("noexcept" variable (:type "int") (reparse-symbol classsubparts) [3569 3578])
+                            ("throwIfFulfilled" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [3582 3606])
+                            ("throwIfRetrieved" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [3609 3633])
+                            ("detach" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [3636 3650]))                          )
+                        (reparse-symbol namespacesubparts) [935 3653]))                  
+                :type "namespace")
+                nil [689 3656])
+            ("folly/futures/Future.h" include (:system-flag t) nil [3658 3691])
+            ("folly/futures/Promise-inl.h" include (:system-flag t) nil [3692 3730]))          
+      :file "Promise.h"
+      :pointmax 3731
+      :fsize 3730
+      :lastmodtime '(22913 34676 0 0)
+      :unmatched-syntax '((semantic-list 3535 . 3568) (symbol 3528 . 3535) (EXPLICIT 3519 . 3527) (punctuation 3246 . 3247) (punctuation 3245 . 3246) (punctuation 3244 . 3245) (symbol 3243 . 3244) (punctuation 3242 . 3243) (symbol 3236 . 3242) (TYPENAME 3227 . 3235) (TYPEDEF 3219 . 3226) (semantic-list 3187 . 3189) (symbol 3176 . 3187) (BOOL 3171 . 3175) (punctuation 3159 . 3160) (punctuation 2878 . 2879) (punctuation 2846 . 2847) (punctuation 2551 . 2552) (semantic-list 2525 . 2551) (punctuation 2520 . 2521) (semantic-list 1723 . 1762) (symbol 1707 . 1723) (string 1724 . 1761) (semantic-list 1247 . 1261) (punctuation 1246 . 1247) (OPERATOR 1238 . 1246) (punctuation 1259 . 1260) (punctuation 1236 . 1237) (symbol 1229 . 1236) (punctuation 1259 . 1260) (semantic-list 1202 . 1216) (symbol 1195 . 1202) (punctuation 1214 . 1215) (punctuation 1177 . 1178) (DELETE 1171 . 1177) (punctuation 1169 . 1170) (semantic-list 1152 . 1168) (punctuation 1151 . 1152) (OPERATOR 1143 . 1151) (punctuation 1141 . 1142) (symbol 1134 . 1141) (punctuation 1130 . 1131) (DELETE 1124 . 1130) (punctuation 1122 . 1123) (semantic-list 1105 . 1121) (symbol 1098 . 1105) (semantic-list 1008 . 1010) (symbol 999 . 1008) (punctuation 997 . 998) (symbol 996 . 997) (punctuation 995 . 996) (symbol 988 . 995) (STATIC 981 . 987) (symbol 606 . 610) (symbol 599 . 605) (punctuation 598 . 599)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("atomic" include (:system-flag t) nil [612 629])
+            ("thread" include (:system-flag t) nil [630 647])
+            ("folly/futures/FutureException.h" include (:system-flag t) nil [649 691])
+            ("folly/futures/detail/Core.h" include (:system-flag t) nil [692 730])
+            ("folly" type
+               (:members 
+                  ( ("Promise" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("Promise" type (:type "class") nil nil)
+                        :parent "Promise"
+                        :constructor-flag t)
+                        (reparse-symbol namespacesubparts) [875 981])
+                    ("core_" function
+                       (:arguments 
+                          ( ("" variable (:type ("other" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1093 1099])
+                            ("" variable (:type ("core_" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1099 1105]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [1087 1162])
+                    ("throwIfFulfilled" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type "void"
+                        :parent "Promise")
+                        (reparse-symbol namespacesubparts) [1343 1505])
+                    ("throwIfRetrieved" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type "void"
+                        :parent "Promise")
+                        (reparse-symbol namespacesubparts) [1507 1624])
+                    ("core_" function
+                       (:arguments 
+                          ( ("" variable (:type ("nullptr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1738 1746]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [1732 1749])
+                    ("Promise" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type "void"
+                        :parent "Promise"
+                        :destructor-flag t)
+                        (reparse-symbol namespacesubparts) [1751 1808])
+                    ("detach" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type "void"
+                        :parent "Promise")
+                        (reparse-symbol namespacesubparts) [1810 1976])
+                    ("getFuture" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("Future" type
+                             (:template-specifier 
+                                ( ("T" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :parent "Promise")
+                        (reparse-symbol namespacesubparts) [1978 2104])
+                    ("setException" function
+                       (:template 
+                          ( ("E" type (:type "class") nil nil))                          
+                        :type ("std::enable_if::type" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("e" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("E" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2242 2253]))                          
+                        :typemodifiers ("typename")
+                        :parent "Promise")
+                        (reparse-symbol namespacesubparts) [2125 2303])
+                    ("setException" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type "void"
+                        :arguments 
+                          ( ("ep" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::exception_ptr" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2354 2383]))                          
+                        :parent "Promise")
+                        (reparse-symbol namespacesubparts) [2305 2616])
+                    ("setException" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type "void"
+                        :arguments 
+                          ( ("ew" variable (:type ("exception_wrapper" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2667 2688]))                          
+                        :parent "Promise")
+                        (reparse-symbol namespacesubparts) [2618 2757])
+                    ("setInterruptHandler" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type "void"
+                        :arguments 
+                          ( ("" variable (:type ("std::function" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2818 2832])
+                            ("" variable (:type "void") (reparse-symbol arg-sub-list) [2832 2862])
+                            ("" variable (:type ("fn" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2864 2867]))                          
+                        :parent "Promise")
+                        (reparse-symbol namespacesubparts) [2759 2916])
+                    ("setTry" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type "void"
+                        :arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :type ("Try" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [2961 2969])
+                            ("" variable (:type ("t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2970 2972]))                          
+                        :parent "Promise")
+                        (reparse-symbol namespacesubparts) [2918 3032])
+                    ("setValue" function
+                       (:template 
+                          ( ("M" type (:type "class") nil nil))                          
+                        :type "void"
+                        :arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :type ("M" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3098 3101])
+                            ("" variable (:type ("v" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3102 3104]))                          
+                        :parent "Promise")
+                        (reparse-symbol namespacesubparts) [3053 3237])
+                    ("setWith" function
+                       (:template 
+                          ( ("F" type (:type "class") nil nil))                          
+                        :type "void"
+                        :arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :type ("F" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3302 3305])
+                            ("" variable (:type ("func" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3306 3311]))                          
+                        :parent "Promise")
+                        (reparse-symbol namespacesubparts) [3258 3383]))                  
+                :type "namespace")
+                nil [732 3521]))          
+      :file "Promise-inl.h"
+      :pointmax 3522
+      :fsize 3521
+      :lastmodtime '(22913 34676 0 0)
+      :unmatched-syntax '((semantic-list 3450 . 3518) (symbol 3441 . 3449) (CONST 3435 . 3440) (semantic-list 3432 . 3434) (symbol 3421 . 3432) (punctuation 3420 . 3421) (punctuation 3419 . 3420) (punctuation 3418 . 3419) (symbol 3417 . 3418) (punctuation 3416 . 3417) (symbol 3409 . 3416) (BOOL 3404 . 3408) (punctuation 3402 . 3403) (symbol 3401 . 3402) (CLASS 3395 . 3400) (punctuation 3394 . 3395) (TEMPLATE 3385 . 3393) (punctuation 3304 . 3305) (punctuation 3256 . 3257) (symbol 3255 . 3256) (CLASS 3249 . 3254) (punctuation 3248 . 3249) (TEMPLATE 3239 . 3247) (punctuation 3100 . 3101) (punctuation 3051 . 3052) (symbol 3050 . 3051) (CLASS 3044 . 3049) (punctuation 3043 . 3044) (TEMPLATE 3034 . 3042) (punctuation 2968 . 2969) (punctuation 2862 . 2863) (semantic-list 2836 . 2862) (punctuation 2831 . 2832) (punctuation 2123 . 2124) (symbol 2122 . 2123) (CLASS 2116 . 2121) (punctuation 2115 . 2116) (TEMPLATE 2106 . 2114) (punctuation 1730 . 1731) (semantic-list 1723 . 1730) (symbol 1713 . 1723) (punctuation 1711 . 1712) (symbol 1698 . 1706) (semantic-list 1664 . 1697) (symbol 1657 . 1664) (punctuation 1656 . 1657) (punctuation 1655 . 1656) (punctuation 1654 . 1655) (symbol 1653 . 1654) (punctuation 1652 . 1653) (symbol 1645 . 1652) (punctuation 1643 . 1644) (symbol 1642 . 1643) (CLASS 1636 . 1641) (punctuation 1635 . 1636) (TEMPLATE 1626 . 1634) (semantic-list 1246 . 1341) (symbol 1237 . 1245) (semantic-list 1216 . 1236) (punctuation 1215 . 1216) (OPERATOR 1207 . 1215) (punctuation 1228 . 1229) (punctuation 1206 . 1207) (punctuation 1205 . 1206) (punctuation 1204 . 1205) (symbol 1203 . 1204) (punctuation 1202 . 1203) (symbol 1195 . 1202) (punctuation 1228 . 1229) (punctuation 1193 . 1194) (punctuation 1192 . 1193) (symbol 1191 . 1192) (punctuation 1190 . 1191) (symbol 1183 . 1190) (punctuation 1228 . 1229) (punctuation 1181 . 1182) (symbol 1180 . 1181) (CLASS 1174 . 1179) (punctuation 1173 . 1174) (TEMPLATE 1164 . 1172) (punctuation 1228 . 1229) (punctuation 1098 . 1099) (punctuation 1085 . 1086) (semantic-list 1067 . 1085) (symbol 1057 . 1067) (punctuation 1073 . 1074) (punctuation 1055 . 1056) (symbol 1042 . 1050) (semantic-list 1021 . 1041) (symbol 1014 . 1021) (punctuation 1033 . 1034) (punctuation 1013 . 1014) (punctuation 1012 . 1013) (punctuation 1011 . 1012) (symbol 1010 . 1011) (punctuation 1009 . 1010) (symbol 1002 . 1009) (punctuation 1033 . 1034) (punctuation 1000 . 1001) (symbol 999 . 1000) (CLASS 993 . 998) (punctuation 992 . 993) (TEMPLATE 983 . 991) (punctuation 1033 . 1034) (semantic-list 814 . 873) (symbol 805 . 813) (semantic-list 802 . 804) (symbol 793 . 802) (punctuation 792 . 793) (punctuation 791 . 792) (punctuation 790 . 791) (symbol 789 . 790) (punctuation 788 . 789) (symbol 781 . 788) (punctuation 779 . 780) (symbol 778 . 779) (punctuation 777 . 778) (symbol 770 . 777) (punctuation 768 . 769) (symbol 767 . 768) (CLASS 761 . 766) (punctuation 760 . 761) (TEMPLATE 751 . 759) (symbol 606 . 610) (symbol 599 . 605) (punctuation 598 . 599)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("algorithm" include (:system-flag t) nil [612 632])
+            ("exception" include (:system-flag t) nil [633 653])
+            ("functional" include (:system-flag t) nil [654 675])
+            ("memory" include (:system-flag t) nil [676 693])
+            ("type_traits" include (:system-flag t) nil [694 716])
+            ("vector" include (:system-flag t) nil [717 734])
+            ("folly/Optional.h" include (:system-flag t) nil [736 763])
+            ("folly/Portability.h" include (:system-flag t) nil [764 794])
+            ("folly/Try.h" include (:system-flag t) nil [795 817])
+            ("folly/Utility.h" include (:system-flag t) nil [818 844])
+            ("folly/futures/DrivableExecutor.h" include (:system-flag t) nil [845 888])
+            ("folly/futures/FutureException.h" include (:system-flag t) nil [889 931])
+            ("folly/futures/Promise.h" include (:system-flag t) nil [932 966])
+            ("folly/futures/detail/Types.h" include (:system-flag t) nil [967 1006])
+            ("folly/futures/Future-pre.h" include (:system-flag t) nil [1046 1083])
+            ("folly/futures/helpers.h" include (:system-flag t) nil [1229 1263])
+            ("folly" type
+               (:members 
+                  ( ("Future" type
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type "class"
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [1319 1326])
+                            ("value_type" type
+                               (:typedef ("T" type (:type "class") nil nil)
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [1329 1350])
+                            ("makeEmpty" function
+                               (:prototype-flag t
+                                :typemodifiers ("static")
+                                :type ("Future" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [1354 1383])
+                            ("noexcept" variable (:type "int") (reparse-symbol classsubparts) [1543 1552])
+                            ("noexcept" variable (:type "int") (reparse-symbol classsubparts) [1583 1592])
+                            ("Future" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("" variable
+                                       (:reference 1
+                                        :type ("Future" type
+                                             (:template-specifier 
+                                                ( ("T2" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [1899 1911]))                                  
+                                :type ("Future" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1892 1913])
+                            ("Future" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("" variable
+                                       (:reference 1
+                                        :type ("Future" type
+                                             (:template-specifier 
+                                                ( ("T2" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [2193 2205]))                                  
+                                :type ("Future" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2186 2207])
+                            ("=" function
+                               (:prototype-flag t
+                                :operator-flag t
+                                :arguments 
+                                  ( ("" variable
+                                       (:reference 1
+                                        :type ("Future" type
+                                             (:template-specifier 
+                                                ( ("T2" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [2435 2447]))                                  
+                                :type ("Future" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2417 2449])
+                            ("Future" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("" variable
+                                       (:reference 1
+                                        :type ("T2" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2678 2682])
+                                    ("" variable (:type ("val" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2683 2687]))                                  
+                                :type ("Future" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2671 2688])
+                            ("Future" function
+                               (:template 
+                                  ( ("T2" type (:type "class") nil nil))                                  
+                                :type ("Future" type (:type "class") nil nil)
+                                :arguments 
+                                  ( ("" variable
+                                       (:pointer 1
+                                        :typemodifiers ("typename")
+                                        :type ("std::enable_if::type" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2747 2818]))                                  
+                                :constructor-flag t
+                                :prototype-flag t)
+                                (reparse-symbol classsubparts) [2692 2820])
+                            ("Future" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("" variable (:type ("in_place_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2975 2986])
+                                    ("" variable
+                                       (:reference 1
+                                        :type ("Args" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2987 2993])
+                                    ("" variable (:type ("args" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2997 3002]))                                  
+                                :type ("Future" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2968 3003])
+                            ("Future" function
+                               (:prototype-flag t
+                                :destructor-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [3007 3017])
+                            ("value" function
+                               (:prototype-flag t
+                                :typemodifiers ("typename")
+                                :type ("std::add_lvalue_reference::type" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3172 3226])
+                            ("value" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :typemodifiers ("typename")
+                                :type ("std::add_lvalue_reference::type" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3229 3295])
+                            ("isReady" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :type "bool")
+                                (reparse-symbol classsubparts) [4528 4549])
+                            ("hasValue" function
+                               (:prototype-flag t
+                                :type "bool")
+                                (reparse-symbol classsubparts) [4589 4605])
+                            ("hasException" function
+                               (:prototype-flag t
+                                :type "bool")
+                                (reparse-symbol classsubparts) [4649 4669])
+                            ("getTry" function
+                               (:prototype-flag t
+                                :type ("Try" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [4718 4735])
+                            ("getTryVia" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("e" variable
+                                       (:pointer 1
+                                        :type ("DrivableExecutor" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4945 4965]))                                  
+                                :type ("Try" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [4927 4966])
+                            ("poll" function
+                               (:prototype-flag t
+                                :type ("Optional" type
+                                     (:template-specifier 
+                                        ( ("Try" type (:template-specifier 
+                                            ( ("T" type nil nil nil))                                            ) nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [5132 5156])
+                            ("get" function
+                               (:prototype-flag t
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [5310 5318])
+                            ("get" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("dur" variable (:type ("Duration" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5497 5510]))                                  
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [5491 5511])
+                            ("getVia" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("e" variable
+                                       (:pointer 1
+                                        :type ("DrivableExecutor" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5723 5743]))                                  
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [5714 5744])
+                            ("unwrap" function
+                               (:prototype-flag t
+                                :type ("type" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [5984 6000])
+                            ("then" function
+                               (:typemodifiers ("typename")
+                                :arguments 
+                                  ( ("" variable
+                                       (:reference 1
+                                        :type ("F" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [6742 6745])
+                                    ("" variable (:type ("func" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6746 6751]))                                  
+                                :type ("R::Return" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [6718 6836])
+                            ("then" function
+                               (:prototype-flag t
+                                :arguments ((nil variable (:pointer (("" variable (:type ("Args" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7222 7227]) ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [7226 7230])) :type ("R" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7205 7231]) ("instance" variable (:pointer 1 :type ("Caller" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) #<overlay from 7232 to 7249 in Future.h>))
+                                :type "int")
+                                (reparse-symbol classsubparts) [7200 7250])
+                            ("then" function
+                               (:arguments 
+                                  ( ("x" variable
+                                       (:pointer 1
+                                        :type ("Executor" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [7665 7677])
+                                    ("" variable
+                                       (:reference 1
+                                        :type ("Arg" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [7678 7683])
+                                    ("" variable (:type ("arg" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7684 7688])
+                                    ("" variable
+                                       (:reference 1
+                                        :type ("Args" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [7689 7695])
+                                    ("" variable (:type ("args" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7699 7704]))                                  
+                                :type ("auto" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [7655 7856])
+                            ("then" function
+                               (:prototype-flag t
+                                :type ("Future" type
+                                     (:template-specifier 
+                                        ( ("Unit" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [7971 7991])
+                            ("onError" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("" variable
+                                       (:reference 1
+                                        :type ("F" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [8753 8756])
+                                    ("" variable (:type ("func" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8757 8762]))                                  
+                                :type ("type" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [8738 8763])
+                            ("onError" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("" variable
+                                       (:reference 1
+                                        :type ("F" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [9047 9050])
+                                    ("" variable (:type ("func" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9051 9056]))                                  
+                                :type ("type" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [9032 9057])
+                            ("onError" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("" variable
+                                       (:reference 1
+                                        :type ("F" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [9346 9349])
+                                    ("" variable (:type ("func" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9350 9355]))                                  
+                                :type ("type" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [9331 9356])
+                            ("onError" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("" variable
+                                       (:reference 1
+                                        :type ("F" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [9638 9641])
+                                    ("" variable (:type ("func" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9642 9647]))                                  
+                                :type ("type" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [9623 9648])
+                            ("ensure" function
+                               (:template 
+                                  ( ("F" type (:type "class") nil nil))                                  
+                                :type ("Future" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil)
+                                :arguments 
+                                  ( ("" variable
+                                       (:reference 1
+                                        :type ("F" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [9985 9988])
+                                    ("" variable (:type ("func" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9989 9994]))                                  
+                                :prototype-flag t)
+                                (reparse-symbol classsubparts) [9947 9995])
+                            ("onTimeout" function
+                               (:template 
+                                  ( ("F" type (:type "class") nil nil))                                  
+                                :type ("Future" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil)
+                                :arguments 
+                                  ( ("" variable (:type ("Duration" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10439 10448])
+                                    ("" variable
+                                       (:reference 1
+                                        :type ("F" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [10449 10452])
+                                    ("" variable (:type ("func" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10453 10458])
+                                    ("" variable
+                                       (:pointer 1
+                                        :type ("Timekeeper" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [10459 10480]))                                  
+                                :prototype-flag t)
+                                (reparse-symbol classsubparts) [10398 10482])
+                            ("setCallback_" function
+                               (:template 
+                                  ( ("F" type (:type "class") nil nil))                                  
+                                :type "void"
+                                :arguments 
+                                  ( ("" variable
+                                       (:reference 1
+                                        :type ("F" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [10782 10785])
+                                    ("" variable (:type ("func" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10786 10791]))                                  
+                                :prototype-flag t)
+                                (reparse-symbol classsubparts) [10743 10792])
+                            ("isActive" function (:type "bool") (reparse-symbol classsubparts) [11515 11566])
+                            ("raise" function
+                               (:template 
+                                  ( ("E" type (:type "class") nil nil))                                  
+                                :type "void"
+                                :arguments 
+                                  ( ("" variable
+                                       (:reference 1
+                                        :type ("E" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [11602 11605])
+                                    ("" variable (:type ("exception" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11606 11616]))                                  )
+                                (reparse-symbol classsubparts) [11570 11735])
+                            ("raise" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("interrupt" variable (:type ("exception_wrapper" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12288 12316]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [12277 12317])
+                            ("cancel" function (:type "void") (reparse-symbol classsubparts) [12321 12373])
+                            ("within" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("" variable (:type ("Duration" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12544 12553])
+                                    ("" variable
+                                       (:pointer 1
+                                        :type ("Timekeeper" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [12554 12575]))                                  
+                                :type ("Future" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [12527 12577])
+                            ("within" function
+                               (:template 
+                                  ( ("E" type (:type "class") nil nil))                                  
+                                :type ("Future" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil)
+                                :arguments 
+                                  ( ("" variable (:type ("Duration" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12786 12795])
+                                    ("exception" variable (:type ("E" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12796 12808])
+                                    ("" variable
+                                       (:pointer 1
+                                        :type ("Timekeeper" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [12809 12830]))                                  
+                                :prototype-flag t)
+                                (reparse-symbol classsubparts) [12748 12832])
+                            ("delayed" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("" variable (:type ("Duration" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12992 13001])
+                                    ("" variable
+                                       (:pointer 1
+                                        :type ("Timekeeper" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [13002 13023]))                                  
+                                :type ("Future" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [12974 13025])
+                            ("willEqual" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("" variable
+                                       (:reference 1
+                                        :type ("Future" type
+                                             (:template-specifier 
+                                                ( ("T" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [14120 14131]))                                  
+                                :type ("Future" type
+                                     (:template-specifier 
+                                        ( ("bool" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [14097 14132])
+                            ("filter" function
+                               (:template 
+                                  ( ("F" type (:type "class") nil nil))                                  
+                                :type ("Future" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil)
+                                :arguments 
+                                  ( ("" variable
+                                       (:reference 1
+                                        :type ("F" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [14350 14353])
+                                    ("" variable (:type ("predicate" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14354 14364]))                                  
+                                :prototype-flag t)
+                                (reparse-symbol classsubparts) [14312 14365])
+                            ("reduce" function
+                               (:template 
+                                  ( ("I" type (:type "class") nil nil)
+                                    ("F" type (:type "class") nil nil))                                  
+                                :type ("Future" type
+                                     (:template-specifier 
+                                        ( ("I" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil)
+                                :arguments 
+                                  ( ("" variable
+                                       (:reference 1
+                                        :type ("I" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [14537 14540])
+                                    ("" variable (:type ("initial" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14541 14549])
+                                    ("" variable
+                                       (:reference 1
+                                        :type ("F" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [14550 14553])
+                                    ("" variable (:type ("func" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14554 14559]))                                  
+                                :prototype-flag t)
+                                (reparse-symbol classsubparts) [14490 14560])
+                            ("thenMulti" function
+                               (:arguments 
+                                  ( ("" variable
+                                       (:reference 1
+                                        :type ("Callback" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [14858 14868])
+                                    ("" variable (:type ("fn" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14869 14872])
+                                    ("" variable
+                                       (:reference 1
+                                        :type ("Callbacks" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [14873 14884])
+                                    ("" variable (:type ("fns" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14888 14892]))                                  
+                                :type ("auto" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [14843 15065])
+                            ("thenMulti" function
+                               (:template 
+                                  ( ("Callback" type (:type "class") nil nil))                                  
+                                :type ("auto" type (:type "class") nil nil)
+                                :arguments 
+                                  ( ("" variable
+                                       (:reference 1
+                                        :type ("Callback" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [15112 15122])
+                                    ("" variable (:type ("fn" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15123 15126]))                                  )
+                                (reparse-symbol classsubparts) [15069 15227])
+                            ("thenMultiWithExecutor" function
+                               (:arguments 
+                                  ( ("x" variable
+                                       (:pointer 1
+                                        :type ("Executor" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [15590 15602])
+                                    ("" variable
+                                       (:reference 1
+                                        :type ("Callback" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [15603 15613])
+                                    ("" variable (:type ("fn" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15614 15617])
+                                    ("" variable
+                                       (:reference 1
+                                        :type ("Callbacks" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [15618 15629])
+                                    ("" variable (:type ("fns" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15633 15637]))                                  
+                                :type ("auto" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [15563 15907])
+                            ("thenMultiWithExecutor" function
+                               (:template 
+                                  ( ("Callback" type (:type "class") nil nil))                                  
+                                :type ("auto" type (:type "class") nil nil)
+                                :arguments 
+                                  ( ("x" variable
+                                       (:pointer 1
+                                        :type ("Executor" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [15966 15978])
+                                    ("" variable
+                                       (:reference 1
+                                        :type ("Callback" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [15979 15989])
+                                    ("" variable (:type ("fn" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15990 15993]))                                  )
+                                (reparse-symbol classsubparts) [15911 16114])
+                            ("unit" function (:type ("Future" type
+                                 (:template-specifier 
+                                    ( ("Unit" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [16170 16234])
+                            ("protected" label nil (reparse-symbol classsubparts) [16237 16247])
+                            ("corePtr" type
+                               (:typedef ("futures::detail::Core" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil)
+                                :pointer 1
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [16250 16292])
+                            ("core_" variable (:type ("corePtr" type (:type "class") nil nil)) (reparse-symbol classsubparts) [16326 16340])
+                            ("Future" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("obj" variable (:type ("corePtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16362 16374]))                                  
+                                :type ("Future" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [16355 16390])
+                            ("noexcept" variable (:type "int") (reparse-symbol classsubparts) [16443 16452])
+                            ("detach" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [16456 16470])
+                            ("throwIfInvalid" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [16474 16502])
+                            ("Promise" friend nil (reparse-symbol classsubparts) [16506 16526])
+                            ("Future" type
+                               (:template 
+                                  ( ("" type nil nil nil))                                  
+                                :type "class"
+                                :prototype t)
+                                (reparse-symbol classsubparts) [16533 16570])
+                            ("makeFuture" function
+                               (:template 
+                                  ( ("T2" type (:type "class") nil nil))                                  
+                                :type ("Future" type
+                                     (:template-specifier 
+                                        ( ("T2" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil)
+                                :arguments 
+                                  ( ("" variable
+                                       (:reference 1
+                                        :type ("Try" type
+                                             (:template-specifier 
+                                                ( ("T2" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [16625 16634]))                                  
+                                :prototype-flag t)
+                                (reparse-symbol classsubparts) [16574 16636])
+                            ("times" function
+                               (:template 
+                                  ( ("F" type (:type "class") nil nil))                                  
+                                :type ("Future" type
+                                     (:template-specifier 
+                                        ( ("Unit" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil)
+                                :arguments 
+                                  ( ("n" variable (:type "int") (reparse-symbol arg-sub-list) [16831 16837])
+                                    ("" variable
+                                       (:reference 1
+                                        :type ("F" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [16838 16841])
+                                    ("" variable (:type ("thunk" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16842 16848]))                                  
+                                :prototype-flag t)
+                                (reparse-symbol classsubparts) [16784 16849])
+                            ("when" function
+                               (:template 
+                                  ( ("F" type (:type "class") nil nil))                                  
+                                :type ("Future" type
+                                     (:template-specifier 
+                                        ( ("Unit" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil)
+                                :arguments 
+                                  ( ("p" variable (:type "bool") (reparse-symbol arg-sub-list) [17054 17061])
+                                    ("" variable
+                                       (:reference 1
+                                        :type ("F" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [17062 17065])
+                                    ("" variable (:type ("thunk" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [17066 17072]))                                  
+                                :prototype-flag t)
+                                (reparse-symbol classsubparts) [17008 17073])
+                            ("whileDo" function
+                               (:template 
+                                  ( ("P" type (:type "class") nil nil)
+                                    ("F" type (:type "class") nil nil))                                  
+                                :type ("Future" type
+                                     (:template-specifier 
+                                        ( ("Unit" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil)
+                                :arguments 
+                                  ( ("" variable
+                                       (:reference 1
+                                        :type ("P" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [17369 17372])
+                                    ("" variable (:type ("predicate" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [17373 17383])
+                                    ("" variable
+                                       (:reference 1
+                                        :type ("F" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [17384 17387])
+                                    ("" variable (:type ("thunk" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [17388 17394]))                                  
+                                :prototype-flag t)
+                                (reparse-symbol classsubparts) [17311 17395])
+                            ("thenImplementation" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("" variable
+                                       (:reference 1
+                                        :type ("F" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [17645 17648])
+                                    ("" variable (:type ("func" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [17649 17654])
+                                    ("" variable (:type ("futures::detail::argResult" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [17655 17682])
+                                    ("" variable (:type ("isTry" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [17682 17688])
+                                    ("" variable (:type ("F" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [17689 17691])
+                                    ("" variable (:type ("Args" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [17692 17697]))                                  
+                                :type ("type" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [17619 17702])
+                            ("thenImplementation" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("" variable
+                                       (:reference 1
+                                        :type ("F" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [17959 17962])
+                                    ("" variable (:type ("func" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [17963 17968])
+                                    ("" variable (:type ("futures::detail::argResult" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [17969 17996])
+                                    ("" variable (:type ("isTry" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [17996 18002])
+                                    ("" variable (:type ("F" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [18003 18005])
+                                    ("" variable (:type ("Args" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [18006 18011]))                                  
+                                :type ("type" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [17933 18016])
+                            ("getExecutor" function
+                               (:pointer 1
+                                :type ("Executor" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [18020 18076])
+                            ("setExecutor" function
+                               (:arguments 
+                                  ( ("x" variable
+                                       (:pointer 1
+                                        :type ("Executor" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [18096 18108])
+                                    ("priority" variable
+                                       (:default-value "Executor"
+                                        :type ("int8_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [18109 18135])
+                                    ("" variable (:type ("MID_PRI" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [18137 18145]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [18079 18188]))                          )
+                        (reparse-symbol namespacesubparts) [1284 18191]))                  
+                :type "namespace")
+                nil [1265 18194])
+            ("folly/futures/Future-inl.h" include (:system-flag t) nil [18215 18252]))          
+      :file "Future.h"
+      :pointmax 18253
+      :fsize 18252
+      :lastmodtime '(22913 34676 0 0)
+      :unmatched-syntax '((punctuation 18136 . 18137) (punctuation 18135 . 18136) (punctuation 18013 . 18014) (punctuation 18012 . 18013) (punctuation 18011 . 18012) (punctuation 18010 . 18011) (punctuation 17995 . 17996) (punctuation 17961 . 17962) (punctuation 17932 . 17933) (punctuation 17931 . 17932) (punctuation 17930 . 17931) (symbol 17924 . 17930) (punctuation 17923 . 17924) (punctuation 17922 . 17923) (symbol 17921 . 17922) (TYPENAME 17912 . 17920) (punctuation 17910 . 17911) (symbol 17905 . 17910) (punctuation 17904 . 17905) (punctuation 17903 . 17904) (symbol 17890 . 17903) (punctuation 17889 . 17890) (punctuation 17888 . 17889) (symbol 17887 . 17888) (punctuation 17886 . 17887) (symbol 17877 . 17886) (punctuation 17876 . 17877) (punctuation 17875 . 17876) (symbol 17872 . 17875) (TYPENAME 17863 . 17871) (punctuation 17859 . 17860) (symbol 17855 . 17859) (punctuation 17853 . 17854) (punctuation 17852 . 17853) (punctuation 17851 . 17852) (TYPENAME 17843 . 17851) (punctuation 17841 . 17842) (symbol 17836 . 17841) (BOOL 17831 . 17835) (punctuation 17829 . 17830) (symbol 17828 . 17829) (TYPENAME 17819 . 17827) (punctuation 17817 . 17818) (symbol 17816 . 17817) (TYPENAME 17807 . 17815) (punctuation 17806 . 17807) (TEMPLATE 17797 . 17805) (punctuation 17699 . 17700) (punctuation 17698 . 17699) (punctuation 17697 . 17698) (punctuation 17696 . 17697) (punctuation 17681 . 17682) (punctuation 17647 . 17648) (punctuation 17618 . 17619) (punctuation 17617 . 17618) (punctuation 17616 . 17617) (symbol 17610 . 17616) (punctuation 17609 . 17610) (punctuation 17608 . 17609) (symbol 17607 . 17608) (TYPENAME 17598 . 17606) (punctuation 17596 . 17597) (symbol 17591 . 17596) (punctuation 17590 . 17591) (punctuation 17589 . 17590) (symbol 17576 . 17589) (punctuation 17575 . 17576) (punctuation 17574 . 17575) (symbol 17573 . 17574) (punctuation 17572 . 17573) (punctuation 17571 . 17572) (symbol 17562 . 17571) (punctuation 17561 . 17562) (punctuation 17560 . 17561) (symbol 17557 . 17560) (TYPENAME 17548 . 17556) (punctuation 17544 . 17545) (symbol 17540 . 17544) (punctuation 17538 . 17539) (punctuation 17537 . 17538) (punctuation 17536 . 17537) (TYPENAME 17528 . 17536) (punctuation 17526 . 17527) (symbol 17521 . 17526) (BOOL 17516 . 17520) (punctuation 17514 . 17515) (symbol 17513 . 17514) (TYPENAME 17504 . 17512) (punctuation 17502 . 17503) (symbol 17501 . 17502) (TYPENAME 17492 . 17500) (punctuation 17491 . 17492) (TEMPLATE 17482 . 17490) (punctuation 17386 . 17387) (punctuation 17371 . 17372) (punctuation 17064 . 17065) (punctuation 16840 . 16841) (punctuation 16633 . 16634) (punctuation 16529 . 16530) (punctuation 16528 . 16529) (symbol 16527 . 16528) (punctuation 16526 . 16527) (semantic-list 16409 . 16442) (symbol 16403 . 16409) (EXPLICIT 16394 . 16402) (EXPLICIT 16344 . 16352) (punctuation 15988 . 15989) (punctuation 15631 . 15632) (punctuation 15630 . 15631) (punctuation 15629 . 15630) (punctuation 15628 . 15629) (punctuation 15612 . 15613) (punctuation 15559 . 15560) (symbol 15550 . 15559) (punctuation 15548 . 15549) (punctuation 15547 . 15548) (punctuation 15546 . 15547) (CLASS 15541 . 15546) (punctuation 15539 . 15540) (symbol 15531 . 15539) (CLASS 15525 . 15530) (punctuation 15524 . 15525) (TEMPLATE 15515 . 15523) (punctuation 15121 . 15122) (punctuation 14886 . 14887) (punctuation 14885 . 14886) (punctuation 14884 . 14885) (punctuation 14883 . 14884) (punctuation 14867 . 14868) (punctuation 14839 . 14840) (symbol 14830 . 14839) (punctuation 14828 . 14829) (punctuation 14827 . 14828) (punctuation 14826 . 14827) (CLASS 14821 . 14826) (punctuation 14819 . 14820) (symbol 14811 . 14819) (CLASS 14805 . 14810) (punctuation 14804 . 14805) (TEMPLATE 14795 . 14803) (punctuation 14552 . 14553) (punctuation 14539 . 14540) (punctuation 14352 . 14353) (punctuation 13843 . 13844) (punctuation 13842 . 13843) (punctuation 13841 . 13842) (semantic-list 13819 . 13840) (symbol 13812 . 13819) (punctuation 13810 . 13811) (punctuation 13809 . 13810) (punctuation 13808 . 13809) (symbol 13807 . 13808) (punctuation 13806 . 13807) (symbol 13800 . 13806) (punctuation 13748 . 13749) (punctuation 13747 . 13748) (semantic-list 13725 . 13746) (symbol 13718 . 13725) (punctuation 13716 . 13717) (punctuation 13715 . 13716) (symbol 13714 . 13715) (punctuation 13713 . 13714) (symbol 13707 . 13713) (punctuation 13434 . 13435) (punctuation 13433 . 13434) (punctuation 13432 . 13433) (semantic-list 13421 . 13431) (symbol 13417 . 13421) (punctuation 13415 . 13416) (punctuation 13414 . 13415) (punctuation 13413 . 13414) (symbol 13412 . 13413) (punctuation 13411 . 13412) (symbol 13405 . 13411) (punctuation 13348 . 13349) (punctuation 13347 . 13348) (semantic-list 13336 . 13346) (symbol 13332 . 13336) (punctuation 13330 . 13331) (punctuation 13329 . 13330) (symbol 13328 . 13329) (punctuation 13327 . 13328) (symbol 13321 . 13327) (punctuation 13197 . 13198) (punctuation 13196 . 13197) (punctuation 13195 . 13196) (semantic-list 13192 . 13194) (symbol 13188 . 13192) (punctuation 13186 . 13187) (punctuation 13185 . 13186) (punctuation 13184 . 13185) (symbol 13183 . 13184) (punctuation 13182 . 13183) (symbol 13176 . 13182) (punctuation 13127 . 13128) (punctuation 13126 . 13127) (semantic-list 13123 . 13125) (symbol 13119 . 13123) (punctuation 13117 . 13118) (punctuation 13116 . 13117) (symbol 13115 . 13116) (punctuation 13114 . 13115) (symbol 13108 . 13114) (punctuation 11604 . 11605) (semantic-list 11452 . 11511) (punctuation 11450 . 11451) (punctuation 11449 . 11450) (semantic-list 11446 . 11448) (symbol 11436 . 11446) (punctuation 11434 . 11435) (symbol 11433 . 11434) (punctuation 11432 . 11433) (symbol 11426 . 11432) (semantic-list 11411 . 11425) (symbol 11395 . 11411) (string 11412 . 11424) (semantic-list 11335 . 11392) (punctuation 11333 . 11334) (punctuation 11332 . 11333) (semantic-list 11329 . 11331) (symbol 11321 . 11329) (punctuation 11319 . 11320) (symbol 11318 . 11319) (punctuation 11317 . 11318) (symbol 11311 . 11317) (semantic-list 11296 . 11310) (symbol 11280 . 11296) (string 11297 . 11309) (semantic-list 11229 . 11277) (punctuation 11227 . 11228) (semantic-list 11224 . 11226) (symbol 11214 . 11224) (punctuation 11212 . 11213) (punctuation 11211 . 11212) (symbol 11210 . 11211) (punctuation 11209 . 11210) (symbol 11203 . 11209) (semantic-list 11188 . 11202) (symbol 11172 . 11188) (string 11189 . 11201) (semantic-list 11123 . 11169) (punctuation 11121 . 11122) (semantic-list 11118 . 11120) (symbol 11110 . 11118) (punctuation 11108 . 11109) (punctuation 11107 . 11108) (symbol 11106 . 11107) (punctuation 11105 . 11106) (symbol 11099 . 11105) (semantic-list 11084 . 11098) (symbol 11068 . 11084) (string 11085 . 11097) (punctuation 10784 . 10785) (punctuation 10451 . 10452) (punctuation 9987 . 9988) (punctuation 9640 . 9641) (punctuation 9622 . 9623) (punctuation 9621 . 9622) (punctuation 9620 . 9621) (punctuation 9619 . 9620) (symbol 9618 . 9619) (punctuation 9617 . 9618) (symbol 9611 . 9617) (punctuation 9603 . 9604) (symbol 9598 . 9603) (punctuation 9597 . 9598) (punctuation 9596 . 9597) (symbol 9583 . 9596) (punctuation 9582 . 9583) (punctuation 9581 . 9582) (punctuation 9580 . 9581) (symbol 9579 . 9580) (punctuation 9578 . 9579) (symbol 9571 . 9578) (punctuation 9570 . 9571) (punctuation 9569 . 9570) (symbol 9563 . 9569) (punctuation 9562 . 9563) (punctuation 9561 . 9562) (symbol 9554 . 9561) (punctuation 9553 . 9554) (punctuation 9541 . 9542) (punctuation 9540 . 9541) (symbol 9534 . 9539) (punctuation 9533 . 9534) (punctuation 9532 . 9533) (punctuation 9531 . 9532) (symbol 9514 . 9531) (punctuation 9512 . 9513) (symbol 9511 . 9512) (punctuation 9510 . 9511) (symbol 9498 . 9510) (punctuation 9497 . 9498) (punctuation 9496 . 9497) (symbol 9490 . 9496) (punctuation 9489 . 9490) (punctuation 9488 . 9489) (symbol 9481 . 9488) (punctuation 9473 . 9474) (symbol 9464 . 9473) (punctuation 9463 . 9464) (punctuation 9462 . 9463) (symbol 9459 . 9462) (TYPENAME 9450 . 9458) (punctuation 9446 . 9447) (symbol 9445 . 9446) (CLASS 9439 . 9444) (punctuation 9438 . 9439) (TEMPLATE 9429 . 9437) (punctuation 9348 . 9349) (punctuation 9330 . 9331) (punctuation 9329 . 9330) (punctuation 9328 . 9329) (punctuation 9327 . 9328) (symbol 9326 . 9327) (punctuation 9325 . 9326) (symbol 9319 . 9325) (punctuation 9311 . 9312) (symbol 9306 . 9311) (punctuation 9305 . 9306) (punctuation 9304 . 9305) (symbol 9291 . 9304) (punctuation 9290 . 9291) (punctuation 9289 . 9290) (punctuation 9288 . 9289) (symbol 9287 . 9288) (punctuation 9286 . 9287) (symbol 9279 . 9286) (punctuation 9278 . 9279) (punctuation 9277 . 9278) (symbol 9271 . 9277) (punctuation 9270 . 9271) (punctuation 9269 . 9270) (symbol 9262 . 9269) (punctuation 9250 . 9251) (punctuation 9249 . 9250) (symbol 9243 . 9248) (punctuation 9242 . 9243) (punctuation 9241 . 9242) (punctuation 9240 . 9241) (symbol 9223 . 9240) (punctuation 9221 . 9222) (symbol 9220 . 9221) (punctuation 9219 . 9220) (symbol 9207 . 9219) (punctuation 9206 . 9207) (punctuation 9205 . 9206) (symbol 9199 . 9205) (punctuation 9198 . 9199) (punctuation 9197 . 9198) (symbol 9190 . 9197) (punctuation 9182 . 9183) (symbol 9173 . 9182) (punctuation 9172 . 9173) (punctuation 9171 . 9172) (symbol 9168 . 9171) (TYPENAME 9159 . 9167) (punctuation 9155 . 9156) (symbol 9154 . 9155) (CLASS 9148 . 9153) (punctuation 9147 . 9148) (TEMPLATE 9138 . 9146) (punctuation 9049 . 9050) (punctuation 9031 . 9032) (punctuation 9030 . 9031) (punctuation 9029 . 9030) (punctuation 9028 . 9029) (symbol 9027 . 9028) (punctuation 9026 . 9027) (symbol 9020 . 9026) (punctuation 9012 . 9013) (symbol 9007 . 9012) (punctuation 9006 . 9007) (punctuation 9005 . 9006) (symbol 8992 . 9005) (punctuation 8991 . 8992) (punctuation 8990 . 8991) (punctuation 8989 . 8990) (symbol 8988 . 8989) (punctuation 8987 . 8988) (symbol 8980 . 8987) (punctuation 8979 . 8980) (punctuation 8978 . 8979) (symbol 8972 . 8978) (punctuation 8971 . 8972) (punctuation 8970 . 8971) (symbol 8963 . 8970) (punctuation 8951 . 8952) (punctuation 8950 . 8951) (symbol 8944 . 8949) (punctuation 8943 . 8944) (punctuation 8942 . 8943) (punctuation 8941 . 8942) (symbol 8924 . 8941) (punctuation 8922 . 8923) (symbol 8921 . 8922) (punctuation 8920 . 8921) (symbol 8908 . 8920) (punctuation 8907 . 8908) (punctuation 8906 . 8907) (symbol 8900 . 8906) (punctuation 8899 . 8900) (punctuation 8898 . 8899) (symbol 8891 . 8898) (punctuation 8890 . 8891) (punctuation 8882 . 8883) (symbol 8873 . 8882) (punctuation 8872 . 8873) (punctuation 8871 . 8872) (symbol 8868 . 8871) (TYPENAME 8859 . 8867) (punctuation 8855 . 8856) (symbol 8854 . 8855) (CLASS 8848 . 8853) (punctuation 8847 . 8848) (TEMPLATE 8838 . 8846) (punctuation 8755 . 8756) (punctuation 8737 . 8738) (punctuation 8736 . 8737) (punctuation 8735 . 8736) (punctuation 8734 . 8735) (symbol 8733 . 8734) (punctuation 8732 . 8733) (symbol 8726 . 8732) (punctuation 8718 . 8719) (symbol 8713 . 8718) (punctuation 8712 . 8713) (punctuation 8711 . 8712) (symbol 8698 . 8711) (punctuation 8697 . 8698) (punctuation 8696 . 8697) (punctuation 8695 . 8696) (symbol 8694 . 8695) (punctuation 8693 . 8694) (symbol 8686 . 8693) (punctuation 8685 . 8686) (punctuation 8684 . 8685) (symbol 8678 . 8684) (punctuation 8677 . 8678) (punctuation 8676 . 8677) (symbol 8669 . 8676) (punctuation 8668 . 8669) (punctuation 8656 . 8657) (punctuation 8655 . 8656) (symbol 8649 . 8654) (punctuation 8648 . 8649) (punctuation 8647 . 8648) (punctuation 8646 . 8647) (symbol 8629 . 8646) (punctuation 8627 . 8628) (symbol 8626 . 8627) (punctuation 8625 . 8626) (symbol 8613 . 8625) (punctuation 8612 . 8613) (punctuation 8611 . 8612) (symbol 8605 . 8611) (punctuation 8604 . 8605) (punctuation 8603 . 8604) (symbol 8596 . 8603) (punctuation 8595 . 8596) (punctuation 8587 . 8588) (symbol 8578 . 8587) (punctuation 8577 . 8578) (punctuation 8576 . 8577) (symbol 8573 . 8576) (TYPENAME 8564 . 8572) (punctuation 8560 . 8561) (symbol 8559 . 8560) (CLASS 8553 . 8558) (punctuation 8552 . 8553) (TEMPLATE 8543 . 8551) (punctuation 7697 . 7698) (punctuation 7696 . 7697) (punctuation 7695 . 7696) (punctuation 7694 . 7695) (punctuation 7682 . 7683) (punctuation 7651 . 7652) (symbol 7647 . 7651) (punctuation 7645 . 7646) (punctuation 7644 . 7645) (punctuation 7643 . 7644) (CLASS 7638 . 7643) (punctuation 7636 . 7637) (symbol 7633 . 7636) (CLASS 7627 . 7632) (punctuation 7625 . 7626) (symbol 7617 . 7625) (CLASS 7611 . 7616) (punctuation 7610 . 7611) (TEMPLATE 7601 . 7609) (punctuation 7196 . 7197) (symbol 7191 . 7196) (punctuation 7190 . 7191) (punctuation 7189 . 7190) (punctuation 7188 . 7189) (symbol 7187 . 7188) (punctuation 7186 . 7187) (symbol 7178 . 7186) (TYPENAME 7169 . 7177) (punctuation 7168 . 7169) (symbol 7162 . 7168) (punctuation 7158 . 7159) (symbol 7154 . 7158) (punctuation 7152 . 7153) (punctuation 7151 . 7152) (punctuation 7150 . 7151) (TYPENAME 7142 . 7150) (punctuation 7140 . 7141) (symbol 7134 . 7140) (TYPENAME 7125 . 7133) (punctuation 7123 . 7124) (symbol 7122 . 7123) (TYPENAME 7113 . 7121) (punctuation 7112 . 7113) (TEMPLATE 7103 . 7111) (punctuation 6744 . 6745) (punctuation 6714 . 6715) (punctuation 6713 . 6714) (symbol 6712 . 6713) (punctuation 6710 . 6711) (symbol 6709 . 6710) (punctuation 6708 . 6709) (symbol 6694 . 6708) (punctuation 6693 . 6694) (punctuation 6692 . 6693) (symbol 6686 . 6692) (punctuation 6685 . 6686) (punctuation 6684 . 6685) (symbol 6677 . 6684) (punctuation 6675 . 6676) (symbol 6673 . 6674) (TYPENAME 6664 . 6672) (punctuation 6662 . 6663) (symbol 6661 . 6662) (TYPENAME 6652 . 6660) (punctuation 6651 . 6652) (TEMPLATE 6642 . 6650) (punctuation 5983 . 5984) (punctuation 5982 . 5983) (punctuation 5981 . 5982) (punctuation 5980 . 5981) (symbol 5975 . 5980) (punctuation 5974 . 5975) (punctuation 5973 . 5974) (punctuation 5972 . 5973) (symbol 5971 . 5972) (punctuation 5970 . 5971) (symbol 5962 . 5970) (TYPENAME 5953 . 5961) (punctuation 5952 . 5953) (symbol 5946 . 5952) (punctuation 5918 . 5919) (symbol 5913 . 5918) (punctuation 5912 . 5913) (punctuation 5911 . 5912) (punctuation 5910 . 5911) (symbol 5909 . 5910) (punctuation 5908 . 5909) (symbol 5900 . 5908) (punctuation 5899 . 5900) (symbol 5890 . 5899) (punctuation 5889 . 5890) (punctuation 5888 . 5889) (symbol 5885 . 5888) (TYPENAME 5876 . 5884) (punctuation 5872 . 5873) (symbol 5871 . 5872) (punctuation 5869 . 5870) (symbol 5867 . 5868) (CLASS 5861 . 5866) (punctuation 5860 . 5861) (TEMPLATE 5851 . 5859) (punctuation 4468 . 4469) (punctuation 4467 . 4468) (semantic-list 4396 . 4466) (symbol 4393 . 4396) (punctuation 4457 . 4458) (punctuation 4456 . 4457) (punctuation 4391 . 4392) (symbol 4390 . 4391) (punctuation 4389 . 4390) (symbol 4383 . 4389) (punctuation 4457 . 4458) (punctuation 4456 . 4457) (INLINE 4376 . 4382) (punctuation 4457 . 4458) (punctuation 4456 . 4457) (punctuation 4180 . 4181) (punctuation 4179 . 4180) (punctuation 4178 . 4179) (semantic-list 4107 . 4177) (symbol 4104 . 4107) (punctuation 4168 . 4169) (punctuation 4167 . 4168) (punctuation 4102 . 4103) (symbol 4101 . 4102) (punctuation 4100 . 4101) (symbol 4094 . 4100) (punctuation 4168 . 4169) (punctuation 4167 . 4168) (INLINE 4087 . 4093) (punctuation 4168 . 4169) (punctuation 4167 . 4168) (punctuation 2995 . 2996) (punctuation 2994 . 2995) (punctuation 2993 . 2994) (punctuation 2992 . 2993) (EXPLICIT 2959 . 2967) (punctuation 2955 . 2956) (number 2954 . 2955) (punctuation 2952 . 2953) (symbol 2947 . 2951) (punctuation 2935 . 2936) (punctuation 2934 . 2935) (punctuation 2933 . 2934) (INT 2930 . 2933) (punctuation 2928 . 2929) (symbol 2923 . 2928) (punctuation 2922 . 2923) (punctuation 2921 . 2922) (punctuation 2920 . 2921) (punctuation 2919 . 2920) (punctuation 2918 . 2919) (punctuation 2917 . 2918) (punctuation 2916 . 2917) (punctuation 2915 . 2916) (symbol 2911 . 2915) (punctuation 2909 . 2910) (symbol 2908 . 2909) (punctuation 2907 . 2908) (symbol 2891 . 2907) (punctuation 2890 . 2891) (punctuation 2889 . 2890) (symbol 2886 . 2889) (punctuation 2885 . 2886) (symbol 2876 . 2885) (punctuation 2875 . 2876) (punctuation 2874 . 2875) (symbol 2871 . 2874) (TYPENAME 2862 . 2870) (punctuation 2854 . 2855) (symbol 2850 . 2854) (punctuation 2848 . 2849) (punctuation 2847 . 2848) (punctuation 2846 . 2847) (CLASS 2841 . 2846) (punctuation 2833 . 2834) (TEMPLATE 2824 . 2832) (punctuation 2681 . 2682) (punctuation 2652 . 2653) (symbol 2648 . 2652) (punctuation 2647 . 2648) (punctuation 2646 . 2647) (punctuation 2645 . 2646) (symbol 2640 . 2645) (punctuation 2639 . 2640) (punctuation 2638 . 2639) (punctuation 2637 . 2638) (symbol 2633 . 2637) (punctuation 2632 . 2633) (punctuation 2631 . 2632) (punctuation 2630 . 2631) (symbol 2628 . 2630) (punctuation 2627 . 2628) (symbol 2622 . 2627) (punctuation 2621 . 2622) (punctuation 2620 . 2621) (symbol 2617 . 2620) (TYPENAME 2608 . 2616) (punctuation 2607 . 2608) (symbol 2599 . 2607) (punctuation 2598 . 2599) (punctuation 2582 . 2583) (symbol 2573 . 2582) (punctuation 2572 . 2573) (punctuation 2571 . 2572) (symbol 2568 . 2571) (TYPENAME 2559 . 2567) (punctuation 2545 . 2546) (TYPENAME 2536 . 2544) (punctuation 2534 . 2535) (symbol 2533 . 2534) (punctuation 2531 . 2532) (symbol 2528 . 2530) (CLASS 2522 . 2527) (punctuation 2521 . 2522) (TEMPLATE 2512 . 2520) (punctuation 2446 . 2447) (punctuation 2413 . 2414) (number 2412 . 2413) (punctuation 2410 . 2411) (symbol 2405 . 2409) (punctuation 2404 . 2405) (punctuation 2403 . 2404) (punctuation 2402 . 2403) (INT 2399 . 2402) (punctuation 2387 . 2388) (symbol 2382 . 2387) (punctuation 2381 . 2382) (punctuation 2380 . 2381) (punctuation 2379 . 2380) (punctuation 2378 . 2379) (punctuation 2377 . 2378) (symbol 2375 . 2377) (punctuation 2373 . 2374) (symbol 2372 . 2373) (punctuation 2371 . 2372) (symbol 2355 . 2371) (punctuation 2354 . 2355) (punctuation 2353 . 2354) (symbol 2350 . 2353) (punctuation 2334 . 2335) (punctuation 2333 . 2334) (symbol 2327 . 2332) (punctuation 2326 . 2327) (punctuation 2325 . 2326) (punctuation 2324 . 2325) (symbol 2320 . 2324) (punctuation 2319 . 2320) (punctuation 2318 . 2319) (punctuation 2317 . 2318) (symbol 2315 . 2317) (punctuation 2314 . 2315) (symbol 2309 . 2314) (punctuation 2308 . 2309) (punctuation 2307 . 2308) (symbol 2304 . 2307) (TYPENAME 2295 . 2303) (punctuation 2293 . 2294) (symbol 2292 . 2293) (punctuation 2291 . 2292) (symbol 2284 . 2291) (punctuation 2283 . 2284) (punctuation 2282 . 2283) (symbol 2279 . 2282) (punctuation 2278 . 2279) (punctuation 2266 . 2267) (symbol 2257 . 2266) (punctuation 2256 . 2257) (punctuation 2255 . 2256) (symbol 2252 . 2255) (TYPENAME 2243 . 2251) (punctuation 2235 . 2236) (symbol 2233 . 2235) (CLASS 2227 . 2232) (punctuation 2219 . 2220) (TEMPLATE 2210 . 2218) (punctuation 2204 . 2205) (EXPLICIT 2177 . 2185) (punctuation 2173 . 2174) (number 2172 . 2173) (punctuation 2170 . 2171) (symbol 2165 . 2169) (punctuation 2164 . 2165) (punctuation 2163 . 2164) (punctuation 2162 . 2163) (INT 2159 . 2162) (punctuation 2147 . 2148) (symbol 2142 . 2147) (punctuation 2141 . 2142) (punctuation 2140 . 2141) (punctuation 2139 . 2140) (symbol 2138 . 2139) (punctuation 2136 . 2137) (punctuation 2135 . 2136) (punctuation 2134 . 2135) (symbol 2132 . 2134) (punctuation 2131 . 2132) (symbol 2117 . 2131) (punctuation 2116 . 2117) (punctuation 2115 . 2116) (symbol 2112 . 2115) (punctuation 2111 . 2112) (punctuation 2095 . 2096) (punctuation 2094 . 2095) (symbol 2088 . 2093) (punctuation 2087 . 2088) (punctuation 2086 . 2087) (punctuation 2085 . 2086) (punctuation 2084 . 2085) (punctuation 2083 . 2084) (symbol 2081 . 2083) (punctuation 2079 . 2080) (symbol 2078 . 2079) (punctuation 2077 . 2078) (symbol 2061 . 2077) (punctuation 2060 . 2061) (punctuation 2059 . 2060) (symbol 2056 . 2059) (punctuation 2040 . 2041) (punctuation 2039 . 2040) (symbol 2033 . 2038) (punctuation 2032 . 2033) (punctuation 2031 . 2032) (punctuation 2030 . 2031) (symbol 2026 . 2030) (punctuation 2025 . 2026) (punctuation 2024 . 2025) (punctuation 2023 . 2024) (symbol 2021 . 2023) (punctuation 2020 . 2021) (symbol 2015 . 2020) (punctuation 2014 . 2015) (punctuation 2013 . 2014) (symbol 2010 . 2013) (TYPENAME 2001 . 2009) (punctuation 1999 . 2000) (symbol 1998 . 1999) (punctuation 1997 . 1998) (symbol 1990 . 1997) (punctuation 1989 . 1990) (punctuation 1988 . 1989) (symbol 1985 . 1988) (punctuation 1984 . 1985) (punctuation 1972 . 1973) (symbol 1963 . 1972) (punctuation 1962 . 1963) (punctuation 1961 . 1962) (symbol 1958 . 1961) (TYPENAME 1949 . 1957) (punctuation 1941 . 1942) (symbol 1939 . 1941) (CLASS 1933 . 1938) (punctuation 1925 . 1926) (TEMPLATE 1916 . 1924) (punctuation 1910 . 1911) (punctuation 1873 . 1874) (number 1872 . 1873) (punctuation 1870 . 1871) (symbol 1865 . 1869) (punctuation 1864 . 1865) (punctuation 1863 . 1864) (punctuation 1862 . 1863) (INT 1859 . 1862) (punctuation 1847 . 1848) (symbol 1842 . 1847) (punctuation 1841 . 1842) (punctuation 1840 . 1841) (punctuation 1839 . 1840) (symbol 1838 . 1839) (punctuation 1836 . 1837) (punctuation 1835 . 1836) (punctuation 1834 . 1835) (symbol 1832 . 1834) (punctuation 1831 . 1832) (symbol 1817 . 1831) (punctuation 1816 . 1817) (punctuation 1815 . 1816) (symbol 1812 . 1815) (punctuation 1796 . 1797) (punctuation 1795 . 1796) (symbol 1789 . 1794) (punctuation 1788 . 1789) (punctuation 1787 . 1788) (punctuation 1786 . 1787) (punctuation 1785 . 1786) (punctuation 1784 . 1785) (symbol 1782 . 1784) (punctuation 1780 . 1781) (symbol 1779 . 1780) (punctuation 1778 . 1779) (symbol 1762 . 1778) (punctuation 1761 . 1762) (punctuation 1760 . 1761) (symbol 1757 . 1760) (punctuation 1741 . 1742) (punctuation 1740 . 1741) (symbol 1734 . 1739) (punctuation 1733 . 1734) (punctuation 1732 . 1733) (punctuation 1731 . 1732) (symbol 1727 . 1731) (punctuation 1726 . 1727) (punctuation 1725 . 1726) (punctuation 1724 . 1725) (symbol 1722 . 1724) (punctuation 1721 . 1722) (symbol 1716 . 1721) (punctuation 1715 . 1716) (punctuation 1714 . 1715) (symbol 1711 . 1714) (TYPENAME 1702 . 1710) (punctuation 1700 . 1701) (symbol 1699 . 1700) (punctuation 1698 . 1699) (symbol 1691 . 1698) (punctuation 1690 . 1691) (punctuation 1689 . 1690) (symbol 1686 . 1689) (punctuation 1685 . 1686) (punctuation 1673 . 1674) (symbol 1664 . 1673) (punctuation 1663 . 1664) (punctuation 1662 . 1663) (symbol 1659 . 1662) (TYPENAME 1650 . 1658) (punctuation 1642 . 1643) (symbol 1640 . 1642) (CLASS 1634 . 1639) (punctuation 1626 . 1627) (TEMPLATE 1617 . 1625) (semantic-list 1572 . 1582) (punctuation 1571 . 1572) (OPERATOR 1563 . 1571) (punctuation 1580 . 1581) (punctuation 1561 . 1562) (symbol 1555 . 1561) (punctuation 1580 . 1581) (semantic-list 1532 . 1542) (symbol 1526 . 1532) (punctuation 1540 . 1541) (punctuation 1508 . 1509) (DELETE 1502 . 1508) (punctuation 1500 . 1501) (semantic-list 1484 . 1499) (punctuation 1483 . 1484) (OPERATOR 1475 . 1483) (punctuation 1473 . 1474) (symbol 1467 . 1473) (punctuation 1463 . 1464) (DELETE 1457 . 1463) (punctuation 1455 . 1456) (semantic-list 1439 . 1454) (symbol 1433 . 1439) (symbol 606 . 610) (symbol 599 . 605) (punctuation 598 . 599)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("cstdio" include (:system-flag t) nil [612 629])
+            ("memory" include (:system-flag t) nil [630 647])
+            ("mutex" include (:system-flag t) nil [648 664])
+            ("queue" include (:system-flag t) nil [665 681])
+            ("folly/LifoSem.h" include (:system-flag t) nil [683 709])
+            ("folly/futures/DrivableExecutor.h" include (:system-flag t) nil [710 753])
+            ("folly/futures/ScheduledExecutor.h" include (:system-flag t) nil [754 798])
+            ("folly" type
+               (:members 
+                  ( ("ManualExecutor" type
+                       (:superclasses 
+                          ( ("DrivableExecutor" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil)
+                            ("ScheduledExecutor" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [1300 1307])
+                            ("override" variable (:type "int") (reparse-symbol classsubparts) [1327 1336])
+                            ("run" function
+                               (:prototype-flag t
+                                :type ("size_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1733 1746])
+                            ("wait" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [1781 1793])
+                            ("makeProgress" function (:type "void") (reparse-symbol classsubparts) [1839 1893])
+                            ("waitFor" function
+                               (:template 
+                                  ( ("F" type (:type "class") nil nil))                                  
+                                :type "void"
+                                :arguments 
+                                  ( ("f" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("F" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2073 2084]))                                  )
+                                (reparse-symbol classsubparts) [2041 2238])
+                            ("advance" function
+                               (:arguments 
+                                  ( ("dur" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Duration" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2691 2711]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2678 2748])
+                            ("advanceTo" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("t" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("TimePoint" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2860 2879]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2845 2880])
+                            ("clear" function (:type ("std::size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3066 3375])
+                            ("private" label nil (reparse-symbol classsubparts) [3380 3388])
+                            ("lock_" variable (:type ("std::mutex" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3393 3410])
+                            ("funcs_" variable (:type ("std::queue" type
+                                 (:template-specifier 
+                                    ( ("Func" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [3415 3439])
+                            ("sem_" variable (:type ("LifoSem" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3444 3457])
+                            ("ScheduledFunc" type
+                               (:members 
+                                  ( ("time" variable (:type ("TimePoint" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3580 3595])
+                                    ("ordinal" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3602 3617])
+                                    ("func" variable (:type ("Func" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3624 3642])
+                                    ("ScheduledFunc" function
+                                       (:constructor-flag t
+                                        :arguments 
+                                          ( ("t" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("TimePoint" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3664 3683])
+                                            ("" variable
+                                               (:reference 1
+                                                :type ("Func" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3684 3690])
+                                            ("" variable (:type ("f" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3691 3693]))                                          
+                                        :type ("ScheduledFunc" type (:type "struct") nil nil))
+                                        (reparse-symbol classsubparts) [3650 3803])
+                                    ("<" function
+                                       (:methodconst-flag t
+                                        :operator-flag t
+                                        :arguments 
+                                          ( ("b" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("ScheduledFunc" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3826 3849]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [3811 4071])
+                                    ("moveOutFunc" function
+                                       (:methodconst-flag t
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [4086 4147]))                                  
+                                :type "struct")
+                                (reparse-symbol classsubparts) [3551 4154])
+                            ("scheduledFuncs_" variable (:type ("std::priority_queue" type
+                                 (:template-specifier 
+                                    ( ("ScheduledFunc" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [4159 4210])
+                            ("now_" variable
+                               (:default-value "TimePoint::min()"
+                                :type ("TimePoint" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4215 4249]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [1197 4254]))                  
+                :type "namespace")
+                nil [800 4257]))          
+      :file "ManualExecutor.h"
+      :pointmax 4258
+      :fsize 4257
+      :lastmodtime '(22913 34676 0 0)
+      :unmatched-syntax '((punctuation 4084 . 4085) (punctuation 4083 . 4084) (symbol 4079 . 4083) (punctuation 3689 . 3690) (punctuation 4084 . 4085) (punctuation 4083 . 4084) (symbol 4079 . 4083) (punctuation 3689 . 3690) (semantic-list 2911 . 2927) (symbol 2902 . 2910) (semantic-list 2899 . 2901) (symbol 2896 . 2899) (symbol 2886 . 2895) (semantic-list 2299 . 2420) (symbol 2290 . 2298) (semantic-list 2259 . 2289) (symbol 2249 . 2259) (punctuation 2265 . 2266) (VOID 2244 . 2248) (punctuation 2265 . 2266) (semantic-list 1957 . 1986) (symbol 1948 . 1956) (semantic-list 1945 . 1947) (symbol 1940 . 1945) (VOID 1935 . 1939) (semantic-list 1320 . 1326) (symbol 1317 . 1320) (VOID 1312 . 1316) (symbol 606 . 610) (symbol 599 . 605) (punctuation 598 . 599)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("chrono" include (:system-flag t) nil [612 629])
+            ("memory" include (:system-flag t) nil [630 647])
+            ("stdexcept" include (:system-flag t) nil [648 668])
+            ("folly/Executor.h" include (:system-flag t) nil [670 697])
+            ("folly/portability/BitsFunctexcept.h" include (:system-flag t) nil [698 744])
+            ("folly" type
+               (:members 
+                  ( ("ScheduledExecutor" type
+                       (:superclasses 
+                          ( ("Executor" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [888 895])
+                            ("Duration" type
+                               (:typedef ("std::chrono::microseconds" type (:type "class") nil nil)
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [1041 1084])
+                            ("TimePoint" type
+                               (:typedef ("std::chrono::steady_clock::time_point" type (:type "class") nil nil)
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [1090 1146])
+                            ("override" variable
+                               (:default-value "0"
+                                :type "int")
+                                (reparse-symbol classsubparts) [1215 1228])
+                            ("schedule" function
+                               (:arguments 
+                                  ( ("" variable
+                                       (:reference 1
+                                        :type ("Func" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1295 1301])
+                                    ("" variable (:type ("a" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1302 1304]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1281 1327])
+                            ("schedule" function
+                               (:arguments 
+                                  ( ("" variable
+                                       (:reference 1
+                                        :type ("Func" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1463 1469])
+                                    ("" variable (:type ("a" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1470 1472])
+                                    ("dur" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Duration" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1473 1493]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1449 1548])
+                            ("scheduleAt" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("" variable
+                                       (:reference 1
+                                        :type ("Func" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1732 1738])
+                                    ("" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("TimePoint" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1748 1773]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1708 1832])
+                            ("now" function
+                               (:typemodifiers ("virtual")
+                                :type ("TimePoint" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1904 1984]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [833 1989]))                  
+                :type "namespace")
+                nil [746 1991]))          
+      :file "ScheduledExecutor.h"
+      :pointmax 1992
+      :fsize 1991
+      :lastmodtime '(22913 34676 0 0)
+      :unmatched-syntax '((punctuation 1737 . 1738) (punctuation 1468 . 1469) (punctuation 1300 . 1301) (semantic-list 1208 . 1214) (symbol 1205 . 1208) (VOID 1200 . 1204) (punctuation 1192 . 1193) (DEFAULT 1185 . 1192) (punctuation 1183 . 1184) (symbol 1174 . 1182) (semantic-list 1171 . 1173) (symbol 1154 . 1171) (punctuation 1153 . 1154) (symbol 606 . 610) (symbol 599 . 605) (punctuation 598 . 599))))
+  :file "!Users!ric!Downloads!trunk!thirdparty!folly!futures!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

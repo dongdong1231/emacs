@@ -1,0 +1,230 @@
+#-*- coding: utf-8 -*-
+
+import json
+import sys
+import urllib2
+import argparse
+from urllib2 import URLError
+
+reload(sys)
+sys.setdefaultencoding('utf-8')
+
+class zabbix_api:
+    def __init__(self):
+        self.url_ = 'http://192.168.1.102/zabbix/api_jsonrpc.php'  #zabbix地址
+        self.header_ = {"Content-Type":"application/json-rpc"}
+
+    def user_login(self):
+        data = json.dumps({
+            "jsonrpc": "2.0",
+            "method": "user.login",
+            "params": {
+                "user": "Admin",
+                "password": "zabbix"
+            },
+            "id": 0
+        })
+
+        request = urllib2.Request(self.url_, data)
+        for key in self.header_:
+            request.add_header(key, self.header_[key])
+        try:
+            result = urllib2.urlopen(request)
+        except URLError as e:
+            print "\033[041m 认证失败，请检查URL !\033[0m",e.code
+        except KeyError as e:
+            print "\033[041m 认证失败，请检查用户名密码 !\033[0m",e
+        else:
+            response = json.loads(result.read())
+            result.close()
+            self.authID = response['result']
+            return self.authID
+
+    def get_host_id(self, auth, host_name):
+        data = '''{{"jsonrpc": "2.0",
+        "method":"host.get",
+        "params": {{
+            "output":"extend",
+            "filter": {{
+                "host": ["{}"]
+            }}
+        }},
+        "auth": "{}",
+        "id": 1
+        }}'''.format(host_name, auth)
+        request = urllib2.Request(self.url_, data)
+        for key in self.header_:
+            request.add_header(key, self.header_[key])
+        try:
+            result = urllib2.urlopen(request)
+        except URLError as e:
+            if hasattr(e, 'reason'):
+                print 'We failed to reach a server.'
+                print 'Reason: ', e.reason
+            elif hasattr(e, 'code'):
+                print 'The server could not fulfill the request.'
+                print 'Error code: ', e.code
+        else:
+            response = json.loads(result.read())
+            for host in response['result']:
+                c = host['hostid']
+                return  c
+
+    def get_template_id(self, auth, template_name = 'dsp_service'):
+        data = '''{{"jsonrpc":"2.0",
+                    "method": "template.get",
+                    "params": {{
+                         "output": "extend",
+                         "filter":{{
+                              "host": ["{}"]}}}},
+                    "auth": "{}",
+                    "id": 1}}'''.format(template_name, auth)
+        request = urllib2.Request(self.url_, data)
+        for key in self.header_:
+            request.add_header(key, self.header_[key])
+        try:
+            result = urllib2.urlopen(request)
+        except URLError as e:
+            if hasattr(e, 'reason'):
+                print 'We failed to reach a server.'
+                print 'Reason: ', e.reason
+            elif hasattr(e, 'code'):
+                print 'The server could not fulfill the request.'
+                print 'Error code: ', e.code
+        else:
+            response = json.loads(result.read())
+            for host in response['result']:
+                c = host['templateid']
+                return  c
+
+    def get_application_id(self, auth, hostid, application_name):
+        #select * from applications where name = 'cgi' and hostid=10272 \G
+        data = '''{{
+        "jsonrpc": "2.0",
+        "method": "application.get",
+        "params": {{
+            "output": "extend",
+            "hostids": "{}",
+            "filter": {{"name": "{}"
+        }}
+        }},
+        "auth": "{}",
+        "id": 1
+        }}'''.format(hostid, application_name, auth)
+        request = urllib2.Request(self.url_, data)
+        for key in self.header_:
+            request.add_header(key, self.header_[key])
+        try:
+            result = urllib2.urlopen(request)
+        except URLError as e:
+            if hasattr(e, 'reason'):
+                print 'We failed to reach a server.'
+                print 'Reason: ', e.reason
+            elif hasattr(e, 'code'):
+                print 'The server could not fulfill the request.'
+                print 'Error code: ', e.code
+        else:
+            response = json.loads(result.read())
+            for host in response['result']:
+                c = host['applicationid']
+                return  c
+
+    def get_item_value(self, auth, host_name, key):
+        hostid = obj.get_host_id(auth, host_name)
+        data = '''{{
+        "jsonrpc": "2.0",
+        "method": "item.get",
+        "params": {{
+            "output": "extend",
+            "hostids": "{}",
+            "search": {{
+                "key_": "{}"
+            }}
+        }},
+        "auth": "{}",
+        "id": 1
+        }}'''.format(hostid, key, auth)
+        request = urllib2.Request(self.url_, data)
+        for key in self.header_:
+            request.add_header(key, self.header_[key])
+        try:
+            result = urllib2.urlopen(request)
+            response = json.loads(result.read())
+            print response
+            return response['result']['lastvalue']
+
+    def get_history_value(self, auth, key, period):
+        data = '''{{
+        "jsonrpc": "2.0",
+        "method": "history.get",
+        "params": {{
+            "output": "extend",
+            "history": 0,
+            "itemids": "23296",
+            "sortfield": "clock",
+            "sortorder": "DESC",
+            "limit": 10
+        }},
+        "auth": "038e1d7b1735c6a5436ee9eae095879e",
+        "id": 1
+        }}'''
+
+    def create_item(self, auth, item_name, key, item_type, value_type, host_id, application_id):
+        data = '''{{
+            "jsonrpc": "2.0",
+            "method": "item.create",
+            "params":{{
+                "name": "{}",
+                "key_": "{}",
+                "hostid": "{}",
+                "type": {},
+                "value_type": {},
+                "delay": "30s",
+                "history": "90d",
+                "trends": "365d",
+                "status": 0,
+                "trapper_hosts": "",
+                "applications": [
+                    "{}"
+                ]
+            }},
+            "auth": "{}",
+            "id":1
+        }}'''.format(item_name, key, host_id, item_type, value_type, application_id, auth)
+        print data
+        request = urllib2.Request(self.url_, data)
+        for key in self.header_:
+            request.add_header(key, self.header_[key])
+        try:
+            result = urllib2.urlopen(request)
+            response = json.loads(result.read())
+            print response
+            for error in response:
+                print error
+                return
+            result.close()
+        except Exception,e:
+            print  e
+
+if __name__ == '__main__':
+    obj = zabbix_api()
+    auth = obj.user_login()
+    template_id = obj.get_template_id(auth, 'dsp_service')
+    obj.get_item(auth, "l1", "yex.request.count")
+
+    return
+    with open('./item.data', 'rb') as fin:
+        for line in fin.readlines():
+            items = line.split('|')
+            if len(items) != 6:
+                print "line = " + line + " invalid";
+                continue
+            item_name = items[0].strip()
+            key = items[1].strip()
+            item_type = int(items[2])
+            value_type = int(items[3])
+            template_name = items[4].strip()
+            application_name = items[5].strip()
+            host_id = obj.get_host_id(auth, template_name)
+            application_id = obj.get_application_id(auth, template_id, application_name)
+            obj.create_item(auth, item_name, key, item_type, value_type, template_id, application_id)

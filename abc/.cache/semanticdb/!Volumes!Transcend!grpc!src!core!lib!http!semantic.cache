@@ -1,0 +1,1170 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("GRPC_CORE_LIB_HTTP_HTTPCLI_H" variable (:constant-flag t) nil [650 678])
+            ("grpc/support/port_platform.h" include (:system-flag t) nil [680 719])
+            ("stddef.h" include (:system-flag t) nil [721 740])
+            ("grpc/support/time.h" include (:system-flag t) nil [742 772])
+            ("src/core/lib/http/parser.h" include nil nil [774 811])
+            ("src/core/lib/iomgr/endpoint.h" include nil nil [812 852])
+            ("src/core/lib/iomgr/iomgr_internal.h" include nil nil [853 899])
+            ("src/core/lib/iomgr/polling_entity.h" include nil nil [900 946])
+            ("src/core/lib/iomgr/pollset_set.h" include nil nil [947 990])
+            ("GRPC_HTTPCLI_USER_AGENT" variable (:constant-flag t) nil [1038 1061])
+            ("grpc_httpcli_context" type
+               (:members 
+                  ( ("pollset_set" variable
+                       (:pointer 1
+                        :type ("grpc_pollset_set" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1283 1313]))                  
+                :type "struct")
+                nil [1243 1337])
+            ("grpc_httpcli_context" type
+               (:typedef ("grpc_httpcli_context" type (:type "struct") nil nil)
+                :type "typedef")
+                nil [1243 1337])
+            ("grpc_httpcli_handshaker" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("default_port" variable
+                             (:pointer 1
+                              :constant-flag t
+                              :type "char")
+                              (reparse-symbol classsubparts) [1358 1383])
+                          ("handshake" function
+                             (:prototype-flag t
+                              :function-pointer t
+                              :arguments 
+                                ( ("arg" variable
+                                     (:pointer 1
+                                      :type "void")
+                                      (reparse-symbol arg-sub-list) [1404 1414])
+                                  ("endpoint" variable
+                                     (:pointer 1
+                                      :type ("grpc_endpoint" type (:type "class") nil nil))
+                                      (reparse-symbol arg-sub-list) [1415 1439])
+                                  ("host" variable
+                                     (:pointer 1
+                                      :constant-flag t
+                                      :type "char")
+                                      (reparse-symbol arg-sub-list) [1440 1457])
+                                  ("deadline" variable (:type ("grpc_millis" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1478 1499])
+                                  ("on_done" function
+                                     (:function-pointer t
+                                      :arguments 
+                                        ( ("arg" variable
+                                             (:pointer 1
+                                              :type "void")
+                                              (reparse-symbol arg-sub-list) [1536 1546])
+                                          ("endpoint" variable
+                                             (:pointer 1
+                                              :type ("grpc_endpoint" type (:type "class") nil nil))
+                                              (reparse-symbol arg-sub-list) [1547 1571]))                                        
+                                      :type "void")
+                                      nil nil))                                
+                              :type "void")
+                              (reparse-symbol classsubparts) [1386 1573]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [1339 1600])
+            ("grpc_httpcli_plaintext" variable
+               (:typemodifiers ("extern")
+                :constant-flag t
+                :type ("grpc_httpcli_handshaker" type (:type "class") nil nil))
+                nil [1602 1662])
+            ("grpc_httpcli_ssl" variable
+               (:typemodifiers ("extern")
+                :constant-flag t
+                :type ("grpc_httpcli_handshaker" type (:type "class") nil nil))
+                nil [1663 1717])
+            ("grpc_httpcli_request" type
+               (:members 
+                  ( ("host" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [1811 1822])
+                    ("ssl_host_override" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [1883 1907])
+                    ("http" variable (:type ("grpc_http_request" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2061 2084])
+                    ("handshaker" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grpc_httpcli_handshaker" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2133 2175]))                  
+                :type "struct")
+                nil [1735 2199])
+            ("grpc_httpcli_request" type
+               (:typedef ("grpc_httpcli_request" type (:type "struct") nil nil)
+                :type "typedef")
+                nil [1735 2199])
+            ("grpc_httpcli_response" type
+               (:typedef ("grpc_http_response" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [2265 2321])
+            ("grpc_httpcli_context_init" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("context" variable
+                       (:pointer 1
+                        :type ("grpc_httpcli_context" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2354 2384]))                  
+                :type "void")
+                nil [2323 2385])
+            ("grpc_httpcli_context_destroy" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("context" variable
+                       (:pointer 1
+                        :type ("grpc_httpcli_context" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2420 2450]))                  
+                :type "void")
+                nil [2386 2451])
+            ("grpc_httpcli_get" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("context" variable
+                       (:pointer 1
+                        :type ("grpc_httpcli_context" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2975 3005])
+                    ("pollent" variable
+                       (:pointer 1
+                        :type ("grpc_polling_entity" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3028 3057])
+                    ("resource_quota" variable
+                       (:pointer 1
+                        :type ("grpc_resource_quota" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3080 3116])
+                    ("request" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grpc_httpcli_request" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3139 3175])
+                    ("deadline" variable (:type ("grpc_millis" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3176 3197])
+                    ("on_complete" variable
+                       (:pointer 1
+                        :type ("grpc_closure" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3220 3246])
+                    ("response" variable
+                       (:pointer 1
+                        :type ("grpc_httpcli_response" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3269 3301]))                  
+                :type "void")
+                nil [2953 3302])
+            ("grpc_httpcli_post" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("context" variable
+                       (:pointer 1
+                        :type ("grpc_httpcli_context" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4110 4140])
+                    ("pollent" variable
+                       (:pointer 1
+                        :type ("grpc_polling_entity" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4164 4193])
+                    ("resource_quota" variable
+                       (:pointer 1
+                        :type ("grpc_resource_quota" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4217 4253])
+                    ("request" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grpc_httpcli_request" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4277 4313])
+                    ("body_bytes" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4337 4360])
+                    ("body_size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4361 4378])
+                    ("deadline" variable (:type ("grpc_millis" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4402 4423])
+                    ("on_complete" variable
+                       (:pointer 1
+                        :type ("grpc_closure" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4424 4450])
+                    ("response" variable
+                       (:pointer 1
+                        :type ("grpc_httpcli_response" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4474 4506]))                  
+                :type "void")
+                nil [4087 4507])
+            ("grpc_httpcli_get_override" function
+               (:prototype-flag t
+                :function-pointer t
+                :arguments 
+                  ( ("request" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grpc_httpcli_request" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4625 4661])
+                    ("deadline" variable (:type ("grpc_millis" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4703 4724])
+                    ("on_complete" variable
+                       (:pointer 1
+                        :type ("grpc_closure" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4766 4792])
+                    ("response" variable
+                       (:pointer 1
+                        :type ("grpc_httpcli_response" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4834 4866]))                  
+                :type "int")
+                nil [4592 4867])
+            ("grpc_httpcli_post_override" function
+               (:prototype-flag t
+                :function-pointer t
+                :arguments 
+                  ( ("request" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grpc_httpcli_request" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4910 4946])
+                    ("body_bytes" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4989 5012])
+                    ("body_size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5055 5072])
+                    ("deadline" variable (:type ("grpc_millis" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5115 5136])
+                    ("on_complete" variable
+                       (:pointer 1
+                        :type ("grpc_closure" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5179 5205])
+                    ("response" variable
+                       (:pointer 1
+                        :type ("grpc_httpcli_response" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5248 5280]))                  
+                :type "int")
+                nil [4876 5281])
+            ("grpc_httpcli_set_override" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("get" variable (:type ("grpc_httpcli_get_override" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5314 5344])
+                    ("post" variable (:type ("grpc_httpcli_post_override" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5376 5408]))                  
+                :type "void")
+                nil [5283 5409]))          
+      :file "httpcli.h"
+      :pointmax 5453
+      :fsize 5452
+      :lastmodtime '(23185 14223 0 0)
+      :unmatched-syntax '((TYPEDEF 4868 . 4875) (TYPEDEF 4584 . 4591))
+      :lexical-table 
+        '(("GRPC_CORE_LIB_HTTP_HTTPCLI_H")
+          ("GRPC_HTTPCLI_USER_AGENT" . ((string "\"grpc-httpcli/0.0\"" 1062 . 1080)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("GRPC_CORE_LIB_HTTP_PARSER_H" variable (:constant-flag t) nil [649 676])
+            ("grpc/slice.h" include (:system-flag t) nil [678 701])
+            ("grpc/support/port_platform.h" include (:system-flag t) nil [702 741])
+            ("src/core/lib/debug/trace.h" include nil nil [742 779])
+            ("src/core/lib/iomgr/error.h" include nil nil [780 817])
+            ("GRPC_HTTP_PARSER_MAX_HEADER_LENGTH" variable (:constant-flag t) nil [896 930])
+            ("grpc_http1_trace" variable
+               (:type ("grpc_tracer_flag" type (:type "class") nil nil)
+                :typemodifiers ("extern" "\"C\"" "extern"))
+                (reparse-symbol extern-c-contents) [3089 3130])
+            ("grpc_http_response_destroy" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("response" variable
+                       (:pointer 1
+                        :type ("grpc_http_response" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3057 3086]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3025 3087])
+            ("grpc_http_request_destroy" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("request" variable
+                       (:pointer 1
+                        :type ("grpc_http_request" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2996 3023]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2965 3024])
+            ("grpc_http_parser_eof" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("grpc_error" type (:type "class") nil nil)
+                :arguments 
+                  ( ("parser" variable
+                       (:pointer 1
+                        :type ("grpc_http_parser" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2937 2962]))                  
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2904 2963])
+            ("grpc_http_parser_parse" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("grpc_error" type (:type "class") nil nil)
+                :arguments 
+                  ( ("parser" variable
+                       (:pointer 1
+                        :type ("grpc_http_parser" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2801 2826])
+                    ("slice" variable (:type ("grpc_slice" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2827 2844])
+                    ("start_of_body" variable
+                       (:pointer 1
+                        :type ("size_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2880 2902]))                  
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2766 2903])
+            ("grpc_http_parser_destroy" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("parser" variable
+                       (:pointer 1
+                        :type ("grpc_http_parser" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2658 2683]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2628 2684])
+            ("grpc_http_parser_init" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("parser" variable
+                       (:pointer 1
+                        :type ("grpc_http_parser" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2526 2551])
+                    ("type" variable (:type ("grpc_http_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2552 2572])
+                    ("request_or_response" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2600 2626]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2499 2627])
+            ("grpc_http_parser" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :typedef ("" type
+                     (:members 
+                        ( ("state" variable (:type ("grpc_http_parser_state" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2147 2176])
+                          ("type" variable (:type ("grpc_http_type" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2179 2199])
+                          ("http" variable (:type ("" type
+                               (:members 
+                                  ( ("response" variable
+                                       (:pointer 1
+                                        :type ("grpc_http_response" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [2215 2244])
+                                    ("request" variable
+                                       (:pointer 1
+                                        :type ("grpc_http_request" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [2249 2276])
+                                    ("request_or_response" variable
+                                       (:pointer 1
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [2281 2307]))                                  
+                                :type "union")
+                                nil nil)) (reparse-symbol classsubparts) [2203 2317])
+                          ("body_capacity" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2320 2341])
+                          ("hdr_capacity" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2344 2364])
+                          ("cur_line" variable
+                             (:dereference 1
+                              :type ("uint8_t" type (:type "class") nil nil))
+                              (reparse-symbol classsubparts) [2368 2421])
+                          ("cur_line_length" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2424 2447])
+                          ("cur_line_end_length" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2450 2477]))                        
+                      :type "struct")
+                      nil nil))
+                (reparse-symbol extern-c-contents) [2128 2497])
+            ("grpc_http_response" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :typedef ("grpc_http_response" type (:type "struct") nil nil))
+                (reparse-symbol extern-c-contents) [1842 2126])
+            ("grpc_http_response" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :members 
+                  ( ("status" variable (:type "int") (reparse-symbol classsubparts) [1905 1916])
+                    ("hdr_count" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1957 1974])
+                    ("hdrs" variable
+                       (:pointer 1
+                        :type ("grpc_http_header" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1977 2000])
+                    ("body_length" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2071 2090])
+                    ("body" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [2093 2104]))                  )
+                (reparse-symbol extern-c-contents) [1842 2126])
+            ("grpc_http_request" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :typedef ("grpc_http_request" type (:type "struct") nil nil))
+                (reparse-symbol extern-c-contents) [1402 1823])
+            ("grpc_http_request" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :members 
+                  ( ("method" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [1486 1499])
+                    ("path" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [1544 1555])
+                    ("version" variable (:type ("grpc_http_version" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1586 1612])
+                    ("hdr_count" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1655 1672])
+                    ("hdrs" variable
+                       (:pointer 1
+                        :type ("grpc_http_header" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1675 1698])
+                    ("body_length" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1769 1788])
+                    ("body" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [1791 1802]))                  )
+                (reparse-symbol extern-c-contents) [1402 1823])
+            ("grpc_http_type" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :typedef ("" type
+                     (:members 
+                        ( ("GRPC_HTTP_RESPONSE" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [1326 1345])
+                          ("GRPC_HTTP_REQUEST" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [1348 1366]))                        
+                      :type "enum")
+                      nil nil))
+                (reparse-symbol extern-c-contents) [1309 1384])
+            ("grpc_http_version" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :typedef ("" type
+                     (:members 
+                        ( ("GRPC_HTTP_HTTP10" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [1229 1246])
+                          ("GRPC_HTTP_HTTP11" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [1249 1266])
+                          ("GRPC_HTTP_HTTP20" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [1269 1286]))                        
+                      :type "enum")
+                      nil nil))
+                (reparse-symbol extern-c-contents) [1212 1307])
+            ("grpc_http_parser_state" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :typedef ("" type
+                     (:members 
+                        ( ("GRPC_HTTP_FIRST_LINE" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [1125 1146])
+                          ("GRPC_HTTP_HEADERS" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [1149 1167])
+                          ("GRPC_HTTP_BODY" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [1170 1186]))                        
+                      :type "enum")
+                      nil nil))
+                (reparse-symbol extern-c-contents) [1108 1210])
+            ("grpc_http_header" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :typedef ("grpc_http_header" type (:type "struct") nil nil))
+                (reparse-symbol extern-c-contents) [1025 1106])
+            ("grpc_http_header" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :members 
+                  ( ("key" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [1061 1071])
+                    ("value" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [1074 1086]))                  )
+                (reparse-symbol extern-c-contents) [1025 1106]))          
+      :file "parser.h"
+      :pointmax 3202
+      :fsize 3137
+      :lastmodtime '(23185 14223 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("GRPC_HTTP_PARSER_MAX_HEADER_LENGTH" . ((number "4096" 931 . 935)))
+          ("GRPC_CORE_LIB_HTTP_PARSER_H")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("src/core/lib/http/httpcli.h" include nil nil [605 643])
+            ("string.h" include (:system-flag t) nil [645 664])
+            ("grpc/support/alloc.h" include (:system-flag t) nil [666 697])
+            ("grpc/support/log.h" include (:system-flag t) nil [698 727])
+            ("grpc/support/string_util.h" include (:system-flag t) nil [728 765])
+            ("grpc/support/useful.h" include (:system-flag t) nil [766 798])
+            ("src/core/lib/channel/channel_args.h" include nil nil [800 846])
+            ("src/core/lib/http/format_request.h" include nil nil [847 892])
+            ("src/core/lib/http/parser.h" include nil nil [893 930])
+            ("src/core/lib/iomgr/endpoint.h" include nil nil [931 971])
+            ("src/core/lib/iomgr/iomgr_internal.h" include nil nil [972 1018])
+            ("src/core/lib/iomgr/resolve_address.h" include nil nil [1019 1066])
+            ("src/core/lib/iomgr/sockaddr_utils.h" include nil nil [1067 1113])
+            ("src/core/lib/iomgr/tcp_client.h" include nil nil [1114 1156])
+            ("src/core/lib/slice/slice_internal.h" include nil nil [1157 1203])
+            ("src/core/lib/support/string.h" include nil nil [1204 1244])
+            ("internal_request" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("request_text" variable (:type ("grpc_slice" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1265 1289])
+                          ("parser" variable (:type ("grpc_http_parser" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1292 1316])
+                          ("addresses" variable
+                             (:pointer 1
+                              :type ("grpc_resolved_addresses" type (:type "class") nil nil))
+                              (reparse-symbol classsubparts) [1319 1354])
+                          ("next_address" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1357 1377])
+                          ("ep" variable
+                             (:pointer 1
+                              :type ("grpc_endpoint" type (:type "class") nil nil))
+                              (reparse-symbol classsubparts) [1380 1398])
+                          ("host" variable
+                             (:pointer 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [1401 1412])
+                          ("ssl_host_override" variable
+                             (:pointer 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [1415 1439])
+                          ("deadline" variable (:type ("grpc_millis" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1442 1463])
+                          ("have_read_byte" variable (:type "int") (reparse-symbol classsubparts) [1466 1485])
+                          ("handshaker" variable
+                             (:pointer 1
+                              :constant-flag t
+                              :type ("grpc_httpcli_handshaker" type (:type "class") nil nil))
+                              (reparse-symbol classsubparts) [1488 1530])
+                          ("on_done" variable
+                             (:pointer 1
+                              :type ("grpc_closure" type (:type "class") nil nil))
+                              (reparse-symbol classsubparts) [1533 1555])
+                          ("context" variable
+                             (:pointer 1
+                              :type ("grpc_httpcli_context" type (:type "class") nil nil))
+                              (reparse-symbol classsubparts) [1558 1588])
+                          ("pollent" variable
+                             (:pointer 1
+                              :type ("grpc_polling_entity" type (:type "class") nil nil))
+                              (reparse-symbol classsubparts) [1591 1620])
+                          ("iomgr_obj" variable (:type ("grpc_iomgr_object" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1623 1651])
+                          ("incoming" variable (:type ("grpc_slice_buffer" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1654 1681])
+                          ("outgoing" variable (:type ("grpc_slice_buffer" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1684 1711])
+                          ("on_read" variable (:type ("grpc_closure" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1714 1735])
+                          ("done_write" variable (:type ("grpc_closure" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1738 1762])
+                          ("connected" variable (:type ("grpc_closure" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1765 1788])
+                          ("overall_error" variable
+                             (:pointer 1
+                              :type ("grpc_error" type (:type "class") nil nil))
+                              (reparse-symbol classsubparts) [1791 1817])
+                          ("resource_quota" variable
+                             (:pointer 1
+                              :type ("grpc_resource_quota" type (:type "class") nil nil))
+                              (reparse-symbol classsubparts) [1820 1856]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [1246 1876])
+            ("g_get_override" variable
+               (:typemodifiers ("static")
+                :default-value "NULL"
+                :type ("grpc_httpcli_get_override" type (:type "class") nil nil))
+                nil [1878 1933])
+            ("g_post_override" variable
+               (:typemodifiers ("static")
+                :default-value "NULL"
+                :type ("grpc_httpcli_post_override" type (:type "class") nil nil))
+                nil [1934 1991])
+            ("plaintext_handshake" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("exec_ctx" variable
+                       (:pointer 1
+                        :type ("grpc_exec_ctx" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2025 2049])
+                    ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2050 2060])
+                    ("endpoint" variable
+                       (:pointer 1
+                        :type ("grpc_endpoint" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2093 2117])
+                    ("host" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2118 2135])
+                    ("deadline" variable (:type ("grpc_millis" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2168 2189])
+                    ("on_done" function
+                       (:function-pointer t
+                        :arguments 
+                          ( ("exec_ctx" variable
+                               (:pointer 1
+                                :type ("grpc_exec_ctx" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2238 2262])
+                            ("arg" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [2311 2321])
+                            ("endpoint" variable
+                               (:pointer 1
+                                :type ("grpc_endpoint" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2370 2394]))                          
+                        :type "void")
+                        nil nil))                  
+                :type "void")
+                nil [1993 2435])
+            ("grpc_httpcli_plaintext" variable
+               (:constant-flag t
+                :default-value "{\"http\",
+                                                        plaintext_handshake}"
+                :type ("grpc_httpcli_handshaker" type (:type "class") nil nil))
+                nil [2437 2578])
+            ("grpc_httpcli_context_init" function
+               (:arguments 
+                  ( ("context" variable
+                       (:pointer 1
+                        :type ("grpc_httpcli_context" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2611 2641]))                  
+                :type "void")
+                nil [2580 2697])
+            ("grpc_httpcli_context_destroy" function
+               (:arguments 
+                  ( ("exec_ctx" variable
+                       (:pointer 1
+                        :type ("grpc_exec_ctx" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2733 2757])
+                    ("context" variable
+                       (:pointer 1
+                        :type ("grpc_httpcli_context" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2792 2822]))                  
+                :type "void")
+                nil [2699 2886])
+            ("next_address" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("exec_ctx" variable
+                       (:pointer 1
+                        :type ("grpc_exec_ctx" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2913 2937])
+                    ("req" variable
+                       (:pointer 1
+                        :type ("internal_request" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2938 2960])
+                    ("due_to_error" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2986 3011]))                  
+                :type "void")
+                nil [2888 3012])
+            ("finish" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("exec_ctx" variable
+                       (:pointer 1
+                        :type ("grpc_exec_ctx" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3033 3057])
+                    ("req" variable
+                       (:pointer 1
+                        :type ("internal_request" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3058 3080])
+                    ("error" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3100 3118]))                  
+                :type "void")
+                nil [3014 3939])
+            ("append_error" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("req" variable
+                       (:pointer 1
+                        :type ("internal_request" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3966 3988])
+                    ("error" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3989 4007]))                  
+                :type "void")
+                nil [3941 4518])
+            ("do_read" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("exec_ctx" variable
+                       (:pointer 1
+                        :type ("grpc_exec_ctx" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4540 4564])
+                    ("req" variable
+                       (:pointer 1
+                        :type ("internal_request" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4565 4587]))                  
+                :type "void")
+                nil [4520 4663])
+            ("on_read" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("exec_ctx" variable
+                       (:pointer 1
+                        :type ("grpc_exec_ctx" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4685 4709])
+                    ("user_data" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4710 4726])
+                    ("error" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4747 4765]))                  
+                :type "void")
+                nil [4665 5413])
+            ("on_written" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("exec_ctx" variable
+                       (:pointer 1
+                        :type ("grpc_exec_ctx" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5438 5462])
+                    ("req" variable
+                       (:pointer 1
+                        :type ("internal_request" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5463 5485]))                  
+                :type "void")
+                nil [5415 5515])
+            ("done_write" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("exec_ctx" variable
+                       (:pointer 1
+                        :type ("grpc_exec_ctx" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5540 5564])
+                    ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [5565 5575])
+                    ("error" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5576 5594]))                  
+                :type "void")
+                nil [5517 5785])
+            ("start_write" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("exec_ctx" variable
+                       (:pointer 1
+                        :type ("grpc_exec_ctx" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5811 5835])
+                    ("req" variable
+                       (:pointer 1
+                        :type ("internal_request" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5836 5858]))                  
+                :type "void")
+                nil [5787 6044])
+            ("on_handshake_done" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("exec_ctx" variable
+                       (:pointer 1
+                        :type ("grpc_exec_ctx" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6076 6100])
+                    ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [6101 6111])
+                    ("ep" variable
+                       (:pointer 1
+                        :type ("grpc_endpoint" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6142 6160]))                  
+                :type "void")
+                nil [6046 6433])
+            ("on_connected" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("exec_ctx" variable
+                       (:pointer 1
+                        :type ("grpc_exec_ctx" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6460 6484])
+                    ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [6485 6495])
+                    ("error" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6521 6539]))                  
+                :type "void")
+                nil [6435 6853])
+            ("next_address" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("exec_ctx" variable
+                       (:pointer 1
+                        :type ("grpc_exec_ctx" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6880 6904])
+                    ("req" variable
+                       (:pointer 1
+                        :type ("internal_request" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6905 6927])
+                    ("error" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6953 6971]))                  
+                :type "void")
+                nil [6855 7828])
+            ("on_resolved" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("exec_ctx" variable
+                       (:pointer 1
+                        :type ("grpc_exec_ctx" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7854 7878])
+                    ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [7879 7889])
+                    ("error" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7890 7908]))                  
+                :type "void")
+                nil [7830 8136])
+            ("internal_request_begin" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("exec_ctx" variable
+                       (:pointer 1
+                        :type ("grpc_exec_ctx" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8173 8197])
+                    ("context" variable
+                       (:pointer 1
+                        :type ("grpc_httpcli_context" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8233 8263])
+                    ("pollent" variable
+                       (:pointer 1
+                        :type ("grpc_polling_entity" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8299 8328])
+                    ("resource_quota" variable
+                       (:pointer 1
+                        :type ("grpc_resource_quota" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8364 8400])
+                    ("request" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grpc_httpcli_request" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8436 8472])
+                    ("deadline" variable (:type ("grpc_millis" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8508 8529])
+                    ("on_done" variable
+                       (:pointer 1
+                        :type ("grpc_closure" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8530 8552])
+                    ("response" variable
+                       (:pointer 1
+                        :type ("grpc_httpcli_response" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8588 8620])
+                    ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [8656 8673])
+                    ("request_text" variable (:type ("grpc_slice" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8674 8698]))                  
+                :type "void")
+                nil [8138 10042])
+            ("grpc_httpcli_get" function
+               (:arguments 
+                  ( ("exec_ctx" variable
+                       (:pointer 1
+                        :type ("grpc_exec_ctx" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10066 10090])
+                    ("context" variable
+                       (:pointer 1
+                        :type ("grpc_httpcli_context" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10091 10121])
+                    ("pollent" variable
+                       (:pointer 1
+                        :type ("grpc_polling_entity" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10144 10173])
+                    ("resource_quota" variable
+                       (:pointer 1
+                        :type ("grpc_resource_quota" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10196 10232])
+                    ("request" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grpc_httpcli_request" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10255 10291])
+                    ("deadline" variable (:type ("grpc_millis" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10292 10313])
+                    ("on_done" variable
+                       (:pointer 1
+                        :type ("grpc_closure" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10336 10358])
+                    ("response" variable
+                       (:pointer 1
+                        :type ("grpc_httpcli_response" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10359 10391]))                  
+                :type "void")
+                nil [10044 10821])
+            ("grpc_httpcli_post" function
+               (:arguments 
+                  ( ("exec_ctx" variable
+                       (:pointer 1
+                        :type ("grpc_exec_ctx" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10846 10870])
+                    ("context" variable
+                       (:pointer 1
+                        :type ("grpc_httpcli_context" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10871 10901])
+                    ("pollent" variable
+                       (:pointer 1
+                        :type ("grpc_polling_entity" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10925 10954])
+                    ("resource_quota" variable
+                       (:pointer 1
+                        :type ("grpc_resource_quota" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10978 11014])
+                    ("request" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grpc_httpcli_request" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11038 11074])
+                    ("body_bytes" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [11098 11121])
+                    ("body_size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11122 11139])
+                    ("deadline" variable (:type ("grpc_millis" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11163 11184])
+                    ("on_done" variable
+                       (:pointer 1
+                        :type ("grpc_closure" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11185 11207])
+                    ("response" variable
+                       (:pointer 1
+                        :type ("grpc_httpcli_response" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11231 11263]))                  
+                :type "void")
+                nil [10823 11734])
+            ("grpc_httpcli_set_override" function
+               (:arguments 
+                  ( ("get" variable (:type ("grpc_httpcli_get_override" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11767 11797])
+                    ("post" variable (:type ("grpc_httpcli_post_override" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11829 11861]))                  
+                :type "void")
+                nil [11736 11915]))          
+      :file "httpcli.cc"
+      :pointmax 11916
+      :fsize 10919
+      :lastmodtime '(23185 14223 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :file "format_request.h"
+      :fsize 1231
+      :lastmodtime '(23185 14223 0 0))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("src/core/lib/http/parser.h" include nil nil [605 642])
+            ("stdbool.h" include (:system-flag t) nil [644 664])
+            ("string.h" include (:system-flag t) nil [665 684])
+            ("grpc/support/alloc.h" include (:system-flag t) nil [686 717])
+            ("grpc/support/log.h" include (:system-flag t) nil [718 747])
+            ("grpc/support/useful.h" include (:system-flag t) nil [748 780])
+            ("grpc_http1_trace" variable
+               (:default-value "GRPC_TRACER_INITIALIZER(false, \"http1\")"
+                :type ("grpc_tracer_flag" type (:type "class") nil nil))
+                nil [782 858])
+            ("buf2str" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("buffer" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [881 894])
+                    ("length" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [895 909]))                  
+                :type "char")
+                nil [860 1023])
+            ("handle_response_line" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("parser" variable
+                       (:pointer 1
+                        :type ("grpc_http_parser" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1065 1090]))                  
+                :type ("grpc_error" type (:type "class") nil nil))
+                nil [1025 2799])
+            ("handle_request_line" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("parser" variable
+                       (:pointer 1
+                        :type ("grpc_http_parser" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2840 2865]))                  
+                :type ("grpc_error" type (:type "class") nil nil))
+                nil [2801 4921])
+            ("handle_first_line" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("parser" variable
+                       (:pointer 1
+                        :type ("grpc_http_parser" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4960 4985]))                  
+                :type ("grpc_error" type (:type "class") nil nil))
+                nil [4923 5264])
+            ("add_header" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("parser" variable
+                       (:pointer 1
+                        :type ("grpc_http_parser" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5296 5321]))                  
+                :type ("grpc_error" type (:type "class") nil nil))
+                nil [5266 6952])
+            ("finish_line" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("parser" variable
+                       (:pointer 1
+                        :type ("grpc_http_parser" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6985 7010])
+                    ("found_body_start" variable
+                       (:pointer 1
+                        :type "bool")
+                        (reparse-symbol arg-sub-list) [7042 7065]))                  
+                :type ("grpc_error" type (:type "class") nil nil))
+                nil [6954 7785])
+            ("addbyte_body" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("parser" variable
+                       (:pointer 1
+                        :type ("grpc_http_parser" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7819 7844])
+                    ("byte" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7845 7858]))                  
+                :type ("grpc_error" type (:type "class") nil nil))
+                nil [7787 8600])
+            ("check_line" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("parser" variable
+                       (:pointer 1
+                        :type ("grpc_http_parser" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8625 8650]))                  
+                :type "bool")
+                nil [8602 9322])
+            ("addbyte" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("parser" variable
+                       (:pointer 1
+                        :type ("grpc_http_parser" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9351 9376])
+                    ("byte" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9377 9390])
+                    ("found_body_start" variable
+                       (:pointer 1
+                        :type "bool")
+                        (reparse-symbol arg-sub-list) [9418 9441]))                  
+                :type ("grpc_error" type (:type "class") nil nil))
+                nil [9324 10226])
+            ("grpc_http_parser_init" function
+               (:arguments 
+                  ( ("parser" variable
+                       (:pointer 1
+                        :type ("grpc_http_parser" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10255 10280])
+                    ("type" variable (:type ("grpc_http_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10281 10301])
+                    ("request_or_response" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [10329 10355]))                  
+                :type "void")
+                nil [10228 10553])
+            ("grpc_http_parser_destroy" function
+               (:arguments 
+                  ( ("parser" variable
+                       (:pointer 1
+                        :type ("grpc_http_parser" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10585 10610]))                  
+                :type "void")
+                nil [10555 10613])
+            ("grpc_http_request_destroy" function
+               (:arguments 
+                  ( ("request" variable
+                       (:pointer 1
+                        :type ("grpc_http_request" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10646 10673]))                  
+                :type "void")
+                nil [10615 10922])
+            ("grpc_http_response_destroy" function
+               (:arguments 
+                  ( ("response" variable
+                       (:pointer 1
+                        :type ("grpc_http_response" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10956 10985]))                  
+                :type "void")
+                nil [10924 11183])
+            ("grpc_http_parser_parse" function
+               (:pointer 1
+                :arguments 
+                  ( ("parser" variable
+                       (:pointer 1
+                        :type ("grpc_http_parser" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11220 11245])
+                    ("slice" variable (:type ("grpc_slice" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11246 11263])
+                    ("start_of_body" variable
+                       (:pointer 1
+                        :type ("size_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11299 11321]))                  
+                :type ("grpc_error" type (:type "class") nil nil))
+                nil [11185 11665])
+            ("grpc_http_parser_eof" function
+               (:pointer 1
+                :arguments 
+                  ( ("parser" variable
+                       (:pointer 1
+                        :type ("grpc_http_parser" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11700 11725]))                  
+                :type ("grpc_error" type (:type "class") nil nil))
+                nil [11667 11875]))          
+      :file "parser.cc"
+      :pointmax 11876
+      :fsize 12049
+      :lastmodtime '(23185 14223 0 0)
+      :unmatched-syntax nil))
+  :file "!Volumes!Transcend!grpc!src!core!lib!http!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

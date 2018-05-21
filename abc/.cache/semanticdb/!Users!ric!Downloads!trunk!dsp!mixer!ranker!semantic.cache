@@ -1,0 +1,649 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("dsp/mixer/ranker/ranker.h" include nil nil [73 109])
+            ("math.h" include (:system-flag t) nil [111 128])
+            ("algorithm" include (:system-flag t) nil [130 150])
+            ("map" include (:system-flag t) nil [151 165])
+            ("unordered_set" include (:system-flag t) nil [166 190])
+            ("thirdparty/gflags/gflags.h" include nil nil [192 229])
+            ("thirdparty/glog/logging.h" include nil nil [230 266])
+            ("dsp/mixer/ranker/bidder.h" include nil nil [268 304])
+            ("dsp/mixer/ranker/ranker.pb.h" include nil nil [305 344])
+            ("dsp/mixer/ranker/ranker_config.h" include nil nil [345 388])
+            ("dsp/proto/openrtb/openrtb-extensions.pb.h" include nil nil [389 441])
+            ("DEFINE_int64" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("min_cpc_paid_bid" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [470 487]))                  
+                :type "int")
+                nil [457 538])
+            ("DEFINE_int64" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("min_cpm_paid_bid" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [583 600]))                  
+                :type "int")
+                nil [570 651])
+            ("DEFINE_int64" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("min_cpt_paid_bid" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [679 696]))                  
+                :type "int")
+                nil [666 748])
+            ("DEFINE_bool" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("enable_domain_dedup" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [762 782])
+                    ("" variable (:type ("false" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [783 789]))                  
+                :type "int")
+                nil [750 833])
+            ("DEFINE_bool" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("enable_advertiser_dedup" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [846 870])
+                    ("" variable (:type ("true" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [871 876]))                  
+                :type "int")
+                nil [834 924])
+            ("yd" type
+               (:members 
+                  ( ("mixer" type
+                       (:members 
+                          ( ("ranker" type
+                               (:members 
+                                  ( ("Rank" function
+                                       (:parent "Ranker"
+                                        :arguments 
+                                          ( ("context" variable
+                                               (:pointer 1
+                                                :type ("MixerContext" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [997 1019]))                                          
+                                        :type "bool")
+                                        (reparse-symbol namespacesubparts) [979 2643])
+                                    ("Init" function
+                                       (:parent "Ranker"
+                                        :arguments 
+                                          ( ("config" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("Config" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2663 2684]))                                          
+                                        :type "bool")
+                                        (reparse-symbol namespacesubparts) [2645 2720])
+                                    ("CalculateSortFactor" function
+                                       (:parent "Ranker"
+                                        :arguments 
+                                          ( ("context" variable
+                                               (:pointer 1
+                                                :type ("MixerContext" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2755 2777])
+                                            ("ad_info" variable
+                                               (:pointer 1
+                                                :type ("AdInfo" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2778 2794]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [2722 5516])
+                                    ("CalculateEcpm" function
+                                       (:parent "Ranker"
+                                        :arguments 
+                                          ( ("context" variable
+                                               (:pointer 1
+                                                :constant-flag t
+                                                :type ("MixerContext" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [5545 5573])
+                                            ("ad_info" variable
+                                               (:pointer 1
+                                                :type ("AdInfo" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [5574 5590]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [5518 6186])
+                                    ("Merge" function
+                                       (:parent "Ranker"
+                                        :arguments 
+                                          ( ("source_queue" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::vector" type
+                                                     (:template-specifier 
+                                                        ( ("AdInfo" type (:pointer 1) nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [6207 6248])
+                                            ("destination_queue" variable
+                                               (:pointer 1
+                                                :type ("std::vector" type
+                                                     (:template-specifier 
+                                                        ( ("AdInfo" type (:pointer 1) nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [6268 6308]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [6188 7403])
+                                    ("Dedup" function
+                                       (:parent "Ranker"
+                                        :arguments 
+                                          ( ("source_queue" variable
+                                               (:pointer 1
+                                                :type ("std::vector" type
+                                                     (:template-specifier 
+                                                        ( ("AdInfo" type (:pointer 1) nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [7424 7459])
+                                            ("destination_queue" variable
+                                               (:pointer 1
+                                                :type ("std::vector" type
+                                                     (:template-specifier 
+                                                        ( ("AdInfo" type (:pointer 1) nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [7479 7519]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [7405 8519])
+                                    ("CalculateBid" function
+                                       (:parent "Ranker"
+                                        :arguments 
+                                          ( ("bidder_list" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::vector" type
+                                                     (:template-specifier 
+                                                        ( ("Bidder" type (:pointer 1) nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [8547 8587])
+                                            ("next_ecpm" variable (:type "double") (reparse-symbol arg-sub-list) [8614 8631])
+                                            ("ad_info" variable
+                                               (:pointer 1
+                                                :type ("AdInfo" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [8632 8648]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [8521 9818])
+                                    ("Bid" function
+                                       (:parent "Ranker"
+                                        :arguments 
+                                          ( ("context" variable
+                                               (:pointer 1
+                                                :type ("MixerContext" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [9837 9859]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [9820 10636])
+                                    ("BuildImpressionQueue" function
+                                       (:parent "Ranker"
+                                        :arguments 
+                                          ( ("context" variable
+                                               (:pointer 1
+                                                :type ("MixerContext" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [10672 10694]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [10638 10888])
+                                    ("SelectImpressionQueue" function
+                                       (:parent "Ranker"
+                                        :arguments 
+                                          ( ("context" variable
+                                               (:pointer 1
+                                                :type ("MixerContext" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [10925 10947]))                                          
+                                        :type "bool")
+                                        (reparse-symbol namespacesubparts) [10890 11637])
+                                    ("CalculateFilterInfo" function
+                                       (:methodconst-flag t
+                                        :parent "Ranker"
+                                        :arguments 
+                                          ( ("context" variable
+                                               (:pointer 1
+                                                :type ("MixerContext" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [11672 11694])
+                                            ("filter" variable
+                                               (:pointer 1
+                                                :type ("FilterInfo" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [11728 11747]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [11639 13058])
+                                    ("BlockedFilter" function
+                                       (:methodconst-flag t
+                                        :parent "Ranker"
+                                        :arguments 
+                                          ( ("filter" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("FilterInfo" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [13087 13112])
+                                            ("candidate_queue" variable
+                                               (:pointer 1
+                                                :type ("std::vector" type
+                                                     (:template-specifier 
+                                                        ( ("AdInfo" type (:pointer 1) nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [13140 13178]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [13060 14280])
+                                    ("REGISTER_RANKER" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("" variable (:type ("Ranker" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14298 14305]))                                          
+                                        :type "int")
+                                        (reparse-symbol namespacesubparts) [14282 14306]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [959 14309]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [941 14332]))                  
+                :type "namespace")
+                nil [926 14354]))          
+      :file "ranker.cc"
+      :pointmax 14372
+      :fsize 14511
+      :lastmodtime '(22866 3767 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("DSP_MIXER_RANKER_RANKER_H_" variable (:constant-flag t) nil [116 142])
+            ("map" include (:system-flag t) nil [144 158])
+            ("unordered_set" include (:system-flag t) nil [159 183])
+            ("vector" include (:system-flag t) nil [184 201])
+            ("common/base/class_register.h" include nil nil [203 242])
+            ("common/base/uncopyable.h" include nil nil [243 278])
+            ("thirdparty/gtest/gtest.h" include nil nil [279 314])
+            ("dsp/mixer/mixer_context.h" include nil nil [316 352])
+            ("dsp/mixer/ranker/ranker_config.h" include nil nil [353 396])
+            ("yd" type
+               (:members 
+                  ( ("mixer" type
+                       (:members 
+                          ( ("Bidder" type
+                               (:prototype t
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [432 445])
+                            ("RankerConfig" type
+                               (:prototype t
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [446 465])
+                            ("ranker" type
+                               (:members 
+                                  ( ("RankerConfig" type
+                                       (:prototype t
+                                        :type "class")
+                                        (reparse-symbol namespacesubparts) [487 506])
+                                    ("SortFactorComparator" type
+                                       (:members 
+                                          ( ("()" function
+                                               (:methodconst-flag t
+                                                :operator-flag t
+                                                :arguments 
+                                                  ( ("lhs" variable
+                                                       (:pointer 1
+                                                        :constant-flag t
+                                                        :type ("AdInfo" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [556 574])
+                                                    ("rhs" variable
+                                                       (:pointer 1
+                                                        :constant-flag t
+                                                        :type ("AdInfo" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [575 593]))                                                  
+                                                :type "bool")
+                                                (reparse-symbol classsubparts) [540 657]))                                          
+                                        :type "struct")
+                                        (reparse-symbol namespacesubparts) [508 660])
+                                    ("EcpmComparator" type
+                                       (:members 
+                                          ( ("()" function
+                                               (:methodconst-flag t
+                                                :operator-flag t
+                                                :arguments 
+                                                  ( ("lhs" variable
+                                                       (:pointer 1
+                                                        :constant-flag t
+                                                        :type ("AdInfo" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [704 722])
+                                                    ("rhs" variable
+                                                       (:pointer 1
+                                                        :constant-flag t
+                                                        :type ("AdInfo" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [723 741]))                                                  
+                                                :type "bool")
+                                                (reparse-symbol classsubparts) [688 791]))                                          
+                                        :type "struct")
+                                        (reparse-symbol namespacesubparts) [662 794])
+                                    ("Ranker" type
+                                       (:superclasses 
+                                          ( ("Uncopyable" type
+                                               (:protection "public"
+                                                :type "class")
+                                                nil nil))                                          
+                                        :members 
+                                          ( ("public" label nil (reparse-symbol classsubparts) [920 927])
+                                            ("Ranker" function
+                                               (:constructor-flag t
+                                                :type ("Ranker" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [930 941])
+                                            ("Ranker" function
+                                               (:destructor-flag t
+                                                :typemodifiers ("virtual")
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [944 964])
+                                            ("Init" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("config" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("Config" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [978 999]))                                                  
+                                                :type "bool")
+                                                (reparse-symbol classsubparts) [968 1000])
+                                            ("Rank" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("context" variable
+                                                       (:pointer 1
+                                                        :type ("MixerContext" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [1174 1196]))                                                  
+                                                :type "bool")
+                                                (reparse-symbol classsubparts) [1164 1197])
+                                            ("protected" label nil (reparse-symbol classsubparts) [1200 1210])
+                                            ("CalculateSortFactor" function
+                                               (:prototype-flag t
+                                                :typemodifiers ("virtual")
+                                                :arguments 
+                                                  ( ("context" variable
+                                                       (:pointer 1
+                                                        :type ("MixerContext" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [1246 1268])
+                                                    ("ad_info" variable
+                                                       (:pointer 1
+                                                        :type ("AdInfo" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [1269 1285]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [1213 1286])
+                                            ("CalculateEcpm" function
+                                               (:prototype-flag t
+                                                :typemodifiers ("virtual")
+                                                :arguments 
+                                                  ( ("context" variable
+                                                       (:pointer 1
+                                                        :constant-flag t
+                                                        :type ("MixerContext" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [1316 1344])
+                                                    ("ad_info" variable
+                                                       (:pointer 1
+                                                        :type ("AdInfo" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [1345 1361]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [1289 1362])
+                                            ("Merge" function
+                                               (:prototype-flag t
+                                                :typemodifiers ("virtual")
+                                                :arguments 
+                                                  ( ("source_queue" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("std::vector" type
+                                                             (:template-specifier 
+                                                                ( ("AdInfo" type (:pointer 1) nil nil))                                                                
+                                                              :type "class")
+                                                              nil nil))
+                                                        (reparse-symbol arg-sub-list) [1384 1425])
+                                                    ("destination_queue" variable
+                                                       (:pointer 1
+                                                        :type ("std::vector" type
+                                                             (:template-specifier 
+                                                                ( ("AdInfo" type (:pointer 1) nil nil))                                                                
+                                                              :type "class")
+                                                              nil nil))
+                                                        (reparse-symbol arg-sub-list) [1447 1487]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [1365 1488])
+                                            ("Dedup" function
+                                               (:prototype-flag t
+                                                :typemodifiers ("virtual")
+                                                :arguments 
+                                                  ( ("source_queue" variable
+                                                       (:pointer 1
+                                                        :type ("std::vector" type
+                                                             (:template-specifier 
+                                                                ( ("AdInfo" type (:pointer 1) nil nil))                                                                
+                                                              :type "class")
+                                                              nil nil))
+                                                        (reparse-symbol arg-sub-list) [1510 1545])
+                                                    ("destination_queue" variable
+                                                       (:pointer 1
+                                                        :type ("std::vector" type
+                                                             (:template-specifier 
+                                                                ( ("AdInfo" type (:pointer 1) nil nil))                                                                
+                                                              :type "class")
+                                                              nil nil))
+                                                        (reparse-symbol arg-sub-list) [1567 1607]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [1491 1608])
+                                            ("Filter" function
+                                               (:typemodifiers ("virtual")
+                                                :arguments 
+                                                  ( ("candidate_queue" variable
+                                                       (:pointer 1
+                                                        :type ("std::vector" type
+                                                             (:template-specifier 
+                                                                ( ("AdInfo" type (:pointer 1) nil nil))                                                                
+                                                              :type "class")
+                                                              nil nil))
+                                                        (reparse-symbol arg-sub-list) [1631 1669]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [1611 1672])
+                                            ("Bid" function
+                                               (:prototype-flag t
+                                                :typemodifiers ("virtual")
+                                                :arguments 
+                                                  ( ("context" variable
+                                                       (:pointer 1
+                                                        :type ("MixerContext" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [1755 1777]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [1738 1778])
+                                            ("BuildImpressionQueue" function
+                                               (:prototype-flag t
+                                                :typemodifiers ("virtual")
+                                                :arguments 
+                                                  ( ("context" variable
+                                                       (:pointer 1
+                                                        :type ("MixerContext" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [1835 1857]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [1801 1858])
+                                            ("protected" label nil (reparse-symbol classsubparts) [1861 1871])
+                                            ("FilterInfo" type
+                                               (:members 
+                                                  ( ("FilterSet" type
+                                                       (:typedef ("std::unordered_set" type
+                                                             (:template-specifier 
+                                                                ( ("uint64_t" type nil nil nil))                                                                
+                                                              :type "class")
+                                                              nil nil)
+                                                        :type "typedef")
+                                                        (reparse-symbol classsubparts) [1898 1945])
+                                                    ("blocked_advertisers" variable (:type ("FilterSet" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1950 1980])
+                                                    ("blocked_adgroups" variable (:type ("FilterSet" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1985 2012])
+                                                    ("blocked_campaigns" variable (:type ("FilterSet" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2017 2045]))                                                  
+                                                :type "struct")
+                                                (reparse-symbol classsubparts) [1874 2050])
+                                            ("config_" variable (:type ("RankerConfig" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2053 2074])
+                                            ("private" label nil (reparse-symbol classsubparts) [2077 2085])
+                                            ("SelectImpressionQueue" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("context" variable
+                                                       (:pointer 1
+                                                        :type ("MixerContext" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [2115 2137]))                                                  
+                                                :type "bool")
+                                                (reparse-symbol classsubparts) [2088 2138])
+                                            ("CalculateBid" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("bidder_list" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("std::vector" type
+                                                             (:template-specifier 
+                                                                ( ("Bidder" type (:pointer 1) nil nil))                                                                
+                                                              :type "class")
+                                                              nil nil))
+                                                        (reparse-symbol arg-sub-list) [2160 2200])
+                                                    ("next_ecpm" variable (:type "double") (reparse-symbol arg-sub-list) [2221 2238])
+                                                    ("ad_info" variable
+                                                       (:pointer 1
+                                                        :type ("AdInfo" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [2239 2255]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [2142 2256])
+                                            ("CalculateFilterInfo" function
+                                               (:prototype-flag t
+                                                :methodconst-flag t
+                                                :arguments 
+                                                  ( ("context" variable
+                                                       (:pointer 1
+                                                        :type ("MixerContext" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [2284 2306])
+                                                    ("filter" variable
+                                                       (:pointer 1
+                                                        :type ("FilterInfo" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [2307 2326]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [2259 2333])
+                                            ("BlockedFilter" function
+                                               (:prototype-flag t
+                                                :methodconst-flag t
+                                                :arguments 
+                                                  ( ("filter" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("FilterInfo" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [2355 2380])
+                                                    ("candidate_queue" variable
+                                                       (:pointer 1
+                                                        :type ("std::vector" type
+                                                             (:template-specifier 
+                                                                ( ("AdInfo" type (:pointer 1) nil nil))                                                                
+                                                              :type "class")
+                                                              nil nil))
+                                                        (reparse-symbol arg-sub-list) [2402 2440]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [2336 2447])
+                                            ("FRIEND_TEST" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("" variable (:type ("RankerTest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2463 2474])
+                                                    ("" variable (:type ("CalculateSortFactor" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2475 2495]))                                                  
+                                                :type "int")
+                                                (reparse-symbol classsubparts) [2451 2496])
+                                            ("FRIEND_TEST" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("" variable (:type ("RankerTest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2511 2522])
+                                                    ("" variable (:type ("CalculateEcpm" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2523 2537]))                                                  
+                                                :type "int")
+                                                (reparse-symbol classsubparts) [2499 2538])
+                                            ("FRIEND_TEST" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("" variable (:type ("RankerTest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2553 2564])
+                                                    ("" variable (:type ("Merge" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2565 2571]))                                                  
+                                                :type "int")
+                                                (reparse-symbol classsubparts) [2541 2572])
+                                            ("FRIEND_TEST" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("" variable (:type ("RankerTest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2587 2598])
+                                                    ("" variable (:type ("Dedup" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2599 2605]))                                                  
+                                                :type "int")
+                                                (reparse-symbol classsubparts) [2575 2606])
+                                            ("FRIEND_TEST" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("" variable (:type ("RankerTest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2621 2632])
+                                                    ("" variable (:type ("DedupAdvertiser" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2633 2649]))                                                  
+                                                :type "int")
+                                                (reparse-symbol classsubparts) [2609 2650])
+                                            ("FRIEND_TEST" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("" variable (:type ("RankerTest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2665 2676])
+                                                    ("" variable (:type ("CpcBidSession" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2677 2691]))                                                  
+                                                :type "int")
+                                                (reparse-symbol classsubparts) [2653 2692])
+                                            ("FRIEND_TEST" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("" variable (:type ("RankerTest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2707 2718])
+                                                    ("" variable (:type ("CpcNonTextBidSession" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2719 2740]))                                                  
+                                                :type "int")
+                                                (reparse-symbol classsubparts) [2695 2741])
+                                            ("FRIEND_TEST" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("" variable (:type ("RankerTest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2756 2767])
+                                                    ("" variable (:type ("SelectImpressionQueue" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2768 2790]))                                                  
+                                                :type "int")
+                                                (reparse-symbol classsubparts) [2744 2791])
+                                            ("FRIEND_TEST" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("" variable (:type ("RankerTest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2806 2817])
+                                                    ("" variable (:type ("CalculateFilterInfo" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2818 2838]))                                                  
+                                                :type "int")
+                                                (reparse-symbol classsubparts) [2794 2839])
+                                            ("FRIEND_TEST" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("" variable (:type ("RankerTest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2854 2865])
+                                                    ("" variable (:type ("BlockedFilter" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2866 2880]))                                                  
+                                                :type "int")
+                                                (reparse-symbol classsubparts) [2842 2881]))                                          
+                                        :type "class")
+                                        (reparse-symbol namespacesubparts) [884 2884]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [467 2887]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [413 2910]))                  
+                :type "namespace")
+                nil [398 2932])
+            ("CLASS_REGISTER_DEFINE_REGISTRY" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("RankerRegister" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2982 2997])
+                    ("" variable (:type ("yd::mixer::ranker::Ranker" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2998 3024]))                  
+                :type "int")
+                nil [2951 3025])
+            ("REGISTER_RANKER" variable (:constant-flag t) nil [3035 3050])
+            ("CREATE_RANKER" variable (:constant-flag t) nil [3503 3516]))          
+      :file "ranker.h"
+      :pointmax 3666
+      :fsize 3953
+      :lastmodtime '(22849 1894 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("CREATE_RANKER" (spp-arg-list ("ranker_name") 3516 . 3529) . ((symbol "CLASS_REGISTER_CREATE_OBJECT" 3569 . 3597) (semantic-list "(RankerRegister, ranker_name)" 3597 . 3626)))
+          ("REGISTER_RANKER" (spp-arg-list ("ranker_name") 3050 . 3063) . 
+              ((symbol "STATIC_ASSERT" 3101 . 3114) (semantic-list "(__INCLUDE_LEVEL__ == 0,                           \\
+                  \"This macro can not be used in header file\")" 3114 . 3229) (punctuation ";" 3229 . 3230) (symbol "CLASS_REGISTER_OBJECT_CREATOR" 3241 . 3270) (semantic-list "(RankerRegister,                   \\
+                                  yd::mixer::ranker::Ranker,        \\
+                                  #ranker_name,                     \\
+                                  ranker_name)" 3270 . 3493)))
+          ("DSP_MIXER_RANKER_RANKER_H_")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :file "ranker_config.h"
+      :fsize 754
+      :lastmodtime '(22840 64121 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "bidder.h"
+      :fsize 1384
+      :lastmodtime '(22840 64121 0 0)))
+  :file "!Users!ric!Downloads!trunk!dsp!mixer!ranker!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,600 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode java-mode
+      :tags 
+        '( ("org.apache.parquet.format.event" package nil nil [809 849])
+            ("java.util.ArrayList" include nil nil [905 932])
+            ("java.util.Collections" include nil nil [933 962])
+            ("java.util.HashMap" include nil nil [963 988])
+            ("java.util.List" include nil nil [989 1011])
+            ("java.util.Map" include nil nil [1012 1033])
+            ("org.apache.thrift.TBase" include nil nil [1035 1066])
+            ("org.apache.thrift.TException" include nil nil [1067 1103])
+            ("org.apache.thrift.TFieldIdEnum" include nil nil [1104 1142])
+            ("org.apache.thrift.protocol.TList" include nil nil [1143 1183])
+            ("org.apache.thrift.protocol.TProtocol" include nil nil [1184 1228])
+            ("org.apache.thrift.protocol.TProtocolUtil" include nil nil [1229 1277])
+            ("org.apache.parquet.format.event.Consumers.Consumer" include nil nil [1279 1337])
+            ("org.apache.parquet.format.event.TypedConsumer.BoolConsumer" include nil nil [1338 1404])
+            ("org.apache.parquet.format.event.TypedConsumer.ListConsumer" include nil nil [1405 1471])
+            ("org.apache.parquet.format.event.TypedConsumer.StructConsumer" include nil nil [1472 1540])
+            ("Consumers" type
+               (:typemodifiers ("public")
+                :members 
+                  ( ("DelegatingFieldConsumer" type
+                       (:typemodifiers ("public" "static")
+                        :interfaces ("FieldConsumer")
+                        :members 
+                          ( ("defaultFieldEventConsumer" variable
+                               (:typemodifiers ("private" "final")
+                                :type "FieldConsumer")
+                                (reparse-symbol class_member_declaration) [2315 2369])
+                            ("DelegatingFieldConsumer" function
+                               (:constructor-flag t
+                                :typemodifiers ("private")
+                                :arguments 
+                                  ( ("defaultFieldEventConsumer" variable (:type "FieldConsumer") (reparse-symbol formal_parameters) [2407 2446])
+                                    ("" variable (:type "Short") (reparse-symbol formal_parameters) [2452 2457])
+                                    ("" variable (:type "contexts") (reparse-symbol formal_parameters) [2474 2482]))                                  )
+                                (reparse-symbol class_member_declaration) [2375 2606])
+                            ("DelegatingFieldConsumer" function
+                               (:constructor-flag t
+                                :typemodifiers ("private"))
+                                (reparse-symbol class_member_declaration) [2612 2694])
+                            ("DelegatingFieldConsumer" function
+                               (:constructor-flag t
+                                :typemodifiers ("private")
+                                :arguments 
+                                  ( ("defaultFieldEventConsumer" variable (:type "FieldConsumer") (reparse-symbol formal_parameters) [2732 2771]))                                  )
+                                (reparse-symbol class_member_declaration) [2700 2865])
+                            ("onField" function
+                               (:typemodifiers ("public")
+                                :arguments 
+                                  ( ("e" variable (:type "TFieldIdEnum") (reparse-symbol formal_parameters) [2910 2924])
+                                    ("typedConsumer" variable (:type "TypedConsumer") (reparse-symbol formal_parameters) [2926 2953]))                                  
+                                :type "DelegatingFieldConsumer")
+                                (reparse-symbol class_member_declaration) [2871 3195])
+                            ("consumeField" function
+                               (:throws ("TException")
+                                :typemodifiers ("public")
+                                :arguments 
+                                  ( ("protocol" variable (:type "TProtocol") (reparse-symbol formal_parameters) [3249 3267])
+                                    ("reader" variable (:type "EventBasedThriftReader") (reparse-symbol formal_parameters) [3269 3298])
+                                    ("id" variable (:type "short") (reparse-symbol formal_parameters) [3308 3316])
+                                    ("type" variable (:type "byte") (reparse-symbol formal_parameters) [3318 3327]))                                  
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [3215 3579]))                          
+                        :type "class")
+                        (reparse-symbol class_member_declaration) [2185 3583])
+                    ("fieldConsumer" function
+                       (:typemodifiers ("public" "static")
+                        :type "DelegatingFieldConsumer")
+                        (reparse-symbol class_member_declaration) [3729 3830])
+                    ("listOf" function
+                       (:arguments 
+                          ( ("" variable (:type "c") (reparse-symbol formal_parameters) [4150 4151])
+                            ("" variable (:type "consumer") (reparse-symbol formal_parameters) [4177 4185]))                          
+                        :type "ListConsumer")
+                        (reparse-symbol class_member_declaration) [4121 4735])
+                    ("listElementsOf" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("consumer" variable (:type "TypedConsumer") (reparse-symbol formal_parameters) [4974 4996]))                          
+                        :type "ListConsumer")
+                        (reparse-symbol class_member_declaration) [4932 5060])
+                    ("struct" function
+                       (:arguments 
+                          ( ("" variable (:type "c") (reparse-symbol formal_parameters) [5159 5160])
+                            ("" variable (:type "consumer") (reparse-symbol formal_parameters) [5180 5188]))                          
+                        :type "StructConsumer")
+                        (reparse-symbol class_member_declaration) [5122 5247]))                  
+                :type "class")
+                nil [1638 5249])
+            ("SkippingFieldConsumer" type
+               (:interfaces ("FieldConsumer")
+                :members 
+                  ( ("consumeField" function
+                       (:throws ("TException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("protocol" variable (:type "TProtocol") (reparse-symbol formal_parameters) [5345 5363])
+                            ("reader" variable (:type "EventBasedThriftReader") (reparse-symbol formal_parameters) [5365 5394])
+                            ("id" variable (:type "short") (reparse-symbol formal_parameters) [5396 5404])
+                            ("type" variable (:type "byte") (reparse-symbol formal_parameters) [5406 5415]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [5320 5480]))                  
+                :type "class")
+                nil [5251 5482])
+            ("DelegatingListElementsConsumer" type
+               (:superclasses "ListConsumer"
+                :members 
+                  ( ("elementConsumer" variable
+                       (:typemodifiers ("private")
+                        :type "TypedConsumer")
+                        (reparse-symbol class_member_declaration) [5547 5585])
+                    ("DelegatingListElementsConsumer" function
+                       (:constructor-flag t
+                        :typemodifiers ("protected")
+                        :arguments 
+                          ( ("consumer" variable (:type "TypedConsumer") (reparse-symbol formal_parameters) [5630 5652]))                          )
+                        (reparse-symbol class_member_declaration) [5589 5696])
+                    ("consumeElement" function
+                       (:throws ("TException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("protocol" variable (:type "TProtocol") (reparse-symbol formal_parameters) [5739 5757])
+                            ("reader" variable (:type "EventBasedThriftReader") (reparse-symbol formal_parameters) [5759 5788])
+                            ("elemType" variable (:type "byte") (reparse-symbol formal_parameters) [5790 5803]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [5712 5882]))                  
+                :type "class")
+                nil [5484 5884]))          
+      :file "Consumers.java"
+      :pointmax 6606
+      :fsize 6605
+      :lastmodtime '(22925 24454 0 0)
+      :unmatched-syntax '((BRACE_BLOCK 5978 . 6606) (IDENTIFIER 5963 . 5977) (EXTENDS 5955 . 5962) (RSHIFT 5952 . 5954) (IDENTIFIER 5940 . 5952) (EXTENDS 5932 . 5939) (QUESTION 5930 . 5931) (COMMA 5928 . 5929) (IDENTIFIER 5927 . 5928) (LT 5926 . 5927) (IDENTIFIER 5921 . 5926) (EXTENDS 5913 . 5920) (IDENTIFIER 5911 . 5912) (CLASS 5885 . 5890) (LT 5910 . 5911) (GT 5178 . 5179) (FINAL 5162 . 5167) (LT 5176 . 5177) (GT 5157 . 5158) (FINAL 5144 . 5149) (LT 5155 . 5156) (RSHIFT 5119 . 5121) (EXTENDS 5099 . 5106) (QUESTION 5097 . 5098) (COMMA 5096 . 5097) (LT 5094 . 5095) (EXTENDS 5081 . 5088) (PUBLIC 5064 . 5070) (LT 5078 . 5079) (RSHIFT 4174 . 4176) (LT 4172 . 4173) (FINAL 4153 . 4158) (LT 4167 . 4168) (GT 4148 . 4149) (IDENTIFIER 4141 . 4146) (LT 4146 . 4147) (RSHIFT 4118 . 4120) (EXTENDS 4098 . 4105) (QUESTION 4096 . 4097) (COMMA 4095 . 4096) (LT 4093 . 4094) (EXTENDS 4080 . 4087) (PUBLIC 4063 . 4069) (LT 4077 . 4078) (IDENTIFIER 2459 . 2472) (GT 2472 . 2473) (IDENTIFIER 2448 . 2451) (LT 2451 . 2452) (SEMICOLON 2309 . 2310) (GT 2299 . 2300) (COMMA 2284 . 2285) (PRIVATE 2261 . 2268) (LT 2278 . 2279) (GT 1851 . 1852) (PUBLIC 1817 . 1823) (LT 1849 . 1850) (IDENTIFIER 887 . 902) (DOT 886 . 887) (IDENTIFIER 875 . 886) (DOT 874 . 875) (IDENTIFIER 870 . 874) (DOT 869 . 870) (IMPORT 851 . 857) (STATIC 858 . 864) (IDENTIFIER 865 . 869)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode java-mode
+      :tags 
+        '( ("org.apache.parquet.format.event" package nil nil [809 849])
+            ("org.apache.thrift.TException" include nil nil [851 887])
+            ("org.apache.thrift.protocol.TProtocol" include nil nil [888 932])
+            ("FieldConsumer" type
+               (:typemodifiers ("public")
+                :members 
+                  ( ("consumeField" function
+                       (:throws ("TException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("protocol" variable (:type "TProtocol") (reparse-symbol formal_parameters) [1429 1447])
+                            ("eventBasedThriftReader" variable (:type "EventBasedThriftReader") (reparse-symbol formal_parameters) [1449 1494])
+                            ("id" variable (:type "short") (reparse-symbol formal_parameters) [1496 1504])
+                            ("type" variable (:type "byte") (reparse-symbol formal_parameters) [1506 1515]))                          
+                        :type "void")
+                        (reparse-symbol interface_member_declaration) [1404 1535]))                  
+                :type "interface")
+                nil [1007 1538]))          
+      :file "FieldConsumer.java"
+      :pointmax 1538
+      :fsize 1537
+      :lastmodtime '(22925 24454 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode java-mode
+      :tags 
+        '( ("org.apache.parquet.format.event" package nil nil [809 849])
+            ("org.apache.thrift.TException" include nil nil [851 887])
+            ("org.apache.thrift.protocol.TField" include nil nil [888 929])
+            ("org.apache.thrift.protocol.TList" include nil nil [930 970])
+            ("org.apache.thrift.protocol.TMap" include nil nil [971 1010])
+            ("org.apache.thrift.protocol.TProtocol" include nil nil [1011 1055])
+            ("org.apache.thrift.protocol.TSet" include nil nil [1056 1095])
+            ("org.apache.thrift.protocol.TType" include nil nil [1096 1136])
+            ("org.apache.parquet.format.event.TypedConsumer.ListConsumer" include nil nil [1138 1204])
+            ("org.apache.parquet.format.event.TypedConsumer.MapConsumer" include nil nil [1205 1270])
+            ("org.apache.parquet.format.event.TypedConsumer.SetConsumer" include nil nil [1271 1336])
+            ("EventBasedThriftReader" type
+               (:typemodifiers ("public" "final")
+                :members 
+                  ( ("protocol" variable
+                       (:typemodifiers ("private" "final")
+                        :type "TProtocol")
+                        (reparse-symbol class_member_declaration) [1457 1490])
+                    ("EventBasedThriftReader" function
+                       (:constructor-flag t
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("protocol" variable (:type "TProtocol") (reparse-symbol formal_parameters) [1583 1601]))                          )
+                        (reparse-symbol class_member_declaration) [1553 1638])
+                    ("readStruct" function
+                       (:throws ("TException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("c" variable (:type "FieldConsumer") (reparse-symbol formal_parameters) [1832 1847]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [1809 1960])
+                    ("readStructContent" function
+                       (:throws ("TException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("c" variable (:type "FieldConsumer") (reparse-symbol formal_parameters) [2163 2178]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [2133 2408])
+                    ("readSetContent" function
+                       (:throws ("TException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("eventConsumer" variable (:type "SetConsumer") (reparse-symbol formal_parameters) [2665 2690])
+                            ("tSet" variable (:type "TSet") (reparse-symbol formal_parameters) [2692 2701]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [2638 2847])
+                    ("readMapContent" function
+                       (:throws ("TException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("eventConsumer" variable (:type "MapConsumer") (reparse-symbol formal_parameters) [3106 3131])
+                            ("tMap" variable (:type "TMap") (reparse-symbol formal_parameters) [3133 3142]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [3079 3301])
+                    ("readMapEntry" function
+                       (:throws ("TException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("keyType" variable (:type "byte") (reparse-symbol formal_parameters) [3580 3592])
+                            ("keyConsumer" variable (:type "TypedConsumer") (reparse-symbol formal_parameters) [3594 3619])
+                            ("valueType" variable (:type "byte") (reparse-symbol formal_parameters) [3621 3635])
+                            ("valueConsumer" variable (:type "TypedConsumer") (reparse-symbol formal_parameters) [3637 3664]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [3555 3793])
+                    ("readListContent" function
+                       (:throws ("TException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("eventConsumer" variable (:type "ListConsumer") (reparse-symbol formal_parameters) [4055 4081])
+                            ("tList" variable (:type "TList") (reparse-symbol formal_parameters) [4083 4094]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [4027 4242]))                  
+                :type "class")
+                nil [1410 4244]))          
+      :file "EventBasedThriftReader.java"
+      :pointmax 4244
+      :fsize 4243
+      :lastmodtime '(22925 24454 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode java-mode
+      :tags 
+        '( ("org.apache.parquet.format.event" package nil nil [809 849])
+            ("org.apache.thrift.TException" include nil nil [1436 1472])
+            ("org.apache.thrift.protocol.TList" include nil nil [1473 1513])
+            ("org.apache.thrift.protocol.TMap" include nil nil [1514 1553])
+            ("org.apache.thrift.protocol.TProtocol" include nil nil [1554 1598])
+            ("org.apache.thrift.protocol.TSet" include nil nil [1599 1638])
+            ("TypedConsumer" type
+               (:typemodifiers ("abstract" "public")
+                :members 
+                  ( ("DoubleConsumer" type
+                       (:typemodifiers ("abstract" "public" "static")
+                        :superclasses "TypedConsumer"
+                        :members 
+                          ( ("DoubleConsumer" function
+                               (:constructor-flag t
+                                :typemodifiers ("protected"))
+                                (reparse-symbol class_member_declaration) [1833 1878])
+                            ("read" function
+                               (:throws ("TException")
+                                :typemodifiers ("final")
+                                :arguments 
+                                  ( ("protocol" variable (:type "TProtocol") (reparse-symbol formal_parameters) [1913 1931])
+                                    ("reader" variable (:type "EventBasedThriftReader") (reparse-symbol formal_parameters) [1933 1962]))                                  
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [1897 2032])
+                            ("consume" function
+                               (:typemodifiers ("abstract" "public")
+                                :arguments 
+                                  ( ("value" variable (:type "double") (reparse-symbol formal_parameters) [2066 2078]))                                  
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [2037 2080]))                          
+                        :type "class")
+                        (reparse-symbol class_member_declaration) [1761 2084])
+                    ("ByteConsumer" type
+                       (:typemodifiers ("abstract" "public" "static")
+                        :superclasses "TypedConsumer"
+                        :members 
+                          ( ("ByteConsumer" function
+                               (:constructor-flag t
+                                :typemodifiers ("protected"))
+                                (reparse-symbol class_member_declaration) [2158 2199])
+                            ("read" function
+                               (:throws ("TException")
+                                :typemodifiers ("final")
+                                :arguments 
+                                  ( ("protocol" variable (:type "TProtocol") (reparse-symbol formal_parameters) [2234 2252])
+                                    ("reader" variable (:type "EventBasedThriftReader") (reparse-symbol formal_parameters) [2254 2283]))                                  
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [2218 2351])
+                            ("consume" function
+                               (:typemodifiers ("abstract" "public")
+                                :arguments 
+                                  ( ("value" variable (:type "byte") (reparse-symbol formal_parameters) [2385 2395]))                                  
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [2356 2397]))                          
+                        :type "class")
+                        (reparse-symbol class_member_declaration) [2088 2401])
+                    ("BoolConsumer" type
+                       (:typemodifiers ("abstract" "public" "static")
+                        :superclasses "TypedConsumer"
+                        :members 
+                          ( ("BoolConsumer" function
+                               (:constructor-flag t
+                                :typemodifiers ("protected"))
+                                (reparse-symbol class_member_declaration) [2475 2516])
+                            ("read" function
+                               (:throws ("TException")
+                                :typemodifiers ("final")
+                                :arguments 
+                                  ( ("protocol" variable (:type "TProtocol") (reparse-symbol formal_parameters) [2551 2569])
+                                    ("reader" variable (:type "EventBasedThriftReader") (reparse-symbol formal_parameters) [2571 2600]))                                  
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [2535 2668])
+                            ("consume" function
+                               (:typemodifiers ("abstract" "public")
+                                :arguments 
+                                  ( ("value" variable (:type "boolean") (reparse-symbol formal_parameters) [2702 2715]))                                  
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [2673 2717]))                          
+                        :type "class")
+                        (reparse-symbol class_member_declaration) [2405 2721])
+                    ("I32Consumer" type
+                       (:typemodifiers ("abstract" "public" "static")
+                        :superclasses "TypedConsumer"
+                        :members 
+                          ( ("I32Consumer" function
+                               (:constructor-flag t
+                                :typemodifiers ("protected"))
+                                (reparse-symbol class_member_declaration) [2794 2833])
+                            ("read" function
+                               (:throws ("TException")
+                                :typemodifiers ("final")
+                                :arguments 
+                                  ( ("protocol" variable (:type "TProtocol") (reparse-symbol formal_parameters) [2868 2886])
+                                    ("reader" variable (:type "EventBasedThriftReader") (reparse-symbol formal_parameters) [2888 2917]))                                  
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [2852 2984])
+                            ("consume" function
+                               (:typemodifiers ("abstract" "public")
+                                :arguments 
+                                  ( ("value" variable (:type "int") (reparse-symbol formal_parameters) [3018 3027]))                                  
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [2989 3029]))                          
+                        :type "class")
+                        (reparse-symbol class_member_declaration) [2725 3033])
+                    ("I64Consumer" type
+                       (:typemodifiers ("abstract" "public" "static")
+                        :superclasses "TypedConsumer"
+                        :members 
+                          ( ("I64Consumer" function
+                               (:constructor-flag t
+                                :typemodifiers ("protected"))
+                                (reparse-symbol class_member_declaration) [3106 3145])
+                            ("read" function
+                               (:throws ("TException")
+                                :typemodifiers ("final")
+                                :arguments 
+                                  ( ("protocol" variable (:type "TProtocol") (reparse-symbol formal_parameters) [3166 3184])
+                                    ("reader" variable (:type "EventBasedThriftReader") (reparse-symbol formal_parameters) [3186 3215]))                                  
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [3150 3282])
+                            ("consume" function
+                               (:typemodifiers ("abstract" "public")
+                                :arguments 
+                                  ( ("value" variable (:type "long") (reparse-symbol formal_parameters) [3316 3326]))                                  
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [3287 3328]))                          
+                        :type "class")
+                        (reparse-symbol class_member_declaration) [3037 3332])
+                    ("I16Consumer" type
+                       (:typemodifiers ("abstract" "public" "static")
+                        :superclasses "TypedConsumer"
+                        :members 
+                          ( ("I16Consumer" function
+                               (:constructor-flag t
+                                :typemodifiers ("protected"))
+                                (reparse-symbol class_member_declaration) [3405 3444])
+                            ("read" function
+                               (:throws ("TException")
+                                :typemodifiers ("final")
+                                :arguments 
+                                  ( ("protocol" variable (:type "TProtocol") (reparse-symbol formal_parameters) [3479 3497])
+                                    ("reader" variable (:type "EventBasedThriftReader") (reparse-symbol formal_parameters) [3499 3528]))                                  
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [3463 3595])
+                            ("consume" function
+                               (:typemodifiers ("abstract" "public")
+                                :arguments 
+                                  ( ("value" variable (:type "short") (reparse-symbol formal_parameters) [3629 3640]))                                  
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [3600 3642]))                          
+                        :type "class")
+                        (reparse-symbol class_member_declaration) [3336 3646])
+                    ("StringConsumer" type
+                       (:typemodifiers ("abstract" "public" "static")
+                        :superclasses "TypedConsumer"
+                        :members 
+                          ( ("StringConsumer" function
+                               (:constructor-flag t
+                                :typemodifiers ("protected"))
+                                (reparse-symbol class_member_declaration) [3722 3767])
+                            ("read" function
+                               (:throws ("TException")
+                                :typemodifiers ("final")
+                                :arguments 
+                                  ( ("protocol" variable (:type "TProtocol") (reparse-symbol formal_parameters) [3802 3820])
+                                    ("reader" variable (:type "EventBasedThriftReader") (reparse-symbol formal_parameters) [3822 3851]))                                  
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [3786 3921])
+                            ("consume" function
+                               (:typemodifiers ("abstract" "public")
+                                :arguments 
+                                  ( ("value" variable (:type "String") (reparse-symbol formal_parameters) [3955 3967]))                                  
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [3926 3969]))                          
+                        :type "class")
+                        (reparse-symbol class_member_declaration) [3650 3973])
+                    ("StructConsumer" type
+                       (:typemodifiers ("abstract" "public" "static")
+                        :superclasses "TypedConsumer"
+                        :members 
+                          ( ("StructConsumer" function
+                               (:constructor-flag t
+                                :typemodifiers ("protected"))
+                                (reparse-symbol class_member_declaration) [4049 4094])
+                            ("read" function
+                               (:throws ("TException")
+                                :typemodifiers ("final")
+                                :arguments 
+                                  ( ("protocol" variable (:type "TProtocol") (reparse-symbol formal_parameters) [4129 4147])
+                                    ("reader" variable (:type "EventBasedThriftReader") (reparse-symbol formal_parameters) [4149 4178]))                                  
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [4113 4249])
+                            ("consumeStruct" function
+                               (:throws ("TException")
+                                :typemodifiers ("abstract" "public")
+                                :arguments 
+                                  ( ("protocol" variable (:type "TProtocol") (reparse-symbol formal_parameters) [4544 4562])
+                                    ("reader" variable (:type "EventBasedThriftReader") (reparse-symbol formal_parameters) [4564 4593]))                                  
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [4509 4613]))                          
+                        :type "class")
+                        (reparse-symbol class_member_declaration) [3977 4617])
+                    ("ListConsumer" type
+                       (:typemodifiers ("abstract" "public" "static")
+                        :superclasses "TypedConsumer"
+                        :members 
+                          ( ("ListConsumer" function
+                               (:constructor-flag t
+                                :typemodifiers ("protected"))
+                                (reparse-symbol class_member_declaration) [4691 4732])
+                            ("read" function
+                               (:throws ("TException")
+                                :typemodifiers ("final")
+                                :arguments 
+                                  ( ("protocol" variable (:type "TProtocol") (reparse-symbol formal_parameters) [4767 4785])
+                                    ("reader" variable (:type "EventBasedThriftReader") (reparse-symbol formal_parameters) [4787 4816]))                                  
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [4751 4941])
+                            ("consumeList" function
+                               (:throws ("TException")
+                                :typemodifiers ("public")
+                                :arguments 
+                                  ( ("protocol" variable (:type "TProtocol") (reparse-symbol formal_parameters) [4970 4988])
+                                    ("reader" variable (:type "EventBasedThriftReader") (reparse-symbol formal_parameters) [4990 5019])
+                                    ("tList" variable (:type "TList") (reparse-symbol formal_parameters) [5021 5032]))                                  
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [4946 5102])
+                            ("consumeElement" function
+                               (:throws ("TException")
+                                :typemodifiers ("abstract" "public")
+                                :arguments 
+                                  ( ("protocol" variable (:type "TProtocol") (reparse-symbol formal_parameters) [5358 5376])
+                                    ("reader" variable (:type "EventBasedThriftReader") (reparse-symbol formal_parameters) [5378 5407])
+                                    ("elemType" variable (:type "byte") (reparse-symbol formal_parameters) [5409 5422]))                                  
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [5322 5442]))                          
+                        :type "class")
+                        (reparse-symbol class_member_declaration) [4621 5446])
+                    ("SetConsumer" type
+                       (:typemodifiers ("abstract" "public" "static")
+                        :superclasses "TypedConsumer"
+                        :members 
+                          ( ("SetConsumer" function
+                               (:constructor-flag t
+                                :typemodifiers ("protected"))
+                                (reparse-symbol class_member_declaration) [5519 5558])
+                            ("read" function
+                               (:throws ("TException")
+                                :typemodifiers ("final")
+                                :arguments 
+                                  ( ("protocol" variable (:type "TProtocol") (reparse-symbol formal_parameters) [5593 5611])
+                                    ("reader" variable (:type "EventBasedThriftReader") (reparse-symbol formal_parameters) [5613 5642]))                                  
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [5577 5764])
+                            ("consumeSet" function
+                               (:throws ("TException")
+                                :typemodifiers ("public")
+                                :arguments 
+                                  ( ("protocol" variable (:type "TProtocol") (reparse-symbol formal_parameters) [5792 5810])
+                                    ("reader" variable (:type "EventBasedThriftReader") (reparse-symbol formal_parameters) [5812 5841])
+                                    ("tSet" variable (:type "TSet") (reparse-symbol formal_parameters) [5843 5852]))                                  
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [5769 5920])
+                            ("consumeElement" function
+                               (:throws ("TException")
+                                :typemodifiers ("abstract" "public")
+                                :arguments 
+                                  ( ("protocol" variable (:type "TProtocol") (reparse-symbol formal_parameters) [6181 6199])
+                                    ("reader" variable (:type "EventBasedThriftReader") (reparse-symbol formal_parameters) [6201 6230])
+                                    ("elemType" variable (:type "byte") (reparse-symbol formal_parameters) [6240 6253]))                                  
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [6136 6273]))                          
+                        :type "class")
+                        (reparse-symbol class_member_declaration) [5450 6277])
+                    ("MapConsumer" type
+                       (:typemodifiers ("abstract" "public" "static")
+                        :superclasses "TypedConsumer"
+                        :members 
+                          ( ("MapConsumer" function
+                               (:constructor-flag t
+                                :typemodifiers ("protected"))
+                                (reparse-symbol class_member_declaration) [6350 6389])
+                            ("read" function
+                               (:throws ("TException")
+                                :typemodifiers ("final")
+                                :arguments 
+                                  ( ("protocol" variable (:type "TProtocol") (reparse-symbol formal_parameters) [6424 6442])
+                                    ("reader" variable (:type "EventBasedThriftReader") (reparse-symbol formal_parameters) [6444 6473]))                                  
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [6408 6604])
+                            ("consumeMap" function
+                               (:throws ("TException")
+                                :typemodifiers ("public")
+                                :arguments 
+                                  ( ("protocol" variable (:type "TProtocol") (reparse-symbol formal_parameters) [6632 6650])
+                                    ("reader" variable (:type "EventBasedThriftReader") (reparse-symbol formal_parameters) [6652 6681])
+                                    ("tMap" variable (:type "TMap") (reparse-symbol formal_parameters) [6683 6692]))                                  
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [6609 6760])
+                            ("consumeEntry" function
+                               (:throws ("TException")
+                                :typemodifiers ("abstract" "public")
+                                :arguments 
+                                  ( ("protocol" variable (:type "TProtocol") (reparse-symbol formal_parameters) [7025 7043])
+                                    ("reader" variable (:type "EventBasedThriftReader") (reparse-symbol formal_parameters) [7045 7074])
+                                    ("keyType" variable (:type "byte") (reparse-symbol formal_parameters) [7084 7096])
+                                    ("valueType" variable (:type "byte") (reparse-symbol formal_parameters) [7098 7112]))                                  
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [6982 7132]))                          
+                        :type "class")
+                        (reparse-symbol class_member_declaration) [6281 7136])
+                    ("type" variable
+                       (:typemodifiers ("public" "final")
+                        :type "byte")
+                        (reparse-symbol class_member_declaration) [7140 7163])
+                    ("TypedConsumer" function
+                       (:constructor-flag t
+                        :typemodifiers ("private")
+                        :arguments 
+                          ( ("type" variable (:type "byte") (reparse-symbol formal_parameters) [7189 7198]))                          )
+                        (reparse-symbol class_member_declaration) [7167 7227])
+                    ("read" function
+                       (:throws ("TException")
+                        :typemodifiers ("final" "public")
+                        :arguments 
+                          ( ("protocol" variable (:type "TProtocol") (reparse-symbol formal_parameters) [7254 7272])
+                            ("reader" variable (:type "EventBasedThriftReader") (reparse-symbol formal_parameters) [7274 7303])
+                            ("type" variable (:type "byte") (reparse-symbol formal_parameters) [7305 7314]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [7231 7551])
+                    ("read" function
+                       (:throws ("TException")
+                        :typemodifiers ("abstract")
+                        :arguments 
+                          ( ("protocol" variable (:type "TProtocol") (reparse-symbol formal_parameters) [7574 7592])
+                            ("reader" variable (:type "EventBasedThriftReader") (reparse-symbol formal_parameters) [7594 7623]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [7555 7643]))                  
+                :type "class")
+                nil [1720 7645]))          
+      :file "TypedConsumer.java"
+      :pointmax 7645
+      :fsize 7644
+      :lastmodtime '(22925 24454 0 0)
+      :unmatched-syntax '((IDENTIFIER 1427 . 1433) (DOT 1426 . 1427) (IDENTIFIER 1421 . 1426) (DOT 1420 . 1421) (IDENTIFIER 1412 . 1420) (DOT 1411 . 1412) (IDENTIFIER 1405 . 1411) (DOT 1404 . 1405) (IDENTIFIER 1398 . 1404) (DOT 1397 . 1398) (IMPORT 1380 . 1386) (STATIC 1387 . 1393) (IDENTIFIER 1394 . 1397) (IDENTIFIER 1372 . 1378) (DOT 1371 . 1372) (IDENTIFIER 1366 . 1371) (DOT 1365 . 1366) (IDENTIFIER 1357 . 1365) (DOT 1356 . 1357) (IDENTIFIER 1350 . 1356) (DOT 1349 . 1350) (IDENTIFIER 1343 . 1349) (DOT 1342 . 1343) (IMPORT 1325 . 1331) (STATIC 1332 . 1338) (IDENTIFIER 1339 . 1342) (IDENTIFIER 1320 . 1323) (DOT 1319 . 1320) (IDENTIFIER 1314 . 1319) (DOT 1313 . 1314) (IDENTIFIER 1305 . 1313) (DOT 1304 . 1305) (IDENTIFIER 1298 . 1304) (DOT 1297 . 1298) (IDENTIFIER 1291 . 1297) (DOT 1290 . 1291) (IMPORT 1273 . 1279) (STATIC 1280 . 1286) (IDENTIFIER 1287 . 1290) (IDENTIFIER 1268 . 1271) (DOT 1267 . 1268) (IDENTIFIER 1262 . 1267) (DOT 1261 . 1262) (IDENTIFIER 1253 . 1261) (DOT 1252 . 1253) (IDENTIFIER 1246 . 1252) (DOT 1245 . 1246) (IDENTIFIER 1239 . 1245) (DOT 1238 . 1239) (IMPORT 1221 . 1227) (STATIC 1228 . 1234) (IDENTIFIER 1235 . 1238) (IDENTIFIER 1215 . 1219) (DOT 1214 . 1215) (IDENTIFIER 1209 . 1214) (DOT 1208 . 1209) (IDENTIFIER 1200 . 1208) (DOT 1199 . 1200) (IDENTIFIER 1193 . 1199) (DOT 1192 . 1193) (IDENTIFIER 1186 . 1192) (DOT 1185 . 1186) (IMPORT 1168 . 1174) (STATIC 1175 . 1181) (IDENTIFIER 1182 . 1185) (IDENTIFIER 1163 . 1166) (DOT 1162 . 1163) (IDENTIFIER 1157 . 1162) (DOT 1156 . 1157) (IDENTIFIER 1148 . 1156) (DOT 1147 . 1148) (IDENTIFIER 1141 . 1147) (DOT 1140 . 1141) (IDENTIFIER 1134 . 1140) (DOT 1133 . 1134) (IMPORT 1116 . 1122) (STATIC 1123 . 1129) (IDENTIFIER 1130 . 1133) (IDENTIFIER 1111 . 1114) (DOT 1110 . 1111) (IDENTIFIER 1105 . 1110) (DOT 1104 . 1105) (IDENTIFIER 1096 . 1104) (DOT 1095 . 1096) (IDENTIFIER 1089 . 1095) (DOT 1088 . 1089) (IDENTIFIER 1082 . 1088) (DOT 1081 . 1082) (IMPORT 1064 . 1070) (STATIC 1071 . 1077) (IDENTIFIER 1078 . 1081) (IDENTIFIER 1059 . 1062) (DOT 1058 . 1059) (IDENTIFIER 1053 . 1058) (DOT 1052 . 1053) (IDENTIFIER 1044 . 1052) (DOT 1043 . 1044) (IDENTIFIER 1037 . 1043) (DOT 1036 . 1037) (IDENTIFIER 1030 . 1036) (DOT 1029 . 1030) (IMPORT 1012 . 1018) (STATIC 1019 . 1025) (IDENTIFIER 1026 . 1029) (IDENTIFIER 1004 . 1010) (DOT 1003 . 1004) (IDENTIFIER 998 . 1003) (DOT 997 . 998) (IDENTIFIER 989 . 997) (DOT 988 . 989) (IDENTIFIER 982 . 988) (DOT 981 . 982) (IDENTIFIER 975 . 981) (DOT 974 . 975) (IMPORT 957 . 963) (STATIC 964 . 970) (IDENTIFIER 971 . 974) (IDENTIFIER 951 . 955) (DOT 950 . 951) (IDENTIFIER 945 . 950) (DOT 944 . 945) (IDENTIFIER 936 . 944) (DOT 935 . 936) (IDENTIFIER 929 . 935) (DOT 928 . 929) (IDENTIFIER 922 . 928) (DOT 921 . 922) (IMPORT 904 . 910) (STATIC 911 . 917) (IDENTIFIER 918 . 921) (IDENTIFIER 898 . 902) (DOT 897 . 898) (IDENTIFIER 892 . 897) (DOT 891 . 892) (IDENTIFIER 883 . 891) (DOT 882 . 883) (IDENTIFIER 876 . 882) (DOT 875 . 876) (IDENTIFIER 869 . 875) (DOT 868 . 869) (IMPORT 851 . 857) (STATIC 858 . 864) (IDENTIFIER 865 . 868))))
+  :file "!Volumes!Transcend!parquet-format!src!main!java!org!apache!parquet!format!event!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,189 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("folly/detail/MemoryIdler.h" include (:system-flag t) nil [598 635])
+            ("folly/portability/GMock.h" include (:system-flag t) nil [637 673])
+            ("folly/portability/GTest.h" include (:system-flag t) nil [674 710])
+            ("folly/synchronization/Baton.h" include (:system-flag t) nil [711 751])
+            ("memory" include (:system-flag t) nil [753 770])
+            ("thread" include (:system-flag t) nil [771 788])
+            ("folly" using (:type ("folly" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [790 812])
+            ("folly::detail" using (:type ("folly::detail" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [813 843])
+            ("testing" using (:type ("testing" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [844 868])
+            ("TEST" function
+               (:arguments 
+                  ( ("" variable (:type ("MemoryIdler" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [875 887])
+                    ("" variable (:type ("releaseStack" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [888 901]))                  
+                :type "int")
+                nil [870 940])
+            ("TEST" function
+               (:arguments 
+                  ( ("" variable (:type ("MemoryIdler" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [947 959])
+                    ("" variable (:type ("releaseStackMinExtra" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [960 981]))                  
+                :type "int")
+                nil [942 1021])
+            ("TEST" function
+               (:arguments 
+                  ( ("" variable (:type ("MemoryIdler" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1028 1040])
+                    ("" variable (:type ("releaseStackLargeExtra" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1041 1064]))                  
+                :type "int")
+                nil [1023 1111])
+            ("TEST" function
+               (:arguments 
+                  ( ("" variable (:type ("MemoryIdler" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1118 1130])
+                    ("" variable (:type ("releaseMallocTLS" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1131 1148]))                  
+                :type "int")
+                nil [1113 1344])
+            ("MockAtom" type
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type "struct"
+                :members 
+                  ( ("MockAtom" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("init" variable
+                               (:default-value "0"
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1587 1597]))                          
+                        :type ("MockAtom" type (:type "struct") nil nil))
+                        (reparse-symbol classsubparts) [1578 1624]))                  
+                :superclasses 
+                  ( ("std::atomic" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  )
+                nil [1503 1627])
+            ("MockClock" type
+               (:members 
+                  ( ("duration" type
+                       (:typedef ("std::chrono::steady_clock::duration" type (:type "class") nil nil)
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [1917 1970])
+                    ("time_point" type
+                       (:typedef ("std::chrono::steady_clock::time_point" type (:type "class") nil nil)
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [1973 2030])
+                    ("MOCK_METHOD0" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("nowImpl" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2047 2055])
+                            ("" variable (:type ("time_point" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2056 2072]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [2034 2074])
+                    ("setup" function
+                       (:typemodifiers ("static")
+                        :type ("std::shared_ptr" type
+                             (:template-specifier 
+                                ( ("StrictMock" type (:template-specifier 
+                                    ( ("MockClock" type nil nil nil))                                    ) nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [2145 2306])
+                    ("now" function
+                       (:typemodifiers ("static")
+                        :type ("time_point" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2310 2389])
+                    ("s_mockClockInstance" variable
+                       (:typemodifiers ("static")
+                        :type ("std::weak_ptr" type
+                             (:template-specifier 
+                                ( ("StrictMock" type (:template-specifier 
+                                    ( ("MockClock" type nil nil nil))                                    ) nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [2393 2457]))                  
+                :type "struct")
+                nil [1896 2460])
+            ("MockClock::s_mockClockInstance" variable (:type ("std::weak_ptr" type
+                 (:template-specifier 
+                    ( ("StrictMock" type (:template-specifier 
+                        ( ("MockClock" type nil nil nil))                        ) nil nil))                    
+                  :type "class")
+                  nil nil)) nil [2462 2530])
+            ("folly" type
+               (:members 
+                  ( ("detail" type
+                       (:members 
+                          ( ("Futex" type
+                               (:type "struct"
+                                :members 
+                                  ( ("MOCK_METHOD2" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("" variable (:type ("futexWait" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2848 2858])
+                                            ("" variable (:type "bool") (reparse-symbol arg-sub-list) [2859 2883]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [2835 2885])
+                                    ("MOCK_METHOD3" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("" variable (:type ("futexWaitUntil" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2901 2916])
+                                            ("" variable (:type ("FutexResult" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2932 2993]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [2888 2995]))                                  
+                                :template-specifier 
+                                  ( ("MockAtom" type nil nil nil))                                  )
+                                (reparse-symbol namespacesubparts) [2796 2998]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [2552 3001]))                  
+                :type "namespace")
+                nil [2534 3023])
+            ("TEST" function
+               (:arguments 
+                  ( ("" variable (:type ("MemoryIdler" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3049 3061])
+                    ("" variable (:type ("futexWaitValueChangedEarly" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3062 3089]))                  
+                :type "int")
+                nil [3044 3625])
+            ("TEST" function
+               (:arguments 
+                  ( ("" variable (:type ("MemoryIdler" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3632 3644])
+                    ("" variable (:type ("futexWaitValueChangedLate" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3645 3671]))                  
+                :type "int")
+                nil [3627 4271])
+            ("TEST" function
+               (:arguments 
+                  ( ("" variable (:type ("MemoryIdler" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4278 4290])
+                    ("" variable (:type ("futexWaitAwokenEarly" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4291 4312]))                  
+                :type "int")
+                nil [4273 4761])
+            ("TEST" function
+               (:arguments 
+                  ( ("" variable (:type ("MemoryIdler" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4768 4780])
+                    ("" variable (:type ("futexWaitAwokenLate" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4781 4801]))                  
+                :type "int")
+                nil [4763 5351])
+            ("TEST" function
+               (:arguments 
+                  ( ("" variable (:type ("MemoryIdler" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5358 5370])
+                    ("" variable (:type ("futexWaitImmediateFlush" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5371 5395]))                  
+                :type "int")
+                nil [5353 5648])
+            ("TEST" function
+               (:arguments 
+                  ( ("" variable (:type ("MemoryIdler" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5655 5667])
+                    ("" variable (:type ("futexWaitNeverFlush" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5668 5688]))                  
+                :type "int")
+                nil [5650 5940]))          
+      :file "MemoryIdlerTest.cpp"
+      :pointmax 5941
+      :fsize 5940
+      :lastmodtime '(23109 45035 0 0)
+      :unmatched-syntax '((semantic-list 2943 . 2993) (semantic-list 2863 . 2883) (semantic-list 2066 . 2072) (EXPLICIT 1569 . 1577))))
+  :file "!Volumes!Transcend!folly!folly!test!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

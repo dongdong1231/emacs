@@ -1,0 +1,338 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("functional" include (:system-flag t) nil [703 724])
+            ("memory" include (:system-flag t) nil [725 742])
+            ("set" include (:system-flag t) nil [743 757])
+            ("vector" include (:system-flag t) nil [758 775])
+            ("phxqueue/comm.h" include nil nil [777 803])
+            ("phxqueue/producer/selector.h" include nil nil [805 844])
+            ("phxqueue/producer/produceroption.h" include nil nil [845 890])
+            ("phxqueue" type
+               (:members 
+                  ( ("producer" type
+                       (:members 
+                          ( ("Producer" type
+                               (:members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [1025 1032])
+                                    ("Producer" function
+                                       (:prototype-flag t
+                                        :constructor-flag t
+                                        :arguments 
+                                          ( ("opt" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("ProducerOption" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1046 1072]))                                          
+                                        :type ("Producer" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1037 1073])
+                                    ("Producer" function
+                                       (:prototype-flag t
+                                        :destructor-flag t
+                                        :typemodifiers ("virtual")
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1078 1098])
+                                    ("Init" function
+                                       (:prototype-flag t
+                                        :type ("comm::RetCode" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1282 1303])
+                                    ("Enqueue" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("topic_id" variable
+                                               (:constant-flag t
+                                                :type "int")
+                                                (reparse-symbol arg-sub-list) [1432 1451])
+                                            ("uin" variable
+                                               (:constant-flag t
+                                                :type ("uint64_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1452 1471])
+                                            ("handle_id" variable
+                                               (:constant-flag t
+                                                :type "int")
+                                                (reparse-symbol arg-sub-list) [1472 1492])
+                                            ("buffer" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1493 1519])
+                                            ("pub_id" variable
+                                               (:default-value "-1"
+                                                :type "int")
+                                                (reparse-symbol arg-sub-list) [1546 1561])
+                                            ("sub_ids" variable
+                                               (:pointer 1
+                                                :constant-flag t
+                                                :default-value "nullptr"
+                                                :type ("std::set" type
+                                                     (:template-specifier 
+                                                        ( ("int" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [1563 1601]))                                          
+                                        :type ("comm::RetCode" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1410 1603])
+                                    ("MakeAddRequests" function
+                                       (:prototype-flag t
+                                        :typemodifiers ("static")
+                                        :arguments 
+                                          ( ("topic_id" variable
+                                               (:constant-flag t
+                                                :type "int")
+                                                (reparse-symbol arg-sub-list) [1959 1978])
+                                            ("items" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::vector" type
+                                                     (:template-specifier 
+                                                        ( ("std::shared_ptr" type (:template-specifier 
+                                                            ( ("comm::proto::QItem" type nil nil nil))                                                            ) nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [2020 2083])
+                                            ("reqs" variable
+                                               (:reference 1
+                                                :type ("std::vector" type
+                                                     (:template-specifier 
+                                                        ( ("std::unique_ptr" type (:template-specifier 
+                                                            ( ("comm::proto::AddRequest" type nil nil nil))                                                            ) nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [2125 2186])
+                                            ("item_update_func" variable
+                                               (:default-value "nullptr"
+                                                :type ("ItemUpdateFunc" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2228 2269]))                                          
+                                        :type ("comm::RetCode" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1922 2271])
+                                    ("SelectAndAdd" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("req" variable
+                                               (:reference 1
+                                                :type ("comm::proto::AddRequest" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2442 2471])
+                                            ("ss" variable
+                                               (:pointer 1
+                                                :type ("StoreSelector" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2503 2521])
+                                            ("qs" variable
+                                               (:pointer 1
+                                                :type ("QueueSelector" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2522 2540]))                                          
+                                        :type ("comm::RetCode" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [2415 2541])
+                                    ("RawAdd" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("req" variable
+                                               (:reference 1
+                                                :type ("comm::proto::AddRequest" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2605 2634]))                                          
+                                        :type ("comm::RetCode" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [2584 2635])
+                                    ("Add" function
+                                       (:pure-virtual-flag t
+                                        :prototype-flag t
+                                        :typemodifiers ("virtual")
+                                        :arguments 
+                                          ( ("req" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("comm::proto::AddRequest" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2821 2856])
+                                            ("resp" variable
+                                               (:reference 1
+                                                :type ("comm::proto::AddResponse" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2857 2888]))                                          
+                                        :type ("comm::RetCode" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [2795 2893])
+                                    ("protected" label nil (reparse-symbol classsubparts) [2984 2994])
+                                    ("GetProducerOption" function
+                                       (:prototype-flag t
+                                        :methodconst-flag t
+                                        :pointer 1
+                                        :constant-flag t
+                                        :type ("ProducerOption" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [3030 3079])
+                                    ("NewQueueSelector" function
+                                       (:prototype-flag t
+                                        :typemodifiers ("virtual")
+                                        :arguments 
+                                          ( ("topic_id" variable
+                                               (:constant-flag t
+                                                :type "int")
+                                                (reparse-symbol arg-sub-list) [3215 3234])
+                                            ("pub_id" variable
+                                               (:constant-flag t
+                                                :type "int")
+                                                (reparse-symbol arg-sub-list) [3235 3252])
+                                            ("uin" variable
+                                               (:constant-flag t
+                                                :type ("uint64_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3253 3272])
+                                            ("count" variable
+                                               (:constant-flag t
+                                                :default-value "0"
+                                                :type "int")
+                                                (reparse-symbol arg-sub-list) [3273 3292])
+                                            ("retry_switch_queue" variable
+                                               (:constant-flag t
+                                                :default-value "false"
+                                                :type "bool")
+                                                (reparse-symbol arg-sub-list) [3294 3331]))                                          
+                                        :type ("std::unique_ptr" type
+                                             (:template-specifier 
+                                                ( ("QueueSelector" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol classsubparts) [3159 3333])
+                                    ("NewStoreSelector" function
+                                       (:prototype-flag t
+                                        :typemodifiers ("virtual")
+                                        :arguments 
+                                          ( ("topic_id" variable
+                                               (:constant-flag t
+                                                :type "int")
+                                                (reparse-symbol arg-sub-list) [3469 3488])
+                                            ("pub_id" variable
+                                               (:constant-flag t
+                                                :type "int")
+                                                (reparse-symbol arg-sub-list) [3489 3506])
+                                            ("uin" variable
+                                               (:constant-flag t
+                                                :type ("uint64_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3507 3526])
+                                            ("retry_switch_store" variable
+                                               (:constant-flag t
+                                                :default-value "false"
+                                                :type "bool")
+                                                (reparse-symbol arg-sub-list) [3527 3564]))                                          
+                                        :type ("std::unique_ptr" type
+                                             (:template-specifier 
+                                                ( ("StoreSelector" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol classsubparts) [3413 3566])
+                                    ("SetUserCookies" function
+                                       (:typemodifiers ("virtual")
+                                        :arguments 
+                                          ( ("user_cookie" variable
+                                               (:reference 1
+                                                :type ("comm::proto::Cookies" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3637 3671]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [3609 3674])
+                                    ("SetSysCookies" function
+                                       (:typemodifiers ("virtual")
+                                        :arguments 
+                                          ( ("sys_cookie" variable
+                                               (:reference 1
+                                                :type ("comm::proto::Cookies" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3743 3776]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [3716 3779])
+                                    ("CompressBuffer" function
+                                       (:pure-virtual-flag t
+                                        :prototype-flag t
+                                        :typemodifiers ("virtual")
+                                        :arguments 
+                                          ( ("buffer" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3849 3875])
+                                            ("compressed_buffer" variable
+                                               (:reference 1
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3876 3907])
+                                            ("buffer_type" variable
+                                               (:reference 1
+                                                :type "int")
+                                                (reparse-symbol arg-sub-list) [3908 3925]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [3821 3930])
+                                    ("DecidePubIDOnEnqueue" function
+                                       (:typemodifiers ("virtual")
+                                        :arguments 
+                                          ( ("topic_id" variable
+                                               (:constant-flag t
+                                                :type "int")
+                                                (reparse-symbol arg-sub-list) [4095 4114])
+                                            ("uin" variable
+                                               (:constant-flag t
+                                                :type ("uint64_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [4115 4134])
+                                            ("handle_id" variable
+                                               (:constant-flag t
+                                                :type "int")
+                                                (reparse-symbol arg-sub-list) [4135 4155])
+                                            ("pub_id" variable
+                                               (:reference 1
+                                                :type "int")
+                                                (reparse-symbol arg-sub-list) [4156 4168]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [4061 4171])
+                                    ("BeforeAdd" function
+                                       (:typemodifiers ("virtual")
+                                        :arguments 
+                                          ( ("req" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("comm::proto::AddRequest" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [4228 4263]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [4205 4266])
+                                    ("AfterAdd" function
+                                       (:typemodifiers ("virtual")
+                                        :arguments 
+                                          ( ("req" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("comm::proto::AddRequest" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [4321 4356])
+                                            ("resp" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("comm::proto::AddResponse" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [4357 4394]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [4299 4397])
+                                    ("private" label nil (reparse-symbol classsubparts) [4401 4409])
+                                    ("ProducerImpl" type
+                                       (:prototype t
+                                        :type "class")
+                                        (reparse-symbol classsubparts) [4414 4433])
+                                    ("impl_" variable (:type ("std::unique_ptr" type
+                                         (:template-specifier 
+                                            ( ("ProducerImpl" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [4438 4474])
+                                    ("BatchHelper" friend nil (reparse-symbol classsubparts) [4480 4504]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [1006 4508]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [915 4512]))                  
+                :type "namespace")
+                nil [893 4538]))          
+      :file "producer.h"
+      :pointmax 4563
+      :fsize 4562
+      :lastmodtime '(23085 57328 0 0)
+      :unmatched-syntax '((punctuation 4504 . 4505) (punctuation 1003 . 1004) (punctuation 1002 . 1003) (semantic-list 980 . 1002) (VOID 975 . 979) (punctuation 974 . 975) (symbol 966 . 974) (punctuation 965 . 966) (punctuation 964 . 965) (symbol 961 . 964) (punctuation 959 . 960) (symbol 944 . 958) (USING 938 . 943) (symbol 697 . 701) (symbol 690 . 696) (punctuation 689 . 690)))
+    (semanticdb-table "semanticdb-table"
+      :file "selector.h"
+      :fsize 1971
+      :lastmodtime '(23085 57328 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "produceroption.h"
+      :fsize 1264
+      :lastmodtime '(23085 57328 0 0)))
+  :file "!Volumes!Transcend!phxqueue!phxqueue!producer!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

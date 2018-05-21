@@ -1,0 +1,349 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("APP_QZAP_SERVICE_SUNFISH_SERVELET_INCLUDE_RETRIEVAL_SERVICE_IMPL_H_" variable (:constant-flag t) nil [195 262])
+            ("app/qzap/common/base/shared_ptr.h" include nil nil [263 307])
+            ("app/qzap/common/rpc/list_head.h" include nil nil [308 350])
+            ("app/qzap/proto/sunfish/retrieval.pb.h" include nil nil [351 399])
+            ("app/qzap/service/sunfish/server/include/retrieval_business.h" include nil nil [400 471])
+            ("app/qzap/service/sunfish/server/include/retrieval_svr_flags.h" include nil nil [472 544])
+            ("app/qzap/service/sunfish/server/include/retrieval_switch_index.h" include nil nil [545 620])
+            ("app/qzap/service/sunfish/server/include/model_updater.h" include nil nil [621 687])
+            ("common/system/concurrency/blocking_queue.h" include nil nil [688 741])
+            ("common/system/concurrency/spinlock.h" include nil nil [742 789])
+            ("common/system/concurrency/thread_local.h" include nil nil [790 841])
+            ("google" type
+               (:members 
+                  ( ("protobuf" type
+                       (:members 
+                          ( ("RpcController" type
+                               (:prototype t
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [883 903])
+                            ("Closure" type
+                               (:prototype t
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [904 918]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [862 920]))                  
+                :type "namespace")
+                nil [843 922])
+            ("gdt" type
+               (:members 
+                  ( ("Thread" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [939 952]))                  
+                :type "namespace")
+                nil [923 954])
+            ("StaticsInfo" type
+               (:prototype t
+                :type "class")
+                nil [955 973])
+            ("ThreadWorker" type
+               (:prototype t
+                :type "class")
+                nil [974 993])
+            ("RetrievalServiceImpl" type
+               (:superclasses 
+                  ( ("qzap::retrieval::RetrievalService" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [1068 1075])
+                    ("RetrievalWorker" type
+                       (:members 
+                          ( ("thread" variable (:type ("scoped_ptr" type
+                                 (:template-specifier 
+                                    ( ("gdt::Thread" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [1107 1138])
+                            ("retrieval_business" variable (:type ("RetrievalBusi" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1143 1176])
+                            ("link" variable (:type ("List" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1181 1191])
+                            ("worker_no" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1196 1215])
+                            ("switch_index_tag" variable (:type "int") (reparse-symbol classsubparts) [1220 1241]))                          
+                        :type "struct")
+                        (reparse-symbol classsubparts) [1078 1273])
+                    ("RetrievalServiceImpl" function
+                       (:constructor-flag t
+                        :type ("RetrievalServiceImpl" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1285 1313])
+                    ("CreateWorkers" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1317 1338])
+                    ("StopWorkers" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1341 1360])
+                    ("Retrieval" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("controller" variable
+                               (:pointer 1
+                                :type ("google::protobuf::RpcController" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1392 1436])
+                            ("request" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("qzap::retrieval::RetrievalRequest" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1441 1490])
+                            ("response" variable
+                               (:pointer 1
+                                :type ("qzap::retrieval::RetrievalResponse" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1495 1540])
+                            ("done" variable
+                               (:pointer 1
+                                :type ("google::protobuf::Closure" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1545 1577]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1364 1578])
+                    ("HandleProcess" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("controller" variable
+                               (:pointer 1
+                                :type ("google::protobuf::RpcController" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1606 1650])
+                            ("request" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("qzap::retrieval::RetrievalRequest" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1655 1704])
+                            ("response" variable
+                               (:pointer 1
+                                :type ("qzap::retrieval::RetrievalResponse" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1709 1754])
+                            ("done" variable
+                               (:pointer 1
+                                :type ("google::protobuf::Closure" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1759 1791])
+                            ("stat" variable (:type ("shared_ptr" type
+                                 (:template-specifier 
+                                    ( ("StaticsInfo" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol arg-sub-list) [1796 1825])
+                            ("worker_no" variable (:type "int") (reparse-symbol arg-sub-list) [1830 1844]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1582 1845])
+                    ("HandleIndexSwitch" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("worker_no" variable (:type "int") (reparse-symbol arg-sub-list) [1877 1891])
+                            ("index_data" variable (:type ("shared_ptr" type
+                                 (:template-specifier 
+                                    ( ("RetrievalSwitchIndex::IndexData" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol arg-sub-list) [1896 1951]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1849 1952])
+                    ("ForceAllWorkerSwitchIndex" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("index_data" variable (:type ("shared_ptr" type
+                                 (:template-specifier 
+                                    ( ("RetrievalSwitchIndex::IndexData" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol arg-sub-list) [1991 2046]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1955 2047])
+                    ("NotifyAllWorkerSwitchIndex" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("index_data" variable (:type ("shared_ptr" type
+                                 (:template-specifier 
+                                    ( ("RetrievalSwitchIndex::IndexData" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol arg-sub-list) [2089 2144]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2050 2145])
+                    ("DoTaskQueue" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("worker_no" variable (:type "int") (reparse-symbol arg-sub-list) [2166 2180]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2149 2181])
+                    ("GetModelUpdater" function
+                       (:pointer 1
+                        :type ("ModelUpdater" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2185 2255])
+                    ("SetModelUpdater" function
+                       (:arguments 
+                          ( ("model" variable (:type ("shared_ptr" type
+                                 (:template-specifier 
+                                    ( ("ModelUpdater" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol arg-sub-list) [2280 2311]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2259 2345])
+                    ("private" label nil (reparse-symbol classsubparts) [2347 2355])
+                    ("ResponseEmptyPacket" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("controller" variable
+                               (:pointer 1
+                                :type ("google::protobuf::RpcController" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2388 2432])
+                            ("done" variable
+                               (:pointer 1
+                                :type ("google::protobuf::Closure" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2437 2469])
+                            ("retcode" variable (:type "int") (reparse-symbol arg-sub-list) [2474 2486])
+                            ("stat" variable (:type ("shared_ptr" type
+                                 (:template-specifier 
+                                    ( ("StaticsInfo" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol arg-sub-list) [2491 2520]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2358 2521])
+                    ("private" label nil (reparse-symbol classsubparts) [2524 2532])
+                    ("retrieval_woker_array_" variable (:type ("scoped_array" type
+                         (:template-specifier 
+                            ( ("RetrievalWorker" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [2535 2588])
+                    ("running_" variable (:type "bool") (reparse-symbol classsubparts) [2591 2605])
+                    ("list_head_" variable (:type ("List" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2608 2624])
+                    ("lock_" variable (:type ("gdt::Spinlock" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2627 2647])
+                    ("task_queue_" variable (:type "int") (reparse-symbol classsubparts) [2692 2704])
+                    ("index_data_" variable (:type ("shared_ptr" type
+                         (:template-specifier 
+                            ( ("RetrievalSwitchIndex::IndexData" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [2707 2763])
+                    ("model_updater_" variable (:type ("shared_ptr" type
+                         (:template-specifier 
+                            ( ("ModelUpdater" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [2766 2806]))                  
+                :type "class")
+                nil [995 2809]))          
+      :file "retrieval_service_impl.h"
+      :pointmax 2891
+      :fsize 2910
+      :lastmodtime '(22878 19723 0 0)
+      :unmatched-syntax '((punctuation 2690 . 2691) (punctuation 2688 . 2689) (punctuation 2687 . 2688) (semantic-list 2682 . 2687) (VOID 2678 . 2682) (punctuation 2677 . 2678) (symbol 2669 . 2677) (punctuation 2668 . 2669) (symbol 2655 . 2668) (punctuation 2654 . 2655) (punctuation 2653 . 2654) (symbol 2650 . 2653) (EXPLICIT 1276 . 1284) (EXPLICIT 1276 . 1284))
+      :lexical-table 
+        '(("APP_QZAP_SERVICE_SUNFISH_SERVELET_INCLUDE_RETRIEVAL_SERVICE_IMPL_H_")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :file "retrieval_business.h"
+      :fsize 3631
+      :lastmodtime '(22878 19723 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "retrieval_svr_flags.h"
+      :fsize 4403
+      :lastmodtime '(22878 19723 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "retrieval_switch_index.h"
+      :fsize 1244
+      :lastmodtime '(22878 19723 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "model_updater.h"
+      :fsize 2658
+      :lastmodtime '(22878 19723 0 0))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("APP_QZAP_SERVICE_SUNFISH_SERVER_INCLUDE_SCORED_AD_H_" variable (:constant-flag t) nil [157 209])
+            ("map" include (:system-flag t) nil [210 224])
+            ("string" include (:system-flag t) nil [225 242])
+            ("vector" include (:system-flag t) nil [243 260])
+            ("app/qzap/service/sunfish/targeting/include/match_interface.h" include nil nil [261 332])
+            ("app/qzap/proto/sunfish/retrieval.pb.h" include nil nil [333 381])
+            ("MatchInfo" type
+               (:members 
+                  ( ("match_type" variable (:type ("qzap::retrieval::RetrievalResponse_ESearchMatchType" type (:type "class") nil nil)) (reparse-symbol classsubparts) [404 467])
+                    ("match_id" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [470 490])
+                    ("match_info" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [493 515])
+                    ("match_user_status" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [518 547])
+                    ("is_remarking" variable (:type "bool") (reparse-symbol classsubparts) [550 574])
+                    ("is_lbs" variable (:type "bool") (reparse-symbol classsubparts) [587 605])
+                    ("is_joy" variable (:type "bool") (reparse-symbol classsubparts) [624 642])
+                    ("is_act" variable (:type "bool") (reparse-symbol classsubparts) [661 679])
+                    ("is_shortterm" variable (:type "bool") (reparse-symbol classsubparts) [698 722])
+                    ("is_realtime" variable (:type "bool") (reparse-symbol classsubparts) [736 759])
+                    ("is_relation" variable (:type "bool") (reparse-symbol classsubparts) [774 797])
+                    ("latitude" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [810 830])
+                    ("longitude" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [857 878])
+                    ("MatchInfo" function
+                       (:constructor-flag t
+                        :type ("MatchInfo" type (:type "struct") nil nil))
+                        (reparse-symbol classsubparts) [905 935])
+                    ("Reset" function
+                       (:typemodifiers ("inline")
+                        :type "void")
+                        (reparse-symbol classsubparts) [938 1003]))                  
+                :type "struct")
+                nil [383 1006])
+            ("ScoredAD" type
+               (:members 
+                  ( ("local_index" variable (:type ("LocalIndex" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1028 1051])
+                    ("aid" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1054 1069])
+                    ("adindexid" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1072 1093])
+                    ("score" variable (:type "float") (reparse-symbol classsubparts) [1096 1113])
+                    ("scoring_info" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1116 1140])
+                    ("rankno" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1143 1161])
+                    ("ctr" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1164 1179])
+                    ("cvr" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1182 1197])
+                    ("ecpm" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1200 1216])
+                    ("ruleid" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1219 1237])
+                    ("poolid" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1240 1258])
+                    ("account_day_balance" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1261 1292])
+                    ("account_day_limit" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1295 1324])
+                    ("account_balance" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1327 1354])
+                    ("relevance" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1357 1378])
+                    ("text_semantic_relevance" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1381 1416])
+                    ("category_relevance" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1419 1449])
+                    ("ad_quality" variable (:type "float") (reparse-symbol classsubparts) [1452 1474])
+                    ("impression" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1477 1499])
+                    ("ad_born_time" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1502 1526])
+                    ("algid" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1545 1562])
+                    ("search_algid" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1613 1637])
+                    ("match_info" variable (:type ("MatchInfo" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1678 1700])
+                    ("ext" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1703 1720])
+                    ("Reset" function
+                       (:typemodifiers ("inline")
+                        :type "void")
+                        (reparse-symbol classsubparts) [1724 2147]))                  
+                :type "struct")
+                nil [1008 2150])
+            ("ScoredResult" type
+               (:members 
+                  ( ("ads" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("ScoredAD" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [2176 2202])
+                    ("call_back" variable (:type ("std::map" type
+                         (:template-specifier 
+                            ( ("std::string" type nil nil nil)
+                              ("std::string" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [2205 2250])
+                    ("Reset" function
+                       (:typemodifiers ("inline")
+                        :type "void")
+                        (reparse-symbol classsubparts) [2254 2319]))                  
+                :type "struct")
+                nil [2152 2322]))          
+      :file "scored_ad.h"
+      :pointmax 2388
+      :fsize 2503
+      :lastmodtime '(22878 19723 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("APP_QZAP_SERVICE_SUNFISH_SERVER_INCLUDE_SCORED_AD_H_")
+          )
+))
+  :file "!Users!ric!Desktop!trunk!app!qzap!service!sunfish!server!include!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

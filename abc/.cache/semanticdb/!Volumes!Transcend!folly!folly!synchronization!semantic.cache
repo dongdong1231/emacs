@@ -1,0 +1,454 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("algorithm" include (:system-flag t) nil [612 632])
+            ("atomic" include (:system-flag t) nil [633 650])
+            ("cstdint" include (:system-flag t) nil [651 669])
+            ("cstring" include (:system-flag t) nil [670 688])
+            ("memory" include (:system-flag t) nil [689 706])
+            ("system_error" include (:system-flag t) nil [707 730])
+            ("folly/CachelinePadded.h" include (:system-flag t) nil [732 766])
+            ("folly/IndexedMemPool.h" include (:system-flag t) nil [767 800])
+            ("folly/Likely.h" include (:system-flag t) nil [801 826])
+            ("folly/synchronization/AtomicStruct.h" include (:system-flag t) nil [827 874])
+            ("folly/synchronization/Baton.h" include (:system-flag t) nil [875 915])
+            ("folly" type
+               (:members 
+                  ( ("LifoSemImpl" type
+                       (:prototype t
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [1038 1057])
+                    ("LifoSem" type
+                       (:typedef ("LifoSemImpl" type (:type "class") nil nil)
+                        :type "typedef")
+                        (reparse-symbol namespacesubparts) [3848 3878])
+                    ("ShutdownSemError" type
+                       (:superclasses 
+                          ( ("std::runtime_error" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("ShutdownSemError" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("msg" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4030 4053]))                                  
+                                :type ("ShutdownSemError" type (:type "struct") nil nil))
+                                (reparse-symbol classsubparts) [4013 4054])
+                            ("override" variable (:type ("noexcept" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4077 4095]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [3948 4098])
+                    ("detail" type
+                       (:members 
+                          ( ("LifoSemRawNode" type
+                               (:members 
+                                  ( ("raw" variable (:type ("type" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5474 5483])
+                                    ("next" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5671 5685])
+                                    ("isShutdownNotice" function
+                                       (:methodconst-flag t
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [5689 5751])
+                                    ("clearShutdownNotice" function (:type "void") (reparse-symbol classsubparts) [5754 5794])
+                                    ("setShutdownNotice" function (:type "void") (reparse-symbol classsubparts) [5797 5846])
+                                    ("Pool" type
+                                       (:typedef ("folly::IndexedMemPool" type
+                                             (:template-specifier 
+                                                ( ("LifoSemRawNode" type (:template-specifier 
+                                                    ( ("Atom" type nil nil nil))                                                    ) nil nil)
+                                                  ("32")
+                                                  ("200")
+                                                  ("Atom" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil)
+                                        :type "typedef")
+                                        (reparse-symbol classsubparts) [5850 5919])
+                                    ("pool" function
+                                       (:prototype-flag t
+                                        :typemodifiers ("static")
+                                        :type ("Pool" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [5993 6013]))                                  
+                                :type "struct")
+                                (reparse-symbol namespacesubparts) [5396 6016])
+                            ("LIFOSEM_DECLARE_POOL" variable (:constant-flag t) (reparse-symbol namespacesubparts) [6134 6154])
+                            ("LifoSemNode" type
+                               (:superclasses 
+                                  ( ("LifoSemRawNode" type
+                                       (:protection "public"
+                                        :type "class")
+                                        nil nil))                                  
+                                :members 
+                                  ( ("static_assert" function
+                                       (:prototype-flag t
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [7134 7274])
+                                    ("static_assert" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("" variable (:type ("alignof" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7291 7307])
+                                            ("" variable (:type ("alignof" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7327 7371]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [7277 7425])
+                                    ("init" function
+                                       (:arguments 
+                                          ( ("" variable
+                                               (:reference 1
+                                                :type ("Args" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [7469 7475])
+                                            ("" variable (:type ("args" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7479 7484]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [7459 7549])
+                                    ("destroy" function (:type "void") (reparse-symbol classsubparts) [7553 7669])
+                                    ("handoff" function (:type ("Handoff" type (:type "class") nil nil)) (reparse-symbol classsubparts) [7673 7764])
+                                    ("handoff" function
+                                       (:methodconst-flag t
+                                        :constant-flag t
+                                        :type ("Handoff" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [7768 7883]))                                  
+                                :type "struct")
+                                (reparse-symbol namespacesubparts) [7080 7886])
+                            ("LifoSemNodeRecycler" type
+                               (:members 
+                                  ( ("()" function
+                                       (:methodconst-flag t
+                                        :operator-flag t
+                                        :arguments 
+                                          ( ("elem" variable
+                                               (:pointer 1
+                                                :type ("LifoSemNode" type
+                                                     (:template-specifier 
+                                                        ( ("Handoff" type nil nil nil)
+                                                          ("Atom" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [7995 8027]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [7979 8174]))                                  
+                                :type "struct")
+                                (reparse-symbol namespacesubparts) [7948 8177])
+                            ("LifoSemHead" type
+                               (:members 
+                                  ( ("" type
+                                       (:members 
+                                          ( ("IsNodeIdxShift" variable
+                                               (:constant-flag t
+                                                :default-value (9298 9300)
+                                                :type "int")
+                                                (reparse-symbol enumsubparts) [9281 9300])
+                                            ("IsShutdownShift" variable
+                                               (:constant-flag t
+                                                :default-value (9324 9326)
+                                                :type "int")
+                                                (reparse-symbol enumsubparts) [9306 9326])
+                                            ("SeqShift" variable
+                                               (:constant-flag t
+                                                :default-value (9343 9345)
+                                                :type "int")
+                                                (reparse-symbol enumsubparts) [9332 9345]))                                          
+                                        :type "enum")
+                                        (reparse-symbol classsubparts) [9270 9351])
+                                    ("uint64_t" variable (:type "int") (reparse-symbol classsubparts) [9361 9549])
+                                    ("public" label nil (reparse-symbol classsubparts) [9552 9559])
+                                    ("bits" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [9563 9577])
+                                    ("idx" function
+                                       (:methodconst-flag t
+                                        :typemodifiers ("inline")
+                                        :type ("uint32_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [9601 9719])
+                                    ("value" function
+                                       (:methodconst-flag t
+                                        :typemodifiers ("inline")
+                                        :type ("uint32_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [9722 9810])
+                                    ("isNodeIdx" function
+                                       (:methodconst-flag t
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [9830 9898])
+                                    ("isShutdown" function
+                                       (:methodconst-flag t
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [9918 9988])
+                                    ("seq" function
+                                       (:methodconst-flag t
+                                        :type ("uint32_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [10008 10073])
+                                    ("fresh" function
+                                       (:arguments 
+                                          ( ("value" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10298 10313]))                                          
+                                        :type ("LifoSemHead" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [10280 10352])
+                                    ("withPop" function
+                                       (:methodconst-flag t
+                                        :typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("idxNext" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10501 10518]))                                          
+                                        :type ("LifoSemHead" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [10474 10983])
+                                    ("withPush" function
+                                       (:methodconst-flag t
+                                        :typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("_idx" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11089 11103]))                                          
+                                        :type ("LifoSemHead" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [11061 11273])
+                                    ("withValueIncr" function
+                                       (:methodconst-flag t
+                                        :typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("delta" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11425 11440]))                                          
+                                        :type ("LifoSemHead" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [11392 11717])
+                                    ("withValueDecr" function
+                                       (:methodconst-flag t
+                                        :typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("delta" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11825 11840]))                                          
+                                        :type ("LifoSemHead" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [11792 11945])
+                                    ("withShutdown" function
+                                       (:methodconst-flag t
+                                        :typemodifiers ("inline")
+                                        :type ("LifoSemHead" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [12056 12150])
+                                    ("==" function
+                                       (:methodconst-flag t
+                                        :operator-flag t
+                                        :arguments 
+                                          ( ("rhs" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("LifoSemHead" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [12188 12211]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [12171 12252])
+                                    ("!=" function
+                                       (:methodconst-flag t
+                                        :operator-flag t
+                                        :arguments 
+                                          ( ("rhs" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("LifoSemHead" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [12289 12312]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [12272 12352]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [8535 12355])
+                            ("LifoSemBase" type
+                               (:members 
+                                  ( ("LifoSemBase" function
+                                       (:constructor-flag t
+                                        :arguments 
+                                          ( ("initialValue" variable
+                                               (:default-value "0"
+                                                :type ("uint32_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [12883 12908]))                                          
+                                        :type ("LifoSemBase" type (:type "struct") nil nil))
+                                        (reparse-symbol classsubparts) [12871 12960])
+                                    ("post" function (:type "void") (reparse-symbol classsubparts) [13116 13227])
+                                    ("post" function
+                                       (:arguments 
+                                          ( ("n" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13830 13841]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [13820 14003])
+                                    ("isShutdown" function
+                                       (:methodconst-flag t
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [14057 14160])
+                                    ("shutdown" function (:type "void") (reparse-symbol classsubparts) [14505 15269])
+                                    ("tryWait" function (:type "bool") (reparse-symbol classsubparts) [15318 15581])
+                                    ("tryWait" function
+                                       (:arguments 
+                                          ( ("n" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15765 15776]))                                          
+                                        :type ("uint32_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [15748 16096])
+                                    ("wait" function (:type "void") (reparse-symbol classsubparts) [16402 17477])
+                                    ("valueGuess" function
+                                       (:methodconst-flag t
+                                        :type ("uint32_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [17633 17920])
+                                    ("protected" label nil (reparse-symbol classsubparts) [17923 17933])
+                                    ("WaitResult" type (:type "class") (reparse-symbol classsubparts) [17942 17999])
+                                    ("UniquePtr" type
+                                       (:typedef ("std::unique_ptr" type
+                                             (:template-specifier 
+                                                ( ("LifoSemNode" type (:template-specifier 
+                                                    ( ("Handoff" type nil nil nil)
+                                                      ("Atom" type nil nil nil))                                                    ) nil nil)
+                                                  ("LifoSemNodeRecycler" type (:template-specifier 
+                                                    ( ("Handoff" type nil nil nil)
+                                                      ("Atom" type nil nil nil))                                                    ) nil nil))                                                
+                                              :type "class")
+                                              nil nil)
+                                        :type "typedef")
+                                        (reparse-symbol classsubparts) [18124 18248])
+                                    ("allocateNode" function
+                                       (:arguments 
+                                          ( ("" variable
+                                               (:reference 1
+                                                :type ("Args" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [18359 18365])
+                                            ("" variable (:type ("args" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [18369 18374]))                                          
+                                        :type ("UniquePtr" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [18336 18764])
+                                    ("tryWaitOrPush" function
+                                       (:arguments 
+                                          ( ("waiterNode" variable
+                                               (:reference 1
+                                                :type ("LifoSemNode" type
+                                                     (:template-specifier 
+                                                        ( ("Handoff" type nil nil nil)
+                                                          ("Atom" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [19192 19231]))                                          
+                                        :type ("WaitResult" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [19167 19306])
+                                    ("private" label nil (reparse-symbol classsubparts) [19309 19317])
+                                    ("head_" variable (:type ("CachelinePadded" type
+                                         (:template-specifier 
+                                            ( ("folly::AtomicStruct" type (:template-specifier 
+                                                ( ("LifoSemHead" type nil nil nil)
+                                                  ("Atom" type nil nil nil))                                                ) nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [19320 19382])
+                                    ("idxToNode" function
+                                       (:typemodifiers ("static")
+                                        :arguments 
+                                          ( ("idx" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [19431 19444]))                                          
+                                        :type ("LifoSemNode" type
+                                             (:template-specifier 
+                                                ( ("Handoff" type nil nil nil)
+                                                  ("Atom" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol classsubparts) [19386 19560])
+                                    ("nodeToIdx" function
+                                       (:typemodifiers ("static")
+                                        :arguments 
+                                          ( ("node" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("LifoSemNode" type
+                                                     (:template-specifier 
+                                                        ( ("Handoff" type nil nil nil)
+                                                          ("Atom" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [19590 19629]))                                          
+                                        :type ("uint32_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [19564 19694])
+                                    ("incrOrPop" function
+                                       (:arguments 
+                                          ( ("n" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [19894 19905]))                                          
+                                        :type ("uint32_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [19875 20434])
+                                    ("decrOrPush" function
+                                       (:arguments 
+                                          ( ("n" variable
+                                               (:reference 1
+                                                :type ("uint32_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [20968 20980])
+                                            ("idx" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [20981 20994]))                                          
+                                        :type ("WaitResult" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [20946 21817]))                                  
+                                :type "struct")
+                                (reparse-symbol namespacesubparts) [12810 21820]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [4100 21823])
+                    ("LifoSemImpl" type
+                       (:superclasses 
+                          ( ("detail::LifoSemBase" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("LifoSemImpl" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("v" variable
+                                       (:default-value "0"
+                                        :type ("uint32_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [22004 22018]))                                  
+                                :type ("LifoSemImpl" type (:type "struct") nil nil))
+                                (reparse-symbol classsubparts) [21992 22068]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [21904 22071]))                  
+                :type "namespace")
+                nil [917 22074]))          
+      :file "LifoSem.h"
+      :pointmax 22094
+      :fsize 22093
+      :lastmodtime '(23109 45034 0 0)
+      :unmatched-syntax '((EXPLICIT 21983 . 21991) (symbol 21973 . 21982) (punctuation 21902 . 21903) (symbol 21893 . 21902) (CLASS 21887 . 21892) (punctuation 21885 . 21886) (symbol 21881 . 21885) (CLASS 21875 . 21880) (punctuation 21873 . 21874) (TYPENAME 21865 . 21873) (punctuation 21864 . 21865) (TEMPLATE 21855 . 21863) (punctuation 21854 . 21855) (TEMPLATE 21845 . 21853) (punctuation 18367 . 18368) (punctuation 18366 . 18367) (punctuation 18365 . 18366) (punctuation 18364 . 18365) (punctuation 18332 . 18333) (symbol 18328 . 18332) (punctuation 18326 . 18327) (punctuation 18325 . 18326) (punctuation 18324 . 18325) (TYPENAME 18316 . 18324) (punctuation 18315 . 18316) (TEMPLATE 18306 . 18314) (punctuation 17993 . 17994) (symbol 17985 . 17993) (punctuation 17979 . 17980) (symbol 17975 . 17979) (punctuation 17969 . 17970) (symbol 17965 . 17969) (punctuation 17993 . 17994) (symbol 17985 . 17993) (punctuation 17979 . 17980) (symbol 17975 . 17979) (punctuation 17969 . 17970) (symbol 17965 . 17969) (ENUM 17937 . 17941) (punctuation 13059 . 13060) (DELETE 13053 . 13059) (punctuation 13051 . 13052) (semantic-list 13030 . 13050) (punctuation 13029 . 13030) (OPERATOR 13021 . 13029) (punctuation 13019 . 13020) (symbol 13008 . 13019) (punctuation 13004 . 13005) (DELETE 12998 . 13004) (punctuation 12996 . 12997) (semantic-list 12975 . 12995) (symbol 12964 . 12975) (EXPLICIT 12862 . 12870) (symbol 12852 . 12861) (punctuation 12808 . 12809) (symbol 12802 . 12808) (punctuation 12801 . 12802) (punctuation 12800 . 12801) (symbol 12797 . 12800) (punctuation 12795 . 12796) (symbol 12790 . 12794) (CLASS 12784 . 12789) (punctuation 12782 . 12783) (TYPENAME 12774 . 12782) (punctuation 12773 . 12774) (TEMPLATE 12764 . 12772) (punctuation 12762 . 12763) (symbol 12755 . 12762) (TYPENAME 12746 . 12754) (punctuation 12745 . 12746) (TEMPLATE 12736 . 12744) (symbol 12262 . 12271) (INLINE 12255 . 12261) (symbol 12161 . 12170) (INLINE 12154 . 12160) (symbol 10270 . 10279) (INLINE 10263 . 10269) (STATIC 10256 . 10262) (symbol 9998 . 10007) (INLINE 9991 . 9997) (symbol 9908 . 9917) (INLINE 9901 . 9907) (symbol 9820 . 9829) (INLINE 9813 . 9819) (punctuation 9359 . 9360) (ENUM 9354 . 9358) (punctuation 7946 . 7947) (symbol 7942 . 7946) (CLASS 7936 . 7941) (punctuation 7934 . 7935) (TYPENAME 7926 . 7934) (punctuation 7925 . 7926) (TEMPLATE 7916 . 7924) (punctuation 7914 . 7915) (symbol 7907 . 7914) (TYPENAME 7898 . 7906) (punctuation 7897 . 7898) (TEMPLATE 7888 . 7896) (punctuation 7477 . 7478) (punctuation 7476 . 7477) (punctuation 7475 . 7476) (punctuation 7474 . 7475) (punctuation 7455 . 7456) (symbol 7451 . 7455) (punctuation 7450 . 7451) (punctuation 7449 . 7450) (punctuation 7448 . 7449) (TYPENAME 7439 . 7447) (punctuation 7438 . 7439) (TEMPLATE 7429 . 7437) (string 7379 . 7423) (semantic-list 7334 . 7371) (punctuation 7309 . 7310) (punctuation 7308 . 7309) (semantic-list 7298 . 7307) (string 7208 . 7272) (semantic-list 7173 . 7200) (SIZEOF 7167 . 7173) (punctuation 7165 . 7166) (punctuation 7164 . 7165) (semantic-list 7154 . 7163) (SIZEOF 7148 . 7154) (punctuation 7078 . 7079) (symbol 7074 . 7078) (CLASS 7068 . 7073) (punctuation 7066 . 7067) (TYPENAME 7058 . 7066) (punctuation 7057 . 7058) (TEMPLATE 7048 . 7056) (punctuation 7046 . 7047) (symbol 7039 . 7046) (TYPENAME 7030 . 7038) (punctuation 7029 . 7030) (TEMPLATE 7020 . 7028) (punctuation 5473 . 5474) (punctuation 5472 . 5473) (punctuation 5471 . 5472) (semantic-list 5464 . 5471) (symbol 5457 . 5464) (punctuation 5456 . 5457) (semantic-list 5449 . 5456) (SIZEOF 5443 . 5449) (punctuation 5442 . 5443) (symbol 5427 . 5442) (punctuation 5426 . 5427) (punctuation 5425 . 5426) (symbol 5422 . 5425) (punctuation 5394 . 5395) (symbol 5390 . 5394) (CLASS 5384 . 5389) (punctuation 5382 . 5383) (TYPENAME 5374 . 5382) (punctuation 5373 . 5374) (TEMPLATE 5364 . 5372) (punctuation 5363 . 5364) (TEMPLATE 5354 . 5362) (semantic-list 4074 . 4076) (symbol 4058 . 4074) (punctuation 4057 . 4058) (EXPLICIT 4004 . 4012) (punctuation 1036 . 1037) (punctuation 1035 . 1036) (symbol 1031 . 1035) (punctuation 1029 . 1030) (symbol 1025 . 1029) (punctuation 1024 . 1025) (symbol 1019 . 1024) (punctuation 1017 . 1018) (symbol 1007 . 1016) (CLASS 1001 . 1006) (punctuation 995 . 996) (symbol 989 . 995) (punctuation 988 . 989) (punctuation 987 . 988) (symbol 984 . 987) (punctuation 982 . 983) (symbol 977 . 981) (CLASS 971 . 976) (punctuation 969 . 970) (TYPENAME 961 . 969) (punctuation 960 . 961) (TEMPLATE 951 . 959) (punctuation 945 . 946) (TEMPLATE 936 . 944) (symbol 606 . 610) (symbol 599 . 605) (punctuation 598 . 599))
+      :lexical-table 
+        '(("LIFOSEM_DECLARE_POOL" (spp-arg-list ("Atom" "capacity") 6154 . 6170) . 
+              ((NAMESPACE "namespace" 6191 . 6200) (symbol "folly" 6201 . 6206) (semantic-list "{                                          \\
+  namespace detail {                                         \\
+  template <>                                                \\
+  LifoSemRawNode<Atom>::Pool& LifoSemRawNode<Atom>::pool() { \\
+    static Pool* instance = new Pool((capacity));            \\
+    return *instance;                                        \\
+  }                                                          \\
+  }                                                          \\
+  }" 6207 . 6696)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("assert.h" include (:system-flag t) nil [612 631])
+            ("errno.h" include (:system-flag t) nil [632 650])
+            ("stdint.h" include (:system-flag t) nil [651 670])
+            ("atomic" include (:system-flag t) nil [671 688])
+            ("thread" include (:system-flag t) nil [689 706])
+            ("folly/Likely.h" include (:system-flag t) nil [708 733])
+            ("folly/detail/Futex.h" include (:system-flag t) nil [734 765])
+            ("folly/detail/MemoryIdler.h" include (:system-flag t) nil [766 803])
+            ("folly/portability/Asm.h" include (:system-flag t) nil [804 838])
+            ("folly" type
+               (:members 
+                  ( ("Baton" type
+                       (:members 
+                          ( ("state_" function
+                               (:arguments 
+                                  ( ("" variable (:type ("INIT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2099 2104]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [2092 2107])
+                            ("private" label nil (reparse-symbol classsubparts) [9933 9941])
+                            ("uint32_t" variable (:type "int") (reparse-symbol classsubparts) [9957 10069])
+                            ("" type
+                               (:members 
+                                  ( ("PreBlockAttempts" variable
+                                       (:constant-flag t
+                                        :default-value (11042 11045)
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [11023 11045]))                                  
+                                :type "enum")
+                                (reparse-symbol classsubparts) [10073 11051])
+                            ("state_" variable (:type ("detail::Futex" type
+                                 (:template-specifier 
+                                    ( ("Atom" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [14830 14857]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [2046 14860]))                  
+                :type "namespace")
+                nil [840 14863]))          
+      :file "Baton.h"
+      :pointmax 14883
+      :fsize 14882
+      :lastmodtime '(23109 45034 0 0)
+      :unmatched-syntax '((semantic-list 14050 . 14826) (symbol 14041 . 14049) (semantic-list 13975 . 14040) (symbol 13959 . 13975) (BOOL 13954 . 13958) (symbol 13939 . 13953) (punctuation 13935 . 13936) (symbol 13927 . 13935) (TYPENAME 13918 . 13926) (punctuation 13916 . 13917) (symbol 13911 . 13916) (TYPENAME 13902 . 13910) (punctuation 13901 . 13902) (TEMPLATE 13892 . 13900) (semantic-list 11995 . 13888) (symbol 11986 . 11994) (semantic-list 11983 . 11985) (symbol 11975 . 11983) (VOID 11970 . 11974) (symbol 11955 . 11969) (semantic-list 11394 . 11951) (symbol 11385 . 11393) (semantic-list 11382 . 11384) (symbol 11358 . 11382) (BOOL 11353 . 11357) (punctuation 9955 . 9956) (symbol 9949 . 9954) (ENUM 9944 . 9948) (semantic-list 9888 . 9930) (symbol 9879 . 9887) (semantic-list 9813 . 9878) (symbol 9803 . 9813) (BOOL 9798 . 9802) (symbol 9778 . 9797) (punctuation 9774 . 9775) (symbol 9766 . 9774) (TYPENAME 9757 . 9765) (punctuation 9755 . 9756) (symbol 9750 . 9755) (TYPENAME 9741 . 9749) (punctuation 9740 . 9741) (TEMPLATE 9731 . 9739) (semantic-list 9645 . 9684) (symbol 9636 . 9644) (semantic-list 9577 . 9635) (symbol 9567 . 9577) (BOOL 9562 . 9566) (symbol 9542 . 9561) (punctuation 9538 . 9539) (symbol 9532 . 9538) (TYPENAME 9523 . 9531) (punctuation 9521 . 9522) (symbol 9518 . 9521) (TYPENAME 9509 . 9517) (punctuation 9508 . 9509) (TEMPLATE 9499 . 9507) (semantic-list 9268 . 9454) (symbol 9259 . 9267) (semantic-list 9193 . 9258) (symbol 9179 . 9193) (BOOL 9174 . 9178) (symbol 9154 . 9173) (punctuation 9150 . 9151) (symbol 9142 . 9150) (TYPENAME 9133 . 9141) (punctuation 9131 . 9132) (symbol 9126 . 9131) (TYPENAME 9117 . 9125) (punctuation 9116 . 9117) (TEMPLATE 9107 . 9115) (semantic-list 8251 . 8499) (symbol 8242 . 8250) (semantic-list 8183 . 8241) (symbol 8171 . 8183) (BOOL 8166 . 8170) (symbol 8146 . 8165) (punctuation 8142 . 8143) (symbol 8136 . 8142) (TYPENAME 8127 . 8135) (punctuation 8125 . 8126) (symbol 8122 . 8125) (TYPENAME 8113 . 8121) (punctuation 8112 . 8113) (TEMPLATE 8103 . 8111) (semantic-list 7475 . 7500) (symbol 7466 . 7474) (CONST 7460 . 7465) (semantic-list 7457 . 7459) (symbol 7449 . 7457) (BOOL 7444 . 7448) (symbol 7424 . 7443) (semantic-list 6746 . 6810) (symbol 6737 . 6745) (semantic-list 6734 . 6736) (symbol 6730 . 6734) (VOID 6725 . 6729) (symbol 6705 . 6724) (semantic-list 5257 . 6166) (symbol 5248 . 5256) (semantic-list 5245 . 5247) (symbol 5241 . 5245) (VOID 5236 . 5240) (semantic-list 3716 . 4964) (symbol 3707 . 3715) (semantic-list 3704 . 3706) (symbol 3699 . 3704) (VOID 3694 . 3698) (semantic-list 3345 . 3489) (symbol 3336 . 3344) (CONST 3330 . 3335) (semantic-list 3327 . 3329) (symbol 3322 . 3327) (BOOL 3317 . 3321) (symbol 3297 . 3316) (semantic-list 2394 . 3293) (symbol 2385 . 2393) (semantic-list 2382 . 2384) (symbol 2377 . 2382) (punctuation 2376 . 2377) (punctuation 2182 . 2183) (DELETE 2176 . 2182) (punctuation 2174 . 2175) (semantic-list 2159 . 2173) (punctuation 2158 . 2159) (OPERATOR 2150 . 2158) (punctuation 2148 . 2149) (symbol 2143 . 2148) (punctuation 2139 . 2140) (DELETE 2133 . 2139) (punctuation 2131 . 2132) (semantic-list 2116 . 2130) (symbol 2111 . 2116) (punctuation 2090 . 2091) (symbol 2081 . 2089) (semantic-list 2078 . 2080) (symbol 2073 . 2078) (symbol 2063 . 2072) (punctuation 2044 . 2045) (symbol 2038 . 2044) (punctuation 2037 . 2038) (punctuation 2036 . 2037) (symbol 2033 . 2036) (punctuation 2031 . 2032) (symbol 2026 . 2030) (CLASS 2020 . 2025) (punctuation 2018 . 2019) (TYPENAME 2010 . 2018) (punctuation 2009 . 2010) (TEMPLATE 2000 . 2008) (punctuation 1998 . 1999) (symbol 1994 . 1998) (punctuation 1992 . 1993) (symbol 1983 . 1991) (BOOL 1978 . 1982) (punctuation 1977 . 1978) (TEMPLATE 1968 . 1976) (symbol 606 . 610) (symbol 599 . 605) (punctuation 598 . 599))))
+  :file "!Volumes!Transcend!folly!folly!synchronization!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

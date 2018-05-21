@@ -1,0 +1,2125 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("event2/event-config.h" include nil nil [1533 1565])
+            ("sys/types.h" include (:system-flag t) nil [1685 1707])
+            ("sys/queue.h" include (:system-flag t) nil [1792 1814])
+            ("stdio.h" include (:system-flag t) nil [1878 1896])
+            ("stdlib.h" include (:system-flag t) nil [1897 1916])
+            ("ctype.h" include (:system-flag t) nil [2037 2055])
+            ("errno.h" include (:system-flag t) nil [2056 2074])
+            ("signal.h" include (:system-flag t) nil [2075 2094])
+            ("string.h" include (:system-flag t) nil [2095 2114])
+            ("time.h" include (:system-flag t) nil [2115 2132])
+            ("event2/event.h" include nil nil [2134 2159])
+            ("event2/event_struct.h" include nil nil [2160 2192])
+            ("event2/event_compat.h" include nil nil [2193 2225])
+            ("event-internal.h" include nil nil [2226 2253])
+            ("defer-internal.h" include nil nil [2254 2281])
+            ("evthread-internal.h" include nil nil [2282 2312])
+            ("event2/thread.h" include nil nil [2313 2339])
+            ("event2/util.h" include nil nil [2340 2364])
+            ("log-internal.h" include nil nil [2365 2390])
+            ("evmap-internal.h" include nil nil [2391 2418])
+            ("iocp-internal.h" include nil nil [2419 2445])
+            ("changelist-internal.h" include nil nil [2446 2478])
+            ("ht-internal.h" include nil nil [2479 2503])
+            ("util-internal.h" include nil nil [2504 2530])
+            ("eventops" variable
+               (:pointer 1
+                :dereference 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :default-value "{
+#ifdef _EVENT_HAVE_EVENT_PORTS
+	&evportops,
+#endif
+#ifdef _EVENT_HAVE_WORKING_KQUEUE
+	&kqops,
+#endif
+#ifdef _EVENT_HAVE_EPOLL
+	&epollops,
+#endif
+#ifdef _EVENT_HAVE_DEVPOLL
+	&devpollops,
+#endif
+#ifdef _EVENT_HAVE_POLL
+	&pollops,
+#endif
+#ifdef _EVENT_HAVE_SELECT
+	&selectops,
+#endif
+#ifdef WIN32
+	&win32ops,
+#endif
+	NULL
+}"
+                :type ("eventop" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [3076 3441])
+            ("event_global_current_base_" variable
+               (:pointer 1
+                :default-value "NULL"
+                :type ("event_base" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [3474 3527])
+            ("current_base" variable (:constant-flag t) nil [3536 3548])
+            ("use_monotonic" variable
+               (:typemodifiers ("static")
+                :type "int")
+                nil [3597 3622])
+            ("event_add_internal" function
+               (:prototype-flag t
+                :typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("ev" variable
+                       (:pointer 1
+                        :type ("event" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3678 3695])
+                    ("tv" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("timeval" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3700 3725])
+                    ("tv_is_absolute" variable (:type "int") (reparse-symbol arg-sub-list) [3726 3745]))                  
+                :type "int")
+                nil [3641 3746])
+            ("event_del_internal" function
+               (:prototype-flag t
+                :typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("ev" variable
+                       (:pointer 1
+                        :type ("event" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3784 3801]))                  
+                :type "int")
+                nil [3747 3802])
+            ("event_queue_insert" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type ("event_base" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3835 3855])
+                    ("" variable
+                       (:pointer 1
+                        :type ("event" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3856 3871])
+                    ("" variable (:type "int") (reparse-symbol arg-sub-list) [3872 3876]))                  
+                :type "void")
+                nil [3804 3877])
+            ("event_queue_remove" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type ("event_base" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3909 3929])
+                    ("" variable
+                       (:pointer 1
+                        :type ("event" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3930 3945])
+                    ("" variable (:type "int") (reparse-symbol arg-sub-list) [3946 3950]))                  
+                :type "void")
+                nil [3878 3951])
+            ("event_haveevents" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type ("event_base" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3980 4000]))                  
+                :type "int")
+                nil [3952 4001])
+            ("event_process_active" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type ("event_base" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4035 4055]))                  
+                :type "int")
+                nil [4003 4056])
+            ("timeout_next" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type ("event_base" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4082 4102])
+                    ("" variable
+                       (:pointer 2
+                        :type ("timeval" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4103 4121]))                  
+                :type "int")
+                nil [4058 4122])
+            ("timeout_process" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type ("event_base" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4151 4171]))                  
+                :type "void")
+                nil [4123 4172])
+            ("timeout_correct" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type ("event_base" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4201 4221])
+                    ("" variable
+                       (:pointer 1
+                        :type ("timeval" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4222 4239]))                  
+                :type "void")
+                nil [4173 4240])
+            ("event_signal_closure" function
+               (:prototype-flag t
+                :typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type ("event_base" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4282 4302])
+                    ("ev" variable
+                       (:pointer 1
+                        :type ("event" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4303 4320]))                  
+                :type "void")
+                nil [4242 4321])
+            ("event_persist_closure" function
+               (:prototype-flag t
+                :typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type ("event_base" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4363 4383])
+                    ("ev" variable
+                       (:pointer 1
+                        :type ("event" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4384 4401]))                  
+                :type "void")
+                nil [4322 4402])
+            ("evthread_notify_base" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("base" variable
+                       (:pointer 1
+                        :type ("event_base" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4436 4460]))                  
+                :type "int")
+                nil [4404 4461])
+            ("event_debug_entry" type
+               (:members 
+                  ( ("node" variable (:type "int") (reparse-symbol classsubparts) [4870 4875])
+                    ("ptr" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("event" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [4877 4901])
+                    ("added" variable
+                       (:suffix ":1"
+                        :type "unsigned int")
+                        (reparse-symbol classsubparts) [4903 4922]))                  
+                :type "struct")
+                nil [4814 4925])
+            ("hash_debug_entry" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("e" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("event_debug_entry" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4967 5001]))                  
+                :type "unsigned int")
+                nil [4927 5403])
+            ("eq_debug_entry" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("a" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("event_debug_entry" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [5438 5472])
+                    ("b" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("event_debug_entry" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [5477 5511]))                  
+                :type "int")
+                nil [5405 5541])
+            ("_event_debug_mode_on" variable
+               (:default-value "0"
+                :type "int")
+                nil [5543 5572])
+            ("event_debug_mode_too_late" variable
+               (:typemodifiers ("static")
+                :default-value "0"
+                :type "int")
+                nil [5628 5669])
+            ("_event_debug_map_lock" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :default-value "NULL"
+                :type "void")
+                nil [5708 5750])
+            ("global_debug_map" variable
+               (:default-value "HT_INITIALIZER()"
+                :type "int")
+                nil [5809 5846])
+            ("_event_debug_note_setup" variable (:constant-flag t) nil [6148 6171])
+            ("_event_debug_note_teardown" variable (:constant-flag t) nil [6873 6899])
+            ("_event_debug_note_add" variable (:constant-flag t) nil [7328 7349])
+            ("_event_debug_note_del" variable (:constant-flag t) nil [8073 8094])
+            ("_event_debug_assert_is_setup" variable (:constant-flag t) nil [8839 8867])
+            ("_event_debug_assert_not_added" variable (:constant-flag t) nil [9546 9575])
+            ("EVENT_BASE_ASSERT_LOCKED" variable (:constant-flag t) nil [10500 10524])
+            ("detect_monotonic" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [10741 10746]))                  
+                :type "void")
+                nil [10712 11033])
+            ("CLOCK_SYNC_INTERVAL" variable (:constant-flag t) nil [11175 11194])
+            ("gettime" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("base" variable
+                       (:pointer 1
+                        :type ("event_base" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [11483 11507])
+                    ("tp" variable
+                       (:pointer 1
+                        :type ("timeval" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [11508 11527]))                  
+                :type "int")
+                nil [11464 12179])
+            ("event_base_gettimeofday_cached" function
+               (:arguments 
+                  ( ("base" variable
+                       (:pointer 1
+                        :type ("event_base" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [12216 12240])
+                    ("tv" variable
+                       (:pointer 1
+                        :type ("timeval" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [12241 12260]))                  
+                :type "int")
+                nil [12181 12730])
+            ("clear_time_cache" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("base" variable
+                       (:pointer 1
+                        :type ("event_base" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [12816 12840]))                  
+                :type "void")
+                nil [12780 12872])
+            ("update_time_cache" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("base" variable
+                       (:pointer 1
+                        :type ("event_base" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [12975 12999]))                  
+                :type "void")
+                nil [12938 13121])
+            ("event_init" function
+               (:pointer 1
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [13154 13159]))                  
+                :type ("event_base" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [13123 13369])
+            ("event_base_new" function
+               (:pointer 1
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [13406 13411]))                  
+                :type ("event_base" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [13371 13593])
+            ("event_config_is_avoided_method" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("cfg" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("event_config" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [13726 13757])
+                    ("method" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [13762 13781]))                  
+                :type "int")
+                nil [13684 13983])
+            ("event_is_method_disabled" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [14095 14112]))                  
+                :type "int")
+                nil [14059 14445])
+            ("event_base_get_features" function
+               (:arguments 
+                  ( ("base" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("event_base" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [14475 14505]))                  
+                :type "int")
+                nil [14447 14540])
+            ("event_deferred_cb_queue_init" function
+               (:arguments 
+                  ( ("cb" variable
+                       (:pointer 1
+                        :type ("deferred_cb_queue" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [14576 14605]))                  
+                :type "void")
+                nil [14542 14695])
+            ("notify_base_cbq_callback" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("cb" variable
+                       (:pointer 1
+                        :type ("deferred_cb_queue" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [14799 14828])
+                    ("baseptr" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [14829 14843]))                  
+                :type "void")
+                nil [14762 14944])
+            ("event_base_get_deferred_cb_queue" function
+               (:pointer 1
+                :arguments 
+                  ( ("base" variable
+                       (:pointer 1
+                        :type ("event_base" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [15006 15030]))                  
+                :type ("deferred_cb_queue" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [14946 15076])
+            ("event_enable_debug_mode" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [15107 15112]))                  
+                :type "void")
+                nil [15078 15442])
+            ("event_base_new_with_config" function
+               (:pointer 1
+                :arguments 
+                  ( ("cfg" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("event_config" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [15885 15916]))                  
+                :type ("event_base" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [15838 18425])
+            ("event_base_start_iocp" function
+               (:arguments 
+                  ( ("base" variable
+                       (:pointer 1
+                        :type ("event_base" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [18453 18477])
+                    ("n_cpus" variable (:type "int") (reparse-symbol arg-sub-list) [18478 18489]))                  
+                :type "int")
+                nil [18427 18706])
+            ("event_base_stop_iocp" function
+               (:arguments 
+                  ( ("base" variable
+                       (:pointer 1
+                        :type ("event_base" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [18734 18758]))                  
+                :type "void")
+                nil [18708 18908])
+            ("event_base_free" function
+               (:arguments 
+                  ( ("base" variable
+                       (:pointer 1
+                        :type ("event_base" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [18931 18955]))                  
+                :type "void")
+                nil [18910 21851])
+            ("event_reinit" function
+               (:arguments 
+                  ( ("base" variable
+                       (:pointer 1
+                        :type ("event_base" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [21917 21941]))                  
+                :type "int")
+                nil [21900 24547])
+            ("event_get_supported_methods" function
+               (:pointer 2
+                :constant-flag t
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [24591 24596]))                  
+                :type "char")
+                nil [24549 25176])
+            ("event_config_new" function
+               (:pointer 1
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [25217 25222]))                  
+                :type ("event_config" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [25178 25363])
+            ("event_config_entry_free" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("entry" variable
+                       (:pointer 1
+                        :type ("event_config_entry" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [25401 25434]))                  
+                :type "void")
+                nil [25365 25529])
+            ("event_config_free" function
+               (:arguments 
+                  ( ("cfg" variable
+                       (:pointer 1
+                        :type ("event_config" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [25554 25579]))                  
+                :type "void")
+                nil [25531 25771])
+            ("event_config_set_flag" function
+               (:arguments 
+                  ( ("cfg" variable
+                       (:pointer 1
+                        :type ("event_config" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [25799 25824])
+                    ("flag" variable (:type "int") (reparse-symbol arg-sub-list) [25825 25834]))                  
+                :type "int")
+                nil [25773 25894])
+            ("event_config_avoid_method" function
+               (:arguments 
+                  ( ("cfg" variable
+                       (:pointer 1
+                        :type ("event_config" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [25926 25951])
+                    ("method" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [25952 25971]))                  
+                :type "int")
+                nil [25896 26231])
+            ("event_config_require_features" function
+               (:arguments 
+                  ( ("cfg" variable
+                       (:pointer 1
+                        :type ("event_config" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [26267 26292])
+                    ("features" variable (:type "int") (reparse-symbol arg-sub-list) [26297 26310]))                  
+                :type "int")
+                nil [26233 26388])
+            ("event_config_set_num_cpus_hint" function
+               (:arguments 
+                  ( ("cfg" variable
+                       (:pointer 1
+                        :type ("event_config" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [26425 26450])
+                    ("cpus" variable (:type "int") (reparse-symbol arg-sub-list) [26451 26460]))                  
+                :type "int")
+                nil [26390 26529])
+            ("event_priority_init" function
+               (:arguments 
+                  ( ("npriorities" variable (:type "int") (reparse-symbol arg-sub-list) [26555 26571]))                  
+                :type "int")
+                nil [26531 26636])
+            ("event_base_priority_init" function
+               (:arguments 
+                  ( ("base" variable
+                       (:pointer 1
+                        :type ("event_base" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [26667 26691])
+                    ("npriorities" variable (:type "int") (reparse-symbol arg-sub-list) [26692 26708]))                  
+                :type "int")
+                nil [26638 27339])
+            ("event_haveevents" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("base" variable
+                       (:pointer 1
+                        :type ("event_base" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [27429 27453]))                  
+                :type "int")
+                nil [27401 27560])
+            ("event_signal_closure" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("base" variable
+                       (:pointer 1
+                        :type ("event_base" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [27671 27695])
+                    ("ev" variable
+                       (:pointer 1
+                        :type ("event" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [27696 27713]))                  
+                :type "void")
+                nil [27631 28264])
+            ("MICROSECONDS_MASK" variable (:constant-flag t) nil [29056 29073])
+            ("COMMON_TIMEOUT_IDX_MASK" variable (:constant-flag t) nil [29121 29144])
+            ("COMMON_TIMEOUT_IDX_SHIFT" variable (:constant-flag t) nil [29164 29188])
+            ("COMMON_TIMEOUT_MASK" variable (:constant-flag t) nil [29200 29219])
+            ("COMMON_TIMEOUT_MAGIC" variable (:constant-flag t) nil [29243 29263])
+            ("COMMON_TIMEOUT_IDX" variable (:constant-flag t) nil [29287 29305])
+            ("is_common_timeout" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("tv" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("timeval" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [29481 29506])
+                    ("base" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("event_base" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [29511 29541]))                  
+                :type "int")
+                nil [29445 29703])
+            ("is_same_common_timeout" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("tv1" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("timeval" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [29851 29877])
+                    ("tv2" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("timeval" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [29878 29904]))                  
+                :type "int")
+                nil [29810 29997])
+            ("get_common_timeout_list" function
+               (:pointer 1
+                :typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("base" variable
+                       (:pointer 1
+                        :type ("event_base" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [30163 30187])
+                    ("tv" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("timeval" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [30188 30213]))                  
+                :type ("common_timeout_list" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [30096 30278])
+            ("common_timeout_schedule" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("ctl" variable
+                       (:pointer 1
+                        :type ("common_timeout_list" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [30688 30720])
+                    ("now" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("timeval" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [30725 30751])
+                    ("head" variable
+                       (:pointer 1
+                        :type ("event" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [30752 30771]))                  
+                :type "void")
+                nil [30652 30913])
+            ("common_timeout_callback" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("fd" variable (:type ("evutil_socket_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [31171 31190])
+                    ("what" variable (:type "short") (reparse-symbol arg-sub-list) [31191 31202])
+                    ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [31203 31213]))                  
+                :type "void")
+                nil [31135 31786])
+            ("MAX_COMMON_TIMEOUTS" variable (:constant-flag t) nil [31796 31815])
+            ("event_base_init_common_timeout" function
+               (:pointer 1
+                :constant-flag t
+                :arguments 
+                  ( ("base" variable
+                       (:pointer 1
+                        :type ("event_base" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [31875 31899])
+                    ("duration" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("timeval" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [31904 31935]))                  
+                :type ("timeval" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [31821 34139])
+            ("event_persist_closure" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("base" variable
+                       (:pointer 1
+                        :type ("event_base" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [34255 34279])
+                    ("ev" variable
+                       (:pointer 1
+                        :type ("event" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [34280 34297]))                  
+                :type "void")
+                nil [34214 36360])
+            ("event_process_active_single_queue" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("base" variable
+                       (:pointer 1
+                        :type ("event_base" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [36775 36799])
+                    ("activeq" variable
+                       (:pointer 1
+                        :type ("event_list" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [36804 36831]))                  
+                :type "int")
+                nil [36730 38112])
+            ("event_process_deferred_callbacks" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("queue" variable
+                       (:pointer 1
+                        :type ("deferred_cb_queue" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [38403 38435])
+                    ("breakptr" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [38436 38450]))                  
+                :type "int")
+                nil [38359 38871])
+            ("event_process_active" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("base" variable
+                       (:pointer 1
+                        :type ("event_base" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [39082 39106]))                  
+                :type "int")
+                nil [39050 39822])
+            ("event_dispatch" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [39921 39926]))                  
+                :type "int")
+                nil [39902 39955])
+            ("event_base_dispatch" function
+               (:arguments 
+                  ( ("event_base" variable
+                       (:pointer 1
+                        :type ("event_base" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [39981 40011]))                  
+                :type "int")
+                nil [39957 40057])
+            ("event_base_get_method" function
+               (:pointer 1
+                :constant-flag t
+                :arguments 
+                  ( ("base" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("event_base" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [40094 40124]))                  
+                :type "char")
+                nil [40059 40179])
+            ("event_loopexit_cb" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("fd" variable (:type ("evutil_socket_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [40328 40347])
+                    ("what" variable (:type "short") (reparse-symbol arg-sub-list) [40348 40359])
+                    ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [40360 40370]))                  
+                :type "void")
+                nil [40298 40432])
+            ("event_loopexit" function
+               (:arguments 
+                  ( ("tv" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("timeval" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [40453 40478]))                  
+                :type "int")
+                nil [40434 40563])
+            ("event_base_loopexit" function
+               (:arguments 
+                  ( ("event_base" variable
+                       (:pointer 1
+                        :type ("event_base" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [40589 40619])
+                    ("tv" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("timeval" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [40620 40645]))                  
+                :type "int")
+                nil [40565 40745])
+            ("event_loopbreak" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [40767 40772]))                  
+                :type "int")
+                nil [40747 40822])
+            ("event_base_loopbreak" function
+               (:arguments 
+                  ( ("event_base" variable
+                       (:pointer 1
+                        :type ("event_base" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [40849 40879]))                  
+                :type "int")
+                nil [40824 41177])
+            ("event_base_got_break" function
+               (:arguments 
+                  ( ("event_base" variable
+                       (:pointer 1
+                        :type ("event_base" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [41204 41234]))                  
+                :type "int")
+                nil [41179 41389])
+            ("event_base_got_exit" function
+               (:arguments 
+                  ( ("event_base" variable
+                       (:pointer 1
+                        :type ("event_base" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [41415 41445]))                  
+                :type "int")
+                nil [41391 41602])
+            ("event_loop" function
+               (:arguments 
+                  ( ("flags" variable (:type "int") (reparse-symbol arg-sub-list) [41642 41652]))                  
+                :type "int")
+                nil [41627 41702])
+            ("event_base_loop" function
+               (:arguments 
+                  ( ("base" variable
+                       (:pointer 1
+                        :type ("event_base" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [41724 41748])
+                    ("flags" variable (:type "int") (reparse-symbol arg-sub-list) [41749 41759]))                  
+                :type "int")
+                nil [41704 43898])
+            ("event_once" type
+               (:members 
+                  ( ("ev" variable (:type ("event" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [43964 43980])
+                    ("cb" function
+                       (:prototype-flag t
+                        :function-pointer t
+                        :arguments 
+                          ( ("" variable (:type ("evutil_socket_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [43994 44010])
+                            ("" variable (:type "short") (reparse-symbol arg-sub-list) [44011 44017])
+                            ("" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [44018 44025]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [43983 44026])
+                    ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol classsubparts) [44028 44038]))                  
+                :type "struct")
+                nil [43943 44041])
+            ("event_once_cb" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("fd" variable (:type ("evutil_socket_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [44188 44207])
+                    ("events" variable (:type "short") (reparse-symbol arg-sub-list) [44208 44221])
+                    ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [44222 44232]))                  
+                :type "void")
+                nil [44162 44361])
+            ("event_once" function
+               (:arguments 
+                  ( ("fd" variable (:type ("evutil_socket_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [44422 44441])
+                    ("events" variable (:type "short") (reparse-symbol arg-sub-list) [44442 44455])
+                    ("callback" function
+                       (:function-pointer t
+                        :arguments 
+                          ( ("" variable (:type ("evutil_socket_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [44477 44493])
+                            ("" variable (:type "short") (reparse-symbol arg-sub-list) [44494 44500])
+                            ("" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [44501 44508]))                          
+                        :type "void")
+                        nil nil)
+                    ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [44514 44524])
+                    ("tv" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("timeval" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [44525 44550]))                  
+                :type "int")
+                nil [44407 44624])
+            ("event_base_once" function
+               (:arguments 
+                  ( ("base" variable
+                       (:pointer 1
+                        :type ("event_base" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [44676 44700])
+                    ("fd" variable (:type ("evutil_socket_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [44701 44720])
+                    ("events" variable (:type "short") (reparse-symbol arg-sub-list) [44721 44734])
+                    ("callback" function
+                       (:function-pointer t
+                        :arguments 
+                          ( ("" variable (:type ("evutil_socket_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [44756 44772])
+                            ("" variable (:type "short") (reparse-symbol arg-sub-list) [44773 44779])
+                            ("" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [44780 44787]))                          
+                        :type "void")
+                        nil nil)
+                    ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [44793 44803])
+                    ("tv" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("timeval" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [44804 44829]))                  
+                :type "int")
+                nil [44656 45644])
+            ("event_assign" function
+               (:arguments 
+                  ( ("ev" variable
+                       (:pointer 1
+                        :type ("event" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [45663 45680])
+                    ("base" variable
+                       (:pointer 1
+                        :type ("event_base" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [45681 45705])
+                    ("fd" variable (:type ("evutil_socket_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [45706 45725])
+                    ("events" variable (:type "short") (reparse-symbol arg-sub-list) [45726 45739])
+                    ("callback" function
+                       (:function-pointer t
+                        :arguments 
+                          ( ("" variable (:type ("evutil_socket_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [45757 45773])
+                            ("" variable (:type "short") (reparse-symbol arg-sub-list) [45774 45780])
+                            ("" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [45781 45788]))                          
+                        :type "void")
+                        nil nil)
+                    ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [45790 45800]))                  
+                :type "int")
+                nil [45646 46676])
+            ("event_base_set" function
+               (:arguments 
+                  ( ("base" variable
+                       (:pointer 1
+                        :type ("event_base" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [46697 46721])
+                    ("ev" variable
+                       (:pointer 1
+                        :type ("event" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [46722 46739]))                  
+                :type "int")
+                nil [46678 46965])
+            ("event_set" function
+               (:arguments 
+                  ( ("ev" variable
+                       (:pointer 1
+                        :type ("event" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [46982 46999])
+                    ("fd" variable (:type ("evutil_socket_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [47000 47019])
+                    ("events" variable (:type "short") (reparse-symbol arg-sub-list) [47020 47033])
+                    ("callback" function
+                       (:function-pointer t
+                        :arguments 
+                          ( ("" variable (:type ("evutil_socket_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [47054 47070])
+                            ("" variable (:type "short") (reparse-symbol arg-sub-list) [47071 47077])
+                            ("" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [47078 47085]))                          
+                        :type "void")
+                        nil nil)
+                    ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [47087 47097]))                  
+                :type "void")
+                nil [46967 47197])
+            ("event_new" function
+               (:pointer 1
+                :arguments 
+                  ( ("base" variable
+                       (:pointer 1
+                        :type ("event_base" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [47224 47248])
+                    ("fd" variable (:type ("evutil_socket_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [47249 47268])
+                    ("events" variable (:type "short") (reparse-symbol arg-sub-list) [47269 47282])
+                    ("cb" function
+                       (:function-pointer t
+                        :arguments 
+                          ( ("" variable (:type ("evutil_socket_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [47294 47310])
+                            ("" variable (:type "short") (reparse-symbol arg-sub-list) [47311 47317])
+                            ("" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [47318 47325]))                          
+                        :type "void")
+                        nil nil)
+                    ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [47327 47337]))                  
+                :type ("event" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [47199 47539])
+            ("event_free" function
+               (:arguments 
+                  ( ("ev" variable
+                       (:pointer 1
+                        :type ("event" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [47557 47574]))                  
+                :type "void")
+                nil [47541 47745])
+            ("event_debug_unassign" function
+               (:arguments 
+                  ( ("ev" variable
+                       (:pointer 1
+                        :type ("event" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [47773 47790]))                  
+                :type "void")
+                nil [47747 47895])
+            ("event_priority_set" function
+               (:arguments 
+                  ( ("ev" variable
+                       (:pointer 1
+                        :type ("event" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [48040 48057])
+                    ("pri" variable (:type "int") (reparse-symbol arg-sub-list) [48058 48066]))                  
+                :type "int")
+                nil [48017 48256])
+            ("event_pending" function
+               (:arguments 
+                  ( ("ev" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("event" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [48339 48362])
+                    ("event" variable (:type "short") (reparse-symbol arg-sub-list) [48363 48375])
+                    ("tv" variable
+                       (:pointer 1
+                        :type ("timeval" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [48376 48395]))                  
+                :type "int")
+                nil [48321 49343])
+            ("event_initialized" function
+               (:arguments 
+                  ( ("ev" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("event" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [49367 49390]))                  
+                :type "int")
+                nil [49345 49454])
+            ("event_get_assignment" function
+               (:arguments 
+                  ( ("event" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("event" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [49482 49508])
+                    ("base_out" variable
+                       (:pointer 2
+                        :type ("event_base" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [49509 49538])
+                    ("fd_out" variable
+                       (:pointer 1
+                        :type ("evutil_socket_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [49539 49563])
+                    ("events_out" variable
+                       (:pointer 1
+                        :type "short")
+                        (reparse-symbol arg-sub-list) [49564 49582])
+                    ("callback_out" variable
+                       (:pointer 1
+                        :type ("event_callback_fn" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [49583 49615])
+                    ("arg_out" variable
+                       (:pointer 2
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [49616 49631]))                  
+                :type "void")
+                nil [49456 49908])
+            ("event_get_struct_event_size" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [49945 49950]))                  
+                :type ("size_t" type (:type "class") nil nil))
+                nil [49910 49984])
+            ("event_get_fd" function
+               (:arguments 
+                  ( ("ev" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("event" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [50015 50038]))                  
+                :type ("evutil_socket_t" type (:type "class") nil nil))
+                nil [49986 50096])
+            ("event_get_base" function
+               (:pointer 1
+                :arguments 
+                  ( ("ev" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("event" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [50133 50156]))                  
+                :type ("event_base" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [50098 50216])
+            ("event_get_events" function
+               (:arguments 
+                  ( ("ev" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("event" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [50241 50264]))                  
+                :type "short")
+                nil [50218 50326])
+            ("event_get_callback" function
+               (:arguments 
+                  ( ("ev" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("event" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [50365 50388]))                  
+                :type ("event_callback_fn" type (:type "class") nil nil))
+                nil [50328 50452])
+            ("event_get_callback_arg" function
+               (:pointer 1
+                :arguments 
+                  ( ("ev" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("event" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [50484 50507]))                  
+                :type "void")
+                nil [50454 50566])
+            ("event_add" function
+               (:arguments 
+                  ( ("ev" variable
+                       (:pointer 1
+                        :type ("event" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [50582 50599])
+                    ("tv" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("timeval" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [50600 50625]))                  
+                :type "int")
+                nil [50568 50915])
+            ("evthread_notify_base_default" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("base" variable
+                       (:pointer 1
+                        :type ("event_base" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [51194 51218]))                  
+                :type "int")
+                nil [51154 51423])
+            ("evthread_notify_base" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("base" variable
+                       (:pointer 1
+                        :type ("event_base" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [52126 52150]))                  
+                :type "int")
+                nil [52094 52332])
+            ("event_add_internal" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("ev" variable
+                       (:pointer 1
+                        :type ("event" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [52610 52627])
+                    ("tv" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("timeval" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [52628 52653])
+                    ("tv_is_absolute" variable (:type "int") (reparse-symbol arg-sub-list) [52658 52677]))                  
+                :type "int")
+                nil [52573 56832])
+            ("event_del" function
+               (:arguments 
+                  ( ("ev" variable
+                       (:pointer 1
+                        :type ("event" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [56848 56865]))                  
+                :type "int")
+                nil [56834 57148])
+            ("event_del_internal" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("ev" variable
+                       (:pointer 1
+                        :type ("event" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [57253 57270]))                  
+                :type "int")
+                nil [57216 59390])
+            ("event_active" function
+               (:arguments 
+                  ( ("ev" variable
+                       (:pointer 1
+                        :type ("event" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [59410 59427])
+                    ("res" variable (:type "int") (reparse-symbol arg-sub-list) [59428 59436])
+                    ("ncalls" variable (:type "short") (reparse-symbol arg-sub-list) [59437 59450]))                  
+                :type "void")
+                nil [59392 59747])
+            ("event_active_nolock" function
+               (:arguments 
+                  ( ("ev" variable
+                       (:pointer 1
+                        :type ("event" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [59775 59792])
+                    ("res" variable (:type "int") (reparse-symbol arg-sub-list) [59793 59801])
+                    ("ncalls" variable (:type "short") (reparse-symbol arg-sub-list) [59802 59815]))                  
+                :type "void")
+                nil [59750 60676])
+            ("event_deferred_cb_init" function
+               (:arguments 
+                  ( ("cb" variable
+                       (:pointer 1
+                        :type ("deferred_cb" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [60706 60729])
+                    ("fn" variable (:type ("deferred_cb_fn" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [60730 60748])
+                    ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [60749 60759]))                  
+                :type "void")
+                nil [60678 60837])
+            ("event_deferred_cb_cancel" function
+               (:arguments 
+                  ( ("queue" variable
+                       (:pointer 1
+                        :type ("deferred_cb_queue" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [60869 60901])
+                    ("cb" variable
+                       (:pointer 1
+                        :type ("deferred_cb" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [60906 60929]))                  
+                :type "void")
+                nil [60839 61209])
+            ("event_deferred_cb_schedule" function
+               (:arguments 
+                  ( ("queue" variable
+                       (:pointer 1
+                        :type ("deferred_cb_queue" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [61243 61275])
+                    ("cb" variable
+                       (:pointer 1
+                        :type ("deferred_cb" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [61280 61303]))                  
+                :type "void")
+                nil [61211 61660])
+            ("timeout_next" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("base" variable
+                       (:pointer 1
+                        :type ("event_base" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [61686 61710])
+                    ("tv_p" variable
+                       (:pointer 2
+                        :type ("timeval" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [61711 61733]))                  
+                :type "int")
+                nil [61662 62355])
+            ("timeout_correct" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("base" variable
+                       (:pointer 1
+                        :type ("event_base" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [62669 62693])
+                    ("tv" variable
+                       (:pointer 1
+                        :type ("timeval" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [62694 62713]))                  
+                :type "void")
+                nil [62641 63949])
+            ("timeout_process" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("base" variable
+                       (:pointer 1
+                        :type ("event_base" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [64033 64057]))                  
+                :type "void")
+                nil [64005 64501])
+            ("event_queue_remove" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("base" variable
+                       (:pointer 1
+                        :type ("event_base" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [64587 64611])
+                    ("ev" variable
+                       (:pointer 1
+                        :type ("event" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [64612 64629])
+                    ("queue" variable (:type "int") (reparse-symbol arg-sub-list) [64630 64640]))                  
+                :type "void")
+                nil [64556 65541])
+            ("insert_common_timeout_inorder" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("ctl" variable
+                       (:pointer 1
+                        :type ("common_timeout_list" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [65636 65668])
+                    ("ev" variable
+                       (:pointer 1
+                        :type ("event" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [65673 65690]))                  
+                :type "void")
+                nil [65594 66754])
+            ("event_queue_insert" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("base" variable
+                       (:pointer 1
+                        :type ("event_base" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [66787 66811])
+                    ("ev" variable
+                       (:pointer 1
+                        :type ("event" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [66812 66829])
+                    ("queue" variable (:type "int") (reparse-symbol arg-sub-list) [66830 66840]))                  
+                :type "void")
+                nil [66756 67801])
+            ("event_get_version" function
+               (:pointer 1
+                :constant-flag t
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [67865 67870]))                  
+                :type "char")
+                nil [67834 67900])
+            ("event_get_version_number" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [67939 67944]))                  
+                :type ("ev_uint32_t" type (:type "class") nil nil))
+                nil [67902 67982])
+            ("event_get_method" function
+               (:pointer 1
+                :constant-flag t
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [68114 68119]))                  
+                :type "char")
+                nil [68084 68160])
+            ("NULL" variable (:type "int") nil [68243 68248])
+            ("NULL" variable (:type "int") nil [68302 68307])
+            ("NULL" variable (:type "int") nil [68346 68351])
+            ("event_mm_malloc_" function
+               (:pointer 1
+                :arguments 
+                  ( ("sz" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [68377 68387]))                  
+                :type "void")
+                nil [68353 68466])
+            ("event_mm_calloc_" function
+               (:pointer 1
+                :arguments 
+                  ( ("count" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [68492 68505])
+                    ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [68506 68518]))                  
+                :type "void")
+                nil [68468 68683])
+            ("event_mm_strdup_" function
+               (:pointer 1
+                :arguments 
+                  ( ("str" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [68709 68725]))                  
+                :type "char")
+                nil [68685 68936])
+            ("event_mm_realloc_" function
+               (:pointer 1
+                :arguments 
+                  ( ("ptr" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [68963 68973])
+                    ("sz" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [68974 68984]))                  
+                :type "void")
+                nil [68938 69076])
+            ("event_mm_free_" function
+               (:arguments 
+                  ( ("ptr" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [69098 69108]))                  
+                :type "void")
+                nil [69078 69169])
+            ("event_set_mem_functions" function
+               (:arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [69200 69218])
+                    ("" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [69234 69253])
+                    ("free_fn" function
+                       (:function-pointer t
+                        :arguments 
+                          ( ("ptr" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [69296 69306]))                          
+                        :type "void")
+                        nil nil))                  
+                :type "void")
+                nil [69171 69393])
+            ("evthread_notify_drain_default" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("fd" variable (:type ("evutil_socket_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [69921 69940])
+                    ("what" variable (:type "short") (reparse-symbol arg-sub-list) [69941 69952])
+                    ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [69953 69963]))                  
+                :type "void")
+                nil [69879 70271])
+            ("evthread_make_base_notifiable" function
+               (:arguments 
+                  ( ("base" variable
+                       (:pointer 1
+                        :type ("event_base" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [70307 70331]))                  
+                :type "int")
+                nil [70273 72615])
+            ("event_base_dump_events" function
+               (:arguments 
+                  ( ("base" variable
+                       (:pointer 1
+                        :type ("event_base" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [72645 72669])
+                    ("output" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [72670 72683]))                  
+                :type "void")
+                nil [72617 73609])
+            ("event_base_add_virtual" function
+               (:arguments 
+                  ( ("base" variable
+                       (:pointer 1
+                        :type ("event_base" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [73639 73663]))                  
+                :type "void")
+                nil [73611 73781])
+            ("event_base_del_virtual" function
+               (:arguments 
+                  ( ("base" variable
+                       (:pointer 1
+                        :type ("event_base" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [73811 73835]))                  
+                :type "void")
+                nil [73783 74095])
+            ("event_global_setup_locks_" function
+               (:arguments 
+                  ( ("enable_locks" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [74165 74188]))                  
+                :type "int")
+                nil [74135 74437])
+            ("event_base_assert_ok" function
+               (:arguments 
+                  ( ("base" variable
+                       (:pointer 1
+                        :type ("event_base" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [74472 74496]))                  
+                :type "void")
+                nil [74446 75547]))          
+      :file "event.c"
+      :pointmax 75548
+      :fsize 75547
+      :lastmodtime '(22840 64194 0 0)
+      :unmatched-syntax '((semantic-list 69253 . 69275) (semantic-list 69240 . 69253) (semantic-list 69218 . 69229) (semantic-list 69206 . 69218) (punctuation 68344 . 68345) (semantic-list 68334 . 68343) (semantic-list 68320 . 68334) (VOID 68315 . 68319) (STATIC 68308 . 68314) (punctuation 68300 . 68301) (semantic-list 68279 . 68299) (semantic-list 68262 . 68279) (punctuation 68261 . 68262) (VOID 68256 . 68260) (STATIC 68249 . 68255) (punctuation 68241 . 68242) (semantic-list 68229 . 68240) (semantic-list 68213 . 68229) (punctuation 68212 . 68213) (VOID 68207 . 68211) (STATIC 68200 . 68206) (semantic-list 5952 . 6069) (symbol 5941 . 5952) (number 6033 . 6036) (semantic-list 5860 . 5940) (symbol 5848 . 5860) (semantic-list 5772 . 5808) (symbol 5765 . 5772) (STATIC 5758 . 5764) (semantic-list 4850 . 4869) (symbol 4842 . 4850))
+      :lexical-table 
+        '(("MICROSECONDS_MASK" . ((symbol "COMMON_TIMEOUT_MICROSECONDS_MASK" 29080 . 29112)))
+          ("COMMON_TIMEOUT_MASK" . ((number "0xf0000000" 29224 . 29234)))
+          ("COMMON_TIMEOUT_IDX_MASK" . ((number "0x0ff00000" 29145 . 29155)))
+          ("current_base" . ((symbol "event_global_current_base_" 3549 . 3575)))
+          ("MAX_COMMON_TIMEOUTS" . ((number "256" 31816 . 31819)))
+          ("COMMON_TIMEOUT_MAGIC" . ((number "0x50000000" 29267 . 29277)))
+          ("EVENT_BASE_ASSERT_LOCKED" (spp-arg-list ("base") 10524 . 10530) . ((symbol "EVLOCK_ASSERT_LOCKED" 10535 . 10555) (semantic-list "((base)->th_base_lock)" 10555 . 10577)))
+          ("COMMON_TIMEOUT_IDX_SHIFT" . ((number "20" 29189 . 29191)))
+          ("_event_debug_assert_is_setup" (spp-arg-list ("ev") 8867 . 8871) . 
+              ((DO "do" 8872 . 8874) (semantic-list "{				\\
+	if (_event_debug_mode_on) {					\\
+		struct event_debug_entry *dent,find;			\\
+		find.ptr = (ev);					\\
+		EVLOCK_LOCK(_event_debug_map_lock, 0);			\\
+		dent = HT_FIND(event_debug_map, &global_debug_map, &find); \\
+		if (!dent) {						\\
+			event_errx(_EVENT_ERR_ABORT,			\\
+			    \"%s called on a non-initialized event %p\"	\\
+			    \" (events: 0x%x, fd: \"EV_SOCK_FMT\\
+			    \", flags: 0x%x)\",				\\
+			    __func__, (ev), (ev)->ev_events,		\\
+			    EV_SOCK_ARG((ev)->ev_fd), (ev)->ev_flags);	\\
+		}							\\
+		EVLOCK_UNLOCK(_event_debug_map_lock, 0);		\\
+	}								\\
+	}" 8875 . 9441) (WHILE "while" 9442 . 9447) (semantic-list "(0)" 9448 . 9451)))
+          ("_event_debug_note_teardown" (spp-arg-list ("ev") 6899 . 6903) . 
+              ((DO "do" 6904 . 6906) (semantic-list "{				\\
+	if (_event_debug_mode_on) {					\\
+		struct event_debug_entry *dent,find;			\\
+		find.ptr = (ev);					\\
+		EVLOCK_LOCK(_event_debug_map_lock, 0);			\\
+		dent = HT_REMOVE(event_debug_map, &global_debug_map, &find); \\
+		if (dent)						\\
+			mm_free(dent);					\\
+		EVLOCK_UNLOCK(_event_debug_map_lock, 0);		\\
+	}								\\
+	event_debug_mode_too_late = 1;					\\
+	}" 6907 . 7268) (WHILE "while" 7269 . 7274) (semantic-list "(0)" 7275 . 7278)))
+          ("_event_debug_note_setup" (spp-arg-list ("ev") 6171 . 6175) . 
+              ((DO "do" 6176 . 6178) (semantic-list "{				\\
+	if (_event_debug_mode_on) {					\\
+		struct event_debug_entry *dent,find;			\\
+		find.ptr = (ev);					\\
+		EVLOCK_LOCK(_event_debug_map_lock, 0);			\\
+		dent = HT_FIND(event_debug_map, &global_debug_map, &find); \\
+		if (dent) {						\\
+			dent->added = 0;				\\
+		} else {						\\
+			dent = mm_malloc(sizeof(*dent));		\\
+			if (!dent)					\\
+				event_err(1,				\\
+				    \"Out of memory in debugging code\");	\\
+			dent->ptr = (ev);				\\
+			dent->added = 0;				\\
+			HT_INSERT(event_debug_map, &global_debug_map, dent); \\
+		}							\\
+		EVLOCK_UNLOCK(_event_debug_map_lock, 0);		\\
+	}								\\
+	event_debug_mode_too_late = 1;					\\
+	}" 6179 . 6807) (WHILE "while" 6808 . 6813) (semantic-list "(0)" 6814 . 6817)))
+          ("_event_debug_note_del" (spp-arg-list ("ev") 8094 . 8098) . 
+              ((DO "do" 8099 . 8101) (semantic-list "{					\\
+	if (_event_debug_mode_on) {					\\
+		struct event_debug_entry *dent,find;			\\
+		find.ptr = (ev);					\\
+		EVLOCK_LOCK(_event_debug_map_lock, 0);			\\
+		dent = HT_FIND(event_debug_map, &global_debug_map, &find); \\
+		if (dent) {						\\
+			dent->added = 0;				\\
+		} else {						\\
+			event_errx(_EVENT_ERR_ABORT,			\\
+			    \"%s: noting a del on a non-setup event %p\"	\\
+			    \" (events: 0x%x, fd: \"EV_SOCK_FMT		\\
+			    \", flags: 0x%x)\",				\\
+			    __func__, (ev), (ev)->ev_events,		\\
+			    EV_SOCK_ARG((ev)->ev_fd), (ev)->ev_flags);	\\
+		}							\\
+		EVLOCK_UNLOCK(_event_debug_map_lock, 0);		\\
+	}								\\
+	event_debug_mode_too_late = 1;					\\
+	}" 8102 . 8752) (WHILE "while" 8753 . 8758) (semantic-list "(0)" 8759 . 8762)))
+          ("_event_debug_assert_not_added" (spp-arg-list ("ev") 9575 . 9579) . 
+              ((DO "do" 9580 . 9582) (semantic-list "{				\\
+	if (_event_debug_mode_on) {					\\
+		struct event_debug_entry *dent,find;			\\
+		find.ptr = (ev);					\\
+		EVLOCK_LOCK(_event_debug_map_lock, 0);			\\
+		dent = HT_FIND(event_debug_map, &global_debug_map, &find); \\
+		if (dent && dent->added) {				\\
+			event_errx(_EVENT_ERR_ABORT,			\\
+			    \"%s called on an already added event %p\"	\\
+			    \" (events: 0x%x, fd: \"EV_SOCK_FMT\", \"	\\
+			    \"flags: 0x%x)\",				\\
+			    __func__, (ev), (ev)->ev_events,		\\
+			    EV_SOCK_ARG((ev)->ev_fd), (ev)->ev_flags);	\\
+		}							\\
+		EVLOCK_UNLOCK(_event_debug_map_lock, 0);		\\
+	}								\\
+	}" 9583 . 10163) (WHILE "while" 10164 . 10169) (semantic-list "(0)" 10170 . 10173)))
+          ("COMMON_TIMEOUT_IDX" (spp-arg-list ("tv") 29305 . 29309) . ((semantic-list "(((tv)->tv_usec & COMMON_TIMEOUT_IDX_MASK)>>COMMON_TIMEOUT_IDX_SHIFT)" 29313 . 29382)))
+          ("_event_debug_note_add" (spp-arg-list ("ev") 7349 . 7353) . 
+              ((DO "do" 7354 . 7356) (semantic-list "{				\\
+	if (_event_debug_mode_on) {					\\
+		struct event_debug_entry *dent,find;			\\
+		find.ptr = (ev);					\\
+		EVLOCK_LOCK(_event_debug_map_lock, 0);			\\
+		dent = HT_FIND(event_debug_map, &global_debug_map, &find); \\
+		if (dent) {						\\
+			dent->added = 1;				\\
+		} else {						\\
+			event_errx(_EVENT_ERR_ABORT,			\\
+			    \"%s: noting an add on a non-setup event %p\" \\
+			    \" (events: 0x%x, fd: \"EV_SOCK_FMT		\\
+			    \", flags: 0x%x)\",				\\
+			    __func__, (ev), (ev)->ev_events,		\\
+			    EV_SOCK_ARG((ev)->ev_fd), (ev)->ev_flags);	\\
+		}							\\
+		EVLOCK_UNLOCK(_event_debug_map_lock, 0);		\\
+	}								\\
+	event_debug_mode_too_late = 1;					\\
+	}" 7357 . 8007) (WHILE "while" 8008 . 8013) (semantic-list "(0)" 8014 . 8017)))
+          ("CLOCK_SYNC_INTERVAL" . ((punctuation "-" 11195 . 11196) (number "1" 11196 . 11197)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("_EVENT_H_" variable (:constant-flag t) nil [1559 1568])
+            ("event2/tag_compat.h" include
+               (:typemodifiers ("extern" "\"C\"")
+                :system-flag t)
+                (reparse-symbol extern-c-contents) [2677 2707])
+            ("event2/tag.h" include
+               (:typemodifiers ("extern" "\"C\"")
+                :system-flag t)
+                (reparse-symbol extern-c-contents) [2653 2676])
+            ("event2/bufferevent_compat.h" include
+               (:typemodifiers ("extern" "\"C\"")
+                :system-flag t)
+                (reparse-symbol extern-c-contents) [2614 2652])
+            ("event2/bufferevent_struct.h" include
+               (:typemodifiers ("extern" "\"C\"")
+                :system-flag t)
+                (reparse-symbol extern-c-contents) [2575 2613])
+            ("event2/bufferevent.h" include
+               (:typemodifiers ("extern" "\"C\"")
+                :system-flag t)
+                (reparse-symbol extern-c-contents) [2543 2574])
+            ("event2/buffer_compat.h" include
+               (:typemodifiers ("extern" "\"C\"")
+                :system-flag t)
+                (reparse-symbol extern-c-contents) [2509 2542])
+            ("event2/buffer.h" include
+               (:typemodifiers ("extern" "\"C\"")
+                :system-flag t)
+                (reparse-symbol extern-c-contents) [2482 2508])
+            ("event2/event_compat.h" include
+               (:typemodifiers ("extern" "\"C\"")
+                :system-flag t)
+                (reparse-symbol extern-c-contents) [2449 2481])
+            ("event2/event.h" include
+               (:typemodifiers ("extern" "\"C\"")
+                :system-flag t)
+                (reparse-symbol extern-c-contents) [2423 2448])
+            ("event2/event_struct.h" include
+               (:typemodifiers ("extern" "\"C\"")
+                :system-flag t)
+                (reparse-symbol extern-c-contents) [2390 2422])
+            ("evutil.h" include
+               (:typemodifiers ("extern" "\"C\"")
+                :system-flag t)
+                (reparse-symbol extern-c-contents) [2153 2172])
+            ("stdarg.h" include
+               (:typemodifiers ("extern" "\"C\"")
+                :system-flag t)
+                (reparse-symbol extern-c-contents) [2111 2130])
+            ("event2/event-config.h" include
+               (:typemodifiers ("extern" "\"C\"")
+                :system-flag t)
+                (reparse-symbol extern-c-contents) [1903 1935]))          
+      :file "event.h"
+      :pointmax 2761
+      :fsize 2760
+      :lastmodtime '(22840 64194 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("_EVENT_H_")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :file "event-internal.h"
+      :fsize 12716
+      :lastmodtime '(22840 64194 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "defer-internal.h"
+      :fsize 3698
+      :lastmodtime '(22840 64194 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "evthread-internal.h"
+      :fsize 13861
+      :lastmodtime '(22840 64194 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "log-internal.h"
+      :fsize 2538
+      :lastmodtime '(22840 64194 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "evmap-internal.h"
+      :fsize 3946
+      :lastmodtime '(22840 64194 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "iocp-internal.h"
+      :fsize 7669
+      :lastmodtime '(22840 64194 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "changelist-internal.h"
+      :fsize 4562
+      :lastmodtime '(22840 64194 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "ht-internal.h"
+      :fsize 29154
+      :lastmodtime '(22840 64194 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "util-internal.h"
+      :fsize 10624
+      :lastmodtime '(22840 64194 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "evutil.h"
+      :fsize 1737
+      :lastmodtime '(22840 64194 0 0)))
+  :file "!Users!ric!Downloads!trunk!thirdparty!libevent-2.0.22-stable!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

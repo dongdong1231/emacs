@@ -1,0 +1,254 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("GRPC_INTERNAL_CPP_THREAD_MANAGER_H" variable (:constant-flag t) nil [656 690])
+            ("condition_variable" include (:system-flag t) nil [692 721])
+            ("list" include (:system-flag t) nil [722 737])
+            ("memory" include (:system-flag t) nil [738 755])
+            ("mutex" include (:system-flag t) nil [756 772])
+            ("grpcpp/support/config.h" include (:system-flag t) nil [774 808])
+            ("src/core/lib/gprpp/thd.h" include nil nil [810 845])
+            ("grpc" type
+               (:members 
+                  ( ("ThreadManager" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [888 895])
+                            ("ThreadManager" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("min_pollers" variable (:type "int") (reparse-symbol arg-sub-list) [921 937])
+                                    ("max_pollers" variable (:type "int") (reparse-symbol arg-sub-list) [938 954]))                                  
+                                :type ("ThreadManager" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [907 955])
+                            ("ThreadManager" function
+                               (:prototype-flag t
+                                :destructor-flag t
+                                :typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [958 983])
+                            ("Initialize" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [1039 1057])
+                            ("WorkStatus" type
+                               (:members 
+                                  ( ("WORK_FOUND" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [1126 1137])
+                                    ("SHUTDOWN" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [1138 1147])
+                                    ("TIMEOUT" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [1148 1157]))                                  
+                                :type "enum")
+                                (reparse-symbol classsubparts) [1108 1158])
+                            ("PollForWork" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("tag" variable
+                                       (:pointer 2
+                                        :type "void")
+                                        (reparse-symbol arg-sub-list) [2201 2212])
+                                    ("ok" variable
+                                       (:pointer 1
+                                        :type "bool")
+                                        (reparse-symbol arg-sub-list) [2213 2222]))                                  
+                                :type ("WorkStatus" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2170 2227])
+                            ("DoWork" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("tag" variable
+                                       (:pointer 1
+                                        :type "void")
+                                        (reparse-symbol arg-sub-list) [2615 2625])
+                                    ("ok" variable (:type "bool") (reparse-symbol arg-sub-list) [2626 2634]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2595 2639])
+                            ("Shutdown" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [2850 2874])
+                            ("IsShutdown" function
+                               (:prototype-flag t
+                                :type "bool")
+                                (reparse-symbol classsubparts) [2910 2928])
+                            ("Wait" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [3071 3091])
+                            ("private" label nil (reparse-symbol classsubparts) [3094 3102])
+                            ("WorkerThread" type
+                               (:members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [3468 3475])
+                                    ("WorkerThread" function
+                                       (:prototype-flag t
+                                        :constructor-flag t
+                                        :arguments 
+                                          ( ("thd_mgr" variable
+                                               (:pointer 1
+                                                :type ("ThreadManager" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3493 3516]))                                          
+                                        :type ("WorkerThread" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [3480 3517])
+                                    ("WorkerThread" function
+                                       (:prototype-flag t
+                                        :destructor-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [3522 3538])
+                                    ("private" label nil (reparse-symbol classsubparts) [3543 3551])
+                                    ("Run" function
+                                       (:prototype-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [3695 3706])
+                                    ("thd_mgr_" variable
+                                       (:pointer 1
+                                        :type ("ThreadManager" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [3712 3742])
+                                    ("thd_" variable (:type ("grpc_core::Thread" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3747 3770]))                                  
+                                :type "class")
+                                (reparse-symbol classsubparts) [3444 3775])
+                            ("MainWorkLoop" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [3818 3838])
+                            ("MarkAsCompleted" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("thd" variable
+                                       (:pointer 1
+                                        :type ("WorkerThread" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3863 3881]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [3842 3882])
+                            ("CleanupCompletedThreads" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [3885 3916])
+                            ("mu_" variable (:type ("std::mutex" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4041 4056])
+                            ("shutdown_" variable (:type "bool") (reparse-symbol classsubparts) [4060 4075])
+                            ("shutdown_cv_" variable (:type ("std::condition_variable" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4078 4115])
+                            ("num_pollers_" variable (:type "int") (reparse-symbol classsubparts) [4156 4173])
+                            ("min_pollers_" variable (:type "int") (reparse-symbol classsubparts) [4253 4270])
+                            ("max_pollers_" variable (:type "int") (reparse-symbol classsubparts) [4273 4290])
+                            ("num_threads_" variable (:type "int") (reparse-symbol classsubparts) [4416 4433])
+                            ("list_mu_" variable (:type ("std::mutex" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4437 4457])
+                            ("completed_threads_" variable (:type ("std::list" type
+                                 (:template-specifier 
+                                    ( ("WorkerThread" type (:pointer 1) nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [4460 4504]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [865 4507]))                  
+                :type "namespace")
+                nil [847 4510]))          
+      :file "thread_manager.h"
+      :pointmax 4577
+      :fsize 4576
+      :lastmodtime '(23224 16976 0 0)
+      :unmatched-syntax '((EXPLICIT 898 . 906))
+      :lexical-table 
+        '(("GRPC_INTERNAL_CPP_THREAD_MANAGER_H")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("src/cpp/thread_manager/thread_manager.h" include nil nil [605 655])
+            ("climits" include (:system-flag t) nil [657 675])
+            ("mutex" include (:system-flag t) nil [676 692])
+            ("grpc/support/log.h" include (:system-flag t) nil [694 723])
+            ("src/core/lib/gprpp/thd.h" include nil nil [725 760])
+            ("grpc" type
+               (:members 
+                  ( ("WorkerThread" function
+                       (:constructor-flag t
+                        :parent "ThreadManager::WorkerThread"
+                        :arguments 
+                          ( ("thd_mgr" variable
+                               (:pointer 1
+                                :type ("ThreadManager" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [822 845]))                          
+                        :type ("WorkerThread" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [780 1132])
+                    ("Run" function
+                       (:parent "ThreadManager::WorkerThread"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1134 1240])
+                    ("WorkerThread" function
+                       (:destructor-flag t
+                        :parent "ThreadManager::WorkerThread"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1242 1360])
+                    ("ThreadManager" function
+                       (:constructor-flag t
+                        :parent "ThreadManager"
+                        :arguments 
+                          ( ("min_pollers" variable (:type "int") (reparse-symbol arg-sub-list) [1391 1407])
+                            ("max_pollers" variable (:type "int") (reparse-symbol arg-sub-list) [1408 1424]))                          
+                        :type ("ThreadManager" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [1362 1592])
+                    ("ThreadManager" function
+                       (:destructor-flag t
+                        :parent "ThreadManager"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1594 1745])
+                    ("Wait" function
+                       (:parent "ThreadManager"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1747 1882])
+                    ("Shutdown" function
+                       (:parent "ThreadManager"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1884 1979])
+                    ("IsShutdown" function
+                       (:parent "ThreadManager"
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [1981 2078])
+                    ("MarkAsCompleted" function
+                       (:parent "ThreadManager"
+                        :arguments 
+                          ( ("thd" variable
+                               (:pointer 1
+                                :type ("WorkerThread" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2116 2134]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [2080 2360])
+                    ("CleanupCompletedThreads" function
+                       (:parent "ThreadManager"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [2362 2708])
+                    ("Initialize" function
+                       (:parent "ThreadManager"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [2710 3018])
+                    ("MainWorkLoop" function
+                       (:parent "ThreadManager"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [3020 6470]))                  
+                :type "namespace")
+                nil [762 6473]))          
+      :file "thread_manager.cc"
+      :pointmax 6493
+      :fsize 6492
+      :lastmodtime '(23224 16976 0 0)
+      :unmatched-syntax nil))
+  :file "!Volumes!Transcend!grpc!src!cpp!thread_manager!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

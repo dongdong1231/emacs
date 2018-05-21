@@ -1,0 +1,1028 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("grpc++/channel.h" include (:system-flag t) nil [605 632])
+            ("chrono" include (:system-flag t) nil [634 651])
+            ("condition_variable" include (:system-flag t) nil [652 681])
+            ("memory" include (:system-flag t) nil [682 699])
+            ("mutex" include (:system-flag t) nil [700 716])
+            ("grpc++/client_context.h" include (:system-flag t) nil [718 752])
+            ("grpc++/completion_queue.h" include (:system-flag t) nil [753 789])
+            ("grpc++/impl/call.h" include (:system-flag t) nil [790 819])
+            ("grpc++/impl/codegen/completion_queue_tag.h" include (:system-flag t) nil [820 873])
+            ("grpc++/impl/grpc_library.h" include (:system-flag t) nil [874 911])
+            ("grpc++/impl/rpc_method.h" include (:system-flag t) nil [912 947])
+            ("grpc++/security/credentials.h" include (:system-flag t) nil [948 988])
+            ("grpc++/support/channel_arguments.h" include (:system-flag t) nil [989 1034])
+            ("grpc++/support/config.h" include (:system-flag t) nil [1035 1069])
+            ("grpc++/support/status.h" include (:system-flag t) nil [1070 1104])
+            ("grpc++/support/time.h" include (:system-flag t) nil [1105 1137])
+            ("grpc/grpc.h" include (:system-flag t) nil [1138 1160])
+            ("grpc/slice.h" include (:system-flag t) nil [1161 1184])
+            ("grpc/support/alloc.h" include (:system-flag t) nil [1185 1216])
+            ("grpc/support/log.h" include (:system-flag t) nil [1217 1246])
+            ("grpc/support/sync.h" include (:system-flag t) nil [1247 1277])
+            ("grpc/support/thd.h" include (:system-flag t) nil [1278 1307])
+            ("grpc/support/time.h" include (:system-flag t) nil [1308 1338])
+            ("grpc/support/useful.h" include (:system-flag t) nil [1339 1371])
+            ("src/core/lib/profiling/timers.h" include nil nil [1372 1414])
+            ("src/core/lib/support/env.h" include nil nil [1415 1452])
+            ("src/core/lib/support/string.h" include nil nil [1453 1493])
+            ("grpc" type
+               (:members 
+                  ( ("g_gli_initializer" variable
+                       (:typemodifiers ("static")
+                        :type ("internal::GrpcLibraryInitializer" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [1513 1571])
+                    ("Channel" function
+                       (:constructor-flag t
+                        :parent "Channel"
+                        :arguments 
+                          ( ("host" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("grpc::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1589 1614])
+                            ("channel" variable
+                               (:pointer 1
+                                :type ("grpc_channel" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1615 1637]))                          
+                        :type ("Channel" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [1572 1710])
+                    ("Channel" function
+                       (:destructor-flag t
+                        :parent "Channel"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1712 1769])
+                    ("unnamed" type
+                       (:members 
+                          ( ("GetChannelInfoField" function
+                               (:arguments 
+                                  ( ("channel" variable
+                                       (:pointer 1
+                                        :type ("grpc_channel" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1817 1839])
+                                    ("channel_info" variable
+                                       (:pointer 1
+                                        :type ("grpc_channel_info" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1873 1905])
+                                    ("channel_info_field" variable
+                                       (:pointer 3
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [1939 1966]))                                  
+                                :type ("grpc::string" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [1784 2227]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1771 2230])
+                    ("GetLoadBalancingPolicyName" function
+                       (:methodconst-flag t
+                        :parent "Channel"
+                        :type ("grpc::string" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [2246 2456])
+                    ("GetServiceConfigJSON" function
+                       (:methodconst-flag t
+                        :parent "Channel"
+                        :type ("grpc::string" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [2458 2667])
+                    ("CreateCall" function
+                       (:parent "Channel"
+                        :arguments 
+                          ( ("method" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("internal::RpcMethod" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2704 2738])
+                            ("context" variable
+                               (:pointer 1
+                                :type ("ClientContext" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2774 2797])
+                            ("cq" variable
+                               (:pointer 1
+                                :type ("CompletionQueue" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2833 2853]))                          
+                        :type ("internal::Call" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [2669 4139])
+                    ("PerformOpsOnCall" function
+                       (:parent "Channel"
+                        :arguments 
+                          ( ("ops" variable
+                               (:pointer 1
+                                :type ("internal::CallOpSetInterface" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4172 4206])
+                            ("call" variable
+                               (:pointer 1
+                                :type ("internal::Call" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4238 4259]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [4141 4491])
+                    ("RegisterMethod" function
+                       (:pointer 1
+                        :parent "Channel"
+                        :arguments 
+                          ( ("method" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [4523 4542]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [4493 4660])
+                    ("GetState" function
+                       (:parent "Channel"
+                        :arguments 
+                          ( ("try_to_connect" variable (:type "bool") (reparse-symbol arg-sub-list) [4704 4724]))                          
+                        :type ("grpc_connectivity_state" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [4662 4804])
+                    ("unnamed" type
+                       (:members 
+                          ( ("internal::CompletionQueueTag" variable (:type "int") (reparse-symbol namespacesubparts) [4849 5102]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [4806 5105])
+                    ("NotifyOnStateChangeImpl" function
+                       (:parent "Channel"
+                        :arguments 
+                          ( ("last_observed" variable (:type ("grpc_connectivity_state" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5159 5197])
+                            ("deadline" variable (:type ("gpr_timespec" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5236 5258])
+                            ("cq" variable
+                               (:pointer 1
+                                :type ("CompletionQueue" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5297 5317])
+                            ("tag" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [5318 5328]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [5121 5514])
+                    ("WaitForStateChangeImpl" function
+                       (:parent "Channel"
+                        :arguments 
+                          ( ("last_observed" variable (:type ("grpc_connectivity_state" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5553 5591])
+                            ("deadline" variable (:type ("gpr_timespec" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5629 5651]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [5516 5850]))                  
+                :type "namespace")
+                nil [1495 5853]))          
+      :file "channel_cc.cc"
+      :pointmax 5873
+      :fsize 5872
+      :lastmodtime '(23062 15969 0 0)
+      :unmatched-syntax '((PUBLIC 4842 . 4848) (punctuation 4840 . 4841) (symbol 4834 . 4839) (symbol 4825 . 4833) (CLASS 4819 . 4824)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("memory" include (:system-flag t) nil [605 622])
+            ("grpc++/channel.h" include (:system-flag t) nil [624 651])
+            ("grpc++/create_channel.h" include (:system-flag t) nil [652 686])
+            ("grpc++/impl/grpc_library.h" include (:system-flag t) nil [687 724])
+            ("grpc++/support/channel_arguments.h" include (:system-flag t) nil [725 770])
+            ("src/cpp/client/create_channel_internal.h" include nil nil [772 823])
+            ("grpc" type
+               (:members 
+                  ( ("ChannelArguments" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [842 865])
+                    ("CreateChannel" function
+                       (:arguments 
+                          ( ("target" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("grpc::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [911 938])
+                            ("creds" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::shared_ptr" type
+                                     (:template-specifier 
+                                        ( ("ChannelCredentials" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [943 992]))                          
+                        :type ("std::shared_ptr" type
+                             (:template-specifier 
+                                ( ("Channel" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol namespacesubparts) [867 1061])
+                    ("CreateCustomChannel" function
+                       (:arguments 
+                          ( ("target" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("grpc::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1113 1140])
+                            ("creds" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::shared_ptr" type
+                                     (:template-specifier 
+                                        ( ("ChannelCredentials" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [1145 1194])
+                            ("args" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("ChannelArguments" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1199 1228]))                          
+                        :type ("std::shared_ptr" type
+                             (:template-specifier 
+                                ( ("Channel" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol namespacesubparts) [1063 1585]))                  
+                :type "namespace")
+                nil [825 1588]))          
+      :file "create_channel.cc"
+      :pointmax 1608
+      :fsize 1607
+      :lastmodtime '(23062 15969 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("GRPC_INTERNAL_CPP_CLIENT_CREATE_CHANNEL_INTERNAL_H" variable (:constant-flag t) nil [672 722])
+            ("memory" include (:system-flag t) nil [724 741])
+            ("grpc++/support/config.h" include (:system-flag t) nil [743 777])
+            ("grpc_channel" type
+               (:prototype t
+                :type "struct")
+                nil [779 799])
+            ("grpc" type
+               (:members 
+                  ( ("Channel" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [818 832])
+                    ("CreateChannelInternal" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("host" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("grpc::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [881 906])
+                            ("c_channel" variable
+                               (:pointer 1
+                                :type ("grpc_channel" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [954 978]))                          
+                        :type ("std::shared_ptr" type
+                             (:template-specifier 
+                                ( ("Channel" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol namespacesubparts) [834 979]))                  
+                :type "namespace")
+                nil [801 982]))          
+      :file "create_channel_internal.h"
+      :pointmax 1065
+      :fsize 1064
+      :lastmodtime '(23062 15969 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("GRPC_INTERNAL_CPP_CLIENT_CREATE_CHANNEL_INTERNAL_H")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("grpc++/security/credentials.h" include (:system-flag t) nil [605 645])
+            ("grpc++/channel.h" include (:system-flag t) nil [647 674])
+            ("grpc++/support/channel_arguments.h" include (:system-flag t) nil [675 720])
+            ("grpc/grpc_cronet.h" include (:system-flag t) nil [721 750])
+            ("src/cpp/client/create_channel_internal.h" include nil nil [751 802])
+            ("grpc" type
+               (:members 
+                  ( ("ChannelCredentials" variable (:type "int") (reparse-symbol namespacesubparts) [872 1459])
+                    ("CronetChannelCredentials" function
+                       (:arguments 
+                          ( ("engine" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [1522 1535]))                          
+                        :type ("std::shared_ptr" type
+                             (:template-specifier 
+                                ( ("ChannelCredentials" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol namespacesubparts) [1461 1634]))                  
+                :type "namespace")
+                nil [804 1637]))          
+      :file "cronet_credentials.cc"
+      :pointmax 1657
+      :fsize 1656
+      :lastmodtime '(23062 15970 0 0)
+      :unmatched-syntax '((PUBLIC 865 . 871) (punctuation 863 . 864) (symbol 857 . 862) (symbol 828 . 856) (CLASS 822 . 827)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("memory" include (:system-flag t) nil [605 622])
+            ("grpc++/channel.h" include (:system-flag t) nil [624 651])
+            ("grpc_channel" type
+               (:prototype t
+                :type "struct")
+                nil [653 673])
+            ("grpc" type
+               (:members 
+                  ( ("CreateChannelInternal" function
+                       (:arguments 
+                          ( ("host" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("grpc::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [740 765])
+                            ("c_channel" variable
+                               (:pointer 1
+                                :type ("grpc_channel" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [813 837]))                          
+                        :type ("std::shared_ptr" type
+                             (:template-specifier 
+                                ( ("Channel" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol namespacesubparts) [693 906]))                  
+                :type "namespace")
+                nil [675 908]))          
+      :file "create_channel_internal.cc"
+      :pointmax 928
+      :fsize 927
+      :lastmodtime '(23062 15969 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("grpc++/impl/grpc_library.h" include (:system-flag t) nil [605 642])
+            ("grpc++/security/credentials.h" include (:system-flag t) nil [643 683])
+            ("grpc" type
+               (:members 
+                  ( ("g_gli_initializer" variable
+                       (:typemodifiers ("static")
+                        :type ("internal::GrpcLibraryInitializer" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [703 761])
+                    ("ChannelCredentials" function
+                       (:constructor-flag t
+                        :parent "ChannelCredentials"
+                        :type ("ChannelCredentials" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [762 834])
+                    ("ChannelCredentials" function
+                       (:destructor-flag t
+                        :parent "ChannelCredentials"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [836 880])
+                    ("CallCredentials" function
+                       (:constructor-flag t
+                        :parent "CallCredentials"
+                        :type ("CallCredentials" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [882 948])
+                    ("CallCredentials" function
+                       (:destructor-flag t
+                        :parent "CallCredentials"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [950 988]))                  
+                :type "namespace")
+                nil [685 991]))          
+      :file "credentials_cc.cc"
+      :pointmax 1011
+      :fsize 1010
+      :lastmodtime '(23062 15969 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("grpc++/generic/generic_stub.h" include (:system-flag t) nil [605 645])
+            ("grpc++/impl/rpc_method.h" include (:system-flag t) nil [647 682])
+            ("grpc" type
+               (:members 
+                  ( ("unnamed" type
+                       (:members 
+                          ( ("CallInternal" function
+                               (:arguments 
+                                  ( ("channel" variable
+                                       (:pointer 1
+                                        :type ("ChannelInterface" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [780 806])
+                                    ("context" variable
+                                       (:pointer 1
+                                        :type ("ClientContext" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [807 830])
+                                    ("method" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("grpc::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [835 862])
+                                    ("cq" variable
+                                       (:pointer 1
+                                        :type ("CompletionQueue" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [863 883])
+                                    ("start" variable (:type "bool") (reparse-symbol arg-sub-list) [884 895])
+                                    ("tag" variable
+                                       (:pointer 1
+                                        :type "void")
+                                        (reparse-symbol arg-sub-list) [896 906]))                                  
+                                :type ("std::unique_ptr" type
+                                     (:template-specifier 
+                                        ( ("GenericClientAsyncReaderWriter" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol namespacesubparts) [714 1218]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [702 1221])
+                    ("Call" function
+                       (:parent "GenericStub"
+                        :arguments 
+                          ( ("context" variable
+                               (:pointer 1
+                                :type ("ClientContext" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1342 1365])
+                            ("method" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("grpc::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1366 1393])
+                            ("cq" variable
+                               (:pointer 1
+                                :type ("CompletionQueue" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1394 1414])
+                            ("tag" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [1419 1429]))                          
+                        :type ("std::unique_ptr" type
+                             (:template-specifier 
+                                ( ("GenericClientAsyncReaderWriter" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol namespacesubparts) [1271 1504])
+                    ("PrepareCall" function
+                       (:parent "GenericStub"
+                        :arguments 
+                          ( ("context" variable
+                               (:pointer 1
+                                :type ("ClientContext" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1618 1641])
+                            ("method" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("grpc::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1642 1669])
+                            ("cq" variable
+                               (:pointer 1
+                                :type ("CompletionQueue" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1670 1690]))                          
+                        :type ("std::unique_ptr" type
+                             (:template-specifier 
+                                ( ("GenericClientAsyncReaderWriter" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol namespacesubparts) [1540 1770])
+                    ("PrepareUnaryCall" function
+                       (:parent "GenericStub"
+                        :arguments 
+                          ( ("context" variable
+                               (:pointer 1
+                                :type ("ClientContext" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1897 1920])
+                            ("method" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("grpc::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1921 1948])
+                            ("request" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("ByteBuffer" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1953 1979])
+                            ("cq" variable
+                               (:pointer 1
+                                :type ("CompletionQueue" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1980 2000]))                          
+                        :type ("std::unique_ptr" type
+                             (:template-specifier 
+                                ( ("GenericClientAsyncResponseReader" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol namespacesubparts) [1812 2281]))                  
+                :type "namespace")
+                nil [684 2284]))          
+      :file "generic_stub.cc"
+      :pointmax 2304
+      :fsize 2303
+      :lastmodtime '(23062 15970 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("grpc++/security/credentials.h" include (:system-flag t) nil [605 645])
+            ("grpc++/channel.h" include (:system-flag t) nil [647 674])
+            ("grpc++/support/channel_arguments.h" include (:system-flag t) nil [675 720])
+            ("grpc++/support/config.h" include (:system-flag t) nil [721 755])
+            ("grpc/grpc.h" include (:system-flag t) nil [756 778])
+            ("grpc/support/log.h" include (:system-flag t) nil [779 808])
+            ("src/cpp/client/create_channel_internal.h" include nil nil [809 860])
+            ("grpc" type
+               (:members 
+                  ( ("unnamed" type
+                       (:members 
+                          ( ("ChannelCredentials" variable (:type "int") (reparse-symbol namespacesubparts) [944 1384]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [880 1386])
+                    ("InsecureChannelCredentials" function (:type ("std::shared_ptr" type
+                         (:template-specifier 
+                            ( ("ChannelCredentials" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol namespacesubparts) [1402 1561]))                  
+                :type "namespace")
+                nil [862 1564]))          
+      :file "insecure_credentials.cc"
+      :pointmax 1584
+      :fsize 1583
+      :lastmodtime '(23062 15970 0 0)
+      :unmatched-syntax '((PUBLIC 937 . 943) (punctuation 935 . 936) (symbol 929 . 934) (symbol 898 . 928) (CLASS 892 . 897)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("src/cpp/client/secure_credentials.h" include nil nil [605 651])
+            ("grpc++/channel.h" include (:system-flag t) nil [652 679])
+            ("grpc++/impl/grpc_library.h" include (:system-flag t) nil [680 717])
+            ("grpc++/support/channel_arguments.h" include (:system-flag t) nil [718 763])
+            ("grpc/support/log.h" include (:system-flag t) nil [764 793])
+            ("grpc/support/string_util.h" include (:system-flag t) nil [794 831])
+            ("src/cpp/client/create_channel_internal.h" include nil nil [832 883])
+            ("src/cpp/common/secure_auth_context.h" include nil nil [884 931])
+            ("grpc" type
+               (:members 
+                  ( ("g_gli_initializer" variable
+                       (:typemodifiers ("static")
+                        :type ("internal::GrpcLibraryInitializer" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [951 1009])
+                    ("SecureChannelCredentials" function
+                       (:constructor-flag t
+                        :parent "SecureChannelCredentials"
+                        :arguments 
+                          ( ("c_creds" variable
+                               (:pointer 1
+                                :type ("grpc_channel_credentials" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1066 1100]))                          
+                        :type ("SecureChannelCredentials" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [1010 1158])
+                    ("CreateChannel" function
+                       (:parent "SecureChannelCredentials"
+                        :arguments 
+                          ( ("target" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1236 1257])
+                            ("args" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("grpc::ChannelArguments" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1258 1293]))                          
+                        :type ("std::shared_ptr" type
+                             (:template-specifier 
+                                ( ("grpc::Channel" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol namespacesubparts) [1160 1558])
+                    ("SecureCallCredentials" function
+                       (:constructor-flag t
+                        :parent "SecureCallCredentials"
+                        :arguments 
+                          ( ("c_creds" variable
+                               (:pointer 1
+                                :type ("grpc_call_credentials" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1605 1636]))                          
+                        :type ("SecureCallCredentials" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [1560 1694])
+                    ("ApplyToCall" function
+                       (:parent "SecureCallCredentials"
+                        :arguments 
+                          ( ("call" variable
+                               (:pointer 1
+                                :type ("grpc_call" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1736 1752]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [1696 1824])
+                    ("unnamed" type
+                       (:members 
+                          ( ("WrapChannelCredentials" function
+                               (:arguments 
+                                  ( ("creds" variable
+                                       (:pointer 1
+                                        :type ("grpc_channel_credentials" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1902 1934]))                                  
+                                :type ("std::shared_ptr" type
+                                     (:template-specifier 
+                                        ( ("ChannelCredentials" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol namespacesubparts) [1838 2109])
+                            ("WrapCallCredentials" function
+                               (:arguments 
+                                  ( ("creds" variable
+                                       (:pointer 1
+                                        :type ("grpc_call_credentials" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2169 2198]))                                  
+                                :type ("std::shared_ptr" type
+                                     (:template-specifier 
+                                        ( ("CallCredentials" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol namespacesubparts) [2111 2367]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1826 2369])
+                    ("GoogleDefaultCredentials" function (:type ("std::shared_ptr" type
+                         (:template-specifier 
+                            ( ("ChannelCredentials" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol namespacesubparts) [2385 2578])
+                    ("SslCredentials" function
+                       (:arguments 
+                          ( ("options" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("SslCredentialsOptions" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2689 2726]))                          
+                        :type ("std::shared_ptr" type
+                             (:template-specifier 
+                                ( ("ChannelCredentials" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol namespacesubparts) [2633 3176])
+                    ("GoogleComputeEngineCredentials" function (:type ("std::shared_ptr" type
+                         (:template-specifier 
+                            ( ("CallCredentials" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol namespacesubparts) [3228 3442])
+                    ("ServiceAccountJWTAccessCredentials" function
+                       (:arguments 
+                          ( ("json_key" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("grpc::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3544 3573])
+                            ("token_lifetime_seconds" variable (:type "long") (reparse-symbol arg-sub-list) [3574 3602]))                          
+                        :type ("std::shared_ptr" type
+                             (:template-specifier 
+                                ( ("CallCredentials" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol namespacesubparts) [3471 4057])
+                    ("GoogleRefreshTokenCredentials" function
+                       (:arguments 
+                          ( ("json_refresh_token" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("grpc::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4164 4203]))                          
+                        :type ("std::shared_ptr" type
+                             (:template-specifier 
+                                ( ("CallCredentials" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol namespacesubparts) [4096 4379])
+                    ("AccessTokenCredentials" function
+                       (:arguments 
+                          ( ("access_token" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("grpc::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4478 4511]))                          
+                        :type ("std::shared_ptr" type
+                             (:template-specifier 
+                                ( ("CallCredentials" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol namespacesubparts) [4417 4673])
+                    ("GoogleIAMCredentials" function
+                       (:arguments 
+                          ( ("authorization_token" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("grpc::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4761 4801])
+                            ("authority_selector" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("grpc::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4806 4845]))                          
+                        :type ("std::shared_ptr" type
+                             (:template-specifier 
+                                ( ("CallCredentials" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol namespacesubparts) [4702 5040])
+                    ("CompositeChannelCredentials" function
+                       (:arguments 
+                          ( ("channel_creds" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::shared_ptr" type
+                                     (:template-specifier 
+                                        ( ("ChannelCredentials" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [5213 5270])
+                            ("call_creds" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::shared_ptr" type
+                                     (:template-specifier 
+                                        ( ("CallCredentials" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [5275 5326]))                          
+                        :type ("std::shared_ptr" type
+                             (:template-specifier 
+                                ( ("ChannelCredentials" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol namespacesubparts) [5144 5972])
+                    ("CompositeCallCredentials" function
+                       (:arguments 
+                          ( ("creds1" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::shared_ptr" type
+                                     (:template-specifier 
+                                        ( ("CallCredentials" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [6037 6084])
+                            ("creds2" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::shared_ptr" type
+                                     (:template-specifier 
+                                        ( ("CallCredentials" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [6089 6136]))                          
+                        :type ("std::shared_ptr" type
+                             (:template-specifier 
+                                ( ("CallCredentials" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol namespacesubparts) [5974 6488])
+                    ("Destroy" function
+                       (:parent "MetadataCredentialsPluginWrapper"
+                        :arguments 
+                          ( ("wrapper" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [6537 6551]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [6490 6709])
+                    ("GetMetadata" function
+                       (:parent "MetadataCredentialsPluginWrapper"
+                        :arguments 
+                          ( ("wrapper" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [6766 6780])
+                            ("context" variable (:type ("grpc_auth_metadata_context" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6781 6816])
+                            ("cb" variable (:type ("grpc_credentials_plugin_metadata_cb" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6821 6860])
+                            ("user_data" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [6861 6877])
+                            ("creds_md" variable
+                               (:dereference 1
+                                :type ("grpc_metadata" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6882 6948])
+                            ("num_creds_md" variable
+                               (:pointer 1
+                                :type ("size_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6953 6974])
+                            ("status" variable
+                               (:pointer 1
+                                :type ("grpc_status_code" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6975 7000])
+                            ("error_details" variable
+                               (:pointer 2
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [7005 7032]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [6711 7712])
+                    ("unnamed" type
+                       (:members 
+                          ( ("UnrefMetadata" function
+                               (:arguments 
+                                  ( ("md" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("grpc_metadata" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [7746 7783]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [7727 7908]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [7714 7911])
+                    ("InvokePlugin" function
+                       (:parent "MetadataCredentialsPluginWrapper"
+                        :arguments 
+                          ( ("context" variable (:type ("grpc_auth_metadata_context" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7984 8019])
+                            ("cb" variable (:type ("grpc_credentials_plugin_metadata_cb" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8020 8059])
+                            ("user_data" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [8064 8080])
+                            ("creds_md" variable
+                               (:dereference 1
+                                :type ("grpc_metadata" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [8081 8107])
+                            ("num_creds_md" variable
+                               (:pointer 1
+                                :type ("size_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [8108 8129])
+                            ("status_code" variable
+                               (:pointer 1
+                                :type ("grpc_status_code" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [8134 8164])
+                            ("error_details" variable
+                               (:pointer 2
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [8165 8192]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [7927 9934])
+                    ("MetadataCredentialsPluginWrapper" function
+                       (:constructor-flag t
+                        :parent "MetadataCredentialsPluginWrapper"
+                        :arguments 
+                          ( ("plugin" variable (:type ("std::unique_ptr" type
+                                 (:template-specifier 
+                                    ( ("MetadataCredentialsPlugin" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol arg-sub-list) [10008 10058]))                          
+                        :type ("MetadataCredentialsPluginWrapper" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [9936 10135])
+                    ("MetadataCredentialsFromPlugin" function
+                       (:arguments 
+                          ( ("plugin" variable (:type ("std::unique_ptr" type
+                                 (:template-specifier 
+                                    ( ("MetadataCredentialsPlugin" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol arg-sub-list) [10205 10255]))                          
+                        :type ("std::shared_ptr" type
+                             (:template-specifier 
+                                ( ("CallCredentials" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol namespacesubparts) [10137 10728]))                  
+                :type "namespace")
+                nil [933 10731]))          
+      :file "secure_credentials.cc"
+      :pointmax 10751
+      :fsize 10750
+      :lastmodtime '(23062 15970 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :file "secure_credentials.h"
+      :fsize 2912
+      :lastmodtime '(23062 15970 0 0))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("grpc++/client_context.h" include (:system-flag t) nil [605 639])
+            ("grpc/compression.h" include (:system-flag t) nil [641 670])
+            ("grpc/grpc.h" include (:system-flag t) nil [671 693])
+            ("grpc/support/alloc.h" include (:system-flag t) nil [694 725])
+            ("grpc/support/log.h" include (:system-flag t) nil [726 755])
+            ("grpc/support/string_util.h" include (:system-flag t) nil [756 793])
+            ("grpc++/impl/grpc_library.h" include (:system-flag t) nil [795 832])
+            ("grpc++/security/credentials.h" include (:system-flag t) nil [833 873])
+            ("grpc++/server_context.h" include (:system-flag t) nil [874 908])
+            ("grpc++/support/time.h" include (:system-flag t) nil [909 941])
+            ("grpc" type
+               (:members 
+                  ( ("ClientContext::GlobalCallbacks" variable (:type "int") (reparse-symbol namespacesubparts) [1015 1221])
+                    ("g_gli_initializer" variable
+                       (:typemodifiers ("static")
+                        :type ("internal::GrpcLibraryInitializer" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [1223 1281])
+                    ("g_default_client_callbacks" variable
+                       (:typemodifiers ("static")
+                        :type ("DefaultGlobalClientCallbacks" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [1282 1345])
+                    ("g_client_callbacks" variable
+                       (:pointer 1
+                        :typemodifiers ("static")
+                        :default-value "&g_default_client_callbacks"
+                        :type ("ClientContext::GlobalCallbacks" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [1346 1438])
+                    ("ClientContext" function
+                       (:constructor-flag t
+                        :parent "ClientContext"
+                        :type ("ClientContext" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [1440 1900])
+                    ("ClientContext" function
+                       (:destructor-flag t
+                        :parent "ClientContext"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1902 2024])
+                    ("FromServerContext" function
+                       (:parent "ClientContext"
+                        :arguments 
+                          ( ("context" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("ServerContext" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2095 2124])
+                            ("options" variable (:type ("PropagationOptions" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2125 2152]))                          
+                        :type ("std::unique_ptr" type
+                             (:template-specifier 
+                                ( ("ClientContext" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol namespacesubparts) [2026 2311])
+                    ("AddMetadata" function
+                       (:parent "ClientContext"
+                        :arguments 
+                          ( ("meta_key" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("grpc::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2345 2374])
+                            ("meta_value" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("grpc::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2407 2438]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [2313 2513])
+                    ("set_call" function
+                       (:parent "ClientContext"
+                        :arguments 
+                          ( ("call" variable
+                               (:pointer 1
+                                :type ("grpc_call" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2544 2560])
+                            ("channel" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::shared_ptr" type
+                                     (:template-specifier 
+                                        ( ("Channel" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [2590 2630]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [2515 3005])
+                    ("set_compression_algorithm" function
+                       (:parent "ClientContext"
+                        :arguments 
+                          ( ("algorithm" variable (:type ("grpc_compression_algorithm" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3058 3095]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [3007 3436])
+                    ("TryCancel" function
+                       (:parent "ClientContext"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [3438 3610])
+                    ("peer" function
+                       (:methodconst-flag t
+                        :parent "ClientContext"
+                        :type ("grpc::string" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [3612 3798])
+                    ("SetGlobalCallbacks" function
+                       (:parent "ClientContext"
+                        :arguments 
+                          ( ("client_callbacks" variable
+                               (:pointer 1
+                                :type ("GlobalCallbacks" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3839 3873]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [3800 4089]))                  
+                :type "namespace")
+                nil [943 4092]))          
+      :file "client_context.cc"
+      :pointmax 4112
+      :fsize 4111
+      :lastmodtime '(23062 15969 0 0)
+      :unmatched-syntax '((PUBLIC 1008 . 1014) (punctuation 1006 . 1007) (symbol 996 . 1001) (symbol 967 . 995) (CLASS 961 . 966)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("grpc++/channel.h" include (:system-flag t) nil [605 632])
+            ("grpc++/create_channel.h" include (:system-flag t) nil [633 667])
+            ("grpc++/impl/grpc_library.h" include (:system-flag t) nil [668 705])
+            ("grpc/grpc.h" include (:system-flag t) nil [706 728])
+            ("grpc/grpc_posix.h" include (:system-flag t) nil [729 757])
+            ("src/cpp/client/create_channel_internal.h" include nil nil [759 810])
+            ("grpc" type (:type "namespace") nil [812 1628]))          
+      :file "create_channel_posix.cc"
+      :pointmax 1648
+      :fsize 1647
+      :lastmodtime '(23062 15969 0 0)
+      :unmatched-syntax nil))
+  :file "!Volumes!Transcend!grpc!src!cpp!client!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

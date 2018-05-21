@@ -1,0 +1,1569 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("boost/variant.hpp" include (:system-flag t) nil [324 352])
+            ("folly/ExceptionWrapper.h" include (:system-flag t) nil [353 388])
+            ("folly/Memory.h" include (:system-flag t) nil [389 414])
+            ("folly/futures/Future.h" include (:system-flag t) nil [415 448])
+            ("folly/Unit.h" include (:system-flag t) nil [449 472])
+            ("folly/io/IOBufQueue.h" include (:system-flag t) nil [473 505])
+            ("folly/io/async/AsyncTransport.h" include (:system-flag t) nil [506 548])
+            ("folly/io/async/DelayedDestruction.h" include (:system-flag t) nil [549 595])
+            ("wangle/acceptor/SecureTransportType.h" include (:system-flag t) nil [596 644])
+            ("wangle/acceptor/TransportInfo.h" include (:system-flag t) nil [645 687])
+            ("wangle/channel/HandlerContext.h" include (:system-flag t) nil [688 730])
+            ("wangle" type
+               (:members 
+                  ( ("PipelineBase" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [752 771])
+                    ("Acceptor" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [772 787])
+                    ("PipelineManager" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [814 821])
+                            ("deletePipeline" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("pipeline" variable
+                                       (:pointer 1
+                                        :type ("PipelineBase" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [892 915]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [864 920])
+                            ("refreshTimeout" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [923 955]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [789 958])
+                    ("PipelineBase" type
+                       (:superclasses 
+                          ( ("std::enable_shared_from_this" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [1034 1041])
+                            ("setPipelineManager" function
+                               (:arguments 
+                                  ( ("manager" variable
+                                       (:pointer 1
+                                        :type ("PipelineManager" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1106 1131]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1082 1161])
+                            ("getPipelineManager" function
+                               (:pointer 1
+                                :type ("PipelineManager" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1165 1229])
+                            ("deletePipeline" function (:type "void") (reparse-symbol classsubparts) [1233 1324])
+                            ("setTransport" function
+                               (:arguments 
+                                  ( ("transport" variable (:type ("std::shared_ptr" type
+                                         (:template-specifier 
+                                            ( ("folly::AsyncTransport" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol arg-sub-list) [1346 1395]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1328 1429])
+                            ("getTransport" function (:type ("std::shared_ptr" type
+                                 (:template-specifier 
+                                    ( ("folly::AsyncTransport" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [1433 1515])
+                            ("setWriteFlags" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("flags" variable (:type ("folly::WriteFlags" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1538 1562]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1519 1563])
+                            ("getWriteFlags" function
+                               (:prototype-flag t
+                                :type ("folly::WriteFlags" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1566 1600])
+                            ("setReadBufferSettings" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("minAvailable" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1631 1653])
+                                    ("allocationSize" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1654 1678]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1604 1679])
+                            ("getReadBufferSettings" function
+                               (:prototype-flag t
+                                :type ("std::pair" type
+                                     (:template-specifier 
+                                        ( ("uint64_t" type nil nil nil)
+                                          ("uint64_t" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [1682 1736])
+                            ("setTransportInfo" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("tInfo" variable (:type ("std::shared_ptr" type
+                                         (:template-specifier 
+                                            ( ("TransportInfo" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol arg-sub-list) [1762 1799]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1740 1800])
+                            ("getTransportInfo" function
+                               (:prototype-flag t
+                                :type ("std::shared_ptr" type
+                                     (:template-specifier 
+                                        ( ("TransportInfo" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [1803 1853])
+                            ("addBack" function
+                               (:template 
+                                  ( ("H" type (:type "class") nil nil))                                  
+                                :type ("PipelineBase" type (:type "class") nil nil)
+                                :arguments 
+                                  ( ("handler" variable (:type ("std::shared_ptr" type
+                                         (:template-specifier 
+                                            ( ("H" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol arg-sub-list) [1900 1927]))                                  
+                                :prototype-flag t)
+                                (reparse-symbol classsubparts) [1857 1928])
+                            ("addBack" function
+                               (:template 
+                                  ( ("H" type (:type "class") nil nil))                                  
+                                :type ("PipelineBase" type (:type "class") nil nil)
+                                :arguments 
+                                  ( ("" variable
+                                       (:reference 1
+                                        :type ("H" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1975 1978])
+                                    ("" variable (:type ("handler" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1979 1987]))                                  
+                                :prototype-flag t)
+                                (reparse-symbol classsubparts) [1932 1988])
+                            ("addBack" function
+                               (:template 
+                                  ( ("H" type (:type "class") nil nil))                                  
+                                :type ("PipelineBase" type (:type "class") nil nil)
+                                :arguments 
+                                  ( ("handler" variable
+                                       (:pointer 1
+                                        :type ("H" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2035 2046]))                                  
+                                :prototype-flag t)
+                                (reparse-symbol classsubparts) [1992 2047])
+                            ("addFront" function
+                               (:template 
+                                  ( ("H" type (:type "class") nil nil))                                  
+                                :type ("PipelineBase" type (:type "class") nil nil)
+                                :arguments 
+                                  ( ("handler" variable (:type ("std::shared_ptr" type
+                                         (:template-specifier 
+                                            ( ("H" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol arg-sub-list) [2095 2122]))                                  
+                                :prototype-flag t)
+                                (reparse-symbol classsubparts) [2051 2123])
+                            ("addFront" function
+                               (:template 
+                                  ( ("H" type (:type "class") nil nil))                                  
+                                :type ("PipelineBase" type (:type "class") nil nil)
+                                :arguments 
+                                  ( ("" variable
+                                       (:reference 1
+                                        :type ("H" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2171 2174])
+                                    ("" variable (:type ("handler" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2175 2183]))                                  
+                                :prototype-flag t)
+                                (reparse-symbol classsubparts) [2127 2184])
+                            ("addFront" function
+                               (:template 
+                                  ( ("H" type (:type "class") nil nil))                                  
+                                :type ("PipelineBase" type (:type "class") nil nil)
+                                :arguments 
+                                  ( ("handler" variable
+                                       (:pointer 1
+                                        :type ("H" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2232 2243]))                                  
+                                :prototype-flag t)
+                                (reparse-symbol classsubparts) [2188 2244])
+                            ("remove" function
+                               (:template 
+                                  ( ("H" type (:type "class") nil nil))                                  
+                                :type ("PipelineBase" type (:type "class") nil nil)
+                                :arguments 
+                                  ( ("handler" variable
+                                       (:pointer 1
+                                        :type ("H" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2290 2301]))                                  
+                                :prototype-flag t)
+                                (reparse-symbol classsubparts) [2248 2302])
+                            ("remove" function
+                               (:template 
+                                  ( ("H" type (:type "class") nil nil))                                  
+                                :type ("PipelineBase" type (:type "class") nil nil)
+                                :prototype-flag t)
+                                (reparse-symbol classsubparts) [2306 2350])
+                            ("removeFront" function
+                               (:prototype-flag t
+                                :type ("PipelineBase" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2354 2382])
+                            ("removeBack" function
+                               (:prototype-flag t
+                                :type ("PipelineBase" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2386 2413])
+                            ("getHandler" function
+                               (:template 
+                                  ( ("H" type (:type "class") nil nil))                                  
+                                :type ("H" type (:type "class") nil nil)
+                                :arguments 
+                                  ( ("i" variable (:type "int") (reparse-symbol arg-sub-list) [2452 2458]))                                  
+                                :pointer 1
+                                :prototype-flag t)
+                                (reparse-symbol classsubparts) [2417 2459])
+                            ("getHandler" function
+                               (:template 
+                                  ( ("H" type (:type "class") nil nil))                                  
+                                :type ("H" type (:type "class") nil nil)
+                                :pointer 1
+                                :prototype-flag t)
+                                (reparse-symbol classsubparts) [2463 2500])
+                            ("getContext" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :arguments 
+                                  ( ("i" variable (:type "int") (reparse-symbol arg-sub-list) [2567 2573]))                                  
+                                :type ("type" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2550 2574])
+                            ("getContext" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :type ("type" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2624 2643])
+                            ("setOwner" function
+                               (:template 
+                                  ( ("H" type (:type "class") nil nil))                                  
+                                :type "bool"
+                                :arguments 
+                                  ( ("handler" variable
+                                       (:pointer 1
+                                        :type ("H" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2943 2954]))                                  
+                                :prototype-flag t)
+                                (reparse-symbol classsubparts) [2908 2955])
+                            ("finalize" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [2959 2987])
+                            ("numHandlers" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :type ("size_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2991 3018])
+                            ("protected" label nil (reparse-symbol classsubparts) [3021 3031])
+                            ("addContextFront" function
+                               (:template 
+                                  ( ("Context" type (:type "class") nil nil))                                  
+                                :type "void"
+                                :arguments 
+                                  ( ("ctx" variable
+                                       (:pointer 1
+                                        :type ("Context" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3082 3095]))                                  
+                                :prototype-flag t)
+                                (reparse-symbol classsubparts) [3034 3096])
+                            ("detachHandlers" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [3100 3122])
+                            ("ctxs_" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("std::shared_ptr" type (:template-specifier 
+                                        ( ("PipelineContext" type nil nil nil))                                        ) nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [3126 3178])
+                            ("inCtxs_" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("PipelineContext" type (:pointer 1) nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [3181 3219])
+                            ("outCtxs_" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("PipelineContext" type (:pointer 1) nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [3222 3261])
+                            ("private" label nil (reparse-symbol classsubparts) [3264 3272])
+                            ("manager_" variable
+                               (:pointer 1
+                                :type ("PipelineManager" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3275 3310])
+                            ("transport_" variable (:type ("std::shared_ptr" type
+                                 (:template-specifier 
+                                    ( ("folly::AsyncTransport" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [3313 3363])
+                            ("transportInfo_" variable (:type ("std::shared_ptr" type
+                                 (:template-specifier 
+                                    ( ("TransportInfo" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [3366 3412])
+                            ("addHelper" function
+                               (:template 
+                                  ( ("Context" type (:type "class") nil nil))                                  
+                                :type ("PipelineBase" type (:type "class") nil nil)
+                                :arguments 
+                                  ( ("" variable
+                                       (:reference 1
+                                        :type ("std::shared_ptr" type
+                                             (:template-specifier 
+                                                ( ("Context" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [3467 3493])
+                                    ("" variable (:type ("ctx" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3494 3498])
+                                    ("front" variable (:type "bool") (reparse-symbol arg-sub-list) [3499 3510]))                                  
+                                :prototype-flag t)
+                                (reparse-symbol classsubparts) [3416 3511])
+                            ("removeHelper" function
+                               (:template 
+                                  ( ("H" type (:type "class") nil nil))                                  
+                                :type ("PipelineBase" type (:type "class") nil nil)
+                                :arguments 
+                                  ( ("handler" variable
+                                       (:pointer 1
+                                        :type ("H" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3563 3574])
+                                    ("checkEqual" variable (:type "bool") (reparse-symbol arg-sub-list) [3575 3591]))                                  
+                                :prototype-flag t)
+                                (reparse-symbol classsubparts) [3515 3592])
+                            ("ContextIterator" type
+                               (:typedef ("std::vector::iterator" type (:type "class") nil nil)
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [3596 3680])
+                            ("removeAt" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("it" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("ContextIterator" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3709 3735]))                                  
+                                :type ("ContextIterator" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3684 3736])
+                            ("writeFlags_" variable (:type ("folly::WriteFlags" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3740 3795])
+                            ("readBufferSettings_" variable (:type ("std::pair" type
+                                 (:template-specifier 
+                                    ( ("uint64_t" type nil nil nil)
+                                      ("uint64_t" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [3798 3860])
+                            ("owner_" variable (:type ("std::shared_ptr" type
+                                 (:template-specifier 
+                                    ( ("PipelineContext" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [3864 3904]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [960 3907])
+                    ("Pipeline" type
+                       (:superclasses 
+                          ( ("PipelineBase" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [4348 4355])
+                            ("std::shared_ptr" variable (:type "int") (reparse-symbol classsubparts) [4370 4396])
+                            ("create" function
+                               (:typemodifiers ("static")
+                                :type ("Ptr" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4400 4479])
+                            ("override" variable (:type "int") (reparse-symbol classsubparts) [4495 4504])
+                            ("read" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("msg" variable (:type ("R" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4608 4614]))                                  
+                                :type ("type" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4596 4615])
+                            ("readEOF" function
+                               (:prototype-flag t
+                                :type ("type" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4707 4724])
+                            ("readException" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("e" variable (:type ("folly::exception_wrapper" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4837 4864]))                                  
+                                :type ("type" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4816 4865])
+                            ("transportActive" function
+                               (:prototype-flag t
+                                :type ("type" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4957 4982])
+                            ("transportInactive" function
+                               (:prototype-flag t
+                                :type ("type" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [5074 5101])
+                            ("write" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("msg" variable (:type ("W" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5260 5266]))                                  
+                                :type ("type" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [5247 5267])
+                            ("writeException" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("e" variable (:type ("folly::exception_wrapper" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5435 5462]))                                  
+                                :type ("type" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [5413 5463])
+                            ("close" function
+                               (:prototype-flag t
+                                :type ("type" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [5609 5624])
+                            ("override" variable (:type "int") (reparse-symbol classsubparts) [5644 5653])
+                            ("protected" label nil (reparse-symbol classsubparts) [5656 5666])
+                            ("Pipeline" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :type ("Pipeline" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [5669 5680])
+                            ("Pipeline" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("isStatic" variable (:type "bool") (reparse-symbol arg-sub-list) [5701 5715]))                                  
+                                :type ("Pipeline" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [5692 5716])
+                            ("private" label nil (reparse-symbol classsubparts) [5719 5727])
+                            ("isStatic_" variable (:type "bool") (reparse-symbol classsubparts) [5730 5752])
+                            ("front_" variable
+                               (:pointer 1
+                                :type ("InboundLink" type
+                                     (:template-specifier 
+                                        ( ("R" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [5756 5788])
+                            ("back_" variable
+                               (:pointer 1
+                                :type ("OutboundLink" type
+                                     (:template-specifier 
+                                        ( ("W" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [5791 5823]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [4308 5826]))                  
+                :type "namespace")
+                nil [732 5829])
+            ("folly" type
+               (:members 
+                  ( ("AsyncSocket" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [5870 5888])
+                    ("AsyncTransportWrapper" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [5889 5917])
+                    ("AsyncUDPSocket" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [5918 5939]))                  
+                :type "namespace")
+                nil [5851 5942])
+            ("wangle" type
+               (:members 
+                  ( ("Pipeline" variable (:type "int") (reparse-symbol namespacesubparts) [5992 6052])
+                    ("PipelineFactory" type
+                       (:template 
+                          ( ("Pipeline" type (:type "class") nil nil))                          
+                        :type "class"
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [6108 6115])
+                            ("newPipeline" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual" "typename")
+                                :arguments 
+                                  ( ("" variable (:type ("std::shared_ptr" type
+                                         (:template-specifier 
+                                            ( ("folly::AsyncTransportWrapper" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol arg-sub-list) [6168 6214]))                                  
+                                :type ("Pipeline::Ptr" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [6118 6219]))                          )
+                        (reparse-symbol namespacesubparts) [6054 6263])
+                    ("ConnInfo" type
+                       (:members 
+                          ( ("sock" variable
+                               (:pointer 1
+                                :type ("folly::AsyncTransportWrapper" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [6285 6320])
+                            ("clientAddr" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("folly::SocketAddress" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [6323 6362])
+                            ("nextProtoName" variable
+                               (:constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [6365 6398])
+                            ("secureType" variable (:type ("SecureTransportType" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6401 6432])
+                            ("tinfo" variable
+                               (:constant-flag t
+                                :type ("TransportInfo" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [6435 6462]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [6265 6465])
+                    ("ConnEvent" type (:type "class") (reparse-symbol namespacesubparts) [6472 6522])
+                    ("AcceptPipelineType" type
+                       (:typedef ("boost::variant" type
+                             (:template-specifier 
+                                ( ("folly::IOBuf" type (:pointer 1) nil nil)
+                                  ("folly::AsyncTransportWrapper" type (:pointer 1) nil nil)
+                                  ("ConnInfo" type (:reference 1) nil nil)
+                                  ("ConnEvent" type nil nil nil)
+                                  ("std::tuple" type (:template-specifier 
+                                    ( ("folly::IOBuf" type (:pointer 1) nil nil)
+                                      ("std::shared_ptr" type (:template-specifier 
+                                        ( ("folly::AsyncUDPSocket" type nil nil nil))                                        ) nil nil)
+                                      ("folly::SocketAddress" type nil nil nil))                                    ) nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :type "typedef")
+                        (reparse-symbol namespacesubparts) [6524 6883])
+                    ("AcceptPipeline" type
+                       (:typedef ("Pipeline" type
+                             (:template-specifier 
+                                ( ("AcceptPipelineType" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :type "typedef")
+                        (reparse-symbol namespacesubparts) [6884 6936])
+                    ("AcceptPipelineFactory" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [6969 6976])
+                            ("newPipeline" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual" "typename")
+                                :arguments 
+                                  ( ("acceptor" variable
+                                       (:pointer 1
+                                        :type ("Acceptor" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [7028 7047]))                                  
+                                :type ("AcceptPipeline::Ptr" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [6979 7052]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [6938 7102]))                  
+                :type "namespace")
+                nil [5944 7105])
+            ("wangle/channel/Pipeline-inl.h" include (:system-flag t) nil [7107 7147]))          
+      :file "Pipeline.h"
+      :pointmax 7148
+      :fsize 7147
+      :lastmodtime '(22900 7662 0 0)
+      :unmatched-syntax '((punctuation 7098 . 7099) (DEFAULT 7091 . 7098) (punctuation 7089 . 7090) (semantic-list 7086 . 7088) (symbol 7065 . 7086) (punctuation 7064 . 7065) (VIRTUAL 7056 . 7063) (punctuation 6518 . 6519) (symbol 6506 . 6518) (punctuation 6502 . 6503) (symbol 6492 . 6502) (ENUM 6467 . 6471) (punctuation 6259 . 6260) (DEFAULT 6252 . 6259) (punctuation 6250 . 6251) (semantic-list 6247 . 6249) (symbol 6232 . 6247) (punctuation 6231 . 6232) (VIRTUAL 6223 . 6230) (punctuation 5986 . 5987) (symbol 5970 . 5985) (USING 5964 . 5969) (EXPLICIT 5683 . 5691) (semantic-list 5641 . 5643) (symbol 5633 . 5641) (VOID 5628 . 5632) (punctuation 5608 . 5609) (punctuation 5607 . 5608) (punctuation 5606 . 5607) (punctuation 5605 . 5606) (symbol 5601 . 5605) (punctuation 5600 . 5601) (punctuation 5599 . 5600) (symbol 5594 . 5599) (punctuation 5593 . 5594) (symbol 5587 . 5593) (punctuation 5586 . 5587) (punctuation 5585 . 5586) (symbol 5580 . 5585) (punctuation 5552 . 5553) (symbol 5547 . 5552) (punctuation 5546 . 5547) (punctuation 5545 . 5546) (punctuation 5544 . 5545) (symbol 5540 . 5544) (punctuation 5539 . 5540) (punctuation 5538 . 5539) (symbol 5533 . 5538) (punctuation 5531 . 5532) (symbol 5530 . 5531) (punctuation 5529 . 5530) (symbol 5522 . 5529) (punctuation 5521 . 5522) (punctuation 5520 . 5521) (symbol 5517 . 5520) (punctuation 5516 . 5517) (punctuation 5515 . 5516) (symbol 5506 . 5515) (punctuation 5505 . 5506) (punctuation 5504 . 5505) (symbol 5501 . 5504) (TYPENAME 5492 . 5500) (punctuation 5488 . 5489) (symbol 5487 . 5488) (punctuation 5485 . 5486) (symbol 5483 . 5484) (CLASS 5477 . 5482) (punctuation 5476 . 5477) (TEMPLATE 5467 . 5475) (punctuation 5412 . 5413) (punctuation 5411 . 5412) (punctuation 5410 . 5411) (punctuation 5409 . 5410) (symbol 5405 . 5409) (punctuation 5404 . 5405) (punctuation 5403 . 5404) (symbol 5398 . 5403) (punctuation 5397 . 5398) (symbol 5391 . 5397) (punctuation 5390 . 5391) (punctuation 5389 . 5390) (symbol 5384 . 5389) (punctuation 5356 . 5357) (symbol 5351 . 5356) (punctuation 5350 . 5351) (punctuation 5349 . 5350) (punctuation 5348 . 5349) (symbol 5344 . 5348) (punctuation 5343 . 5344) (punctuation 5342 . 5343) (symbol 5337 . 5342) (punctuation 5335 . 5336) (symbol 5334 . 5335) (punctuation 5333 . 5334) (symbol 5326 . 5333) (punctuation 5325 . 5326) (punctuation 5324 . 5325) (symbol 5321 . 5324) (punctuation 5320 . 5321) (punctuation 5319 . 5320) (symbol 5310 . 5319) (punctuation 5309 . 5310) (punctuation 5308 . 5309) (symbol 5305 . 5308) (TYPENAME 5296 . 5304) (punctuation 5292 . 5293) (symbol 5291 . 5292) (punctuation 5289 . 5290) (symbol 5287 . 5288) (CLASS 5281 . 5286) (punctuation 5280 . 5281) (TEMPLATE 5271 . 5279) (punctuation 5246 . 5247) (punctuation 5245 . 5246) (punctuation 5244 . 5245) (punctuation 5243 . 5244) (symbol 5239 . 5243) (punctuation 5238 . 5239) (punctuation 5237 . 5238) (symbol 5232 . 5237) (punctuation 5231 . 5232) (symbol 5225 . 5231) (punctuation 5224 . 5225) (punctuation 5223 . 5224) (symbol 5218 . 5223) (punctuation 5190 . 5191) (symbol 5185 . 5190) (punctuation 5184 . 5185) (punctuation 5183 . 5184) (punctuation 5182 . 5183) (symbol 5178 . 5182) (punctuation 5177 . 5178) (punctuation 5176 . 5177) (symbol 5171 . 5176) (punctuation 5169 . 5170) (symbol 5168 . 5169) (punctuation 5167 . 5168) (symbol 5160 . 5167) (punctuation 5159 . 5160) (punctuation 5158 . 5159) (symbol 5155 . 5158) (punctuation 5154 . 5155) (punctuation 5153 . 5154) (symbol 5144 . 5153) (punctuation 5143 . 5144) (punctuation 5142 . 5143) (symbol 5139 . 5142) (TYPENAME 5130 . 5138) (punctuation 5126 . 5127) (symbol 5125 . 5126) (punctuation 5123 . 5124) (symbol 5121 . 5122) (CLASS 5115 . 5120) (punctuation 5114 . 5115) (TEMPLATE 5105 . 5113) (punctuation 5073 . 5074) (punctuation 5072 . 5073) (punctuation 5071 . 5072) (symbol 5066 . 5071) (punctuation 5065 . 5066) (punctuation 5064 . 5065) (punctuation 5063 . 5064) (symbol 5059 . 5063) (punctuation 5058 . 5059) (punctuation 5057 . 5058) (symbol 5052 . 5057) (punctuation 5050 . 5051) (symbol 5049 . 5050) (punctuation 5048 . 5049) (symbol 5041 . 5048) (punctuation 5040 . 5041) (punctuation 5039 . 5040) (symbol 5036 . 5039) (punctuation 5035 . 5036) (punctuation 5034 . 5035) (symbol 5025 . 5034) (punctuation 5024 . 5025) (punctuation 5023 . 5024) (symbol 5020 . 5023) (TYPENAME 5011 . 5019) (punctuation 5007 . 5008) (symbol 5006 . 5007) (punctuation 5004 . 5005) (symbol 5002 . 5003) (CLASS 4996 . 5001) (punctuation 4995 . 4996) (TEMPLATE 4986 . 4994) (punctuation 4956 . 4957) (punctuation 4955 . 4956) (punctuation 4954 . 4955) (symbol 4949 . 4954) (punctuation 4948 . 4949) (punctuation 4947 . 4948) (punctuation 4946 . 4947) (symbol 4942 . 4946) (punctuation 4941 . 4942) (punctuation 4940 . 4941) (symbol 4935 . 4940) (punctuation 4933 . 4934) (symbol 4932 . 4933) (punctuation 4931 . 4932) (symbol 4924 . 4931) (punctuation 4923 . 4924) (punctuation 4922 . 4923) (symbol 4919 . 4922) (punctuation 4918 . 4919) (punctuation 4917 . 4918) (symbol 4908 . 4917) (punctuation 4907 . 4908) (punctuation 4906 . 4907) (symbol 4903 . 4906) (TYPENAME 4894 . 4902) (punctuation 4890 . 4891) (symbol 4889 . 4890) (punctuation 4887 . 4888) (symbol 4885 . 4886) (CLASS 4879 . 4884) (punctuation 4878 . 4879) (TEMPLATE 4869 . 4877) (punctuation 4815 . 4816) (punctuation 4814 . 4815) (punctuation 4813 . 4814) (symbol 4808 . 4813) (punctuation 4807 . 4808) (punctuation 4806 . 4807) (punctuation 4805 . 4806) (symbol 4801 . 4805) (punctuation 4800 . 4801) (punctuation 4799 . 4800) (symbol 4794 . 4799) (punctuation 4792 . 4793) (symbol 4791 . 4792) (punctuation 4790 . 4791) (symbol 4783 . 4790) (punctuation 4782 . 4783) (punctuation 4781 . 4782) (symbol 4778 . 4781) (punctuation 4777 . 4778) (punctuation 4776 . 4777) (symbol 4767 . 4776) (punctuation 4766 . 4767) (punctuation 4765 . 4766) (symbol 4762 . 4765) (TYPENAME 4753 . 4761) (punctuation 4749 . 4750) (symbol 4748 . 4749) (punctuation 4746 . 4747) (symbol 4744 . 4745) (CLASS 4738 . 4743) (punctuation 4737 . 4738) (TEMPLATE 4728 . 4736) (punctuation 4706 . 4707) (punctuation 4705 . 4706) (punctuation 4704 . 4705) (symbol 4699 . 4704) (punctuation 4698 . 4699) (punctuation 4697 . 4698) (punctuation 4696 . 4697) (symbol 4692 . 4696) (punctuation 4691 . 4692) (punctuation 4690 . 4691) (symbol 4685 . 4690) (punctuation 4683 . 4684) (symbol 4682 . 4683) (punctuation 4681 . 4682) (symbol 4674 . 4681) (punctuation 4673 . 4674) (punctuation 4672 . 4673) (symbol 4669 . 4672) (punctuation 4668 . 4669) (punctuation 4667 . 4668) (symbol 4658 . 4667) (punctuation 4657 . 4658) (punctuation 4656 . 4657) (symbol 4653 . 4656) (TYPENAME 4644 . 4652) (punctuation 4640 . 4641) (symbol 4639 . 4640) (punctuation 4637 . 4638) (symbol 4635 . 4636) (CLASS 4629 . 4634) (punctuation 4628 . 4629) (TEMPLATE 4619 . 4627) (punctuation 4595 . 4596) (punctuation 4594 . 4595) (punctuation 4593 . 4594) (symbol 4588 . 4593) (punctuation 4587 . 4588) (punctuation 4586 . 4587) (punctuation 4585 . 4586) (symbol 4581 . 4585) (punctuation 4580 . 4581) (punctuation 4579 . 4580) (symbol 4574 . 4579) (punctuation 4572 . 4573) (symbol 4571 . 4572) (punctuation 4570 . 4571) (symbol 4563 . 4570) (punctuation 4562 . 4563) (punctuation 4561 . 4562) (symbol 4558 . 4561) (punctuation 4557 . 4558) (punctuation 4556 . 4557) (symbol 4547 . 4556) (punctuation 4546 . 4547) (punctuation 4545 . 4546) (symbol 4542 . 4545) (TYPENAME 4533 . 4541) (punctuation 4529 . 4530) (symbol 4528 . 4529) (punctuation 4526 . 4527) (symbol 4524 . 4525) (CLASS 4518 . 4523) (punctuation 4517 . 4518) (TEMPLATE 4508 . 4516) (semantic-list 4492 . 4494) (symbol 4484 . 4492) (punctuation 4483 . 4484) (punctuation 4368 . 4369) (symbol 4364 . 4367) (USING 4358 . 4363) (punctuation 4306 . 4307) (symbol 4302 . 4306) (punctuation 4301 . 4302) (punctuation 4300 . 4301) (symbol 4295 . 4300) (punctuation 4293 . 4294) (symbol 4291 . 4292) (CLASS 4285 . 4290) (punctuation 4283 . 4284) (symbol 4282 . 4283) (CLASS 4276 . 4281) (punctuation 4275 . 4276) (TEMPLATE 4266 . 4274) (punctuation 3492 . 3493) (punctuation 2623 . 2624) (punctuation 2622 . 2623) (punctuation 2621 . 2622) (symbol 2620 . 2621) (punctuation 2619 . 2620) (symbol 2608 . 2619) (TYPENAME 2599 . 2607) (punctuation 2595 . 2596) (symbol 2594 . 2595) (CLASS 2588 . 2593) (punctuation 2587 . 2588) (TEMPLATE 2578 . 2586) (punctuation 2549 . 2550) (punctuation 2548 . 2549) (punctuation 2547 . 2548) (symbol 2546 . 2547) (punctuation 2545 . 2546) (symbol 2534 . 2545) (TYPENAME 2525 . 2533) (punctuation 2521 . 2522) (symbol 2520 . 2521) (CLASS 2514 . 2519) (punctuation 2513 . 2514) (TEMPLATE 2504 . 2512) (punctuation 2173 . 2174) (punctuation 1977 . 1978) (punctuation 1077 . 1078) (DEFAULT 1070 . 1077) (punctuation 1068 . 1069) (semantic-list 1065 . 1067) (symbol 1053 . 1065) (punctuation 1052 . 1053) (VIRTUAL 1044 . 1051) (punctuation 860 . 861) (DEFAULT 853 . 860) (punctuation 851 . 852) (semantic-list 848 . 850) (symbol 833 . 848) (punctuation 832 . 833) (VIRTUAL 824 . 831) (symbol 318 . 322) (symbol 311 . 317) (punctuation 310 . 311) (punctuation 4815 . 4816) (punctuation 4814 . 4815) (punctuation 4813 . 4814) (symbol 4808 . 4813) (punctuation 4807 . 4808) (punctuation 4806 . 4807) (punctuation 4805 . 4806) (symbol 4801 . 4805) (punctuation 4800 . 4801) (punctuation 4799 . 4800) (symbol 4794 . 4799) (punctuation 4792 . 4793) (symbol 4791 . 4792) (punctuation 4790 . 4791) (symbol 4783 . 4790) (punctuation 4782 . 4783) (punctuation 4781 . 4782) (symbol 4778 . 4781) (punctuation 4777 . 4778) (punctuation 4776 . 4777) (symbol 4767 . 4776) (punctuation 4766 . 4767) (punctuation 4765 . 4766) (symbol 4762 . 4765) (TYPENAME 4753 . 4761) (punctuation 4749 . 4750) (symbol 4748 . 4749) (punctuation 4746 . 4747) (symbol 4744 . 4745) (CLASS 4738 . 4743) (punctuation 4737 . 4738) (TEMPLATE 4728 . 4736) (punctuation 4706 . 4707) (punctuation 4705 . 4706) (punctuation 4704 . 4705) (symbol 4699 . 4704) (punctuation 4698 . 4699) (punctuation 4697 . 4698) (punctuation 4696 . 4697) (symbol 4692 . 4696) (punctuation 4691 . 4692) (punctuation 4690 . 4691) (symbol 4685 . 4690) (punctuation 4683 . 4684) (symbol 4682 . 4683) (punctuation 4681 . 4682) (symbol 4674 . 4681) (punctuation 4673 . 4674) (punctuation 4672 . 4673) (symbol 4669 . 4672) (punctuation 4668 . 4669) (punctuation 4667 . 4668) (symbol 4658 . 4667) (punctuation 4657 . 4658) (punctuation 4656 . 4657) (symbol 4653 . 4656) (TYPENAME 4644 . 4652) (punctuation 4640 . 4641) (symbol 4639 . 4640) (punctuation 4637 . 4638) (symbol 4635 . 4636) (CLASS 4629 . 4634) (punctuation 4628 . 4629) (TEMPLATE 4619 . 4627) (punctuation 4595 . 4596) (punctuation 4594 . 4595) (punctuation 4593 . 4594) (symbol 4588 . 4593) (punctuation 4587 . 4588) (punctuation 4586 . 4587) (punctuation 4585 . 4586) (symbol 4581 . 4585) (punctuation 4580 . 4581) (punctuation 4579 . 4580) (symbol 4574 . 4579) (punctuation 4572 . 4573) (symbol 4571 . 4572) (punctuation 4570 . 4571) (symbol 4563 . 4570) (punctuation 4562 . 4563) (punctuation 4561 . 4562) (symbol 4558 . 4561) (punctuation 4557 . 4558) (punctuation 4556 . 4557) (symbol 4547 . 4556) (punctuation 4546 . 4547) (punctuation 4545 . 4546) (symbol 4542 . 4545) (TYPENAME 4533 . 4541) (punctuation 4529 . 4530) (symbol 4528 . 4529) (punctuation 4526 . 4527) (symbol 4524 . 4525) (CLASS 4518 . 4523) (punctuation 4517 . 4518) (TEMPLATE 4508 . 4516) (semantic-list 4492 . 4494) (symbol 4484 . 4492) (punctuation 4483 . 4484) (punctuation 4368 . 4369) (symbol 4364 . 4367) (USING 4358 . 4363) (punctuation 4306 . 4307) (symbol 4302 . 4306) (punctuation 4301 . 4302) (punctuation 4300 . 4301) (symbol 4295 . 4300) (punctuation 4293 . 4294) (symbol 4291 . 4292) (CLASS 4285 . 4290) (punctuation 4283 . 4284) (symbol 4282 . 4283) (CLASS 4276 . 4281) (punctuation 4275 . 4276) (TEMPLATE 4266 . 4274) (punctuation 3492 . 3493) (punctuation 2623 . 2624) (punctuation 2622 . 2623) (punctuation 2621 . 2622) (symbol 2620 . 2621) (punctuation 2619 . 2620) (symbol 2608 . 2619) (TYPENAME 2599 . 2607) (punctuation 2595 . 2596) (symbol 2594 . 2595) (CLASS 2588 . 2593) (punctuation 2587 . 2588) (TEMPLATE 2578 . 2586) (punctuation 2549 . 2550) (punctuation 2548 . 2549) (punctuation 2547 . 2548) (symbol 2546 . 2547) (punctuation 2545 . 2546) (symbol 2534 . 2545) (TYPENAME 2525 . 2533) (punctuation 2521 . 2522) (symbol 2520 . 2521) (CLASS 2514 . 2519) (punctuation 2513 . 2514) (TEMPLATE 2504 . 2512) (punctuation 2173 . 2174) (punctuation 1977 . 1978) (punctuation 1077 . 1078) (DEFAULT 1070 . 1077) (punctuation 1068 . 1069) (semantic-list 1065 . 1067) (symbol 1053 . 1065) (punctuation 1052 . 1053) (VIRTUAL 1044 . 1051) (punctuation 860 . 861) (DEFAULT 853 . 860) (punctuation 851 . 852) (semantic-list 848 . 850) (symbol 833 . 848) (punctuation 832 . 833) (VIRTUAL 824 . 831) (symbol 318 . 322) (symbol 311 . 317) (punctuation 310 . 311)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("wangle/channel/Pipeline.h" include (:system-flag t) nil [310 346])
+            ("folly::WriteFlags" using (:type ("folly::WriteFlags" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [348 372])
+            ("wangle" type
+               (:members 
+                  ( ("setWriteFlags" function
+                       (:parent "PipelineBase"
+                        :arguments 
+                          ( ("flags" variable (:type ("WriteFlags" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [427 444]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [394 471])
+                    ("getWriteFlags" function
+                       (:parent "PipelineBase"
+                        :type ("WriteFlags" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [473 539])
+                    ("setReadBufferSettings" function
+                       (:parent "PipelineBase"
+                        :arguments 
+                          ( ("minAvailable" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [587 609])
+                            ("allocationSize" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [614 638]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [541 712])
+                    ("getReadBufferSettings" function
+                       (:parent "PipelineBase"
+                        :type ("std::pair" type
+                             (:template-specifier 
+                                ( ("uint64_t" type nil nil nil)
+                                  ("uint64_t" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol namespacesubparts) [714 815])
+                    ("setTransportInfo" function
+                       (:parent "PipelineBase"
+                        :arguments 
+                          ( ("tInfo" variable (:type ("std::shared_ptr" type
+                                 (:template-specifier 
+                                    ( ("TransportInfo" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol arg-sub-list) [853 890]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [817 920])
+                    ("getTransportInfo" function
+                       (:parent "PipelineBase"
+                        :type ("std::shared_ptr" type
+                             (:template-specifier 
+                                ( ("TransportInfo" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol namespacesubparts) [922 1014])
+                    ("removeAt" function
+                       (:parent "PipelineBase"
+                        :typemodifiers ("typename")
+                        :arguments 
+                          ( ("it" variable
+                               (:reference 1
+                                :typemodifiers ("typename")
+                                :constant-flag t
+                                :type ("PipelineBase::ContextIterator" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1083 1132]))                          
+                        :type ("PipelineBase::ContextIterator" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [1016 1615])
+                    ("removeFront" function
+                       (:parent "PipelineBase"
+                        :type ("PipelineBase" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [1617 1792])
+                    ("removeBack" function
+                       (:parent "PipelineBase"
+                        :type ("PipelineBase" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [1794 1968])
+                    ("detachHandlers" function
+                       (:parent "PipelineBase"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1970 2101])
+                    ("numHandlers" function
+                       (:methodconst-flag t
+                        :parent "PipelineBase"
+                        :type ("size_t" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [2103 2170]))                  
+                :type "namespace")
+                nil [374 2173]))          
+      :file "Pipeline.cpp"
+      :pointmax 2194
+      :fsize 2193
+      :lastmodtime '(22900 7662 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("glog/logging.h" include (:system-flag t) nil [324 349])
+            ("wangle" type
+               (:members 
+                  ( ("Pipeline" function
+                       (:template 
+                          ( ("R" type (:type "class") nil nil)
+                            ("W" type (:type "class") nil nil))                          
+                        :type ("Pipeline" type (:type "class") nil nil)
+                        :parent "Pipeline"
+                        :constructor-flag t)
+                        (reparse-symbol namespacesubparts) [371 447])
+                    ("Pipeline" function
+                       (:template 
+                          ( ("R" type (:type "class") nil nil)
+                            ("W" type (:type "class") nil nil))                          
+                        :type ("Pipeline" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("isStatic" variable (:type "bool") (reparse-symbol arg-sub-list) [502 516]))                          
+                        :parent "Pipeline"
+                        :constructor-flag t)
+                        (reparse-symbol namespacesubparts) [449 562])
+                    ("Pipeline" function
+                       (:template 
+                          ( ("R" type (:type "class") nil nil)
+                            ("W" type (:type "class") nil nil))                          
+                        :type "void"
+                        :parent "Pipeline"
+                        :destructor-flag t)
+                        (reparse-symbol namespacesubparts) [564 669])
+                    ("addBack" function
+                       (:template 
+                          ( ("H" type (:type "class") nil nil))                          
+                        :type ("PipelineBase" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("handler" variable (:type ("std::shared_ptr" type
+                                 (:template-specifier 
+                                    ( ("H" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol arg-sub-list) [726 753]))                          
+                        :parent "PipelineBase")
+                        (reparse-symbol namespacesubparts) [671 913])
+                    ("addBack" function
+                       (:template 
+                          ( ("H" type (:type "class") nil nil))                          
+                        :type ("PipelineBase" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :type ("H" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [970 973])
+                            ("" variable (:type ("handler" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [974 982]))                          
+                        :parent "PipelineBase")
+                        (reparse-symbol namespacesubparts) [915 1051])
+                    ("addBack" function
+                       (:template 
+                          ( ("H" type (:type "class") nil nil))                          
+                        :type ("PipelineBase" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("handler" variable
+                               (:pointer 1
+                                :type ("H" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1108 1119]))                          
+                        :parent "PipelineBase")
+                        (reparse-symbol namespacesubparts) [1053 1180])
+                    ("addFront" function
+                       (:template 
+                          ( ("H" type (:type "class") nil nil))                          
+                        :type ("PipelineBase" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("handler" variable (:type ("std::shared_ptr" type
+                                 (:template-specifier 
+                                    ( ("H" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol arg-sub-list) [1238 1265]))                          
+                        :parent "PipelineBase")
+                        (reparse-symbol namespacesubparts) [1182 1424])
+                    ("addFront" function
+                       (:template 
+                          ( ("H" type (:type "class") nil nil))                          
+                        :type ("PipelineBase" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :type ("H" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1482 1485])
+                            ("" variable (:type ("handler" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1486 1494]))                          
+                        :parent "PipelineBase")
+                        (reparse-symbol namespacesubparts) [1426 1564])
+                    ("addFront" function
+                       (:template 
+                          ( ("H" type (:type "class") nil nil))                          
+                        :type ("PipelineBase" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("handler" variable
+                               (:pointer 1
+                                :type ("H" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1622 1633]))                          
+                        :parent "PipelineBase")
+                        (reparse-symbol namespacesubparts) [1566 1695])
+                    ("removeHelper" function
+                       (:template 
+                          ( ("H" type (:type "class") nil nil))                          
+                        :type ("PipelineBase" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("handler" variable
+                               (:pointer 1
+                                :type ("H" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1757 1768])
+                            ("checkEqual" variable (:type "bool") (reparse-symbol arg-sub-list) [1769 1785]))                          
+                        :parent "PipelineBase")
+                        (reparse-symbol namespacesubparts) [1697 2226])
+                    ("remove" function
+                       (:template 
+                          ( ("H" type (:type "class") nil nil))                          
+                        :type ("PipelineBase" type (:type "class") nil nil)
+                        :parent "PipelineBase")
+                        (reparse-symbol namespacesubparts) [2228 2329])
+                    ("remove" function
+                       (:template 
+                          ( ("H" type (:type "class") nil nil))                          
+                        :type ("PipelineBase" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("handler" variable
+                               (:pointer 1
+                                :type ("H" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2385 2396]))                          
+                        :parent "PipelineBase")
+                        (reparse-symbol namespacesubparts) [2331 2441])
+                    ("getHandler" function
+                       (:template 
+                          ( ("H" type (:type "class") nil nil))                          
+                        :type ("H" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("i" variable (:type "int") (reparse-symbol arg-sub-list) [2490 2496]))                          
+                        :parent "PipelineBase"
+                        :pointer 1)
+                        (reparse-symbol namespacesubparts) [2443 2541])
+                    ("getHandler" function
+                       (:template 
+                          ( ("H" type (:type "class") nil nil))                          
+                        :type ("H" type (:type "class") nil nil)
+                        :parent "PipelineBase"
+                        :pointer 1)
+                        (reparse-symbol namespacesubparts) [2543 2669])
+                    ("getContext" function
+                       (:pointer 1
+                        :parent "PipelineBase"
+                        :arguments 
+                          ( ("i" variable (:type "int") (reparse-symbol arg-sub-list) [2746 2752]))                          
+                        :type ("type" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [2715 2859])
+                    ("getContext" function
+                       (:pointer 1
+                        :parent "PipelineBase"
+                        :type ("type" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [2905 3117])
+                    ("setOwner" function
+                       (:template 
+                          ( ("H" type (:type "class") nil nil))                          
+                        :type "bool"
+                        :arguments 
+                          ( ("handler" variable
+                               (:pointer 1
+                                :type ("H" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3166 3177]))                          
+                        :parent "PipelineBase")
+                        (reparse-symbol namespacesubparts) [3119 3432])
+                    ("addContextFront" function
+                       (:template 
+                          ( ("Context" type (:type "class") nil nil))                          
+                        :type "void"
+                        :arguments 
+                          ( ("ctx" variable
+                               (:pointer 1
+                                :type ("Context" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3494 3507]))                          
+                        :parent "PipelineBase")
+                        (reparse-symbol namespacesubparts) [3434 3577])
+                    ("addHelper" function
+                       (:template 
+                          ( ("Context" type (:type "class") nil nil))                          
+                        :type ("PipelineBase" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :type ("std::shared_ptr" type
+                                     (:template-specifier 
+                                        ( ("Context" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [3647 3673])
+                            ("" variable (:type ("ctx" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3674 3678])
+                            ("front" variable (:type "bool") (reparse-symbol arg-sub-list) [3683 3694]))                          
+                        :parent "PipelineBase")
+                        (reparse-symbol namespacesubparts) [3579 4080])
+                    ("detail" type
+                       (:members 
+                          ( ("logWarningIfNotUnit" function
+                               (:template 
+                                  ( ("T" type (:type "class") nil nil))                                  
+                                :type "void"
+                                :arguments 
+                                  ( ("warning" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4153 4180]))                                  
+                                :typemodifiers ("inline"))
+                                (reparse-symbol namespacesubparts) [4102 4211])
+                            ("logWarningIfNotUnit" function
+                               (:type "void"
+                                :arguments 
+                                  ( ("" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4270 4301]))                                  
+                                :typemodifiers ("inline")
+                                :template-specifier 
+                                  ( ("folly::Unit" type nil nil nil))                                  )
+                                (reparse-symbol namespacesubparts) [4213 4321]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [4082 4324])
+                    ("read" function
+                       (:parent "Pipeline"
+                        :arguments 
+                          ( ("msg" variable (:type ("R" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4472 4478]))                          
+                        :type ("type" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [4446 4616])
+                    ("readEOF" function
+                       (:parent "Pipeline"
+                        :type ("type" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [4728 4882])
+                    ("transportActive" function
+                       (:parent "Pipeline"
+                        :type ("type" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [4994 5087])
+                    ("transportInactive" function
+                       (:parent "Pipeline"
+                        :type ("type" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [5199 5296])
+                    ("readException" function
+                       (:parent "Pipeline"
+                        :arguments 
+                          ( ("e" variable (:type ("folly::exception_wrapper" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5443 5470]))                          
+                        :type ("type" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [5408 5627])
+                    ("write" function
+                       (:parent "Pipeline"
+                        :arguments 
+                          ( ("msg" variable (:type ("W" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5818 5824]))                          
+                        :type ("type" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [5791 5970])
+                    ("writeException" function
+                       (:parent "Pipeline"
+                        :arguments 
+                          ( ("e" variable (:type ("folly::exception_wrapper" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6172 6199]))                          
+                        :type ("type" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [6134 6362])
+                    ("close" function
+                       (:parent "Pipeline"
+                        :type ("type" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [6526 6680])
+                    ("finalize" function
+                       (:template 
+                          ( ("R" type (:type "class") nil nil)
+                            ("W" type (:type "class") nil nil))                          
+                        :type "void"
+                        :parent "Pipeline")
+                        (reparse-symbol namespacesubparts) [6749 7753]))                  
+                :type "namespace")
+                nil [351 7756]))          
+      :file "Pipeline-inl.h"
+      :pointmax 7777
+      :fsize 7776
+      :lastmodtime '(22900 7662 0 0)
+      :unmatched-syntax '((punctuation 6525 . 6526) (punctuation 6524 . 6525) (punctuation 6523 . 6524) (punctuation 6522 . 6523) (symbol 6518 . 6522) (punctuation 6517 . 6518) (punctuation 6516 . 6517) (symbol 6511 . 6516) (punctuation 6510 . 6511) (symbol 6504 . 6510) (punctuation 6503 . 6504) (punctuation 6502 . 6503) (symbol 6497 . 6502) (punctuation 6471 . 6472) (symbol 6466 . 6471) (punctuation 6465 . 6466) (punctuation 6464 . 6465) (punctuation 6463 . 6464) (symbol 6459 . 6463) (punctuation 6458 . 6459) (punctuation 6457 . 6458) (symbol 6452 . 6457) (punctuation 6450 . 6451) (symbol 6449 . 6450) (punctuation 6448 . 6449) (symbol 6441 . 6448) (punctuation 6440 . 6441) (punctuation 6439 . 6440) (symbol 6436 . 6439) (punctuation 6435 . 6436) (punctuation 6434 . 6435) (symbol 6425 . 6434) (punctuation 6424 . 6425) (punctuation 6423 . 6424) (symbol 6420 . 6423) (TYPENAME 6411 . 6419) (punctuation 6409 . 6410) (symbol 6408 . 6409) (CLASS 6402 . 6407) (punctuation 6401 . 6402) (TEMPLATE 6392 . 6400) (punctuation 6390 . 6391) (symbol 6389 . 6390) (CLASS 6383 . 6388) (punctuation 6381 . 6382) (symbol 6380 . 6381) (CLASS 6374 . 6379) (punctuation 6373 . 6374) (TEMPLATE 6364 . 6372) (punctuation 6133 . 6134) (punctuation 6132 . 6133) (punctuation 6131 . 6132) (punctuation 6130 . 6131) (symbol 6126 . 6130) (punctuation 6125 . 6126) (punctuation 6124 . 6125) (symbol 6119 . 6124) (punctuation 6118 . 6119) (symbol 6112 . 6118) (punctuation 6111 . 6112) (punctuation 6110 . 6111) (symbol 6105 . 6110) (punctuation 6079 . 6080) (symbol 6074 . 6079) (punctuation 6073 . 6074) (punctuation 6072 . 6073) (punctuation 6071 . 6072) (symbol 6067 . 6071) (punctuation 6066 . 6067) (punctuation 6065 . 6066) (symbol 6060 . 6065) (punctuation 6058 . 6059) (symbol 6057 . 6058) (punctuation 6056 . 6057) (symbol 6049 . 6056) (punctuation 6048 . 6049) (punctuation 6047 . 6048) (symbol 6044 . 6047) (punctuation 6043 . 6044) (punctuation 6042 . 6043) (symbol 6033 . 6042) (punctuation 6032 . 6033) (punctuation 6031 . 6032) (symbol 6028 . 6031) (TYPENAME 6019 . 6027) (punctuation 6017 . 6018) (symbol 6016 . 6017) (CLASS 6010 . 6015) (punctuation 6009 . 6010) (TEMPLATE 6000 . 6008) (punctuation 5998 . 5999) (symbol 5997 . 5998) (CLASS 5991 . 5996) (punctuation 5989 . 5990) (symbol 5988 . 5989) (CLASS 5982 . 5987) (punctuation 5981 . 5982) (TEMPLATE 5972 . 5980) (punctuation 5790 . 5791) (punctuation 5789 . 5790) (punctuation 5788 . 5789) (punctuation 5787 . 5788) (symbol 5783 . 5787) (punctuation 5782 . 5783) (punctuation 5781 . 5782) (symbol 5776 . 5781) (punctuation 5775 . 5776) (symbol 5769 . 5775) (punctuation 5768 . 5769) (punctuation 5767 . 5768) (symbol 5762 . 5767) (punctuation 5736 . 5737) (symbol 5731 . 5736) (punctuation 5730 . 5731) (punctuation 5729 . 5730) (punctuation 5728 . 5729) (symbol 5724 . 5728) (punctuation 5723 . 5724) (punctuation 5722 . 5723) (symbol 5717 . 5722) (punctuation 5715 . 5716) (symbol 5714 . 5715) (punctuation 5713 . 5714) (symbol 5706 . 5713) (punctuation 5705 . 5706) (punctuation 5704 . 5705) (symbol 5701 . 5704) (punctuation 5700 . 5701) (punctuation 5699 . 5700) (symbol 5690 . 5699) (punctuation 5689 . 5690) (punctuation 5688 . 5689) (symbol 5685 . 5688) (TYPENAME 5676 . 5684) (punctuation 5674 . 5675) (symbol 5673 . 5674) (CLASS 5667 . 5672) (punctuation 5666 . 5667) (TEMPLATE 5657 . 5665) (punctuation 5655 . 5656) (symbol 5654 . 5655) (CLASS 5648 . 5653) (punctuation 5646 . 5647) (symbol 5645 . 5646) (CLASS 5639 . 5644) (punctuation 5638 . 5639) (TEMPLATE 5629 . 5637) (punctuation 5407 . 5408) (punctuation 5406 . 5407) (punctuation 5405 . 5406) (symbol 5400 . 5405) (punctuation 5399 . 5400) (punctuation 5398 . 5399) (punctuation 5397 . 5398) (symbol 5393 . 5397) (punctuation 5392 . 5393) (punctuation 5391 . 5392) (symbol 5386 . 5391) (punctuation 5384 . 5385) (symbol 5383 . 5384) (punctuation 5382 . 5383) (symbol 5375 . 5382) (punctuation 5374 . 5375) (punctuation 5373 . 5374) (symbol 5370 . 5373) (punctuation 5369 . 5370) (punctuation 5368 . 5369) (symbol 5359 . 5368) (punctuation 5358 . 5359) (punctuation 5357 . 5358) (symbol 5354 . 5357) (TYPENAME 5345 . 5353) (punctuation 5343 . 5344) (symbol 5342 . 5343) (CLASS 5336 . 5341) (punctuation 5335 . 5336) (TEMPLATE 5326 . 5334) (punctuation 5324 . 5325) (symbol 5323 . 5324) (CLASS 5317 . 5322) (punctuation 5315 . 5316) (symbol 5314 . 5315) (CLASS 5308 . 5313) (punctuation 5307 . 5308) (TEMPLATE 5298 . 5306) (punctuation 5198 . 5199) (punctuation 5197 . 5198) (punctuation 5196 . 5197) (symbol 5191 . 5196) (punctuation 5190 . 5191) (punctuation 5189 . 5190) (punctuation 5188 . 5189) (symbol 5184 . 5188) (punctuation 5183 . 5184) (punctuation 5182 . 5183) (symbol 5177 . 5182) (punctuation 5175 . 5176) (symbol 5174 . 5175) (punctuation 5173 . 5174) (symbol 5166 . 5173) (punctuation 5165 . 5166) (punctuation 5164 . 5165) (symbol 5161 . 5164) (punctuation 5160 . 5161) (punctuation 5159 . 5160) (symbol 5150 . 5159) (punctuation 5149 . 5150) (punctuation 5148 . 5149) (symbol 5145 . 5148) (TYPENAME 5136 . 5144) (punctuation 5134 . 5135) (symbol 5133 . 5134) (CLASS 5127 . 5132) (punctuation 5126 . 5127) (TEMPLATE 5117 . 5125) (punctuation 5115 . 5116) (symbol 5114 . 5115) (CLASS 5108 . 5113) (punctuation 5106 . 5107) (symbol 5105 . 5106) (CLASS 5099 . 5104) (punctuation 5098 . 5099) (TEMPLATE 5089 . 5097) (punctuation 4993 . 4994) (punctuation 4992 . 4993) (punctuation 4991 . 4992) (symbol 4986 . 4991) (punctuation 4985 . 4986) (punctuation 4984 . 4985) (punctuation 4983 . 4984) (symbol 4979 . 4983) (punctuation 4978 . 4979) (punctuation 4977 . 4978) (symbol 4972 . 4977) (punctuation 4970 . 4971) (symbol 4969 . 4970) (punctuation 4968 . 4969) (symbol 4961 . 4968) (punctuation 4960 . 4961) (punctuation 4959 . 4960) (symbol 4956 . 4959) (punctuation 4955 . 4956) (punctuation 4954 . 4955) (symbol 4945 . 4954) (punctuation 4944 . 4945) (punctuation 4943 . 4944) (symbol 4940 . 4943) (TYPENAME 4931 . 4939) (punctuation 4929 . 4930) (symbol 4928 . 4929) (CLASS 4922 . 4927) (punctuation 4921 . 4922) (TEMPLATE 4912 . 4920) (punctuation 4910 . 4911) (symbol 4909 . 4910) (CLASS 4903 . 4908) (punctuation 4901 . 4902) (symbol 4900 . 4901) (CLASS 4894 . 4899) (punctuation 4893 . 4894) (TEMPLATE 4884 . 4892) (punctuation 4727 . 4728) (punctuation 4726 . 4727) (punctuation 4725 . 4726) (symbol 4720 . 4725) (punctuation 4719 . 4720) (punctuation 4718 . 4719) (punctuation 4717 . 4718) (symbol 4713 . 4717) (punctuation 4712 . 4713) (punctuation 4711 . 4712) (symbol 4706 . 4711) (punctuation 4704 . 4705) (symbol 4703 . 4704) (punctuation 4702 . 4703) (symbol 4695 . 4702) (punctuation 4694 . 4695) (punctuation 4693 . 4694) (symbol 4690 . 4693) (punctuation 4689 . 4690) (punctuation 4688 . 4689) (symbol 4679 . 4688) (punctuation 4678 . 4679) (punctuation 4677 . 4678) (symbol 4674 . 4677) (TYPENAME 4665 . 4673) (punctuation 4663 . 4664) (symbol 4662 . 4663) (CLASS 4656 . 4661) (punctuation 4655 . 4656) (TEMPLATE 4646 . 4654) (punctuation 4644 . 4645) (symbol 4643 . 4644) (CLASS 4637 . 4642) (punctuation 4635 . 4636) (symbol 4634 . 4635) (CLASS 4628 . 4633) (punctuation 4627 . 4628) (TEMPLATE 4618 . 4626) (punctuation 4445 . 4446) (punctuation 4444 . 4445) (punctuation 4443 . 4444) (symbol 4438 . 4443) (punctuation 4437 . 4438) (punctuation 4436 . 4437) (punctuation 4435 . 4436) (symbol 4431 . 4435) (punctuation 4430 . 4431) (punctuation 4429 . 4430) (symbol 4424 . 4429) (punctuation 4422 . 4423) (symbol 4421 . 4422) (punctuation 4420 . 4421) (symbol 4413 . 4420) (punctuation 4412 . 4413) (punctuation 4411 . 4412) (symbol 4408 . 4411) (punctuation 4407 . 4408) (punctuation 4406 . 4407) (symbol 4397 . 4406) (punctuation 4396 . 4397) (punctuation 4395 . 4396) (symbol 4392 . 4395) (TYPENAME 4383 . 4391) (punctuation 4381 . 4382) (symbol 4380 . 4381) (CLASS 4374 . 4379) (punctuation 4373 . 4374) (TEMPLATE 4364 . 4372) (punctuation 4362 . 4363) (symbol 4361 . 4362) (CLASS 4355 . 4360) (punctuation 4353 . 4354) (symbol 4352 . 4353) (CLASS 4346 . 4351) (punctuation 4345 . 4346) (TEMPLATE 4336 . 4344) (punctuation 3672 . 3673) (punctuation 2904 . 2905) (punctuation 2903 . 2904) (punctuation 2902 . 2903) (symbol 2901 . 2902) (punctuation 2900 . 2901) (symbol 2889 . 2900) (TYPENAME 2880 . 2888) (punctuation 2878 . 2879) (symbol 2877 . 2878) (CLASS 2871 . 2876) (punctuation 2870 . 2871) (TEMPLATE 2861 . 2869) (punctuation 2714 . 2715) (punctuation 2713 . 2714) (punctuation 2712 . 2713) (symbol 2711 . 2712) (punctuation 2710 . 2711) (symbol 2699 . 2710) (TYPENAME 2690 . 2698) (punctuation 2688 . 2689) (symbol 2687 . 2688) (CLASS 2681 . 2686) (punctuation 2680 . 2681) (TEMPLATE 2671 . 2679) (punctuation 1484 . 1485) (punctuation 972 . 973) (symbol 318 . 322) (symbol 311 . 317) (punctuation 310 . 311)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("folly/futures/Future.h" include (:system-flag t) nil [324 357])
+            ("wangle/channel/Pipeline.h" include (:system-flag t) nil [358 394])
+            ("folly/io/IOBuf.h" include (:system-flag t) nil [395 422])
+            ("folly/io/IOBufQueue.h" include (:system-flag t) nil [423 455])
+            ("wangle" type
+               (:members 
+                  ( ("HandlerBase" type
+                       (:template 
+                          ( ("Context" type (:type "class") nil nil))                          
+                        :type "class"
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [523 530])
+                            ("attachPipeline" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("" variable
+                                       (:pointer 1
+                                        :type ("Context" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [598 615]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [570 618])
+                            ("detachPipeline" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("" variable
+                                       (:pointer 1
+                                        :type ("Context" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [649 666]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [621 669])
+                            ("getContext" function
+                               (:pointer 1
+                                :type ("Context" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [673 791])
+                            ("private" label nil (reparse-symbol classsubparts) [794 802])
+                            ("PipelineContext" variable
+                               (:typemodifiers ("friend")
+                                :type "int")
+                                (reparse-symbol classsubparts) [805 828])
+                            ("attachCount_" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [831 856])
+                            ("ctx_" variable
+                               (:pointer 1
+                                :type ("Context" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [859 882]))                          )
+                        (reparse-symbol namespacesubparts) [477 885])
+                    ("Handler" type
+                       (:template 
+                          ( ("Rin" type (:type "class") nil nil)
+                            ("Rout" type (:type "class") nil nil)
+                            ("Win" type (:type "class") nil nil)
+                            ("Wout" type (:type "class") nil nil))                          
+                        :type "class"
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [1028 1035])
+                            ("HandlerDir::BOTH" variable (:type "int") (reparse-symbol classsubparts) [1068 1085])
+                            ("rin" type
+                               (:typedef ("Rin" type (:type "class") nil nil)
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [1089 1105])
+                            ("rout" type
+                               (:typedef ("Rout" type (:type "class") nil nil)
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [1108 1126])
+                            ("win" type
+                               (:typedef ("Win" type (:type "class") nil nil)
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [1129 1145])
+                            ("wout" type
+                               (:typedef ("Wout" type (:type "class") nil nil)
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [1148 1166])
+                            ("Context" type
+                               (:typedef ("HandlerContext" type
+                                     (:template-specifier 
+                                        ( ("Rout" type nil nil nil)
+                                          ("Wout" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil)
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [1169 1212])
+                            ("read" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("ctx" variable
+                                       (:pointer 1
+                                        :type ("Context" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1267 1280])
+                                    ("msg" variable (:type ("Rin" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1281 1289]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1249 1294])
+                            ("readEOF" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("ctx" variable
+                                       (:pointer 1
+                                        :type ("Context" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1318 1331]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1297 1361])
+                            ("readException" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("ctx" variable
+                                       (:pointer 1
+                                        :type ("Context" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1391 1404])
+                                    ("e" variable (:type ("folly::exception_wrapper" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1405 1432]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1364 1480])
+                            ("transportActive" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("ctx" variable
+                                       (:pointer 1
+                                        :type ("Context" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1512 1525]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1483 1563])
+                            ("transportInactive" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("ctx" variable
+                                       (:pointer 1
+                                        :type ("Context" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1597 1610]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1566 1650])
+                            ("write" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("ctx" variable
+                                       (:pointer 1
+                                        :type ("Context" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1695 1708])
+                                    ("msg" variable (:type ("Win" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1709 1717]))                                  
+                                :type ("folly::Future" type
+                                     (:template-specifier 
+                                        ( ("folly::Unit" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [1654 1722])
+                            ("writeException" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("ctx" variable
+                                       (:pointer 1
+                                        :type ("Context" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1775 1788])
+                                    ("e" variable (:type ("folly::exception_wrapper" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1840 1867]))                                  
+                                :type ("folly::Future" type
+                                     (:template-specifier 
+                                        ( ("folly::Unit" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [1725 1923])
+                            ("close" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("ctx" variable
+                                       (:pointer 1
+                                        :type ("Context" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1967 1980]))                                  
+                                :type ("folly::Future" type
+                                     (:template-specifier 
+                                        ( ("folly::Unit" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [1926 2015]))                          
+                        :superclasses 
+                          ( ("HandlerBase" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          )
+                        (reparse-symbol namespacesubparts) [887 3047])
+                    ("InboundHandler" type
+                       (:template 
+                          ( ("Rin" type (:type "class") nil nil)
+                            ("Rout" type (:type "class") nil nil))                          
+                        :type "class"
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [3162 3169])
+                            ("HandlerDir::IN" variable (:type "int") (reparse-symbol classsubparts) [3202 3217])
+                            ("rin" type
+                               (:typedef ("Rin" type (:type "class") nil nil)
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [3221 3237])
+                            ("rout" type
+                               (:typedef ("Rout" type (:type "class") nil nil)
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [3240 3258])
+                            ("win" type
+                               (:typedef ("folly::Unit" type (:type "class") nil nil)
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [3261 3285])
+                            ("wout" type
+                               (:typedef ("folly::Unit" type (:type "class") nil nil)
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [3288 3313])
+                            ("Context" type
+                               (:typedef ("InboundHandlerContext" type
+                                     (:template-specifier 
+                                        ( ("Rout" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil)
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [3316 3360])
+                            ("read" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("ctx" variable
+                                       (:pointer 1
+                                        :type ("Context" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3422 3435])
+                                    ("msg" variable (:type ("Rin" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3436 3444]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [3404 3449])
+                            ("readEOF" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("ctx" variable
+                                       (:pointer 1
+                                        :type ("Context" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3473 3486]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [3452 3516])
+                            ("readException" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("ctx" variable
+                                       (:pointer 1
+                                        :type ("Context" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3546 3559])
+                                    ("e" variable (:type ("folly::exception_wrapper" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3560 3587]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [3519 3635])
+                            ("transportActive" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("ctx" variable
+                                       (:pointer 1
+                                        :type ("Context" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3667 3680]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [3638 3718])
+                            ("transportInactive" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("ctx" variable
+                                       (:pointer 1
+                                        :type ("Context" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3752 3765]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [3721 3805]))                          
+                        :superclasses 
+                          ( ("HandlerBase" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          )
+                        (reparse-symbol namespacesubparts) [3049 3808])
+                    ("OutboundHandler" type
+                       (:template 
+                          ( ("Win" type (:type "class") nil nil)
+                            ("Wout" type (:type "class") nil nil))                          
+                        :type "class"
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [3925 3932])
+                            ("HandlerDir::OUT" variable (:type "int") (reparse-symbol classsubparts) [3965 3981])
+                            ("rin" type
+                               (:typedef ("folly::Unit" type (:type "class") nil nil)
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [3985 4009])
+                            ("rout" type
+                               (:typedef ("folly::Unit" type (:type "class") nil nil)
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [4012 4037])
+                            ("win" type
+                               (:typedef ("Win" type (:type "class") nil nil)
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [4040 4056])
+                            ("wout" type
+                               (:typedef ("Wout" type (:type "class") nil nil)
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [4059 4077])
+                            ("Context" type
+                               (:typedef ("OutboundHandlerContext" type
+                                     (:template-specifier 
+                                        ( ("Wout" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil)
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [4080 4125])
+                            ("write" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("ctx" variable
+                                       (:pointer 1
+                                        :type ("Context" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4211 4224])
+                                    ("msg" variable (:type ("Win" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4225 4233]))                                  
+                                :type ("folly::Future" type
+                                     (:template-specifier 
+                                        ( ("folly::Unit" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [4170 4238])
+                            ("writeException" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("ctx" variable
+                                       (:pointer 1
+                                        :type ("Context" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4298 4311])
+                                    ("e" variable (:type ("folly::exception_wrapper" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4312 4339]))                                  
+                                :type ("folly::Future" type
+                                     (:template-specifier 
+                                        ( ("folly::Unit" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [4241 4395])
+                            ("close" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("ctx" variable
+                                       (:pointer 1
+                                        :type ("Context" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4439 4452]))                                  
+                                :type ("folly::Future" type
+                                     (:template-specifier 
+                                        ( ("folly::Unit" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [4398 4487]))                          
+                        :superclasses 
+                          ( ("HandlerBase" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          )
+                        (reparse-symbol namespacesubparts) [3810 4490])
+                    ("HandlerAdapter" type
+                       (:template 
+                          ( ("R" type (:type "class") nil nil)
+                            ("W" type (:type "class") nil nil))                          
+                        :type "class"
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [4577 4584])
+                            ("Context" variable (:type ("Context" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4625 4641]))                          
+                        :superclasses 
+                          ( ("Handler" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          )
+                        (reparse-symbol namespacesubparts) [4492 4855])
+                    ("BytesToBytesHandler" type
+                       (:typedef ("HandlerAdapter" type
+                             (:template-specifier 
+                                ( ("folly::IOBufQueue" type (:reference 1) nil nil)
+                                  ("std::unique_ptr" type (:template-specifier 
+                                    ( ("folly::IOBuf" type nil nil nil))                                    ) nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :type "typedef")
+                        (reparse-symbol namespacesubparts) [4857 4951])
+                    ("InboundBytesToBytesHandler" type
+                       (:typedef ("InboundHandler" type
+                             (:template-specifier 
+                                ( ("folly::IOBufQueue" type (:reference 1) nil nil)
+                                  ("std::unique_ptr" type (:template-specifier 
+                                    ( ("folly::IOBuf" type nil nil nil))                                    ) nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :type "typedef")
+                        (reparse-symbol namespacesubparts) [4953 5054])
+                    ("OutboundBytesToBytesHandler" type
+                       (:typedef ("OutboundHandler" type
+                             (:template-specifier 
+                                ( ("std::unique_ptr" type (:template-specifier 
+                                    ( ("folly::IOBuf" type nil nil nil))                                    ) nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :type "typedef")
+                        (reparse-symbol namespacesubparts) [5056 5139]))                  
+                :type "namespace")
+                nil [457 5142]))          
+      :file "Handler.h"
+      :pointmax 5163
+      :fsize 5162
+      :lastmodtime '(22900 7662 0 0)
+      :unmatched-syntax '((semantic-list 4798 . 4852) (symbol 4789 . 4797) (semantic-list 4767 . 4788) (symbol 4762 . 4767) (punctuation 4760 . 4761) (symbol 4756 . 4760) (punctuation 4755 . 4756) (punctuation 4754 . 4755) (symbol 4749 . 4754) (punctuation 4748 . 4749) (symbol 4742 . 4748) (punctuation 4741 . 4742) (punctuation 4740 . 4741) (symbol 4735 . 4740) (semantic-list 4685 . 4731) (symbol 4676 . 4684) (semantic-list 4654 . 4675) (symbol 4650 . 4654) (VOID 4645 . 4649) (punctuation 4624 . 4625) (punctuation 4623 . 4624) (punctuation 4622 . 4623) (symbol 4621 . 4622) (punctuation 4619 . 4620) (symbol 4618 . 4619) (punctuation 4616 . 4617) (symbol 4615 . 4616) (punctuation 4613 . 4614) (symbol 4612 . 4613) (punctuation 4611 . 4612) (symbol 4604 . 4611) (TYPENAME 4595 . 4603) (TYPEDEF 4587 . 4594) (punctuation 4165 . 4166) (DEFAULT 4158 . 4165) (punctuation 4156 . 4157) (symbol 4147 . 4155) (semantic-list 4144 . 4146) (symbol 4129 . 4144) (punctuation 4128 . 4129) (punctuation 3963 . 3964) (symbol 3959 . 3962) (symbol 3948 . 3958) (CONST 3942 . 3947) (STATIC 3935 . 3941) (punctuation 3399 . 3400) (DEFAULT 3392 . 3399) (punctuation 3390 . 3391) (symbol 3381 . 3389) (semantic-list 3378 . 3380) (symbol 3364 . 3378) (punctuation 3363 . 3364) (punctuation 3200 . 3201) (symbol 3196 . 3199) (symbol 3185 . 3195) (CONST 3179 . 3184) (STATIC 3172 . 3178) (punctuation 1244 . 1245) (DEFAULT 1237 . 1244) (punctuation 1235 . 1236) (symbol 1226 . 1234) (semantic-list 1223 . 1225) (symbol 1216 . 1223) (punctuation 1215 . 1216) (punctuation 1066 . 1067) (symbol 1062 . 1065) (symbol 1051 . 1061) (CONST 1045 . 1050) (STATIC 1038 . 1044) (punctuation 565 . 566) (DEFAULT 558 . 565) (punctuation 556 . 557) (semantic-list 553 . 555) (symbol 542 . 553) (punctuation 541 . 542) (VIRTUAL 533 . 540) (symbol 318 . 322) (symbol 311 . 317) (punctuation 310 . 311)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("wangle" type
+               (:members 
+                  ( ("PipelineContext" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [369 376])
+                            ("attachPipeline" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [420 454])
+                            ("detachPipeline" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [457 491])
+                            ("attachContext" function
+                               (:template 
+                                  ( ("H" type (:type "class") nil nil)
+                                    ("HandlerContext" type (:type "class") nil nil))                                  
+                                :type "void"
+                                :arguments 
+                                  ( ("handler" variable
+                                       (:pointer 1
+                                        :type ("H" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [557 568])
+                                    ("ctx" variable
+                                       (:pointer 1
+                                        :type ("HandlerContext" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [569 589]))                                  )
+                                (reparse-symbol classsubparts) [495 712])
+                            ("setNextIn" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("ctx" variable
+                                       (:pointer 1
+                                        :type ("PipelineContext" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [739 760]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [716 765])
+                            ("setNextOut" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("ctx" variable
+                                       (:pointer 1
+                                        :type ("PipelineContext" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [792 813]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [768 818])
+                            ("getDirection" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :type ("HandlerDir" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [822 860]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [344 863])
+                    ("InboundLink" type
+                       (:template 
+                          ( ("In" type (:type "class") nil nil))                          
+                        :type "class"
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [906 913])
+                            ("read" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("msg" variable (:type ("In" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [970 977]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [952 982])
+                            ("readEOF" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [985 1012])
+                            ("readException" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("e" variable (:type ("folly::exception_wrapper" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1042 1069]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1015 1074])
+                            ("transportActive" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [1077 1112])
+                            ("transportInactive" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [1115 1152]))                          )
+                        (reparse-symbol namespacesubparts) [865 1155])
+                    ("OutboundLink" type
+                       (:template 
+                          ( ("Out" type (:type "class") nil nil))                          
+                        :type "class"
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [1200 1207])
+                            ("write" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("msg" variable (:type ("Out" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1288 1296]))                                  
+                                :type ("folly::Future" type
+                                     (:template-specifier 
+                                        ( ("folly::Unit" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [1247 1301])
+                            ("writeException" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("e" variable (:type ("folly::exception_wrapper" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1361 1388]))                                  
+                                :type ("folly::Future" type
+                                     (:template-specifier 
+                                        ( ("folly::Unit" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [1304 1393])
+                            ("close" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :type ("folly::Future" type
+                                     (:template-specifier 
+                                        ( ("folly::Unit" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [1396 1443]))                          )
+                        (reparse-symbol namespacesubparts) [1157 1446])
+                    ("ContextImplBase" type
+                       (:template 
+                          ( ("H" type (:type "class") nil nil)
+                            ("Context" type (:type "class") nil nil))                          
+                        :type "class"
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [1532 1539])
+                            ("getHandler" function
+                               (:pointer 1
+                                :type ("H" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1584 1632])
+                            ("initialize" function
+                               (:arguments 
+                                  ( ("pipeline" variable (:type ("std::weak_ptr" type
+                                         (:template-specifier 
+                                            ( ("PipelineBase" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol arg-sub-list) [1659 1696])
+                                    ("handler" variable (:type ("std::shared_ptr" type
+                                         (:template-specifier 
+                                            ( ("H" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol arg-sub-list) [1703 1730]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1636 1843])
+                            ("protected" label nil (reparse-symbol classsubparts) [2969 2979])
+                            ("impl_" variable
+                               (:pointer 1
+                                :type ("Context" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2982 2997])
+                            ("pipelineWeak_" variable (:type ("std::weak_ptr" type
+                                 (:template-specifier 
+                                    ( ("PipelineBase" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [3000 3042])
+                            ("pipelineRaw_" variable
+                               (:pointer 1
+                                :type ("PipelineBase" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3045 3072])
+                            ("handler_" variable (:type ("std::shared_ptr" type
+                                 (:template-specifier 
+                                    ( ("H" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [3075 3103])
+                            ("nextIn_" variable
+                               (:pointer 1
+                                :type "int")
+                                (reparse-symbol classsubparts) [3135 3154])
+                            ("nextOut_" variable
+                               (:pointer 1
+                                :type "int")
+                                (reparse-symbol classsubparts) [3187 3207])
+                            ("private" label nil (reparse-symbol classsubparts) [3210 3218])
+                            ("attached_" variable (:type "bool") (reparse-symbol classsubparts) [3221 3243]))                          
+                        :superclasses 
+                          ( ("PipelineContext" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          )
+                        (reparse-symbol namespacesubparts) [1448 3246])
+                    ("ContextType" type
+                       (:template 
+                          ( ("Handler" type (:type "class") nil nil))                          
+                        :type "struct"
+                        :members 
+                          ( ("type" variable (:type ("type" type (:type "class") nil nil)) (reparse-symbol classsubparts) [13399 13411]))                          )
+                        (reparse-symbol namespacesubparts) [13099 13414]))                  
+                :type "namespace")
+                nil [324 13417]))          
+      :file "HandlerContext-inl.h"
+      :pointmax 13438
+      :fsize 13437
+      :lastmodtime '(22900 7662 0 0)
+      :unmatched-syntax '((punctuation 13398 . 13399) (punctuation 13397 . 13398) (punctuation 13396 . 13397) (symbol 13392 . 13396) (punctuation 13391 . 13392) (punctuation 13390 . 13391) (punctuation 13389 . 13390) (punctuation 13383 . 13384) (symbol 13376 . 13383) (punctuation 13375 . 13376) (symbol 13356 . 13375) (punctuation 13348 . 13349) (punctuation 13347 . 13348) (symbol 13340 . 13347) (punctuation 13339 . 13340) (symbol 13321 . 13339) (punctuation 13313 . 13314) (symbol 13311 . 13313) (punctuation 13310 . 13311) (punctuation 13309 . 13310) (symbol 13299 . 13309) (punctuation 13297 . 13298) (punctuation 13296 . 13297) (symbol 13292 . 13295) (punctuation 13291 . 13292) (punctuation 13290 . 13291) (symbol 13283 . 13290) (punctuation 13275 . 13276) (symbol 13264 . 13275) (punctuation 13263 . 13264) (punctuation 13262 . 13263) (symbol 13259 . 13262) (TYPENAME 13250 . 13258) (punctuation 13244 . 13245) (punctuation 13243 . 13244) (symbol 13236 . 13243) (punctuation 13235 . 13236) (symbol 13224 . 13235) (punctuation 13218 . 13219) (symbol 13214 . 13218) (punctuation 13213 . 13214) (punctuation 13212 . 13213) (symbol 13202 . 13212) (punctuation 13200 . 13201) (punctuation 13199 . 13200) (symbol 13195 . 13198) (punctuation 13194 . 13195) (punctuation 13193 . 13194) (symbol 13186 . 13193) (punctuation 13180 . 13181) (symbol 13169 . 13180) (punctuation 13168 . 13169) (punctuation 13167 . 13168) (symbol 13164 . 13167) (TYPENAME 13155 . 13163) (TYPEDEF 13147 . 13154) (punctuation 13096 . 13097) (semantic-list 10913 . 13096) (punctuation 10911 . 10912) (punctuation 10910 . 10911) (symbol 10906 . 10910) (punctuation 10905 . 10906) (punctuation 10904 . 10905) (symbol 10903 . 10904) (TYPENAME 10894 . 10902) (punctuation 10893 . 10894) (symbol 10871 . 10893) (punctuation 10869 . 10870) (symbol 10868 . 10869) (punctuation 10867 . 10868) (symbol 10852 . 10867) (PUBLIC 10845 . 10851) (punctuation 10839 . 10840) (punctuation 10838 . 10839) (symbol 10835 . 10838) (punctuation 10834 . 10835) (punctuation 10833 . 10834) (symbol 10832 . 10833) (TYPENAME 10823 . 10831) (punctuation 10822 . 10823) (symbol 10810 . 10822) (PUBLIC 10803 . 10809) (punctuation 10797 . 10798) (punctuation 10796 . 10797) (symbol 10792 . 10796) (punctuation 10791 . 10792) (punctuation 10790 . 10791) (symbol 10789 . 10790) (TYPENAME 10780 . 10788) (punctuation 10779 . 10780) (symbol 10757 . 10779) (PUBLIC 10750 . 10756) (punctuation 10748 . 10749) (symbol 10726 . 10745) (CLASS 10720 . 10725) (punctuation 10718 . 10719) (symbol 10717 . 10718) (CLASS 10711 . 10716) (punctuation 10710 . 10711) (TEMPLATE 10701 . 10709) (punctuation 10698 . 10699) (semantic-list 8220 . 10698) (punctuation 8218 . 8219) (punctuation 8217 . 8218) (symbol 8213 . 8217) (punctuation 8212 . 8213) (punctuation 8211 . 8212) (symbol 8210 . 8211) (TYPENAME 8201 . 8209) (punctuation 8200 . 8201) (symbol 8179 . 8200) (punctuation 8177 . 8178) (symbol 8176 . 8177) (punctuation 8175 . 8176) (symbol 8160 . 8175) (PUBLIC 8153 . 8159) (punctuation 8147 . 8148) (punctuation 8146 . 8147) (symbol 8143 . 8146) (punctuation 8142 . 8143) (punctuation 8141 . 8142) (symbol 8140 . 8141) (TYPENAME 8131 . 8139) (punctuation 8130 . 8131) (symbol 8119 . 8130) (PUBLIC 8112 . 8118) (punctuation 8106 . 8107) (punctuation 8105 . 8106) (symbol 8101 . 8105) (punctuation 8100 . 8101) (punctuation 8099 . 8100) (symbol 8098 . 8099) (TYPENAME 8089 . 8097) (punctuation 8088 . 8089) (symbol 8067 . 8088) (PUBLIC 8060 . 8066) (punctuation 8058 . 8059) (symbol 8037 . 8055) (CLASS 8031 . 8036) (punctuation 8029 . 8030) (symbol 8028 . 8029) (CLASS 8022 . 8027) (punctuation 8021 . 8022) (TEMPLATE 8012 . 8020) (punctuation 8009 . 8010) (semantic-list 3584 . 8009) (punctuation 3582 . 3583) (punctuation 3581 . 3582) (symbol 3577 . 3581) (punctuation 3576 . 3577) (punctuation 3575 . 3576) (symbol 3574 . 3575) (TYPENAME 3565 . 3573) (punctuation 3518 . 3519) (symbol 3514 . 3518) (punctuation 3513 . 3514) (punctuation 3512 . 3513) (symbol 3511 . 3512) (TYPENAME 3502 . 3510) (punctuation 3501 . 3502) (symbol 3487 . 3501) (punctuation 3485 . 3486) (symbol 3484 . 3485) (punctuation 3483 . 3484) (symbol 3468 . 3483) (PUBLIC 3461 . 3467) (punctuation 3455 . 3456) (punctuation 3454 . 3455) (symbol 3451 . 3454) (punctuation 3450 . 3451) (punctuation 3449 . 3450) (symbol 3448 . 3449) (TYPENAME 3439 . 3447) (punctuation 3438 . 3439) (symbol 3426 . 3438) (PUBLIC 3419 . 3425) (punctuation 3413 . 3414) (punctuation 3412 . 3413) (symbol 3409 . 3412) (punctuation 3408 . 3409) (punctuation 3407 . 3408) (symbol 3406 . 3407) (TYPENAME 3397 . 3405) (punctuation 3396 . 3397) (symbol 3385 . 3396) (PUBLIC 3378 . 3384) (punctuation 3372 . 3373) (punctuation 3371 . 3372) (symbol 3367 . 3371) (punctuation 3366 . 3367) (punctuation 3365 . 3366) (symbol 3364 . 3365) (TYPENAME 3355 . 3363) (punctuation 3327 . 3328) (symbol 3323 . 3327) (punctuation 3322 . 3323) (punctuation 3321 . 3322) (symbol 3320 . 3321) (TYPENAME 3311 . 3319) (punctuation 3310 . 3311) (symbol 3296 . 3310) (PUBLIC 3289 . 3295) (punctuation 3287 . 3288) (symbol 3273 . 3284) (CLASS 3267 . 3272) (punctuation 3265 . 3266) (symbol 3264 . 3265) (CLASS 3258 . 3263) (punctuation 3257 . 3258) (TEMPLATE 3248 . 3256) (punctuation 3186 . 3187) (symbol 3182 . 3186) (punctuation 3181 . 3182) (punctuation 3180 . 3181) (symbol 3179 . 3180) (TYPENAME 3170 . 3178) (punctuation 3169 . 3170) (symbol 3157 . 3169) (punctuation 3134 . 3135) (symbol 3130 . 3134) (punctuation 3129 . 3130) (punctuation 3128 . 3129) (symbol 3127 . 3128) (TYPENAME 3118 . 3126) (punctuation 3117 . 3118) (symbol 3106 . 3117) (semantic-list 2942 . 2966) (symbol 2933 . 2941) (semantic-list 2930 . 2932) (symbol 2918 . 2930) (symbol 2907 . 2917) (semantic-list 2576 . 2903) (symbol 2567 . 2575) (semantic-list 2544 . 2566) (symbol 2534 . 2544) (VOID 2529 . 2533) (semantic-list 2205 . 2525) (symbol 2196 . 2204) (semantic-list 2173 . 2195) (symbol 2164 . 2173) (VOID 2159 . 2163) (semantic-list 2090 . 2155) (symbol 2081 . 2089) (semantic-list 2078 . 2080) (symbol 2064 . 2078) (VOID 2059 . 2063) (semantic-list 1909 . 2055) (symbol 1900 . 1908) (semantic-list 1897 . 1899) (symbol 1883 . 1897) (VOID 1878 . 1882) (punctuation 1579 . 1580) (DEFAULT 1572 . 1579) (punctuation 1570 . 1571) (symbol 1561 . 1569) (semantic-list 1558 . 1560) (symbol 1543 . 1558) (punctuation 1542 . 1543) (punctuation 1243 . 1244) (DEFAULT 1236 . 1243) (punctuation 1234 . 1235) (semantic-list 1231 . 1233) (symbol 1219 . 1231) (punctuation 1218 . 1219) (VIRTUAL 1210 . 1217) (punctuation 948 . 949) (DEFAULT 941 . 948) (punctuation 939 . 940) (semantic-list 936 . 938) (symbol 925 . 936) (punctuation 924 . 925) (VIRTUAL 916 . 923) (punctuation 415 . 416) (DEFAULT 408 . 415) (punctuation 406 . 407) (semantic-list 403 . 405) (symbol 388 . 403) (punctuation 387 . 388) (VIRTUAL 379 . 386) (symbol 318 . 322) (symbol 311 . 317) (punctuation 310 . 311))))
+  :file "!Users!ric!Downloads!trunk!thirdparty!wangle!wangle!channel!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

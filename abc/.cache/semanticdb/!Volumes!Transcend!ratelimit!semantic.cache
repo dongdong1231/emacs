@@ -1,0 +1,782 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("RATELIMIT_RATELIMITHANDLER_H_" variable (:constant-flag t) nil [47 76])
+            ("memory" include (:system-flag t) nil [78 95])
+            ("mutex" include (:system-flag t) nil [96 112])
+            ("string" include (:system-flag t) nil [113 130])
+            ("unordered_map" include (:system-flag t) nil [131 155])
+            ("utility" include (:system-flag t) nil [156 174])
+            ("vector" include (:system-flag t) nil [175 192])
+            ("codec/RedisValue.h" include nil nil [194 223])
+            ("pipeline/RedisHandler.h" include nil nil [224 258])
+            ("ratelimit/RateLimitCompactionFilter.h" include nil nil [259 307])
+            ("rocksdb/db.h" include nil nil [308 331])
+            ("rocksdb/slice.h" include nil nil [332 358])
+            ("ratelimit" type
+               (:members 
+                  ( ("RateLimitHandler" type
+                       (:superclasses 
+                          ( ("pipeline::RedisHandler" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [441 448])
+                            ("codec::RedisValue::IntType" variable (:type "int") (reparse-symbol classsubparts) [472 499])
+                            ("KeyParams" type
+                               (:members 
+                                  ( ("maxAmount" variable (:type ("RedisIntType" type (:type "class") nil nil)) (reparse-symbol classsubparts) [592 615])
+                                    ("refillAmount" variable (:type ("RedisIntType" type (:type "class") nil nil)) (reparse-symbol classsubparts) [620 646])
+                                    ("refillTimeMs" variable (:type ("RedisIntType" type (:type "class") nil nil)) (reparse-symbol classsubparts) [651 677]))                                  
+                                :type "struct")
+                                (reparse-symbol classsubparts) [569 682])
+                            ("static_assert" function
+                               (:prototype-flag t
+                                :type "int")
+                                (reparse-symbol classsubparts) [685 788])
+                            ("ValueParams" type
+                               (:members 
+                                  ( ("amount" variable (:type ("RedisIntType" type (:type "class") nil nil)) (reparse-symbol classsubparts) [858 878])
+                                    ("lastRefilledAtMs" variable (:type ("RedisIntType" type (:type "class") nil nil)) (reparse-symbol classsubparts) [883 913])
+                                    ("lastReducedAtMs" variable (:type ("RedisIntType" type (:type "class") nil nil)) (reparse-symbol classsubparts) [918 947]))                                  
+                                :type "struct")
+                                (reparse-symbol classsubparts) [833 952])
+                            ("static_assert" function
+                               (:prototype-flag t
+                                :type "int")
+                                (reparse-symbol classsubparts) [955 1062])
+                            ("SessionParams" type
+                               (:members 
+                                  ( ("sessionStartedAtMs" variable (:type ("RedisIntType" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1875 1907]))                                  
+                                :type "struct")
+                                (reparse-symbol classsubparts) [1848 1912])
+                            ("static_assert" function
+                               (:prototype-flag t
+                                :type "int")
+                                (reparse-symbol classsubparts) [1915 2026])
+                            ("RateLimitArgs" type
+                               (:members 
+                                  ( ("maxAmount" variable (:type ("RedisIntType" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2090 2113])
+                                    ("refillTimeMs" variable (:type ("RedisIntType" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2118 2144])
+                                    ("refillAmount" variable (:type ("RedisIntType" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2149 2175])
+                                    ("tokenAmount" variable (:type ("RedisIntType" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2180 2205])
+                                    ("clientTimeMs" variable (:type ("RedisIntType" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2210 2236]))                                  
+                                :type "struct")
+                                (reparse-symbol classsubparts) [2063 2241])
+                            ("static_assert" function
+                               (:prototype-flag t
+                                :type "int")
+                                (reparse-symbol classsubparts) [2244 2355])
+                            ("encodeRateLimitKey" function
+                               (:prototype-flag t
+                                :typemodifiers ("static")
+                                :arguments 
+                                  ( ("keyName" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2400 2427])
+                                    ("params" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("KeyParams" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2428 2452])
+                                    ("keyBuf" variable
+                                       (:pointer 1
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2453 2473]))                                  
+                                :type ("rocksdb::Slice" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2359 2474])
+                            ("encodeRateLimitValue" function
+                               (:template 
+                                  ( ("T" type (:type "class") nil nil))                                  
+                                :type ("rocksdb::Slice" type (:type "class") nil nil)
+                                :arguments 
+                                  ( ("params" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("T" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2544 2560])
+                                    ("valueBuf" variable
+                                       (:pointer 1
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2561 2583]))                                  
+                                :typemodifiers ("static"))
+                                (reparse-symbol classsubparts) [2477 2706])
+                            ("decodeRateLimitKey" function
+                               (:prototype-flag t
+                                :typemodifiers ("static")
+                                :arguments 
+                                  ( ("encodedKey" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("rocksdb::Slice" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2866 2899])
+                                    ("params" variable
+                                       (:pointer 1
+                                        :type ("KeyParams" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2900 2918]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [2835 2919])
+                            ("decodeRateLimitValue" function
+                               (:prototype-flag t
+                                :typemodifiers ("static")
+                                :arguments 
+                                  ( ("encodedValue" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("rocksdb::Slice" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2955 2990])
+                                    ("params" variable
+                                       (:pointer 1
+                                        :type ("ValueParams" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2991 3011])
+                                    ("sessionParams" variable
+                                       (:pointer 1
+                                        :type ("SessionParams" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3047 3076]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [2922 3077])
+                            ("parseRateLimitArgs" function
+                               (:prototype-flag t
+                                :typemodifiers ("static")
+                                :arguments 
+                                  ( ("cmd" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("std::string" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [3195 3231])
+                                    ("useMs" variable (:type "bool") (reparse-symbol arg-sub-list) [3232 3243])
+                                    ("isReduce" variable (:type "bool") (reparse-symbol arg-sub-list) [3244 3258])
+                                    ("args" variable
+                                       (:pointer 1
+                                        :type ("RateLimitArgs" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3305 3325])
+                                    ("strict" variable
+                                       (:pointer 1
+                                        :type "bool")
+                                        (reparse-symbol arg-sub-list) [3326 3339]))                                  
+                                :type ("codec::RedisValue" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3151 3340])
+                            ("getRateLimitArgsDeprecated" function
+                               (:prototype-flag t
+                                :typemodifiers ("static")
+                                :arguments 
+                                  ( ("cmd" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("std::string" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [3382 3418])
+                                    ("args" variable
+                                       (:pointer 1
+                                        :type ("RateLimitArgs" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3419 3439]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [3343 3440])
+                            ("adjustAmount" function
+                               (:prototype-flag t
+                                :typemodifiers ("static")
+                                :arguments 
+                                  ( ("currAmount" variable (:type ("RedisIntType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3576 3600])
+                                    ("lastRefilledAtMs" variable (:type ("RedisIntType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3601 3631])
+                                    ("args" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("RateLimitArgs" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3632 3658])
+                                    ("newRefilledAtMs" variable
+                                       (:pointer 1
+                                        :type ("RedisIntType" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3694 3724]))                                  
+                                :type ("RedisIntType" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3543 3725])
+                            ("optimizeColumnFamily" function
+                               (:typemodifiers ("static")
+                                :arguments 
+                                  ( ("defaultBlockCacheSizeMb" variable (:type "int") (reparse-symbol arg-sub-list) [3762 3790])
+                                    ("options" variable
+                                       (:pointer 1
+                                        :type ("rocksdb::ColumnFamilyOptions" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3791 3829]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [3729 3963])
+                            ("RateLimitHandler" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("databaseManager" variable (:type ("std::shared_ptr" type
+                                         (:template-specifier 
+                                            ( ("pipeline::DatabaseManager" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol arg-sub-list) [3993 4052]))                                  
+                                :type ("RateLimitHandler" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3976 4152])
+                            ("getAdjustedAmountFromDb" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("keyName" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5007 5034])
+                                    ("args" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("RateLimitArgs" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5035 5061])
+                                    ("keyBuf" variable
+                                       (:pointer 1
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5062 5082])
+                                    ("newRefilledAtMs" variable
+                                       (:pointer 1
+                                        :type ("RedisIntType" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5122 5152])
+                                    ("sessionParams" variable
+                                       (:pointer 1
+                                        :type ("SessionParams" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5153 5182]))                                  
+                                :type ("RedisIntType" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4970 5183])
+                            ("private" label nil (reparse-symbol classsubparts) [5186 5194])
+                            ("kMaxConcurrentWriters" variable
+                               (:default-value "1024"
+                                :type "int")
+                                (reparse-symbol classsubparts) [5214 5247])
+                            ("handleRlCommand" function
+                               (:arguments 
+                                  ( ("cmd" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("std::string" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [5285 5321])
+                                    ("useMs" variable (:type "bool") (reparse-symbol arg-sub-list) [5322 5333])
+                                    ("isReduce" variable (:type "bool") (reparse-symbol arg-sub-list) [5334 5348])
+                                    ("isSessionize" variable (:type "bool") (reparse-symbol arg-sub-list) [5349 5367])
+                                    ("ctx" variable
+                                       (:pointer 1
+                                        :type ("Context" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5404 5417]))                                  
+                                :type ("codec::RedisValue" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [5251 6358])
+                            ("rlGetCommand" function
+                               (:arguments 
+                                  ( ("cmd" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("std::string" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [6438 6474])
+                                    ("ctx" variable
+                                       (:pointer 1
+                                        :type ("Context" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [6475 6488]))                                  
+                                :type ("codec::RedisValue" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [6407 6553])
+                            ("rlReduceCommand" function
+                               (:arguments 
+                                  ( ("cmd" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("std::string" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [6590 6626])
+                                    ("ctx" variable
+                                       (:pointer 1
+                                        :type ("Context" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [6627 6640]))                                  
+                                :type ("codec::RedisValue" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [6556 6704])
+                            ("rlSessionizeCommand" function
+                               (:arguments 
+                                  ( ("cmd" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("std::string" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [6745 6781])
+                                    ("ctx" variable
+                                       (:pointer 1
+                                        :type ("Context" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [6782 6795]))                                  
+                                :type ("codec::RedisValue" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [6707 6888])
+                            ("rlPgetCommand" function
+                               (:arguments 
+                                  ( ("cmd" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("std::string" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [6974 7010])
+                                    ("ctx" variable
+                                       (:pointer 1
+                                        :type ("Context" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [7011 7024]))                                  
+                                :type ("codec::RedisValue" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [6942 7088])
+                            ("rlPreduceCommand" function
+                               (:arguments 
+                                  ( ("cmd" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("std::string" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [7126 7162])
+                                    ("ctx" variable
+                                       (:pointer 1
+                                        :type ("Context" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [7163 7176]))                                  
+                                :type ("codec::RedisValue" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [7091 7239])
+                            ("rlPsessionizeCommand" function
+                               (:arguments 
+                                  ( ("cmd" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("std::string" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [7281 7317])
+                                    ("ctx" variable
+                                       (:pointer 1
+                                        :type ("Context" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [7318 7331]))                                  
+                                :type ("codec::RedisValue" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [7242 7423])
+                            ("getAndReduceTokens" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("keyName" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [7629 7656])
+                                    ("args" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("RateLimitArgs" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [7657 7683])
+                                    ("strict" variable (:type "bool") (reparse-symbol arg-sub-list) [7723 7735])
+                                    ("sessionParams" variable
+                                       (:pointer 1
+                                        :type ("SessionParams" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [7736 7765])
+                                    ("ctx" variable
+                                       (:pointer 1
+                                        :type ("Context" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [7766 7779]))                                  
+                                :type ("codec::RedisValue" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [7592 7780])
+                            ("mutexes_" variable (:type "int") (reparse-symbol classsubparts) [7814 7823]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [383 7826]))                  
+                :type "namespace")
+                nil [360 7829]))          
+      :file "RateLimitHandler.h"
+      :pointmax 7896
+      :fsize 7895
+      :lastmodtime '(23241 29750 0 0)
+      :unmatched-syntax '((punctuation 7812 . 7813) (semantic-list 7810 . 7812) (symbol 7805 . 7810) (punctuation 7804 . 7805) (punctuation 7803 . 7804) (symbol 7800 . 7803) (punctuation 7799 . 7800) (symbol 7789 . 7799) (punctuation 7788 . 7789) (punctuation 7787 . 7788) (symbol 7784 . 7787) (symbol 5204 . 5213) (STATIC 5197 . 5203) (semantic-list 4223 . 4966) (symbol 4214 . 4222) (CONST 4208 . 4213) (semantic-list 4205 . 4207) (symbol 4183 . 4205) (punctuation 4181 . 4182) (symbol 4162 . 4181) (CONST 4156 . 4161) (EXPLICIT 3967 . 3975) (string 2309 . 2353) (number 2306 . 2307) (punctuation 2304 . 2305) (semantic-list 2289 . 2303) (SIZEOF 2283 . 2289) (punctuation 2281 . 2282) (punctuation 2280 . 2281) (semantic-list 2264 . 2279) (SIZEOF 2258 . 2264) (string 1980 . 2024) (number 1977 . 1978) (punctuation 1975 . 1976) (semantic-list 1960 . 1974) (SIZEOF 1954 . 1960) (punctuation 1952 . 1953) (punctuation 1951 . 1952) (semantic-list 1935 . 1950) (SIZEOF 1929 . 1935) (string 1018 . 1060) (number 1015 . 1016) (punctuation 1013 . 1014) (semantic-list 998 . 1012) (SIZEOF 992 . 998) (punctuation 990 . 991) (punctuation 989 . 990) (semantic-list 975 . 988) (SIZEOF 969 . 975) (string 746 . 786) (number 743 . 744) (punctuation 741 . 742) (semantic-list 726 . 740) (SIZEOF 720 . 726) (punctuation 718 . 719) (punctuation 717 . 718) (semantic-list 705 . 716) (SIZEOF 699 . 705) (punctuation 470 . 471) (symbol 457 . 469) (USING 451 . 456))
+      :lexical-table 
+        '(("RATELIMIT_RATELIMITHANDLER_H_")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :file "RateLimitCompactionFilter.h"
+      :fsize 693
+      :lastmodtime '(23241 29750 0 0))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("memory" include (:system-flag t) nil [1 18])
+            ("string" include (:system-flag t) nil [19 36])
+            ("utility" include (:system-flag t) nil [37 55])
+            ("vector" include (:system-flag t) nil [56 73])
+            ("codec/RedisMessage.h" include nil nil [75 106])
+            ("folly/String.h" include nil nil [107 132])
+            ("gmock/gmock.h" include nil nil [133 157])
+            ("gtest/gtest.h" include nil nil [158 182])
+            ("ratelimit/RateLimitCompactionFilter.h" include nil nil [183 231])
+            ("ratelimit/RateLimitHandler.h" include nil nil [232 271])
+            ("rocksdb/db.h" include nil nil [272 295])
+            ("stesting/TestWithRocksDb.h" include nil nil [296 333])
+            ("wangle/channel/Handler.h" include nil nil [334 369])
+            ("ratelimit" type
+               (:members 
+                  ( ("RateLimitHandlerTest" type
+                       (:superclasses 
+                          ( ("stesting::TestWithRocksDb" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("protected" label nil (reparse-symbol classsubparts) [459 469])
+                            ("RateLimitHandlerTest" function
+                               (:constructor-flag t
+                                :type ("RateLimitHandlerTest" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [472 585])
+                            ("getRedisMessage" function
+                               (:arguments 
+                                  ( ("" variable
+                                       (:reference 1
+                                        :type ("codec::RedisValue" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [700 719])
+                                    ("" variable (:type ("val" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [720 724]))                                  
+                                :type ("codec::RedisMessage" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [664 778]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [394 781])
+                    ("MockRateLimitHandler" type
+                       (:superclasses 
+                          ( ("RateLimitHandler" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [839 846])
+                            ("MockRateLimitHandler" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("databaseManager" variable (:type ("std::shared_ptr" type
+                                         (:template-specifier 
+                                            ( ("pipeline::DatabaseManager" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol arg-sub-list) [879 938]))                                  
+                                :type ("MockRateLimitHandler" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [858 983])
+                            ("MOCK_METHOD2" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("" variable (:type ("write" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1000 1006])
+                                    ("" variable (:type ("folly::Future" type
+                                         (:template-specifier 
+                                            ( ("folly::Unit" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol arg-sub-list) [1007 1064]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [987 1066])
+                            ("handleCommand" function
+                               (:arguments 
+                                  ( ("cmdNameLower" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1164 1196])
+                                    ("cmd" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("std::string" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [1197 1233])
+                                    ("ctx" variable
+                                       (:pointer 1
+                                        :type ("Context" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1234 1247]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [1145 1325]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [783 1328])
+                    ("TEST_F" function
+                       (:arguments 
+                          ( ("" variable (:type ("RateLimitHandlerTest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1337 1358])
+                            ("" variable (:type ("EncodeDecodeRateLimitKey" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1359 1384]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [1330 2029])
+                    ("TEST_F" function
+                       (:arguments 
+                          ( ("" variable (:type ("RateLimitHandlerTest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2038 2059])
+                            ("" variable (:type ("EncodeDecodeRateLimitValue" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2060 2087]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [2031 2800])
+                    ("TEST_F" function
+                       (:arguments 
+                          ( ("" variable (:type ("RateLimitHandlerTest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2809 2830])
+                            ("" variable (:type ("EncodeDecodeRateLimitValueWithSession" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2831 2869]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [2802 3861])
+                    ("TEST_F" function
+                       (:arguments 
+                          ( ("" variable (:type ("RateLimitHandlerTest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3870 3891])
+                            ("" variable (:type ("RateLimitCompactionFilterTrue" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3892 3922]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [3863 4514])
+                    ("TEST_F" function
+                       (:arguments 
+                          ( ("" variable (:type ("RateLimitHandlerTest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4523 4544])
+                            ("" variable (:type ("RateLimitCompactionFilterFalse" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4545 4576]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [4516 5168])
+                    ("TEST_F" function
+                       (:arguments 
+                          ( ("" variable (:type ("RateLimitHandlerTest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5177 5198])
+                            ("" variable (:type ("AdjustAmount" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5199 5212]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [5170 6243])
+                    ("TEST_F" function
+                       (:arguments 
+                          ( ("" variable (:type ("RateLimitHandlerTest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6252 6273])
+                            ("" variable (:type ("ParseRateLimitArgsWithOutErrors" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6274 6306]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [6245 10784])
+                    ("TEST_F" function
+                       (:arguments 
+                          ( ("" variable (:type ("RateLimitHandlerTest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10793 10814])
+                            ("" variable (:type ("ParseRateLimitArgsWithErrors" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10815 10844]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [10786 12184])
+                    ("TEST_F" function
+                       (:arguments 
+                          ( ("" variable (:type ("RateLimitHandlerTest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12193 12214])
+                            ("" variable (:type ("GetReduceCommands" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12215 12233]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [12186 16666])
+                    ("TEST_F" function
+                       (:arguments 
+                          ( ("" variable (:type ("RateLimitHandlerTest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16675 16696])
+                            ("" variable (:type ("SessionizeCommands" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16697 16716]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [16668 18837]))                  
+                :type "namespace")
+                nil [371 18840]))          
+      :file "RateLimitHandlerTest.cpp"
+      :pointmax 18865
+      :fsize 18864
+      :lastmodtime '(23241 29750 0 0)
+      :unmatched-syntax '((semantic-list 1033 . 1064) (EXPLICIT 849 . 857) (punctuation 718 . 719)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("memory" include (:system-flag t) nil [1 18])
+            ("pipeline/RedisPipelineBootstrap.h" include nil nil [20 64])
+            ("ratelimit/RateLimitHandler.h" include nil nil [65 104])
+            ("ratelimit" type
+               (:members 
+                  ( ("config" variable
+                       (:typemodifiers ("static")
+                        :type ("pipeline::RedisPipelineBootstrap::Config" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [129 657])
+                    ("redisPipelineBootstrap" variable
+                       (:typemodifiers ("static")
+                        :default-value "pipeline::RedisPipelineBootstrap::create(config)"
+                        :type ("auto" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [659 745]))                  
+                :type "namespace")
+                nil [106 748]))          
+      :file "RateLimitServer.cpp"
+      :pointmax 773
+      :fsize 772
+      :lastmodtime '(23241 29750 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("ratelimit/RateLimitHandler.h" include nil nil [1 40])
+            ("algorithm" include (:system-flag t) nil [42 62])
+            ("array" include (:system-flag t) nil [63 79])
+            ("cstring" include (:system-flag t) nil [80 98])
+            ("functional" include (:system-flag t) nil [99 120])
+            ("memory" include (:system-flag t) nil [121 138])
+            ("mutex" include (:system-flag t) nil [139 155])
+            ("stdexcept" include (:system-flag t) nil [156 176])
+            ("string" include (:system-flag t) nil [177 194])
+            ("vector" include (:system-flag t) nil [195 212])
+            ("boost/algorithm/string/case_conv.hpp" include nil nil [214 261])
+            ("folly/Conv.h" include nil nil [262 285])
+            ("folly/Format.h" include nil nil [286 311])
+            ("glog/logging.h" include nil nil [312 337])
+            ("rocksdb/options.h" include nil nil [338 366])
+            ("rocksdb/slice.h" include nil nil [367 393])
+            ("rocksdb/status.h" include nil nil [394 421])
+            ("ratelimit" type
+               (:members 
+                  ( ("getAndReduceTokens" function
+                       (:parent "RateLimitHandler"
+                        :arguments 
+                          ( ("keyName" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [501 528])
+                            ("args" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("RateLimitArgs" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [529 555])
+                            ("strict" variable (:type "bool") (reparse-symbol arg-sub-list) [611 623])
+                            ("sessionParams" variable
+                               (:pointer 1
+                                :type ("RateLimitHandler::SessionParams" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [624 671])
+                            ("ctx" variable
+                               (:pointer 1
+                                :type ("Context" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [727 740]))                          
+                        :type ("codec::RedisValue" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [446 2432])
+                    ("getAdjustedAmountFromDb" function
+                       (:parent "RateLimitHandler"
+                        :arguments 
+                          ( ("keyName" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2512 2539])
+                            ("args" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("RateLimitHandler::RateLimitArgs" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2540 2584])
+                            ("keyBuf" variable
+                               (:pointer 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2585 2605])
+                            ("newRefilledAtMs" variable
+                               (:pointer 1
+                                :type ("RateLimitHandler::RedisIntType" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2610 2658])
+                            ("sessionParams" variable
+                               (:pointer 1
+                                :type ("RateLimitHandler::SessionParams" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2659 2706]))                          
+                        :type ("RateLimitHandler::RedisIntType" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [2434 3488])
+                    ("adjustAmount" function
+                       (:parent "RateLimitHandler"
+                        :arguments 
+                          ( ("currAmount" variable (:type ("RateLimitHandler::RedisIntType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3552 3594])
+                            ("lastRefilledAtMs" variable (:type ("RateLimitHandler::RedisIntType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3599 3647])
+                            ("args" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("RateLimitHandler::RateLimitArgs" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3648 3692])
+                            ("newRefilledAtMs" variable
+                               (:pointer 1
+                                :type ("RateLimitHandler::RedisIntType" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3697 3745]))                          
+                        :type ("RateLimitHandler::RedisIntType" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [3490 4079])
+                    ("parseRateLimitArgs" function
+                       (:parent "RateLimitHandler"
+                        :arguments 
+                          ( ("cmd" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("std::string" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [4136 4172])
+                            ("useMs" variable (:type "bool") (reparse-symbol arg-sub-list) [4173 4184])
+                            ("isReduce" variable (:type "bool") (reparse-symbol arg-sub-list) [4185 4199])
+                            ("args" variable
+                               (:pointer 1
+                                :type ("RateLimitHandler::RateLimitArgs" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4255 4293])
+                            ("strict" variable
+                               (:pointer 1
+                                :type "bool")
+                                (reparse-symbol arg-sub-list) [4294 4307]))                          
+                        :type ("codec::RedisValue" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [4081 6081])
+                    ("encodeRateLimitKey" function
+                       (:parent "RateLimitHandler"
+                        :arguments 
+                          ( ("keyName" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6135 6162])
+                            ("params" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("KeyParams" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6163 6187])
+                            ("keyBuf" variable
+                               (:pointer 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6240 6260]))                          
+                        :type ("rocksdb::Slice" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [6083 6486])
+                    ("decodeRateLimitKey" function
+                       (:parent "RateLimitHandler"
+                        :arguments 
+                          ( ("encodedKey" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("rocksdb::Slice" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6530 6563])
+                            ("params" variable
+                               (:pointer 1
+                                :type ("RateLimitHandler::KeyParams" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6564 6600]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [6488 7068])
+                    ("decodeRateLimitValue" function
+                       (:parent "RateLimitHandler"
+                        :arguments 
+                          ( ("encodedValue" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("rocksdb::Slice" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7114 7149])
+                            ("params" variable
+                               (:pointer 1
+                                :type ("RateLimitHandler::ValueParams" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7150 7188])
+                            ("sessionParams" variable
+                               (:pointer 1
+                                :type ("RateLimitHandler::SessionParams" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7233 7280]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [7070 7827])
+                    ("RateLimitHandler::kMaxConcurrentWriters" variable (:type "int") (reparse-symbol namespacesubparts) [7839 7883]))                  
+                :type "namespace")
+                nil [423 7886]))          
+      :file "RateLimitHandler.cpp"
+      :pointmax 7911
+      :fsize 7910
+      :lastmodtime '(23241 29750 0 0)
+      :unmatched-syntax '((symbol 7829 . 7838))))
+  :file "!Volumes!Transcend!ratelimit!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,1450 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("APP_QZAP_SERVICE_SCORING3_COMMON_RELEVANCE_WAND_RESOLVER_H" variable (:constant-flag t) nil [76 134])
+            ("app/qzap/service/scoring3/common/relevance/resolver.h" include nil nil [136 200])
+            ("QZAP" type
+               (:members 
+                  ( ("RELEVANCE" type
+                       (:members 
+                          ( ("Wand" type
+                               (:superclasses 
+                                  ( ("Resolver" type
+                                       (:protection "public"
+                                        :type "class")
+                                        nil nil))                                  
+                                :members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [274 281])
+                                    ("Wand" function
+                                       (:destructor-flag t
+                                        :typemodifiers ("virtual")
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [284 302])
+                                    ("Resolve" function
+                                       (:prototype-flag t
+                                        :typemodifiers ("virtual")
+                                        :arguments 
+                                          ( ("posting_list" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("PostingList" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [331 363])
+                                            ("topn" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [368 382])
+                                            ("filter" variable
+                                               (:pointer 1
+                                                :type ("Filter" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [387 402])
+                                            ("scorer" variable
+                                               (:pointer 1
+                                                :type ("Scorer" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [407 422])
+                                            ("result" variable
+                                               (:pointer 1
+                                                :type ("std::vector" type
+                                                     (:template-specifier 
+                                                        ( ("Result" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [427 455]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [305 456])
+                                    ("public" label nil (reparse-symbol classsubparts) [459 466])
+                                    ("Iterator" type
+                                       (:members 
+                                          ( ("public" label nil (reparse-symbol classsubparts) [489 496])
+                                            ("Iterator" function
+                                               (:destructor-flag t
+                                                :typemodifiers ("virtual")
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [501 523])
+                                            ("Next" function
+                                               (:pure-virtual-flag t
+                                                :prototype-flag t
+                                                :typemodifiers ("virtual")
+                                                :arguments 
+                                                  ( ("threshold" variable (:type "float") (reparse-symbol arg-sub-list) [763 779]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [745 784])
+                                            ("Valid" function
+                                               (:pure-virtual-flag t
+                                                :prototype-flag t
+                                                :methodconst-flag t
+                                                :typemodifiers ("virtual")
+                                                :type "bool")
+                                                (reparse-symbol classsubparts) [789 820])
+                                            ("GetLocalIndex" function
+                                               (:pure-virtual-flag t
+                                                :prototype-flag t
+                                                :methodconst-flag t
+                                                :typemodifiers ("virtual")
+                                                :type ("LocalIndex" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [825 870])
+                                            ("GetPostingList" function
+                                               (:pure-virtual-flag t
+                                                :prototype-flag t
+                                                :methodconst-flag t
+                                                :typemodifiers ("virtual")
+                                                :constant-flag t
+                                                :type ("PostingList" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [875 929]))                                          
+                                        :type "class")
+                                        (reparse-symbol classsubparts) [469 934])
+                                    ("NewIterator" function
+                                       (:prototype-flag t
+                                        :pointer 1
+                                        :typemodifiers ("static")
+                                        :arguments 
+                                          ( ("posting_list" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("PostingList" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [966 998]))                                          
+                                        :type ("Iterator" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [937 999])
+                                    ("private" label nil (reparse-symbol classsubparts) [1002 1010])
+                                    ("Wand_Iterator" friend nil (reparse-symbol classsubparts) [1013 1039])
+                                    ("FindPivotToken" function
+                                       (:prototype-flag t
+                                        :typemodifiers ("static")
+                                        :arguments 
+                                          ( ("posting_list" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("PostingList" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1106 1138])
+                                            ("threshold" variable (:type "float") (reparse-symbol arg-sub-list) [1145 1161])
+                                            ("pivot_index" variable
+                                               (:pointer 1
+                                                :type ("size_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1162 1182]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [1072 1183])
+                                    ("PickTokenForSkipping" function
+                                       (:prototype-flag t
+                                        :typemodifiers ("static")
+                                        :arguments 
+                                          ( ("posting_list" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("PostingList" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1251 1283])
+                                            ("pivot_index" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1290 1309])
+                                            ("filter_pivot" variable (:type "bool") (reparse-symbol arg-sub-list) [1316 1334]))                                          
+                                        :type ("size_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1209 1335]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [242 1338]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [219 1341]))                  
+                :type "namespace")
+                nil [202 1367]))          
+      :file "wand.h"
+      :pointmax 1458
+      :fsize 1457
+      :lastmodtime '(22878 19688 0 0)
+      :unmatched-syntax '((punctuation 1039 . 1040))
+      :lexical-table 
+        '(("APP_QZAP_SERVICE_SCORING3_COMMON_RELEVANCE_WAND_RESOLVER_H")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("APP_QZAP_SERVICE_SCORING3_COMMON_RELEVANCE_RESOLVER_H" variable (:constant-flag t) nil [176 229])
+            ("vector" include (:system-flag t) nil [231 248])
+            ("utility" include (:system-flag t) nil [249 267])
+            ("app/qzap/common/base/base.h" include nil nil [268 306])
+            ("app/qzap/common/base/class_register.h" include nil nil [307 355])
+            ("app/qzap/common/base/shared_ptr.h" include nil nil [356 400])
+            ("app/qzap/service/sunfish/targeting/include/match_interface.h" include nil nil [401 472])
+            ("QZAP" type
+               (:members 
+                  ( ("RELEVANCE" type
+                       (:members 
+                          ( ("PostingListIterator" type
+                               (:members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [543 550])
+                                    ("PostingListIterator" function
+                                       (:constructor-flag t
+                                        :type ("PostingListIterator" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [553 577])
+                                    ("PostingListIterator" function
+                                       (:destructor-flag t
+                                        :typemodifiers ("virtual")
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [580 613])
+                                    ("GetTokenId" function
+                                       (:pure-virtual-flag t
+                                        :prototype-flag t
+                                        :methodconst-flag t
+                                        :typemodifiers ("virtual")
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [634 674])
+                                    ("UB" function
+                                       (:pure-virtual-flag t
+                                        :prototype-flag t
+                                        :methodconst-flag t
+                                        :typemodifiers ("virtual")
+                                        :type "float")
+                                        (reparse-symbol classsubparts) [686 715])
+                                    ("IDF" function
+                                       (:pure-virtual-flag t
+                                        :prototype-flag t
+                                        :methodconst-flag t
+                                        :typemodifiers ("virtual")
+                                        :type "float")
+                                        (reparse-symbol classsubparts) [718 748])
+                                    ("GetLocalIndex" function
+                                       (:pure-virtual-flag t
+                                        :prototype-flag t
+                                        :methodconst-flag t
+                                        :typemodifiers ("virtual")
+                                        :type ("LocalIndex" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [767 812])
+                                    ("TF" function
+                                       (:pure-virtual-flag t
+                                        :prototype-flag t
+                                        :methodconst-flag t
+                                        :typemodifiers ("virtual")
+                                        :type "float")
+                                        (reparse-symbol classsubparts) [815 844])
+                                    ("LessThan" function
+                                       (:prototype-flag t
+                                        :methodconst-flag t
+                                        :typemodifiers ("virtual")
+                                        :arguments 
+                                          ( ("other" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("PostingListIterator" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [869 902]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [847 909])
+                                    ("Seek" function
+                                       (:pure-virtual-flag t
+                                        :prototype-flag t
+                                        :typemodifiers ("virtual")
+                                        :arguments 
+                                          ( ("local_index" variable (:type ("LocalIndex" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [950 973]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [932 978])
+                                    ("IsEnd" function
+                                       (:pure-virtual-flag t
+                                        :prototype-flag t
+                                        :methodconst-flag t
+                                        :typemodifiers ("virtual")
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [999 1030])
+                                    ("private" label nil (reparse-symbol classsubparts) [1033 1041])
+                                    ("DISALLOW_COPY_AND_ASSIGN" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("" variable (:type ("PostingListIterator" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1069 1089]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [1044 1090]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [514 1093])
+                            ("PostingList" type
+                               (:typedef ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("shared_ptr" type (:template-specifier 
+                                            ( ("PostingListIterator" type nil nil nil))                                            ) nil nil))                                        
+                                      :type "class")
+                                      nil nil)
+                                :type "typedef")
+                                (reparse-symbol namespacesubparts) [1095 1161])
+                            ("Filter" type
+                               (:members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [1179 1186])
+                                    ("Filter" function
+                                       (:constructor-flag t
+                                        :type ("Filter" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1189 1200])
+                                    ("Filter" function
+                                       (:destructor-flag t
+                                        :typemodifiers ("virtual")
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1203 1223])
+                                    ("ShouldFilter" function
+                                       (:typemodifiers ("virtual")
+                                        :arguments 
+                                          ( ("local_index" variable
+                                               (:constant-flag t
+                                                :type ("LocalIndex" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1252 1281])
+                                            ("posting_list" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("PostingList" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1310 1342]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [1226 1381]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [1163 1384])
+                            ("Scorer" type
+                               (:members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [1402 1409])
+                                    ("Scorer" function
+                                       (:constructor-flag t
+                                        :type ("Scorer" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1412 1423])
+                                    ("Scorer" function
+                                       (:destructor-flag t
+                                        :typemodifiers ("virtual")
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1426 1446])
+                                    ("Evaluate" function
+                                       (:typemodifiers ("virtual")
+                                        :arguments 
+                                          ( ("local_index" variable
+                                               (:constant-flag t
+                                                :type ("LocalIndex" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1472 1501])
+                                            ("posting_list" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("PostingList" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1527 1559]))                                          
+                                        :type "float")
+                                        (reparse-symbol classsubparts) [1449 1615])
+                                    ("DoEvaluate" function
+                                       (:prototype-flag t
+                                        :typemodifiers ("static")
+                                        :arguments 
+                                          ( ("local_index" variable
+                                               (:constant-flag t
+                                                :type ("LocalIndex" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1642 1671])
+                                            ("posting_list" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("PostingList" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1698 1730]))                                          
+                                        :type "float")
+                                        (reparse-symbol classsubparts) [1618 1731]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [1386 1734])
+                            ("Result" type
+                               (:members 
+                                  ( ("local_index" variable (:type ("LocalIndex" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1754 1777])
+                                    ("score" variable (:type "float") (reparse-symbol classsubparts) [1780 1792])
+                                    ("Reset" function
+                                       (:typemodifiers ("inline")
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1795 1859])
+                                    ("Result" function
+                                       (:constructor-flag t
+                                        :type ("Result" type (:type "struct") nil nil))
+                                        (reparse-symbol classsubparts) [1862 1889])
+                                    ("Compare" type
+                                       (:members 
+                                          ( ("()" function
+                                               (:methodconst-flag t
+                                                :operator-flag t
+                                                :arguments 
+                                                  ( ("lhs" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("Result" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [1930 1948])
+                                                    ("rhs" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("Result" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [1949 1967]))                                                  
+                                                :type "bool")
+                                                (reparse-symbol classsubparts) [1913 2017]))                                          
+                                        :type "struct")
+                                        (reparse-symbol classsubparts) [1892 2022]))                                  
+                                :type "struct")
+                                (reparse-symbol namespacesubparts) [1736 2025])
+                            ("Resolver" type
+                               (:members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [2085 2092])
+                                    ("Resolver" function
+                                       (:constructor-flag t
+                                        :type ("Resolver" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [2095 2108])
+                                    ("Resolver" function
+                                       (:destructor-flag t
+                                        :typemodifiers ("virtual")
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [2111 2133])
+                                    ("Resolve" function
+                                       (:pure-virtual-flag t
+                                        :prototype-flag t
+                                        :typemodifiers ("virtual")
+                                        :arguments 
+                                          ( ("posting_list" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("PostingList" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2162 2194])
+                                            ("topn" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2199 2213])
+                                            ("filter" variable
+                                               (:pointer 1
+                                                :type ("Filter" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2218 2233])
+                                            ("scorer" variable
+                                               (:pointer 1
+                                                :type ("Scorer" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2238 2253])
+                                            ("result" variable
+                                               (:pointer 1
+                                                :type ("std::vector" type
+                                                     (:template-specifier 
+                                                        ( ("Result" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [2258 2286]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [2136 2291]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [2067 2294]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [491 2297]))                  
+                :type "namespace")
+                nil [474 2323])
+            ("CLASS_REGISTER_DEFINE_REGISTRY" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("relevance_resolver_register" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2375 2403])
+                    ("" variable (:type ("QZAP::RELEVANCE::Resolver" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2406 2432]))                  
+                :type "int")
+                nil [2344 2433])
+            ("REGISTER_RELEVANCE_RESOLVER" variable (:constant-flag t) nil [2443 2470])
+            ("CREATE_RELEVANCE_RESOLVER" variable (:constant-flag t) nil [2653 2678]))          
+      :file "resolver.h"
+      :pointmax 2839
+      :fsize 2860
+      :lastmodtime '(22892 9674 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("CREATE_RELEVANCE_RESOLVER" (spp-arg-list ("name_as_string") 2678 . 2694) . ((symbol "CLASS_REGISTER_CREATE_OBJECT" 2699 . 2727) (semantic-list "(relevance_resolver_register, name_as_string)" 2727 . 2772)))
+          ("APP_QZAP_SERVICE_SCORING3_COMMON_RELEVANCE_RESOLVER_H")
+          ("REGISTER_RELEVANCE_RESOLVER" (spp-arg-list ("name_as_string" "class_name") 2470 . 2498) . ((symbol "CLASS_REGISTER_OBJECT_CREATOR" 2503 . 2532) (semantic-list "( \\
+    relevance_resolver_register, \\
+    ::QZAP::RELEVANCE::Resolver, \\
+    name_as_string, \\
+    class_name)" 2532 . 2643)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("app/qzap/service/scoring3/common/relevance/wand.h" include nil nil [1 61])
+            ("string" include (:system-flag t) nil [62 79])
+            ("queue" include (:system-flag t) nil [80 96])
+            ("thirdparty/glog/logging.h" include nil nil [97 133])
+            ("app/qzap/service/scoring3/common/relevance/utility.h" include nil nil [134 197])
+            ("QZAP" type
+               (:members 
+                  ( ("RELEVANCE" type
+                       (:members 
+                          ( ("REGISTER_RELEVANCE_RESOLVER" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("" variable (:type ("Wand" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [275 280]))                                  
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [239 281])
+                            ("unnamed" type
+                               (:members 
+                                  ( ("<=" function
+                                       (:operator-flag t
+                                        :typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("local_index" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("LocalIndex" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [319 349])
+                                            ("wrapper" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("LocalIndexWrapper" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [374 407]))                                          
+                                        :type "bool")
+                                        (reparse-symbol namespacesubparts) [295 452]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [283 454])
+                            ("Resolve" function
+                               (:parent "Wand"
+                                :arguments 
+                                  ( ("posting_list" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("PostingList" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [494 526])
+                                    ("topn" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [531 545])
+                                    ("filter" variable
+                                       (:pointer 1
+                                        :type ("Filter" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [550 565])
+                                    ("scorer" variable
+                                       (:pointer 1
+                                        :type ("Scorer" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [570 585])
+                                    ("result" variable
+                                       (:pointer 1
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("Result" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [590 618]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [470 2085])
+                            ("FindPivotToken" function
+                               (:parent "Wand"
+                                :arguments 
+                                  ( ("posting_list" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("PostingList" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2118 2150])
+                                    ("threshold" variable (:type "float") (reparse-symbol arg-sub-list) [2155 2171])
+                                    ("pivot_index" variable
+                                       (:pointer 1
+                                        :type ("size_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2172 2192]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [2087 2428])
+                            ("PickTokenForSkipping" function
+                               (:parent "Wand"
+                                :arguments 
+                                  ( ("posting_list" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("PostingList" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2469 2501])
+                                    ("pivot_index" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2506 2525])
+                                    ("filter_pivot" variable (:type "bool") (reparse-symbol arg-sub-list) [2530 2548]))                                  
+                                :type ("size_t" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [2430 3091])
+                            ("Wand_Iterator" type
+                               (:superclasses 
+                                  ( ("Wand::Iterator" type
+                                       (:protection "public"
+                                        :type "class")
+                                        nil nil))                                  
+                                :members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [3140 3147])
+                                    ("Wand_Iterator" function
+                                       (:constructor-flag t
+                                        :arguments 
+                                          ( ("posting_list" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("PostingList" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3164 3196]))                                          
+                                        :type ("Wand_Iterator" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [3150 3424])
+                                    ("Wand_Iterator" function
+                                       (:destructor-flag t
+                                        :typemodifiers ("virtual")
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [3427 3457])
+                                    ("Next" function
+                                       (:typemodifiers ("virtual")
+                                        :arguments 
+                                          ( ("threshold" variable (:type "float") (reparse-symbol arg-sub-list) [3479 3495]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [3461 5343])
+                                    ("Valid" function
+                                       (:methodconst-flag t
+                                        :typemodifiers ("virtual")
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [5346 5397])
+                                    ("GetLocalIndex" function
+                                       (:methodconst-flag t
+                                        :typemodifiers ("virtual")
+                                        :type ("LocalIndex" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [5400 5519])
+                                    ("GetPostingList" function
+                                       (:methodconst-flag t
+                                        :typemodifiers ("virtual")
+                                        :constant-flag t
+                                        :type ("PostingList" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [5522 5629])
+                                    ("private" label nil (reparse-symbol classsubparts) [5632 5640])
+                                    ("posting_list_" variable (:type ("PostingList" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5643 5669])
+                                    ("valid_" variable (:type "bool") (reparse-symbol classsubparts) [5672 5684])
+                                    ("current_local_index_" variable (:type ("LocalIndexWrapper" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5687 5726])
+                                    ("last_threshold_" variable (:type "float") (reparse-symbol classsubparts) [5729 5751]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [3093 5754])
+                            ("NewIterator" function
+                               (:pointer 1
+                                :parent "Wand"
+                                :arguments 
+                                  ( ("posting_list" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("PostingList" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5790 5822]))                                  
+                                :type ("Wand::Iterator" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [5756 5868]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [216 5871]))                  
+                :type "namespace")
+                nil [199 5897]))          
+      :file "wand.cc"
+      :pointmax 5917
+      :fsize 5930
+      :lastmodtime '(22892 9638 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("APP_QZAP_SERVICE_SCORING3_COMMON_RELEVANCE_UTILITY_H" variable (:constant-flag t) nil [70 122])
+            ("string" include (:system-flag t) nil [124 141])
+            ("app/qzap/service/scoring3/common/relevance/resolver.h" include nil nil [142 206])
+            ("QZAP" type
+               (:members 
+                  ( ("RELEVANCE" type
+                       (:members 
+                          ( ("SortPostingList" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("posting_list" variable
+                                       (:pointer 1
+                                        :type ("PostingList" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [269 295]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [248 296])
+                            ("AdjustPostingList" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("index" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [320 333])
+                                    ("posting_list" variable
+                                       (:pointer 1
+                                        :type ("PostingList" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [334 360]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [297 361])
+                            ("LocalIndexWrapper" type
+                               (:members 
+                                  ( ("has_value_" variable (:type "bool") (reparse-symbol classsubparts) [391 407])
+                                    ("local_index_" variable (:type ("LocalIndex" type (:type "class") nil nil)) (reparse-symbol classsubparts) [410 434])
+                                    ("public" label nil (reparse-symbol classsubparts) [436 443])
+                                    ("LocalIndexWrapper" function
+                                       (:constructor-flag t
+                                        :typemodifiers ("inline")
+                                        :type ("LocalIndexWrapper" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [446 524])
+                                    ("has_value" function
+                                       (:methodconst-flag t
+                                        :typemodifiers ("inline")
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [528 586])
+                                    ("local_index" function
+                                       (:methodconst-flag t
+                                        :typemodifiers ("inline")
+                                        :type ("LocalIndex" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [589 657])
+                                    ("set_local_index" function
+                                       (:typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("local_index" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("LocalIndex" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [688 718]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [660 791])
+                                    ("LessThan" function
+                                       (:methodconst-flag t
+                                        :typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("local_index" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("LocalIndex" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [816 846]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [795 922])
+                                    ("DebugString" function
+                                       (:prototype-flag t
+                                        :methodconst-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [926 958]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [363 961]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [225 964]))                  
+                :type "namespace")
+                nil [208 990]))          
+      :file "utility.h"
+      :pointmax 1075
+      :fsize 1074
+      :lastmodtime '(22878 19688 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("APP_QZAP_SERVICE_SCORING3_COMMON_RELEVANCE_UTILITY_H")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("algorithm" include (:system-flag t) nil [1 21])
+            ("vector" include (:system-flag t) nil [22 39])
+            ("string" include (:system-flag t) nil [40 57])
+            ("queue" include (:system-flag t) nil [58 74])
+            ("thirdparty/gtest/gtest.h" include nil nil [75 110])
+            ("thirdparty/glog/logging.h" include nil nil [111 147])
+            ("thirdparty/protobuf/text_format.h" include nil nil [148 192])
+            ("app/qzap/service/scoring3/common/relevance/mock.pb.h" include nil nil [193 256])
+            ("app/qzap/service/scoring3/common/protobuf_utils.h" include nil nil [257 317])
+            ("app/qzap/service/scoring3/common/relevance/resolver.h" include nil nil [318 382])
+            ("app/qzap/service/scoring3/common/relevance/utility.h" include nil nil [383 446])
+            ("app/qzap/service/scoring3/common/relevance/wand.h" include nil nil [447 507])
+            ("testing::Test" variable (:type "int") nil [539 624])
+            ("QZAP::RELEVANCE::PostingListIterator" variable (:type "int") nil [656 1819])
+            ("kPostingListText" variable
+               (:pointer 1
+                :constant-flag t
+                :default-value "\"posting_list {\"
+  \"  token_id: 100023\"
+  \"  ub: 20.0\"
+  \"  idf: 5.0\"
+  \"  ad {local_index: 4 tf: 2.163885}\"
+  \"  ad {local_index: 9 tf: 1.094665}\"
+  \"  ad {local_index: 12 tf: 0.054267}\"
+  \"  ad {local_index: 13 tf: 0.394713}\"
+  \"  ad {local_index: 15 tf: 2.366892}\"
+  \"  ad {local_index: 17 tf: 2.414515}\"
+  \"  ad {local_index: 19 tf: 4.000000}\"
+  \"  ad {local_index: 21 tf: 0.547061}\"
+  \"  ad {local_index: 27 tf: 3.796011}\"
+  \"  ad {local_index: 28 tf: 1.673574}\"
+  \"  ad {local_index: 30 tf: 2.774633}\"
+  \"  ad {local_index: 34 tf: 3.441952}\"
+  \"}\"
+  \"posting_list {\"
+  \"  token_id: 100024\"
+  \"  ub: 30.0\"
+  \"  idf: 5.0\"
+  \"  ad {local_index: 1 tf: 5.557006}\"
+  \"  ad {local_index: 2 tf: 0.798704}\"
+  \"  ad {local_index: 9 tf: 0.645910}\"
+  \"  ad {local_index: 11 tf: 2.809221}\"
+  \"  ad {local_index: 13 tf: 2.088974}\"
+  \"  ad {local_index: 14 tf: 5.349538}\"
+  \"  ad {local_index: 16 tf: 4.560946}\"
+  \"  ad {local_index: 22 tf: 4.866972}\"
+  \"  ad {local_index: 23 tf: 5.408364}\"
+  \"  ad {local_index: 24 tf: 0.267571}\"
+  \"  ad {local_index: 25 tf: 0.817356}\"
+  \"  ad {local_index: 27 tf: 1.336171}\"
+  \"  ad {local_index: 29 tf: 3.646289}\"
+  \"  ad {local_index: 31 tf: 6.000000}\"
+  \"  ad {local_index: 34 tf: 1.020094}\"
+  \"}\"
+  \"posting_list {\"
+  \"  token_id: 100026\"
+  \"  ub: 16.0\"
+  \"  idf: 2.0\"
+  \"  ad {local_index: 1 tf: 8.000000}\"
+  \"  ad {local_index: 5 tf: 5.246605}\"
+  \"  ad {local_index: 11 tf: 5.257404}\"
+  \"  ad {local_index: 13 tf: 2.380688}\"
+  \"  ad {local_index: 16 tf: 6.243081}\"
+  \"  ad {local_index: 25 tf: 7.000194}\"
+  \"  ad {local_index: 26 tf: 5.233470}\"
+  \"}\""
+                :type "char")
+                nil [1821 3439])
+            ("TEST_F" function
+               (:arguments 
+                  ( ("" variable (:type ("ResolverTest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3940 3953])
+                    ("" variable (:type ("MockIterator" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3954 3967]))                  
+                :type "int")
+                nil [3933 4727])
+            ("TEST_F" function
+               (:arguments 
+                  ( ("" variable (:type ("ResolverTest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4736 4749])
+                    ("" variable (:type ("Resolve" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4750 4758]))                  
+                :type "int")
+                nil [4729 5920])
+            ("TEST_F" function
+               (:arguments 
+                  ( ("" variable (:type ("ResolverTest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5929 5942])
+                    ("" variable (:type ("SortPostingList" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5943 5959]))                  
+                :type "int")
+                nil [5922 6884])
+            ("TEST_F" function
+               (:arguments 
+                  ( ("" variable (:type ("ResolverTest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6893 6906])
+                    ("" variable (:type ("AdjustPostingList" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6907 6925]))                  
+                :type "int")
+                nil [6886 8566])
+            ("TEST_F" function
+               (:arguments 
+                  ( ("" variable (:type ("ResolverTest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8575 8588])
+                    ("" variable (:type ("WandIterator" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8589 8602]))                  
+                :type "int")
+                nil [8568 10501]))          
+      :file "relevance_test.cc"
+      :pointmax 10502
+      :fsize 10501
+      :lastmodtime '(22878 19688 0 0)
+      :unmatched-syntax '((punctuation 655 . 656) (punctuation 654 . 655) (PUBLIC 647 . 653) (punctuation 645 . 646) (symbol 632 . 644) (CLASS 626 . 631) (punctuation 538 . 539) (punctuation 537 . 538) (PUBLIC 530 . 536) (punctuation 528 . 529) (symbol 515 . 527) (CLASS 509 . 514)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("app/qzap/service/scoring3/common/relevance/resolver.h" include nil nil [1 65])
+            ("QZAP" type
+               (:members 
+                  ( ("RELEVANCE" type
+                       (:members 
+                          ( ("LessThan" function
+                               (:methodconst-flag t
+                                :parent "PostingListIterator"
+                                :arguments 
+                                  ( ("other" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("PostingListIterator" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [142 175]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [107 800])
+                            ("DoEvaluate" function
+                               (:parent "Scorer"
+                                :arguments 
+                                  ( ("local_index" variable
+                                       (:constant-flag t
+                                        :type ("LocalIndex" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [832 861])
+                                    ("posting_list" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("PostingList" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [866 898]))                                  
+                                :type "float")
+                                (reparse-symbol namespacesubparts) [802 1162]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [84 1165]))                  
+                :type "namespace")
+                nil [67 1191]))          
+      :file "resolver.cc"
+      :pointmax 1211
+      :fsize 1210
+      :lastmodtime '(22878 19688 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("APP_QZAP_SERVICE_SCORING3_COMMON_RELEVANCE_SIMILARITY_CALCULATOR_H" variable (:constant-flag t) nil [84 150])
+            ("stdint.h" include (:system-flag t) nil [152 171])
+            ("vector" include (:system-flag t) nil [172 189])
+            ("cstring" include (:system-flag t) nil [190 208])
+            ("cmath" include (:system-flag t) nil [209 225])
+            ("string" include (:system-flag t) nil [226 243])
+            ("algorithm" include (:system-flag t) nil [244 264])
+            ("tr1/unordered_set" include (:system-flag t) nil [265 293])
+            ("tr1/unordered_map" include (:system-flag t) nil [294 322])
+            ("QZAP" type
+               (:members 
+                  ( ("RELEVANCE" type
+                       (:members 
+                          ( ("IdWeightPair" type
+                               (:members 
+                                  ( ("id" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [408 420])
+                                    ("weight" variable (:type "float") (reparse-symbol classsubparts) [423 436])
+                                    ("IdWeightPair" function
+                                       (:constructor-flag t
+                                        :type ("IdWeightPair" type (:type "struct") nil nil))
+                                        (reparse-symbol classsubparts) [439 477])
+                                    ("IdWeightPair" function
+                                       (:constructor-flag t
+                                        :arguments 
+                                          ( ("id_" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [494 507])
+                                            ("weight_" variable (:type "float") (reparse-symbol arg-sub-list) [508 522]))                                          
+                                        :type ("IdWeightPair" type (:type "struct") nil nil))
+                                        (reparse-symbol classsubparts) [481 552])
+                                    ("Clear" function (:type "void") (reparse-symbol classsubparts) [556 604]))                                  
+                                :type "struct")
+                                (reparse-symbol namespacesubparts) [384 607])
+                            ("SimilarityTool" type
+                               (:members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [633 640])
+                                    ("CosineSimilarity" function
+                                       (:prototype-flag t
+                                        :typemodifiers ("static")
+                                        :arguments 
+                                          ( ("lhs" variable
+                                               (:reference 1
+                                                :type ("std::vector" type
+                                                     (:template-specifier 
+                                                        ( ("IdWeightPair" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [673 705])
+                                            ("rhs" variable
+                                               (:reference 1
+                                                :type ("std::vector" type
+                                                     (:template-specifier 
+                                                        ( ("IdWeightPair" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [710 742])
+                                            ("cosine_sim" variable
+                                               (:pointer 1
+                                                :type "float")
+                                                (reparse-symbol arg-sub-list) [743 762]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [644 763])
+                                    ("TanimotoCoeffiency" function
+                                       (:prototype-flag t
+                                        :typemodifiers ("static")
+                                        :arguments 
+                                          ( ("lhs" variable
+                                               (:reference 1
+                                                :type ("std::vector" type
+                                                     (:template-specifier 
+                                                        ( ("IdWeightPair" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [798 830])
+                                            ("rhs" variable
+                                               (:reference 1
+                                                :type ("std::vector" type
+                                                     (:template-specifier 
+                                                        ( ("IdWeightPair" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [835 867])
+                                            ("tanimoto_sim" variable
+                                               (:pointer 1
+                                                :type "float")
+                                                (reparse-symbol arg-sub-list) [868 889]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [767 890])
+                                    ("BM25Similarity" function
+                                       (:prototype-flag t
+                                        :typemodifiers ("static")
+                                        :arguments 
+                                          ( ("lhs" variable
+                                               (:reference 1
+                                                :type ("std::vector" type
+                                                     (:template-specifier 
+                                                        ( ("IdWeightPair" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [921 953])
+                                            ("rhs" variable
+                                               (:reference 1
+                                                :type ("std::vector" type
+                                                     (:template-specifier 
+                                                        ( ("IdWeightPair" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [958 990])
+                                            ("bm25" variable
+                                               (:pointer 1
+                                                :type "float")
+                                                (reparse-symbol arg-sub-list) [991 1004]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [894 1005])
+                                    ("private" label nil (reparse-symbol classsubparts) [1139 1147])
+                                    ("CommonCalc" function
+                                       (:prototype-flag t
+                                        :typemodifiers ("static")
+                                        :arguments 
+                                          ( ("lhs" variable
+                                               (:reference 1
+                                                :type ("std::vector" type
+                                                     (:template-specifier 
+                                                        ( ("IdWeightPair" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [1173 1205])
+                                            ("rhs" variable
+                                               (:reference 1
+                                                :type ("std::vector" type
+                                                     (:template-specifier 
+                                                        ( ("IdWeightPair" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [1206 1238])
+                                            ("total_aa" variable
+                                               (:pointer 1
+                                                :type "float")
+                                                (reparse-symbol arg-sub-list) [1243 1260])
+                                            ("total_bb" variable
+                                               (:pointer 1
+                                                :type "float")
+                                                (reparse-symbol arg-sub-list) [1261 1278])
+                                            ("total_ab" variable
+                                               (:pointer 1
+                                                :type "float")
+                                                (reparse-symbol arg-sub-list) [1279 1296]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [1150 1297]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [609 1300]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [341 1303]))                  
+                :type "namespace")
+                nil [324 1329]))          
+      :file "similarity_calculator.h"
+      :pointmax 1427
+      :fsize 1493
+      :lastmodtime '(22878 19688 0 0)
+      :unmatched-syntax '((punctuation 552 . 553) (punctuation 477 . 478))
+      :lexical-table 
+        '(("APP_QZAP_SERVICE_SCORING3_COMMON_RELEVANCE_SIMILARITY_CALCULATOR_H")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("app/qzap/service/scoring3/common/relevance/similarity_calculator.h" include nil nil [1 78])
+            ("iostream" include (:system-flag t) nil [79 98])
+            ("QZAP" type
+               (:members 
+                  ( ("RELEVANCE" type
+                       (:members 
+                          ( ("CompareIdWeightPairFunc" function
+                               (:arguments 
+                                  ( ("lhs" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("IdWeightPair" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [168 193])
+                                    ("rhs" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("IdWeightPair" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [194 219]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [139 249])
+                            ("CommonCalc" function
+                               (:parent "SimilarityTool"
+                                :arguments 
+                                  ( ("lhs" variable
+                                       (:reference 1
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("IdWeightPair" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [283 315])
+                                    ("rhs" variable
+                                       (:reference 1
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("IdWeightPair" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [316 348])
+                                    ("total_aa" variable
+                                       (:pointer 1
+                                        :type "float")
+                                        (reparse-symbol arg-sub-list) [351 368])
+                                    ("total_bb" variable
+                                       (:pointer 1
+                                        :type "float")
+                                        (reparse-symbol arg-sub-list) [369 386])
+                                    ("total_ab" variable
+                                       (:pointer 1
+                                        :type "float")
+                                        (reparse-symbol arg-sub-list) [387 404]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [251 1316])
+                            ("CosineSimilarity" function
+                               (:parent "SimilarityTool"
+                                :arguments 
+                                  ( ("lhs" variable
+                                       (:reference 1
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("IdWeightPair" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [1356 1388])
+                                    ("rhs" variable
+                                       (:reference 1
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("IdWeightPair" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [1391 1423])
+                                    ("cosine_sim" variable
+                                       (:pointer 1
+                                        :type "float")
+                                        (reparse-symbol arg-sub-list) [1424 1443]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [1318 1787])
+                            ("TanimotoCoeffiency" function
+                               (:parent "SimilarityTool"
+                                :arguments 
+                                  ( ("lhs" variable
+                                       (:reference 1
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("IdWeightPair" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [1828 1860])
+                                    ("rhs" variable
+                                       (:reference 1
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("IdWeightPair" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [1863 1895])
+                                    ("tanimoto_sim" variable
+                                       (:pointer 1
+                                        :type "float")
+                                        (reparse-symbol arg-sub-list) [1896 1917]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [1788 2278])
+                            ("BM25Similarity" function
+                               (:parent "SimilarityTool"
+                                :arguments 
+                                  ( ("lhs" variable
+                                       (:reference 1
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("IdWeightPair" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [2316 2348])
+                                    ("rhs" variable
+                                       (:reference 1
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("IdWeightPair" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [2353 2385])
+                                    ("bm25" variable
+                                       (:pointer 1
+                                        :type "float")
+                                        (reparse-symbol arg-sub-list) [2386 2399]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [2280 2427]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [116 2430]))                  
+                :type "namespace")
+                nil [99 2456]))          
+      :file "similarity_calculator.cc"
+      :pointmax 2477
+      :fsize 2567
+      :lastmodtime '(22878 19688 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("APP_QZAP_SERVICE_SCORING3_COMMON_RELEVANCE_CATEGORY_RELEVANCE_H_" variable (:constant-flag t) nil [247 311])
+            ("map" include (:system-flag t) nil [313 327])
+            ("utility" include (:system-flag t) nil [328 346])
+            ("vector" include (:system-flag t) nil [347 364])
+            ("app/qzap/service/scoring3/common/relevance/category_mapping.pb.h" include nil nil [365 440])
+            ("app/qzap/service/scoring3/framework/functor_interface.h" include nil nil [441 507])
+            ("app/qzap/service/sunfish/attachment/gdt_meta.h" include nil nil [508 565])
+            ("QZAP" type
+               (:members 
+                  ( ("SCORING3" type
+                       (:members 
+                          ( ("CategoryPair" type
+                               (:typedef ("std::pair" type
+                                     (:template-specifier 
+                                        ( ("uint64_t" type nil nil nil)
+                                          ("uint64_t" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil)
+                                :type "typedef")
+                                (reparse-symbol namespacesubparts) [605 656])
+                            ("CategoryRelevance" type
+                               (:members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [685 692])
+                                    ("CategoryRelevance" function
+                                       (:constructor-flag t
+                                        :type ("CategoryRelevance" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [695 747])
+                                    ("CategoryRelevance" function
+                                       (:destructor-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [750 776])
+                                    ("Init" function
+                                       (:prototype-flag t
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [779 791])
+                                    ("UnInit" function
+                                       (:prototype-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [794 808])
+                                    ("BeginWork" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("query_accessor" variable
+                                               (:pointer 1
+                                                :type ("QueryAccessor" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [826 856]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [811 857])
+                                    ("DoWork" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("ad_accessor" variable
+                                               (:pointer 1
+                                                :type ("AdAccessor" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [879 903])
+                                            ("query_accessor" variable
+                                               (:pointer 1
+                                                :type ("QueryAccessor" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [910 940])
+                                            ("relevance" variable
+                                               (:pointer 1
+                                                :type "float")
+                                                (reparse-symbol arg-sub-list) [947 964]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [860 965])
+                                    ("EndWork" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("query_accessor" variable
+                                               (:pointer 1
+                                                :type ("QueryAccessor" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [981 1011]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [968 1012])
+                                    ("private" label nil (reparse-symbol classsubparts) [1015 1023])
+                                    ("CalcCategoryRelevance" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("plain_category" variable
+                                               (:pointer 1
+                                                :constant-flag t
+                                                :type ("PlainCategory" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1060 1096])
+                                            ("relevance" variable
+                                               (:pointer 1
+                                                :type "float")
+                                                (reparse-symbol arg-sub-list) [1103 1120]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [1026 1121])
+                                    ("CalcCategoryRelevanceNew" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("plain_category" variable
+                                               (:pointer 1
+                                                :constant-flag t
+                                                :type ("PlainCategory" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1161 1197])
+                                            ("relevance" variable
+                                               (:pointer 1
+                                                :type "float")
+                                                (reparse-symbol arg-sub-list) [1204 1221]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [1124 1222])
+                                    ("user_business_interest_vec_" variable (:type ("std::vector" type
+                                         (:template-specifier 
+                                            ( ("uint64_t" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [1225 1275])
+                                    ("ad_user_category_mapping_" variable (:type ("std::map" type
+                                         (:template-specifier 
+                                            ( ("CategoryPair" type nil nil nil)
+                                              ("float" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [1278 1334])
+                                    ("use_category_mapping_" variable (:type "bool") (reparse-symbol classsubparts) [1337 1364])
+                                    ("ad_relevance_total_num_" variable (:type "int") (reparse-symbol classsubparts) [1402 1430])
+                                    ("ad_relevance_nozero_num_" variable (:type "int") (reparse-symbol classsubparts) [1467 1496])
+                                    ("ad_relevance_no_usercategory_num_" variable (:type "int") (reparse-symbol classsubparts) [1527 1565])
+                                    ("ad_relevance_no_adcategory_num_" variable (:type "int") (reparse-symbol classsubparts) [1596 1632])
+                                    ("ad_relevance_value_" variable (:type "double") (reparse-symbol classsubparts) [1671 1698]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [658 1701]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [584 1704]))                  
+                :type "namespace")
+                nil [567 1729]))          
+      :file "category_relevance.h"
+      :pointmax 1826
+      :fsize 2159
+      :lastmodtime '(22878 19688 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("APP_QZAP_SERVICE_SCORING3_COMMON_RELEVANCE_CATEGORY_RELEVANCE_H_")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("app/qzap/service/scoring3/common/relevance/category_relevance.h" include nil nil [166 240])
+            ("app/qzap/common/tnm/Attr_API.h" include nil nil [241 282])
+            ("app/qzap/service/scoring3/common/protobuf_utils.h" include nil nil [283 343])
+            ("app/qzap/service/scoring3/data_accessor/exp_param_define.h" include nil nil [344 413])
+            ("app/qzap/service/sunfish/targeting/include/query_parser.h" include nil nil [414 482])
+            ("app/qzap/service/sunfish/targeting/include/repository_space_define.h" include nil nil [483 562])
+            ("DEFINE_string" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("scoring_category_mapping_config_path" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [578 615]))                  
+                :type "int")
+                nil [564 705])
+            ("DEFINE_bool" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("scoring_category_mapping_enable" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [718 750])
+                    ("" variable (:type ("false" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [755 761]))                  
+                :type "int")
+                nil [706 824])
+            ("QZAP" type
+               (:members 
+                  ( ("SCORING3" type
+                       (:members 
+                          ( ("kUserBusinessCategoryLowerBound" variable
+                               (:typemodifiers ("static")
+                                :constant-flag t
+                                :default-value "0xCE00000000"
+                                :type ("uint64_t" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [865 934])
+                            ("kUserBusinessCategoryUpperBound" variable
+                               (:typemodifiers ("static")
+                                :constant-flag t
+                                :default-value "0xCF00000000"
+                                :type ("uint64_t" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [935 1004])
+                            ("kAdCategoryLowerBound" variable
+                               (:typemodifiers ("static")
+                                :constant-flag t
+                                :default-value "0x500000000"
+                                :type ("uint64_t" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [1005 1063])
+                            ("kAttridUserRequestNumber" variable
+                               (:typemodifiers ("static")
+                                :constant-flag t
+                                :default-value "674891"
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [1097 1148])
+                            ("kAttridUserRequestHasCategoryNumber" variable
+                               (:typemodifiers ("static")
+                                :constant-flag t
+                                :default-value "674892"
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [1177 1239])
+                            ("kAttridAdRelevanceCalcNumber" variable
+                               (:typemodifiers ("static")
+                                :constant-flag t
+                                :default-value "674893"
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [1260 1315])
+                            ("kAttridAdRelevanceNonZeroNumber" variable
+                               (:typemodifiers ("static")
+                                :constant-flag t
+                                :default-value "674894"
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [1348 1406])
+                            ("kAttridAdRelevanceNoUserCategoryNumber" variable
+                               (:typemodifiers ("static")
+                                :constant-flag t
+                                :default-value "674895"
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [1433 1498])
+                            ("kAttridAdRelevanceNoAdCategoryNumber" variable
+                               (:typemodifiers ("static")
+                                :constant-flag t
+                                :default-value "674896"
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [1525 1588])
+                            ("kAttridAdRelevanceAverageValue" variable
+                               (:typemodifiers ("static")
+                                :constant-flag t
+                                :default-value "674897"
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [1623 1680])
+                            ("Init" function
+                               (:parent "CategoryRelevance"
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [1682 2488])
+                            ("UnInit" function
+                               (:parent "CategoryRelevance"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [2490 2526])
+                            ("BeginWork" function
+                               (:parent "CategoryRelevance"
+                                :arguments 
+                                  ( ("query_accessor" variable
+                                       (:pointer 1
+                                        :type ("QueryAccessor" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2562 2592]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [2528 3858])
+                            ("CalcCategoryRelevance" function
+                               (:parent "CategoryRelevance"
+                                :arguments 
+                                  ( ("plain_category" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("PlainCategory" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3971 4007])
+                                    ("relevance" variable
+                                       (:pointer 1
+                                        :type "float")
+                                        (reparse-symbol arg-sub-list) [4012 4029]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [3920 6682])
+                            ("CalcCategoryRelevanceNew" function
+                               (:parent "CategoryRelevance"
+                                :arguments 
+                                  ( ("plain_category" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("PlainCategory" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [6738 6774])
+                                    ("relevance" variable
+                                       (:pointer 1
+                                        :type "float")
+                                        (reparse-symbol arg-sub-list) [6779 6796]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [6684 7777])
+                            ("DoWork" function
+                               (:parent "CategoryRelevance"
+                                :arguments 
+                                  ( ("ad_accessor" variable
+                                       (:pointer 1
+                                        :type ("AdAccessor" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [7815 7839])
+                                    ("query_accessor" variable
+                                       (:pointer 1
+                                        :type ("QueryAccessor" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [7844 7874])
+                                    ("relevance" variable
+                                       (:pointer 1
+                                        :type "float")
+                                        (reparse-symbol arg-sub-list) [7879 7896]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [7779 8700])
+                            ("EndWork" function
+                               (:parent "CategoryRelevance"
+                                :arguments 
+                                  ( ("query_accessor" variable
+                                       (:pointer 1
+                                        :type ("QueryAccessor" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [8734 8764]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [8702 9242]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [843 9245]))                  
+                :type "namespace")
+                nil [826 9270]))          
+      :file "category_relevance.cc"
+      :pointmax 9290
+      :fsize 10165
+      :lastmodtime '(22878 19688 0 0)
+      :unmatched-syntax '((string 762 . 822) (string 657 . 703) (string 620 . 651))))
+  :file "!Users!ric!Desktop!trunk!app!qzap!service!scoring3!common!relevance!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

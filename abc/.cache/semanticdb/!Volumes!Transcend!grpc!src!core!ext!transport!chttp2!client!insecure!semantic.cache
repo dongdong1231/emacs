@@ -1,0 +1,141 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("grpc/grpc.h" include (:system-flag t) nil [605 627])
+            ("string.h" include (:system-flag t) nil [629 648])
+            ("grpc/support/alloc.h" include (:system-flag t) nil [650 681])
+            ("grpc/support/string_util.h" include (:system-flag t) nil [682 719])
+            ("src/core/ext/filters/client_channel/client_channel.h" include nil nil [721 784])
+            ("src/core/ext/filters/client_channel/resolver_registry.h" include nil nil [785 851])
+            ("src/core/ext/transport/chttp2/client/chttp2_connector.h" include nil nil [852 918])
+            ("src/core/lib/channel/channel_args.h" include nil nil [919 965])
+            ("src/core/lib/surface/api_trace.h" include nil nil [966 1009])
+            ("src/core/lib/surface/channel.h" include nil nil [1010 1051])
+            ("client_channel_factory_ref" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("cc_factory" variable
+                       (:pointer 1
+                        :type ("grpc_client_channel_factory" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1097 1137]))                  
+                :type "void")
+                nil [1053 1140])
+            ("client_channel_factory_unref" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("cc_factory" variable
+                       (:pointer 1
+                        :type ("grpc_client_channel_factory" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1188 1228]))                  
+                :type "void")
+                nil [1142 1231])
+            ("client_channel_factory_create_subchannel" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("cc_factory" variable
+                       (:pointer 1
+                        :type ("grpc_client_channel_factory" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1303 1343])
+                    ("args" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grpc_subchannel_args" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1344 1377]))                  
+                :type ("grpc_subchannel" type (:type "class") nil nil))
+                nil [1233 1554])
+            ("client_channel_factory_create_channel" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("cc_factory" variable
+                       (:pointer 1
+                        :type ("grpc_client_channel_factory" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1620 1660])
+                    ("target" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1661 1680])
+                    ("type" variable (:type ("grpc_client_channel_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1685 1715])
+                    ("args" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grpc_channel_args" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1716 1746]))                  
+                :type ("grpc_channel" type (:type "class") nil nil))
+                nil [1556 2419])
+            ("client_channel_factory_vtable" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :default-value "{client_channel_factory_ref, client_channel_factory_unref,
+     client_channel_factory_create_subchannel,
+     client_channel_factory_create_channel}"
+                :type ("grpc_client_channel_factory_vtable" type (:type "class") nil nil))
+                nil [2421 2655])
+            ("client_channel_factory" variable
+               (:typemodifiers ("static")
+                :default-value "{
+    &client_channel_factory_vtable}"
+                :type ("grpc_client_channel_factory" type (:type "class") nil nil))
+                nil [2657 2755])
+            ("grpc_insecure_channel_create" function
+               (:pointer 1
+                :arguments 
+                  ( ("target" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2977 2996])
+                    ("args" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grpc_channel_args" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3040 3070])
+                    ("reserved" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3114 3129]))                  
+                :type ("grpc_channel" type (:type "class") nil nil))
+                nil [2934 4025]))          
+      :file "channel_create.cc"
+      :pointmax 4026
+      :fsize 4025
+      :lastmodtime '(23087 42003 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("grpc/grpc.h" include (:system-flag t) nil [605 627])
+            ("grpc/grpc_posix.h" include (:system-flag t) nil [628 656])
+            ("grpc/support/log.h" include (:system-flag t) nil [657 686])
+            ("grpc/support/port_platform.h" include (:system-flag t) nil [687 726])
+            ("grpc_insecure_channel_create_from_fd" function
+               (:pointer 1
+                :arguments 
+                  ( ("target" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2640 2659])
+                    ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [2660 2667])
+                    ("args" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grpc_channel_args" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2668 2698]))                  
+                :type ("grpc_channel" type (:type "class") nil nil))
+                nil [2584 2737]))          
+      :file "channel_create_posix.cc"
+      :pointmax 2779
+      :fsize 2778
+      :lastmodtime '(23087 42003 0 0)
+      :unmatched-syntax nil))
+  :file "!Volumes!Transcend!grpc!src!core!ext!transport!chttp2!client!insecure!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

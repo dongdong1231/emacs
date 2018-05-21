@@ -1,0 +1,374 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("GRPC_CORE_EXT_FILTERS_CLIENT_CHANNEL_LB_POLICY_SUBCHANNEL_LIST_H" variable (:constant-flag t) nil [686 750])
+            ("src/core/ext/filters/client_channel/lb_policy_registry.h" include nil nil [752 819])
+            ("src/core/ext/filters/client_channel/subchannel.h" include nil nil [820 879])
+            ("src/core/lib/debug/trace.h" include nil nil [880 917])
+            ("src/core/lib/transport/connectivity_state.h" include nil nil [918 972])
+            ("grpc_lb_subchannel_list" type
+               (:typedef ("grpc_lb_subchannel_list" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [1707 1770])
+            ("grpc_lb_subchannel_data" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("subchannel_list" variable
+                             (:pointer 1
+                              :type ("grpc_lb_subchannel_list" type (:type "class") nil nil))
+                              (reparse-symbol classsubparts) [1838 1879])
+                          ("subchannel" variable
+                             (:pointer 1
+                              :type ("grpc_subchannel" type (:type "class") nil nil))
+                              (reparse-symbol classsubparts) [1909 1937])
+                          ("connected_subchannel" variable
+                             (:pointer 1
+                              :type ("grpc_connected_subchannel" type (:type "class") nil nil))
+                              (reparse-symbol classsubparts) [1940 1988])
+                          ("connectivity_notification_pending" variable (:type "bool") (reparse-symbol classsubparts) [2040 2079])
+                          ("connectivity_changed_closure" variable (:type ("grpc_closure" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2148 2190])
+                          ("prev_connectivity_state" variable (:type ("grpc_connectivity_state" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2348 2396])
+                          ("curr_connectivity_state" variable (:type ("grpc_connectivity_state" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2399 2447])
+                          ("pending_connectivity_state_unsafe" variable (:type ("grpc_connectivity_state" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2661 2719])
+                          ("user_data" variable
+                             (:pointer 1
+                              :type "void")
+                              (reparse-symbol classsubparts) [2765 2781])
+                          ("user_data_vtable" variable
+                             (:pointer 1
+                              :constant-flag t
+                              :type ("grpc_lb_user_data_vtable" type (:type "class") nil nil))
+                              (reparse-symbol classsubparts) [2829 2878]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [1772 2905])
+            ("grpc_lb_subchannel_data_unref_subchannel" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("sd" variable
+                       (:pointer 1
+                        :type ("grpc_lb_subchannel_data" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2996 3024])
+                    ("reason" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3071 3090]))                  
+                :type "void")
+                nil [2950 3091])
+            ("grpc_lb_subchannel_data_start_connectivity_watch" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("sd" variable
+                       (:pointer 1
+                        :type ("grpc_lb_subchannel_data" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3398 3426]))                  
+                :type "void")
+                nil [3339 3427])
+            ("grpc_lb_subchannel_data_stop_connectivity_watch" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("sd" variable
+                       (:pointer 1
+                        :type ("grpc_lb_subchannel_data" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3548 3576]))                  
+                :type "void")
+                nil [3490 3577])
+            ("grpc_lb_subchannel_list" type
+               (:members 
+                  ( ("policy" variable
+                       (:pointer 1
+                        :type ("grpc_lb_policy" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3652 3675])
+                    ("tracer" variable
+                       (:pointer 1
+                        :type ("grpc_core::TraceFlag" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3679 3708])
+                    ("num_subchannels" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3741 3764])
+                    ("subchannels" variable
+                       (:pointer 1
+                        :type ("grpc_lb_subchannel_data" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3767 3804])
+                    ("checking_subchannel" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4143 4170])
+                    ("num_ready" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4223 4240])
+                    ("num_transient_failures" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4304 4334])
+                    ("num_shutdown" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4389 4409])
+                    ("num_idle" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4460 4476])
+                    ("refcount" variable (:type ("gpr_refcount" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4612 4634])
+                    ("shutting_down" variable (:type "bool") (reparse-symbol classsubparts) [4824 4843]))                  
+                :type "struct")
+                nil [3579 4846])
+            ("grpc_lb_subchannel_list_create" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("p" variable
+                       (:pointer 1
+                        :type ("grpc_lb_policy" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4909 4927])
+                    ("tracer" variable
+                       (:pointer 1
+                        :type ("grpc_core::TraceFlag" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4928 4957])
+                    ("addresses" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grpc_lb_addresses" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4962 4997])
+                    ("args" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grpc_lb_policy_args" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4998 5030])
+                    ("connectivity_changed_cb" variable (:type ("grpc_iomgr_cb_func" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5035 5078]))                  
+                :type ("grpc_lb_subchannel_list" type (:type "class") nil nil))
+                nil [4848 5079])
+            ("grpc_lb_subchannel_list_ref" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("subchannel_list" variable
+                       (:pointer 1
+                        :type ("grpc_lb_subchannel_list" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5114 5155])
+                    ("reason" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [5189 5208]))                  
+                :type "void")
+                nil [5081 5209])
+            ("grpc_lb_subchannel_list_unref" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("subchannel_list" variable
+                       (:pointer 1
+                        :type ("grpc_lb_subchannel_list" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5246 5287])
+                    ("reason" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [5323 5342]))                  
+                :type "void")
+                nil [5211 5343])
+            ("grpc_lb_subchannel_list_ref_for_connectivity_watch" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("subchannel_list" variable
+                       (:pointer 1
+                        :type ("grpc_lb_subchannel_list" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5550 5591])
+                    ("reason" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [5592 5611]))                  
+                :type "void")
+                nil [5489 5612])
+            ("grpc_lb_subchannel_list_unref_for_connectivity_watch" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("subchannel_list" variable
+                       (:pointer 1
+                        :type ("grpc_lb_subchannel_list" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5676 5717])
+                    ("reason" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [5718 5737]))                  
+                :type "void")
+                nil [5613 5738])
+            ("grpc_lb_subchannel_list_shutdown_and_unref" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("subchannel_list" variable
+                       (:pointer 1
+                        :type ("grpc_lb_subchannel_list" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5941 5982])
+                    ("reason" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [5983 6002]))                  
+                :type "void")
+                nil [5888 6003]))          
+      :file "subchannel_list.h"
+      :pointmax 6083
+      :fsize 6082
+      :lastmodtime '(23085 58366 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("GRPC_CORE_EXT_FILTERS_CLIENT_CHANNEL_LB_POLICY_SUBCHANNEL_LIST_H")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("string.h" include (:system-flag t) nil [605 624])
+            ("grpc/support/alloc.h" include (:system-flag t) nil [626 657])
+            ("src/core/ext/filters/client_channel/lb_policy/subchannel_list.h" include nil nil [659 733])
+            ("src/core/lib/channel/channel_args.h" include nil nil [734 780])
+            ("src/core/lib/debug/trace.h" include nil nil [781 818])
+            ("src/core/lib/iomgr/closure.h" include nil nil [819 858])
+            ("src/core/lib/iomgr/combiner.h" include nil nil [859 899])
+            ("src/core/lib/iomgr/sockaddr_utils.h" include nil nil [900 946])
+            ("src/core/lib/transport/connectivity_state.h" include nil nil [947 1001])
+            ("grpc_lb_subchannel_data_unref_subchannel" function
+               (:arguments 
+                  ( ("sd" variable
+                       (:pointer 1
+                        :type ("grpc_lb_subchannel_data" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1049 1077])
+                    ("reason" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1124 1143]))                  
+                :type "void")
+                nil [1003 2070])
+            ("grpc_lb_subchannel_data_start_connectivity_watch" function
+               (:arguments 
+                  ( ("sd" variable
+                       (:pointer 1
+                        :type ("grpc_lb_subchannel_data" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2131 2159]))                  
+                :type "void")
+                nil [2072 2876])
+            ("grpc_lb_subchannel_data_stop_connectivity_watch" function
+               (:arguments 
+                  ( ("sd" variable
+                       (:pointer 1
+                        :type ("grpc_lb_subchannel_data" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2936 2964]))                  
+                :type "void")
+                nil [2878 3518])
+            ("grpc_lb_subchannel_list_create" function
+               (:pointer 1
+                :arguments 
+                  ( ("p" variable
+                       (:pointer 1
+                        :type ("grpc_lb_policy" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3581 3599])
+                    ("tracer" variable
+                       (:pointer 1
+                        :type ("grpc_core::TraceFlag" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3600 3629])
+                    ("addresses" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grpc_lb_addresses" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3634 3669])
+                    ("args" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grpc_lb_policy_args" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3670 3702])
+                    ("connectivity_changed_cb" variable (:type ("grpc_iomgr_cb_func" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3707 3750]))                  
+                :type ("grpc_lb_subchannel_list" type (:type "class") nil nil))
+                nil [3520 7290])
+            ("subchannel_list_destroy" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("subchannel_list" variable
+                       (:pointer 1
+                        :type ("grpc_lb_subchannel_list" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7328 7369]))                  
+                :type "void")
+                nil [7292 7871])
+            ("grpc_lb_subchannel_list_ref" function
+               (:arguments 
+                  ( ("subchannel_list" variable
+                       (:pointer 1
+                        :type ("grpc_lb_subchannel_list" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7906 7947])
+                    ("reason" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [7981 8000]))                  
+                :type "void")
+                nil [7873 8419])
+            ("grpc_lb_subchannel_list_unref" function
+               (:arguments 
+                  ( ("subchannel_list" variable
+                       (:pointer 1
+                        :type ("grpc_lb_subchannel_list" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8456 8497])
+                    ("reason" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [8533 8552]))                  
+                :type "void")
+                nil [8421 9048])
+            ("grpc_lb_subchannel_list_ref_for_connectivity_watch" function
+               (:arguments 
+                  ( ("subchannel_list" variable
+                       (:pointer 1
+                        :type ("grpc_lb_subchannel_list" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9111 9152])
+                    ("reason" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [9153 9172]))                  
+                :type "void")
+                nil [9050 9292])
+            ("grpc_lb_subchannel_list_unref_for_connectivity_watch" function
+               (:arguments 
+                  ( ("subchannel_list" variable
+                       (:pointer 1
+                        :type ("grpc_lb_subchannel_list" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9357 9398])
+                    ("reason" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [9399 9418]))                  
+                :type "void")
+                nil [9294 9542])
+            ("subchannel_data_cancel_connectivity_watch" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("sd" variable
+                       (:pointer 1
+                        :type ("grpc_lb_subchannel_data" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9603 9631])
+                    ("reason" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [9632 9651]))                  
+                :type "void")
+                nil [9544 10269])
+            ("grpc_lb_subchannel_list_shutdown_and_unref" function
+               (:arguments 
+                  ( ("subchannel_list" variable
+                       (:pointer 1
+                        :type ("grpc_lb_subchannel_list" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10324 10365])
+                    ("reason" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [10366 10385]))                  
+                :type "void")
+                nil [10271 11308]))          
+      :file "subchannel_list.cc"
+      :pointmax 11309
+      :fsize 11308
+      :lastmodtime '(23085 58366 0 0)
+      :unmatched-syntax nil))
+  :file "!Volumes!Transcend!grpc!src!core!ext!filters!client_channel!lb_policy!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

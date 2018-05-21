@@ -1,0 +1,116 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode java-mode
+      :tags 
+        '( ("org.apache.impala.compat" package nil nil [803 836])
+            ("java.util.List" include nil nil [838 860])
+            ("org.apache.hadoop.hive.common.StatsSetupConst" include nil nil [862 915])
+            ("org.apache.hadoop.hive.conf.HiveConf" include nil nil [916 960])
+            ("org.apache.hadoop.hive.metastore.IMetaStoreClient" include nil nil [961 1018])
+            ("org.apache.hadoop.hive.metastore.MetaStoreUtils" include nil nil [1019 1074])
+            ("org.apache.hadoop.hive.metastore.Warehouse" include nil nil [1075 1125])
+            ("org.apache.hadoop.hive.metastore.api.InvalidOperationException" include nil nil [1126 1196])
+            ("org.apache.hadoop.hive.metastore.api.MetaException" include nil nil [1197 1255])
+            ("org.apache.hadoop.hive.metastore.api.Partition" include nil nil [1256 1310])
+            ("org.apache.hive.service.rpc.thrift.TGetColumnsReq" include nil nil [1311 1368])
+            ("org.apache.hive.service.rpc.thrift.TGetFunctionsReq" include nil nil [1369 1428])
+            ("org.apache.hive.service.rpc.thrift.TGetSchemasReq" include nil nil [1429 1486])
+            ("org.apache.hive.service.rpc.thrift.TGetTablesReq" include nil nil [1487 1543])
+            ("org.apache.impala.authorization.User" include nil nil [1544 1588])
+            ("org.apache.impala.common.ImpalaException" include nil nil [1589 1637])
+            ("org.apache.impala.common.Pair" include nil nil [1638 1675])
+            ("org.apache.impala.service.Frontend" include nil nil [1676 1718])
+            ("org.apache.impala.service.MetadataOp" include nil nil [1719 1763])
+            ("org.apache.impala.thrift.TMetadataOpRequest" include nil nil [1764 1815])
+            ("org.apache.impala.thrift.TResultSet" include nil nil [1816 1859])
+            ("org.apache.thrift.TException" include nil nil [1860 1896])
+            ("MetastoreShim" type
+               (:typemodifiers ("public")
+                :members 
+                  ( ("validateName" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("name" variable (:type "String") (reparse-symbol formal_parameters) [2227 2238]))                          
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [2192 2297])
+                    ("alterPartition" function
+                       (:throws ("InvalidOperationException" "MetaException" "TException")
+                        :typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("client" variable (:type "IMetaStoreClient") (reparse-symbol formal_parameters) [2437 2460])
+                            ("partition" variable (:type "Partition") (reparse-symbol formal_parameters) [2462 2481]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [2403 2657])
+                    ("alterPartitions" function
+                       (:throws ("InvalidOperationException" "MetaException" "TException")
+                        :typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("client" variable (:type "IMetaStoreClient") (reparse-symbol formal_parameters) [2799 2822])
+                            ("dbName" variable (:type "String") (reparse-symbol formal_parameters) [2824 2837])
+                            ("tableName" variable (:type "String") (reparse-symbol formal_parameters) [2845 2861])
+                            ("" variable (:type "partitions") (reparse-symbol formal_parameters) [2879 2889]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [2764 3028])
+                    ("updatePartitionStatsFast" function
+                       (:throws ("MetaException")
+                        :typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("partition" variable (:type "Partition") (reparse-symbol formal_parameters) [3185 3204])
+                            ("warehouse" variable (:type "Warehouse") (reparse-symbol formal_parameters) [3206 3225]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [3141 3332])
+                    ("metastoreBatchRetrieveObjectsMaxConfigKey" function
+                       (:typemodifiers ("public" "static")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [3442 3590])
+                    ("statsGeneratedViaStatsTaskParam" function (:constructor-flag t) (reparse-symbol class_member_declaration) [3792 3910])
+                    ("execGetFunctions" function
+                       (:throws ("ImpalaException")
+                        :typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("frontend" variable (:type "Frontend") (reparse-symbol formal_parameters) [3963 3980])
+                            ("request" variable (:type "TMetadataOpRequest") (reparse-symbol formal_parameters) [3982 4008])
+                            ("user" variable (:type "User") (reparse-symbol formal_parameters) [4010 4019]))                          
+                        :type "TResultSet")
+                        (reparse-symbol class_member_declaration) [3914 4235])
+                    ("execGetColumns" function
+                       (:throws ("ImpalaException")
+                        :typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("frontend" variable (:type "Frontend") (reparse-symbol formal_parameters) [4286 4303])
+                            ("request" variable (:type "TMetadataOpRequest") (reparse-symbol formal_parameters) [4305 4331])
+                            ("user" variable (:type "User") (reparse-symbol formal_parameters) [4333 4342]))                          
+                        :type "TResultSet")
+                        (reparse-symbol class_member_declaration) [4239 4569])
+                    ("execGetTables" function
+                       (:throws ("ImpalaException")
+                        :typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("frontend" variable (:type "Frontend") (reparse-symbol formal_parameters) [4619 4636])
+                            ("request" variable (:type "TMetadataOpRequest") (reparse-symbol formal_parameters) [4638 4664])
+                            ("user" variable (:type "User") (reparse-symbol formal_parameters) [4666 4675]))                          
+                        :type "TResultSet")
+                        (reparse-symbol class_member_declaration) [4573 4899])
+                    ("execGetSchemas" function
+                       (:throws ("ImpalaException")
+                        :typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("frontend" variable (:type "Frontend") (reparse-symbol formal_parameters) [4950 4967])
+                            ("request" variable (:type "TMetadataOpRequest") (reparse-symbol formal_parameters) [4969 4995])
+                            ("user" variable (:type "User") (reparse-symbol formal_parameters) [4997 5006]))                          
+                        :type "TResultSet")
+                        (reparse-symbol class_member_declaration) [4903 5193]))                  
+                :type "class")
+                nil [2069 5195]))          
+      :file "MetastoreShim.java"
+      :pointmax 5196
+      :fsize 5195
+      :lastmodtime '(22925 26281 0 0)
+      :unmatched-syntax '((GT 3790 . 3791) (COMMA 3782 . 3783) (PUBLIC 3757 . 3763) (LT 3775 . 3776) (GT 2877 . 2878) (IDENTIFIER 2863 . 2867) (LT 2867 . 2868))))
+  :file "!Volumes!Transcend!Impala!fe!src!compat-hive-2!java!org!apache!impala!compat!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

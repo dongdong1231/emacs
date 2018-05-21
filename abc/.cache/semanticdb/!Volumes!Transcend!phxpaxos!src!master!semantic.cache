@@ -1,0 +1,820 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("mutex" include (:system-flag t) nil [749 765])
+            ("phxpaxos/sm.h" include nil nil [766 790])
+            ("commdef.h" include nil nil [791 811])
+            ("phxpaxos/def.h" include nil nil [812 837])
+            ("config_include.h" include nil nil [838 865])
+            ("master_sm.pb.h" include nil nil [866 891])
+            ("master_sm.h" include nil nil [892 914])
+            ("master_variables_store.h" include nil nil [915 950])
+            ("utils_include.h" include nil nil [951 977])
+            ("phxpaxos" type
+               (:members 
+                  ( ("MasterOperatorType" type
+                       (:members 
+                          ( ("MasterOperatorType_Complete" variable
+                               (:constant-flag t
+                                :default-value (1061 1062)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [1031 1062]))                          
+                        :type "enum")
+                        (reparse-symbol namespacesubparts) [1001 1066])
+                    ("MasterStateMachine" type
+                       (:superclasses 
+                          ( ("InsideSM" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [1113 1120])
+                            ("MasterStateMachine" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("poLogStorage" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("LogStorage" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1153 1185])
+                                    ("iMyNodeID" variable
+                                       (:constant-flag t
+                                        :type ("nodeid_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1194 1219])
+                                    ("iGroupIdx" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1228 1248])
+                                    ("pMasterChangeCallback" variable (:type ("MasterChangeCallback" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1257 1300]))                                  
+                                :type ("MasterStateMachine" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1125 1301])
+                            ("MasterStateMachine" function
+                               (:prototype-flag t
+                                :destructor-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [1306 1328])
+                            ("Execute" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("iGroupIdx" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1347 1367])
+                                    ("llInstanceID" variable
+                                       (:constant-flag t
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1368 1396])
+                                    ("sValue" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1397 1424])
+                                    ("poSMCtx" variable
+                                       (:pointer 1
+                                        :type ("SMCtx" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1425 1441]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [1334 1442])
+                            ("SMID" function
+                               (:methodconst-flag t
+                                :constant-flag t
+                                :type "int")
+                                (reparse-symbol classsubparts) [1448 1494])
+                            ("ExecuteForCheckpoint" function
+                               (:arguments 
+                                  ( ("iGroupIdx" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1526 1546])
+                                    ("llInstanceID" variable
+                                       (:constant-flag t
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1547 1575])
+                                    ("sPaxosValue" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1588 1620]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [1500 1653])
+                            ("GetCheckpointInstanceID" function
+                               (:methodconst-flag t
+                                :constant-flag t
+                                :arguments 
+                                  ( ("iGroupIdx" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1698 1718]))                                  
+                                :type ("uint64_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1659 1770])
+                            ("BeforePropose" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("iGroupIdx" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1795 1815])
+                                    ("sValue" variable
+                                       (:reference 1
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1816 1837]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1776 1838])
+                            ("NeedCallBeforePropose" function
+                               (:prototype-flag t
+                                :constant-flag t
+                                :type "bool")
+                                (reparse-symbol classsubparts) [1844 1879])
+                            ("public" label nil (reparse-symbol classsubparts) [1881 1888])
+                            ("GetCheckpointState" function
+                               (:arguments 
+                                  ( ("iGroupIdx" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1916 1936])
+                                    ("sDirPath" variable
+                                       (:reference 1
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1937 1960])
+                                    ("vecFileList" variable
+                                       (:reference 1
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("std::string" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [1973 2012]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [1893 2042])
+                            ("LoadCheckpointState" function
+                               (:arguments 
+                                  ( ("iGroupIdx" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [2072 2092])
+                                    ("sCheckpointTmpFileDirPath" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2093 2139])
+                                    ("vecFileList" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("std::string" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [2152 2197])
+                                    ("llCheckpointInstanceID" variable
+                                       (:constant-flag t
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2198 2236]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [2048 2266])
+                            ("LockCheckpointState" function (:type "int") (reparse-symbol classsubparts) [2272 2327])
+                            ("UnLockCheckpointState" function (:type "void") (reparse-symbol classsubparts) [2333 2373])
+                            ("public" label nil (reparse-symbol classsubparts) [2375 2382])
+                            ("Init" function
+                               (:prototype-flag t
+                                :type "int")
+                                (reparse-symbol classsubparts) [2387 2398])
+                            ("LearnMaster" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("llInstanceID" variable
+                                       (:constant-flag t
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2433 2461])
+                                    ("oMasterOper" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("MasterOperator" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2474 2509])
+                                    ("llAbsMasterTimeout" variable
+                                       (:constant-flag t
+                                        :default-value "0"
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2522 2559]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [2404 2561])
+                            ("GetMaster" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :constant-flag t
+                                :type ("nodeid_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2567 2600])
+                            ("GetMasterWithVersion" function
+                               (:prototype-flag t
+                                :constant-flag t
+                                :arguments 
+                                  ( ("llVersion" variable
+                                       (:reference 1
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2642 2663]))                                  
+                                :type ("nodeid_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2606 2664])
+                            ("IsIMMaster" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :constant-flag t
+                                :type "bool")
+                                (reparse-symbol classsubparts) [2670 2700])
+                            ("public" label nil (reparse-symbol classsubparts) [2702 2709])
+                            ("UpdateMasterToStore" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("llMasterNodeID" variable
+                                       (:constant-flag t
+                                        :type ("nodeid_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2738 2768])
+                                    ("llVersion" variable
+                                       (:constant-flag t
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2769 2794])
+                                    ("iLeaseTime" variable
+                                       (:constant-flag t
+                                        :type ("uint32_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2795 2821]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [2714 2822])
+                            ("SafeGetMaster" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("iMasterNodeID" variable
+                                       (:reference 1
+                                        :type ("nodeid_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2847 2872])
+                                    ("llMasterVersion" variable
+                                       (:reference 1
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2873 2900]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2828 2901])
+                            ("public" label nil (reparse-symbol classsubparts) [2903 2910])
+                            ("MakeOpValue" function
+                               (:prototype-flag t
+                                :typemodifiers ("static")
+                                :arguments 
+                                  ( ("iNodeID" variable
+                                       (:constant-flag t
+                                        :type ("nodeid_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2952 2975])
+                                    ("llVersion" variable
+                                       (:constant-flag t
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2988 3013])
+                                    ("iTimeout" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [3026 3045])
+                                    ("iOp" variable
+                                       (:constant-flag t
+                                        :type ("MasterOperatorType" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3058 3087])
+                                    ("sPaxosValue" variable
+                                       (:reference 1
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3100 3126]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [2915 3127])
+                            ("public" label nil (reparse-symbol classsubparts) [3129 3136])
+                            ("GetCheckpointBuffer" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("sCPBuffer" variable
+                                       (:reference 1
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3165 3189]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [3141 3190])
+                            ("UpdateByCheckpoint" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("sCPBuffer" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3219 3249])
+                                    ("bChange" variable
+                                       (:reference 1
+                                        :type "bool")
+                                        (reparse-symbol arg-sub-list) [3250 3265]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [3196 3266])
+                            ("private" label nil (reparse-symbol classsubparts) [3268 3276])
+                            ("m_iMyGroupIdx" variable (:type "int") (reparse-symbol classsubparts) [3281 3299])
+                            ("m_iMyNodeID" variable (:type ("nodeid_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3304 3325])
+                            ("private" label nil (reparse-symbol classsubparts) [3327 3335])
+                            ("m_oMVStore" variable (:type ("MasterVariablesStore" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3340 3372])
+                            ("m_iMasterNodeID" variable (:type ("nodeid_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3378 3403])
+                            ("m_llMasterVersion" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3408 3435])
+                            ("m_iLeaseTime" variable (:type "int") (reparse-symbol classsubparts) [3440 3457])
+                            ("m_llAbsExpireTime" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3462 3489])
+                            ("m_oMutex" variable (:type ("std::mutex" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3495 3515])
+                            ("m_pMasterChangeCallback" variable (:type ("MasterChangeCallback" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3521 3566]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [1068 3569]))                  
+                :type "namespace")
+                nil [979 3572]))          
+      :file "master_sm.h"
+      :pointmax 3573
+      :fsize 3572
+      :lastmodtime '(23254 47877 0 0)
+      :unmatched-syntax '((symbol 743 . 747) (symbol 736 . 742) (punctuation 735 . 736)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("string" include (:system-flag t) nil [749 766])
+            ("vector" include (:system-flag t) nil [767 784])
+            ("inttypes.h" include (:system-flag t) nil [785 806])
+            ("phxpaxos/storage.h" include nil nil [807 836])
+            ("paxos_msg.pb.h" include nil nil [837 862])
+            ("phxpaxos" type
+               (:members 
+                  ( ("MasterVariablesStore" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [915 922])
+                            ("MasterVariablesStore" function
+                               (:prototype-flag t
+                                :destructor-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [986 1010])
+                            ("private" label nil (reparse-symbol classsubparts) [1188 1196])
+                            ((("m_poLogStorage" 1 nil nil nil)) variable (:type ("LogStorage" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1210 1238]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [886 1232]))                  
+                :type "namespace")
+                nil [864 1235]))          
+      :file "master_variables_store.h"
+      :pointmax 1236
+      :fsize 1235
+      :lastmodtime '(23255 2703 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("master_sm.h" include nil nil [735 757])
+            ("master_sm.pb.h" include nil nil [758 783])
+            ("math.h" include (:system-flag t) nil [784 801])
+            ("commdef.h" include nil nil [802 822])
+            ("comm_include.h" include nil nil [823 848])
+            ("phxpaxos" type
+               (:members 
+                  ( ("MasterStateMachine" function
+                       (:constructor-flag t
+                        :parent "MasterStateMachine"
+                        :arguments 
+                          ( ("poLogStorage" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("LogStorage" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [918 950])
+                            ("iMyNodeID" variable
+                               (:constant-flag t
+                                :type ("nodeid_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [955 980])
+                            ("iGroupIdx" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [985 1005])
+                            ("pMasterChangeCallback" variable (:type ("MasterChangeCallback" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1010 1053]))                          
+                        :type ("MasterStateMachine" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [872 1317])
+                    ("MasterStateMachine" function
+                       (:destructor-flag t
+                        :parent "MasterStateMachine"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1319 1366])
+                    ("Init" function
+                       (:parent "MasterStateMachine"
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [1462 2339])
+                    ("UpdateMasterToStore" function
+                       (:parent "MasterStateMachine"
+                        :arguments 
+                          ( ("llMasterNodeID" variable
+                               (:constant-flag t
+                                :type ("nodeid_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2387 2417])
+                            ("llVersion" variable
+                               (:constant-flag t
+                                :type ("uint64_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2418 2443])
+                            ("iLeaseTime" variable
+                               (:constant-flag t
+                                :type ("uint32_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2444 2470]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [2341 2773])
+                    ("LearnMaster" function
+                       (:parent "MasterStateMachine"
+                        :arguments 
+                          ( ("llInstanceID" variable
+                               (:constant-flag t
+                                :type ("uint64_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2822 2850])
+                            ("oMasterOper" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("MasterOperator" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2859 2894])
+                            ("llAbsMasterTimeout" variable
+                               (:constant-flag t
+                                :type ("uint64_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2903 2937]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [2775 5373])
+                    ("SafeGetMaster" function
+                       (:parent "MasterStateMachine"
+                        :arguments 
+                          ( ("iMasterNodeID" variable
+                               (:reference 1
+                                :type ("nodeid_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5416 5441])
+                            ("llMasterVersion" variable
+                               (:reference 1
+                                :type ("uint64_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5442 5469]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [5375 5733])
+                    ("GetMaster" function
+                       (:methodconst-flag t
+                        :parent "MasterStateMachine"
+                        :constant-flag t
+                        :type ("nodeid_t" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [5735 5914])
+                    ("GetMasterWithVersion" function
+                       (:parent "MasterStateMachine"
+                        :constant-flag t
+                        :arguments 
+                          ( ("llVersion" variable
+                               (:reference 1
+                                :type ("uint64_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5974 5995]))                          
+                        :type ("nodeid_t" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [5916 6109])
+                    ("IsIMMaster" function
+                       (:methodconst-flag t
+                        :parent "MasterStateMachine"
+                        :constant-flag t
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [6111 6249])
+                    ("Execute" function
+                       (:parent "MasterStateMachine"
+                        :arguments 
+                          ( ("iGroupIdx" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [6380 6400])
+                            ("llInstanceID" variable
+                               (:constant-flag t
+                                :type ("uint64_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6401 6429])
+                            ("sValue" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6438 6465])
+                            ("poSMCtx" variable
+                               (:pointer 1
+                                :type ("SMCtx" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6466 6482]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [6345 7424])
+                    ("MakeOpValue" function
+                       (:parent "MasterStateMachine"
+                        :arguments 
+                          ( ("iNodeID" variable
+                               (:constant-flag t
+                                :type ("nodeid_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7528 7551])
+                            ("llVersion" variable
+                               (:constant-flag t
+                                :type ("uint64_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7560 7585])
+                            ("iTimeout" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [7594 7613])
+                            ("iOp" variable
+                               (:constant-flag t
+                                :type ("MasterOperatorType" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7622 7651])
+                            ("sPaxosValue" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7660 7686]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [7480 7980])
+                    ("GetCheckpointBuffer" function
+                       (:parent "MasterStateMachine"
+                        :arguments 
+                          ( ("sCPBuffer" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [8090 8114]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [8044 8587])
+                    ("UpdateByCheckpoint" function
+                       (:parent "MasterStateMachine"
+                        :arguments 
+                          ( ("sCPBuffer" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [8634 8664])
+                            ("bChange" variable
+                               (:reference 1
+                                :type "bool")
+                                (reparse-symbol arg-sub-list) [8665 8680]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [8589 10367])
+                    ("BeforePropose" function
+                       (:parent "MasterStateMachine"
+                        :arguments 
+                          ( ("iGroupIdx" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [10468 10488])
+                            ("sValue" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [10489 10510]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [10427 10871])
+                    ("NeedCallBeforePropose" function
+                       (:parent "MasterStateMachine"
+                        :constant-flag t
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [10873 10950]))                  
+                :type "namespace")
+                nil [850 10953]))          
+      :file "master_sm.cpp"
+      :pointmax 10954
+      :fsize 10953
+      :lastmodtime '(23254 47905 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("master_variables_store.h" include nil nil [735 770])
+            ("db.h" include nil nil [771 786])
+            ("phxpaxos" type
+               (:members 
+                  ( ("MasterVariablesStore" function
+                       (:constructor-flag t
+                        :parent "MasterVariablesStore"
+                        :arguments 
+                          ( ("poLogStorage" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("LogStorage" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [855 887]))                          
+                        :type ("MasterVariablesStore" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [810 936])
+                    ("MasterVariablesStore" function
+                       (:destructor-flag t
+                        :parent "MasterVariablesStore"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [938 989])
+                    ("Write" function
+                       (:parent "MasterVariablesStore"
+                        :arguments 
+                          ( ("oWriteOptions" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("WriteOptions" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1025 1060])
+                            ("iGroupIdx" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [1061 1081])
+                            ("oVariables" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("MasterVariables" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1082 1117]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [991 1597])
+                    ("Read" function
+                       (:parent "MasterVariablesStore"
+                        :arguments 
+                          ( ("iGroupIdx" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [1632 1652])
+                            ("oVariables" variable
+                               (:reference 1
+                                :type ("MasterVariables" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1653 1682]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [1599 2282]))                  
+                :type "namespace")
+                nil [788 2285]))          
+      :file "master_variables_store.cpp"
+      :pointmax 2286
+      :fsize 2285
+      :lastmodtime '(23254 49416 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("commdef.h" include nil nil [749 769])
+            ("utils_include.h" include nil nil [770 796])
+            ("phxpaxos/node.h" include nil nil [797 823])
+            ("master_sm.h" include nil nil [824 846])
+            ("phxpaxos" type
+               (:members 
+                  ( ("MasterMgr" type
+                       (:superclasses 
+                          ( ("Thread" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [904 911])
+                            ("MasterMgr" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("poPaxosNode" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("Node" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [926 951])
+                                    ("iGroupIdx" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [960 980])
+                                    ("poLogStorage" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("LogStorage" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [989 1021])
+                                    ("pMasterChangeCallback" variable (:type ("MasterChangeCallback" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1030 1073]))                                  
+                                :type ("MasterMgr" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [916 1074])
+                            ("MasterMgr" function
+                               (:prototype-flag t
+                                :destructor-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [1079 1092])
+                            ("RunMaster" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [1098 1115])
+                            ("StopMaster" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [1121 1139])
+                            ("Init" function
+                               (:prototype-flag t
+                                :type "int")
+                                (reparse-symbol classsubparts) [1145 1156])
+                            ("run" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [1162 1173])
+                            ("SetLeaseTime" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("iLeaseTimeMs" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1197 1220]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1179 1221])
+                            ("TryBeMaster" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("iLeaseTime" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1244 1265]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1227 1266])
+                            ("DropMaster" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [1272 1290])
+                            ("public" label nil (reparse-symbol classsubparts) [1292 1299])
+                            ("GetMasterSM" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :type ("MasterStateMachine" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1304 1339])
+                            ("private" label nil (reparse-symbol classsubparts) [1341 1349])
+                            ("m_poPaxosNode" variable
+                               (:pointer 1
+                                :type ("Node" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1354 1375])
+                            ("m_oDefaultMasterSM" variable (:type ("MasterStateMachine" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1381 1419])
+                            ("private" label nil (reparse-symbol classsubparts) [1421 1429])
+                            ("m_iLeaseTime" variable (:type "int") (reparse-symbol classsubparts) [1434 1451])
+                            ("m_bIsEnd" variable (:type "bool") (reparse-symbol classsubparts) [1457 1471])
+                            ("m_bIsStarted" variable (:type "bool") (reparse-symbol classsubparts) [1476 1494])
+                            ("m_iMyGroupIdx" variable (:type "int") (reparse-symbol classsubparts) [1500 1518])
+                            ("m_bNeedDropMaster" variable (:type "bool") (reparse-symbol classsubparts) [1524 1547]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [870 1550]))                  
+                :type "namespace")
+                nil [848 1553]))          
+      :file "master_mgr.h"
+      :pointmax 1554
+      :fsize 1553
+      :lastmodtime '(23255 3619 0 0)
+      :unmatched-syntax '((symbol 743 . 747) (symbol 736 . 742) (punctuation 735 . 736)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("master_mgr.h" include nil nil [735 758])
+            ("comm_include.h" include nil nil [759 784])
+            ("commdef.h" include nil nil [785 805])
+            ("phxpaxos" type
+               (:members 
+                  ( ("MasterMgr" function
+                       (:constructor-flag t
+                        :parent "MasterMgr"
+                        :arguments 
+                          ( ("poPaxosNode" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("Node" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [857 882])
+                            ("iGroupIdx" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [887 907])
+                            ("poLogStorage" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("LogStorage" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [912 944])
+                            ("pMasterChangeCallback" variable (:type ("MasterChangeCallback" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [949 992]))                          
+                        :type ("MasterMgr" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [829 1277])
+                    ("MasterMgr" function
+                       (:destructor-flag t
+                        :parent "MasterMgr"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1279 1308])
+                    ("Init" function
+                       (:parent "MasterMgr"
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [1310 1375])
+                    ("SetLeaseTime" function
+                       (:parent "MasterMgr"
+                        :arguments 
+                          ( ("iLeaseTimeMs" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [1408 1431]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1377 1526])
+                    ("DropMaster" function
+                       (:parent "MasterMgr"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1528 1592])
+                    ("StopMaster" function
+                       (:parent "MasterMgr"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1594 1703])
+                    ("RunMaster" function
+                       (:parent "MasterMgr"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1705 1751])
+                    ("run" function
+                       (:parent "MasterMgr"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1753 2817])
+                    ("TryBeMaster" function
+                       (:parent "MasterMgr"
+                        :arguments 
+                          ( ("iLeaseTime" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [2849 2870]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [2819 4162])
+                    ("GetMasterSM" function
+                       (:pointer 1
+                        :parent "MasterMgr"
+                        :type ("MasterStateMachine" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [4164 4247]))                  
+                :type "namespace")
+                nil [807 4251]))          
+      :file "master_mgr.cpp"
+      :pointmax 4252
+      :fsize 4251
+      :lastmodtime '(23255 3643 0 0)
+      :unmatched-syntax nil))
+  :file "!Volumes!Transcend!phxpaxos!src!master!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

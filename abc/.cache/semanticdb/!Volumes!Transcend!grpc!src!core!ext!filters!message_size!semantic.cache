@@ -1,0 +1,256 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("src/core/ext/filters/message_size/message_size_filter.h" include nil nil [598 664])
+            ("limits.h" include (:system-flag t) nil [666 685])
+            ("string.h" include (:system-flag t) nil [686 705])
+            ("grpc/impl/codegen/grpc_types.h" include (:system-flag t) nil [707 748])
+            ("grpc/support/alloc.h" include (:system-flag t) nil [749 780])
+            ("grpc/support/log.h" include (:system-flag t) nil [781 810])
+            ("grpc/support/string_util.h" include (:system-flag t) nil [811 848])
+            ("src/core/lib/channel/channel_args.h" include nil nil [850 896])
+            ("src/core/lib/channel/channel_stack_builder.h" include nil nil [897 952])
+            ("src/core/lib/support/string.h" include nil nil [953 993])
+            ("src/core/lib/surface/channel_init.h" include nil nil [994 1040])
+            ("src/core/lib/transport/service_config.h" include nil nil [1041 1091])
+            ("message_size_limits" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("max_send_size" variable (:type "int") (reparse-symbol classsubparts) [1112 1130])
+                          ("max_recv_size" variable (:type "int") (reparse-symbol classsubparts) [1133 1151]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [1093 1174])
+            ("refcounted_message_size_limits" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("refs" variable (:type ("gpr_refcount" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1195 1213])
+                          ("limits" variable (:type ("message_size_limits" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1216 1243]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [1176 1277])
+            ("refcounted_message_size_limits_ref" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("value" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [1327 1339]))                  
+                :type "void")
+                nil [1279 1474])
+            ("refcounted_message_size_limits_unref" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("value" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [1525 1537]))                  
+                :type "void")
+                nil [1476 1689])
+            ("refcounted_message_size_limits_create_from_json" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("json" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grpc_json" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1757 1779]))                  
+                :type "void")
+                nil [1691 3074])
+            ("call_data" type
+               (:members 
+                  ( ("call_combiner" variable
+                       (:pointer 1
+                        :type ("grpc_call_combiner" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3105 3139])
+                    ("limits" variable (:type ("message_size_limits" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3142 3169])
+                    ("recv_message_ready" variable (:type ("grpc_closure" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3373 3405])
+                    ("recv_message" variable
+                       (:pointer 2
+                        :type ("grpc_byte_stream" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3441 3473])
+                    ("next_recv_message_ready" variable
+                       (:pointer 1
+                        :type ("grpc_closure" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3542 3580]))                  
+                :type "struct")
+                nil [3076 3593])
+            ("call_data" type
+               (:typedef ("call_data" type (:type "struct") nil nil)
+                :type "typedef")
+                nil [3076 3593])
+            ("channel_data" type
+               (:members 
+                  ( ("limits" variable (:type ("message_size_limits" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3627 3654])
+                    ("method_limit_table" variable
+                       (:pointer 1
+                        :type ("grpc_slice_hash_table" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3721 3763]))                  
+                :type "struct")
+                nil [3595 3779])
+            ("channel_data" type
+               (:typedef ("channel_data" type (:type "struct") nil nil)
+                :type "typedef")
+                nil [3595 3779])
+            ("recv_message_ready" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("user_data" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3907 3923])
+                    ("error" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3924 3942]))                  
+                :type "void")
+                nil [3876 4924])
+            ("start_transport_stream_op_batch" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("elem" variable
+                       (:pointer 1
+                        :type ("grpc_call_element" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5005 5029])
+                    ("op" variable
+                       (:pointer 1
+                        :type ("grpc_transport_stream_op_batch" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5030 5065]))                  
+                :type "void")
+                nil [4956 6250])
+            ("init_call_elem" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("elem" variable
+                       (:pointer 1
+                        :type ("grpc_call_element" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6316 6340])
+                    ("args" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grpc_call_element_args" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6375 6410]))                  
+                :type ("grpc_error" type (:type "class") nil nil))
+                nil [6282 7782])
+            ("destroy_call_elem" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("elem" variable
+                       (:pointer 1
+                        :type ("grpc_call_element" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7843 7867])
+                    ("final_info" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grpc_call_final_info" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7898 7937])
+                    ("ignored" variable
+                       (:pointer 1
+                        :type ("grpc_closure" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7968 7990]))                  
+                :type "void")
+                nil [7813 7993])
+            ("default_size" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("args" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grpc_channel_args" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8019 8049])
+                    ("without_minimal_stack" variable (:type "int") (reparse-symbol arg-sub-list) [8074 8100]))                  
+                :type "int")
+                nil [7995 8207])
+            ("get_message_size_limits" function
+               (:arguments 
+                  ( ("channel_args" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grpc_channel_args" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8258 8296]))                  
+                :type ("message_size_limits" type (:type "class") nil nil))
+                nil [8209 9147])
+            ("init_channel_elem" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("elem" variable
+                       (:pointer 1
+                        :type ("grpc_channel_element" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9219 9246])
+                    ("args" variable
+                       (:pointer 1
+                        :type ("grpc_channel_element_args" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9284 9316]))                  
+                :type ("grpc_error" type (:type "class") nil nil))
+                nil [9182 10216])
+            ("destroy_channel_elem" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("elem" variable
+                       (:pointer 1
+                        :type ("grpc_channel_element" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10283 10310]))                  
+                :type "void")
+                nil [10250 10431])
+            ("grpc_message_size_filter" variable
+               (:constant-flag t
+                :default-value "{
+    start_transport_stream_op_batch,
+    grpc_channel_next_op,
+    sizeof(call_data),
+    init_call_elem,
+    grpc_call_stack_ignore_set_pollset_or_pollset_set,
+    destroy_call_elem,
+    sizeof(channel_data),
+    init_channel_elem,
+    destroy_channel_elem,
+    grpc_channel_next_get_info,
+    \"message_size\"}"
+                :type ("grpc_channel_filter" type (:type "class") nil nil))
+                nil [10433 10799])
+            ("maybe_add_message_size_filter" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("builder" variable
+                       (:pointer 1
+                        :type ("grpc_channel_stack_builder" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10843 10879])
+                    ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [10922 10932]))                  
+                :type "bool")
+                nil [10801 11517])
+            ("grpc_message_size_filter_init" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [11554 11559]))                  
+                :type "void")
+                nil [11519 12182])
+            ("grpc_message_size_filter_shutdown" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [12223 12228]))                  
+                :type "void")
+                nil [12184 12231]))          
+      :file "message_size_filter.cc"
+      :pointmax 12232
+      :fsize 12231
+      :lastmodtime '(23085 58367 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :file "message_size_filter.h"
+      :fsize 907
+      :lastmodtime '(23079 46125 0 0)))
+  :file "!Volumes!Transcend!grpc!src!core!ext!filters!message_size!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

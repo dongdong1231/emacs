@@ -1,0 +1,330 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("COMMON_SYSTEM_IO_FRAME_LIST_H_" variable (:constant-flag t) nil [541 571])
+            ("common/base/container_of.h" include nil nil [573 610])
+            ("io_frame" type (:type "namespace") nil [631 6329]))          
+      :file "list.h"
+      :pointmax 6403
+      :fsize 6402
+      :lastmodtime '(22840 64123 0 0)
+      :unmatched-syntax '((semantic-list 663 . 6312) (string 659 . 662) (EXTERN 652 . 658))
+      :lexical-table 
+        '(("ListForEachPrev" (spp-arg-list ("head" "pos") 3048 . 3059) . ((FOR "for" 3064 . 3067) (semantic-list "(pos = (head)->prev; __builtin_prefetch(pos->prev), pos != (head); \\
+       pos = pos->prev)" 3068 . 3160)))
+          ("ListForEachEntrySafe" (spp-arg-list ("head" "pos" "n" "member") 5322 . 5344) . ((FOR "for" 5360 . 5363) (semantic-list "(pos = ListEntry((head)->next, __typeof__(*pos), member),    \\
+       n = ListEntry(pos->member.next, __typeof__(*pos), member);    \\
+       &pos->member != (head);                     \\
+       pos = n, n = ListEntry(n->member.next, __typeof__(*n), member))" 5364 . 5621)))
+          ("COMMON_SYSTEM_IO_FRAME_LIST_H_")
+          ("ListForEachEntry" (spp-arg-list ("head" "pos" "member") 4227 . 4246) . ((FOR "for" 4266 . 4269) (semantic-list "(pos = ListEntry((head)->next, __typeof__(*pos), member);    \\
+       __builtin_prefetch(pos->member.next), &pos->member != (head);     \\
+       pos = ListEntry(pos->member.next, __typeof__(*pos), member))" 4270 . 4475)))
+          ("ListEntry" (spp-arg-list ("p" "type" "member") 1262 . 1279) . ((symbol "container_of" 1280 . 1292) (semantic-list "(p, type, member)" 1292 . 1309)))
+          ("ListForEachSafe" (spp-arg-list ("head" "pos" "n") 3436 . 3450) . ((FOR "for" 3455 . 3458) (semantic-list "(pos = (head)->next, n = pos->next; pos != (head); \\
+       pos = n, n = pos->next)" 3459 . 3542)))
+          ("ListForEachPrevSafe" (spp-arg-list ("head" "pos" "n") 3837 . 3851) . ((FOR "for" 3856 . 3859) (semantic-list "(pos = (head)->prev, n = pos->prev; \\
+       __builtin_prefetch(pos->prev), pos != (head); \\
+       pos = n, n = pos->prev)" 3860 . 3983)))
+          ("ListForeEachEntrySafeReverse" (spp-arg-list ("head" "pos" "n" "member") 5995 . 6017) . ((FOR "for" 6029 . 6032) (semantic-list "(pos = ListEntry((head)->prev, __typeof__(*pos), member),    \\
+       n = ListEntry(pos->member.prev, __typeof__(*pos), member);    \\
+       &pos->member != (head);                     \\
+       pos = n, n = ListEntry(n->member.prev, __typeof__(*n), member))" 6033 . 6290)))
+          ("ListForEach" (spp-arg-list ("head" "pos") 2748 . 2759) . ((FOR "for" 2764 . 2767) (semantic-list "(pos = (head)->next; __builtin_prefetch(pos->next), pos != (head); \\
+       pos = pos->next)" 2768 . 2860)))
+          ("ListForEachEntryReverse" (spp-arg-list ("head" "pos" "member") 4739 . 4758) . ((FOR "for" 4774 . 4777) (semantic-list "(pos = ListEntry((head)->prev, __typeof__(*pos), member);    \\
+       __builtin_prefetch(pos->member.prev), &pos->member != (head);     \\
+       pos = ListEntry(pos->member.prev, __typeof__(*pos), member))" 4778 . 4983)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("COMMON_SYSTEM_IO_FRAME_CONNECT_H_" variable (:constant-flag t) nil [531 564])
+            ("common/system/net/socket_address.h" include nil nil [579 624])
+            ("io_frame" type
+               (:members 
+                  ( ("NonblockingConnect" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("address" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("SocketAddress" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [718 747])
+                            ("connected" variable
+                               (:pointer 1
+                                :type "bool")
+                                (reparse-symbol arg-sub-list) [748 764]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [695 765]))                  
+                :type "namespace")
+                nil [626 768]))          
+      :file "connect.h"
+      :pointmax 838
+      :fsize 837
+      :lastmodtime '(22840 64123 0 0)
+      :unmatched-syntax '((symbol 573 . 577) (symbol 566 . 572) (punctuation 565 . 566))
+      :lexical-table 
+        '(("COMMON_SYSTEM_IO_FRAME_CONNECT_H_")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("common/system/io_frame/connect.h" include nil nil [481 524])
+            ("string.h" include (:system-flag t) nil [526 545])
+            ("unistd.h" include (:system-flag t) nil [546 565])
+            ("sys/socket.h" include (:system-flag t) nil [566 589])
+            ("common/system/io_frame/socketoptions.h" include nil nil [591 640])
+            ("thirdparty/glog/logging.h" include nil nil [641 677])
+            ("io_frame" type
+               (:members 
+                  ( ("MakeConnect" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("address" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("SocketAddress" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [724 753])
+                            ("local_address" variable
+                               (:pointer 1
+                                :type ("SocketAddress" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [777 806])
+                            ("connected" variable
+                               (:pointer 1
+                                :type "bool")
+                                (reparse-symbol arg-sub-list) [807 823]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [701 1800])
+                    ("NonblockingConnect" function
+                       (:arguments 
+                          ( ("address" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("SocketAddress" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1825 1854])
+                            ("connected" variable
+                               (:pointer 1
+                                :type "bool")
+                                (reparse-symbol arg-sub-list) [1878 1894]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [1802 2383]))                  
+                :type "namespace")
+                nil [679 2386]))          
+      :file "connect.cc"
+      :pointmax 2410
+      :fsize 2409
+      :lastmodtime '(22840 64123 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :file "socketoptions.h"
+      :fsize 2748
+      :lastmodtime '(22840 64123 0 0))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("COMMON_SYSTEM_IO_FRAME_BASE_CONNECTION_H_" variable (:constant-flag t) nil [552 593])
+            ("string" include (:system-flag t) nil [595 612])
+            ("common/base/string/string_piece.h" include nil nil [613 657])
+            ("common/system/io_frame/buffer.h" include nil nil [658 700])
+            ("common/system/io_frame/descriptor.h" include nil nil [701 747])
+            ("common/system/io_frame/multiplexer.h" include nil nil [748 795])
+            ("common/system/io_frame/net_options.h" include nil nil [796 843])
+            ("common/system/net/socket_address.h" include nil nil [844 889])
+            ("io_frame" type
+               (:members 
+                  ( ("BaseConnection" type
+                       (:superclasses 
+                          ( ("Descriptor" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("protected" label nil (reparse-symbol classsubparts) [980 990])
+                            ("BaseConnection" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [1017 1024])
+                                    ("multiplexer" variable
+                                       (:pointer 1
+                                        :type ("Multiplexer" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1051 1076])
+                                    ("net_options" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("NetOptions" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1103 1133]))                                  
+                                :type ("BaseConnection" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1002 1134])
+                            ("BaseConnection" function
+                               (:prototype-flag t
+                                :destructor-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [1138 1156])
+                            ("public" label nil (reparse-symbol classsubparts) [1159 1166])
+                            ("GetRemoteAddress" function
+                               (:methodconst-flag t
+                                :constant-flag t
+                                :type ("SocketAddress" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1169 1248])
+                            ("protected" label nil (reparse-symbol classsubparts) [1251 1261])
+                            ("Initialize" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("multiplexer" variable
+                                       (:pointer 1
+                                        :type ("Multiplexer" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1280 1305])
+                                    ("net_options" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("NetOptions" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1306 1336]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1264 1337])
+                            ("OnReadable" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [1340 1366])
+                            ("OnWritable" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [1369 1395])
+                            ("multiplexer" function
+                               (:methodconst-flag t
+                                :pointer 1
+                                :type ("Multiplexer" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1399 1462])
+                            ("net_options" function
+                               (:methodconst-flag t
+                                :constant-flag t
+                                :type ("NetOptions" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1466 1534])
+                            ("Release" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [1537 1560])
+                            ("private" label nil (reparse-symbol classsubparts) [1563 1571])
+                            ("GetNextSendingBuffer" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("sending_buffer" variable
+                                       (:pointer 1
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1730 1758]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [1697 1763])
+                            ("GetPacketSize" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("buffer" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("StringPiece" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2068 2094]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [2042 2099])
+                            ("OnPacketReceived" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("buffer" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("StringPiece" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2132 2158]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [2102 2163])
+                            ("OnEofReceived" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("buffer" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("StringPiece" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2305 2331]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [2278 2349])
+                            ("FillRemoteAddress" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [2386 2411])
+                            ("ReadPackets" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("end" variable
+                                       (:pointer 1
+                                        :type "bool")
+                                        (reparse-symbol arg-sub-list) [2529 2539]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [2513 2540])
+                            ("WritePacket" function
+                               (:prototype-flag t
+                                :type "int")
+                                (reparse-symbol classsubparts) [2543 2561])
+                            ("HandleRead" function
+                               (:prototype-flag t
+                                :type "int")
+                                (reparse-symbol classsubparts) [2639 2656])
+                            ("HandleWrite" function
+                               (:prototype-flag t
+                                :type "int")
+                                (reparse-symbol classsubparts) [2659 2677])
+                            ("private" label nil (reparse-symbol classsubparts) [2680 2688])
+                            ("multiplexer_" variable
+                               (:pointer 1
+                                :type ("Multiplexer" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2691 2717])
+                            ("net_options_" variable (:type ("NetOptions" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2720 2744])
+                            ("remote_address_" variable (:type ("SocketAddressStorage" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2747 2784])
+                            ("receive_buffer_" variable (:type ("ReceiveBuffer" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2787 2817])
+                            ("write_buffer_" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2820 2846])
+                            ("write_pos_" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2849 2867]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [936 2870]))                  
+                :type "namespace")
+                nil [891 2873]))          
+      :file "base_connection.h"
+      :pointmax 2951
+      :fsize 2978
+      :lastmodtime '(22840 64123 0 0)
+      :unmatched-syntax '((EXPLICIT 993 . 1001))
+      :lexical-table 
+        '(("COMMON_SYSTEM_IO_FRAME_BASE_CONNECTION_H_")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :file "buffer.h"
+      :fsize 1902
+      :lastmodtime '(22840 64123 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "descriptor.h"
+      :fsize 2662
+      :lastmodtime '(22840 64123 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "multiplexer.h"
+      :fsize 2136
+      :lastmodtime '(22840 64123 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "net_options.h"
+      :fsize 1100
+      :lastmodtime '(22840 64123 0 0)))
+  :file "!Users!ric!Downloads!trunk!common!system!io_frame!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

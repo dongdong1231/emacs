@@ -1,0 +1,431 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("ZABBIX_COMMS_H" variable (:constant-flag t) nil [809 823])
+            ("ZBX_TCP_WRITE" variable (:constant-flag t) nil [1410 1423])
+            ("ZBX_TCP_READ" variable (:constant-flag t) nil [1476 1488])
+            ("zbx_socket_close" variable (:constant-flag t) nil [1540 1556])
+            ("zbx_socket_last_error" variable (:constant-flag t) nil [1607 1628])
+            ("ZBX_PROTO_AGAIN" variable (:constant-flag t) nil [1647 1662])
+            ("ZBX_PROTO_ERROR" variable (:constant-flag t) nil [1679 1694])
+            ("ZBX_SOCKET_ERROR" variable (:constant-flag t) nil [1708 1724])
+            ("ZBX_SOCKET_TO_INT" variable (:constant-flag t) nil [1738 1755])
+            ("ZBX_SOCKET" type
+               (:typedef ("int")
+                :type "typedef")
+                nil [1820 1843])
+            ("ZBX_SOCKADDR" variable (:constant-flag t) nil [1936 1948])
+            ("zbx_buf_type_t" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("ZBX_BUF_TYPE_STAT" variable
+                             (:constant-flag t
+                              :default-value (2012 2013)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [1992 2013])
+                          ("ZBX_BUF_TYPE_DYN" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [2016 2034]))                        
+                      :type "enum")
+                      nil nil)
+                :type "typedef")
+                nil [1976 2050])
+            ("ZBX_SOCKET_COUNT" variable (:constant-flag t) nil [2060 2076])
+            ("ZBX_STAT_BUF_LEN" variable (:constant-flag t) nil [2089 2105])
+            ("zbx_socket_t" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("socket" variable (:type ("ZBX_SOCKET" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2264 2284])
+                          ("socket_orig" variable (:type ("ZBX_SOCKET" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2286 2311])
+                          ("read_bytes" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2313 2334])
+                          ("buffer" variable
+                             (:pointer 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [2336 2352])
+                          ("next_line" variable
+                             (:pointer 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [2354 2373])
+                          ("connection_type" variable (:type "unsigned int") (reparse-symbol classsubparts) [2488 2520])
+                          ("timeout" variable (:type "int") (reparse-symbol classsubparts) [2666 2681])
+                          ("buf_type" variable (:type ("zbx_buf_type_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2683 2709])
+                          ("accepted" variable (:type "unsigned char") (reparse-symbol classsubparts) [2711 2736])
+                          ("num_socks" variable (:type "int") (reparse-symbol classsubparts) [2738 2755])
+                          ("sockets" variable
+                             (:dereference 1
+                              :type ("ZBX_SOCKET" type (:type "class") nil nil))
+                              (reparse-symbol classsubparts) [2757 2796])
+                          ("buf_stat" variable
+                             (:dereference 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [2798 2833])
+                          ("peer_info" variable (:type ("sockaddr_in" type
+                               (:prototype t
+                                :type "struct")
+                                nil nil)) (reparse-symbol classsubparts) [2835 2860])
+                          ("peer" variable
+                             (:dereference 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [3096 3134]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [2246 3150])
+            ("zbx_socket_strerror" function
+               (:prototype-flag t
+                :pointer 1
+                :constant-flag t
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [3184 3189]))                  
+                :type "char")
+                nil [3152 3190])
+            ("zbx_gethost_by_ip" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("ip" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3232 3247])
+                    ("host" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3248 3259])
+                    ("hostlen" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3260 3275]))                  
+                :type "void")
+                nil [3209 3276])
+            ("zbx_tcp_connect" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("s" variable
+                       (:pointer 1
+                        :type ("zbx_socket_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3305 3321])
+                    ("source_ip" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3322 3344])
+                    ("ip" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3345 3360])
+                    ("port" variable (:type "unsigned short") (reparse-symbol arg-sub-list) [3361 3381])
+                    ("timeout" variable (:type "int") (reparse-symbol arg-sub-list) [3382 3394])
+                    ("tls_connect" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [3397 3422])
+                    ("tls_arg1" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3423 3438])
+                    ("tls_arg2" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3439 3454]))                  
+                :type "int")
+                nil [3285 3455])
+            ("ZBX_TCP_PROTOCOL" variable (:constant-flag t) nil [3465 3481])
+            ("ZBX_TCP_COMPONENT_VERSION" variable (:constant-flag t) nil [3496 3521])
+            ("ZBX_TCP_SEC_UNENCRYPTED" variable (:constant-flag t) nil [3536 3559])
+            ("ZBX_TCP_SEC_TLS_PSK" variable (:constant-flag t) nil [3617 3636])
+            ("ZBX_TCP_SEC_TLS_CERT" variable (:constant-flag t) nil [3706 3726])
+            ("ZBX_TCP_SEC_UNENCRYPTED_TXT" variable (:constant-flag t) nil [3787 3814])
+            ("ZBX_TCP_SEC_TLS_PSK_TXT" variable (:constant-flag t) nil [3837 3860])
+            ("ZBX_TCP_SEC_TLS_CERT_TXT" variable (:constant-flag t) nil [3876 3900])
+            ("zbx_tcp_connection_type_name" function
+               (:prototype-flag t
+                :pointer 1
+                :constant-flag t
+                :arguments 
+                  ( ("type" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [3950 3968]))                  
+                :type "char")
+                nil [3909 3969])
+            ("zbx_tcp_send" variable (:constant-flag t) nil [3979 3991])
+            ("zbx_tcp_send_to" variable (:constant-flag t) nil [4068 4083])
+            ("zbx_tcp_send_bytes_to" variable (:constant-flag t) nil [4174 4195])
+            ("zbx_tcp_send_raw" variable (:constant-flag t) nil [4283 4299])
+            ("zbx_tcp_send_ext" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("s" variable
+                       (:pointer 1
+                        :type ("zbx_socket_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4375 4391])
+                    ("data" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4392 4409])
+                    ("len" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4410 4421])
+                    ("flags" variable (:type "unsigned char") (reparse-symbol arg-sub-list) [4422 4442])
+                    ("timeout" variable (:type "int") (reparse-symbol arg-sub-list) [4443 4455]))                  
+                :type "int")
+                nil [4354 4456])
+            ("zbx_tcp_close" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("s" variable
+                       (:pointer 1
+                        :type ("zbx_socket_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4477 4493]))                  
+                :type "void")
+                nil [4458 4494])
+            ("zbx_tcp_listen" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("s" variable
+                       (:pointer 1
+                        :type ("zbx_socket_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4627 4643])
+                    ("listen_ip" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4644 4666])
+                    ("listen_port" variable (:type "unsigned short") (reparse-symbol arg-sub-list) [4667 4694]))                  
+                :type "int")
+                nil [4608 4695])
+            ("zbx_tcp_accept" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("s" variable
+                       (:pointer 1
+                        :type ("zbx_socket_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4716 4732])
+                    ("tls_accept" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [4733 4757]))                  
+                :type "int")
+                nil [4697 4758])
+            ("zbx_tcp_unaccept" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("s" variable
+                       (:pointer 1
+                        :type ("zbx_socket_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4781 4797]))                  
+                :type "void")
+                nil [4759 4798])
+            ("ZBX_TCP_READ_UNTIL_CLOSE" variable (:constant-flag t) nil [4808 4832])
+            ("zbx_tcp_recv" variable (:constant-flag t) nil [4847 4859])
+            ("zbx_tcp_recv_to" variable (:constant-flag t) nil [4916 4931])
+            ("zbx_tcp_recv_ext" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("s" variable
+                       (:pointer 1
+                        :type ("zbx_socket_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5021 5037])
+                    ("flags" variable (:type "unsigned char") (reparse-symbol arg-sub-list) [5038 5058])
+                    ("timeout" variable (:type "int") (reparse-symbol arg-sub-list) [5059 5071]))                  
+                :type ("ssize_t" type (:type "class") nil nil))
+                nil [4995 5072])
+            ("zbx_tcp_recv_line" function
+               (:prototype-flag t
+                :pointer 1
+                :constant-flag t
+                :arguments 
+                  ( ("s" variable
+                       (:pointer 1
+                        :type ("zbx_socket_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5103 5119]))                  
+                :type "char")
+                nil [5073 5120])
+            ("zbx_validate_peer_list" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("peer_list" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [5149 5171])
+                    ("error" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [5172 5185]))                  
+                :type "int")
+                nil [5122 5186])
+            ("zbx_tcp_check_allowed_peers" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("s" variable
+                       (:pointer 1
+                        :type ("zbx_socket_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5219 5235])
+                    ("peer_list" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [5236 5258]))                  
+                :type "int")
+                nil [5187 5259])
+            ("zbx_udp_connect" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("s" variable
+                       (:pointer 1
+                        :type ("zbx_socket_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5281 5297])
+                    ("source_ip" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [5298 5320])
+                    ("ip" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [5321 5336])
+                    ("port" variable (:type "unsigned short") (reparse-symbol arg-sub-list) [5337 5357])
+                    ("timeout" variable (:type "int") (reparse-symbol arg-sub-list) [5358 5370]))                  
+                :type "int")
+                nil [5261 5371])
+            ("zbx_udp_send" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("s" variable
+                       (:pointer 1
+                        :type ("zbx_socket_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5389 5405])
+                    ("data" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [5406 5423])
+                    ("data_len" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5424 5440])
+                    ("timeout" variable (:type "int") (reparse-symbol arg-sub-list) [5441 5453]))                  
+                :type "int")
+                nil [5372 5454])
+            ("zbx_udp_recv" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("s" variable
+                       (:pointer 1
+                        :type ("zbx_socket_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5472 5488])
+                    ("timeout" variable (:type "int") (reparse-symbol arg-sub-list) [5489 5501]))                  
+                :type "int")
+                nil [5455 5502])
+            ("zbx_udp_close" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("s" variable
+                       (:pointer 1
+                        :type ("zbx_socket_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5522 5538]))                  
+                :type "void")
+                nil [5503 5539])
+            ("ZBX_DEFAULT_FTP_PORT" variable (:constant-flag t) nil [5549 5569])
+            ("ZBX_DEFAULT_SSH_PORT" variable (:constant-flag t) nil [5582 5602])
+            ("ZBX_DEFAULT_TELNET_PORT" variable (:constant-flag t) nil [5615 5638])
+            ("ZBX_DEFAULT_SMTP_PORT" variable (:constant-flag t) nil [5651 5672])
+            ("ZBX_DEFAULT_DNS_PORT" variable (:constant-flag t) nil [5685 5705])
+            ("ZBX_DEFAULT_HTTP_PORT" variable (:constant-flag t) nil [5718 5739])
+            ("ZBX_DEFAULT_POP_PORT" variable (:constant-flag t) nil [5752 5772])
+            ("ZBX_DEFAULT_NNTP_PORT" variable (:constant-flag t) nil [5786 5807])
+            ("ZBX_DEFAULT_NTP_PORT" variable (:constant-flag t) nil [5821 5841])
+            ("ZBX_DEFAULT_IMAP_PORT" variable (:constant-flag t) nil [5855 5876])
+            ("ZBX_DEFAULT_LDAP_PORT" variable (:constant-flag t) nil [5890 5911])
+            ("ZBX_DEFAULT_HTTPS_PORT" variable (:constant-flag t) nil [5925 5947])
+            ("ZBX_DEFAULT_AGENT_PORT" variable (:constant-flag t) nil [5961 5983])
+            ("ZBX_DEFAULT_SERVER_PORT" variable (:constant-flag t) nil [5999 6022])
+            ("ZBX_DEFAULT_GATEWAY_PORT" variable (:constant-flag t) nil [6038 6062])
+            ("ZBX_DEFAULT_AGENT_PORT_STR" variable (:constant-flag t) nil [6078 6104])
+            ("ZBX_DEFAULT_SERVER_PORT_STR" variable (:constant-flag t) nil [6121 6148])
+            ("zbx_send_response_ext" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("sock" variable
+                       (:pointer 1
+                        :type ("zbx_socket_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6184 6203])
+                    ("result" variable (:type "int") (reparse-symbol arg-sub-list) [6204 6215])
+                    ("info" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [6216 6233])
+                    ("protocol" variable (:type "int") (reparse-symbol arg-sub-list) [6234 6247])
+                    ("timeout" variable (:type "int") (reparse-symbol arg-sub-list) [6248 6260]))                  
+                :type "int")
+                nil [6158 6261])
+            ("zbx_send_response" variable (:constant-flag t) nil [6271 6288])
+            ("zbx_send_proxy_response" variable (:constant-flag t) nil [6400 6423])
+            ("zbx_send_response_raw" variable (:constant-flag t) nil [6564 6585])
+            ("zbx_recv_response" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("sock" variable
+                       (:pointer 1
+                        :type ("zbx_socket_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6696 6715])
+                    ("timeout" variable (:type "int") (reparse-symbol arg-sub-list) [6716 6728])
+                    ("error" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [6729 6742]))                  
+                :type "int")
+                nil [6674 6743]))          
+      :file "comms.h"
+      :pointmax 7013
+      :fsize 7012
+      :lastmodtime '(22966 27717 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("ZBX_TCP_SEC_UNENCRYPTED" . ((number "1" 3561 . 3562)))
+          ("ZBX_PROTO_AGAIN" . ((symbol "EINTR" 1664 . 1669)))
+          ("ZBX_SOCKADDR" . ((STRUCT "struct" 1949 . 1955) (symbol "sockaddr_in" 1956 . 1967)))
+          ("ZBX_DEFAULT_SMTP_PORT" . ((number "25" 5674 . 5676)))
+          ("ZBX_DEFAULT_HTTP_PORT" . ((number "80" 5741 . 5743)))
+          ("ZBX_DEFAULT_GATEWAY_PORT" . ((number "10052" 6063 . 6068)))
+          ("ZBX_DEFAULT_AGENT_PORT_STR" . ((string "\"10050\"" 6105 . 6112)))
+          ("zbx_send_response" (spp-arg-list ("sock" "result" "info" "timeout") 6288 . 6317) . ((symbol "zbx_send_response_ext" 6322 . 6343) (semantic-list "(sock, result, info, ZBX_TCP_PROTOCOL, timeout)" 6343 . 6390)))
+          ("ZBX_TCP_READ" (spp-arg-list ("s" "b" "bl") 1488 . 1498) . ((semantic-list "((ssize_t)read((s), (b), (bl)))" 1499 . 1530)))
+          ("zbx_socket_close" (spp-arg-list ("s") 1556 . 1559) . 
+              ((IF "if" 1560 . 1562) (semantic-list "(ZBX_SOCKET_ERROR != (s))" 1563 . 1588) (symbol "close" 1589 . 1594) (semantic-list "(s)" 1594 . 1597)))
+          ("ZBX_SOCKET_COUNT" . ((number "256" 2077 . 2080)))
+          ("ZBX_DEFAULT_HTTPS_PORT" . ((number "443" 5949 . 5952)))
+          ("zbx_socket_last_error" (spp-arg-list nil 1628 . 1630) . ((symbol "errno" 1631 . 1636)))
+          ("ZBX_PROTO_ERROR" . ((punctuation "-" 1696 . 1697) (number "1" 1697 . 1698)))
+          ("ZBX_STAT_BUF_LEN" . ((number "2048" 2106 . 2110)))
+          ("ZBX_TCP_SEC_TLS_CERT" . ((number "4" 3728 . 3729)))
+          ("ZBX_TCP_READ_UNTIL_CLOSE" . ((number "0x01" 4833 . 4837)))
+          ("zbx_send_response_raw" (spp-arg-list ("sock" "result" "info" "timeout") 6585 . 6614) . ((symbol "zbx_send_response_ext" 6619 . 6640) (semantic-list "(sock, result, info, 0, timeout)" 6640 . 6672)))
+          ("ZBX_TCP_WRITE" (spp-arg-list ("s" "b" "bl") 1423 . 1433) . ((semantic-list "((ssize_t)write((s), (b), (bl)))" 1434 . 1466)))
+          ("ZBX_TCP_PROTOCOL" . ((number "0x01" 3483 . 3487)))
+          ("ZBX_TCP_SEC_UNENCRYPTED_TXT" . ((string "\"unencrypted\"" 3815 . 3828)))
+          ("ZBX_DEFAULT_NTP_PORT" . ((number "123" 5843 . 5846)))
+          ("ZBX_TCP_SEC_TLS_PSK_TXT" . ((string "\"psk\"" 3862 . 3867)))
+          ("ZBX_TCP_SEC_TLS_CERT_TXT" . ((string "\"cert\"" 3901 . 3907)))
+          ("ZBX_DEFAULT_POP_PORT" . ((number "110" 5774 . 5777)))
+          ("ZBX_DEFAULT_SERVER_PORT_STR" . ((string "\"10051\"" 6149 . 6156)))
+          ("zbx_tcp_recv" (spp-arg-list ("s") 4859 . 4862) . ((symbol "SUCCEED_OR_FAIL" 4865 . 4880) (semantic-list "(zbx_tcp_recv_ext(s, 0, 0))" 4880 . 4907)))
+          ("ZBX_DEFAULT_FTP_PORT" . ((number "21" 5571 . 5573)))
+          ("ZBX_DEFAULT_TELNET_PORT" . ((number "23" 5640 . 5642)))
+          ("ZABBIX_COMMS_H")
+          ("zbx_tcp_recv_to" (spp-arg-list ("s" "timeout") 4931 . 4943) . ((symbol "SUCCEED_OR_FAIL" 4945 . 4960) (semantic-list "(zbx_tcp_recv_ext(s, 0, timeout))" 4960 . 4993)))
+          ("ZBX_SOCKET_TO_INT" (spp-arg-list ("s") 1755 . 1758) . ((semantic-list "(s)" 1759 . 1762)))
+          ("ZBX_TCP_COMPONENT_VERSION" . ((number "0x02" 3522 . 3526)))
+          ("ZBX_DEFAULT_DNS_PORT" . ((number "53" 5707 . 5709)))
+          ("zbx_tcp_send" (spp-arg-list ("s" "d") 3991 . 3997) . ((symbol "zbx_tcp_send_ext" 4001 . 4017) (semantic-list "((s), (d), strlen(d), ZBX_TCP_PROTOCOL, 0)" 4017 . 4059)))
+          ("ZBX_DEFAULT_IMAP_PORT" . ((number "143" 5878 . 5881)))
+          ("ZBX_DEFAULT_LDAP_PORT" . ((number "389" 5913 . 5916)))
+          ("ZBX_DEFAULT_AGENT_PORT" . ((number "10050" 5985 . 5990)))
+          ("ZBX_TCP_SEC_TLS_PSK" . ((number "2" 3638 . 3639)))
+          ("zbx_tcp_send_to" (spp-arg-list ("s" "d" "timeout") 4083 . 4098) . ((symbol "zbx_tcp_send_ext" 4101 . 4117) (semantic-list "((s), (d), strlen(d), ZBX_TCP_PROTOCOL, timeout)" 4117 . 4165)))
+          ("zbx_tcp_send_bytes_to" (spp-arg-list ("s" "d" "len" "timeout") 4195 . 4215) . ((symbol "zbx_tcp_send_ext" 4216 . 4232) (semantic-list "((s), (d), len, ZBX_TCP_PROTOCOL, timeout)" 4232 . 4274)))
+          ("zbx_tcp_send_raw" (spp-arg-list ("s" "d") 4299 . 4305) . ((symbol "zbx_tcp_send_ext" 4309 . 4325) (semantic-list "((s), (d), strlen(d), 0, 0)" 4325 . 4352)))
+          ("ZBX_SOCKET_ERROR" . ((punctuation "-" 1726 . 1727) (number "1" 1727 . 1728)))
+          ("ZBX_DEFAULT_SSH_PORT" . ((number "22" 5604 . 5606)))
+          ("ZBX_DEFAULT_NNTP_PORT" . ((number "119" 5809 . 5812)))
+          ("ZBX_DEFAULT_SERVER_PORT" . ((number "10051" 6024 . 6029)))
+          ("zbx_send_proxy_response" (spp-arg-list ("sock" "result" "info" "timeout") 6423 . 6452) . ((symbol "zbx_send_response_ext" 6457 . 6478) (semantic-list "(sock, result, info, ZBX_TCP_PROTOCOL | ZBX_TCP_COMPONENT_VERSION , timeout)" 6478 . 6554)))
+          )
+))
+  :file "!Volumes!Transcend!zabbix!include!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

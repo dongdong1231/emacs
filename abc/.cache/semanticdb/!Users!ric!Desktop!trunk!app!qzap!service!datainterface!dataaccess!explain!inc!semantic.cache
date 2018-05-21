@@ -1,0 +1,321 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("_EXPLAIN_H_" variable (:constant-flag t) nil [309 320])
+            ("ostream" include (:system-flag t) nil [321 339])
+            ("cstdio" include (:system-flag t) nil [340 357])
+            ("sstream" include (:system-flag t) nil [358 376])
+            ("string" include (:system-flag t) nil [377 394])
+            ("list" include (:system-flag t) nil [395 410])
+            ("vector" include (:system-flag t) nil [411 428])
+            ("app/qzap/service/datainterface/common/include/stream_header.h" include nil nil [429 501])
+            ("app/qzap/proto/data/qzap_data_interface.pb.h" include nil nil [502 557])
+            ("app/qzap/proto/data/qzap_data_interface_located.pb.h" include nil nil [558 621])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [622 642])
+            ("QZAP::DATA::INTERFACE" using (:type ("QZAP::DATA::INTERFACE" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [643 681])
+            ("QZAP::DATA::INTERFACE::LOCATED" using (:type ("QZAP::DATA::INTERFACE::LOCATED" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [682 729])
+            ("CDataAbstractFactory" type
+               (:prototype t
+                :type "class")
+                nil [730 757])
+            ("" type
+               (:members 
+                  ( ("NAIVE_EXECUTE" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [767 781])
+                    ("PARRALLEL_EXECUTE" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [784 802])
+                    ("JOIN_EXECUTE" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [805 819]))                  
+                :type "enum")
+                nil [758 820])
+            ("CExecutionPlan" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [846 853])
+                    ("CExecutionPlan" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("planStyle" variable (:type "int") (reparse-symbol arg-sub-list) [871 885]))                          
+                        :type ("CExecutionPlan" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [856 911])
+                    ("CExecutionPlan" function
+                       (:destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [915 948])
+                    ("m_nPlanStyle" variable (:type "int") (reparse-symbol classsubparts) [951 968]))                  
+                :type "class")
+                nil [822 971])
+            ("CExecutionAdapter" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [1000 1007])
+                    ("CExecutionAdapter" function
+                       (:constructor-flag t
+                        :type ("CExecutionAdapter" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1010 1148])
+                    ("CExecutionAdapter" function
+                       (:destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1152 1253])
+                    ("public" label nil (reparse-symbol classsubparts) [1255 1262])
+                    ("m_bCursorMode" variable (:type "bool") (reparse-symbol classsubparts) [1265 1284])
+                    ("m_nSuggestedRowSize" variable (:type "int") (reparse-symbol classsubparts) [1287 1311])
+                    ("m_bNeedDynamicResize" variable (:type "bool") (reparse-symbol classsubparts) [1315 1341])
+                    ("m_binaryColumnSubscript" variable (:type ("vector" type
+                         (:template-specifier 
+                            ( ("int32_t" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [1344 1384])
+                    ("m_pPlan" variable
+                       (:pointer 1
+                        :type ("CExecutionPlan" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1388 1412]))                  
+                :type "class")
+                nil [973 1415])
+            ("CParrallelExecution" type
+               (:superclasses 
+                  ( ("CExecutionPlan" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [1470 1477])
+                    ("CParrallelExecution" function
+                       (:constructor-flag t
+                        :type ("CParrallelExecution" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1480 1537])
+                    ("CParrallelExecution" function
+                       (:destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1540 1779])
+                    ("m_parrallelReq" variable (:type ("vector" type
+                         (:template-specifier 
+                            ( ("CExecutionPlan" type (:pointer 1) nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [1783 1822]))                  
+                :type "class")
+                nil [1417 1825])
+            ("CNaiveExecution" type
+               (:superclasses 
+                  ( ("CExecutionPlan" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [1875 1882])
+                    ("CNaiveExecution" function
+                       (:constructor-flag t
+                        :type ("CNaiveExecution" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1885 1977])
+                    ("m_request" variable (:type ("SmartRequest" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1980 2003])
+                    ("m_nDirectShardingIndicator" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2006 2042]))                  
+                :type "class")
+                nil [1827 2045])
+            ("CJOINExecution" type
+               (:superclasses 
+                  ( ("CExecutionPlan" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [2095 2102])
+                    ("CJOINExecution" function
+                       (:constructor-flag t
+                        :type ("CJOINExecution" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2105 2152])
+                    ("left" variable
+                       (:pointer 1
+                        :type ("CExecutionPlan" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2156 2177])
+                    ("right" variable
+                       (:pointer 1
+                        :type ("CExecutionPlan" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2180 2202])
+                    ("m_nJoinMode" variable (:type "int") (reparse-symbol classsubparts) [2205 2221]))                  
+                :type "class")
+                nil [2047 2224])
+            ("CExplain" type
+               (:superclasses 
+                  ( ("CStreamHeader" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [2267 2274])
+                    ("CExplain" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("manager" variable
+                               (:pointer 1
+                                :type ("CDataAbstractFactory" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2286 2316]))                          
+                        :type ("CExplain" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2277 2317])
+                    ("CExplain" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [2320 2340])
+                    ("public" label nil (reparse-symbol classsubparts) [2343 2350])
+                    ("explain" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("request" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("SmartRequest" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2365 2393])
+                            ("response" variable
+                               (:reference 1
+                                :type ("SmartResponse" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2394 2418])
+                            ("pPlan" variable
+                               (:pointer 1
+                                :default-value "NULL"
+                                :type ("CExecutionAdapter" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2419 2450]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [2353 2452])
+                    ("getConsumeTime" function
+                       (:methodconst-flag t
+                        :type ("uint64_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2455 2527])
+                    ("private" label nil (reparse-symbol classsubparts) [2529 2537])
+                    ("checkTransaction" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [2540 2563])
+                    ("getRouteKeyValue" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("mutate" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Mutate" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2588 2609])
+                            ("route_key_value" variable
+                               (:reference 1
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2610 2634]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [2567 2635])
+                    ("planSelect" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("entity" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2653 2674])
+                            ("fields" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Selector_Fields" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2675 2705])
+                            ("predicates" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Selector_Predicates" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2706 2744])
+                            ("pPlan" variable
+                               (:pointer 1
+                                :type ("CExecutionAdapter" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2745 2770]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [2638 2771])
+                    ("checkPackageSize" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("entity" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2795 2816])
+                            ("fields" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Selector_Fields" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2817 2847])
+                            ("predicates" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Selector_Predicates" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2848 2886])
+                            ("pPlan" variable
+                               (:pointer 1
+                                :type ("CExecutionAdapter" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2887 2912]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [2774 2913])
+                    ("rewriteRequest" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("local_idx" variable
+                               (:reference 1
+                                :type ("map" type
+                                     (:template-specifier 
+                                        ( ("int" type nil nil nil)
+                                          ("int" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [2935 2960])
+                            ("indicator" variable (:type "unsigned long long") (reparse-symbol arg-sub-list) [2961 2990])
+                            ("locate" variable (:type "int") (reparse-symbol arg-sub-list) [2991 3002])
+                            ("route_predicator_idx" variable (:type "int") (reparse-symbol arg-sub-list) [3003 3028])
+                            ("fieldValue" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("FieldValue" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3029 3058])
+                            ("parrallelPlan" variable
+                               (:pointer 1
+                                :type ("CParrallelExecution" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3059 3094]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [2916 3095])
+                    ("private" label nil (reparse-symbol classsubparts) [3097 3105])
+                    ("m_pDataFactory" variable
+                       (:pointer 1
+                        :type ("CDataAbstractFactory" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3108 3145])
+                    ("m_pRequest" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("SmartRequest" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3148 3179])
+                    ("m_explainConsumeTime" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3182 3212]))                  
+                :type "class")
+                nil [2226 3215]))          
+      :file "explain.h"
+      :pointmax 3270
+      :fsize 3281
+      :lastmodtime '(22878 65335 0 0)
+      :unmatched-syntax '((punctuation 2152 . 2153) (punctuation 1148 . 1149) (punctuation 911 . 912))
+      :lexical-table 
+        '(("_EXPLAIN_H_")
+          )
+))
+  :file "!Users!ric!Desktop!trunk!app!qzap!service!datainterface!dataaccess!explain!inc!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

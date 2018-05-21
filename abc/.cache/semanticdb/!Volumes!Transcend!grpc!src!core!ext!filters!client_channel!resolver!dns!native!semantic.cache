@@ -1,0 +1,370 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("grpc/support/port_platform.h" include (:system-flag t) nil [605 644])
+            ("inttypes.h" include (:system-flag t) nil [646 667])
+            ("climits" include (:system-flag t) nil [668 686])
+            ("cstring" include (:system-flag t) nil [687 705])
+            ("grpc/support/alloc.h" include (:system-flag t) nil [707 738])
+            ("grpc/support/host_port.h" include (:system-flag t) nil [739 774])
+            ("grpc/support/string_util.h" include (:system-flag t) nil [775 812])
+            ("grpc/support/time.h" include (:system-flag t) nil [813 843])
+            ("src/core/ext/filters/client_channel/lb_policy_registry.h" include nil nil [845 912])
+            ("src/core/ext/filters/client_channel/resolver_registry.h" include nil nil [913 979])
+            ("src/core/lib/backoff/backoff.h" include nil nil [980 1021])
+            ("src/core/lib/channel/channel_args.h" include nil nil [1022 1068])
+            ("src/core/lib/gpr/env.h" include nil nil [1069 1102])
+            ("src/core/lib/gpr/string.h" include nil nil [1103 1139])
+            ("src/core/lib/gprpp/manual_constructor.h" include nil nil [1140 1190])
+            ("src/core/lib/iomgr/combiner.h" include nil nil [1191 1231])
+            ("src/core/lib/iomgr/resolve_address.h" include nil nil [1232 1279])
+            ("src/core/lib/iomgr/timer.h" include nil nil [1280 1317])
+            ("GRPC_DNS_INITIAL_CONNECT_BACKOFF_SECONDS" variable (:constant-flag t) nil [1327 1367])
+            ("GRPC_DNS_RECONNECT_BACKOFF_MULTIPLIER" variable (:constant-flag t) nil [1378 1415])
+            ("GRPC_DNS_RECONNECT_MAX_BACKOFF_SECONDS" variable (:constant-flag t) nil [1428 1466])
+            ("GRPC_DNS_RECONNECT_JITTER" variable (:constant-flag t) nil [1479 1504])
+            ("dns_resolver" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("base" variable (:type ("grpc_resolver" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1564 1583])
+                          ("name_to_resolve" variable
+                             (:pointer 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [1611 1633])
+                          ("default_port" variable
+                             (:pointer 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [1665 1684])
+                          ("channel_args" variable
+                             (:pointer 1
+                              :type ("grpc_channel_args" type (:type "class") nil nil))
+                              (reparse-symbol classsubparts) [1710 1742])
+                          ("interested_parties" variable
+                             (:pointer 1
+                              :type ("grpc_pollset_set" type (:type "class") nil nil))
+                              (reparse-symbol classsubparts) [1803 1840])
+                          ("resolving" variable (:type "bool") (reparse-symbol classsubparts) [1881 1896])
+                          ("published_version" variable (:type "int") (reparse-symbol classsubparts) [1955 1977])
+                          ("resolved_version" variable (:type "int") (reparse-symbol classsubparts) [2029 2050])
+                          ("next_completion" variable
+                             (:pointer 1
+                              :type ("grpc_closure" type (:type "class") nil nil))
+                              (reparse-symbol classsubparts) [2095 2125])
+                          ("target_result" variable
+                             (:pointer 2
+                              :type ("grpc_channel_args" type (:type "class") nil nil))
+                              (reparse-symbol classsubparts) [2179 2213])
+                          ("resolved_result" variable
+                             (:pointer 1
+                              :type ("grpc_channel_args" type (:type "class") nil nil))
+                              (reparse-symbol classsubparts) [2257 2292])
+                          ("have_next_resolution_timer" variable (:type "bool") (reparse-symbol classsubparts) [2326 2358])
+                          ("next_resolution_timer" variable (:type ("grpc_timer" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2361 2394])
+                          ("next_resolution_closure" variable (:type ("grpc_closure" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2397 2434])
+                          ("backoff" variable (:type ("grpc_core::ManualConstructor" type
+                               (:template-specifier 
+                                  ( ("grpc_core::BackOff" type nil nil nil))                                  
+                                :type "class")
+                                nil nil)) (reparse-symbol classsubparts) [2466 2523])
+                          ("min_time_between_resolutions" variable (:type ("grpc_millis" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2600 2641])
+                          ("last_resolution_timestamp" variable (:type ("grpc_millis" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2720 2758])
+                          ("addresses" variable
+                             (:pointer 1
+                              :type ("grpc_resolved_addresses" type (:type "class") nil nil))
+                              (reparse-symbol classsubparts) [2800 2835]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [1510 2851])
+            ("dns_destroy" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("r" variable
+                       (:pointer 1
+                        :type ("grpc_resolver" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2877 2894]))                  
+                :type "void")
+                nil [2853 2895])
+            ("dns_start_resolving_locked" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("r" variable
+                       (:pointer 1
+                        :type ("dns_resolver" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2936 2952]))                  
+                :type "void")
+                nil [2897 2953])
+            ("maybe_start_resolving_locked" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("r" variable
+                       (:pointer 1
+                        :type ("dns_resolver" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2995 3011]))                  
+                :type "void")
+                nil [2954 3012])
+            ("dns_maybe_finish_next_locked" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("r" variable
+                       (:pointer 1
+                        :type ("dns_resolver" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3054 3070]))                  
+                :type "void")
+                nil [3013 3071])
+            ("dns_shutdown_locked" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("r" variable
+                       (:pointer 1
+                        :type ("grpc_resolver" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3105 3122]))                  
+                :type "void")
+                nil [3073 3123])
+            ("dns_channel_saw_error_locked" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("r" variable
+                       (:pointer 1
+                        :type ("grpc_resolver" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3165 3182]))                  
+                :type "void")
+                nil [3124 3183])
+            ("dns_next_locked" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("r" variable
+                       (:pointer 1
+                        :type ("grpc_resolver" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3212 3229])
+                    ("target_result" variable
+                       (:pointer 2
+                        :type ("grpc_channel_args" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3230 3264])
+                    ("on_complete" variable
+                       (:pointer 1
+                        :type ("grpc_closure" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3293 3319]))                  
+                :type "void")
+                nil [3184 3320])
+            ("dns_resolver_vtable" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :default-value "{
+    dns_destroy, dns_shutdown_locked, dns_channel_saw_error_locked,
+    dns_next_locked}"
+                :type ("grpc_resolver_vtable" type (:type "class") nil nil))
+                nil [3322 3469])
+            ("dns_shutdown_locked" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("resolver" variable
+                       (:pointer 1
+                        :type ("grpc_resolver" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3503 3527]))                  
+                :type "void")
+                nil [3471 3930])
+            ("dns_channel_saw_error_locked" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("resolver" variable
+                       (:pointer 1
+                        :type ("grpc_resolver" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3973 3997]))                  
+                :type "void")
+                nil [3932 4110])
+            ("dns_next_locked" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("resolver" variable
+                       (:pointer 1
+                        :type ("grpc_resolver" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4140 4164])
+                    ("target_result" variable
+                       (:pointer 2
+                        :type ("grpc_channel_args" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4193 4227])
+                    ("on_complete" variable
+                       (:pointer 1
+                        :type ("grpc_closure" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4256 4282]))                  
+                :type "void")
+                nil [4112 4578])
+            ("dns_on_next_resolution_timer_locked" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4628 4638])
+                    ("error" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4639 4657]))                  
+                :type "void")
+                nil [4580 4890])
+            ("dns_on_resolved_locked" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4927 4937])
+                    ("error" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4938 4956]))                  
+                :type "void")
+                nil [4892 7008])
+            ("maybe_start_resolving_locked" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("r" variable
+                       (:pointer 1
+                        :type ("dns_resolver" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7051 7067]))                  
+                :type "void")
+                nil [7010 8278])
+            ("dns_start_resolving_locked" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("r" variable
+                       (:pointer 1
+                        :type ("dns_resolver" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8319 8335]))                  
+                :type "void")
+                nil [8280 8767])
+            ("dns_maybe_finish_next_locked" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("r" variable
+                       (:pointer 1
+                        :type ("dns_resolver" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8810 8826]))                  
+                :type "void")
+                nil [8769 9235])
+            ("dns_destroy" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("gr" variable
+                       (:pointer 1
+                        :type ("grpc_resolver" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9261 9279]))                  
+                :type "void")
+                nil [9237 9589])
+            ("dns_create" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("args" variable
+                       (:pointer 1
+                        :type ("grpc_resolver_args" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9624 9649])
+                    ("default_port" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [9683 9708]))                  
+                :type ("grpc_resolver" type (:type "class") nil nil))
+                nil [9591 11243])
+            ("dns_factory_ref" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("factory" variable
+                       (:pointer 1
+                        :type ("grpc_resolver_factory" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11292 11323]))                  
+                :type "void")
+                nil [11264 11326])
+            ("dns_factory_unref" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("factory" variable
+                       (:pointer 1
+                        :type ("grpc_resolver_factory" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11358 11389]))                  
+                :type "void")
+                nil [11328 11392])
+            ("dns_factory_create_resolver" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("factory" variable
+                       (:pointer 1
+                        :type ("grpc_resolver_factory" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11449 11480])
+                    ("args" variable
+                       (:pointer 1
+                        :type ("grpc_resolver_args" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11481 11506]))                  
+                :type ("grpc_resolver" type (:type "class") nil nil))
+                nil [11394 11546])
+            ("dns_factory_get_default_host_name" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("factory" variable
+                       (:pointer 1
+                        :type ("grpc_resolver_factory" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11595 11626])
+                    ("uri" variable
+                       (:pointer 1
+                        :type ("grpc_uri" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11674 11688]))                  
+                :type "char")
+                nil [11548 11781])
+            ("dns_factory_vtable" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :default-value "{
+    dns_factory_ref, dns_factory_unref, dns_factory_create_resolver,
+    dns_factory_get_default_host_name, \"dns\"}"
+                :type ("grpc_resolver_factory_vtable" type (:type "class") nil nil))
+                nil [11783 11963])
+            ("dns_resolver_factory" variable
+               (:typemodifiers ("static")
+                :default-value "{&dns_factory_vtable}"
+                :type ("grpc_resolver_factory" type (:type "class") nil nil))
+                nil [11964 12038])
+            ("dns_resolver_factory_create" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :type ("grpc_resolver_factory" type (:type "class") nil nil))
+                nil [12040 12135])
+            ("grpc_resolver_dns_native_init" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [12172 12177]))                  
+                :type "void")
+                nil [12137 12779])
+            ("grpc_resolver_dns_native_shutdown" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [12820 12825]))                  
+                :type "void")
+                nil [12781 12828]))          
+      :file "dns_resolver.cc"
+      :pointmax 12829
+      :fsize 12828
+      :lastmodtime '(23159 46047 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("GRPC_DNS_RECONNECT_MAX_BACKOFF_SECONDS" . ((number "120" 1467 . 1470)))
+          ("GRPC_DNS_RECONNECT_JITTER" . ((number "0.2" 1505 . 1508)))
+          ("GRPC_DNS_INITIAL_CONNECT_BACKOFF_SECONDS" . ((number "1" 1368 . 1369)))
+          ("GRPC_DNS_RECONNECT_BACKOFF_MULTIPLIER" . ((number "1.6" 1416 . 1419)))
+          )
+))
+  :file "!Volumes!Transcend!grpc!src!core!ext!filters!client_channel!resolver!dns!native!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

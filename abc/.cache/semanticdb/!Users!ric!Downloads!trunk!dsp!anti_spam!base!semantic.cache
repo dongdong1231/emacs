@@ -1,0 +1,567 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("DSP_ANTI_SPAM_BASE_BASE_DEFINE_H_" variable (:constant-flag t) nil [139 172])
+            ("stdio.h" include (:system-flag t) nil [174 192])
+            ("tr1/unordered_map" include (:system-flag t) nil [193 221])
+            ("tr1/unordered_set" include (:system-flag t) nil [222 250])
+            ("string" include (:system-flag t) nil [251 268])
+            ("dsp" type
+               (:members 
+                  ( ("antispam" type
+                       (:members 
+                          ( ("CallbackName_AntispamSys" variable
+                               (:constant-flag t
+                                :default-value "\"as\""
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [310 360])
+                            ("DISALLOW_COPY_AND_ASSIGN" variable (:constant-flag t) (reparse-symbol namespacesubparts) [371 395]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [287 490]))                  
+                :type "namespace")
+                nil [271 515]))          
+      :file "base_define.h"
+      :pointmax 580
+      :fsize 579
+      :lastmodtime '(22840 64120 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("DISALLOW_COPY_AND_ASSIGN" (spp-arg-list ("TypeName") 395 . 405) . 
+              ((symbol "TypeName" 410 . 418) (semantic-list "(const TypeName&)" 418 . 435) (punctuation ";" 435 . 436) (VOID "void" 455 . 459) (OPERATOR "operator" 460 . 468) (punctuation "=" 468 . 469) (semantic-list "(const TypeName&)" 469 . 486)))
+          ("DSP_ANTI_SPAM_BASE_BASE_DEFINE_H_")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("DSP_ANTI_SPAM_BASE_STORAGE_H_" variable (:constant-flag t) nil [135 164])
+            ("stdint.h" include (:system-flag t) nil [166 185])
+            ("string" include (:system-flag t) nil [186 203])
+            ("vector" include (:system-flag t) nil [204 221])
+            ("dsp" type
+               (:members 
+                  ( ("antispam" type
+                       (:members 
+                          ( ("StKeyNode" type
+                               (:members 
+                                  ( ("StKeyNode" function
+                                       (:constructor-flag t
+                                        :type ("StKeyNode" type (:type "struct") nil nil))
+                                        (reparse-symbol classsubparts) [282 406])
+                                    ("key" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [410 426])
+                                    ("data" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [429 446])
+                                    ("retcode" variable (:type "int") (reparse-symbol classsubparts) [449 461])
+                                    ("cas" variable (:type "int") (reparse-symbol classsubparts) [464 472])
+                                    ("expire" variable (:type "int") (reparse-symbol classsubparts) [475 486]))                                  
+                                :type "struct")
+                                (reparse-symbol namespacesubparts) [261 489])
+                            ("StorageConfig" type
+                               (:prototype t
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [491 511])
+                            ("Storage" type
+                               (:members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [530 537])
+                                    ("Init" function
+                                       (:pure-virtual-flag t
+                                        :prototype-flag t
+                                        :typemodifiers ("virtual")
+                                        :arguments 
+                                          ( ("config" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("StorageConfig" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [558 586]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [540 591])
+                                    ("GetValue" function
+                                       (:pure-virtual-flag t
+                                        :prototype-flag t
+                                        :typemodifiers ("virtual")
+                                        :arguments 
+                                          ( ("key" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [617 640])
+                                            ("value" variable
+                                               (:pointer 1
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [641 660])
+                                            ("cas" variable
+                                               (:pointer 1
+                                                :type ("int32_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [685 698]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [595 703])
+                                    ("SetValue" function
+                                       (:pure-virtual-flag t
+                                        :prototype-flag t
+                                        :typemodifiers ("virtual")
+                                        :arguments 
+                                          ( ("key" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [729 752])
+                                            ("value" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [753 778])
+                                            ("cas" variable
+                                               (:pointer 1
+                                                :type ("int32_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [803 816])
+                                            ("expire_in_second" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [817 842]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [707 847])
+                                    ("DeleteValue" function
+                                       (:pure-virtual-flag t
+                                        :prototype-flag t
+                                        :typemodifiers ("virtual")
+                                        :arguments 
+                                          ( ("key" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [876 899])
+                                            ("cas" variable
+                                               (:pointer 1
+                                                :type ("int32_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [900 913]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [851 918])
+                                    ("GetValues" function
+                                       (:pure-virtual-flag t
+                                        :prototype-flag t
+                                        :typemodifiers ("virtual")
+                                        :arguments 
+                                          ( ("nodes" variable
+                                               (:pointer 1
+                                                :type ("std::vector" type
+                                                     (:template-specifier 
+                                                        ( ("StKeyNode" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [956 986]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [933 991])
+                                    ("SetValues" function
+                                       (:pure-virtual-flag t
+                                        :prototype-flag t
+                                        :typemodifiers ("virtual")
+                                        :arguments 
+                                          ( ("nodes" variable
+                                               (:pointer 1
+                                                :type ("std::vector" type
+                                                     (:template-specifier 
+                                                        ( ("StKeyNode" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [1029 1059]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [1006 1064])
+                                    ("DeleteValues" function
+                                       (:pure-virtual-flag t
+                                        :prototype-flag t
+                                        :typemodifiers ("virtual")
+                                        :arguments 
+                                          ( ("nodes" variable
+                                               (:pointer 1
+                                                :type ("std::vector" type
+                                                     (:template-specifier 
+                                                        ( ("StKeyNode" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [1094 1124]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [1068 1129])
+                                    ("Storage" function
+                                       (:destructor-flag t
+                                        :typemodifiers ("virtual")
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1133 1154]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [513 1157]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [239 1160]))                  
+                :type "namespace")
+                nil [223 1185]))          
+      :file "storage.h"
+      :pointmax 1246
+      :fsize 1265
+      :lastmodtime '(22840 64120 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("DSP_ANTI_SPAM_BASE_STORAGE_H_")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("DSP_ANTI_SPAM_BASE_CACHE_STORAGE_H_" variable (:constant-flag t) nil [141 176])
+            ("string" include (:system-flag t) nil [178 195])
+            ("vector" include (:system-flag t) nil [196 213])
+            ("memory" include (:system-flag t) nil [214 231])
+            ("common/base/scoped_ptr.h" include nil nil [233 268])
+            ("common/collection/hash_memory_cache.h" include nil nil [269 317])
+            ("dsp/anti_spam/base/base_define.h" include nil nil [319 362])
+            ("dsp/anti_spam/base/storage.h" include nil nil [363 402])
+            ("dsp/anti_spam/proto/antispam_config.pb.h" include nil nil [403 454])
+            ("dsp" type
+               (:members 
+                  ( ("antispam" type
+                       (:members 
+                          ( ("CacheStorage" type
+                               (:superclasses 
+                                  ( ("Storage" type
+                                       (:protection "public"
+                                        :type "class")
+                                        nil nil))                                  
+                                :members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [533 540])
+                                    ("CacheStorage" function
+                                       (:prototype-flag t
+                                        :constructor-flag t
+                                        :type ("CacheStorage" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [543 558])
+                                    ("CacheStorage" function
+                                       (:prototype-flag t
+                                        :destructor-flag t
+                                        :typemodifiers ("virtual")
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [561 585])
+                                    ("Init" function
+                                       (:prototype-flag t
+                                        :typemodifiers ("virtual")
+                                        :arguments 
+                                          ( ("config" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("StorageConfig" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [607 635]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [589 636])
+                                    ("GetValue" function
+                                       (:prototype-flag t
+                                        :typemodifiers ("virtual")
+                                        :arguments 
+                                          ( ("key" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [662 685])
+                                            ("value" variable
+                                               (:pointer 1
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [686 705])
+                                            ("cas" variable
+                                               (:pointer 1
+                                                :type ("int32_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [730 743]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [640 744])
+                                    ("SetValue" function
+                                       (:prototype-flag t
+                                        :typemodifiers ("virtual")
+                                        :arguments 
+                                          ( ("key" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [770 793])
+                                            ("value" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [794 819])
+                                            ("cas" variable
+                                               (:pointer 1
+                                                :type ("int32_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [844 857])
+                                            ("expire_in_second" variable
+                                               (:default-value "0"
+                                                :type ("int32_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [858 886]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [748 888])
+                                    ("DeleteValue" function
+                                       (:prototype-flag t
+                                        :typemodifiers ("virtual")
+                                        :arguments 
+                                          ( ("key" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [917 940])
+                                            ("cas" variable
+                                               (:pointer 1
+                                                :type ("int32_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [941 954]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [892 955])
+                                    ("GetValues" function
+                                       (:prototype-flag t
+                                        :typemodifiers ("virtual")
+                                        :arguments 
+                                          ( ("nodes" variable
+                                               (:pointer 1
+                                                :type ("std::vector" type
+                                                     (:template-specifier 
+                                                        ( ("StKeyNode" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [982 1012]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [959 1013])
+                                    ("SetValues" function
+                                       (:prototype-flag t
+                                        :typemodifiers ("virtual")
+                                        :arguments 
+                                          ( ("nodes" variable
+                                               (:pointer 1
+                                                :type ("std::vector" type
+                                                     (:template-specifier 
+                                                        ( ("StKeyNode" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [1040 1070]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [1017 1071])
+                                    ("DeleteValues" function
+                                       (:prototype-flag t
+                                        :typemodifiers ("virtual")
+                                        :arguments 
+                                          ( ("nodes" variable
+                                               (:pointer 1
+                                                :type ("std::vector" type
+                                                     (:template-specifier 
+                                                        ( ("StKeyNode" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [1101 1131]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [1075 1132])
+                                    ("private" label nil (reparse-symbol classsubparts) [1135 1143])
+                                    ("GetHashKey" function
+                                       (:prototype-flag t
+                                        :methodconst-flag t
+                                        :arguments 
+                                          ( ("key" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1166 1189]))                                          
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1146 1196])
+                                    ("private" label nil (reparse-symbol classsubparts) [1199 1207])
+                                    ("Cache" type
+                                       (:typedef ("HashMemoryCache" type
+                                             (:template-specifier 
+                                                ( ("uint64_t" type nil nil nil)
+                                                  ("std::string" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil)
+                                        :type "typedef")
+                                        (reparse-symbol classsubparts) [1210 1263])
+                                    ("cache_" variable (:type ("scoped_ptr" type
+                                         (:template-specifier 
+                                            ( ("Cache" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [1266 1291])
+                                    ("private" label nil (reparse-symbol classsubparts) [1294 1302])
+                                    ("DISALLOW_COPY_AND_ASSIGN" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("" variable (:type ("CacheStorage" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1330 1343]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [1305 1344]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [494 1347]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [472 1350]))                  
+                :type "namespace")
+                nil [456 1375]))          
+      :file "cache_storage.h"
+      :pointmax 1442
+      :fsize 1441
+      :lastmodtime '(22840 64120 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("DSP_ANTI_SPAM_BASE_CACHE_STORAGE_H_")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("dsp/anti_spam/base/cache_storage.h" include nil nil [89 134])
+            ("vector" include (:system-flag t) nil [136 153])
+            ("thirdparty/cityhash/city.h" include nil nil [155 192])
+            ("thirdparty/glog/logging.h" include nil nil [193 229])
+            ("dsp/anti_spam/proto/antispam_config.pb.h" include nil nil [231 282])
+            ("dsp/anti_spam/base/monitor.h" include nil nil [283 322])
+            ("dsp/anti_spam/base/factory.h" include nil nil [323 362])
+            ("kDeletedKey" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :default-value "0"
+                :type ("uint64_t" type (:type "class") nil nil))
+                nil [364 402])
+            ("dsp" type
+               (:members 
+                  ( ("antispam" type
+                       (:members 
+                          ( ("CacheStorage" function
+                               (:constructor-flag t
+                                :parent "CacheStorage"
+                                :type ("CacheStorage" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [442 474])
+                            ("CacheStorage" function
+                               (:destructor-flag t
+                                :parent "CacheStorage"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [476 649])
+                            ("Init" function
+                               (:parent "CacheStorage"
+                                :arguments 
+                                  ( ("config" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("StorageConfig" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [675 703]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [651 991])
+                            ("GetHashKey" function
+                               (:methodconst-flag t
+                                :parent "CacheStorage"
+                                :arguments 
+                                  ( ("key" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1027 1050]))                                  
+                                :type ("uint64_t" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [993 1246])
+                            ("GetValue" function
+                               (:parent "CacheStorage"
+                                :arguments 
+                                  ( ("key" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1276 1294])
+                                    ("value" variable
+                                       (:pointer 1
+                                        :type ("string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1295 1309])
+                                    ("cas" variable
+                                       (:pointer 1
+                                        :type ("int32_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1310 1323]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [1248 1632])
+                            ("SetValue" function
+                               (:parent "CacheStorage"
+                                :arguments 
+                                  ( ("key" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1784 1802])
+                                    ("value" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1803 1823])
+                                    ("cas" variable
+                                       (:pointer 1
+                                        :type ("int32_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1852 1865])
+                                    ("expire_in_second" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1866 1891]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [1756 2455])
+                            ("DeleteValue" function
+                               (:parent "CacheStorage"
+                                :arguments 
+                                  ( ("key" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2488 2506])
+                                    ("cas" variable
+                                       (:pointer 1
+                                        :type ("int32_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2507 2520]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [2457 2574])
+                            ("GetValues" function
+                               (:parent "CacheStorage"
+                                :arguments 
+                                  ( ("nodes" variable
+                                       (:pointer 1
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("StKeyNode" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [2605 2635]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [2576 2845])
+                            ("SetValues" function
+                               (:parent "CacheStorage"
+                                :arguments 
+                                  ( ("nodes" variable
+                                       (:pointer 1
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("StKeyNode" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [2876 2906]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [2847 3092])
+                            ("DeleteValues" function
+                               (:parent "CacheStorage"
+                                :arguments 
+                                  ( ("nodes" variable
+                                       (:pointer 1
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("StKeyNode" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [3126 3156]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [3094 3269])
+                            ("REGISTER_STORAGE" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("" variable (:type ("CacheStorage" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3305 3318]))                                  
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [3271 3319]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [420 3322]))                  
+                :type "namespace")
+                nil [404 3347]))          
+      :file "cache_storage.cc"
+      :pointmax 3366
+      :fsize 3445
+      :lastmodtime '(22840 64120 0 0)
+      :unmatched-syntax '((string 3288 . 3303)))
+    (semanticdb-table "semanticdb-table"
+      :file "monitor.h"
+      :fsize 1457
+      :lastmodtime '(22840 64120 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "factory.h"
+      :fsize 3882
+      :lastmodtime '(22840 64120 0 0)))
+  :file "!Users!ric!Downloads!trunk!dsp!anti_spam!base!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

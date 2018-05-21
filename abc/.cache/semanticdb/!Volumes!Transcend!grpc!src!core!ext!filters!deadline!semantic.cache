@@ -1,0 +1,524 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("GRPC_CORE_EXT_FILTERS_DEADLINE_DEADLINE_FILTER_H" variable (:constant-flag t) nil [663 711])
+            ("src/core/lib/channel/channel_stack.h" include nil nil [713 760])
+            ("src/core/lib/iomgr/timer.h" include nil nil [761 798])
+            ("grpc_server_deadline_filter" variable
+               (:type ("grpc_channel_filter" type (:type "class") nil nil)
+                :constant-flag t
+                :typemodifiers ("extern" "\"C\"" "extern"))
+                (reparse-symbol extern-c-contents) [3658 3719])
+            ("grpc_client_deadline_filter" variable
+               (:type ("grpc_channel_filter" type (:type "class") nil nil)
+                :constant-flag t
+                :typemodifiers ("extern" "\"C\"" "extern"))
+                (reparse-symbol extern-c-contents) [3596 3657])
+            ("grpc_deadline_checking_enabled" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "bool"
+                :arguments 
+                  ( ("args" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grpc_channel_args" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3400 3430]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3364 3431])
+            ("grpc_deadline_state_client_start_transport_stream_op_batch" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("exec_ctx" variable
+                       (:pointer 1
+                        :type ("grpc_exec_ctx" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3203 3227])
+                    ("elem" variable
+                       (:pointer 1
+                        :type ("grpc_call_element" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3228 3252])
+                    ("op" variable
+                       (:pointer 1
+                        :type ("grpc_transport_stream_op_batch" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3257 3292]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3134 3293])
+            ("grpc_deadline_state_reset" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("exec_ctx" variable
+                       (:pointer 1
+                        :type ("grpc_exec_ctx" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2678 2702])
+                    ("elem" variable
+                       (:pointer 1
+                        :type ("grpc_call_element" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2703 2727])
+                    ("new_deadline" variable (:type ("grpc_millis" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2759 2784]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2647 2785])
+            ("grpc_deadline_state_destroy" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("exec_ctx" variable
+                       (:pointer 1
+                        :type ("grpc_exec_ctx" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2091 2115])
+                    ("elem" variable
+                       (:pointer 1
+                        :type ("grpc_call_element" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2149 2173]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2058 2174])
+            ("grpc_deadline_state_init" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("exec_ctx" variable
+                       (:pointer 1
+                        :type ("grpc_exec_ctx" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1830 1854])
+                    ("elem" variable
+                       (:pointer 1
+                        :type ("grpc_call_element" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1855 1879])
+                    ("call_stack" variable
+                       (:pointer 1
+                        :type ("grpc_call_stack" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1910 1938])
+                    ("call_combiner" variable
+                       (:pointer 1
+                        :type ("grpc_call_combiner" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1969 2003])
+                    ("deadline" variable (:type ("grpc_millis" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2034 2055]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [1800 2056])
+            ("grpc_deadline_state" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :typedef ("grpc_deadline_state" type (:type "struct") nil nil))
+                (reparse-symbol extern-c-contents) [1113 1645])
+            ("grpc_deadline_state" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :members 
+                  ( ("call_stack" variable
+                       (:pointer 1
+                        :type ("grpc_call_stack" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1219 1247])
+                    ("call_combiner" variable
+                       (:pointer 1
+                        :type ("grpc_call_combiner" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1250 1284])
+                    ("timer_state" variable (:type ("grpc_deadline_timer_state" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1287 1325])
+                    ("timer" variable (:type ("grpc_timer" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1328 1345])
+                    ("timer_callback" variable (:type ("grpc_closure" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1348 1376])
+                    ("on_complete" variable (:type ("grpc_closure" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1467 1492])
+                    ("next_on_complete" variable
+                       (:pointer 1
+                        :type ("grpc_closure" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1591 1622]))                  )
+                (reparse-symbol extern-c-contents) [1113 1645])
+            ("grpc_deadline_timer_state" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :typedef ("grpc_deadline_timer_state" type (:type "enum") nil nil))
+                (reparse-symbol extern-c-contents) [840 1002])
+            ("grpc_deadline_timer_state" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "enum"
+                :members 
+                  ( ("GRPC_DEADLINE_STATE_INITIAL" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [883 911])
+                    ("GRPC_DEADLINE_STATE_PENDING" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [914 942])
+                    ("GRPC_DEADLINE_STATE_FINISHED" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [945 975]))                  )
+                (reparse-symbol extern-c-contents) [840 1002]))          
+      :file "deadline_filter.h"
+      :pointmax 3812
+      :fsize 3605
+      :lastmodtime '(23085 58367 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("GRPC_CORE_EXT_FILTERS_DEADLINE_DEADLINE_FILTER_H")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("src/core/ext/filters/deadline/deadline_filter.h" include nil nil [598 656])
+            ("stdbool.h" include (:system-flag t) nil [658 678])
+            ("string.h" include (:system-flag t) nil [679 698])
+            ("grpc/support/alloc.h" include (:system-flag t) nil [700 731])
+            ("grpc/support/log.h" include (:system-flag t) nil [732 761])
+            ("grpc/support/sync.h" include (:system-flag t) nil [762 792])
+            ("grpc/support/time.h" include (:system-flag t) nil [793 823])
+            ("src/core/lib/channel/channel_stack_builder.h" include nil nil [825 880])
+            ("src/core/lib/iomgr/exec_ctx.h" include nil nil [881 921])
+            ("src/core/lib/iomgr/timer.h" include nil nil [922 959])
+            ("src/core/lib/slice/slice_internal.h" include nil nil [960 1006])
+            ("src/core/lib/surface/channel_init.h" include nil nil [1007 1053])
+            ("yield_call_combiner" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [1260 1270])
+                    ("ignored" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1271 1291]))                  
+                :type "void")
+                nil [1228 1561])
+            ("send_cancel_op_in_call_combiner" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [1696 1706])
+                    ("error" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1707 1725]))                  
+                :type "void")
+                nil [1652 2244])
+            ("timer_callback" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2292 2302])
+                    ("error" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2303 2321]))                  
+                :type "void")
+                nil [2265 3240])
+            ("start_timer_if_needed" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("elem" variable
+                       (:pointer 1
+                        :type ("grpc_call_element" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3395 3419])
+                    ("deadline" variable (:type ("grpc_millis" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3454 3475]))                  
+                :type "void")
+                nil [3361 4688])
+            ("cancel_timer_if_needed" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("deadline_state" variable
+                       (:pointer 1
+                        :type ("grpc_deadline_state" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4845 4881]))                  
+                :type "void")
+                nil [4810 5193])
+            ("on_complete" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [5262 5272])
+                    ("error" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5273 5291]))                  
+                :type "void")
+                nil [5238 5512])
+            ("inject_on_complete_cb" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("deadline_state" variable
+                       (:pointer 1
+                        :type ("grpc_deadline_state" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5596 5632])
+                    ("op" variable
+                       (:pointer 1
+                        :type ("grpc_transport_stream_op_batch" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5667 5702]))                  
+                :type "void")
+                nil [5562 5937])
+            ("start_timer_after_init_state" type
+               (:members 
+                  ( ("in_call_combiner" variable (:type "bool") (reparse-symbol classsubparts) [6090 6112])
+                    ("elem" variable
+                       (:pointer 1
+                        :type ("grpc_call_element" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [6115 6139])
+                    ("deadline" variable (:type ("grpc_millis" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6142 6163])
+                    ("closure" variable (:type ("grpc_closure" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6166 6187]))                  
+                :type "struct")
+                nil [6050 6190])
+            ("start_timer_after_init" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [6226 6236])
+                    ("error" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6237 6255]))                  
+                :type "void")
+                nil [6191 7026])
+            ("grpc_deadline_state_init" function
+               (:arguments 
+                  ( ("elem" variable
+                       (:pointer 1
+                        :type ("grpc_call_element" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7058 7082])
+                    ("call_stack" variable
+                       (:pointer 1
+                        :type ("grpc_call_stack" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7113 7141])
+                    ("call_combiner" variable
+                       (:pointer 1
+                        :type ("grpc_call_combiner" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7172 7206])
+                    ("deadline" variable (:type ("grpc_millis" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7237 7258]))                  
+                :type "void")
+                nil [7028 8453])
+            ("grpc_deadline_state_destroy" function
+               (:arguments 
+                  ( ("elem" variable
+                       (:pointer 1
+                        :type ("grpc_call_element" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8488 8512]))                  
+                :type "void")
+                nil [8455 8637])
+            ("grpc_deadline_state_reset" function
+               (:arguments 
+                  ( ("elem" variable
+                       (:pointer 1
+                        :type ("grpc_call_element" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8670 8694])
+                    ("new_deadline" variable (:type ("grpc_millis" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8726 8751]))                  
+                :type "void")
+                nil [8639 8921])
+            ("grpc_deadline_state_client_start_transport_stream_op_batch" function
+               (:arguments 
+                  ( ("elem" variable
+                       (:pointer 1
+                        :type ("grpc_call_element" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8992 9016])
+                    ("op" variable
+                       (:pointer 1
+                        :type ("grpc_transport_stream_op_batch" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9017 9052]))                  
+                :type "void")
+                nil [8923 9406])
+            ("init_channel_elem" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("elem" variable
+                       (:pointer 1
+                        :type ("grpc_channel_element" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9542 9569])
+                    ("args" variable
+                       (:pointer 1
+                        :type ("grpc_channel_element_args" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9607 9639]))                  
+                :type ("grpc_error" type (:type "class") nil nil))
+                nil [9505 9699])
+            ("destroy_channel_elem" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("elem" variable
+                       (:pointer 1
+                        :type ("grpc_channel_element" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9808 9835]))                  
+                :type "void")
+                nil [9775 9838])
+            ("base_call_data" type
+               (:members 
+                  ( ("deadline_state" variable (:type ("grpc_deadline_state" type (:type "class") nil nil)) (reparse-symbol classsubparts) [9927 9962]))                  
+                :type "struct")
+                nil [9893 9980])
+            ("base_call_data" type
+               (:typedef ("base_call_data" type (:type "struct") nil nil)
+                :type "typedef")
+                nil [9893 9980])
+            ("server_call_data" type
+               (:members 
+                  ( ("base" variable (:type ("base_call_data" type (:type "class") nil nil)) (reparse-symbol classsubparts) [10075 10095])
+                    ("recv_initial_metadata_ready" variable (:type ("grpc_closure" type (:type "class") nil nil)) (reparse-symbol classsubparts) [10166 10207])
+                    ("recv_initial_metadata" variable
+                       (:pointer 1
+                        :type ("grpc_metadata_batch" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [10248 10291])
+                    ("next_recv_initial_metadata_ready" variable
+                       (:pointer 1
+                        :type ("grpc_closure" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [10406 10453]))                  
+                :type "struct")
+                nil [10039 10473])
+            ("server_call_data" type
+               (:typedef ("server_call_data" type (:type "struct") nil nil)
+                :type "typedef")
+                nil [10039 10473])
+            ("init_call_elem" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("elem" variable
+                       (:pointer 1
+                        :type ("grpc_call_element" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10581 10605])
+                    ("args" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grpc_call_element_args" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10640 10675]))                  
+                :type ("grpc_error" type (:type "class") nil nil))
+                nil [10547 10821])
+            ("destroy_call_elem" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("elem" variable
+                       (:pointer 1
+                        :type ("grpc_call_element" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10924 10948])
+                    ("final_info" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grpc_call_final_info" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10979 11018])
+                    ("ignored" variable
+                       (:pointer 1
+                        :type ("grpc_closure" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11049 11071]))                  
+                :type "void")
+                nil [10894 11112])
+            ("client_start_transport_stream_op_batch" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("elem" variable
+                       (:pointer 1
+                        :type ("grpc_call_element" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11222 11246])
+                    ("op" variable
+                       (:pointer 1
+                        :type ("grpc_transport_stream_op_batch" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11247 11282]))                  
+                :type "void")
+                nil [11166 11416])
+            ("recv_initial_metadata_ready" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [11516 11526])
+                    ("error" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11527 11545]))                  
+                :type "void")
+                nil [11476 11941])
+            ("server_start_transport_stream_op_batch" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("elem" variable
+                       (:pointer 1
+                        :type ("grpc_call_element" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12051 12075])
+                    ("op" variable
+                       (:pointer 1
+                        :type ("grpc_transport_stream_op_batch" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12076 12111]))                  
+                :type "void")
+                nil [11995 13487])
+            ("grpc_client_deadline_filter" variable
+               (:constant-flag t
+                :default-value "{
+    client_start_transport_stream_op_batch,
+    grpc_channel_next_op,
+    sizeof(base_call_data),
+    init_call_elem,
+    grpc_call_stack_ignore_set_pollset_or_pollset_set,
+    destroy_call_elem,
+    0,  // sizeof(channel_data)
+    init_channel_elem,
+    destroy_channel_elem,
+    grpc_channel_next_get_info,
+    \"deadline\",
+}"
+                :type ("grpc_channel_filter" type (:type "class") nil nil))
+                nil [13489 13874])
+            ("grpc_server_deadline_filter" variable
+               (:constant-flag t
+                :default-value "{
+    server_start_transport_stream_op_batch,
+    grpc_channel_next_op,
+    sizeof(server_call_data),
+    init_call_elem,
+    grpc_call_stack_ignore_set_pollset_or_pollset_set,
+    destroy_call_elem,
+    0,  // sizeof(channel_data)
+    init_channel_elem,
+    destroy_channel_elem,
+    grpc_channel_next_get_info,
+    \"deadline\",
+}"
+                :type ("grpc_channel_filter" type (:type "class") nil nil))
+                nil [13876 14263])
+            ("grpc_deadline_checking_enabled" function
+               (:arguments 
+                  ( ("channel_args" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grpc_channel_args" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14301 14339]))                  
+                :type "bool")
+                nil [14265 14516])
+            ("maybe_add_deadline_filter" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("builder" variable
+                       (:pointer 1
+                        :type ("grpc_channel_stack_builder" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14556 14592])
+                    ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [14631 14641]))                  
+                :type "bool")
+                nil [14518 14916])
+            ("grpc_deadline_filter_init" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [14949 14954]))                  
+                :type "void")
+                nil [14918 15305])
+            ("grpc_deadline_filter_shutdown" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [15342 15347]))                  
+                :type "void")
+                nil [15307 15350]))          
+      :file "deadline_filter.cc"
+      :pointmax 15351
+      :fsize 15350
+      :lastmodtime '(23085 58367 0 0)
+      :unmatched-syntax nil))
+  :file "!Volumes!Transcend!grpc!src!core!ext!filters!deadline!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

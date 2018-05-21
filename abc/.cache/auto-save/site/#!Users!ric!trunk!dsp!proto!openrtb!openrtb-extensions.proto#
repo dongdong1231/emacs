@@ -1,0 +1,278 @@
+// Copyright (c) 2015 YesDat Inc.
+// Author: Fei He (jason@yesdat.com)
+
+import "dsp/proto/common/ad_exchange_export.proto";
+import "dsp/proto/openrtb/openrtb.proto";
+
+package yd.openrtb;
+option java_package = "yd.openrtb";
+option java_outer_classname = "OpenRtbExtensionsProto";
+
+//----------------------------------------------------------------------
+// Constant
+//----------------------------------------------------------------------
+
+// 互动类型
+enum InteractionType {
+  kInteractionTypeUnknown = 0;
+  kInteractionTypeClick = 1;  // 点击
+  kInteractionTypeDownload = 2;  // 下载
+  kInteractionTypeTel = 3;  // 电话
+  kInteractionTypeMap = 4;  // 地图
+};
+
+// 媒体库存质量等级
+enum ImpQualityLevel {
+  kImpQualityLevelUnknown = 0;  // 未知
+  kImpQualityLevelTop = 1;  // 优质
+  kImpQualityLevelMedium = 2;  // 中端
+  kImpQualityLevelLongTail = 3;  // 长尾
+  kImpQualityLevelLow = 4;  // 低质
+};
+
+//----------------------------------------------------------------------
+// BidRequest
+//----------------------------------------------------------------------
+
+extend .openrtb.BidRequest {
+  optional BidRequestExt bid_request_ext = 101;
+};
+
+message BidRequestExt {
+  optional uint64 ad_exchange_id = 1;
+  optional int32 version = 2;
+};
+
+//----------------------------------------------------------------------
+// BidRequest.User
+//----------------------------------------------------------------------
+
+extend .openrtb.BidRequest.User {
+  optional UserExt user_ext = 101;
+};
+
+message UserExt {
+  optional uint64 ad_exchange_user_id_version = 1;
+  optional string ad_exchange_cross_device_id = 2;
+};
+
+//----------------------------------------------------------------------
+// BidRequest.App
+//----------------------------------------------------------------------
+
+extend .openrtb.BidRequest.App {
+  optional AppExt app_ext = 101;
+};
+
+message AppExt {
+  repeated uint32 landing_type = 1;
+  repeated InteractionType interaction_type = 2;
+};
+
+//----------------------------------------------------------------------
+// BidRequest.Site
+//----------------------------------------------------------------------
+
+extend .openrtb.BidRequest.Site {
+  optional SiteExt site_ext = 101;
+};
+
+message SiteExt {
+  repeated uint32 content_category = 1;
+};
+
+//----------------------------------------------------------------------
+// BidRequest.Device
+//----------------------------------------------------------------------
+
+extend .openrtb.BidRequest.Device {
+  optional DeviceExt device_ext = 101;
+};
+
+message DeviceExt {
+  optional string platform = 1;
+  optional NetworkOperator network_operator = 2;
+  optional string ad_exchange_device_id = 3;
+
+  enum NetworkOperator {
+    kNetworkOperatorUnknown = 0;
+    kNetworkOperatorMobile = 1;
+    kNetworkOperatorUnicom = 2;
+    kNetworkOperatorTelcom = 3;
+  };
+
+  optional string imei = 4;
+  optional string mac = 5;
+  optional string md5_imsi = 6;
+  optional string open_udid = 7;  // open UDID, sohu adx 引入
+  optional string dpid = 8;  // Platform device ID, yex adx 引入, eg. android id
+};
+
+//----------------------------------------------------------------------
+// BidRequest.Geo
+//----------------------------------------------------------------------
+
+extend .openrtb.BidRequest.Geo {
+  optional GeoExt geo_ext = 101;
+};
+
+message GeoExt {
+  optional uint32 province_code = 1;  // DSP 省级单位编码
+  optional uint32 city_code = 2;  // DSP 市级单位编码
+};
+
+//----------------------------------------------------------------------
+// Impression
+//----------------------------------------------------------------------
+
+extend .openrtb.BidRequest.Imp {
+  optional ImpExt impression_ext = 101;
+};
+
+message Size {
+  optional uint32 width = 1;
+  optional uint32 height = 2;
+};
+
+message ImpExt {
+  optional string placement_id = 1;
+  optional uint32 bid_count = 2;
+  repeated uint32 view_type = 3;  // 展现形式
+  repeated uint32 blocked_creative_size_type = 4;  // 禁止的素材类型
+
+  // 推广位在页面所在的屏数
+  // 0: 未识别; 1-5: 第1-5屏; 6: 第六屏及以外
+  optional uint32 view_screen = 5;
+  // 推广位在整个页面的渲染顺序，从0开始递增
+  optional uint32 page_session_ad_idx = 6;
+
+  // 供给方设定的禁止广告分类
+  repeated uint32 blocked_ad_category = 7;
+
+  repeated string native_template_id = 8;  // 原生广告模板
+  optional ImpQualityLevel imp_quality_level = 9;  // 库存质量等级
+
+  // 请次请求，多个尺寸
+  // 第一个尺寸会填充在 Imp::Banner 中，剩下的尺寸填充在这里
+  repeated Size additional_size = 10;
+
+  // Mha扩展字段 开始
+  // 是否为开屏广告
+  optional int32 is_splash_screen = 11;
+  // 屏蔽广告动作类型
+  // 0 = 嵌入式，1 = 浏览器打开， 2 = 下载类
+  repeated int32 bitc = 12;
+  // Mha扩展字段 结束
+
+  optional string sub_tagid = 13;  // 线路id
+
+  // 支持一个广告包含多个创意，实际返回数量可能会少于请求数量
+  optional int32 creative_count = 14;  // 每个广告下的最多素材数量
+};
+
+//----------------------------------------------------------------------
+// Bid
+//----------------------------------------------------------------------
+
+extend .openrtb.BidResponse.SeatBid.Bid {
+  optional BidExt bid_ext = 101;
+};
+
+message BidExt {
+  // NOTE(@jason, 2016.01): 字段 1-9 没有考虑到多素材问题，全部废弃
+
+  optional uint32 ad_bid_count_idx = 1;
+  repeated string click_through_url = 2;
+  repeated string destination_url = 3;
+  repeated string download_complete_url = 8;
+
+  // 广告所属分类
+  repeated uint64 category = 4;
+  // 如果广告属于敏感行业，这里填上对应的敏感行业分类
+  repeated uint64 sensitive_category = 5;
+
+  // DSP声明的广告创意类型
+  repeated uint64 creative_type = 6;
+  optional yd.common.AdExchangeExportAdvertiser export_advertiser = 7;
+
+  // 对接 tanx 时，DSP 负责拼接曝光、点击调转 url，所以生成这些 url 时
+  // 直接将加密串写到这些 url 中。
+  // bes 中使用静态创意时，只能通过 %EXT_DATA% 传递加密串，无法控制这些
+  // url，所以这里通过单独的字段将加密串透传给 frontend。
+  // bes 要求 extdata 是一个 string，而不是 bytes，所以这里也设为 string。
+  optional string trace_data = 9;
+
+  // 新启用的字段，按 Creative 重新组织信息，方便支持多素材
+  message Creative {
+    optional uint32 ad_bid_count_idx = 1;
+
+    optional uint32 creative_size_id = 2;
+    repeated uint32 creative_type = 3;
+    repeated uint32 display_type = 4;
+    repeated uint32 landing_type = 5;
+
+    optional int32 width = 6;
+    optional int32 height = 7;
+
+    // 包含文字素材的字段填充说明：
+    // 图文: headline
+    // 图文文: headline + description
+    // 图文文文: headline + description + description_extension
+    // 组图文: headline + multi_asset_url
+    optional string headline = 8;
+    optional string description = 9;
+    optional InteractionType interaction_type = 10;
+    optional string description_extension = 11;
+
+    optional string public_id = 12;  // 素材 id
+    optional string promotion_object_name = 13;  // 推广对象名称
+
+    repeated string multi_asset_url = 18;  // 组图资源地址
+    optional string video_asset_url = 19;  // 视频资源地址
+    optional string asset_url = 20;  // 图片资源地址
+    optional string win_notice_url = 21;  // 竞价反馈地址
+    optional string feedback_url = 22;  // 曝光反馈地址
+    optional string click_through_url = 23;  // 点击跳转地址
+    optional string destination_url = 24;  // 落地页地址
+    optional string download_complete_url = 25;  // 下载完成地址
+
+    repeated uint64 category = 26;
+    repeated uint64 sensitive_category = 27;
+    optional yd.common.AdExchangeExportAdvertiser export_advertiser = 28;
+
+    // 对接 tanx 时，DSP 负责拼接曝光、点击调转 url，所以生成这些 url 时
+    // 直接将加密串写到这些 url 中。
+    // bes 中使用静态创意时，只能通过 %EXT_DATA% 传递加密串，无法控制这些
+    // url，所以这里通过单独的字段将加密串透传给 frontend。
+    // bes 要求 extdata 是一个 string，而不是 bytes，所以这里也设为 string。
+    optional string trace_data = 29;
+
+    // 南方银谷项目新增字段 - 开始
+    // 支持第三方曝光、点击反馈
+    repeated string thirdparty_imp_feedback_url = 30;
+    repeated string thirdparty_click_through_url = 31;
+
+    // 如果点击落地页是一个下载链接，则这里填充 bundle，
+    // 用于 Android 平台监听安装完成事件
+    optional string bundle = 32;  // 安装包名
+    // 安装完成后，回 ping 该地址，实现安装上报功能
+    optional string install_complete_url = 33;
+    // 南方银谷项目新增字段 - 结束
+  };
+  repeated Creative creative = 10;
+};
+
+//----------------------------------------------------------------------
+// BidResponse
+//----------------------------------------------------------------------
+
+extend .openrtb.BidResponse {
+  optional BidResponseExt bid_response_ext = 101;
+};
+
+message BidResponseExt {
+  optional int3
+  optional bytes message = 2;
+  optional bytes debug_string_json = 3;
+  optional bytes debug_string_pb_text = 4;
+};

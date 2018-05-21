@@ -1,0 +1,257 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("fishhook_h" variable (:constant-flag t) nil [1583 1593])
+            ("stddef.h" include (:system-flag t) nil [1595 1614])
+            ("stdint.h" include (:system-flag t) nil [1615 1634])
+            ("rebind_symbols_image" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("header" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2618 2631])
+                    ("slide" variable (:type ("intptr_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2657 2672])
+                    ("rebindings" variable
+                       (:dereference 1
+                        :type ("rebinding" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2698 2728])
+                    ("rebindings_nel" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2754 2776]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2593 2777])
+            ("rebind_symbols" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("rebindings" variable
+                       (:dereference 1
+                        :type ("rebinding" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2372 2402])
+                    ("rebindings_nel" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2403 2425]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2353 2426])
+            ("rebinding" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :members 
+                  ( ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol classsubparts) [1819 1836])
+                    ("replacement" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol classsubparts) [1839 1857])
+                    ("replaced" variable
+                       (:pointer 2
+                        :type "void")
+                        (reparse-symbol classsubparts) [1860 1876]))                  )
+                (reparse-symbol extern-c-contents) [1798 1879]))          
+      :file "fishhook.h"
+      :pointmax 2843
+      :fsize 2842
+      :lastmodtime '(23136 22406 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("fishhook_h")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("mach_header_t" type
+               (:typedef ("mach_header_64" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [1748 1792])
+            ("segment_command_t" type
+               (:typedef ("segment_command_64" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [1793 1845])
+            ("section_t" type
+               (:typedef ("section_64" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [1846 1882])
+            ("nlist_t" type
+               (:typedef ("nlist_64" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [1883 1915])
+            ("LC_SEGMENT_ARCH_DEPENDENT" variable (:constant-flag t) nil [1924 1949])
+            ("SEG_DATA_CONST" variable (:constant-flag t) nil [2210 2224])
+            ("rebindings_entry" type
+               (:members 
+                  ( ("rebindings" variable
+                       (:pointer 1
+                        :type ("rebinding" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [2277 2306])
+                    ("rebindings_nel" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2309 2331])
+                    ("next" variable
+                       (:pointer 1
+                        :type ("rebindings_entry" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [2334 2364]))                  
+                :type "struct")
+                nil [2249 2367])
+            ("_rebindings_head" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :type ("rebindings_entry" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [2369 2418])
+            ("prepend_rebindings" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("rebindings_head" variable
+                       (:pointer 2
+                        :type ("rebindings_entry" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2450 2492])
+                    ("rebindings" variable
+                       (:dereference 1
+                        :type ("rebinding" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2523 2553])
+                    ("nel" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2584 2595]))                  
+                :type "int")
+                nil [2420 3050])
+            ("perform_rebinding_with_section" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("rebindings" variable
+                       (:pointer 1
+                        :type ("rebindings_entry" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3095 3131])
+                    ("section" variable
+                       (:pointer 1
+                        :type ("section_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3175 3194])
+                    ("slide" variable (:type ("intptr_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3238 3253])
+                    ("symtab" variable
+                       (:pointer 1
+                        :type ("nlist_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3297 3313])
+                    ("strtab" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3357 3370])
+                    ("indirect_symtab" variable
+                       (:pointer 1
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3414 3440]))                  
+                :type "void")
+                nil [3052 4628])
+            ("rebind_symbols_for_image" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("rebindings" variable
+                       (:pointer 1
+                        :type ("rebindings_entry" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4667 4703])
+                    ("header" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("mach_header" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4741 4774])
+                    ("slide" variable (:type ("intptr_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4812 4827]))                  
+                :type "void")
+                nil [4630 7101])
+            ("_rebind_symbols_for_image" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("header" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("mach_header" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [7141 7174])
+                    ("slide" variable (:type ("intptr_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7213 7228]))                  
+                :type "void")
+                nil [7103 7295])
+            ("rebind_symbols_image" function
+               (:arguments 
+                  ( ("header" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [7322 7335])
+                    ("slide" variable (:type ("intptr_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7361 7376])
+                    ("rebindings" variable
+                       (:dereference 1
+                        :type ("rebinding" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [7402 7432])
+                    ("rebindings_nel" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7458 7480]))                  
+                :type "int")
+                nil [7297 7728])
+            ("rebind_symbols" function
+               (:arguments 
+                  ( ("rebindings" variable
+                       (:dereference 1
+                        :type ("rebinding" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [7749 7779])
+                    ("rebindings_nel" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7780 7802]))                  
+                :type "int")
+                nil [7730 8397]))          
+      :file "fishhook.c"
+      :pointmax 8398
+      :fsize 8397
+      :lastmodtime '(23136 22406 0 0)
+      :unmatched-syntax '((punctuation 1729 . 1730) (symbol 1728 . 1729) (punctuation 1727 . 1728) (symbol 1722 . 1727) (punctuation 1721 . 1722) (symbol 1720 . 1721) (punctuation 1719 . 1720) (symbol 1715 . 1719) (punctuation 1714 . 1715) (symbol 1707 . 1713) (punctuation 1706 . 1707) (punctuation 1704 . 1705) (symbol 1703 . 1704) (punctuation 1702 . 1703) (symbol 1696 . 1702) (punctuation 1695 . 1696) (symbol 1694 . 1695) (punctuation 1693 . 1694) (symbol 1689 . 1693) (punctuation 1688 . 1689) (symbol 1681 . 1687) (punctuation 1680 . 1681) (punctuation 1678 . 1679) (symbol 1677 . 1678) (punctuation 1676 . 1677) (symbol 1672 . 1676) (punctuation 1671 . 1672) (symbol 1670 . 1671) (punctuation 1669 . 1670) (symbol 1665 . 1669) (punctuation 1664 . 1665) (symbol 1657 . 1663) (punctuation 1656 . 1657) (punctuation 1654 . 1655) (symbol 1653 . 1654) (punctuation 1652 . 1653) (symbol 1647 . 1652) (punctuation 1646 . 1647) (symbol 1643 . 1646) (punctuation 1642 . 1643) (symbol 1635 . 1641) (punctuation 1634 . 1635) (punctuation 1632 . 1633) (symbol 1631 . 1632) (punctuation 1630 . 1631) (symbol 1624 . 1630) (punctuation 1623 . 1624) (symbol 1616 . 1622) (punctuation 1615 . 1616) (punctuation 1613 . 1614) (symbol 1612 . 1613) (punctuation 1611 . 1612) (symbol 1605 . 1611) (punctuation 1604 . 1605) (symbol 1597 . 1603) (punctuation 1596 . 1597) (punctuation 1594 . 1595) (symbol 1593 . 1594) (punctuation 1592 . 1593) (symbol 1587 . 1592) (punctuation 1586 . 1587) (symbol 1579 . 1585) (punctuation 1578 . 1579) (string 1564 . 1576) (symbol 1557 . 1563) (punctuation 1556 . 1557))
+      :lexical-table 
+        '(("SEG_DATA_CONST" . ((string "\"__DATA_CONST\"" 2226 . 2240)))
+          ("LC_SEGMENT_ARCH_DEPENDENT" . ((symbol "LC_SEGMENT_64" 1950 . 1963)))
+          )
+))
+  :file "!Users!ric!Desktop!apple_id!ssl-kill-switch2!SSLKillSwitch!fishhook!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

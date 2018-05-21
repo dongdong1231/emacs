@@ -1,0 +1,494 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("app/qzap/service/scoring3/scorer/baseline_scorer/bucketing/bucketing_processor.h" include nil nil [106 197])
+            ("thirdparty/glog/logging.h" include nil nil [198 234])
+            ("app/qzap/common/cpp/include/AlarmLog.h" include nil nil [235 284])
+            ("app/qzap/service/scoring3/scorer/baseline_scorer/common.h" include nil nil [285 353])
+            ("app/qzap/service/scoring3/scorer/baseline_scorer/bucketing/newold_bucketing_functor.h" include nil nil [354 450])
+            ("app/qzap/service/scoring3/scorer/baseline_scorer/bucketing/boost_bucketing_functor.h" include nil nil [451 546])
+            ("app/qzap/service/scoring3/scorer/baseline_scorer/bucketing/cpd_bucketing_functor.h" include nil nil [547 640])
+            ("app/qzap/service/scoring3/scorer/baseline_scorer/bucketing/guaranteed_delivery_bucketing_functor.h" include nil nil [641 750])
+            ("app/qzap/service/scoring3/scorer/baseline_scorer/bucketing/app_star_bucketing_functor.h" include nil nil [751 849])
+            ("app/qzap/service/scoring3/scorer/baseline_scorer/bucketing/task_schedule_bucketing_functor.h" include nil nil [850 953])
+            ("app/qzap/service/scoring3/scorer/baseline_scorer/bucketing/mobile_qqcom_bucketing_functor.h" include nil nil [954 1056])
+            ("QZAP" type
+               (:members 
+                  ( ("SCORING3" type
+                       (:members 
+                          ( ("BaselineBucketingProcessor" function
+                               (:constructor-flag t
+                                :parent "BaselineBucketingProcessor"
+                                :type ("BaselineBucketingProcessor" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [1097 1157])
+                            ("BaselineBucketingProcessor" function
+                               (:destructor-flag t
+                                :parent "BaselineBucketingProcessor"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [1159 1220])
+                            ("Init" function
+                               (:parent "BaselineBucketingProcessor"
+                                :arguments 
+                                  ( ("c" variable
+                                       (:reference 1
+                                        :type ("google::protobuf::Message" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1273 1302]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [1222 2491])
+                            ("UnInit" function
+                               (:parent "BaselineBucketingProcessor"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [2493 2965])
+                            ("BeginProcess" function
+                               (:parent "BaselineBucketingProcessor"
+                                :arguments 
+                                  ( ("query_accessor" variable
+                                       (:pointer 1
+                                        :type ("QueryAccessor" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3013 3043]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [2967 3577])
+                            ("FUNCTOR_DOWORK" variable (:constant-flag t) (reparse-symbol namespacesubparts) [3618 3632])
+                            ("DoProcessForMobileQQcom" function
+                               (:parent "BaselineBucketingProcessor"
+                                :arguments 
+                                  ( ("accessor_provider" variable
+                                       (:pointer 1
+                                        :type ("AccessorProvider" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3815 3851]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [3758 4524])
+                            ("DoProcess" function
+                               (:parent "BaselineBucketingProcessor"
+                                :arguments 
+                                  ( ("accessor_provider" variable
+                                       (:pointer 1
+                                        :type ("AccessorProvider" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4569 4605]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [4526 6117])
+                            ("AssignBuckets" function
+                               (:parent "BaselineBucketingProcessor"
+                                :arguments 
+                                  ( ("ad_accessor" variable
+                                       (:pointer 1
+                                        :type ("AdAccessor" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [6171 6195])
+                                    ("accessor_provider" variable
+                                       (:pointer 1
+                                        :type ("AccessorProvider" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [6200 6236])
+                                    ("query_accessor" variable
+                                       (:pointer 1
+                                        :type ("QueryAccessor" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [6241 6271]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [6119 6608])
+                            ("EndProcess" function
+                               (:parent "BaselineBucketingProcessor"
+                                :arguments 
+                                  ( ("query_accessor" variable
+                                       (:pointer 1
+                                        :type ("QueryAccessor" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [6654 6684]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [6610 7197]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1075 7200]))                  
+                :type "namespace")
+                nil [1058 7225]))          
+      :file "bucketing_processor.cc"
+      :pointmax 7245
+      :fsize 7342
+      :lastmodtime '(22878 19689 0 0)
+      :unmatched-syntax '((punctuation 1272 . 1273) (punctuation 1271 . 1272) (CONST 1265 . 1270))
+      :lexical-table 
+        '(("FUNCTOR_DOWORK" (spp-arg-list ("var" "ad" "query") 3632 . 3648) . 
+              ((IF "if" 3653 . 3655) (semantic-list "(!var->DoWork(ad, query))" 3656 . 3681) (semantic-list "{ \\
+    LOG_ALARM_NUM(kBaselineBucketingFunctorDoworkErrorCount, 1); \\
+  }" 3682 . 3756)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("app/qzap/service/scoring3/scorer/baseline_scorer/bucketing/newold_bucketing_functor.h" include nil nil [106 202])
+            ("app/qzap/common/cpp/include/AlarmLog.h" include nil nil [203 252])
+            ("app/qzap/service/scoring3/scorer/baseline_scorer/common.h" include nil nil [253 321])
+            ("QZAP" type
+               (:members 
+                  ( ("SCORING3" type
+                       (:members 
+                          ( ("BeginWork" function
+                               (:parent "BaselineNewOldBucketingFunctor"
+                                :arguments 
+                                  ( ("query_accessor" variable
+                                       (:pointer 1
+                                        :type ("QueryAccessor" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [409 439]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [362 500])
+                            ("DoWork" function
+                               (:parent "BaselineNewOldBucketingFunctor"
+                                :arguments 
+                                  ( ("ad_accessor" variable
+                                       (:pointer 1
+                                        :type ("AdAccessor" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [551 575])
+                                    ("" variable
+                                       (:pointer 1
+                                        :type ("QueryAccessor" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [580 615]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [502 1136])
+                            ("EndWork" function
+                               (:parent "BaselineNewOldBucketingFunctor"
+                                :arguments 
+                                  ( ("query_accessor" variable
+                                       (:pointer 1
+                                        :type ("QueryAccessor" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1183 1213]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [1138 1506]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [340 1509]))                  
+                :type "namespace")
+                nil [323 1534]))          
+      :file "newold_bucketing_functor.cc"
+      :pointmax 1554
+      :fsize 1553
+      :lastmodtime '(22878 19689 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :file "newold_bucketing_functor.h"
+      :fsize 1497
+      :lastmodtime '(22878 19689 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "bucketing_processor.h"
+      :fsize 2233
+      :lastmodtime '(22878 19689 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "boost_bucketing_functor.h"
+      :fsize 2216
+      :lastmodtime '(22878 19689 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "cpd_bucketing_functor.h"
+      :fsize 1232
+      :lastmodtime '(22878 19689 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "guaranteed_delivery_bucketing_functor.h"
+      :fsize 1511
+      :lastmodtime '(22878 19689 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "app_star_bucketing_functor.h"
+      :fsize 1269
+      :lastmodtime '(22878 19689 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "task_schedule_bucketing_functor.h"
+      :fsize 1358
+      :lastmodtime '(22878 19689 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "mobile_qqcom_bucketing_functor.h"
+      :fsize 1568
+      :lastmodtime '(22878 19689 0 0))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("app/qzap/service/scoring3/scorer/baseline_scorer/bucketing/boost_bucketing_functor.h" include nil nil [106 201])
+            ("thirdparty/glog/logging.h" include nil nil [202 238])
+            ("thirdparty/gflags/gflags.h" include nil nil [239 276])
+            ("app/qzap/common/base/string_utility.h" include nil nil [277 325])
+            ("app/qzap/common/cpp/include/AlarmLog.h" include nil nil [326 375])
+            ("app/qzap/service/scoring3/data_accessor/exp_param_define.h" include nil nil [376 445])
+            ("app/qzap/service/scoring3/scorer/baseline_scorer/common.h" include nil nil [446 514])
+            ("DEFINE_int32" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("baseline_boost_bucketing_default_disable_boost_whitelist" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [553 610]))                  
+                :type "int")
+                nil [540 618])
+            ("DEFINE_int32" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("baseline_boost_bucketing_default_disable_boost_remarketing" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [632 691]))                  
+                :type "int")
+                nil [619 699])
+            ("DEFINE_int32" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("baseline_boost_bucketing_default_disable_boost_lbs" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [713 764]))                  
+                :type "int")
+                nil [700 772])
+            ("DEFINE_int32" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("baseline_boost_bucketing_default_disable_boost_userqq" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [786 840]))                  
+                :type "int")
+                nil [773 848])
+            ("QZAP" type
+               (:members 
+                  ( ("SCORING3" type
+                       (:members 
+                          ( ("BaselineBoostBucketingFunctor" function
+                               (:constructor-flag t
+                                :parent "BaselineBoostBucketingFunctor"
+                                :type ("BaselineBoostBucketingFunctor" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [889 1330])
+                            ("BaselineBoostBucketingFunctor" function
+                               (:destructor-flag t
+                                :parent "BaselineBoostBucketingFunctor"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [1332 1399])
+                            ("Init" function
+                               (:parent "BaselineBoostBucketingFunctor"
+                                :arguments 
+                                  ( ("c" variable
+                                       (:reference 1
+                                        :type ("google::protobuf::Message" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1455 1484]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [1401 1975])
+                            ("UnInit" function
+                               (:parent "BaselineBoostBucketingFunctor"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [1977 2025])
+                            ("BeginWork" function
+                               (:parent "BaselineBoostBucketingFunctor"
+                                :arguments 
+                                  ( ("query_accessor" variable
+                                       (:pointer 1
+                                        :type ("QueryAccessor" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2073 2103]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [2027 3610])
+                            ("DoWork" function
+                               (:parent "BaselineBoostBucketingFunctor"
+                                :arguments 
+                                  ( ("ad_accessor" variable
+                                       (:pointer 1
+                                        :type ("AdAccessor" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3660 3684])
+                                    ("" variable
+                                       (:pointer 1
+                                        :type ("QueryAccessor" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3689 3724]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [3612 5409])
+                            ("EndWork" function
+                               (:parent "BaselineBoostBucketingFunctor"
+                                :arguments 
+                                  ( ("query_accessor" variable
+                                       (:pointer 1
+                                        :type ("QueryAccessor" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5455 5485]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [5411 5870])
+                            ("ResetCount" function
+                               (:parent "BaselineBoostBucketingFunctor"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [5872 6057]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [867 6060]))                  
+                :type "namespace")
+                nil [850 6085]))          
+      :file "boost_bucketing_functor.cc"
+      :pointmax 6105
+      :fsize 6152
+      :lastmodtime '(22878 19689 0 0)
+      :unmatched-syntax '((punctuation 1454 . 1455) (punctuation 1453 . 1454) (CONST 1447 . 1452) (string 844 . 846) (number 841 . 842) (string 768 . 770) (number 765 . 766) (string 695 . 697) (number 692 . 693) (string 614 . 616) (number 611 . 612)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("app/qzap/service/scoring3/scorer/baseline_scorer/bucketing/cpd_bucketing_functor.h" include nil nil [106 199])
+            ("thirdparty/glog/logging.h" include nil nil [200 236])
+            ("app/qzap/common/cpp/include/AlarmLog.h" include nil nil [237 286])
+            ("app/qzap/proto/common/qzap_common.pb.h" include nil nil [287 336])
+            ("app/qzap/service/sunfish/id_parser/include/feature_type_code.h" include nil nil [337 410])
+            ("app/qzap/service/sunfish/attachment/meta.h" include nil nil [411 464])
+            ("app/qzap/service/sunfish/attachment/gdt_meta.h" include nil nil [465 522])
+            ("app/qzap/service/scoring3/data_accessor/exp_param_define.h" include nil nil [523 592])
+            ("app/qzap/service/scoring3/scorer/baseline_scorer/common.h" include nil nil [593 661])
+            ("QZAP" type
+               (:members 
+                  ( ("SCORING3" type
+                       (:members 
+                          ( ("BeginWork" function
+                               (:parent "BaselineCPDBucketingFunctor"
+                                :arguments 
+                                  ( ("query_accessor" variable
+                                       (:pointer 1
+                                        :type ("QueryAccessor" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [746 776]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [702 1086])
+                            ("DoWork" function
+                               (:parent "BaselineCPDBucketingFunctor"
+                                :arguments 
+                                  ( ("ad_accessor" variable
+                                       (:pointer 1
+                                        :type ("AdAccessor" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1134 1158])
+                                    ("" variable
+                                       (:pointer 1
+                                        :type ("QueryAccessor" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1163 1198]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [1088 2584])
+                            ("EndWork" function
+                               (:parent "BaselineCPDBucketingFunctor"
+                                :arguments 
+                                  ( ("query_accessor" variable
+                                       (:pointer 1
+                                        :type ("QueryAccessor" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2628 2658]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [2586 2889]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [680 2892]))                  
+                :type "namespace")
+                nil [663 2917]))          
+      :file "cpd_bucketing_functor.cc"
+      :pointmax 2937
+      :fsize 3032
+      :lastmodtime '(22878 19689 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("app/qzap/service/scoring3/scorer/baseline_scorer/bucketing/guaranteed_delivery_bucketing_functor.h" include nil nil [105 214])
+            ("thirdparty/glog/logging.h" include nil nil [216 252])
+            ("app/qzap/common/cpp/include/AlarmLog.h" include nil nil [253 302])
+            ("app/qzap/proto/common/qzap_common.pb.h" include nil nil [303 352])
+            ("app/qzap/proto/log/ads_track.pb.h" include nil nil [353 397])
+            ("app/qzap/service/sunfish/id_parser/include/feature_type_code.h" include nil nil [398 471])
+            ("app/qzap/service/sunfish/attachment/meta.h" include nil nil [472 525])
+            ("app/qzap/service/sunfish/attachment/gdt_meta.h" include nil nil [526 583])
+            ("app/qzap/service/scoring3/scorer/baseline_scorer/common.h" include nil nil [584 652])
+            ("QZAP" type
+               (:members 
+                  ( ("SCORING3" type
+                       (:members 
+                          ( ("BeginWork" function
+                               (:parent "BaselineGuaranteedDeliveryBucketingFunctor"
+                                :arguments 
+                                  ( ("query_accessor" variable
+                                       (:pointer 1
+                                        :type ("QueryAccessor" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [757 787]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [693 852])
+                            ("DoWork" function
+                               (:parent "BaselineGuaranteedDeliveryBucketingFunctor"
+                                :arguments 
+                                  ( ("ad_accessor" variable
+                                       (:pointer 1
+                                        :type ("AdAccessor" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [915 939])
+                                    ("" variable
+                                       (:pointer 1
+                                        :type ("QueryAccessor" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [944 979]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [854 2311])
+                            ("EndWork" function
+                               (:parent "BaselineGuaranteedDeliveryBucketingFunctor"
+                                :arguments 
+                                  ( ("query_accessor" variable
+                                       (:pointer 1
+                                        :type ("QueryAccessor" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2375 2405]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [2313 2668]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [671 2671]))                  
+                :type "namespace")
+                nil [654 2696]))          
+      :file "guaranteed_delivery_bucketing_functor.cc"
+      :pointmax 2716
+      :fsize 2777
+      :lastmodtime '(22878 19689 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("app/qzap/service/scoring3/scorer/baseline_scorer/bucketing/task_schedule_bucketing_functor.h" include nil nil [106 209])
+            ("thirdparty/glog/logging.h" include nil nil [210 246])
+            ("app/qzap/common/cpp/include/AlarmLog.h" include nil nil [247 296])
+            ("app/qzap/proto/common/qzap_common.pb.h" include nil nil [297 346])
+            ("app/qzap/service/sunfish/attachment/meta.h" include nil nil [347 400])
+            ("app/qzap/service/sunfish/attachment/gdt_meta.h" include nil nil [401 458])
+            ("app/qzap/service/scoring3/scorer/baseline_scorer/common.h" include nil nil [459 527])
+            ("QZAP" type
+               (:members 
+                  ( ("SCORING3" type
+                       (:members 
+                          ( ("Init" function
+                               (:parent "BaselineTaskScheduleBucketingFunctor"
+                                :arguments 
+                                  ( ("c" variable
+                                       (:reference 1
+                                        :type ("google::protobuf::Message" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [629 658]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [568 677])
+                            ("UnInit" function
+                               (:parent "BaselineTaskScheduleBucketingFunctor"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [679 734])
+                            ("BeginWork" function
+                               (:parent "BaselineTaskScheduleBucketingFunctor"
+                                :arguments 
+                                  ( ("query_accessor" variable
+                                       (:pointer 1
+                                        :type ("QueryAccessor" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [789 819]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [736 891])
+                            ("DoWork" function
+                               (:parent "BaselineTaskScheduleBucketingFunctor"
+                                :arguments 
+                                  ( ("ad_accessor" variable
+                                       (:pointer 1
+                                        :type ("AdAccessor" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [948 972])
+                                    ("" variable
+                                       (:pointer 1
+                                        :type ("QueryAccessor" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [977 1012]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [893 1377])
+                            ("EndWork" function
+                               (:parent "BaselineTaskScheduleBucketingFunctor"
+                                :arguments 
+                                  ( ("query_accessor" variable
+                                       (:pointer 1
+                                        :type ("QueryAccessor" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1430 1460]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [1379 1723])
+                            ("CheckAdIsNeedRecall" function
+                               (:parent "BaselineTaskScheduleBucketingFunctor"
+                                :arguments 
+                                  ( ("ad_accessor" variable
+                                       (:pointer 1
+                                        :type ("AdAccessor" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1788 1812]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [1725 2149]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [546 2152]))                  
+                :type "namespace")
+                nil [529 2177]))          
+      :file "task_schedule_bucketing_functor.cc"
+      :pointmax 2197
+      :fsize 2312
+      :lastmodtime '(22878 19689 0 0)
+      :unmatched-syntax '((punctuation 628 . 629) (punctuation 627 . 628) (CONST 621 . 626))))
+  :file "!Users!ric!Desktop!trunk!app!qzap!service!scoring3!scorer!baseline_scorer!bucketing!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

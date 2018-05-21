@@ -1,0 +1,1993 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("math.h" include (:system-flag t) nil [89 106])
+            ("sys/stat.h" include (:system-flag t) nil [107 128])
+            ("fcntl.h" include (:system-flag t) nil [129 147])
+            ("xmmintrin.h" include (:system-flag t) nil [148 170])
+            ("thirdparty/zlib/zlib.h" include nil nil [171 204])
+            ("thirdparty/glog/logging.h" include nil nil [205 241])
+            ("app/qzap/common/base/scoped_ptr.h" include nil nil [242 286])
+            ("app/qzap/common/base/string_utility.h" include nil nil [287 335])
+            ("app/qzap/common/utility/file_utility.h" include nil nil [336 385])
+            ("app/qzap/service/retrieval/module/targeting/proto/targeting_reduce.pb.h" include nil nil [386 468])
+            ("app/qzap/service/retrieval/module/targeting/include/targeting_interface.h" include nil nil [469 553])
+            ("app/qzap/service/retrieval/module/targeting/include/targeting_search.h" include nil nil [554 635])
+            ("app/qzap/service/retrieval/module/targeting/include/group_varint.h" include nil nil [636 713])
+            ("google/protobuf/text_format.h" include nil nil [714 754])
+            ("DEFINE_bool" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("allow_file_temp_buffer" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [767 790])
+                    ("" variable (:type ("true" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [791 796]))                  
+                :type "int")
+                nil [755 831])
+            ("QZAP::AD" using (:type ("QZAP::AD" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [832 857])
+            ("unnamed" type
+               (:members 
+                  ( ("TextFormatTargetingBidDiretory" type
+                       (:superclasses 
+                          ( ("TargetingBidForwardIterator" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [945 952])
+                            ("TextFormatTargetingBidDiretory" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("bid_file_pattern" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [986 1022]))                                  
+                                :type ("TextFormatTargetingBidDiretory" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [955 1165])
+                            ("TextFormatTargetingBidDiretory" function
+                               (:destructor-flag t
+                                :typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [1169 1216])
+                            ("Valid" function
+                               (:methodconst-flag t
+                                :typemodifiers ("virtual")
+                                :type "bool")
+                                (reparse-symbol classsubparts) [1220 1291])
+                            ("targeting_bid" function
+                               (:methodconst-flag t
+                                :pointer 1
+                                :typemodifiers ("virtual")
+                                :constant-flag t
+                                :type ("TargetingBid" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1294 1639])
+                            ("Next" function (:type "void") (reparse-symbol classsubparts) [1642 1673])
+                            ("private" label nil (reparse-symbol classsubparts) [1674 1682])
+                            ("bid_" variable
+                               (:typemodifiers ("mutable")
+                                :type ("scoped_ptr" type
+                                     (:template-specifier 
+                                        ( ("TargetingBid" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [1685 1723])
+                            ("bid_files_" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("std::string" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [1726 1762])
+                            ("pos_" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1765 1777]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [870 1780])
+                    ("Write" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type "void"
+                        :arguments 
+                          ( ("p" variable
+                               (:pointer 1
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1829 1834])
+                            ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1835 1847])
+                            ("temp_buffer" variable
+                               (:pointer 1
+                                :type ("TempBuffer" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1848 1872])
+                            ("crc" variable
+                               (:pointer 1
+                                :type ("uLong" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1873 1884]))                          
+                        :typemodifiers ("static" "inline"))
+                        (reparse-symbol namespacesubparts) [1782 2246])
+                    ("GetMask" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("size" variable (:type "int") (reparse-symbol arg-sub-list) [2267 2276]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [2248 2447])
+                    ("GetIntervalIdBitmap" function
+                       (:arguments 
+                          ( ("interval_id_map" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::map" type
+                                     (:template-specifier 
+                                        ( ("Interval" type (:template-specifier 
+                                            ( ("uint64_t" type nil nil nil))                                            ) nil nil)
+                                          ("uint32_t" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [2474 2536])
+                            ("interval_id" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::set" type
+                                     (:template-specifier 
+                                        ( ("Interval" type (:template-specifier 
+                                            ( ("uint64_t" type nil nil nil))                                            ) nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [2537 2586])
+                            ("bitmap" variable
+                               (:pointer 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2587 2607])
+                            ("mask" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2608 2622]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [2449 3870])
+                    ("PaddingString" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("buffer" variable
+                               (:pointer 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3898 3918]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [3872 4031])
+                    ("PaddingFile" function
+                       (:typemodifiers ("static" "inline")
+                        :arguments 
+                          ( ("temp_buffer" variable
+                               (:pointer 1
+                                :type ("TempBuffer" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4064 4088])
+                            ("padding_size" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4089 4111])
+                            ("crc" variable
+                               (:pointer 1
+                                :type ("uLong" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4112 4123]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [4033 4257])
+                    ("CopyFile" function
+                       (:typemodifiers ("static" "inline")
+                        :arguments 
+                          ( ("src" variable
+                               (:pointer 1
+                                :type ("TempBuffer" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4287 4303])
+                            ("dest" variable
+                               (:pointer 1
+                                :type ("TempBuffer" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4304 4321])
+                            ("crc" variable
+                               (:pointer 1
+                                :type ("uLong" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4322 4333]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [4259 4499]))                  
+                :type "namespace")
+                nil [858 4501])
+            ("FetchValue" function
+               (:arguments 
+                  ( ("content_begin" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4519 4549])
+                    ("length" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4550 4566])
+                    ("bitmap" variable
+                       (:pointer 1
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4567 4583]))                  
+                :type "void")
+                nil [4503 6039])
+            ("TargetingSearch" function
+               (:constructor-flag t
+                :parent "TargetingSearch"
+                :arguments 
+                  ( ("p" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [6223 6237])
+                    ("len" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6238 6249]))                  
+                :type ("TargetingSearch" type (:type "class") nil nil))
+                nil [6187 12499])
+            ("TargetingSearch" function
+               (:destructor-flag t
+                :parent "TargetingSearch"
+                :type "void")
+                nil [12501 12576])
+            ("FileTempBuffer" type
+               (:superclasses 
+                  ( ("TempBuffer" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [12620 12627])
+                    ("FileTempBuffer" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("name" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [12654 12678]))                          
+                        :type ("FileTempBuffer" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [12639 13311])
+                    ("FileTempBuffer" function
+                       (:destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [13314 13478])
+                    ("Write" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("ptr" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [13502 13518])
+                            ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13519 13531])
+                            ("nmemb" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13532 13545]))                          
+                        :type ("size_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [13481 13647])
+                    ("Read" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("ptr" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [13670 13680])
+                            ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13681 13693])
+                            ("nmemb" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13694 13707]))                          
+                        :type ("size_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [13650 13777])
+                    ("SeekToFirst" function
+                       (:typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [13780 13830])
+                    ("Size" function
+                       (:typemodifiers ("virtual")
+                        :type ("size_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [13833 13915])
+                    ("Name" function
+                       (:typemodifiers ("virtual")
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [13918 13975])
+                    ("private" label nil (reparse-symbol classsubparts) [13976 13984])
+                    ("PrepareForRead" function (:type "void") (reparse-symbol classsubparts) [13987 14177])
+                    ("private" label nil (reparse-symbol classsubparts) [14178 14186])
+                    ("m_file_name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [14189 14213])
+                    ("m_fp" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [14216 14227])
+                    ("m_mode" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [14230 14249])
+                    ("m_temp" variable (:type "bool") (reparse-symbol classsubparts) [14252 14264]))                  
+                :type "class")
+                nil [12578 14267])
+            ("MemTempBuffer" type
+               (:superclasses 
+                  ( ("TempBuffer" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [14309 14316])
+                    ("MemTempBuffer" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("name" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [14342 14366]))                          
+                        :type ("MemTempBuffer" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [14328 14497])
+                    ("MemTempBuffer" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("impl" variable
+                               (:pointer 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [14523 14541]))                          
+                        :type ("MemTempBuffer" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [14509 14665])
+                    ("MemTempBuffer" function
+                       (:destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [14668 14765])
+                    ("Write" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("ptr" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [14789 14805])
+                            ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14806 14818])
+                            ("nmemb" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14819 14832]))                          
+                        :type ("size_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [14768 15194])
+                    ("Read" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("ptr" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [15217 15227])
+                            ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15228 15240])
+                            ("nmemb" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15241 15254]))                          
+                        :type ("size_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [15197 15839])
+                    ("SeekToFirst" function
+                       (:typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [15843 15918])
+                    ("Size" function
+                       (:typemodifiers ("virtual")
+                        :type ("size_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [15921 15977])
+                    ("Name" function
+                       (:typemodifiers ("virtual")
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [15980 16068])
+                    ("private" label nil (reparse-symbol classsubparts) [16069 16077])
+                    ("m_impl" variable
+                       (:pointer 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [16080 16100])
+                    ("m_own_impl" variable (:type "bool") (reparse-symbol classsubparts) [16103 16119])
+                    ("m_read_cur" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [16122 16140])
+                    ("m_write_cur" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [16143 16162])
+                    ("m_name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [16165 16184]))                  
+                :type "class")
+                nil [14268 16187])
+            ("NewMemBuffer" function
+               (:pointer 1
+                :parent "TempBuffer"
+                :arguments 
+                  ( ("impl" variable
+                       (:pointer 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16225 16243]))                  
+                :type ("TempBuffer" type (:type "class") nil nil))
+                nil [16188 16281])
+            ("New" function
+               (:pointer 1
+                :parent "TempBuffer"
+                :arguments 
+                  ( ("name" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16310 16334]))                  
+                :type ("TempBuffer" type (:type "class") nil nil))
+                nil [16282 16739])
+            ("Build" function
+               (:parent "TargetingSearch"
+                :arguments 
+                  ( ("expand_id_mapping" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ExpandingMap" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16771 16809])
+                    ("bid" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("shared_ptr" type (:template-specifier 
+                                    ( ("QZAP::AD::TargetingBid" type nil nil nil))                                    ) nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [16812 16872])
+                    ("buffer" variable
+                       (:pointer 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16875 16895])
+                    ("header" variable
+                       (:pointer 1
+                        :type ("Header" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16896 16911]))                  
+                :type "bool")
+                nil [16740 18236])
+            ("BuildWithMemory" function
+               (:parent "TargetingSearch"
+                :arguments 
+                  ( ("expand_id_mapping" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ExpandingMap" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18279 18317])
+                    ("bids" variable
+                       (:pointer 1
+                        :type ("TargetingBidForwardIterator" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18320 18354])
+                    ("buffer" variable
+                       (:pointer 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18357 18377]))                  
+                :type "bool")
+                nil [18238 18591])
+            ("BuildWithFile" function
+               (:parent "TargetingSearch"
+                :arguments 
+                  ( ("expand_id_mapping" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ExpandingMap" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18631 18669])
+                    ("bid_file_pattern" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18672 18708])
+                    ("filename" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18711 18739])
+                    ("header" variable
+                       (:pointer 1
+                        :type ("Header" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18742 18757]))                  
+                :type "bool")
+                nil [18592 19015])
+            ("Build" function
+               (:parent "TargetingSearch"
+                :arguments 
+                  ( ("expand_id_mapping" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ExpandingMap" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [19049 19087])
+                    ("bids" variable
+                       (:pointer 1
+                        :type ("TargetingBidForwardIterator" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [19092 19126])
+                    ("targeting_index_file" variable
+                       (:pointer 1
+                        :type ("TempBuffer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [19131 19164])
+                    ("header" variable
+                       (:pointer 1
+                        :type ("Header" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [19169 19184]))                  
+                :type "bool")
+                nil [19016 42413])
+            ("FetchIntervalId" function
+               (:parent "TargetingSearch"
+                :arguments 
+                  ( ("match_id" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [42453 42471])
+                    ("index" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [42472 42487]))                  
+                :type "void")
+                nil [42415 43630])
+            ("FilterByNotItem" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("bitmap" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [43667 43689])
+                    ("start" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [43690 43705])
+                    ("end" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [43706 43719]))                  
+                :type "bool")
+                nil [43632 44180])
+            ("Search" function
+               (:parent "TargetingSearch"
+                :arguments 
+                  ( ("id" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("uint64_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [44211 44230])
+                    ("id_size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [44231 44246]))                  
+                :type "void")
+                nil [44182 49285])
+            ("IsValid" function
+               (:methodconst-flag t
+                :parent "TargetingSearch"
+                :type "bool")
+                nil [49287 49674])
+            ("GetMatchId" function
+               (:methodconst-flag t
+                :parent "TargetingSearch"
+                :arguments 
+                  ( ("key" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("uint64_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [49714 49734])
+                    ("key_size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [49735 49751])
+                    ("content_block_index" variable
+                       (:constant-flag t
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [49756 49791])
+                    ("match_id" variable
+                       (:pointer 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("uint64_t" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [49796 49828]))                  
+                :type "void")
+                nil [49676 50680])
+            ("IsContentBlockMatchIdIndex" function
+               (:methodconst-flag t
+                :parent "TargetingSearch"
+                :arguments 
+                  ( ("key_index" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [50736 50755])
+                    ("content_block_index" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [50760 50789]))                  
+                :type "bool")
+                nil [50682 51703])
+            ("GetAllMatchId" function
+               (:methodconst-flag t
+                :parent "TargetingSearch"
+                :arguments 
+                  ( ("key" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("uint64_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [51746 51766])
+                    ("key_size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [51767 51783])
+                    ("match_id" variable
+                       (:pointer 1
+                        :type ("std::set" type
+                             (:template-specifier 
+                                ( ("uint32_t" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [51788 51817]))                  
+                :type "void")
+                nil [51705 51898])
+            ("GetAidMatchKeyIndex" function
+               (:methodconst-flag t
+                :parent "TargetingSearch"
+                :arguments 
+                  ( ("key_index" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [51945 51964])
+                    ("aindex" variable
+                       (:pointer 1
+                        :type ("std::set" type
+                             (:template-specifier 
+                                ( ("uint32_t" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [51967 51994]))                  
+                :type "void")
+                nil [51900 52728]))          
+      :file "targeting_search.cc"
+      :pointmax 52729
+      :fsize 52978
+      :lastmodtime '(22887 27544 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("tr1/unordered_set" include (:system-flag t) nil [1 29])
+            ("app/qzap/service/retrieval/module/targeting/include/targeting_reduce.h" include nil nil [30 111])
+            ("app/qzap/service/retrieval/module/targeting/include/interval_dictionary.h" include nil nil [112 196])
+            ("app/qzap/service/retrieval/module/targeting/include/targeting_interface.h" include nil nil [197 281])
+            ("app/qzap/proto/common/qzap_ad_targeting.pb.h" include nil nil [282 337])
+            ("app/qzap/service/retrieval/module/targeting/proto/targeting_reduce.pb.h" include nil nil [338 420])
+            ("thirdparty/glog/logging.h" include nil nil [421 457])
+            ("QZAP::AD" using (:type ("QZAP::AD" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [458 483])
+            ("TargetingReduce" function
+               (:constructor-flag t
+                :parent "TargetingReduce"
+                :arguments 
+                  ( ("lookup" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("TargetingLookupInterface" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [520 559]))                  
+                :type ("TargetingReduce" type (:type "class") nil nil))
+                nil [484 583])
+            ("TargetingReduce" function
+               (:destructor-flag t
+                :parent "TargetingReduce"
+                :type "void")
+                nil [585 624])
+            ("RevertOperator" function
+               (:type "bool"
+                :arguments 
+                  ( ("tuple" variable
+                       (:pointer 1
+                        :type ("TargetingNormalizedTuple" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [706 738]))                  
+                :parent "TargetingReduce"
+                :template-specifier 
+                  ( ("TargetingNormalizedTuple" type nil nil nil))                  )
+                nil [626 900])
+            ("RevertOperator" function
+               (:type "bool"
+                :arguments 
+                  ( ("level" variable
+                       (:pointer 1
+                        :type ("TargetingNormalizedLevel3" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [983 1016]))                  
+                :parent "TargetingReduce"
+                :template-specifier 
+                  ( ("TargetingNormalizedLevel3" type nil nil nil))                  )
+                nil [902 1555])
+            ("RevertOperator" function
+               (:template 
+                  ( ("Level" type (:type "class") nil nil))                  
+                :type "bool"
+                :arguments 
+                  ( ("level" variable
+                       (:pointer 1
+                        :type ("Level" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1625 1638]))                  
+                :parent "TargetingReduce")
+                nil [1557 2359])
+            ("FillReprice" function
+               (:parent "TargetingReduce"
+                :arguments 
+                  ( ("tuple" variable
+                       (:pointer 1
+                        :type ("TargetingNormalizedTuple" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2395 2427]))                  
+                :type "void")
+                nil [2361 3275])
+            ("IdExpand" function
+               (:parent "TargetingReduce"
+                :arguments 
+                  ( ("solid" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("TargetingSolid" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3308 3336])
+                    ("normalized" variable
+                       (:pointer 1
+                        :type ("TargetingNormalized" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3337 3369]))                  
+                :type "bool")
+                nil [3277 5864])
+            ("NormalizePoint" function
+               (:parent "TargetingReduce"
+                :arguments 
+                  ( ("point" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("TargetingPoint" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5908 5936])
+                    ("level2" variable
+                       (:pointer 1
+                        :type ("TargetingNormalizedLevel2" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5941 5975]))                  
+                :type "bool")
+                nil [5866 6956])
+            ("NormalizeRange" function
+               (:parent "TargetingReduce"
+                :arguments 
+                  ( ("point" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("TargetingPoint" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7000 7028])
+                    ("level2" variable
+                       (:pointer 1
+                        :type ("TargetingNormalizedLevel2" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7033 7067]))                  
+                :type "bool")
+                nil [6958 8135])
+            ("NormalizeLBS" function
+               (:parent "TargetingReduce"
+                :arguments 
+                  ( ("point" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("TargetingPoint" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8175 8203])
+                    ("level2" variable
+                       (:pointer 1
+                        :type ("TargetingNormalizedLevel2" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8206 8240]))                  
+                :type "bool")
+                nil [8137 10845])
+            ("Execute" function
+               (:type "bool"
+                :arguments 
+                  ( ("tuple" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("TargetingNormalizedTuple" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10919 10957])
+                    ("result" variable
+                       (:pointer 1
+                        :type ("std::set" type
+                             (:template-specifier 
+                                ( ("std::set" type (:template-specifier 
+                                    ( ("int" type nil nil nil))                                    ) nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [10962 10995]))                  
+                :parent "TargetingReduce"
+                :template-specifier 
+                  ( ("TargetingNormalizedTuple" type nil nil nil))                  )
+                nil [10847 11113])
+            ("SetContains" function
+               (:parent "TargetingReduce"
+                :arguments 
+                  ( ("set1" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::set" type
+                             (:template-specifier 
+                                ( ("int" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [11149 11175])
+                    ("set2" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::set" type
+                             (:template-specifier 
+                                ( ("int" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [11176 11202]))                  
+                :type "bool")
+                nil [11115 11373])
+            ("Optimize" function
+               (:parent "TargetingReduce"
+                :arguments 
+                  ( ("x" variable
+                       (:pointer 1
+                        :type ("std::set" type
+                             (:template-specifier 
+                                ( ("std::set" type (:template-specifier 
+                                    ( ("int" type nil nil nil))                                    ) nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [11406 11434]))                  
+                :type "void")
+                nil [11375 12915])
+            ("MergeIntervalForAndNode" function
+               (:parent "TargetingReduce"
+                :arguments 
+                  ( ("x" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::set" type
+                             (:template-specifier 
+                                ( ("int" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [13253 13276])
+                    ("y" variable
+                       (:pointer 1
+                        :type ("std::set" type
+                             (:template-specifier 
+                                ( ("int" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [13277 13294]))                  
+                :type "void")
+                nil [13207 14744])
+            ("MergeIntervalForOrNode" function
+               (:parent "TargetingReduce"
+                :arguments 
+                  ( ("x" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::set" type
+                             (:template-specifier 
+                                ( ("int" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [14790 14813])
+                    ("y" variable
+                       (:pointer 1
+                        :type ("std::set" type
+                             (:template-specifier 
+                                ( ("int" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [14814 14831]))                  
+                :type "void")
+                nil [14745 15588])
+            ("MergeIntervalMap" function
+               (:parent "TargetingReduce"
+                :arguments 
+                  ( ("cpc_adjust_percent" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15632 15659])
+                    ("not_operator" variable (:type "bool") (reparse-symbol arg-sub-list) [15662 15680])
+                    ("interval_map" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::map" type
+                             (:template-specifier 
+                                ( ("Interval" type (:template-specifier 
+                                    ( ("uint64_t" type nil nil nil))                                    ) nil nil)
+                                  ("int" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [15683 15737])
+                    ("y" variable
+                       (:pointer 1
+                        :type ("std::set" type
+                             (:template-specifier 
+                                ( ("int" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [15740 15757]))                  
+                :type "void")
+                nil [15590 17464])
+            ("MergeInterval" function
+               (:parent "TargetingReduce"
+                :arguments 
+                  ( ("x" variable
+                       (:pointer 1
+                        :type ("std::set" type
+                             (:template-specifier 
+                                ( ("std::set" type (:template-specifier 
+                                    ( ("int" type nil nil nil))                                    ) nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [17505 17533]))                  
+                :type "void")
+                nil [17466 17780])
+            ("SetCartesianProduct" function
+               (:parent "TargetingReduce"
+                :arguments 
+                  ( ("set1" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::set" type
+                             (:template-specifier 
+                                ( ("std::set" type (:template-specifier 
+                                    ( ("int" type nil nil nil))                                    ) nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [17829 17866])
+                    ("set2" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::set" type
+                             (:template-specifier 
+                                ( ("std::set" type (:template-specifier 
+                                    ( ("int" type nil nil nil))                                    ) nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [17871 17908])
+                    ("result" variable
+                       (:pointer 1
+                        :type ("std::set" type
+                             (:template-specifier 
+                                ( ("std::set" type (:template-specifier 
+                                    ( ("int" type nil nil nil))                                    ) nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [17913 17946]))                  
+                :type "bool")
+                nil [17782 18478])
+            ("DumpSetInterval" function
+               (:parent "TargetingReduce"
+                :arguments 
+                  ( ("x" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::set" type
+                             (:template-specifier 
+                                ( ("std::set" type (:template-specifier 
+                                    ( ("int" type nil nil nil))                                    ) nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [18523 18557]))                  
+                :type "bool")
+                nil [18480 19122])
+            ("ExecuteAndLogic" function
+               (:template 
+                  ( ("Level" type (:type "class") nil nil))                  
+                :type "bool"
+                :arguments 
+                  ( ("level" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("Level" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [19194 19213])
+                    ("result" variable
+                       (:pointer 1
+                        :type ("std::set" type
+                             (:template-specifier 
+                                ( ("std::set" type (:template-specifier 
+                                    ( ("int" type nil nil nil))                                    ) nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [19218 19251]))                  
+                :parent "TargetingReduce")
+                nil [19125 19826])
+            ("SetOfSetAdd" function
+               (:parent "TargetingReduce"
+                :arguments 
+                  ( ("set1" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::set" type
+                             (:template-specifier 
+                                ( ("std::set" type (:template-specifier 
+                                    ( ("int" type nil nil nil))                                    ) nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [19865 19902])
+                    ("set2" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::set" type
+                             (:template-specifier 
+                                ( ("std::set" type (:template-specifier 
+                                    ( ("int" type nil nil nil))                                    ) nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [19905 19942])
+                    ("result" variable
+                       (:pointer 1
+                        :type ("std::set" type
+                             (:template-specifier 
+                                ( ("std::set" type (:template-specifier 
+                                    ( ("int" type nil nil nil))                                    ) nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [19945 19978]))                  
+                :type "void")
+                nil [19828 20447])
+            ("ExecuteOrTuple" function
+               (:parent "TargetingReduce"
+                :arguments 
+                  ( ("tuple" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("google::protobuf::RepeatedPtrField" type
+                             (:template-specifier 
+                                ( ("TargetingNormalizedTuple" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [20489 20563])
+                    ("result" variable
+                       (:pointer 1
+                        :type ("std::set" type
+                             (:template-specifier 
+                                ( ("std::set" type (:template-specifier 
+                                    ( ("int" type nil nil nil))                                    ) nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [20566 20599]))                  
+                :type "bool")
+                nil [20449 22335])
+            ("ExecuteAndTuple" function
+               (:parent "TargetingReduce"
+                :arguments 
+                  ( ("tuple" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("google::protobuf::RepeatedPtrField" type
+                             (:template-specifier 
+                                ( ("TargetingNormalizedTuple" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [22378 22452])
+                    ("result" variable
+                       (:pointer 1
+                        :type ("std::set" type
+                             (:template-specifier 
+                                ( ("std::set" type (:template-specifier 
+                                    ( ("int" type nil nil nil))                                    ) nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [22455 22488]))                  
+                :type "bool")
+                nil [22337 22811])
+            ("ExecuteOrLogic" function
+               (:template 
+                  ( ("Level" type (:type "class") nil nil))                  
+                :type "bool"
+                :arguments 
+                  ( ("level" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("Level" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [22881 22900])
+                    ("result" variable
+                       (:pointer 1
+                        :type ("std::set" type
+                             (:template-specifier 
+                                ( ("std::set" type (:template-specifier 
+                                    ( ("int" type nil nil nil))                                    ) nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [22905 22938]))                  
+                :parent "TargetingReduce")
+                nil [22813 23354])
+            ("MergeReprice" function
+               (:parent "TargetingReduce"
+                :arguments 
+                  ( ("tuple" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("TargetingNormalizedTuple" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [23394 23432])
+                    ("reprice" variable
+                       (:pointer 1
+                        :type ("TargetingReprice" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [23435 23461]))                  
+                :type "bool")
+                nil [23356 23659])
+            ("Execute" function
+               (:type "bool"
+                :arguments 
+                  ( ("level" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("TargetingNormalizedLevel2" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [23735 23774])
+                    ("result" variable
+                       (:pointer 1
+                        :type ("std::set" type
+                             (:template-specifier 
+                                ( ("std::set" type (:template-specifier 
+                                    ( ("int" type nil nil nil))                                    ) nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [23779 23812]))                  
+                :parent "TargetingReduce"
+                :template-specifier 
+                  ( ("TargetingNormalizedLevel2" type nil nil nil))                  )
+                nil [23661 25230])
+            ("Execute" function
+               (:type "bool"
+                :arguments 
+                  ( ("level" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("TargetingNormalizedLevel3" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [25307 25346])
+                    ("result" variable
+                       (:pointer 1
+                        :type ("std::set" type
+                             (:template-specifier 
+                                ( ("std::set" type (:template-specifier 
+                                    ( ("int" type nil nil nil))                                    ) nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [25351 25384]))                  
+                :parent "TargetingReduce"
+                :template-specifier 
+                  ( ("TargetingNormalizedLevel3" type nil nil nil))                  )
+                nil [25232 25697])
+            ("Execute" function
+               (:template 
+                  ( ("Level" type (:type "class") nil nil))                  
+                :type "bool"
+                :arguments 
+                  ( ("level" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("Level" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [25760 25779])
+                    ("result" variable
+                       (:pointer 1
+                        :type ("std::set" type
+                             (:template-specifier 
+                                ( ("std::set" type (:template-specifier 
+                                    ( ("int" type nil nil nil))                                    ) nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [25784 25817]))                  
+                :parent "TargetingReduce")
+                nil [25699 26110])
+            ("BidAndSetContains" function
+               (:methodconst-flag t
+                :parent "TargetingReduce"
+                :arguments 
+                  ( ("a" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("TargetingBid_AndSet" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [26152 26181])
+                    ("b" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("TargetingBid_AndSet" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [26182 26211]))                  
+                :type "bool")
+                nil [26112 26782])
+            ("BidContains" function
+               (:methodconst-flag t
+                :parent "TargetingReduce"
+                :arguments 
+                  ( ("a" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("TargetingBid_Bid" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [26818 26844])
+                    ("b" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("TargetingBid_Bid" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [26845 26871]))                  
+                :type "bool")
+                nil [26784 27474])
+            ("Reduce" function
+               (:parent "TargetingReduce"
+                :arguments 
+                  ( ("solid" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("shared_ptr" type (:template-specifier 
+                                    ( ("TargetingSolid" type nil nil nil))                                    ) nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [27505 27559])
+                    ("targeting_bid" variable
+                       (:pointer 1
+                        :type ("TargetingBid" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [27560 27588]))                  
+                :type "bool")
+                nil [27476 29977]))          
+      :file "targeting_reduce.cc"
+      :pointmax 29978
+      :fsize 29977
+      :lastmodtime '(22878 19683 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("vector" include (:system-flag t) nil [1 18])
+            ("app/qzap/service/retrieval/module/targeting/include/GlobalTargetIdLookUp.h" include nil nil [19 104])
+            ("app/qzap/service/retrieval/adindex/remarketing.h" include nil nil [105 164])
+            ("app/qzap/service/retrieval/module/adstore/include/LbsCoordCalc.h" include nil nil [165 240])
+            ("app/qzap/service/retrieval/module/targeting/include/targeting_id_alloc.h" include nil nil [241 324])
+            ("thirdparty/glog/logging.h" include nil nil [325 361])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [363 383])
+            ("DEFINE_bool" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("skip_remarketing_map_warning" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [396 425])
+                    ("" variable (:type ("false" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [426 432]))                  
+                :type "int")
+                nil [384 469])
+            ("CGlobalTargetIdLookup" function
+               (:constructor-flag t
+                :parent "CGlobalTargetIdLookup"
+                :type ("CGlobalTargetIdLookup" type (:type "class") nil nil))
+                nil [472 1172])
+            ("CGlobalTargetIdLookup" function
+               (:destructor-flag t
+                :parent "CGlobalTargetIdLookup"
+                :type "void")
+                nil [1174 1226])
+            ("SetTargetIdAlloc" function
+               (:parent "CGlobalTargetIdLookup"
+                :arguments 
+                  ( ("targetid_alloc" variable
+                       (:pointer 1
+                        :type ("CTargetingIdAllocate" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1273 1311]))                  
+                :type "int")
+                nil [1228 8202])
+            ("GetReamartInterval" function
+               (:methodconst-flag t
+                :parent "CGlobalTargetIdLookup"
+                :arguments 
+                  ( ("id" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("uint64_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8252 8271])
+                    ("remark_interval" variable
+                       (:pointer 1
+                        :type ("std::pair" type
+                             (:template-specifier 
+                                ( ("uint64_t" type nil nil nil)
+                                  ("uint64_t" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [8272 8319]))                  
+                :type "void")
+                nil [8205 9112])
+            ("GetExpandIdMapping" function
+               (:parent "CGlobalTargetIdLookup"
+                :constant-flag t
+                :type ("ExpandingMap" type (:type "class") nil nil))
+                nil [9114 9231])
+            ("LookupId" function
+               (:methodconst-flag t
+                :parent "CGlobalTargetIdLookup"
+                :arguments 
+                  ( ("id" variable
+                       (:constant-flag t
+                        :type ("uint64_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9388 9406])
+                    ("intervals" variable
+                       (:pointer 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("std::pair" type (:template-specifier 
+                                    ( ("uint64_t" type nil nil nil)
+                                      ("uint64_t" type nil nil nil))                                    ) nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [9407 9462]))                  
+                :type "bool")
+                nil [9351 10482])
+            ("LookupIdRange" function
+               (:methodconst-flag t
+                :parent "CGlobalTargetIdLookup"
+                :arguments 
+                  ( ("low" variable
+                       (:constant-flag t
+                        :type ("uint64_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10534 10553])
+                    ("hi" variable
+                       (:constant-flag t
+                        :type ("uint64_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10560 10578])
+                    ("intervals" variable
+                       (:pointer 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("std::pair" type (:template-specifier 
+                                    ( ("uint64_t" type nil nil nil)
+                                      ("uint64_t" type nil nil nil))                                    ) nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [10585 10640]))                  
+                :type "bool")
+                nil [10485 10734])
+            ("LookupCurrentLBS" function
+               (:methodconst-flag t
+                :parent "CGlobalTargetIdLookup"
+                :arguments 
+                  ( ("latitude" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10788 10806])
+                    ("longtitude" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10813 10833])
+                    ("radius" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10840 10856])
+                    ("intervals" variable
+                       (:pointer 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("std::pair" type (:template-specifier 
+                                    ( ("uint64_t" type nil nil nil)
+                                      ("uint64_t" type nil nil nil))                                    ) nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [10863 10918]))                  
+                :type "bool")
+                nil [10736 12024])
+            ("LookupBothLBS" function
+               (:methodconst-flag t
+                :parent "CGlobalTargetIdLookup"
+                :arguments 
+                  ( ("latitude" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12076 12094])
+                    ("longtitude" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12101 12121])
+                    ("radius" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12128 12144])
+                    ("intervals" variable
+                       (:pointer 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("std::pair" type (:template-specifier 
+                                    ( ("uint64_t" type nil nil nil)
+                                      ("uint64_t" type nil nil nil))                                    ) nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [12151 12206]))                  
+                :type "bool")
+                nil [12027 13317])
+            ("SetTimeSetBaseId" function
+               (:parent "CGlobalTargetIdLookup"
+                :type "int")
+                nil [13319 14276])
+            ("SetSiteSetBaseId" function
+               (:parent "CGlobalTargetIdLookup"
+                :type "int")
+                nil [14278 14698])
+            ("SetTargetTypebound" function
+               (:parent "CGlobalTargetIdLookup"
+                :type "int")
+                nil [14701 15569])
+            ("SetCrtSizeLowbound" function
+               (:parent "CGlobalTargetIdLookup"
+                :type "int")
+                nil [15572 16009])
+            ("GetParentId" function
+               (:methodconst-flag t
+                :parent "CGlobalTargetIdLookup"
+                :arguments 
+                  ( ("id" variable
+                       (:constant-flag t
+                        :type ("uint64_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16053 16071])
+                    ("parent_id" variable
+                       (:pointer 1
+                        :type ("uint64_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16072 16092]))                  
+                :type "bool")
+                nil [16013 16270])
+            ("GetPaipaiToOldGdtClassMap" function
+               (:parent "CGlobalTargetIdLookup"
+                :constant-flag t
+                :type ("std::map" type
+                     (:template-specifier 
+                        ( ("unsigned int" type nil nil nil)
+                          ("unsigned int" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [16272 16429])
+            ("GetMetaClassIdByOldTubimc" function
+               (:parent "CGlobalTargetIdLookup"
+                :arguments 
+                  ( ("tubimc" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("uint16_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16486 16509])
+                    ("target_id" variable
+                       (:reference 1
+                        :type ("uint64_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16510 16530]))                  
+                :type "bool")
+                nil [16432 16611]))          
+      :file "GlobalTargetIdLookUp.cpp"
+      :pointmax 17053
+      :fsize 17165
+      :lastmodtime '(22885 56201 0 0)
+      :unmatched-syntax '((string 433 . 467)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("math.h" include (:system-flag t) nil [1 18])
+            ("app/qzap/service/retrieval/module/targeting/include/gdt_outer_class_parser.h" include nil nil [20 107])
+            ("app/qzap/service/retrieval/module/targeting/include/paipai_to_old_gdt_class.h" include nil nil [108 196])
+            ("app/qzap/service/retrieval/module/targeting/include/targeting_id_alloc.h" include nil nil [197 280])
+            ("thirdparty/glog/logging.h" include nil nil [281 317])
+            ("TARGETING_ID_ORIGN_GDTCLASS" variable (:constant-flag t) nil [328 355])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [385 405])
+            ("DEFINE_string" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("targetid_alloc_xml" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [422 441]))                  
+                :type "int")
+                nil [408 485])
+            ("ParseFromXmlEntry" function
+               (:parent "ExtendProperty"
+                :arguments 
+                  ( ("markup" variable
+                       (:pointer 1
+                        :type ("CMarkupSTL" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [527 546]))                  
+                :type "bool")
+                nil [488 1095])
+            ("CTargetingIdAllocate" function
+               (:constructor-flag t
+                :parent "CTargetingIdAllocate"
+                :type ("CTargetingIdAllocate" type (:type "class") nil nil))
+                nil [1096 1204])
+            ("CTargetingIdAllocate" function
+               (:destructor-flag t
+                :parent "CTargetingIdAllocate"
+                :type "void")
+                nil [1207 1256])
+            ("Load" function
+               (:parent "CTargetingIdAllocate"
+                :arguments 
+                  ( ("szXML" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1289 1307]))                  
+                :type "int")
+                nil [1258 4558])
+            ("ParseTargetRecus" function
+               (:parent "CTargetingIdAllocate"
+                :arguments 
+                  ( ("markup" variable
+                       (:reference 1
+                        :type ("CMarkupSTL" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4626 4645])
+                    ("iLevel" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [4646 4664])
+                    ("icur_pos" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [4665 4685])
+                    ("ichild_count" variable
+                       (:reference 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [4686 4704]))                  
+                :type "int")
+                nil [4583 10234])
+            ("GetVersion" function
+               (:parent "CTargetingIdAllocate"
+                :type "float")
+                nil [10238 10305])
+            ("GetAllcateSpaceName" function
+               (:parent "CTargetingIdAllocate"
+                :constant-flag t
+                :type ("std::set" type
+                     (:template-specifier 
+                        ( ("std::string" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [10308 10409])
+            ("GetTargetingRootData" function
+               (:pointer 1
+                :parent "CTargetingIdAllocate"
+                :constant-flag t
+                :arguments 
+                  ( ("id" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type "unsigned long long")
+                        (reparse-symbol arg-sub-list) [10500 10529]))                  
+                :type ("targeting_data_t" type (:type "class") nil nil))
+                nil [10433 10980])
+            ("GetDataByClassName" function
+               (:pointer 1
+                :parent "CTargetingIdAllocate"
+                :constant-flag t
+                :arguments 
+                  ( ("szName" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [11048 11067]))                  
+                :type ("targeting_data_t" type (:type "class") nil nil))
+                nil [10983 11323])
+            ("GetDataPosByClassName" function
+               (:parent "CTargetingIdAllocate"
+                :arguments 
+                  ( ("szName" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [11373 11392]))                  
+                :type "int")
+                nil [11325 11608])
+            ("GetChildData" function
+               (:pointer 1
+                :parent "CTargetingIdAllocate"
+                :constant-flag t
+                :arguments 
+                  ( ("szName" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [11670 11689])
+                    ("child_seq" variable (:type "int") (reparse-symbol arg-sub-list) [11690 11704]))                  
+                :type ("targeting_data_t" type (:type "class") nil nil))
+                nil [11611 12247])
+            ("GetParentData" function
+               (:pointer 1
+                :parent "CTargetingIdAllocate"
+                :constant-flag t
+                :arguments 
+                  ( ("id" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type "unsigned long long")
+                        (reparse-symbol arg-sub-list) [12310 12339]))                  
+                :type ("targeting_data_t" type (:type "class") nil nil))
+                nil [12250 12649])
+            ("GetSubTargetingData" function
+               (:parent "CTargetingIdAllocate"
+                :arguments 
+                  ( ("id" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type "unsigned long long")
+                        (reparse-symbol arg-sub-list) [12722 12751])
+                    ("vtdata" variable
+                       (:reference 1
+                        :type ("vector" type
+                             (:template-specifier 
+                                ( ("targeting_data_t" type (:pointer 1) nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [12752 12786]))                  
+                :type "int")
+                nil [12676 13373])
+            ("GetSubTargetingData" function
+               (:parent "CTargetingIdAllocate"
+                :arguments 
+                  ( ("id" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type "unsigned long long")
+                        (reparse-symbol arg-sub-list) [13447 13476])
+                    ("vtdata" variable
+                       (:reference 1
+                        :type ("vector" type
+                             (:template-specifier 
+                                ( ("uint64_t" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [13477 13502]))                  
+                :type "int")
+                nil [13401 14025])
+            ("GetThirdFirstChild" function
+               (:parent "CTargetingIdAllocate"
+                :arguments 
+                  ( ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [14073 14090])
+                    ("vtdata" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("targeting_data_t" type
+                                     (:pointer 1
+                                      :constant-flag t)
+                                      nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [14091 14136]))                  
+                :type "int")
+                nil [14028 15182])
+            ("GetThirdFirstChild" function
+               (:parent "CTargetingIdAllocate"
+                :arguments 
+                  ( ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [15230 15247])
+                    ("vtdata" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("uint64_t" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [15248 15278]))                  
+                :type "int")
+                nil [15185 15608])
+            ("PrintSubTree" function
+               (:parent "CTargetingIdAllocate"
+                :arguments 
+                  ( ("id" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type "unsigned long long")
+                        (reparse-symbol arg-sub-list) [15651 15680]))                  
+                :type "void")
+                nil [15611 15912])
+            ("PrintSubTree" function
+               (:parent "CTargetingIdAllocate"
+                :arguments 
+                  ( ("pos" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [15954 15969]))                  
+                :type "void")
+                nil [15914 16397])
+            ("GetTargetingData" function
+               (:pointer 1
+                :parent "CTargetingIdAllocate"
+                :constant-flag t
+                :arguments 
+                  ( ("pos" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [16463 16478]))                  
+                :type ("targeting_data_t" type (:type "class") nil nil))
+                nil [16400 16717])
+            ("GetTargetingData" function
+               (:pointer 1
+                :parent "CTargetingIdAllocate"
+                :constant-flag t
+                :arguments 
+                  ( ("id" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type "unsigned long long")
+                        (reparse-symbol arg-sub-list) [16783 16812]))                  
+                :type ("targeting_data_t" type (:type "class") nil nil))
+                nil [16720 17036])
+            ("GetTargetingDataContainTheGivenId" function
+               (:pointer 1
+                :parent "CTargetingIdAllocate"
+                :constant-flag t
+                :arguments 
+                  ( ("id" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [17118 17130]))                  
+                :type ("targeting_data_t" type (:type "class") nil nil))
+                nil [17038 18013])
+            ("GetAllTargeting" function
+               (:parent "CTargetingIdAllocate"
+                :arguments 
+                  ( ("ppData" variable
+                       (:pointer 2
+                        :constant-flag t
+                        :type ("targeting_data_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18058 18090])
+                    ("uiCount" variable
+                       (:reference 1
+                        :type "unsigned int")
+                        (reparse-symbol arg-sub-list) [18091 18113]))                  
+                :type "int")
+                nil [18016 18213])
+            ("GetTargetingCount" function
+               (:parent "CTargetingIdAllocate"
+                :type "unsigned int")
+                nil [18216 18306])
+            ("GetMetaClassIdByOldTubimc" function
+               (:parent "CTargetingIdAllocate"
+                :arguments 
+                  ( ("tubimc" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("uint16_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18393 18416])
+                    ("target_id" variable
+                       (:reference 1
+                        :type ("uint64_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18417 18437]))                  
+                :type "bool")
+                nil [18340 18731])
+            ("GetPaipaiToOldGdtClassMap" function
+               (:parent "CTargetingIdAllocate"
+                :constant-flag t
+                :type ("std::map" type
+                     (:template-specifier 
+                        ( ("unsigned int" type nil nil nil)
+                          ("unsigned int" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [18733 18918])
+            ("ParseLabel_Space" function
+               (:parent "CTargetingIdAllocate"
+                :arguments 
+                  ( ("markup" variable
+                       (:reference 1
+                        :type ("CMarkupSTL" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18977 18996]))                  
+                :type "int")
+                nil [18934 19376])
+            ("ParseTargetId" function
+               (:parent "CTargetingIdAllocate"
+                :arguments 
+                  ( ("sz_targetid" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [19978 20002])
+                    ("p_targetid" variable
+                       (:pointer 1
+                        :type "unsigned long long")
+                        (reparse-symbol arg-sub-list) [20003 20034]))                  
+                :type "int")
+                nil [19938 21689])
+            ("AjustString" function
+               (:parent "CTargetingIdAllocate"
+                :arguments 
+                  ( ("str" variable
+                       (:reference 1
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [21750 21762]))                  
+                :type "void")
+                nil [21711 22459])
+            ("GetStatus" function
+               (:parent "CTargetingIdAllocate"
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [22513 22536]))                  
+                :type ("E_TARGETING_STATUS" type (:type "class") nil nil))
+                nil [22462 22558])
+            ("ParseGDTOrignTarget" function
+               (:parent "CTargetingIdAllocate"
+                :arguments 
+                  ( ("markup" variable
+                       (:reference 1
+                        :type ("CMarkupSTL" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [22648 22667]))                  
+                :type "int")
+                nil [22602 24798])
+            ("ParseCurNode" function
+               (:parent "CTargetingIdAllocate"
+                :arguments 
+                  ( ("markup" variable
+                       (:reference 1
+                        :type ("CMarkupSTL" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [24857 24876])
+                    ("cur_store_pos" variable
+                       (:reference 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [24877 24896]))                  
+                :type "int")
+                nil [24818 27024])
+            ("BuildExpandIdMap" function
+               (:parent "CTargetingIdAllocate"
+                :type "bool")
+                nil [27027 27701])
+            ("BuildExpandIdMapRecus" function
+               (:parent "CTargetingIdAllocate"
+                :arguments 
+                  ( ("max_pos" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type "unsigned int")
+                        (reparse-symbol arg-sub-list) [27752 27780])
+                    ("parent_pos" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [27781 27803]))                  
+                :type "bool")
+                nil [27703 29629])
+            ("ExpandGlobalIdParents" function
+               (:parent "CTargetingIdAllocate"
+                :arguments 
+                  ( ("pos" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [29681 29696])
+                    ("is_contain_self" variable (:type "bool") (reparse-symbol arg-sub-list) [29697 29718])
+                    ("parent_set" variable
+                       (:pointer 1
+                        :type ("std::set" type
+                             (:template-specifier 
+                                ( ("uint64_t" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [29719 29750]))                  
+                :type "bool")
+                nil [29632 30445])
+            ("DebugStringExpandMap" function
+               (:parent "CTargetingIdAllocate"
+                :type ("std::string" type (:type "class") nil nil))
+                nil [30447 31130])
+            ("AddTargetingDataToRangeMap" function
+               (:parent "CTargetingIdAllocate"
+                :type "void")
+                nil [31132 31558])
+            ("DebugString" function
+               (:parent "CTargetingIdAllocate"
+                :type ("std::string" type (:type "class") nil nil))
+                nil [31559 31960]))          
+      :file "targeting_id_alloc.cpp"
+      :pointmax 31961
+      :fsize 32439
+      :lastmodtime '(22885 57358 0 0)
+      :unmatched-syntax '((string 481 . 483) (string 442 . 479) (string 481 . 483) (string 442 . 479))
+      :lexical-table 
+        '(("TARGETING_ID_ORIGN_GDTCLASS" . ((semantic-list "(0xC00000000)" 356 . 369)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("algorithm" include (:system-flag t) nil [2782 2802])
+            ("app/qzap/common/base/walltime.h" include nil nil [2803 2845])
+            ("app/qzap/common/base/benchmark.h" include nil nil [2846 2889])
+            ("thirdparty/glog/logging.h" include nil nil [2890 2926])
+            ("app/qzap/common/utility/file_utility.h" include nil nil [2927 2976])
+            ("app/qzap/service/retrieval/module/targeting/include/interval_dictionary.h" include nil nil [2977 3061])
+            ("DEFINE_int32" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("interval_number" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3075 3091]))                  
+                :type "int")
+                nil [3062 3121])
+            ("DEFINE_int32" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("interval_id_number" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3135 3154]))                  
+                :type "int")
+                nil [3122 3185])
+            ("DEFINE_int32" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("key_number" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3199 3210]))                  
+                :type "int")
+                nil [3186 3247])
+            ("DEFINE_int32" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("loop_number" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3261 3273]))                  
+                :type "int")
+                nil [3248 3297])
+            ("DECLARE_string" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("benchmarks" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3313 3324]))                  
+                :type "int")
+                nil [3298 3325])
+            ("DEFINE_string" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("filename" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3340 3349]))                  
+                :type "int")
+                nil [3326 3377])
+            ("mapping" variable
+               (:typemodifiers ("static")
+                :type ("std::map" type
+                     (:template-specifier 
+                        ( ("Interval" type (:template-specifier 
+                            ( ("uint64_t" type nil nil nil))                            ) nil nil)
+                          ("std::set" type (:template-specifier 
+                            ( ("uint32_t" type nil nil nil))                            ) nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [3379 3444])
+            ("all_key" variable
+               (:typemodifiers ("static")
+                :type ("std::vector" type
+                     (:template-specifier 
+                        ( ("uint64_t" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [3445 3482])
+            ("TD" type
+               (:typedef ("IntervalDictionary" type
+                     (:template-specifier 
+                        ( ("uint64_t" type nil nil nil)
+                          ("uint32_t" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :type "typedef")
+                nil [3483 3533])
+            ("buffer" variable (:type ("std::string" type (:type "class") nil nil)) nil [3534 3553])
+            ("kMaxIdIndex" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :default-value "10000 * 100"
+                :type ("uint32_t" type (:type "class") nil nil))
+                nil [3554 3602])
+            ("search_result" variable
+               (:typemodifiers ("static")
+                :type ("std::vector" type
+                     (:template-specifier 
+                        ( ("std::pair" type (:template-specifier 
+                            ( ("uint64_t" type nil nil nil)
+                              ("uint32_t" type nil nil nil))                            ) nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [3603 3668])
+            ("Rand64" function
+               (:typemodifiers ("static" "inline")
+                :type ("uint64_t" type (:type "class") nil nil))
+                nil [3670 3803])
+            ("BM_InterverDictionarySearch" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("n" variable (:type "int") (reparse-symbol arg-sub-list) [3844 3850]))                  
+                :type "void")
+                nil [3804 4240])
+            ("BENCHMARK" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("BM_InterverDictionarySearch" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4251 4279]))                  
+                :type "int")
+                nil [4241 4280])
+            ("RunEval" function
+               (:typemodifiers ("static")
+                :type "int")
+                nil [4282 5175])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [5186 5195])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [5196 5208]))                  
+                :type "int")
+                nil [5177 6406]))          
+      :file "interval_dictionary_benchmark.cc"
+      :pointmax 6407
+      :fsize 6406
+      :lastmodtime '(22878 19683 0 0)
+      :unmatched-syntax '((string 3354 . 3375) (string 3350 . 3352) (string 3279 . 3295) (number 3274 . 3277) (string 3216 . 3245) (number 3211 . 3214) (string 3159 . 3183) (number 3155 . 3157) (string 3098 . 3119) (number 3092 . 3096)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("sys/mman.h" include nil nil [89 110])
+            ("sys/stat.h" include (:system-flag t) nil [111 132])
+            ("fcntl.h" include (:system-flag t) nil [133 151])
+            ("algorithm" include (:system-flag t) nil [152 172])
+            ("app/qzap/common/base/walltime.h" include nil nil [173 215])
+            ("app/qzap/common/base/benchmark.h" include nil nil [216 259])
+            ("app/qzap/common/base/string_utility.h" include nil nil [260 308])
+            ("thirdparty/glog/logging.h" include nil nil [309 345])
+            ("app/qzap/service/retrieval/module/targeting/include/interval_dictionary.h" include nil nil [346 430])
+            ("app/qzap/service/retrieval/module/targeting/include/targeting_search.h" include nil nil [431 512])
+            ("app/qzap/service/retrieval/module/targeting/include/GlobalTargetIdLookUp.h" include nil nil [513 598])
+            ("app/qzap/service/retrieval/module/targeting/include/targeting_id_alloc.h" include nil nil [599 682])
+            ("app/qzap/service/retrieval/module/targeting/include/targeting_reduce.h" include nil nil [683 764])
+            ("google/protobuf/text_format.h" include nil nil [765 805])
+            ("DEFINE_string" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("targeting_search_indexing_filename" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [820 855]))                  
+                :type "int")
+                nil [806 883])
+            ("DEFINE_string" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("id_file" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [898 906]))                  
+                :type "int")
+                nil [884 943])
+            ("DEFINE_int32" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("loop_number" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [957 969]))                  
+                :type "int")
+                nil [944 992])
+            ("DEFINE_bool" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("lock" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1005 1010])
+                    ("" variable (:type ("false" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1011 1017]))                  
+                :type "int")
+                nil [993 1037])
+            ("DEFINE_bool" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("dump_result" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1050 1062])
+                    ("" variable (:type ("true" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1063 1068]))                  
+                :type "int")
+                nil [1038 1088])
+            ("QZAP::AD" using (:type ("QZAP::AD" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [1089 1114])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [1125 1134])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1135 1147]))                  
+                :type "int")
+                nil [1116 5006]))          
+      :file "targeting_searcher.cc"
+      :pointmax 5007
+      :fsize 5006
+      :lastmodtime '(22878 19683 0 0)
+      :unmatched-syntax '((string 1069 . 1086) (string 1018 . 1035) (string 973 . 990) (number 970 . 971) (string 911 . 941) (string 907 . 909) (string 860 . 881) (string 856 . 858))))
+  :file "!Users!ric!Desktop!trunk!app!qzap!service!retrieval!module!targeting!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,452 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("INFRA_SERIALIZER_SERIALIZER_H_" variable (:constant-flag t) nil [48 78])
+            ("limits" include (:system-flag t) nil [80 97])
+            ("string" include (:system-flag t) nil [98 115])
+            ("utility" include (:system-flag t) nil [116 134])
+            ("vector" include (:system-flag t) nil [135 152])
+            ("boost/endian/buffers.hpp" include nil nil [154 189])
+            ("glog/logging.h" include nil nil [190 215])
+            ("serializer" type
+               (:members 
+                  ( ("Serializer" type
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type "class"
+                        :prototype t)
+                        (reparse-symbol namespacesubparts) [241 280])
+                    ("Archive" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [299 306])
+                            ("Archive" function
+                               (:constructor-flag t
+                                :type ("Archive" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [309 337])
+                            ("Archive" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("buf" variable
+                                       (:pointer 1
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [369 386]))                                  
+                                :type ("Archive" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [361 401])
+                            ("Archive" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("s" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [433 454]))                                  
+                                :type ("Archive" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [425 508])
+                            ("Archive" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("data" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [531 548])
+                                    ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [549 561]))                                  
+                                :type ("Archive" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [523 607])
+                            ("buf" function (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [622 658])
+                            ("append" function
+                               (:arguments 
+                                  ( ("ptr" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [674 690])
+                                    ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [691 703]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [662 732])
+                            ("put" function
+                               (:template 
+                                  ( ("T" type (:type "class") nil nil))                                  
+                                :type "void"
+                                :arguments 
+                                  ( ("object" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("T" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [823 839]))                                  )
+                                (reparse-symbol classsubparts) [790 889])
+                            ("get" function
+                               (:template 
+                                  ( ("T" type (:type "class") nil nil))                                  
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [893 975])
+                            ("consume" function
+                               (:pointer 1
+                                :constant-flag t
+                                :arguments 
+                                  ( ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [999 1011]))                                  
+                                :type "char")
+                                (reparse-symbol classsubparts) [979 1250])
+                            ("private" label nil (reparse-symbol classsubparts) [1253 1261])
+                            ("data_" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol classsubparts) [1264 1282])
+                            ("size_" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1285 1298])
+                            ("mybuf_" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1301 1320])
+                            ("buf_" variable
+                               (:pointer 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1323 1341])
+                            ("success_" variable
+                               (:default-value "true"
+                                :type "bool")
+                                (reparse-symbol classsubparts) [1345 1366]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [282 1369])
+                    ("Serializer" type
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type "class"
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [1413 1420])
+                            ("deserialize" function
+                               (:prototype-flag t
+                                :typemodifiers ("static")
+                                :arguments 
+                                  ( ("archive" variable
+                                       (:pointer 1
+                                        :type ("Archive" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1444 1461]))                                  
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1423 1462])
+                            ("serialize" function
+                               (:prototype-flag t
+                                :typemodifiers ("static")
+                                :arguments 
+                                  ( ("value" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("T" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1488 1503])
+                                    ("archive" variable
+                                       (:pointer 1
+                                        :type ("Archive" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1504 1521]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1466 1522]))                          )
+                        (reparse-symbol namespacesubparts) [1371 1525])
+                    ("BitSerializer" type
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type "class"
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [1572 1579])
+                            ("deserialize" function
+                               (:typemodifiers ("static")
+                                :arguments 
+                                  ( ("archive" variable
+                                       (:pointer 1
+                                        :type ("Archive" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1603 1620]))                                  
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1582 1802])
+                            ("serialize" function
+                               (:typemodifiers ("static")
+                                :arguments 
+                                  ( ("value" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("T" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1828 1843])
+                                    ("archive" variable
+                                       (:pointer 1
+                                        :type ("Archive" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1844 1861]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1806 1938]))                          )
+                        (reparse-symbol namespacesubparts) [1527 1941])
+                    (">>" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("Archive" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("in" variable
+                               (:reference 1
+                                :type ("Archive" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1985 1997])
+                            ("out" variable
+                               (:reference 1
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1998 2005]))                          
+                        :operator-flag t)
+                        (reparse-symbol namespacesubparts) [1943 2075])
+                    ("<<" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("Archive" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("out" variable
+                               (:reference 1
+                                :type ("Archive" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2119 2132])
+                            ("in" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2133 2145]))                          
+                        :operator-flag t)
+                        (reparse-symbol namespacesubparts) [2077 2213])
+                    ("Serializer" type
+                       (:type "class"
+                        :superclasses 
+                          ( ("BitSerializer" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :template-specifier 
+                          ( ("uint8_t" type nil nil nil))                          )
+                        (reparse-symbol namespacesubparts) [2215 2288])
+                    ("Serializer" type
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type "class"
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [2348 2355])
+                            ("deserialize" function
+                               (:typemodifiers ("static")
+                                :arguments 
+                                  ( ("archive" variable
+                                       (:pointer 1
+                                        :type ("Archive" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2392 2409]))                                  
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [2358 2687])
+                            ("serialize" function
+                               (:typemodifiers ("static")
+                                :arguments 
+                                  ( ("distances" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("T" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [2776 2808])
+                                    ("archive" variable
+                                       (:pointer 1
+                                        :type ("Archive" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2809 2826]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2754 3070]))                          
+                        :template-specifier 
+                          ( ("std::vector" type (:template-specifier 
+                              ( ("T" type nil nil nil))                              ) nil nil))                          )
+                        (reparse-symbol namespacesubparts) [2290 3073])
+                    ("Serializer" type
+                       (:type "class"
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [3117 3124])
+                            ("deserialize" function
+                               (:typemodifiers ("static")
+                                :arguments 
+                                  ( ("archive" variable
+                                       (:pointer 1
+                                        :type ("Archive" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3155 3172]))                                  
+                                :type ("uint16_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3127 3379])
+                            ("serialize" function
+                               (:typemodifiers ("static")
+                                :arguments 
+                                  ( ("itemId" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("uint16_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3405 3428])
+                                    ("archive" variable
+                                       (:pointer 1
+                                        :type ("Archive" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3429 3446]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [3383 3555]))                          
+                        :template-specifier 
+                          ( ("uint16_t" type nil nil nil))                          )
+                        (reparse-symbol namespacesubparts) [3075 3558])
+                    ("Serializer" type
+                       (:type "class"
+                        :superclasses 
+                          ( ("BitSerializer" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :template-specifier 
+                          ( ("float" type nil nil nil))                          )
+                        (reparse-symbol namespacesubparts) [3560 3629])
+                    ("Serializer" type
+                       (:type "class"
+                        :superclasses 
+                          ( ("BitSerializer" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :template-specifier 
+                          ( ("double" type nil nil nil))                          )
+                        (reparse-symbol namespacesubparts) [3631 3702])
+                    ("Serializer" type
+                       (:type "class"
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [3745 3752])
+                            ("deserialize" function
+                               (:typemodifiers ("static")
+                                :arguments 
+                                  ( ("archive" variable
+                                       (:pointer 1
+                                        :type ("Archive" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3782 3799]))                                  
+                                :type ("int64_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3755 4025])
+                            ("serialize" function
+                               (:typemodifiers ("static")
+                                :arguments 
+                                  ( ("itemId" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("int64_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4051 4073])
+                                    ("archive" variable
+                                       (:pointer 1
+                                        :type ("Archive" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4074 4091]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [4029 4199]))                          
+                        :template-specifier 
+                          ( ("int32_t" type nil nil nil))                          )
+                        (reparse-symbol namespacesubparts) [3704 4202])
+                    ("Serializer" type
+                       (:type "class"
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [4245 4252])
+                            ("deserialize" function
+                               (:typemodifiers ("static")
+                                :arguments 
+                                  ( ("archive" variable
+                                       (:pointer 1
+                                        :type ("Archive" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4282 4299]))                                  
+                                :type ("int64_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4255 4525])
+                            ("serialize" function
+                               (:typemodifiers ("static")
+                                :arguments 
+                                  ( ("itemId" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("int64_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4551 4573])
+                                    ("archive" variable
+                                       (:pointer 1
+                                        :type ("Archive" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4574 4591]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [4529 4699]))                          
+                        :template-specifier 
+                          ( ("int64_t" type nil nil nil))                          )
+                        (reparse-symbol namespacesubparts) [4204 4702])
+                    ("Serializer" type
+                       (:type "class"
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [4746 4753])
+                            ("deserialize" function
+                               (:typemodifiers ("static")
+                                :arguments 
+                                  ( ("archive" variable
+                                       (:pointer 1
+                                        :type ("Archive" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4784 4801]))                                  
+                                :type ("uint64_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4756 5008])
+                            ("serialize" function
+                               (:typemodifiers ("static")
+                                :arguments 
+                                  ( ("itemId" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5034 5057])
+                                    ("archive" variable
+                                       (:pointer 1
+                                        :type ("Archive" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5058 5075]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [5012 5184]))                          
+                        :template-specifier 
+                          ( ("uint64_t" type nil nil nil))                          )
+                        (reparse-symbol namespacesubparts) [4704 5187])
+                    ("Serializer" type
+                       (:type "class"
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [5234 5241])
+                            ("deserialize" function
+                               (:typemodifiers ("static")
+                                :arguments 
+                                  ( ("archive" variable
+                                       (:pointer 1
+                                        :type ("Archive" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5275 5292]))                                  
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [5244 5477])
+                            ("serialize" function
+                               (:typemodifiers ("static")
+                                :arguments 
+                                  ( ("value" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5566 5591])
+                                    ("archive" variable
+                                       (:pointer 1
+                                        :type ("Archive" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5592 5609]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [5544 5807]))                          
+                        :template-specifier 
+                          ( ("std::string" type nil nil nil))                          )
+                        (reparse-symbol namespacesubparts) [5189 5810])
+                    ("asString" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("std::string" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("value" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5862 5877]))                          
+                        :typemodifiers ("static"))
+                        (reparse-symbol namespacesubparts) [5812 5969]))                  
+                :type "namespace")
+                nil [217 5972]))          
+      :file "Serializer.h"
+      :pointmax 6041
+      :fsize 6040
+      :lastmodtime '(23241 35544 0 0)
+      :unmatched-syntax '((semantic-list 766 . 786) (symbol 757 . 765) (CONST 751 . 756) (semantic-list 748 . 750) (symbol 741 . 748) (BOOL 736 . 740) (EXPLICIT 416 . 424) (EXPLICIT 352 . 360))
+      :lexical-table 
+        '(("INFRA_SERIALIZER_SERIALIZER_H_")
+          )
+))
+  :file "!Volumes!Transcend!smyte-db!infra!serializer!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

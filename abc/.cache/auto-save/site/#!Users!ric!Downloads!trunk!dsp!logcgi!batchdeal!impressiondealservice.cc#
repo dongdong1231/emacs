@@ -1,0 +1,96 @@
+// Copyright (c) 2016 YesDat Inc.
+// Author: Jiaxiong Xu (ric@yesdat.com)
+#include "dsp/logcgi/batchdeal/impressiondealservice.h"
+#include <string>
+#include "dsp/common/datetime_utility.h"
+#include "common/base/string/format.h"
+#include "dsp/common/base64_unique_id.h"
+
+namespace dsp {
+namespace logcgi {
+ImpressionDealService::ImpressionDealService(
+    const LoggerConfig &logger_config,
+    const OutServerConfig& out_server_config)
+    : BatchDealService(logger_config, out_server_config) {}
+
+std::string ImpressionDealService::ConstructKey(const dsp::log::DspLog &value) {
+  static std::string empty;
+  if (value.impression_size()) {
+    if (value.impression(0).bill().bill_type() !=
+      dsp::bill::BillRequest_BillType_EXPOSURE &&
+      value.impression(0).bill().bill_type() !=
+      dsp::bill::BillRequest_BillType_AGREEMENT_CPM) {
+      return empty;
+    }
+    uint32_t date = 0;
+    dsp::common::UnixtimeToGmDateTime(
+      value.impression(0).impression_time_utc(), date);
+    const auto &impression_ad_core = value.impression(0).impression_ad_core();
+    return StringFormat("%" PRIu64 "-%" PRIu64 "-%" PRIu64,
+                        impression_ad_core.advertiser_id(),
+                        impression_ad_core.campaign_id(),
+                        impression_ad_core.adgroup_id());
+      date/100);
+  } else {
+    return empty;
+  }
+}
+
+void ImpressionDealService::FillBillInfo(
+  const dsp::bill::BillResponse &response, CacheValue *v) {
+  if (v->log(0).impression(0).bill().bill_type() ==
+    dsp::bill::BillRequest_BillType_EXPOSURE) {
+    float ratio = 0;
+    if (response.pay_info().expect_bill()) {
+      ratio = response.pay_info().real_bill()/response.pay_info().expect_bill();
+    }
+    for (int32_t ix = 0; ix < v->log_size(); ix++) {
+      auto impression = v->mutable_log(ix)->mutable_impression(0);
+      auto bill_info = impression->mutable_bill()->mutable_bill_info();
+      bill_info->set_real_cost_micros(bill_info->expect_cost_micros() * ratio);
+    }
+  }
+}
+
+int32_t ImpressionDealService::ConstructBillRequest(const std::string *key,
+  const CacheValue *value,
+  dsp::bill::BillRequest *request) {
+  if (value->log_size() > 0) {
+    request->set_version(1);
+    request->set_bill_type(value->log(0).impression(0).bill().bill_type());
+    auto bill_data = request->mutable_bill_data();
+    *bill_data->mutable_ad_info() =
+        value->log(0).impression(0).impression_ad_core();
+
+    if (request->bill_type() ==
+      dsp::bill::BillRequest_BillType_EXPOSURE) {
+      auto bid_info = bill_data->mutable_bid_info();
+      int64_t expect_cost_micros = 0;
+      for (int ix = 0; ix < value->log_size(); ix++) {
+        auto bill_info = value->log(ix).impression(0).bill().bill_info();
+        expect_cost_micros += bill_info.expect_cost_micros();
+      }
+      bid_info->set_bid_price(expect_cost_micros/1000);
+      bid_info->set_bill_price(expect_cost_micros/1000);
+    } else {
+      bill_data->set_agreement_count(value->log_size());
+    }
+
+    auto click_info = bill_data->mutable_click_info();
+    static ::dsp::common::GenerateUniqueId* trace_id_generator =
+        ::dsp::common::GenerateUniqueId::Instance();
+    std::string bill_id;
+    trace_id_generator->GetUniqueId(&bill_id);
+    click_info->set_click_id(bill_id);
+    click_info->set_bid_id(bill_id);
+    click_info->set_click_time_utc(time(NULL));
+    LOG(INFO) << "request = " << request->DebugString()
+              << ", size = " << value->log_size();;
+    return 0;
+  } else {
+    return -1;
+  }
+}
+
+}  // namespace logcgi
+}  // namespace dsp

@@ -1,0 +1,533 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("ares-test.h" include nil nil [1 23])
+            ("dns-proto.h" include nil nil [24 46])
+            ("nameser.h" include nil nil [104 124])
+            ("ares_dns.h" include nil nil [125 146])
+            ("stdio.h" include (:system-flag t) nil [252 270])
+            ("stdlib.h" include (:system-flag t) nil [271 290])
+            ("functional" include (:system-flag t) nil [292 313])
+            ("sstream" include (:system-flag t) nil [314 332])
+            ("BYTE_CAST" variable (:constant-flag t) nil [418 427])
+            ("mkdir_" variable (:constant-flag t) nil [436 442])
+            ("ares" type
+               (:members 
+                  ( ("test" type
+                       (:members 
+                          ( ("verbose" variable
+                               (:default-value "false"
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [504 525])
+                            ("mock_port" variable
+                               (:default-value "5300"
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [526 547])
+                            ("both_families" variable
+                               (:constant-flag t
+                                :default-value "{AF_INET, AF_INET6}"
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("int" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol namespacesubparts) [549 608])
+                            ("ipv4_family" variable
+                               (:constant-flag t
+                                :default-value "{AF_INET}"
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("int" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol namespacesubparts) [609 656])
+                            ("ipv6_family" variable
+                               (:constant-flag t
+                                :default-value "{AF_INET6}"
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("int" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol namespacesubparts) [657 705])
+                            ("both_families_both_modes" variable
+                               (:constant-flag t
+                                :default-value "{
+  std::make_pair<int, bool>(AF_INET, false),
+  std::make_pair<int, bool>(AF_INET, true),
+  std::make_pair<int, bool>(AF_INET6, false),
+  std::make_pair<int, bool>(AF_INET6, true)
+}"
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("std::pair" type (:template-specifier 
+                                            ( ("int" type nil nil nil)
+                                              ("bool" type nil nil nil))                                            ) nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol namespacesubparts) [707 957])
+                            ("ipv4_family_both_modes" variable
+                               (:constant-flag t
+                                :default-value "{
+  std::make_pair<int, bool>(AF_INET, false),
+  std::make_pair<int, bool>(AF_INET, true)
+}"
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("std::pair" type (:template-specifier 
+                                            ( ("int" type nil nil nil)
+                                              ("bool" type nil nil nil))                                            ) nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol namespacesubparts) [958 1115])
+                            ("ipv6_family_both_modes" variable
+                               (:constant-flag t
+                                :default-value "{
+  std::make_pair<int, bool>(AF_INET6, false),
+  std::make_pair<int, bool>(AF_INET6, true)
+}"
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("std::pair" type (:template-specifier 
+                                            ( ("int" type nil nil nil)
+                                              ("bool" type nil nil nil))                                            ) nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol namespacesubparts) [1116 1275])
+                            ("families" variable
+                               (:default-value "both_families"
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("int" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol namespacesubparts) [1313 1355])
+                            ("families_modes" variable
+                               (:default-value "both_families_both_modes"
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("std::pair" type (:template-specifier 
+                                            ( ("int" type nil nil nil)
+                                              ("bool" type nil nil nil))                                            ) nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol namespacesubparts) [1356 1432])
+                            ("LibraryTest::fails_" variable
+                               (:default-value "0"
+                                :type "unsigned long long")
+                                (reparse-symbol namespacesubparts) [1434 1477])
+                            ("LibraryTest::size_fails_" variable (:type ("std::map" type
+                                 (:template-specifier 
+                                    ( ("size_t" type nil nil nil)
+                                      ("int" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol namespacesubparts) [1478 1525])
+                            ("ProcessWork" function
+                               (:arguments 
+                                  ( ("channel" variable (:type ("ares_channel" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1544 1565])
+                                    ("" variable (:type ("std::function" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1583 1597])
+                                    ("" variable (:type ("std::set" type
+                                         (:template-specifier 
+                                            ( ("int" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol arg-sub-list) [1597 1612])
+                                    ("" variable (:type ("get_extrafds" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1614 1627])
+                                    ("" variable (:type ("std::function" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1645 1659])
+                                    ("" variable (:type "void") (reparse-symbol arg-sub-list) [1659 1668])
+                                    ("" variable (:type ("process_extra" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1670 1684]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [1527 2791])
+                            ("SetAllocFail" function
+                               (:parent "LibraryTest"
+                                :arguments 
+                                  ( ("nth" variable (:type "int") (reparse-symbol arg-sub-list) [2834 2842]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [2803 2941])
+                            ("SetAllocSizeFail" function
+                               (:parent "LibraryTest"
+                                :arguments 
+                                  ( ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2988 3000]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [2953 3027])
+                            ("ClearFails" function
+                               (:parent "LibraryTest"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [3039 3110])
+                            ("ShouldAllocFail" function
+                               (:parent "LibraryTest"
+                                :arguments 
+                                  ( ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3157 3169]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [3123 3312])
+                            ("amalloc" function
+                               (:pointer 1
+                                :parent "LibraryTest"
+                                :arguments 
+                                  ( ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3351 3363]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [3324 3543])
+                            ("arealloc" function
+                               (:pointer 1
+                                :parent "LibraryTest"
+                                :arguments 
+                                  ( ("ptr" variable
+                                       (:pointer 1
+                                        :type "void")
+                                        (reparse-symbol arg-sub-list) [3583 3593])
+                                    ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3594 3606]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [3555 3808])
+                            ("afree" function
+                               (:parent "LibraryTest"
+                                :arguments 
+                                  ( ("ptr" variable
+                                       (:pointer 1
+                                        :type "void")
+                                        (reparse-symbol arg-sub-list) [3844 3854]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [3820 3871])
+                            ("NoExtraFDs" function (:type ("std::set" type
+                                 (:template-specifier 
+                                    ( ("int" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol namespacesubparts) [3873 3929])
+                            ("Process" function
+                               (:parent "DefaultChannelTest"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [3931 4015])
+                            ("Process" function
+                               (:parent "DefaultChannelModeTest"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [4017 4105])
+                            ("MockServer" function
+                               (:constructor-flag t
+                                :parent "MockServer"
+                                :arguments 
+                                  ( ("family" variable (:type "int") (reparse-symbol arg-sub-list) [4130 4141])
+                                    ("port" variable (:type "int") (reparse-symbol arg-sub-list) [4142 4151])
+                                    ("tcpport" variable (:type "int") (reparse-symbol arg-sub-list) [4152 4164]))                                  
+                                :type ("MockServer" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [4107 6352])
+                            ("MockServer" function
+                               (:destructor-flag t
+                                :parent "MockServer"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [6354 6467])
+                            ("ProcessFD" function
+                               (:parent "MockServer"
+                                :arguments 
+                                  ( ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [6496 6503]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [6469 9437])
+                            ("fds" function
+                               (:methodconst-flag t
+                                :parent "MockServer"
+                                :type ("std::set" type
+                                     (:template-specifier 
+                                        ( ("int" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol namespacesubparts) [9439 9582])
+                            ("ProcessRequest" function
+                               (:parent "MockServer"
+                                :arguments 
+                                  ( ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [9616 9623])
+                                    ("addr" variable
+                                       (:pointer 1
+                                        :type ("sockaddr_storage" type
+                                             (:prototype t
+                                              :type "struct")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [9624 9654])
+                                    ("addrlen" variable (:type "int") (reparse-symbol arg-sub-list) [9655 9667])
+                                    ("qid" variable (:type "int") (reparse-symbol arg-sub-list) [9700 9708])
+                                    ("name" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [9709 9733])
+                                    ("rrtype" variable (:type "int") (reparse-symbol arg-sub-list) [9734 9745]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [9584 10948])
+                            ("BuildServers" function
+                               (:parent "MockChannelOptsTest"
+                                :arguments 
+                                  ( ("count" variable (:type "int") (reparse-symbol arg-sub-list) [11031 11041])
+                                    ("family" variable (:type "int") (reparse-symbol arg-sub-list) [11042 11053])
+                                    ("base_port" variable (:type "int") (reparse-symbol arg-sub-list) [11054 11068]))                                  
+                                :type ("MockChannelOptsTest::NiceMockServers" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [10960 11311])
+                            ("MockChannelOptsTest" function
+                               (:constructor-flag t
+                                :parent "MockChannelOptsTest"
+                                :arguments 
+                                  ( ("count" variable (:type "int") (reparse-symbol arg-sub-list) [11354 11364])
+                                    ("family" variable (:type "int") (reparse-symbol arg-sub-list) [11406 11417])
+                                    ("force_tcp" variable (:type "bool") (reparse-symbol arg-sub-list) [11459 11474])
+                                    ("givenopts" variable
+                                       (:pointer 1
+                                        :type ("ares_options" type
+                                             (:prototype t
+                                              :type "struct")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [11516 11547])
+                                    ("optmask" variable (:type "int") (reparse-symbol arg-sub-list) [11589 11601]))                                  
+                                :type ("MockChannelOptsTest" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [11313 13988])
+                            ("MockChannelOptsTest" function
+                               (:destructor-flag t
+                                :parent "MockChannelOptsTest"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [13990 14109])
+                            ("fds" function
+                               (:methodconst-flag t
+                                :parent "MockChannelOptsTest"
+                                :type ("std::set" type
+                                     (:template-specifier 
+                                        ( ("int" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol namespacesubparts) [14111 14337])
+                            ("ProcessFD" function
+                               (:parent "MockChannelOptsTest"
+                                :arguments 
+                                  ( ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [14375 14382]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [14339 14451])
+                            ("Process" function
+                               (:parent "MockChannelOptsTest"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [14453 14680])
+                            ("<<" function
+                               (:operator-flag t
+                                :arguments 
+                                  ( ("os" variable
+                                       (:reference 1
+                                        :type ("std::ostream" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [14707 14724])
+                                    ("result" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("HostResult" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [14725 14750]))                                  
+                                :type ("std::ostream" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [14682 14921])
+                            ("HostEnt" function
+                               (:constructor-flag t
+                                :parent "HostEnt"
+                                :arguments 
+                                  ( ("hostent" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("hostent" type
+                                             (:prototype t
+                                              :type "struct")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [14940 14970]))                                  
+                                :type ("HostEnt" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [14923 15494])
+                            ("<<" function
+                               (:operator-flag t
+                                :arguments 
+                                  ( ("os" variable
+                                       (:reference 1
+                                        :type ("std::ostream" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [15521 15538])
+                                    ("host" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("HostEnt" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [15539 15559]))                                  
+                                :type ("std::ostream" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [15496 15935])
+                            ("HostCallback" function
+                               (:arguments 
+                                  ( ("data" variable
+                                       (:pointer 1
+                                        :type "void")
+                                        (reparse-symbol arg-sub-list) [15955 15966])
+                                    ("status" variable (:type "int") (reparse-symbol arg-sub-list) [15967 15978])
+                                    ("timeouts" variable (:type "int") (reparse-symbol arg-sub-list) [15979 15992])
+                                    ("hostent" variable
+                                       (:pointer 1
+                                        :type ("hostent" type
+                                             (:prototype t
+                                              :type "struct")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [16011 16035]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [15937 16323])
+                            ("<<" function
+                               (:operator-flag t
+                                :arguments 
+                                  ( ("os" variable
+                                       (:reference 1
+                                        :type ("std::ostream" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [16350 16367])
+                                    ("result" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("SearchResult" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [16368 16395]))                                  
+                                :type ("std::ostream" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [16325 16582])
+                            ("SearchCallback" function
+                               (:arguments 
+                                  ( ("data" variable
+                                       (:pointer 1
+                                        :type "void")
+                                        (reparse-symbol arg-sub-list) [16604 16615])
+                                    ("status" variable (:type "int") (reparse-symbol arg-sub-list) [16616 16627])
+                                    ("timeouts" variable (:type "int") (reparse-symbol arg-sub-list) [16628 16641])
+                                    ("abuf" variable
+                                       (:pointer 1
+                                        :type "unsigned char")
+                                        (reparse-symbol arg-sub-list) [16662 16682])
+                                    ("alen" variable (:type "int") (reparse-symbol arg-sub-list) [16683 16692]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [16584 16993])
+                            ("<<" function
+                               (:operator-flag t
+                                :arguments 
+                                  ( ("os" variable
+                                       (:reference 1
+                                        :type ("std::ostream" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [17020 17037])
+                                    ("result" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("NameInfoResult" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [17038 17067]))                                  
+                                :type ("std::ostream" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [16995 17264])
+                            ("NameInfoCallback" function
+                               (:arguments 
+                                  ( ("data" variable
+                                       (:pointer 1
+                                        :type "void")
+                                        (reparse-symbol arg-sub-list) [17288 17299])
+                                    ("status" variable (:type "int") (reparse-symbol arg-sub-list) [17300 17311])
+                                    ("timeouts" variable (:type "int") (reparse-symbol arg-sub-list) [17312 17325])
+                                    ("node" variable
+                                       (:pointer 1
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [17348 17359])
+                                    ("service" variable
+                                       (:pointer 1
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [17360 17374]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [17266 17745])
+                            ("GetNameServers" function
+                               (:arguments 
+                                  ( ("channel" variable (:type ("ares_channel" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [17787 17808]))                                  
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("std::string" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol namespacesubparts) [17747 18673])
+                            ("TransientDir" function
+                               (:constructor-flag t
+                                :parent "TransientDir"
+                                :arguments 
+                                  ( ("dirname" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [18702 18729]))                                  
+                                :type ("TransientDir" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [18675 18886])
+                            ("TransientDir" function
+                               (:destructor-flag t
+                                :parent "TransientDir"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [18888 18948])
+                            ("TransientFile" function
+                               (:constructor-flag t
+                                :parent "TransientFile"
+                                :arguments 
+                                  ( ("filename" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [18979 19007])
+                                    ("contents" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [19037 19065]))                                  
+                                :type ("TransientFile" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [18950 19454])
+                            ("TransientFile" function
+                               (:destructor-flag t
+                                :parent "TransientFile"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [19456 19520])
+                            ("TempNam" function
+                               (:arguments 
+                                  ( ("dir" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [19542 19558])
+                                    ("prefix" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [19559 19578]))                                  
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [19522 19669])
+                            ("TempFile" function
+                               (:constructor-flag t
+                                :parent "TempFile"
+                                :arguments 
+                                  ( ("contents" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [19690 19718]))                                  
+                                :type ("TempFile" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [19671 19777])
+                            ("VirtualizeIO" function
+                               (:constructor-flag t
+                                :parent "VirtualizeIO"
+                                :arguments 
+                                  ( ("c" variable (:type ("ares_channel" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [19806 19821]))                                  
+                                :type ("VirtualizeIO" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [19779 19903])
+                            ("VirtualizeIO" function
+                               (:destructor-flag t
+                                :parent "VirtualizeIO"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [19905 19983]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [486 19986]))                  
+                :type "namespace")
+                nil [469 20007]))          
+      :file "ares-test.cc"
+      :pointmax 20027
+      :fsize 20026
+      :lastmodtime '(23159 47772 0 0)
+      :unmatched-syntax '((punctuation 1668 . 1669) (semantic-list 1663 . 1668) (punctuation 1658 . 1659) (punctuation 1612 . 1613) (semantic-list 1610 . 1612) (punctuation 1596 . 1597))
+      :lexical-table 
+        '(("BYTE_CAST")
+          ("mkdir_" (spp-arg-list ("d" "p") 442 . 448) . ((symbol "mkdir" 449 . 454) (semantic-list "(d, p)" 454 . 460)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :file "ares-test.h"
+      :fsize 13886
+      :lastmodtime '(23159 47772 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "dns-proto.h"
+      :fsize 8018
+      :lastmodtime '(23159 47772 0 0)))
+  :file "!Volumes!Transcend!c-ares!test!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,234 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("COMMON_BASE_CLASS_REGISTER_H_" variable (:constant-flag t) nil [208 237])
+            ("assert.h" include (:system-flag t) nil [3011 3030])
+            ("stdio.h" include (:system-flag t) nil [3031 3049])
+            ("stdlib.h" include (:system-flag t) nil [3050 3069])
+            ("map" include (:system-flag t) nil [3071 3085])
+            ("string" include (:system-flag t) nil [3086 3103])
+            ("vector" include (:system-flag t) nil [3104 3121])
+            ("common/base/preprocess.h" include nil nil [3123 3158])
+            ("ClassRegistry" type
+               (:template 
+                  ( ("BaseClassName" type (:type "class") nil nil))                  
+                :type "class"
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [3372 3379])
+                    ("Creator" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :function-pointer t
+                        :type ("BaseClassName" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3390 3418])
+                    ("Singleton" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :function-pointer t
+                        :type ("BaseClassName" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3429 3459])
+                    ("private" label nil (reparse-symbol classsubparts) [3462 3470])
+                    ("ClassInfo" type
+                       (:members 
+                          ( ("creator" variable (:type ("Creator" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3496 3512])
+                            ("singleton" variable (:type ("Singleton" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3517 3537]))                          
+                        :type "struct")
+                        (reparse-symbol classsubparts) [3473 3542])
+                    ("ClassMap" type
+                       (:typedef ("std::map" type
+                             (:template-specifier 
+                                ( ("std::string" type nil nil nil)
+                                  ("ClassInfo" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [3545 3595])
+                    ("public" label nil (reparse-symbol classsubparts) [3598 3605])
+                    ("ClassRegistry" function
+                       (:constructor-flag t
+                        :type ("ClassRegistry" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3608 3626])
+                    ("ClassRegistry" function
+                       (:destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [3629 3648])
+                    ("AddCreator" function
+                       (:arguments 
+                          ( ("entry_name" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3668 3698])
+                            ("creator" variable (:type ("Creator" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3717 3733])
+                            ("singleton" variable
+                               (:default-value "NULL"
+                                :type ("Singleton" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3752 3778]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3652 4442])
+                    ("CreatorCount" function
+                       (:methodconst-flag t
+                        :type ("size_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4446 4514])
+                    ("CreatorName" function
+                       (:methodconst-flag t
+                        :constant-flag t
+                        :arguments 
+                          ( ("i" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4549 4558]))                          
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4518 4641])
+                    ("CreateObject" function
+                       (:methodconst-flag t
+                        :pointer 1
+                        :arguments 
+                          ( ("entry_name" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4673 4703]))                          
+                        :type ("BaseClassName" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4645 4890])
+                    ("GetSingleton" function
+                       (:methodconst-flag t
+                        :pointer 1
+                        :arguments 
+                          ( ("entry_name" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4922 4952]))                          
+                        :type ("BaseClassName" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4894 5173])
+                    ("private" label nil (reparse-symbol classsubparts) [5176 5184])
+                    ("m_creator_names" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("std::string" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [5187 5228])
+                    ("m_creator_map" variable (:type ("ClassMap" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5231 5254]))                  )
+                nil [3315 5257])
+            ("GetRegistry" function (:type "int") nil [5404 5506])
+            ("ClassRegistryTagBase" type
+               (:template 
+                  ( ("BaseClassName" type (:type "class") nil nil))                  
+                :type "struct"
+                :members 
+                  ( ("BaseClass" type
+                       (:typedef ("BaseClassName" type (:type "class") nil nil)
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [5709 5741]))                  )
+                nil [5643 5744])
+            ("ClassRegistry_NewObject" function
+               (:template 
+                  ( ("BaseClassName" type (:type "class") nil nil)
+                    ("SubClassName" type (:type "class") nil nil))                  
+                :type ("BaseClassName" type (:type "class") nil nil)
+                :pointer 1)
+                nil [5809 5939])
+            ("ClassRegistry_GetSingleton" function
+               (:template 
+                  ( ("SubClassName" type (:type "class") nil nil)
+                    ("RegistryTag" type (:type "class") nil nil))                  
+                :type ("RegistryTag::BaseClass" type (:type "class") nil nil)
+                :typemodifiers ("typename")
+                :pointer 1)
+                nil [5994 6168])
+            ("ClassRegisterer" type
+               (:template 
+                  ( ("RegistryTag" type (:type "class") nil nil))                  
+                :type "class"
+                :members 
+                  ( ("BaseClassName" type
+                       (:typedef ("RegistryTag::BaseClass" type (:type "class") nil nil)
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [6282 6336])
+                    ("public" label nil (reparse-symbol classsubparts) [6338 6345])
+                    ("ClassRegisterer" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("entry_name" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6371 6401])
+                            ("" variable
+                               (:typemodifiers ("typename")
+                                :type ("ClassRegistry" type
+                                     (:template-specifier 
+                                        ( ("BaseClassName" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [6408 6446])
+                            ("creator" variable (:type ("Creator" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6447 6463])
+                            ("" variable
+                               (:typemodifiers ("typename")
+                                :type ("ClassRegistry" type
+                                     (:template-specifier 
+                                        ( ("BaseClassName" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [6470 6508])
+                            ("singleton" variable
+                               (:default-value "NULL"
+                                :type ("Singleton" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6509 6535]))                          
+                        :type ("ClassRegisterer" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [6348 6701])
+                    ("ClassRegisterer" function
+                       (:destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [6704 6725]))                  )
+                nil [6224 6728])
+            ("CLASS_REGISTER_DEFINE_REGISTRY" variable (:constant-flag t) nil [7009 7039])
+            ("CLASS_REGISTER_OBJECT_CREATOR" variable (:constant-flag t) nil [7716 7745])
+            ("CLASS_REGISTER_OBJECT_CREATOR_WITH_SINGLETON" variable (:constant-flag t) nil [8172 8216])
+            ("CLASS_REGISTER_CREATE_OBJECT" variable (:constant-flag t) nil [8904 8932])
+            ("CLASS_REGISTER_GET_SINGLETON" variable (:constant-flag t) nil [9109 9137])
+            ("CLASS_REGISTER_CREATOR_COUNT" variable (:constant-flag t) nil [9327 9355])
+            ("CLASS_REGISTER_CREATOR_NAME" variable (:constant-flag t) nil [9491 9518]))          
+      :file "class_register.h"
+      :pointmax 9642
+      :fsize 9641
+      :lastmodtime '(22878 19784 0 0)
+      :unmatched-syntax '((punctuation 6508 . 6509) (punctuation 6507 . 6508) (punctuation 6446 . 6447) (punctuation 6445 . 6446) (punctuation 5402 . 5403) (punctuation 5401 . 5402) (symbol 5392 . 5401) (punctuation 5391 . 5392) (punctuation 5390 . 5391) (symbol 5379 . 5390) (TYPENAME 5370 . 5378) (punctuation 5369 . 5370) (symbol 5356 . 5369) (punctuation 5354 . 5355) (symbol 5343 . 5354) (TYPENAME 5334 . 5342) (punctuation 5333 . 5334) (TEMPLATE 5324 . 5332) (TYPEDEF 3421 . 3428) (TYPEDEF 3382 . 3389))
+      :lexical-table 
+        '(("CLASS_REGISTER_CREATE_OBJECT" (spp-arg-list ("register_name" "entry_name_as_string") 8932 . 8969) . 
+              ((symbol "GetRegistry" 8976 . 8987) (punctuation "<" 8987 . 8988) (spp-symbol-merge ((symbol "register_name" 8988 . 9001) (symbol "RegistryTag" 9003 . 9014)) 8988 . 9014) (punctuation ">" 9014 . 9015) (semantic-list "()" 9015 . 9017) (punctuation "." 9017 . 9018) (symbol "CreateObject" 9018 . 9030) (semantic-list "(entry_name_as_string)" 9030 . 9052)))
+          ("CLASS_REGISTER_GET_SINGLETON" (spp-arg-list ("register_name" "entry_name_as_string") 9137 . 9174) . 
+              ((symbol "GetRegistry" 9181 . 9192) (punctuation "<" 9192 . 9193) (spp-symbol-merge ((symbol "register_name" 9193 . 9206) (symbol "RegistryTag" 9208 . 9219)) 9193 . 9219) (punctuation ">" 9219 . 9220) (semantic-list "()" 9220 . 9222) (punctuation "." 9222 . 9223) (symbol "GetSingleton" 9223 . 9235) (semantic-list "(entry_name_as_string)" 9235 . 9257)))
+          ("CLASS_REGISTER_OBJECT_CREATOR" (spp-arg-list ("register_name" "\\
+" "base_class_name" "\\
+" "entry_name_as_string" "\\
+" "class_name") 7745 . 7931) . 
+              ((STATIC "static" 7938 . 7944) (symbol "ClassRegisterer" 7945 . 7960) (punctuation "<" 7960 . 7961) (spp-symbol-merge ((symbol "register_name" 7961 . 7974) (symbol "RegistryTag" 7976 . 7987)) 7961 . 7987) (punctuation ">" 7987 . 7988) (symbol "PP_JOIN" 7999 . 8006) (semantic-list "(g_object_creator_register_##class_name, __LINE__)" 8006 . 8056) (semantic-list "( \\
+            entry_name_as_string, \\
+            &ClassRegistry_NewObject<base_class_name, class_name>)" 8056 . 8162)))
+          ("CLASS_REGISTER_OBJECT_CREATOR_WITH_SINGLETON" (spp-arg-list ("register_name" "\\
+" "base_class_name" "\\
+" "entry_name_as_string" "\\
+" "class_name") 8216 . 8447) . 
+              ((STATIC "static" 8454 . 8460) (symbol "ClassRegisterer" 8461 . 8476) (punctuation "<" 8476 . 8477) (spp-symbol-merge ((symbol "register_name" 8477 . 8490) (symbol "RegistryTag" 8492 . 8503)) 8477 . 8503) (punctuation ">" 8503 . 8504) (symbol "PP_JOIN" 8515 . 8522) (semantic-list "(g_object_creator_register_##class_name, __LINE__)" 8522 . 8572) (semantic-list "( \\
+            entry_name_as_string, \\
+            &ClassRegistry_NewObject<base_class_name, class_name>, \\
+            &ClassRegistry_GetSingleton<class_name, register_name##RegistryTag>)" 8572 . 8761)))
+          ("COMMON_BASE_CLASS_REGISTER_H_")
+          ("CLASS_REGISTER_DEFINE_REGISTRY" (spp-arg-list ("register_name" "base_class_name") 7039 . 7071) . 
+              ((STRUCT "struct" 7078 . 7084) (spp-symbol-merge ((symbol "register_name" 7085 . 7098) (symbol "RegistryTag" 7100 . 7111)) 7085 . 7111) (punctuation ":" 7111 . 7112) (PUBLIC "public" 7123 . 7129) (punctuation ":" 7130 . 7131) (punctuation ":" 7131 . 7132) (symbol "ClassRegistryTagBase" 7132 . 7152) (punctuation "<" 7152 . 7153) (symbol "base_class_name" 7153 . 7168) (punctuation ">" 7168 . 7169) (semantic-list "{}" 7170 . 7172) (punctuation ";" 7172 . 7173)))
+          ("CLASS_REGISTER_CREATOR_COUNT" (spp-arg-list ("register_name") 9355 . 9370) . 
+              ((symbol "GetRegistry" 9377 . 9388) (punctuation "<" 9388 . 9389) (spp-symbol-merge ((symbol "register_name" 9389 . 9402) (symbol "RegistryTag" 9404 . 9415)) 9389 . 9415) (punctuation ">" 9415 . 9416) (semantic-list "()" 9416 . 9418) (punctuation "." 9418 . 9419) (symbol "CreatorCount" 9419 . 9431) (semantic-list "()" 9431 . 9433)))
+          ("CLASS_REGISTER_CREATOR_NAME" (spp-arg-list ("register_name" "i") 9518 . 9536) . 
+              ((symbol "GetRegistry" 9543 . 9554) (punctuation "<" 9554 . 9555) (spp-symbol-merge ((symbol "register_name" 9555 . 9568) (symbol "RegistryTag" 9570 . 9581)) 9555 . 9581) (punctuation ">" 9581 . 9582) (semantic-list "()" 9582 . 9584) (punctuation "." 9584 . 9585) (symbol "CreatorName" 9585 . 9596) (semantic-list "(i)" 9596 . 9599)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :file "preprocess.h"
+      :fsize 650
+      :lastmodtime '(22878 19784 0 0)))
+  :file "!Users!ric!Desktop!trunk!common!base!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

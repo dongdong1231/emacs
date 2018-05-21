@@ -1,0 +1,586 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("stdio.h" include (:system-flag t) nil [621 639])
+            ("stdlib.h" include (:system-flag t) nil [640 659])
+            ("string.h" include (:system-flag t) nil [660 679])
+            ("math.h" include (:system-flag t) nil [680 697])
+            ("pthread.h" include (:system-flag t) nil [698 718])
+            ("MAX_STRING" variable (:constant-flag t) nil [728 738])
+            ("EXP_TABLE_SIZE" variable (:constant-flag t) nil [751 765])
+            ("MAX_EXP" variable (:constant-flag t) nil [779 786])
+            ("MAX_SENTENCE_LENGTH" variable (:constant-flag t) nil [797 816])
+            ("MAX_CODE_LENGTH" variable (:constant-flag t) nil [830 845])
+            ("vocab_hash_size" variable
+               (:constant-flag t
+                :default-value "30000000"
+                :type "int")
+                nil [850 887])
+            ("real" type
+               (:typedef ("float")
+                :type "typedef")
+                nil [940 959])
+            ("vocab_word" type
+               (:members 
+                  ( ("cn" variable (:type "long long") (reparse-symbol classsubparts) [1032 1045])
+                    ("point" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol classsubparts) [1048 1059])
+                    ("word" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [1062 1089])
+                    ("code" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [1062 1089])
+                    ("codelen" variable (:type "char") (reparse-symbol classsubparts) [1062 1089]))                  
+                :type "struct")
+                nil [1010 1092])
+            ("train_file" variable
+               (:dereference 1
+                :type "char")
+                nil [1094 1147])
+            ("output_file" variable
+               (:dereference 1
+                :type "char")
+                nil [1094 1147])
+            ("save_vocab_file" variable
+               (:dereference 1
+                :type "char")
+                nil [1148 1210])
+            ("read_vocab_file" variable
+               (:dereference 1
+                :type "char")
+                nil [1148 1210])
+            ("vocab" variable
+               (:pointer 1
+                :type ("vocab_word" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [1211 1236])
+            ("binary" variable
+               (:default-value "0"
+                :type "int")
+                nil [1237 1339])
+            ("cbow" variable
+               (:default-value "1"
+                :type "int")
+                nil [1237 1339])
+            ("debug_mode" variable
+               (:default-value "2"
+                :type "int")
+                nil [1237 1339])
+            ("window" variable
+               (:default-value "5"
+                :type "int")
+                nil [1237 1339])
+            ("min_count" variable
+               (:default-value "5"
+                :type "int")
+                nil [1237 1339])
+            ("num_threads" variable
+               (:default-value "12"
+                :type "int")
+                nil [1237 1339])
+            ("min_reduce" variable
+               (:default-value "1"
+                :type "int")
+                nil [1237 1339])
+            ("vocab_hash" variable
+               (:pointer 1
+                :type "int")
+                nil [1340 1356])
+            ("vocab_max_size" variable
+               (:default-value "1000"
+                :type "long long")
+                nil [1357 1424])
+            ("vocab_size" variable
+               (:default-value "0"
+                :type "long long")
+                nil [1357 1424])
+            ("layer1_size" variable
+               (:default-value "100"
+                :type "long long")
+                nil [1357 1424])
+            ("train_words" variable
+               (:default-value "0"
+                :type "long long")
+                nil [1425 1512])
+            ("word_count_actual" variable
+               (:default-value "0"
+                :type "long long")
+                nil [1425 1512])
+            ("iter" variable
+               (:default-value "5"
+                :type "long long")
+                nil [1425 1512])
+            ("file_size" variable
+               (:default-value "0"
+                :type "long long")
+                nil [1425 1512])
+            ("classes" variable
+               (:default-value "0"
+                :type "long long")
+                nil [1425 1512])
+            ("alpha" variable
+               (:default-value "0.025"
+                :type ("real" type (:type "class") nil nil))
+                nil [1513 1563])
+            ("starting_alpha" variable (:type ("real" type (:type "class") nil nil)) nil [1513 1563])
+            ("sample" variable
+               (:default-value "1e-3"
+                :type ("real" type (:type "class") nil nil))
+                nil [1513 1563])
+            ("syn0" variable
+               (:pointer 1
+                :type ("real" type (:type "class") nil nil))
+                nil [1564 1603])
+            ("syn1" variable
+               (:pointer 1
+                :type ("real" type (:type "class") nil nil))
+                nil [1564 1603])
+            ("syn1neg" variable
+               (:pointer 1
+                :type ("real" type (:type "class") nil nil))
+                nil [1564 1603])
+            ("expTable" variable
+               (:pointer 1
+                :type ("real" type (:type "class") nil nil))
+                nil [1564 1603])
+            ("start" variable (:type ("clock_t" type (:type "class") nil nil)) nil [1604 1618])
+            ("hs" variable
+               (:default-value "0"
+                :type "int")
+                nil [1620 1645])
+            ("negative" variable
+               (:default-value "5"
+                :type "int")
+                nil [1620 1645])
+            ("table_size" variable
+               (:constant-flag t
+                :default-value "1e8"
+                :type "int")
+                nil [1646 1673])
+            ("table" variable
+               (:pointer 1
+                :type "int")
+                nil [1674 1685])
+            ("InitUnigramTable" function (:type "void") nil [1687 2187])
+            ("ReadWord" function
+               (:arguments 
+                  ( ("word" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2288 2299])
+                    ("fin" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2300 2310])
+                    ("eof" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2311 2321]))                  
+                :type "void")
+                nil [2274 2824])
+            ("GetWordHash" function
+               (:arguments 
+                  ( ("word" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2874 2885]))                  
+                :type "int")
+                nil [2858 3037])
+            ("SearchVocab" function
+               (:arguments 
+                  ( ("word" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3141 3152]))                  
+                :type "int")
+                nil [3125 3390])
+            ("ReadWordIndex" function
+               (:arguments 
+                  ( ("fin" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3466 3476])
+                    ("eof" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3477 3487]))                  
+                :type "int")
+                nil [3448 3634])
+            ("AddWordToVocab" function
+               (:arguments 
+                  ( ("word" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3688 3699]))                  
+                :type "int")
+                nil [3669 4308])
+            ("VocabCompare" function
+               (:arguments 
+                  ( ("a" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4368 4382])
+                    ("b" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4383 4397]))                  
+                :type "int")
+                nil [4351 4537])
+            ("SortVocab" function (:type "void") nil [4594 5688])
+            ("ReduceVocab" function (:type "void") nil [5746 6320])
+            ("CreateBinaryTree" function (:type "void") nil [6427 8251])
+            ("LearnVocabFromTrainFile" function (:type "void") nil [8253 9208])
+            ("SaveVocab" function (:type "void") nil [9210 9391])
+            ("ReadVocab" function (:type "void") nil [9393 10173])
+            ("InitNet" function (:type "void") nil [10175 11273])
+            ("TrainModelThread" function
+               (:pointer 1
+                :arguments 
+                  ( ("id" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [11298 11307]))                  
+                :type "void")
+                nil [11275 19035])
+            ("TrainModel" function (:type "void") nil [19037 21664])
+            ("ArgPos" function
+               (:arguments 
+                  ( ("str" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [21677 21687])
+                    ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [21688 21697])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [21698 21710]))                  
+                :type "int")
+                nil [21666 21906])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [21917 21926])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [21927 21939]))                  
+                :type "int")
+                nil [21908 26418]))          
+      :file "word2vec.c"
+      :pointmax 26419
+      :fsize 26418
+      :lastmodtime '(23188 45805 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("MAX_SENTENCE_LENGTH" . ((number "1000" 817 . 821)))
+          ("EXP_TABLE_SIZE" . ((number "1000" 766 . 770)))
+          ("MAX_CODE_LENGTH" . ((number "40" 846 . 848)))
+          ("MAX_STRING" . ((number "100" 739 . 742)))
+          ("MAX_EXP" . ((number "6" 787 . 788)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("stdio.h" include (:system-flag t) nil [621 639])
+            ("stdlib.h" include (:system-flag t) nil [640 659])
+            ("string.h" include (:system-flag t) nil [660 679])
+            ("math.h" include (:system-flag t) nil [680 697])
+            ("pthread.h" include (:system-flag t) nil [698 718])
+            ("MAX_STRING" variable (:constant-flag t) nil [728 738])
+            ("vocab_hash_size" variable
+               (:constant-flag t
+                :default-value "500000000"
+                :type "int")
+                nil [743 781])
+            ("real" type
+               (:typedef ("float")
+                :type "typedef")
+                nil [825 844])
+            ("vocab_word" type
+               (:members 
+                  ( ("cn" variable (:type "long long") (reparse-symbol classsubparts) [917 930])
+                    ("word" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [933 944]))                  
+                :type "struct")
+                nil [895 947])
+            ("train_file" variable
+               (:dereference 1
+                :type "char")
+                nil [949 1002])
+            ("output_file" variable
+               (:dereference 1
+                :type "char")
+                nil [949 1002])
+            ("vocab" variable
+               (:pointer 1
+                :type ("vocab_word" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [1003 1028])
+            ("debug_mode" variable
+               (:default-value "2"
+                :type "int")
+                nil [1029 1092])
+            ("min_count" variable
+               (:default-value "5"
+                :type "int")
+                nil [1029 1092])
+            ("vocab_hash" variable
+               (:pointer 1
+                :type "int")
+                nil [1029 1092])
+            ("min_reduce" variable
+               (:default-value "1"
+                :type "int")
+                nil [1029 1092])
+            ("vocab_max_size" variable
+               (:default-value "10000"
+                :type "long long")
+                nil [1093 1142])
+            ("vocab_size" variable
+               (:default-value "0"
+                :type "long long")
+                nil [1093 1142])
+            ("train_words" variable
+               (:default-value "0"
+                :type "long long")
+                nil [1143 1169])
+            ("threshold" variable
+               (:default-value "100"
+                :type ("real" type (:type "class") nil nil))
+                nil [1170 1191])
+            ("next_random" variable
+               (:default-value "1"
+                :type "unsigned long long")
+                nil [1193 1228])
+            ("ReadWord" function
+               (:arguments 
+                  ( ("word" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1329 1340])
+                    ("fin" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1341 1351])
+                    ("eof" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1352 1362]))                  
+                :type "void")
+                nil [1315 1912])
+            ("GetWordHash" function
+               (:arguments 
+                  ( ("word" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1962 1973]))                  
+                :type "int")
+                nil [1946 2125])
+            ("SearchVocab" function
+               (:arguments 
+                  ( ("word" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2229 2240]))                  
+                :type "int")
+                nil [2213 2478])
+            ("ReadWordIndex" function
+               (:arguments 
+                  ( ("fin" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2554 2564])
+                    ("eof" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2565 2575]))                  
+                :type "int")
+                nil [2536 2722])
+            ("AddWordToVocab" function
+               (:arguments 
+                  ( ("word" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2776 2787]))                  
+                :type "int")
+                nil [2757 3393])
+            ("VocabCompare" function
+               (:arguments 
+                  ( ("a" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3453 3467])
+                    ("b" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3468 3482]))                  
+                :type "int")
+                nil [3436 3558])
+            ("SortVocab" function (:type "void") nil [3615 4398])
+            ("ReduceVocab" function (:type "void") nil [4456 5030])
+            ("LearnVocabFromTrainFile" function (:type "void") nil [5032 6732])
+            ("TrainModel" function (:type "void") nil [6734 8592])
+            ("ArgPos" function
+               (:arguments 
+                  ( ("str" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [8605 8615])
+                    ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [8616 8625])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [8626 8638]))                  
+                :type "int")
+                nil [8594 8834])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [8845 8854])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [8855 8867]))                  
+                :type "int")
+                nil [8836 10392]))          
+      :file "word2phrase.c"
+      :pointmax 10393
+      :fsize 10392
+      :lastmodtime '(23188 45805 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("MAX_STRING" . ((number "60" 739 . 741)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("stdio.h" include (:system-flag t) nil [621 639])
+            ("string.h" include (:system-flag t) nil [640 659])
+            ("math.h" include (:system-flag t) nil [660 677])
+            ("stdlib.h" include (:system-flag t) nil [678 697])
+            ("max_size" variable
+               (:constant-flag t
+                :default-value "2000"
+                :type "long long")
+                nil [699 731])
+            ("N" variable
+               (:constant-flag t
+                :default-value "40"
+                :type "long long")
+                nil [765 788])
+            ("max_w" variable
+               (:constant-flag t
+                :default-value "50"
+                :type "long long")
+                nil [852 879])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [939 948])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [949 961]))                  
+                :type "int")
+                nil [930 4653]))          
+      :file "word-analogy.c"
+      :pointmax 4654
+      :fsize 4653
+      :lastmodtime '(23188 45805 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("stdio.h" include (:system-flag t) nil [621 639])
+            ("string.h" include (:system-flag t) nil [640 659])
+            ("math.h" include (:system-flag t) nil [660 677])
+            ("stdlib.h" include (:system-flag t) nil [678 697])
+            ("max_size" variable
+               (:constant-flag t
+                :default-value "2000"
+                :type "long long")
+                nil [699 731])
+            ("N" variable
+               (:constant-flag t
+                :default-value "40"
+                :type "long long")
+                nil [765 788])
+            ("max_w" variable
+               (:constant-flag t
+                :default-value "50"
+                :type "long long")
+                nil [852 879])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [939 948])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [949 961]))                  
+                :type "int")
+                nil [930 4546]))          
+      :file "distance.c"
+      :pointmax 4547
+      :fsize 4546
+      :lastmodtime '(23188 45805 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("stdio.h" include (:system-flag t) nil [621 639])
+            ("stdlib.h" include (:system-flag t) nil [640 659])
+            ("string.h" include (:system-flag t) nil [660 679])
+            ("math.h" include (:system-flag t) nil [680 697])
+            ("stdlib.h" include (:system-flag t) nil [698 717])
+            ("ctype.h" include (:system-flag t) nil [718 736])
+            ("max_size" variable
+               (:constant-flag t
+                :default-value "2000"
+                :type "long long")
+                nil [738 770])
+            ("N" variable
+               (:constant-flag t
+                :default-value "1"
+                :type "long long")
+                nil [804 826])
+            ("max_w" variable
+               (:constant-flag t
+                :default-value "50"
+                :type "long long")
+                nil [872 899])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [959 968])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [969 981]))                  
+                :type "int")
+                nil [950 5237]))          
+      :file "compute-accuracy.c"
+      :pointmax 5238
+      :fsize 5237
+      :lastmodtime '(23188 45805 0 0)
+      :unmatched-syntax nil))
+  :file "!Volumes!Transcend!word2vec!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

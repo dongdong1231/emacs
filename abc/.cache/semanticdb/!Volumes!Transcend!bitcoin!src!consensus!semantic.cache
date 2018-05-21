@@ -1,0 +1,918 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("BITCOIN_CONSENSUS_CONSENSUS_H" variable (:constant-flag t) nil [286 315])
+            ("stdlib.h" include (:system-flag t) nil [317 336])
+            ("stdint.h" include (:system-flag t) nil [337 356])
+            ("MAX_BLOCK_SERIALIZED_SIZE" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :default-value "4000000"
+                :type "unsigned int")
+                nil [453 515])
+            ("MAX_BLOCK_WEIGHT" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :default-value "4000000"
+                :type "unsigned int")
+                nil [590 643])
+            ("MAX_BLOCK_SIGOPS_COST" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :default-value "80000"
+                :type ("int64_t" type (:type "class") nil nil))
+                nil [734 785])
+            ("COINBASE_MATURITY" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :default-value "100"
+                :type "int")
+                nil [887 928])
+            ("WITNESS_SCALE_FACTOR" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :default-value "4"
+                :type "int")
+                nil [930 972])
+            ("MIN_TRANSACTION_WEIGHT" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :default-value "WITNESS_SCALE_FACTOR * 60"
+                :type ("size_t" type (:type "class") nil nil))
+                nil [974 1045])
+            ("MIN_SERIALIZABLE_TRANSACTION_WEIGHT" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :default-value "WITNESS_SCALE_FACTOR * 10"
+                :type ("size_t" type (:type "class") nil nil))
+                nil [1119 1203])
+            ("LOCKTIME_VERIFY_SEQUENCE" variable
+               (:default-value "(1 << 0)"
+                :type "unsigned int")
+                nil [1405 1454])
+            ("LOCKTIME_MEDIAN_TIME_PAST" variable
+               (:default-value "(1 << 1)"
+                :type "unsigned int")
+                nil [1545 1595]))          
+      :file "consensus.h"
+      :pointmax 1637
+      :fsize 1636
+      :lastmodtime '(23132 7851 0 0)
+      :unmatched-syntax '((symbol 1535 . 1544) (STATIC 1528 . 1534) (symbol 1395 . 1404) (STATIC 1388 . 1394))
+      :lexical-table 
+        '(("BITCOIN_CONSENSUS_CONSENSUS_H")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :file "params.h"
+      :fsize 2896
+      :lastmodtime '(23128 22952 0 0))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("BITCOIN_MERKLE" variable (:constant-flag t) nil [227 241])
+            ("stdint.h" include (:system-flag t) nil [243 262])
+            ("vector" include (:system-flag t) nil [263 280])
+            ("primitives/transaction.h" include (:system-flag t) nil [282 317])
+            ("primitives/block.h" include (:system-flag t) nil [318 347])
+            ("uint256.h" include (:system-flag t) nil [348 368])
+            ("ComputeMerkleRoot" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("leaves" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("uint256" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [396 431])
+                    ("mutated" variable
+                       (:pointer 1
+                        :default-value "nullptr"
+                        :type "bool")
+                        (reparse-symbol arg-sub-list) [432 455]))                  
+                :type ("uint256" type (:type "class") nil nil))
+                nil [370 457])
+            ("ComputeMerkleBranch" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("leaves" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("uint256" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [499 534])
+                    ("position" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [535 553]))                  
+                :type ("std::vector" type
+                     (:template-specifier 
+                        ( ("uint256" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [458 554])
+            ("ComputeMerkleRootFromBranch" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("leaf" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("uint256" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [591 611])
+                    ("branch" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("uint256" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [612 647])
+                    ("position" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [648 666]))                  
+                :type ("uint256" type (:type "class") nil nil))
+                nil [555 667])
+            ("BlockMerkleRoot" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("block" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CBlock" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [821 841])
+                    ("mutated" variable
+                       (:pointer 1
+                        :default-value "nullptr"
+                        :type "bool")
+                        (reparse-symbol arg-sub-list) [842 865]))                  
+                :type ("uint256" type (:type "class") nil nil))
+                nil [797 867])
+            ("BlockWitnessMerkleRoot" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("block" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CBlock" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1036 1056])
+                    ("mutated" variable
+                       (:pointer 1
+                        :default-value "nullptr"
+                        :type "bool")
+                        (reparse-symbol arg-sub-list) [1057 1080]))                  
+                :type ("uint256" type (:type "class") nil nil))
+                nil [1005 1082])
+            ("BlockMerkleBranch" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("block" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CBlock" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1284 1304])
+                    ("position" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1305 1323]))                  
+                :type ("std::vector" type
+                     (:template-specifier 
+                        ( ("uint256" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [1245 1324]))          
+      :file "merkle.h"
+      :pointmax 1333
+      :fsize 1332
+      :lastmodtime '(23128 22952 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("BITCOIN_MERKLE")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("BITCOIN_CONSENSUS_TX_VERIFY_H" variable (:constant-flag t) nil [242 271])
+            ("amount.h" include (:system-flag t) nil [273 292])
+            ("stdint.h" include (:system-flag t) nil [294 313])
+            ("vector" include (:system-flag t) nil [314 331])
+            ("CBlockIndex" type
+               (:prototype t
+                :type "class")
+                nil [333 351])
+            ("CCoinsViewCache" type
+               (:prototype t
+                :type "class")
+                nil [352 374])
+            ("CTransaction" type
+               (:prototype t
+                :type "class")
+                nil [375 394])
+            ("CValidationState" type
+               (:prototype t
+                :type "class")
+                nil [395 418])
+            ("CheckTransaction" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("tx" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CTransaction" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [526 549])
+                    ("state" variable
+                       (:reference 1
+                        :type ("CValidationState" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [550 574])
+                    ("fCheckDuplicateInputs" variable
+                       (:default-value "true"
+                        :type "bool")
+                        (reparse-symbol arg-sub-list) [575 606]))                  
+                :type "bool")
+                nil [504 608])
+            ("Consensus" type
+               (:members 
+                  ( ("CheckTxInputs" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("tx" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("CTransaction" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [931 954])
+                            ("state" variable
+                               (:reference 1
+                                :type ("CValidationState" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [955 979])
+                            ("inputs" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("CCoinsViewCache" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [980 1010])
+                            ("nSpendHeight" variable (:type "int") (reparse-symbol arg-sub-list) [1011 1028])
+                            ("txfee" variable
+                               (:reference 1
+                                :type ("CAmount" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1029 1044]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [912 1045]))                  
+                :type "namespace")
+                nil [610 1047])
+            ("GetLegacySigOpCount" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("tx" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CTransaction" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1381 1404]))                  
+                :type "unsigned int")
+                nil [1348 1405])
+            ("GetP2SHSigOpCount" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("tx" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CTransaction" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1719 1742])
+                    ("mapInputs" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CCoinsViewCache" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1743 1776]))                  
+                :type "unsigned int")
+                nil [1688 1777])
+            ("GetTransactionSigOpCost" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("tx" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CTransaction" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2126 2149])
+                    ("inputs" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CCoinsViewCache" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2150 2180])
+                    ("flags" variable (:type "int") (reparse-symbol arg-sub-list) [2181 2191]))                  
+                :type ("int64_t" type (:type "class") nil nil))
+                nil [2094 2192])
+            ("IsFinalTx" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("tx" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CTransaction" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2340 2363])
+                    ("nBlockHeight" variable (:type "int") (reparse-symbol arg-sub-list) [2364 2381])
+                    ("nBlockTime" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2382 2401]))                  
+                :type "bool")
+                nil [2325 2402])
+            ("CalculateSequenceLocks" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("tx" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CTransaction" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2761 2784])
+                    ("flags" variable (:type "int") (reparse-symbol arg-sub-list) [2785 2795])
+                    ("prevHeights" variable
+                       (:pointer 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("int" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2796 2826])
+                    ("block" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CBlockIndex" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2827 2852]))                  
+                :type ("std::pair" type
+                     (:template-specifier 
+                        ( ("int" type nil nil nil)
+                          ("int64_t" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [2714 2853])
+            ("EvaluateSequenceLocks" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("block" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CBlockIndex" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2882 2907])
+                    ("lockPair" variable (:type ("std::pair" type
+                         (:template-specifier 
+                            ( ("int" type nil nil nil)
+                              ("int64_t" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [2908 2941]))                  
+                :type "bool")
+                nil [2855 2942])
+            ("SequenceLocks" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("tx" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CTransaction" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3162 3185])
+                    ("flags" variable (:type "int") (reparse-symbol arg-sub-list) [3186 3196])
+                    ("prevHeights" variable
+                       (:pointer 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("int" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3197 3227])
+                    ("block" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CBlockIndex" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3228 3253]))                  
+                :type "bool")
+                nil [3143 3254]))          
+      :file "tx_verify.h"
+      :pointmax 3296
+      :fsize 3295
+      :lastmodtime '(23069 20042 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("BITCOIN_CONSENSUS_TX_VERIFY_H")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("consensus/tx_verify.h" include (:system-flag t) nil [196 228])
+            ("consensus/consensus.h" include (:system-flag t) nil [230 262])
+            ("primitives/transaction.h" include (:system-flag t) nil [263 298])
+            ("script/interpreter.h" include (:system-flag t) nil [299 330])
+            ("consensus/validation.h" include (:system-flag t) nil [331 364])
+            ("chain.h" include (:system-flag t) nil [408 426])
+            ("coins.h" include (:system-flag t) nil [427 445])
+            ("utilmoneystr.h" include (:system-flag t) nil [446 471])
+            ("IsFinalTx" function
+               (:arguments 
+                  ( ("tx" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CTransaction" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [488 511])
+                    ("nBlockHeight" variable (:type "int") (reparse-symbol arg-sub-list) [512 529])
+                    ("nBlockTime" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [530 549]))                  
+                :type "bool")
+                nil [473 880])
+            ("CalculateSequenceLocks" function
+               (:arguments 
+                  ( ("tx" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CTransaction" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [929 952])
+                    ("flags" variable (:type "int") (reparse-symbol arg-sub-list) [953 963])
+                    ("prevHeights" variable
+                       (:pointer 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("int" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [964 994])
+                    ("block" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CBlockIndex" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [995 1020]))                  
+                :type ("std::pair" type
+                     (:template-specifier 
+                        ( ("int" type nil nil nil)
+                          ("int64_t" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [882 3845])
+            ("EvaluateSequenceLocks" function
+               (:arguments 
+                  ( ("block" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CBlockIndex" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3874 3899])
+                    ("lockPair" variable (:type ("std::pair" type
+                         (:template-specifier 
+                            ( ("int" type nil nil nil)
+                              ("int64_t" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [3900 3933]))                  
+                :type "bool")
+                nil [3847 4135])
+            ("SequenceLocks" function
+               (:arguments 
+                  ( ("tx" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CTransaction" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4156 4179])
+                    ("flags" variable (:type "int") (reparse-symbol arg-sub-list) [4180 4190])
+                    ("prevHeights" variable
+                       (:pointer 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("int" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4191 4221])
+                    ("block" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CBlockIndex" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4222 4247]))                  
+                :type "bool")
+                nil [4137 4347])
+            ("GetLegacySigOpCount" function
+               (:arguments 
+                  ( ("tx" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CTransaction" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4382 4405]))                  
+                :type "unsigned int")
+                nil [4349 4673])
+            ("GetP2SHSigOpCount" function
+               (:arguments 
+                  ( ("tx" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CTransaction" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4706 4729])
+                    ("inputs" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CCoinsViewCache" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4730 4760]))                  
+                :type "unsigned int")
+                nil [4675 5197])
+            ("GetTransactionSigOpCost" function
+               (:arguments 
+                  ( ("tx" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CTransaction" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5231 5254])
+                    ("inputs" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CCoinsViewCache" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5255 5285])
+                    ("flags" variable (:type "int") (reparse-symbol arg-sub-list) [5286 5296]))                  
+                :type ("int64_t" type (:type "class") nil nil))
+                nil [5199 5879])
+            ("CheckTransaction" function
+               (:arguments 
+                  ( ("tx" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CTransaction" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5903 5926])
+                    ("state" variable
+                       (:reference 1
+                        :type ("CValidationState" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5927 5951])
+                    ("fCheckDuplicateInputs" variable (:type "bool") (reparse-symbol arg-sub-list) [5952 5979]))                  
+                :type "bool")
+                nil [5881 7870])
+            ("CheckTxInputs" function
+               (:parent "Consensus"
+                :arguments 
+                  ( ("tx" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CTransaction" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7902 7925])
+                    ("state" variable
+                       (:reference 1
+                        :type ("CValidationState" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7926 7950])
+                    ("inputs" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CCoinsViewCache" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7951 7981])
+                    ("nSpendHeight" variable (:type "int") (reparse-symbol arg-sub-list) [7982 7999])
+                    ("txfee" variable
+                       (:reference 1
+                        :type ("CAmount" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8000 8015]))                  
+                :type "bool")
+                nil [7872 9643]))          
+      :file "tx_verify.cpp"
+      :pointmax 9644
+      :fsize 9643
+      :lastmodtime '(23069 20042 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("consensus/merkle.h" include (:system-flag t) nil [196 225])
+            ("hash.h" include (:system-flag t) nil [226 243])
+            ("utilstrencodings.h" include (:system-flag t) nil [244 273])
+            ("MerkleComputation" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("leaves" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("uint256" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2308 2343])
+                    ("proot" variable
+                       (:pointer 1
+                        :type ("uint256" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2344 2359])
+                    ("pmutated" variable
+                       (:pointer 1
+                        :type "bool")
+                        (reparse-symbol arg-sub-list) [2360 2375])
+                    ("branchpos" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2376 2395])
+                    ("pbranch" variable
+                       (:pointer 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("uint256" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2396 2426]))                  
+                :type "void")
+                nil [2278 5906])
+            ("ComputeMerkleRoot" function
+               (:arguments 
+                  ( ("leaves" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("uint256" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [5934 5969])
+                    ("mutated" variable
+                       (:pointer 1
+                        :type "bool")
+                        (reparse-symbol arg-sub-list) [5970 5984]))                  
+                :type ("uint256" type (:type "class") nil nil))
+                nil [5908 6083])
+            ("ComputeMerkleBranch" function
+               (:arguments 
+                  ( ("leaves" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("uint256" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [6126 6161])
+                    ("position" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6162 6180]))                  
+                :type ("std::vector" type
+                     (:template-specifier 
+                        ( ("uint256" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [6085 6295])
+            ("ComputeMerkleRootFromBranch" function
+               (:arguments 
+                  ( ("leaf" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("uint256" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6333 6353])
+                    ("vMerkleBranch" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("uint256" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [6354 6396])
+                    ("nIndex" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6397 6413]))                  
+                :type ("uint256" type (:type "class") nil nil))
+                nil [6297 6791])
+            ("BlockMerkleRoot" function
+               (:arguments 
+                  ( ("block" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CBlock" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6817 6837])
+                    ("mutated" variable
+                       (:pointer 1
+                        :type "bool")
+                        (reparse-symbol arg-sub-list) [6838 6852]))                  
+                :type ("uint256" type (:type "class") nil nil))
+                nil [6793 7076])
+            ("BlockWitnessMerkleRoot" function
+               (:arguments 
+                  ( ("block" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CBlock" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7109 7129])
+                    ("mutated" variable
+                       (:pointer 1
+                        :type "bool")
+                        (reparse-symbol arg-sub-list) [7130 7144]))                  
+                :type ("uint256" type (:type "class") nil nil))
+                nil [7078 7442])
+            ("BlockMerkleBranch" function
+               (:arguments 
+                  ( ("block" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CBlock" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7483 7503])
+                    ("position" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7504 7522]))                  
+                :type ("std::vector" type
+                     (:template-specifier 
+                        ( ("uint256" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [7444 7749]))          
+      :file "merkle.cpp"
+      :pointmax 7750
+      :fsize 7749
+      :lastmodtime '(23128 22952 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("BITCOIN_CONSENSUS_VALIDATION_H" variable (:constant-flag t) nil [287 317])
+            ("string" include (:system-flag t) nil [319 336])
+            ("version.h" include (:system-flag t) nil [337 357])
+            ("consensus/consensus.h" include (:system-flag t) nil [358 390])
+            ("primitives/transaction.h" include (:system-flag t) nil [391 426])
+            ("primitives/block.h" include (:system-flag t) nil [427 456])
+            ("REJECT_MALFORMED" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :default-value "0x01"
+                :type "unsigned char")
+                nil [488 539])
+            ("REJECT_INVALID" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :default-value "0x10"
+                :type "unsigned char")
+                nil [540 589])
+            ("REJECT_OBSOLETE" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :default-value "0x11"
+                :type "unsigned char")
+                nil [590 640])
+            ("REJECT_DUPLICATE" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :default-value "0x12"
+                :type "unsigned char")
+                nil [641 692])
+            ("REJECT_NONSTANDARD" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :default-value "0x40"
+                :type "unsigned char")
+                nil [693 746])
+            ("REJECT_INSUFFICIENTFEE" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :default-value "0x42"
+                :type "unsigned char")
+                nil [815 872])
+            ("REJECT_CHECKPOINT" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :default-value "0x43"
+                :type "unsigned char")
+                nil [873 925])
+            ("CValidationState" type
+               (:members 
+                  ( ("private" label nil (reparse-symbol classsubparts) [1014 1022])
+                    ("mode" variable (:type ("mode_state" type
+                         (:prototype t
+                          :type "enum")
+                          nil nil)) (reparse-symbol classsubparts) [1027 1212])
+                    ("mode_state" type
+                       (:members 
+                          ( ("MODE_VALID" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [1053 1064])
+                            ("MODE_INVALID" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [1094 1107])
+                            ("MODE_ERROR" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [1167 1178]))                          
+                        :type "enum")
+                        (reparse-symbol classsubparts) [1027 1212])
+                    ("nDoS" variable (:type "int") (reparse-symbol classsubparts) [1217 1226])
+                    ("strRejectReason" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1231 1259])
+                    ("chRejectCode" variable (:type "unsigned int") (reparse-symbol classsubparts) [1264 1290])
+                    ("corruptionPossible" variable (:type "bool") (reparse-symbol classsubparts) [1295 1319])
+                    ("strDebugMessage" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1324 1352])
+                    ("public" label nil (reparse-symbol classsubparts) [1353 1360])
+                    ("CValidationState" function
+                       (:constructor-flag t
+                        :type ("CValidationState" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1365 1458])
+                    ("DoS" function
+                       (:arguments 
+                          ( ("level" variable (:type "int") (reparse-symbol arg-sub-list) [1472 1482])
+                            ("ret" variable
+                               (:default-value "false"
+                                :type "bool")
+                                (reparse-symbol arg-sub-list) [1483 1499])
+                            ("chRejectCodeIn" variable
+                               (:default-value "0"
+                                :type "unsigned int")
+                                (reparse-symbol arg-sub-list) [1514 1543])
+                            ("strRejectReasonIn" variable
+                               (:reference 1
+                                :constant-flag t
+                                :default-value "\"\""
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1545 1584])
+                            ("corruptionIn" variable
+                               (:default-value "false"
+                                :type "bool")
+                                (reparse-symbol arg-sub-list) [1599 1622])
+                            ("strDebugMessageIn" variable
+                               (:reference 1
+                                :constant-flag t
+                                :default-value "\"\""
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1637 1676]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1463 1985])
+                    ("Invalid" function
+                       (:arguments 
+                          ( ("ret" variable
+                               (:default-value "false"
+                                :type "bool")
+                                (reparse-symbol arg-sub-list) [2003 2019])
+                            ("_chRejectCode" variable
+                               (:default-value "0"
+                                :type "unsigned int")
+                                (reparse-symbol arg-sub-list) [2038 2066])
+                            ("_strRejectReason" variable
+                               (:reference 1
+                                :constant-flag t
+                                :default-value "\"\""
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2068 2106])
+                            ("_strDebugMessage" variable
+                               (:reference 1
+                                :constant-flag t
+                                :default-value "\"\""
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2125 2163]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1990 2258])
+                    ("Error" function
+                       (:arguments 
+                          ( ("strRejectReasonIn" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2274 2311]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [2263 2449])
+                    ("IsValid" function
+                       (:methodconst-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [2454 2517])
+                    ("IsInvalid" function
+                       (:methodconst-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [2522 2589])
+                    ("IsError" function
+                       (:methodconst-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [2594 2657])
+                    ("IsInvalid" function
+                       (:methodconst-flag t
+                        :arguments 
+                          ( ("nDoSOut" variable
+                               (:reference 1
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [2677 2690]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [2662 2816])
+                    ("CorruptionPossible" function
+                       (:methodconst-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [2821 2895])
+                    ("SetCorruptionPossible" function (:type "void") (reparse-symbol classsubparts) [2900 2971])
+                    ("GetRejectCode" function
+                       (:methodconst-flag t
+                        :type "unsigned int")
+                        (reparse-symbol classsubparts) [2976 3035])
+                    ("GetRejectReason" function
+                       (:methodconst-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3040 3103])
+                    ("GetDebugMessage" function
+                       (:methodconst-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3108 3171]))                  
+                :type "class")
+                nil [989 3174])
+            ("GetTransactionWeight" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("tx" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CTransaction" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3489 3512]))                  
+                :type ("int64_t" type (:type "class") nil nil))
+                nil [3446 3702])
+            ("GetBlockWeight" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("block" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CBlock" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3740 3760]))                  
+                :type ("int64_t" type (:type "class") nil nil))
+                nil [3703 3956]))          
+      :file "validation.h"
+      :pointmax 3999
+      :fsize 3998
+      :lastmodtime '(23128 22952 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("BITCOIN_CONSENSUS_VALIDATION_H")
+          )
+))
+  :file "!Volumes!Transcend!bitcoin!src!consensus!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

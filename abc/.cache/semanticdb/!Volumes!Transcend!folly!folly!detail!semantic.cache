@@ -1,0 +1,388 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("atomic" include (:system-flag t) nil [612 629])
+            ("cassert" include (:system-flag t) nil [630 648])
+            ("chrono" include (:system-flag t) nil [649 666])
+            ("limits" include (:system-flag t) nil [667 684])
+            ("boost/noncopyable.hpp" include (:system-flag t) nil [686 718])
+            ("folly/portability/Unistd.h" include (:system-flag t) nil [720 757])
+            ("folly" type
+               (:members 
+                  ( ("detail" type
+                       (:members 
+                          ( ("FutexResult" type (:type "class") (reparse-symbol namespacesubparts) [802 1028])
+                            ("Futex" type
+                               (:superclasses 
+                                  ( ("Atom" type
+                                       (:protection "unspecified"
+                                        :type "class")
+                                        nil nil)
+                                    ("boost::noncopyable" type
+                                       (:protection "unspecified"
+                                        :type "class")
+                                        nil nil))                                  
+                                :members 
+                                  ( ("Futex" function
+                                       (:constructor-flag t
+                                        :arguments 
+                                          ( ("init" variable
+                                               (:default-value "0"
+                                                :type ("uint32_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1565 1582]))                                          
+                                        :type ("constexpr" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1549 1609])
+                                    ("futexWait" function
+                                       (:arguments 
+                                          ( ("expected" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1861 1879])
+                                            ("waitMask" variable
+                                               (:default-value "-1"
+                                                :type ("uint32_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1880 1902]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [1846 2055])
+                                    ("futexWaitUntil" function
+                                       (:arguments 
+                                          ( ("expected" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2564 2582])
+                                            ("absTime" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::chrono::time_point" type
+                                                     (:template-specifier 
+                                                        ( ("Clock" type nil nil nil)
+                                                          ("Duration" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [2593 2649])
+                                            ("waitMask" variable
+                                               (:default-value "-1"
+                                                :type ("uint32_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2660 2682]))                                          
+                                        :type ("FutexResult" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [2526 4380])
+                                    ("futexWake" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("count" variable
+                                               (:default-value "std::numeric_limits<int>::max()"
+                                                :type "int")
+                                                (reparse-symbol arg-sub-list) [4933 4976])
+                                            ("wakeMask" variable
+                                               (:default-value "-1"
+                                                :type ("uint32_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [4994 5016]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [4919 5018])
+                                    ("private" label nil (reparse-symbol classsubparts) [5021 5029])
+                                    ("futexWaitImpl" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("expected" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5470 5488])
+                                            ("absSystemTime" variable
+                                               (:pointer 1
+                                                :type ("std::chrono::time_point" type
+                                                     (:template-specifier 
+                                                        ( ("std::chrono::system_clock" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [5495 5561])
+                                            ("absSteadyTime" variable
+                                               (:pointer 1
+                                                :type ("std::chrono::time_point" type
+                                                     (:template-specifier 
+                                                        ( ("std::chrono::steady_clock" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [5568 5634])
+                                            ("waitMask" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5641 5659]))                                          
+                                        :type ("FutexResult" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [5437 5660]))                                  
+                                :type "struct")
+                                (reparse-symbol namespacesubparts) [1485 5663])
+                            ("EmulatedFutexAtomic" type
+                               (:template 
+                                  ( ("T" type (:type "class") nil nil))                                  
+                                :type "struct"
+                                :members 
+                                  ( ("atomic" function
+                                       (:template-specifier 
+                                          ( ("T" type nil nil nil))                                          
+                                        :parent "std"
+                                        :arguments 
+                                          ( ("" variable (:type ("init" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6090 6095]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [6075 6098]))                                  
+                                :superclasses 
+                                  ( ("std::atomic" type
+                                       (:protection "public"
+                                        :type "class")
+                                        nil nil))                                  )
+                                (reparse-symbol namespacesubparts) [5884 6189])
+                            ("futexWake" function
+                               (:type "int"
+                                :arguments 
+                                  ( ("count" variable (:type "int") (reparse-symbol arg-sub-list) [6298 6308])
+                                    ("wakeMask" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6309 6327]))                                  
+                                :parent "Futex"
+                                :prototype-flag t)
+                                (reparse-symbol namespacesubparts) [6252 6328])
+                            ("futexWaitImpl" function
+                               (:type ("FutexResult" type (:type "class") nil nil)
+                                :arguments 
+                                  ( ("expected" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6395 6413])
+                                    ("absSystemTime" variable
+                                       (:pointer 1
+                                        :type ("std::chrono::time_point" type
+                                             (:template-specifier 
+                                                ( ("std::chrono::system_clock" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [6420 6486])
+                                    ("absSteadyTime" variable
+                                       (:pointer 1
+                                        :type ("std::chrono::time_point" type
+                                             (:template-specifier 
+                                                ( ("std::chrono::steady_clock" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [6493 6559])
+                                    ("waitMask" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6566 6584]))                                  
+                                :parent "Futex"
+                                :prototype-flag t)
+                                (reparse-symbol namespacesubparts) [6330 6585])
+                            ("futexWake" function
+                               (:type "int"
+                                :arguments 
+                                  ( ("count" variable (:type "int") (reparse-symbol arg-sub-list) [6641 6651])
+                                    ("wakeMask" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6652 6670]))                                  
+                                :parent "Futex"
+                                :prototype-flag t)
+                                (reparse-symbol namespacesubparts) [6587 6671])
+                            ("futexWaitImpl" function
+                               (:type ("FutexResult" type (:type "class") nil nil)
+                                :arguments 
+                                  ( ("expected" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6746 6764])
+                                    ("absSystemTime" variable
+                                       (:pointer 1
+                                        :type ("std::chrono::time_point" type
+                                             (:template-specifier 
+                                                ( ("std::chrono::system_clock" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [6771 6837])
+                                    ("absSteadyTime" variable
+                                       (:pointer 1
+                                        :type ("std::chrono::time_point" type
+                                             (:template-specifier 
+                                                ( ("std::chrono::steady_clock" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [6844 6910])
+                                    ("waitMask" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6917 6935]))                                  
+                                :parent "Futex"
+                                :prototype-flag t)
+                                (reparse-symbol namespacesubparts) [6673 6936]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [777 6939]))                  
+                :type "namespace")
+                nil [759 6961]))          
+      :file "Futex.h"
+      :pointmax 6981
+      :fsize 6980
+      :lastmodtime '(23032 17478 0 0)
+      :unmatched-syntax '((punctuation 6185 . 6186) (DELETE 6179 . 6185) (punctuation 6177 . 6178) (semantic-list 6149 . 6176) (symbol 6130 . 6149) (punctuation 6170 . 6171) (punctuation 6073 . 6074) (symbol 6058 . 6066) (semantic-list 6049 . 6057) (symbol 6030 . 6049) (symbol 6005 . 6014) (punctuation 6001 . 6002) (DEFAULT 5994 . 6001) (punctuation 5992 . 5993) (symbol 5983 . 5991) (semantic-list 5980 . 5982) (symbol 5961 . 5980) (punctuation 2522 . 2523) (symbol 2514 . 2522) (punctuation 2513 . 2514) (punctuation 2512 . 2513) (symbol 2507 . 2512) (TYPENAME 2498 . 2506) (punctuation 2496 . 2497) (symbol 2487 . 2495) (CLASS 2481 . 2486) (punctuation 2479 . 2480) (symbol 2474 . 2479) (CLASS 2468 . 2473) (punctuation 2467 . 2468) (TEMPLATE 2458 . 2466) (EXPLICIT 1540 . 1548) (punctuation 1483 . 1484) (symbol 1477 . 1483) (punctuation 1476 . 1477) (punctuation 1475 . 1476) (symbol 1472 . 1475) (punctuation 1470 . 1471) (symbol 1465 . 1469) (CLASS 1459 . 1464) (punctuation 1457 . 1458) (TYPENAME 1449 . 1457) (punctuation 1448 . 1449) (TEMPLATE 1439 . 1447) (punctuation 1438 . 1439) (TEMPLATE 1429 . 1437) (symbol 1017 . 1025) (punctuation 952 . 953) (symbol 941 . 952) (punctuation 887 . 888) (symbol 881 . 887) (punctuation 837 . 838) (symbol 824 . 837) (ENUM 797 . 801) (symbol 606 . 610) (symbol 599 . 605) (punctuation 598 . 599)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("folly/detail/Futex.h" include (:system-flag t) nil [598 629])
+            ("boost/intrusive/list.hpp" include (:system-flag t) nil [630 665])
+            ("folly/Indestructible.h" include (:system-flag t) nil [666 699])
+            ("folly/ScopeGuard.h" include (:system-flag t) nil [700 729])
+            ("folly/hash/Hash.h" include (:system-flag t) nil [730 758])
+            ("folly/portability/SysSyscall.h" include (:system-flag t) nil [759 800])
+            ("stdint.h" include (:system-flag t) nil [801 820])
+            ("string.h" include (:system-flag t) nil [821 840])
+            ("array" include (:system-flag t) nil [841 857])
+            ("cerrno" include (:system-flag t) nil [858 875])
+            ("condition_variable" include (:system-flag t) nil [876 905])
+            ("mutex" include (:system-flag t) nil [906 922])
+            ("std::chrono" using (:type ("std::chrono" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [974 1002])
+            ("folly" type
+               (:members 
+                  ( ("detail" type
+                       (:members 
+                          ( ("unnamed" type
+                               (:members 
+                                  ( ("EmulatedFutexWaitNode" type
+                                       (:superclasses 
+                                          ( ("boost::intrusive::list_base_hook" type
+                                               (:protection "public"
+                                                :type "class")
+                                                nil nil))                                          
+                                        :members 
+                                          ( ("addr_" variable
+                                               (:pointer 1
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [5556 5574])
+                                            ("waitMask_" variable
+                                               (:constant-flag t
+                                                :type ("uint32_t" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [5577 5602])
+                                            ("signaled_" variable (:type "bool") (reparse-symbol classsubparts) [5676 5691])
+                                            ("mutex_" variable (:type ("std::mutex" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5694 5712])
+                                            ("cond_" variable (:type ("std::condition_variable" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5715 5745])
+                                            ("EmulatedFutexWaitNode" function
+                                               (:constructor-flag t
+                                                :arguments 
+                                                  ( ("addr" variable
+                                                       (:pointer 1
+                                                        :type "void")
+                                                        (reparse-symbol arg-sub-list) [5771 5782])
+                                                    ("waitMask" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5783 5801]))                                                  
+                                                :type ("EmulatedFutexWaitNode" type (:type "struct") nil nil))
+                                                (reparse-symbol classsubparts) [5749 5876]))                                          
+                                        :type "struct")
+                                        (reparse-symbol namespacesubparts) [5479 5879])
+                                    ("EmulatedFutexBucket" type
+                                       (:members 
+                                          ( ("mutex_" variable (:type ("std::mutex" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5912 5930])
+                                            ("waiters_" variable (:type ("boost::intrusive::list" type
+                                                 (:template-specifier 
+                                                    ( ("EmulatedFutexWaitNode" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol classsubparts) [5933 5988])
+                                            ("kNumBuckets" variable
+                                               (:default-value "kIsMobile ? 256 : 4096"
+                                                :type ("size_t" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [6009 6059])
+                                            ("bucketFor" function
+                                               (:typemodifiers ("static")
+                                                :arguments 
+                                                  ( ("addr" variable
+                                                       (:pointer 1
+                                                        :type "void")
+                                                        (reparse-symbol arg-sub-list) [6101 6112]))                                                  
+                                                :type ("EmulatedFutexBucket" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [6063 6580]))                                          
+                                        :type "struct")
+                                        (reparse-symbol namespacesubparts) [5881 6583])
+                                    ("emulatedFutexWake" function
+                                       (:arguments 
+                                          ( ("addr" variable
+                                               (:pointer 1
+                                                :type "void")
+                                                (reparse-symbol arg-sub-list) [6607 6618])
+                                            ("count" variable (:type "int") (reparse-symbol arg-sub-list) [6619 6629])
+                                            ("waitMask" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6630 6648]))                                          
+                                        :type "int")
+                                        (reparse-symbol namespacesubparts) [6585 7267])
+                                    ("emulatedFutexWaitImpl" function
+                                       (:template 
+                                          ( ("F" type (:type "class") nil nil))                                          
+                                        :type ("FutexResult" type (:type "class") nil nil)
+                                        :arguments 
+                                          ( ("futex" variable
+                                               (:pointer 1
+                                                :type ("F" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [7330 7339])
+                                            ("expected" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7344 7362])
+                                            ("absSystemTime" variable
+                                               (:pointer 1
+                                                :type ("time_point" type
+                                                     (:template-specifier 
+                                                        ( ("system_clock" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [7367 7407])
+                                            ("absSteadyTime" variable
+                                               (:pointer 1
+                                                :type ("time_point" type
+                                                     (:template-specifier 
+                                                        ( ("steady_clock" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [7412 7452])
+                                            ("waitMask" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7457 7475]))                                          )
+                                        (reparse-symbol namespacesubparts) [7269 8894]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [1042 8897])
+                            ("futexWake" function
+                               (:type "int"
+                                :arguments 
+                                  ( ("count" variable (:type "int") (reparse-symbol arg-sub-list) [9020 9030])
+                                    ("wakeMask" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9031 9049]))                                  
+                                :parent "Futex")
+                                (reparse-symbol namespacesubparts) [8974 9183])
+                            ("futexWake" function
+                               (:type "int"
+                                :arguments 
+                                  ( ("count" variable (:type "int") (reparse-symbol arg-sub-list) [9239 9249])
+                                    ("wakeMask" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9250 9268]))                                  
+                                :parent "Futex")
+                                (reparse-symbol namespacesubparts) [9185 9323])
+                            ("futexWaitImpl" function
+                               (:type ("FutexResult" type (:type "class") nil nil)
+                                :arguments 
+                                  ( ("expected" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9383 9401])
+                                    ("absSystemTime" variable
+                                       (:pointer 1
+                                        :type ("time_point" type
+                                             (:template-specifier 
+                                                ( ("system_clock" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [9436 9476])
+                                    ("absSteadyTime" variable
+                                       (:pointer 1
+                                        :type ("time_point" type
+                                             (:template-specifier 
+                                                ( ("steady_clock" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [9511 9551])
+                                    ("waitMask" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9586 9604]))                                  
+                                :parent "Futex")
+                                (reparse-symbol namespacesubparts) [9325 9826])
+                            ("futexWaitImpl" function
+                               (:type ("FutexResult" type (:type "class") nil nil)
+                                :arguments 
+                                  ( ("expected" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9903 9921])
+                                    ("absSystemTime" variable
+                                       (:pointer 1
+                                        :type ("time_point" type
+                                             (:template-specifier 
+                                                ( ("system_clock" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [9930 9970])
+                                    ("absSteadyTime" variable
+                                       (:pointer 1
+                                        :type ("time_point" type
+                                             (:template-specifier 
+                                                ( ("steady_clock" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [9979 10019])
+                                    ("waitMask" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10028 10046]))                                  
+                                :parent "Futex")
+                                (reparse-symbol namespacesubparts) [9828 10145]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1022 10148]))                  
+                :type "namespace")
+                nil [1004 10170]))          
+      :file "Futex.cpp"
+      :pointmax 10190
+      :fsize 10189
+      :lastmodtime '(23109 45032 0 0)
+      :unmatched-syntax '((symbol 5999 . 6008) (STATIC 5992 . 5998))))
+  :file "!Volumes!Transcend!folly!folly!detail!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

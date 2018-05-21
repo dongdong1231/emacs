@@ -1,0 +1,2236 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("GRPC_CORE_LIB_SUPPORT_MPSCQ_H" variable (:constant-flag t) nil [651 680])
+            ("grpc/support/atm.h" include (:system-flag t) nil [682 711])
+            ("grpc/support/sync.h" include (:system-flag t) nil [712 742])
+            ("stdbool.h" include (:system-flag t) nil [743 763])
+            ("stddef.h" include (:system-flag t) nil [764 783])
+            ("gpr_mpscq_node" type
+               (:members 
+                  ( ("next" variable (:type ("gpr_atm" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1150 1163]))                  
+                :type "struct")
+                nil [1116 1181])
+            ("gpr_mpscq_node" type
+               (:typedef ("gpr_mpscq_node" type (:type "struct") nil nil)
+                :type "typedef")
+                nil [1116 1181])
+            ("gpr_mpscq" type
+               (:members 
+                  ( ("head" variable (:type ("gpr_atm" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1233 1246])
+                    ("padding" variable
+                       (:dereference 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [1300 1333])
+                    ("tail" variable
+                       (:pointer 1
+                        :type ("gpr_mpscq_node" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1336 1357])
+                    ("stub" variable (:type ("gpr_mpscq_node" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1360 1380]))                  
+                :type "struct")
+                nil [1204 1393])
+            ("gpr_mpscq" type
+               (:typedef ("gpr_mpscq" type (:type "struct") nil nil)
+                :type "typedef")
+                nil [1204 1393])
+            ("gpr_mpscq_init" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("q" variable
+                       (:pointer 1
+                        :type ("gpr_mpscq" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1415 1428]))                  
+                :type "void")
+                nil [1395 1429])
+            ("gpr_mpscq_destroy" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("q" variable
+                       (:pointer 1
+                        :type ("gpr_mpscq" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1453 1466]))                  
+                :type "void")
+                nil [1430 1467])
+            ("gpr_mpscq_push" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("q" variable
+                       (:pointer 1
+                        :type ("gpr_mpscq" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1691 1704])
+                    ("n" variable
+                       (:pointer 1
+                        :type ("gpr_mpscq_node" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1705 1723]))                  
+                :type "bool")
+                nil [1671 1724])
+            ("gpr_mpscq_pop" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("q" variable
+                       (:pointer 1
+                        :type ("gpr_mpscq" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1926 1939]))                  
+                :type ("gpr_mpscq_node" type (:type "class") nil nil))
+                nil [1896 1940])
+            ("gpr_mpscq_pop_and_check_end" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("q" variable
+                       (:pointer 1
+                        :type ("gpr_mpscq" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2065 2078])
+                    ("empty" variable
+                       (:pointer 1
+                        :type "bool")
+                        (reparse-symbol arg-sub-list) [2079 2091]))                  
+                :type ("gpr_mpscq_node" type (:type "class") nil nil))
+                nil [2021 2092])
+            ("gpr_locked_mpscq" type
+               (:members 
+                  ( ("queue" variable (:type ("gpr_mpscq" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2250 2266])
+                    ("mu" variable (:type ("gpr_mu" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2269 2279]))                  
+                :type "struct")
+                nil [2214 2299])
+            ("gpr_locked_mpscq" type
+               (:typedef ("gpr_locked_mpscq" type (:type "struct") nil nil)
+                :type "typedef")
+                nil [2214 2299])
+            ("gpr_locked_mpscq_init" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("q" variable
+                       (:pointer 1
+                        :type ("gpr_locked_mpscq" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2328 2348]))                  
+                :type "void")
+                nil [2301 2349])
+            ("gpr_locked_mpscq_destroy" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("q" variable
+                       (:pointer 1
+                        :type ("gpr_locked_mpscq" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2380 2400]))                  
+                :type "void")
+                nil [2350 2401])
+            ("gpr_locked_mpscq_push" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("q" variable
+                       (:pointer 1
+                        :type ("gpr_locked_mpscq" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2632 2652])
+                    ("n" variable
+                       (:pointer 1
+                        :type ("gpr_mpscq_node" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2653 2671]))                  
+                :type "bool")
+                nil [2605 2672])
+            ("gpr_locked_mpscq_try_pop" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("q" variable
+                       (:pointer 1
+                        :type ("gpr_locked_mpscq" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2884 2904]))                  
+                :type ("gpr_mpscq_node" type (:type "class") nil nil))
+                nil [2843 2905])
+            ("gpr_locked_mpscq_pop" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("q" variable
+                       (:pointer 1
+                        :type ("gpr_locked_mpscq" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3046 3066]))                  
+                :type ("gpr_mpscq_node" type (:type "class") nil nil))
+                nil [3009 3067]))          
+      :file "mpscq.h"
+      :pointmax 3112
+      :fsize 3111
+      :lastmodtime '(23079 46126 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("GRPC_CORE_LIB_SUPPORT_MPSCQ_H")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("src/core/lib/support/mpscq.h" include nil nil [605 644])
+            ("grpc/support/log.h" include (:system-flag t) nil [646 675])
+            ("gpr_mpscq_init" function
+               (:arguments 
+                  ( ("q" variable
+                       (:pointer 1
+                        :type ("gpr_mpscq" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [697 710]))                  
+                :type "void")
+                nil [677 851])
+            ("gpr_mpscq_destroy" function
+               (:arguments 
+                  ( ("q" variable
+                       (:pointer 1
+                        :type ("gpr_mpscq" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [876 889]))                  
+                :type "void")
+                nil [853 998])
+            ("gpr_mpscq_push" function
+               (:arguments 
+                  ( ("q" variable
+                       (:pointer 1
+                        :type ("gpr_mpscq" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1020 1033])
+                    ("n" variable
+                       (:pointer 1
+                        :type ("gpr_mpscq_node" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1034 1052]))                  
+                :type "bool")
+                nil [1000 1271])
+            ("gpr_mpscq_pop" function
+               (:pointer 1
+                :arguments 
+                  ( ("q" variable
+                       (:pointer 1
+                        :type ("gpr_mpscq" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1303 1316]))                  
+                :type ("gpr_mpscq_node" type (:type "class") nil nil))
+                nil [1273 1383])
+            ("gpr_mpscq_pop_and_check_end" function
+               (:pointer 1
+                :arguments 
+                  ( ("q" variable
+                       (:pointer 1
+                        :type ("gpr_mpscq" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1429 1442])
+                    ("empty" variable
+                       (:pointer 1
+                        :type "bool")
+                        (reparse-symbol arg-sub-list) [1443 1455]))                  
+                :type ("gpr_mpscq_node" type (:type "class") nil nil))
+                nil [1385 2350])
+            ("gpr_locked_mpscq_init" function
+               (:arguments 
+                  ( ("q" variable
+                       (:pointer 1
+                        :type ("gpr_locked_mpscq" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2379 2399]))                  
+                :type "void")
+                nil [2352 2455])
+            ("gpr_locked_mpscq_destroy" function
+               (:arguments 
+                  ( ("q" variable
+                       (:pointer 1
+                        :type ("gpr_locked_mpscq" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2487 2507]))                  
+                :type "void")
+                nil [2457 2569])
+            ("gpr_locked_mpscq_push" function
+               (:arguments 
+                  ( ("q" variable
+                       (:pointer 1
+                        :type ("gpr_locked_mpscq" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2598 2618])
+                    ("n" variable
+                       (:pointer 1
+                        :type ("gpr_mpscq_node" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2619 2637]))                  
+                :type "bool")
+                nil [2571 2680])
+            ("gpr_locked_mpscq_try_pop" function
+               (:pointer 1
+                :arguments 
+                  ( ("q" variable
+                       (:pointer 1
+                        :type ("gpr_locked_mpscq" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2723 2743]))                  
+                :type ("gpr_mpscq_node" type (:type "class") nil nil))
+                nil [2682 2892])
+            ("gpr_locked_mpscq_pop" function
+               (:pointer 1
+                :arguments 
+                  ( ("q" variable
+                       (:pointer 1
+                        :type ("gpr_locked_mpscq" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2931 2951]))                  
+                :type ("gpr_mpscq_node" type (:type "class") nil nil))
+                nil [2894 3157]))          
+      :file "mpscq.cc"
+      :pointmax 3158
+      :fsize 3157
+      :lastmodtime '(23062 15968 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("GRPC_CORE_LIB_SUPPORT_ATOMIC_H" variable (:constant-flag t) nil [652 682])
+            ("grpc/support/port_platform.h" include (:system-flag t) nil [684 723])
+            ("src/core/lib/support/atomic_with_atm.h" include nil nil [809 858]))          
+      :file "atomic.h"
+      :pointmax 911
+      :fsize 910
+      :lastmodtime '(23062 15968 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("GRPC_CORE_LIB_SUPPORT_ATOMIC_H")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("GRPC_CORE_LIB_SUPPORT_ATOMIC_WITH_ATM_H" variable (:constant-flag t) nil [661 700])
+            ("grpc/support/atm.h" include (:system-flag t) nil [702 731])
+            ("grpc_core" type
+               (:members 
+                  ( ("MemoryOrderRelaxed" type
+                       (:members 
+                          ( ("memory_order_relaxed" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [782 804]))                          
+                        :type "enum")
+                        (reparse-symbol namespacesubparts) [756 805])
+                    ("atomic" type
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type "class"
+                        :prototype t)
+                        (reparse-symbol namespacesubparts) [807 839])
+                    ("atomic" type
+                       (:type "class"
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [875 882])
+                            ("atomic" function
+                               (:constructor-flag t
+                                :type ("atomic" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [885 957])
+                            ("atomic" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("x" variable (:type "bool") (reparse-symbol arg-sub-list) [976 983]))                                  
+                                :type ("atomic" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [969 1049])
+                            ("compare_exchange_strong" function
+                               (:arguments 
+                                  ( ("expected" variable
+                                       (:reference 1
+                                        :type "bool")
+                                        (reparse-symbol arg-sub-list) [1082 1097])
+                                    ("update" variable (:type "bool") (reparse-symbol arg-sub-list) [1098 1110])
+                                    ("" variable (:type ("MemoryOrderRelaxed" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1111 1130])
+                                    ("" variable (:type ("MemoryOrderRelaxed" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1162 1181]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [1053 1416])
+                            ("private" label nil (reparse-symbol classsubparts) [1419 1427])
+                            ("x_" variable (:type ("gpr_atm" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1430 1441]))                          
+                        :template-specifier 
+                          ( ("bool" type nil nil nil))                          )
+                        (reparse-symbol namespacesubparts) [841 1444]))                  
+                :type "namespace")
+                nil [733 1447]))          
+      :file "atomic_with_atm.h"
+      :pointmax 1526
+      :fsize 1525
+      :lastmodtime '(23062 15968 0 0)
+      :unmatched-syntax '((EXPLICIT 960 . 968))
+      :lexical-table 
+        '(("GRPC_CORE_LIB_SUPPORT_ATOMIC_WITH_ATM_H")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("grpc/support/atm.h" include (:system-flag t) nil [605 634])
+            ("grpc/support/useful.h" include (:system-flag t) nil [635 667])
+            ("gpr_atm_no_barrier_clamped_add" function
+               (:arguments 
+                  ( ("value" variable
+                       (:pointer 1
+                        :type ("gpr_atm" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [708 723])
+                    ("delta" variable (:type ("gpr_atm" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [724 738])
+                    ("min" variable (:type ("gpr_atm" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [778 790])
+                    ("max" variable (:type ("gpr_atm" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [791 803]))                  
+                :type ("gpr_atm" type (:type "class") nil nil))
+                nil [669 1105]))          
+      :file "atm.cc"
+      :pointmax 1106
+      :fsize 1105
+      :lastmodtime '(23062 15968 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("GRPC_CORE_LIB_SUPPORT_ATOMIC_WITH_STD_H" variable (:constant-flag t) nil [661 700])
+            ("atomic" include (:system-flag t) nil [702 719])
+            ("grpc_core" type
+               (:members 
+                  ( ("std::atomic" variable (:type "int") (reparse-symbol namespacesubparts) [778 793])
+                    ("memory_order" type
+                       (:typedef ("std::memory_order" type (:type "class") nil nil)
+                        :type "typedef")
+                        (reparse-symbol namespacesubparts) [795 834]))                  
+                :type "namespace")
+                nil [721 837]))          
+      :file "atomic_with_std.h"
+      :pointmax 916
+      :fsize 915
+      :lastmodtime '(23062 15968 0 0)
+      :unmatched-syntax '((punctuation 776 . 777) (symbol 769 . 775) (USING 763 . 768) (punctuation 761 . 762) (symbol 760 . 761) (CLASS 754 . 759) (punctuation 753 . 754) (TEMPLATE 744 . 752))
+      :lexical-table 
+        '(("GRPC_CORE_LIB_SUPPORT_ATOMIC_WITH_STD_H")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("grpc/support/avl.h" include (:system-flag t) nil [605 634])
+            ("assert.h" include (:system-flag t) nil [636 655])
+            ("stdlib.h" include (:system-flag t) nil [656 675])
+            ("grpc/support/alloc.h" include (:system-flag t) nil [677 708])
+            ("grpc/support/string_util.h" include (:system-flag t) nil [709 746])
+            ("grpc/support/useful.h" include (:system-flag t) nil [747 779])
+            ("gpr_avl_create" function
+               (:arguments 
+                  ( ("vtable" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("gpr_avl_vtable" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [804 833]))                  
+                :type ("gpr_avl" type (:type "class") nil nil))
+                nil [781 911])
+            ("ref_node" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("node" variable
+                       (:pointer 1
+                        :type ("gpr_avl_node" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [943 962]))                  
+                :type ("gpr_avl_node" type (:type "class") nil nil))
+                nil [913 1025])
+            ("unref_node" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("vtable" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("gpr_avl_vtable" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1050 1079])
+                    ("node" variable
+                       (:pointer 1
+                        :type ("gpr_avl_node" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1080 1099])
+                    ("user_data" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [1123 1139]))                  
+                :type "void")
+                nil [1027 1433])
+            ("node_height" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("node" variable
+                       (:pointer 1
+                        :type ("gpr_avl_node" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1459 1478]))                  
+                :type "long")
+                nil [1435 1527])
+            ("calculate_height" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("node" variable
+                       (:pointer 1
+                        :type ("gpr_avl_node" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1573 1592]))                  
+                :type "long")
+                nil [1544 1765])
+            ("assert_invariants" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("n" variable
+                       (:pointer 1
+                        :type ("gpr_avl_node" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1806 1822]))                  
+                :type ("gpr_avl_node" type (:type "class") nil nil))
+                nil [1767 2046])
+            ("new_node" function
+               (:pointer 1
+                :arguments 
+                  ( ("key" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2154 2164])
+                    ("value" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2165 2177])
+                    ("left" variable
+                       (:pointer 1
+                        :type ("gpr_avl_node" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2178 2197])
+                    ("right" variable
+                       (:pointer 1
+                        :type ("gpr_avl_node" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2221 2241]))                  
+                :type ("gpr_avl_node" type (:type "class") nil nil))
+                nil [2131 2550])
+            ("get" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("vtable" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("gpr_avl_vtable" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2577 2606])
+                    ("node" variable
+                       (:pointer 1
+                        :type ("gpr_avl_node" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2607 2626])
+                    ("key" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2652 2662])
+                    ("user_data" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2663 2679]))                  
+                :type ("gpr_avl_node" type (:type "class") nil nil))
+                nil [2552 2982])
+            ("gpr_avl_get" function
+               (:pointer 1
+                :arguments 
+                  ( ("avl" variable (:type ("gpr_avl" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3002 3014])
+                    ("key" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3015 3025])
+                    ("user_data" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3026 3042]))                  
+                :type "void")
+                nil [2984 3151])
+            ("gpr_avl_maybe_get" function
+               (:arguments 
+                  ( ("avl" variable (:type ("gpr_avl" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3175 3187])
+                    ("key" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3188 3198])
+                    ("value" variable
+                       (:pointer 2
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3199 3212])
+                    ("user_data" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3213 3229]))                  
+                :type "int")
+                nil [3153 3380])
+            ("rotate_left" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("vtable" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("gpr_avl_vtable" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3415 3444])
+                    ("key" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3445 3455])
+                    ("value" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3489 3501])
+                    ("left" variable
+                       (:pointer 1
+                        :type ("gpr_avl_node" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3502 3521])
+                    ("right" variable
+                       (:pointer 1
+                        :type ("gpr_avl_node" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3555 3575])
+                    ("user_data" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3576 3592]))                  
+                :type ("gpr_avl_node" type (:type "class") nil nil))
+                nil [3382 3926])
+            ("rotate_right" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("vtable" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("gpr_avl_vtable" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3962 3991])
+                    ("key" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3992 4002])
+                    ("value" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4037 4049])
+                    ("left" variable
+                       (:pointer 1
+                        :type ("gpr_avl_node" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4050 4069])
+                    ("right" variable
+                       (:pointer 1
+                        :type ("gpr_avl_node" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4104 4124])
+                    ("user_data" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4125 4141]))                  
+                :type ("gpr_avl_node" type (:type "class") nil nil))
+                nil [3928 4420])
+            ("rotate_left_right" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("vtable" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("gpr_avl_vtable" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4461 4490])
+                    ("key" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4491 4501])
+                    ("value" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4541 4553])
+                    ("left" variable
+                       (:pointer 1
+                        :type ("gpr_avl_node" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4554 4573])
+                    ("right" variable
+                       (:pointer 1
+                        :type ("gpr_avl_node" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4613 4633])
+                    ("user_data" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4634 4650]))                  
+                :type ("gpr_avl_node" type (:type "class") nil nil))
+                nil [4422 5188])
+            ("rotate_right_left" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("vtable" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("gpr_avl_vtable" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5229 5258])
+                    ("key" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [5259 5269])
+                    ("value" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [5309 5321])
+                    ("left" variable
+                       (:pointer 1
+                        :type ("gpr_avl_node" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5322 5341])
+                    ("right" variable
+                       (:pointer 1
+                        :type ("gpr_avl_node" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5381 5401])
+                    ("user_data" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [5402 5418]))                  
+                :type ("gpr_avl_node" type (:type "class") nil nil))
+                nil [5190 5960])
+            ("rebalance" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("vtable" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("gpr_avl_vtable" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5993 6022])
+                    ("key" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [6023 6033])
+                    ("value" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [6065 6077])
+                    ("left" variable
+                       (:pointer 1
+                        :type ("gpr_avl_node" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6078 6097])
+                    ("right" variable
+                       (:pointer 1
+                        :type ("gpr_avl_node" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6129 6149])
+                    ("user_data" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [6150 6166]))                  
+                :type ("gpr_avl_node" type (:type "class") nil nil))
+                nil [5962 6947])
+            ("add_key" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("vtable" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("gpr_avl_vtable" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6978 7007])
+                    ("node" variable
+                       (:pointer 1
+                        :type ("gpr_avl_node" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7008 7027])
+                    ("key" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [7057 7067])
+                    ("value" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [7068 7080])
+                    ("user_data" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [7081 7097]))                  
+                :type ("gpr_avl_node" type (:type "class") nil nil))
+                nil [6949 7873])
+            ("gpr_avl_add" function
+               (:arguments 
+                  ( ("avl" variable (:type ("gpr_avl" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7895 7907])
+                    ("key" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [7908 7918])
+                    ("value" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [7919 7931])
+                    ("user_data" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [7932 7948]))                  
+                :type ("gpr_avl" type (:type "class") nil nil))
+                nil [7875 8148])
+            ("in_order_head" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("node" variable
+                       (:pointer 1
+                        :type ("gpr_avl_node" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8185 8204]))                  
+                :type ("gpr_avl_node" type (:type "class") nil nil))
+                nil [8150 8284])
+            ("in_order_tail" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("node" variable
+                       (:pointer 1
+                        :type ("gpr_avl_node" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8321 8340]))                  
+                :type ("gpr_avl_node" type (:type "class") nil nil))
+                nil [8286 8422])
+            ("remove_key" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("vtable" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("gpr_avl_vtable" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8456 8485])
+                    ("node" variable
+                       (:pointer 1
+                        :type ("gpr_avl_node" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8518 8537])
+                    ("key" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [8538 8548])
+                    ("user_data" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [8581 8597]))                  
+                :type ("gpr_avl_node" type (:type "class") nil nil))
+                nil [8424 10072])
+            ("gpr_avl_remove" function
+               (:arguments 
+                  ( ("avl" variable (:type ("gpr_avl" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10097 10109])
+                    ("key" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [10110 10120])
+                    ("user_data" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [10121 10137]))                  
+                :type ("gpr_avl" type (:type "class") nil nil))
+                nil [10074 10333])
+            ("gpr_avl_ref" function
+               (:arguments 
+                  ( ("avl" variable (:type ("gpr_avl" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10355 10367])
+                    ("user_data" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [10368 10384]))                  
+                :type ("gpr_avl" type (:type "class") nil nil))
+                nil [10335 10424])
+            ("gpr_avl_unref" function
+               (:arguments 
+                  ( ("avl" variable (:type ("gpr_avl" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10445 10457])
+                    ("user_data" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [10458 10474]))                  
+                :type "void")
+                nil [10426 10525])
+            ("gpr_avl_is_empty" function
+               (:arguments 
+                  ( ("avl" variable (:type ("gpr_avl" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10548 10560]))                  
+                :type "int")
+                nil [10527 10592]))          
+      :file "avl.cc"
+      :pointmax 10593
+      :fsize 10592
+      :lastmodtime '(23062 15968 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("grpc/support/port_platform.h" include (:system-flag t) nil [605 644])
+            ("grpc/support/cpu.h" include (:system-flag t) nil [646 675]))          
+      :file "cpu_iphone.cc"
+      :pointmax 1320
+      :fsize 1319
+      :lastmodtime '(23062 15968 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("GRPC_CORE_LIB_SUPPORT_ENV_H" variable (:constant-flag t) nil [649 676])
+            ("stdio.h" include (:system-flag t) nil [678 696])
+            ("gpr_getenv_silent" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "char"
+                :arguments 
+                  ( ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1494 1511])
+                    ("dst" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1512 1523]))                  
+                :constant-flag t
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [1464 1524])
+            ("gpr_setenv" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1141 1158])
+                    ("value" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1159 1177]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [1125 1178])
+            ("gpr_getenv" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "char"
+                :arguments 
+                  ( ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1026 1043]))                  
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [1009 1044]))          
+      :file "env.h"
+      :pointmax 1596
+      :fsize 1526
+      :lastmodtime '(23079 46126 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("GRPC_CORE_LIB_SUPPORT_ENV_H")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("GRPC_CORE_LIB_SUPPORT_STRING_H" variable (:constant-flag t) nil [652 682])
+            ("stdbool.h" include (:system-flag t) nil [684 704])
+            ("stddef.h" include (:system-flag t) nil [705 724])
+            ("grpc/support/port_platform.h" include (:system-flag t) nil [726 765])
+            ("gpr_is_true" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "bool"
+                :arguments 
+                  ( ("s" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3978 3992]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3961 3993])
+            ("gpr_memrchr" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("s" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3850 3864])
+                    ("c" variable (:type "int") (reparse-symbol arg-sub-list) [3865 3871])
+                    ("n" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3872 3881]))                  
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3832 3882])
+            ("gpr_stricmp" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("a" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3800 3814])
+                    ("b" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3815 3829]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3784 3830])
+            ("gpr_strvec_flatten" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "char"
+                :arguments 
+                  ( ("strs" variable
+                       (:pointer 1
+                        :type ("gpr_strvec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3610 3627])
+                    ("total_length" variable
+                       (:pointer 1
+                        :type ("size_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3628 3649]))                  
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3585 3650])
+            ("gpr_strvec_add" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("strs" variable
+                       (:pointer 1
+                        :type ("gpr_strvec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3445 3462])
+                    ("add" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3463 3473]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3425 3474])
+            ("gpr_strvec_destroy" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("strs" variable
+                       (:pointer 1
+                        :type ("gpr_strvec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3344 3361]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3320 3362])
+            ("gpr_strvec_init" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("strs" variable
+                       (:pointer 1
+                        :type ("gpr_strvec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3301 3318]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3280 3319])
+            ("gpr_strvec" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :typedef ("" type
+                     (:members 
+                        ( ("strs" variable
+                             (:pointer 2
+                              :type "char")
+                              (reparse-symbol classsubparts) [3192 3204])
+                          ("count" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3207 3220])
+                          ("capacity" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3223 3239]))                        
+                      :type "struct")
+                      nil nil))
+                (reparse-symbol extern-c-contents) [3173 3253])
+            ("gpr_string_split" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("input" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3004 3022])
+                    ("sep" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3023 3039])
+                    ("strs" variable
+                       (:pointer 3
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3040 3053])
+                    ("nstrs" variable
+                       (:pointer 1
+                        :type ("size_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3076 3090]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2982 3091])
+            ("gpr_strjoin_sep" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "char"
+                :arguments 
+                  ( ("strs" variable
+                       (:pointer 2
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2886 2904])
+                    ("nstrs" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2905 2918])
+                    ("sep" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2919 2935])
+                    ("total_length" variable
+                       (:pointer 1
+                        :type ("size_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2958 2979]))                  
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2864 2980])
+            ("gpr_strjoin" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "char"
+                :arguments 
+                  ( ("strs" variable
+                       (:pointer 2
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2625 2643])
+                    ("nstrs" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2644 2657])
+                    ("total_length" variable
+                       (:pointer 1
+                        :type ("size_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2658 2679]))                  
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2607 2680])
+            ("gpr_leftpad" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "char"
+                :arguments 
+                  ( ("str" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2398 2414])
+                    ("flag" variable (:type "char") (reparse-symbol arg-sub-list) [2415 2425])
+                    ("length" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2426 2440]))                  
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2380 2441])
+            ("gpr_reverse_bytes" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("str" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2225 2235])
+                    ("len" variable (:type "int") (reparse-symbol arg-sub-list) [2236 2244]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2202 2245])
+            ("gpr_parse_nonnegative_int" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("value" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2152 2170]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2122 2171])
+            ("int64_ttoa" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("value" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2016 2030])
+                    ("output" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2031 2044]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2001 2045])
+            ("GPR_INT64TOA_MIN_BUFSIZE" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [1692 1716])
+            ("gpr_ltoa" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("value" variable (:type "long") (reparse-symbol arg-sub-list) [1609 1620])
+                    ("output" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1621 1634]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [1596 1635])
+            ("GPR_LTOA_MIN_BUFSIZE" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [1388 1408])
+            ("gpr_parse_bytes_to_uint32" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("data" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1254 1271])
+                    ("length" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1272 1286])
+                    ("result" variable
+                       (:pointer 1
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1317 1334]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [1224 1335])
+            ("gpr_dump" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "char"
+                :arguments 
+                  ( ("buf" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1080 1096])
+                    ("len" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1097 1108])
+                    ("flags" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1109 1124]))                  
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [1065 1125])
+            ("GPR_DUMP_ASCII" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [914 928])
+            ("GPR_DUMP_HEX" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [882 894]))          
+      :file "string.h"
+      :pointmax 4067
+      :fsize 3998
+      :lastmodtime '(23079 46126 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("GRPC_CORE_LIB_SUPPORT_STRING_H")
+          ("GPR_DUMP_ASCII" . ((number "0x00000002" 929 . 939)))
+          ("GPR_INT64TOA_MIN_BUFSIZE" . ((semantic-list "(3 * sizeof(int64_t))" 1717 . 1738)))
+          ("GPR_DUMP_HEX" . ((number "0x00000001" 895 . 905)))
+          ("GPR_LTOA_MIN_BUFSIZE" . ((semantic-list "(3 * sizeof(long))" 1409 . 1427)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("grpc/support/alloc.h" include (:system-flag t) nil [605 636])
+            ("grpc/support/atm.h" include (:system-flag t) nil [637 666])
+            ("grpc/support/log.h" include (:system-flag t) nil [667 696])
+            ("grpc/support/port_platform.h" include (:system-flag t) nil [697 736])
+            ("src/core/lib/support/env.h" include nil nil [738 775])
+            ("src/core/lib/support/string.h" include nil nil [776 816])
+            ("stdio.h" include (:system-flag t) nil [818 836])
+            ("string.h" include (:system-flag t) nil [837 856])
+            ("gpr_default_log" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("args" variable
+                       (:pointer 1
+                        :type ("gpr_log_func_args" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [879 903]))                  
+                :type "void")
+                nil [858 904])
+            ("g_log_func" variable
+               (:typemodifiers ("static")
+                :default-value "(gpr_atm)gpr_default_log"
+                :type ("gpr_atm" type (:type "class") nil nil))
+                nil [905 958])
+            ("g_min_severity_to_print" variable
+               (:typemodifiers ("static")
+                :default-value "GPR_LOG_VERBOSITY_UNSET"
+                :type ("gpr_atm" type (:type "class") nil nil))
+                nil [959 1024])
+            ("gpr_log_severity_string" function
+               (:pointer 1
+                :constant-flag t
+                :arguments 
+                  ( ("severity" variable (:type ("gpr_log_severity" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1062 1088]))                  
+                :type "char")
+                nil [1026 1312])
+            ("gpr_log_message" function
+               (:arguments 
+                  ( ("file" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1335 1352])
+                    ("line" variable (:type "int") (reparse-symbol arg-sub-list) [1353 1362])
+                    ("severity" variable (:type ("gpr_log_severity" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1363 1389])
+                    ("message" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1411 1431]))                  
+                :type "void")
+                nil [1314 1764])
+            ("gpr_set_log_verbosity" function
+               (:arguments 
+                  ( ("min_severity_to_print" variable (:type ("gpr_log_severity" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1793 1832]))                  
+                :type "void")
+                nil [1766 1949])
+            ("gpr_log_verbosity_init" function (:type "void") nil [1951 2891])
+            ("gpr_set_log_function" function
+               (:arguments 
+                  ( ("f" variable (:type ("gpr_log_func" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2919 2934]))                  
+                :type "void")
+                nil [2893 3015]))          
+      :file "log.cc"
+      :pointmax 3016
+      :fsize 3015
+      :lastmodtime '(23079 46126 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("GRPC_CORE_LIB_SUPPORT_MANUAL_CONSTRUCTOR_H" variable (:constant-flag t) nil [664 706])
+            ("stddef.h" include (:system-flag t) nil [765 784])
+            ("stdlib.h" include (:system-flag t) nil [785 804])
+            ("new" include (:system-flag t) nil [805 819])
+            ("type_traits" include (:system-flag t) nil [820 842])
+            ("utility" include (:system-flag t) nil [843 861])
+            ("grpc/support/log.h" include (:system-flag t) nil [863 892])
+            ("grpc_core" type
+               (:members 
+                  ( ("manual_ctor_impl" type
+                       (:members 
+                          ( ("is_one_of" type
+                               (:prototype t
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [1178 1194])
+                            ("is_one_of" type
+                               (:template 
+                                  ( ("Member" type (:type "class") nil nil))                                  
+                                :type "class"
+                                :members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [1558 1565])
+                                    ("value" variable
+                                       (:constant-flag t
+                                        :default-value "false"
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [1585 1610]))                                  
+                                :template-specifier 
+                                  ( ("Member" type nil nil nil))                                  )
+                                (reparse-symbol namespacesubparts) [1507 1613])
+                            ("max_size_of" type
+                               (:prototype t
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [1741 1759])
+                            ("max_size_of" type
+                               (:template 
+                                  ( ("A" type (:type "class") nil nil))                                  
+                                :type "class"
+                                :members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [1804 1811]))                                  
+                                :template-specifier 
+                                  ( ("A" type nil nil nil))                                  )
+                                (reparse-symbol namespacesubparts) [1761 1865])
+                            ("max_align_of" type
+                               (:prototype t
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [2272 2291])
+                            ("max_align_of" type
+                               (:template 
+                                  ( ("A" type (:type "class") nil nil))                                  
+                                :type "class"
+                                :members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [2337 2344])
+                                    ("value" variable
+                                       (:constant-flag t
+                                        :default-value "alignof(A)"
+                                        :type ("size_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [2364 2396]))                                  
+                                :template-specifier 
+                                  ( ("A" type nil nil nil))                                  )
+                                (reparse-symbol namespacesubparts) [2293 2399]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1012 2685])
+                    ("PolymorphicManualConstructor" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [2805 2812])
+                            ("get" function
+                               (:pointer 1
+                                :type ("BaseType" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3101 3165])
+                            ("get" function
+                               (:methodconst-flag t
+                                :pointer 1
+                                :constant-flag t
+                                :type ("BaseType" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3168 3256])
+                            ("->" function
+                               (:operator-flag t
+                                :pointer 1
+                                :type ("BaseType" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3260 3300])
+                            ("->" function
+                               (:methodconst-flag t
+                                :operator-flag t
+                                :pointer 1
+                                :constant-flag t
+                                :type ("BaseType" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3303 3355])
+                            ("" function
+                               (:operator-flag t
+                                :function-pointer t
+                                :type ("BaseType" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3359 3399])
+                            ("" function
+                               (:methodconst-flag t
+                                :operator-flag t
+                                :function-pointer t
+                                :constant-flag t
+                                :type ("BaseType" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3402 3454])
+                            ("Init" function
+                               (:template 
+                                  ( ("DerivedType" type (:type "class") nil nil))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [3458 3549])
+                            ("Init" function
+                               (:arguments 
+                                  ( ("" variable
+                                       (:reference 1
+                                        :type ("Ts" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3948 3952])
+                                    ("" variable (:type ("args" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3956 3961]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [3938 4037])
+                            ("Init" function
+                               (:template 
+                                  ( ("DerivedType" type (:type "class") nil nil))                                  
+                                :type "void"
+                                :arguments 
+                                  ( ("x" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("DerivedType" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4246 4267]))                                  )
+                                (reparse-symbol classsubparts) [4205 4319])
+                            ("Init" function
+                               (:template 
+                                  ( ("DerivedType" type (:type "class") nil nil))                                  
+                                :type "void"
+                                :arguments 
+                                  ( ("" variable
+                                       (:reference 1
+                                        :type ("DerivedType" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4363 4376])
+                                    ("" variable (:type ("x" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4377 4379]))                                  )
+                                (reparse-symbol classsubparts) [4322 4442])
+                            ("Destroy" function (:type "void") (reparse-symbol classsubparts) [4446 4484])
+                            ("private" label nil (reparse-symbol classsubparts) [4487 4495])
+                            ("FinishInit" function
+                               (:template 
+                                  ( ("DerivedType" type (:type "class") nil nil))                                  
+                                :type "void"
+                                :arguments 
+                                  ( ("p" variable
+                                       (:pointer 1
+                                        :type ("DerivedType" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4545 4560]))                                  )
+                                (reparse-symbol classsubparts) [4498 4807])
+                            ("space_" variable (:type ("type" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4988 5006]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [2767 5009])
+                    ("ManualConstructor" type
+                       (:template 
+                          ( ("Type" type (:type "class") nil nil))                          
+                        :type "class"
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [5063 5070])
+                            ("get" function
+                               (:pointer 1
+                                :type ("Type" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [5359 5415])
+                            ("get" function
+                               (:methodconst-flag t
+                                :pointer 1
+                                :constant-flag t
+                                :type ("Type" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [5418 5492])
+                            ("->" function
+                               (:operator-flag t
+                                :pointer 1
+                                :type ("Type" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [5496 5532])
+                            ("->" function
+                               (:methodconst-flag t
+                                :operator-flag t
+                                :pointer 1
+                                :constant-flag t
+                                :type ("Type" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [5535 5583])
+                            ("" function
+                               (:operator-flag t
+                                :function-pointer t
+                                :type ("Type" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [5587 5623])
+                            ("" function
+                               (:methodconst-flag t
+                                :operator-flag t
+                                :function-pointer t
+                                :constant-flag t
+                                :type ("Type" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [5626 5674])
+                            ("Init" function (:type "void") (reparse-symbol classsubparts) [5678 5713])
+                            ("Init" function
+                               (:arguments 
+                                  ( ("" variable
+                                       (:reference 1
+                                        :type ("Ts" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [6093 6097])
+                                    ("" variable (:type ("args" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6101 6106]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [6083 6163])
+                            ("Init" function
+                               (:arguments 
+                                  ( ("x" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Type" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [6341 6355]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [6331 6382])
+                            ("Init" function
+                               (:arguments 
+                                  ( ("" variable
+                                       (:reference 1
+                                        :type ("Type" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [6395 6401])
+                                    ("" variable (:type ("x" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6402 6404]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [6385 6442])
+                            ("Destroy" function (:type "void") (reparse-symbol classsubparts) [6446 6480])
+                            ("private" label nil (reparse-symbol classsubparts) [6483 6491])
+                            ("space_" variable (:type ("type" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6554 6566]))                          )
+                        (reparse-symbol namespacesubparts) [5011 6569]))                  
+                :type "namespace")
+                nil [894 6572]))          
+      :file "manual_constructor.h"
+      :pointmax 6605
+      :fsize 6604
+      :lastmodtime '(23062 15968 0 0)
+      :unmatched-syntax '((punctuation 6553 . 6554) (punctuation 6552 . 6553) (punctuation 6551 . 6552) (semantic-list 6545 . 6551) (symbol 6538 . 6545) (punctuation 6536 . 6537) (semantic-list 6530 . 6536) (SIZEOF 6524 . 6530) (punctuation 6523 . 6524) (symbol 6508 . 6523) (punctuation 6507 . 6508) (punctuation 6506 . 6507) (symbol 6503 . 6506) (TYPENAME 6494 . 6502) (punctuation 6400 . 6401) (punctuation 6099 . 6100) (punctuation 6098 . 6099) (punctuation 6097 . 6098) (punctuation 6096 . 6097) (punctuation 6079 . 6080) (symbol 6077 . 6079) (punctuation 6075 . 6076) (punctuation 6074 . 6075) (punctuation 6073 . 6074) (TYPENAME 6065 . 6073) (punctuation 6064 . 6065) (TEMPLATE 6055 . 6063) (punctuation 4987 . 4988) (punctuation 4986 . 4987) (punctuation 4985 . 4986) (symbol 4980 . 4985) (punctuation 4979 . 4980) (punctuation 4978 . 4979) (punctuation 4977 . 4978) (punctuation 4976 . 4977) (punctuation 4975 . 4976) (punctuation 4974 . 4975) (symbol 4962 . 4974) (punctuation 4961 . 4962) (symbol 4949 . 4961) (punctuation 4948 . 4949) (punctuation 4947 . 4948) (symbol 4931 . 4947) (punctuation 4930 . 4931) (punctuation 4929 . 4930) (symbol 4920 . 4929) (punctuation 4912 . 4913) (symbol 4907 . 4912) (punctuation 4906 . 4907) (punctuation 4905 . 4906) (punctuation 4904 . 4905) (punctuation 4903 . 4904) (punctuation 4902 . 4903) (punctuation 4901 . 4902) (symbol 4889 . 4901) (punctuation 4888 . 4889) (symbol 4877 . 4888) (punctuation 4876 . 4877) (punctuation 4875 . 4876) (symbol 4859 . 4875) (punctuation 4858 . 4859) (punctuation 4857 . 4858) (symbol 4848 . 4857) (punctuation 4840 . 4841) (symbol 4825 . 4840) (punctuation 4824 . 4825) (punctuation 4823 . 4824) (symbol 4820 . 4823) (TYPENAME 4811 . 4819) (punctuation 4375 . 4376) (punctuation 3954 . 3955) (punctuation 3953 . 3954) (punctuation 3952 . 3953) (punctuation 3951 . 3952) (punctuation 3934 . 3935) (symbol 3932 . 3934) (punctuation 3930 . 3931) (punctuation 3929 . 3930) (punctuation 3928 . 3929) (TYPENAME 3920 . 3928) (punctuation 3918 . 3919) (symbol 3907 . 3918) (CLASS 3901 . 3906) (punctuation 3900 . 3901) (TEMPLATE 3891 . 3899) (punctuation 2765 . 2766) (symbol 2753 . 2765) (punctuation 2751 . 2752) (punctuation 2750 . 2751) (punctuation 2749 . 2750) (CLASS 2744 . 2749) (punctuation 2742 . 2743) (symbol 2734 . 2742) (CLASS 2728 . 2733) (punctuation 2727 . 2728) (TEMPLATE 2718 . 2726) (punctuation 2681 . 2682) (semantic-list 2460 . 2681) (punctuation 2458 . 2459) (punctuation 2457 . 2458) (punctuation 2456 . 2457) (punctuation 2455 . 2456) (symbol 2454 . 2455) (punctuation 2452 . 2453) (symbol 2451 . 2452) (punctuation 2450 . 2451) (symbol 2438 . 2450) (CLASS 2432 . 2437) (punctuation 2430 . 2431) (symbol 2429 . 2430) (punctuation 2427 . 2428) (punctuation 2426 . 2427) (punctuation 2425 . 2426) (CLASS 2420 . 2425) (punctuation 2418 . 2419) (symbol 2417 . 2418) (CLASS 2411 . 2416) (punctuation 2410 . 2411) (TEMPLATE 2401 . 2409) (symbol 2354 . 2363) (STATIC 2347 . 2353) (punctuation 2270 . 2271) (symbol 2265 . 2270) (punctuation 2263 . 2264) (punctuation 2262 . 2263) (punctuation 2261 . 2262) (CLASS 2256 . 2261) (punctuation 2255 . 2256) (TEMPLATE 2246 . 2254) (punctuation 2142 . 2143) (semantic-list 1925 . 2142) (punctuation 1923 . 1924) (punctuation 1922 . 1923) (punctuation 1921 . 1922) (punctuation 1920 . 1921) (symbol 1919 . 1920) (punctuation 1917 . 1918) (symbol 1916 . 1917) (punctuation 1915 . 1916) (symbol 1904 . 1915) (CLASS 1898 . 1903) (punctuation 1896 . 1897) (symbol 1895 . 1896) (punctuation 1893 . 1894) (punctuation 1892 . 1893) (punctuation 1891 . 1892) (CLASS 1886 . 1891) (punctuation 1884 . 1885) (symbol 1883 . 1884) (CLASS 1877 . 1882) (punctuation 1876 . 1877) (TEMPLATE 1867 . 1875) (punctuation 1861 . 1862) (semantic-list 1858 . 1861) (SIZEOF 1852 . 1858) (punctuation 1850 . 1851) (symbol 1844 . 1849) (symbol 1837 . 1843) (CONST 1831 . 1836) (symbol 1821 . 1830) (STATIC 1814 . 1820) (punctuation 1739 . 1740) (symbol 1734 . 1739) (punctuation 1732 . 1733) (punctuation 1731 . 1732) (punctuation 1730 . 1731) (CLASS 1725 . 1730) (punctuation 1724 . 1725) (TEMPLATE 1715 . 1723) (symbol 1575 . 1584) (STATIC 1568 . 1574) (punctuation 1504 . 1505) (semantic-list 1419 . 1504) (punctuation 1417 . 1418) (punctuation 1416 . 1417) (punctuation 1415 . 1416) (punctuation 1414 . 1415) (symbol 1410 . 1414) (punctuation 1408 . 1409) (symbol 1407 . 1408) (punctuation 1405 . 1406) (symbol 1399 . 1405) (punctuation 1398 . 1399) (symbol 1389 . 1398) (CLASS 1383 . 1388) (punctuation 1381 . 1382) (symbol 1377 . 1381) (punctuation 1375 . 1376) (punctuation 1374 . 1375) (punctuation 1373 . 1374) (CLASS 1368 . 1373) (punctuation 1366 . 1367) (symbol 1365 . 1366) (CLASS 1359 . 1364) (punctuation 1357 . 1358) (symbol 1351 . 1357) (CLASS 1345 . 1350) (punctuation 1344 . 1345) (TEMPLATE 1335 . 1343) (punctuation 1332 . 1333) (semantic-list 1276 . 1332) (punctuation 1274 . 1275) (punctuation 1273 . 1274) (punctuation 1272 . 1273) (punctuation 1271 . 1272) (symbol 1267 . 1271) (punctuation 1265 . 1266) (symbol 1259 . 1265) (punctuation 1257 . 1258) (symbol 1251 . 1257) (punctuation 1250 . 1251) (symbol 1241 . 1250) (CLASS 1235 . 1240) (punctuation 1233 . 1234) (symbol 1229 . 1233) (punctuation 1227 . 1228) (punctuation 1226 . 1227) (punctuation 1225 . 1226) (CLASS 1220 . 1225) (punctuation 1218 . 1219) (symbol 1212 . 1218) (CLASS 1206 . 1211) (punctuation 1205 . 1206) (TEMPLATE 1196 . 1204) (punctuation 1176 . 1177) (symbol 1172 . 1176) (punctuation 1170 . 1171) (punctuation 1169 . 1170) (punctuation 1168 . 1169) (CLASS 1163 . 1168) (punctuation 1161 . 1162) (symbol 1155 . 1161) (CLASS 1149 . 1154) (punctuation 1148 . 1149) (TEMPLATE 1139 . 1147))
+      :lexical-table 
+        '(("GRPC_CORE_LIB_SUPPORT_MANUAL_CONSTRUCTOR_H")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("GRPC_CORE_LIB_SUPPORT_MEMORY_H" variable (:constant-flag t) nil [652 682])
+            ("grpc/support/alloc.h" include (:system-flag t) nil [684 715])
+            ("limits" include (:system-flag t) nil [717 734])
+            ("memory" include (:system-flag t) nil [735 752])
+            ("utility" include (:system-flag t) nil [753 771])
+            ("grpc_core" type
+               (:members 
+                  ( ("New" function
+                       (:pointer 1
+                        :typemodifiers ("inline")
+                        :arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :type ("Args" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [920 926])
+                            ("" variable (:type ("args" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [930 935]))                          
+                        :type ("T" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [906 1023])
+                    ("Delete" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type "void"
+                        :arguments 
+                          ( ("p" variable
+                               (:pointer 1
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1139 1144]))                          
+                        :typemodifiers ("inline"))
+                        (reparse-symbol namespacesubparts) [1098 1174])
+                    ("DefaultDelete" type
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type "class"
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [1221 1228])
+                            ("()" function
+                               (:operator-flag t
+                                :arguments 
+                                  ( ("p" variable
+                                       (:pointer 1
+                                        :type ("T" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1247 1252]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1231 1267]))                          )
+                        (reparse-symbol namespacesubparts) [1176 1270])
+                    ("std::unique_ptr" variable (:type "int") (reparse-symbol namespacesubparts) [1349 1377])
+                    ("MakeUnique" function
+                       (:typemodifiers ("inline")
+                        :arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :type ("Args" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1450 1456])
+                            ("" variable (:type ("args" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1460 1465]))                          
+                        :type ("UniquePtr" type
+                             (:template-specifier 
+                                ( ("T" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol namespacesubparts) [1419 1529])
+                    ("Allocator" type
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type "class"
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [1615 1622])
+                            ("value_type" type
+                               (:typedef ("T" type (:type "class") nil nil)
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [1625 1646])
+                            ("pointer" type
+                               (:typedef ("T" type (:type "class") nil nil)
+                                :pointer 1
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [1649 1668])
+                            ("const_pointer" type
+                               (:typedef ("T" type (:type "class") nil nil)
+                                :pointer 1
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [1671 1702])
+                            ("reference" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1713 1726])
+                            ("const_reference" variable
+                               (:constant-flag t
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1737 1762])
+                            ("size_type" type
+                               (:typedef ("std::size_t" type (:type "class") nil nil)
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [1765 1795])
+                            ("difference_type" type
+                               (:typedef ("std::ptrdiff_t" type (:type "class") nil nil)
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [1798 1837])
+                            ("propagate_on_container_move_assignment" type
+                               (:typedef ("std::false_type" type (:type "class") nil nil)
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [1840 1903])
+                            ("rebind" type
+                               (:template 
+                                  ( ("U" type (:type "class") nil nil))                                  
+                                :type "struct"
+                                :members 
+                                  ( ("other" type
+                                       (:typedef ("Allocator" type
+                                             (:template-specifier 
+                                                ( ("U" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil)
+                                        :type "typedef")
+                                        (reparse-symbol classsubparts) [1947 1974]))                                  )
+                                (reparse-symbol classsubparts) [1906 1979])
+                            ("is_always_equal" type
+                               (:typedef ("std::true_type" type (:type "class") nil nil)
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [1982 2021])
+                            ("address" function
+                               (:methodconst-flag t
+                                :arguments 
+                                  ( ("x" variable (:type ("reference" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2041 2053]))                                  
+                                :type ("pointer" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2025 2074])
+                            ("address" function
+                               (:methodconst-flag t
+                                :arguments 
+                                  ( ("x" variable (:type ("const_reference" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2099 2117]))                                  
+                                :type ("const_pointer" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2077 2138])
+                            ("allocate" function
+                               (:arguments 
+                                  ( ("n" variable (:type ("std::size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2158 2172])
+                                    ("hint" variable
+                                       (:default-value "nullptr"
+                                        :type ("std::allocator::const_pointer" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2192 2242]))                                  
+                                :type ("pointer" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2141 2309])
+                            ("deallocate" function
+                               (:arguments 
+                                  ( ("p" variable
+                                       (:pointer 1
+                                        :type ("T" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2328 2333])
+                                    ("n" variable (:type ("std::size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2334 2348]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2312 2365])
+                            ("max_size" function
+                               (:methodconst-flag t
+                                :type ("size_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2368 2468])
+                            ("construct" function
+                               (:arguments 
+                                  ( ("p" variable (:type ("pointer" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2486 2496])
+                                    ("val" variable (:type ("const_reference" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2497 2517]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2471 2544])
+                            ("construct" function
+                               (:arguments 
+                                  ( ("p" variable
+                                       (:pointer 1
+                                        :type ("U" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2598 2603])
+                                    ("" variable
+                                       (:reference 1
+                                        :type ("Args" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2604 2610])
+                                    ("" variable (:type ("args" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2614 2619]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2583 2678])
+                            ("destroy" function
+                               (:arguments 
+                                  ( ("p" variable (:type ("pointer" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2694 2704]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2681 2717])
+                            ("destroy" function
+                               (:template 
+                                  ( ("U" type (:type "class") nil nil))                                  
+                                :type "void"
+                                :arguments 
+                                  ( ("p" variable
+                                       (:pointer 1
+                                        :type ("U" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2754 2759]))                                  )
+                                (reparse-symbol classsubparts) [2720 2778]))                          )
+                        (reparse-symbol namespacesubparts) [1577 2781]))                  
+                :type "namespace")
+                nil [773 2784]))          
+      :file "memory.h"
+      :pointmax 2854
+      :fsize 2853
+      :lastmodtime '(23062 15968 0 0)
+      :unmatched-syntax '((punctuation 2612 . 2613) (punctuation 2611 . 2612) (punctuation 2610 . 2611) (punctuation 2609 . 2610) (punctuation 2579 . 2580) (symbol 2575 . 2579) (punctuation 2573 . 2574) (punctuation 2572 . 2573) (punctuation 2571 . 2572) (CLASS 2566 . 2571) (punctuation 2564 . 2565) (symbol 2563 . 2564) (CLASS 2557 . 2562) (punctuation 2556 . 2557) (TEMPLATE 2547 . 2555) (TYPEDEF 1729 . 1736) (TYPEDEF 1705 . 1712) (punctuation 1458 . 1459) (punctuation 1457 . 1458) (punctuation 1456 . 1457) (punctuation 1455 . 1456) (punctuation 1417 . 1418) (symbol 1413 . 1417) (punctuation 1411 . 1412) (punctuation 1410 . 1411) (punctuation 1409 . 1410) (TYPENAME 1401 . 1409) (punctuation 1399 . 1400) (symbol 1398 . 1399) (TYPENAME 1389 . 1397) (punctuation 1388 . 1389) (TEMPLATE 1379 . 1387) (punctuation 1347 . 1348) (symbol 1337 . 1346) (USING 1331 . 1336) (punctuation 1329 . 1330) (punctuation 1328 . 1329) (symbol 1327 . 1328) (punctuation 1326 . 1327) (symbol 1313 . 1326) (punctuation 1311 . 1312) (symbol 1303 . 1310) (TYPENAME 1294 . 1302) (punctuation 1292 . 1293) (symbol 1291 . 1292) (TYPENAME 1282 . 1290) (punctuation 1281 . 1282) (TEMPLATE 1272 . 1280) (punctuation 928 . 929) (punctuation 927 . 928) (punctuation 926 . 927) (punctuation 925 . 926) (punctuation 904 . 905) (symbol 900 . 904) (punctuation 898 . 899) (punctuation 897 . 898) (punctuation 896 . 897) (TYPENAME 888 . 896) (punctuation 886 . 887) (symbol 885 . 886) (TYPENAME 876 . 884) (punctuation 875 . 876) (TEMPLATE 866 . 874) (punctuation 1417 . 1418) (symbol 1413 . 1417) (punctuation 1411 . 1412) (punctuation 1410 . 1411) (punctuation 1409 . 1410) (TYPENAME 1401 . 1409) (punctuation 1399 . 1400) (symbol 1398 . 1399) (TYPENAME 1389 . 1397) (punctuation 1388 . 1389) (TEMPLATE 1379 . 1387) (punctuation 1347 . 1348) (symbol 1337 . 1346) (USING 1331 . 1336) (punctuation 1329 . 1330) (punctuation 1328 . 1329) (symbol 1327 . 1328) (punctuation 1326 . 1327) (symbol 1313 . 1326) (punctuation 1311 . 1312) (symbol 1303 . 1310) (TYPENAME 1294 . 1302) (punctuation 1292 . 1293) (symbol 1291 . 1292) (TYPENAME 1282 . 1290) (punctuation 1281 . 1282) (TEMPLATE 1272 . 1280) (punctuation 928 . 929) (punctuation 927 . 928) (punctuation 926 . 927) (punctuation 925 . 926) (punctuation 904 . 905) (symbol 900 . 904) (punctuation 898 . 899) (punctuation 897 . 898) (punctuation 896 . 897) (TYPENAME 888 . 896) (punctuation 886 . 887) (symbol 885 . 886) (TYPENAME 876 . 884) (punctuation 875 . 876) (TEMPLATE 866 . 874))
+      :lexical-table 
+        '(("GRPC_CORE_LIB_SUPPORT_MEMORY_H")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("GRPC_CORE_LIB_SUPPORT_MURMUR_HASH_H" variable (:constant-flag t) nil [657 692])
+            ("grpc/support/port_platform.h" include (:system-flag t) nil [694 733])
+            ("stddef.h" include (:system-flag t) nil [735 754])
+            ("gpr_murmur_hash3" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("uint32_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("key" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [865 881])
+                    ("len" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [882 893])
+                    ("seed" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [894 908]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [839 909]))          
+      :file "murmur_hash.h"
+      :pointmax 989
+      :fsize 919
+      :lastmodtime '(23079 46126 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("GRPC_CORE_LIB_SUPPORT_MURMUR_HASH_H")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("_GNU_SOURCE" variable (:constant-flag t) nil [633 644])
+            ("grpc/support/port_platform.h" include (:system-flag t) nil [671 710]))          
+      :file "cpu_linux.cc"
+      :pointmax 1904
+      :fsize 1903
+      :lastmodtime '(23062 15968 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("_GNU_SOURCE")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("grpc/support/host_port.h" include (:system-flag t) nil [605 640])
+            ("string.h" include (:system-flag t) nil [642 661])
+            ("grpc/support/alloc.h" include (:system-flag t) nil [663 694])
+            ("grpc/support/log.h" include (:system-flag t) nil [695 724])
+            ("grpc/support/string_util.h" include (:system-flag t) nil [725 762])
+            ("src/core/lib/support/string.h" include nil nil [763 803])
+            ("gpr_join_host_port" function
+               (:arguments 
+                  ( ("out" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [828 839])
+                    ("host" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [840 857])
+                    ("port" variable (:type "int") (reparse-symbol arg-sub-list) [858 867]))                  
+                :type "int")
+                nil [805 1144])
+            ("gpr_split_host_port" function
+               (:arguments 
+                  ( ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1170 1187])
+                    ("host" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1188 1200])
+                    ("port" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1201 1213]))                  
+                :type "int")
+                nil [1146 2711]))          
+      :file "host_port.cc"
+      :pointmax 2712
+      :fsize 2711
+      :lastmodtime '(23062 15968 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("grpc/support/alloc.h" include (:system-flag t) nil [605 636])
+            ("grpc/support/log.h" include (:system-flag t) nil [638 667])
+            ("grpc/support/port_platform.h" include (:system-flag t) nil [668 707])
+            ("stdlib.h" include (:system-flag t) nil [708 727])
+            ("string.h" include (:system-flag t) nil [728 747])
+            ("src/core/lib/profiling/timers.h" include nil nil [748 790])
+            ("zalloc_with_calloc" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("sz" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [824 834]))                  
+                :type "void")
+                nil [792 860])
+            ("zalloc_with_gpr_malloc" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("sz" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [898 908]))                  
+                :type "void")
+                nil [862 972])
+            ("g_alloc_functions" variable
+               (:typemodifiers ("static")
+                :default-value "{malloc, zalloc_with_calloc,
+                                                     realloc, free}"
+                :type ("gpr_allocation_functions" type (:type "class") nil nil))
+                nil [974 1123])
+            ("gpr_get_allocation_functions" function (:type ("gpr_allocation_functions" type (:type "class") nil nil)) nil [1125 1212])
+            ("gpr_set_allocation_functions" function
+               (:arguments 
+                  ( ("functions" variable (:type ("gpr_allocation_functions" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1248 1283]))                  
+                :type "void")
+                nil [1214 1551])
+            ("gpr_malloc" function
+               (:pointer 1
+                :arguments 
+                  ( ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1570 1582]))                  
+                :type "void")
+                nil [1553 1782])
+            ("gpr_zalloc" function
+               (:pointer 1
+                :arguments 
+                  ( ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1801 1813]))                  
+                :type "void")
+                nil [1784 2013])
+            ("gpr_free" function
+               (:arguments 
+                  ( ("p" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2029 2037]))                  
+                :type "void")
+                nil [2015 2139])
+            ("gpr_realloc" function
+               (:pointer 1
+                :arguments 
+                  ( ("p" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2159 2167])
+                    ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2168 2180]))                  
+                :type "void")
+                nil [2141 2395])
+            ("gpr_malloc_aligned" function
+               (:pointer 1
+                :arguments 
+                  ( ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2422 2434])
+                    ("alignment_log" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2435 2456]))                  
+                :type "void")
+                nil [2397 2701])
+            ("gpr_free_aligned" function
+               (:arguments 
+                  ( ("ptr" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2725 2735]))                  
+                :type "void")
+                nil [2703 2768]))          
+      :file "alloc.cc"
+      :pointmax 2769
+      :fsize 2768
+      :lastmodtime '(23062 15968 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("string.h" include (:system-flag t) nil [650 669])
+            ("grpc/support/thd.h" include (:system-flag t) nil [671 700])
+            ("" type
+               (:members 
+                  ( ("GPR_THD_JOINABLE" variable
+                       (:constant-flag t
+                        :default-value (728 729)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [709 729]))                  
+                :type "enum")
+                nil [702 732])
+            ("gpr_thd_options_default" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [774 779]))                  
+                :type ("gpr_thd_options" type (:type "class") nil nil))
+                nil [734 868])
+            ("gpr_thd_options_set_detached" function
+               (:arguments 
+                  ( ("options" variable
+                       (:pointer 1
+                        :type ("gpr_thd_options" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [904 929]))                  
+                :type "void")
+                nil [870 972])
+            ("gpr_thd_options_set_joinable" function
+               (:arguments 
+                  ( ("options" variable
+                       (:pointer 1
+                        :type ("gpr_thd_options" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1008 1033]))                  
+                :type "void")
+                nil [974 1075])
+            ("gpr_thd_options_is_detached" function
+               (:arguments 
+                  ( ("options" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("gpr_thd_options" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1109 1140]))                  
+                :type "int")
+                nil [1077 1221])
+            ("gpr_thd_options_is_joinable" function
+               (:arguments 
+                  ( ("options" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("gpr_thd_options" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1255 1286]))                  
+                :type "int")
+                nil [1223 1382]))          
+      :file "thd.cc"
+      :pointmax 1383
+      :fsize 1382
+      :lastmodtime '(23062 15968 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("grpc/support/atm.h" include (:system-flag t) nil [666 695])
+            ("grpc/support/log.h" include (:system-flag t) nil [696 725])
+            ("grpc/support/sync.h" include (:system-flag t) nil [726 756])
+            ("assert.h" include (:system-flag t) nil [758 777])
+            ("" type
+               (:members 
+                  ( ("event_sync_partitions" variable
+                       (:constant-flag t
+                        :default-value (906 908)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [882 908]))                  
+                :type "enum")
+                nil [875 911])
+            ("sync_array" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :type ("sync_array_s" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [979 1070])
+            ("sync_array_s" type
+               (:members 
+                  ( ("mu" variable (:type ("gpr_mu" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1010 1020])
+                    ("cv" variable (:type ("gpr_cv" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1023 1033]))                  
+                :type "struct")
+                nil [979 1070])
+            ("event_once" variable
+               (:typemodifiers ("static")
+                :default-value "GPR_ONCE_INIT"
+                :type ("gpr_once" type (:type "class") nil nil))
+                nil [1137 1180])
+            ("event_initialize" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1210 1215]))                  
+                :type "void")
+                nil [1181 1353])
+            ("hash" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("ev" variable
+                       (:pointer 1
+                        :type ("gpr_event" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1435 1449]))                  
+                :type ("sync_array_s" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [1402 1516])
+            ("gpr_event_init" function
+               (:arguments 
+                  ( ("ev" variable
+                       (:pointer 1
+                        :type ("gpr_event" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1538 1552]))                  
+                :type "void")
+                nil [1518 1622])
+            ("gpr_event_set" function
+               (:arguments 
+                  ( ("ev" variable
+                       (:pointer 1
+                        :type ("gpr_event" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1643 1657])
+                    ("value" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [1658 1670]))                  
+                :type "void")
+                nil [1624 1917])
+            ("gpr_event_get" function
+               (:pointer 1
+                :arguments 
+                  ( ("ev" variable
+                       (:pointer 1
+                        :type ("gpr_event" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1939 1953]))                  
+                :type "void")
+                nil [1919 2003])
+            ("gpr_event_wait" function
+               (:pointer 1
+                :arguments 
+                  ( ("ev" variable
+                       (:pointer 1
+                        :type ("gpr_event" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2026 2040])
+                    ("abs_deadline" variable (:type ("gpr_timespec" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2041 2067]))                  
+                :type "void")
+                nil [2005 2404])
+            ("gpr_ref_init" function
+               (:arguments 
+                  ( ("r" variable
+                       (:pointer 1
+                        :type ("gpr_refcount" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2424 2440])
+                    ("n" variable (:type "int") (reparse-symbol arg-sub-list) [2441 2447]))                  
+                :type "void")
+                nil [2406 2484])
+            ("gpr_ref" function
+               (:arguments 
+                  ( ("r" variable
+                       (:pointer 1
+                        :type ("gpr_refcount" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2499 2515]))                  
+                :type "void")
+                nil [2486 2563])
+            ("gpr_ref_non_zero" function
+               (:arguments 
+                  ( ("r" variable
+                       (:pointer 1
+                        :type ("gpr_refcount" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2587 2603]))                  
+                :type "void")
+                nil [2565 2732])
+            ("gpr_refn" function
+               (:arguments 
+                  ( ("r" variable
+                       (:pointer 1
+                        :type ("gpr_refcount" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2748 2764])
+                    ("n" variable (:type "int") (reparse-symbol arg-sub-list) [2765 2771]))                  
+                :type "void")
+                nil [2734 2821])
+            ("gpr_unref" function
+               (:arguments 
+                  ( ("r" variable
+                       (:pointer 1
+                        :type ("gpr_refcount" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2837 2853]))                  
+                :type "int")
+                nil [2823 2960])
+            ("gpr_ref_is_unique" function
+               (:arguments 
+                  ( ("r" variable
+                       (:pointer 1
+                        :type ("gpr_refcount" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2984 3000]))                  
+                :type "int")
+                nil [2962 3047])
+            ("gpr_stats_init" function
+               (:arguments 
+                  ( ("c" variable
+                       (:pointer 1
+                        :type ("gpr_stats_counter" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3069 3090])
+                    ("n" variable (:type ("intptr_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3091 3102]))                  
+                :type "void")
+                nil [3049 3141])
+            ("gpr_stats_inc" function
+               (:arguments 
+                  ( ("c" variable
+                       (:pointer 1
+                        :type ("gpr_stats_counter" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3162 3183])
+                    ("inc" variable (:type ("intptr_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3184 3197]))                  
+                :type "void")
+                nil [3143 3249])
+            ("gpr_stats_read" function
+               (:arguments 
+                  ( ("c" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("gpr_stats_counter" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3275 3302]))                  
+                :type ("intptr_t" type (:type "class") nil nil))
+                nil [3251 3412]))          
+      :file "sync.cc"
+      :pointmax 3413
+      :fsize 3412
+      :lastmodtime '(23062 15968 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("grpc/support/port_platform.h" include (:system-flag t) nil [605 644]))          
+      :file "tls_pthread.cc"
+      :pointmax 890
+      :fsize 889
+      :lastmodtime '(23062 15968 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("grpc/support/port_platform.h" include (:system-flag t) nil [605 644])
+            ("string.h" include (:system-flag t) nil [646 665])
+            ("C" extern nil nil [834 1244]))          
+      :file "wrap_memcpy.cc"
+      :pointmax 1245
+      :fsize 1244
+      :lastmodtime '(23062 15968 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("grpc/support/port_platform.h" include (:system-flag t) nil [605 644])
+            ("src/core/lib/support/time_precise.h" include nil nil [645 691]))          
+      :file "time_posix.cc"
+      :pointmax 4581
+      :fsize 4580
+      :lastmodtime '(23079 46126 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :file "time_precise.h"
+      :fsize 860
+      :lastmodtime '(23079 46126 0 0))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("GRPC_CORE_LIB_SUPPORT_ARENA_H" variable (:constant-flag t) nil [914 943])
+            ("stddef.h" include (:system-flag t) nil [945 964])
+            ("gpr_arena" type
+               (:typedef ("gpr_arena" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [966 1001])
+            ("gpr_arena_create" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("initial_size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1108 1128]))                  
+                :type ("gpr_arena" type (:type "class") nil nil))
+                nil [1080 1129])
+            ("gpr_arena_alloc" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("arena" variable
+                       (:pointer 1
+                        :type ("gpr_arena" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1193 1210])
+                    ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1211 1223]))                  
+                :type "void")
+                nil [1171 1224])
+            ("gpr_arena_destroy" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("arena" variable
+                       (:pointer 1
+                        :type ("gpr_arena" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1317 1334]))                  
+                :type ("size_t" type (:type "class") nil nil))
+                nil [1292 1335]))          
+      :file "arena.h"
+      :pointmax 1380
+      :fsize 1379
+      :lastmodtime '(23079 46126 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("GRPC_CORE_LIB_SUPPORT_ARENA_H")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("src/core/lib/support/arena.h" include nil nil [605 644])
+            ("grpc/support/alloc.h" include (:system-flag t) nil [645 676])
+            ("grpc/support/atm.h" include (:system-flag t) nil [677 706])
+            ("grpc/support/log.h" include (:system-flag t) nil [707 736])
+            ("grpc/support/useful.h" include (:system-flag t) nil [737 769])
+            ("ROUND_UP_TO_ALIGNMENT_SIZE" variable (:constant-flag t) nil [779 805])
+            ("zone" type
+               (:members 
+                  ( ("size_begin" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [899 917])
+                    ("size_end" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [920 936])
+                    ("next_atm" variable (:type ("gpr_atm" type (:type "class") nil nil)) (reparse-symbol classsubparts) [939 956]))                  
+                :type "struct")
+                nil [875 964])
+            ("zone" type
+               (:typedef ("zone" type (:type "struct") nil nil)
+                :type "typedef")
+                nil [875 964])
+            ("gpr_arena" type
+               (:members 
+                  ( ("size_so_far" variable (:type ("gpr_atm" type (:type "class") nil nil)) (reparse-symbol classsubparts) [987 1007])
+                    ("initial_zone" variable (:type ("zone" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1010 1028]))                  
+                :type "struct")
+                nil [966 1031])
+            ("gpr_arena_create" function
+               (:pointer 1
+                :arguments 
+                  ( ("initial_size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1061 1081]))                  
+                :type ("gpr_arena" type (:type "class") nil nil))
+                nil [1033 1274])
+            ("gpr_arena_destroy" function
+               (:arguments 
+                  ( ("arena" variable
+                       (:pointer 1
+                        :type ("gpr_arena" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1301 1318]))                  
+                :type ("size_t" type (:type "class") nil nil))
+                nil [1276 1618])
+            ("gpr_arena_alloc" function
+               (:pointer 1
+                :arguments 
+                  ( ("arena" variable
+                       (:pointer 1
+                        :type ("gpr_arena" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1642 1659])
+                    ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1660 1672]))                  
+                :type "void")
+                nil [1620 2600]))          
+      :file "arena.cc"
+      :pointmax 2601
+      :fsize 2600
+      :lastmodtime '(23109 47647 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("ROUND_UP_TO_ALIGNMENT_SIZE" (spp-arg-list ("x") 805 . 808) . ((semantic-list "(((x) + GPR_MAX_ALIGNMENT - 1u) & ~(GPR_MAX_ALIGNMENT - 1u))" 813 . 873)))
+          )
+))
+  :file "!Volumes!Transcend!grpc!src!core!lib!support!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

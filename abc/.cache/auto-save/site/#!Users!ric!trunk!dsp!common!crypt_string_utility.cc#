@@ -1,0 +1,74 @@
+// Copyright (c) 2017 YesDat Inc.
+// Author: Fei He (jason@yesdat.com)
+
+#include "common/encoding/base64.h"
+#include "thirdparty/glog/logging.h"
+
+#include "dsp/common/crypt_string_utility.h"
+#include "dsp/common/session_codec.h"
+#include "dsp/proto/trace_info/trace_info.pb.h"
+
+DEFINE_bool(trim_tail_equal, false, "trim tail equal");
+namespace yd {
+namespace common {
+
+bool CryptStringUtility::EncryptMessage(
+    EncoderHolder* encoder,
+    const google::protobuf::Message& inner,
+    std::string* output) {
+  std::string inner_blob;
+  if (!SessionCodec::Instance().EncodeMessage(encoder, inner, &inner_blob)) {
+    return false;
+  }
+  ::dsp::trace::EncryptStringInfo outer;
+  outer.set_encryptstring(inner_blob);
+  std::string outer_blob;
+  outer.SerializeToString(&outer_blob);
+  bool success = Base64::RfcWebSafeEncode(outer_blob, output);
+  if (!success) {
+    LOG(WARNING) << "Encode to web safe base64 failed, pb: "
+                 << outer.DebugString();
+  }
+  if (FLAGS_trim_tail_equal) {
+    while (!output->empty() && output->back() == '=') {
+      output->erase(output->size() - 1);
+    }
+  }
+  VLOG(40) << "gen crypt: " << outer.ShortDebugString()
+           << ", output: " << *output;
+  return success;
+}
+
+// Takes an unpadded base64 string and adds padding.
+std::string CryptStringUtility::AddPadding(const std::string& b64_string) {
+  if (b64_string.size() % 4 == 3) {
+    return b64_string + "=";
+  } else if (b64_string.size() % 4 == 2) {
+    return b64_string + "==";
+  }
+  return b64_string;
+}
+
+bool CryptStringUtility::DecryptMessage(
+    EncoderHolder* encoder,
+    const std::string& input,
+    google::protobuf::Message* message) {
+  std::string padded_input = AddPadding(input);
+  std::string input_blob;
+  if (!Base64::RfcWebSafeDecode(padded_input, &input_blob)) {
+    VLOG(30) << "Decode web safe base64 failed, input: " << input;
+    return false;
+  }
+  ::dsp::trace::EncryptStringInfo info;
+  if (!info.ParseFromString(input_blob)) {
+    VLOG(30) << "Parse string into EncryptStringInfo failed, input: " << input;
+    return false;
+  }
+  return SessionCodec::Instance().DecodeMessage(
+      encoder, info.encryptstring(), message);
+}
+
+}  // namespace common
+}  // namespace yd
+
+buffer-name 2

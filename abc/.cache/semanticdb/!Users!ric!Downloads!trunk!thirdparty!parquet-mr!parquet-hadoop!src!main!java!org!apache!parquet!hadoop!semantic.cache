@@ -1,0 +1,189 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode java-mode
+      :tags 
+        '( ("org.apache.parquet.hadoop" package nil nil [809 843])
+            ("java.io.ByteArrayOutputStream" include nil nil [972 1009])
+            ("java.io.IOException" include nil nil [1010 1037])
+            ("java.util.ArrayList" include nil nil [1038 1065])
+            ("java.util.HashMap" include nil nil [1066 1091])
+            ("java.util.HashSet" include nil nil [1092 1117])
+            ("java.util.Map" include nil nil [1118 1139])
+            ("java.util.Set" include nil nil [1140 1161])
+            ("org.apache.parquet.Log" include nil nil [1163 1193])
+            ("org.apache.parquet.bytes.BytesInput" include nil nil [1194 1237])
+            ("org.apache.parquet.bytes.ConcatenatingByteArrayCollector" include nil nil [1238 1302])
+            ("org.apache.parquet.column.ColumnDescriptor" include nil nil [1303 1353])
+            ("org.apache.parquet.column.Encoding" include nil nil [1354 1396])
+            ("org.apache.parquet.column.page.DictionaryPage" include nil nil [1397 1450])
+            ("org.apache.parquet.column.page.PageWriteStore" include nil nil [1451 1504])
+            ("org.apache.parquet.column.page.PageWriter" include nil nil [1505 1554])
+            ("org.apache.parquet.column.statistics.Statistics" include nil nil [1555 1610])
+            ("org.apache.parquet.format.converter.ParquetMetadataConverter" include nil nil [1611 1679])
+            ("org.apache.parquet.hadoop.CodecFactory.BytesCompressor" include nil nil [1680 1742])
+            ("org.apache.parquet.io.ParquetEncodingException" include nil nil [1743 1797])
+            ("org.apache.parquet.schema.MessageType" include nil nil [1798 1843])
+            ("ColumnChunkPageWriteStore" type
+               (:interfaces ("PageWriteStore")
+                :members 
+                  ( ("LOG" variable
+                       (:typemodifiers ("private" "static" "final")
+                        :type "Log")
+                        (reparse-symbol class_member_declaration) [1907 1982])
+                    ("parquetMetadataConverter" variable
+                       (:typemodifiers ("private" "static")
+                        :type "ParquetMetadataConverter")
+                        (reparse-symbol class_member_declaration) [1986 2084])
+                    ("ColumnChunkPageWriter" type
+                       (:typemodifiers ("private" "static" "final")
+                        :interfaces ("PageWriter")
+                        :members 
+                          ( ("path" variable
+                               (:typemodifiers ("private" "final")
+                                :type "ColumnDescriptor")
+                                (reparse-symbol class_member_declaration) [2166 2202])
+                            ("compressor" variable
+                               (:typemodifiers ("private" "final")
+                                :type "BytesCompressor")
+                                (reparse-symbol class_member_declaration) [2207 2248])
+                            ("tempOutputStream" variable
+                               (:typemodifiers ("private" "final")
+                                :type "ByteArrayOutputStream")
+                                (reparse-symbol class_member_declaration) [2254 2337])
+                            ("buf" variable
+                               (:typemodifiers ("private" "final")
+                                :type "ConcatenatingByteArrayCollector")
+                                (reparse-symbol class_member_declaration) [2342 2392])
+                            ("dictionaryPage" variable
+                               (:typemodifiers ("private")
+                                :type "DictionaryPage")
+                                (reparse-symbol class_member_declaration) [2397 2435])
+                            ("uncompressedLength" variable
+                               (:typemodifiers ("private")
+                                :type "long")
+                                (reparse-symbol class_member_declaration) [2441 2473])
+                            ("compressedLength" variable
+                               (:typemodifiers ("private")
+                                :type "long")
+                                (reparse-symbol class_member_declaration) [2478 2508])
+                            ("totalValueCount" variable
+                               (:typemodifiers ("private")
+                                :type "long")
+                                (reparse-symbol class_member_declaration) [2513 2542])
+                            ("pageCount" variable
+                               (:typemodifiers ("private")
+                                :type "int")
+                                (reparse-symbol class_member_declaration) [2547 2569])
+                            ("totalStatistics" variable
+                               (:typemodifiers ("private")
+                                :type "Statistics")
+                                (reparse-symbol class_member_declaration) [2639 2674])
+                            ("ColumnChunkPageWriter" function
+                               (:constructor-flag t
+                                :typemodifiers ("private")
+                                :arguments 
+                                  ( ("path" variable (:type "ColumnDescriptor") (reparse-symbol formal_parameters) [2710 2731])
+                                    ("compressor" variable (:type "BytesCompressor") (reparse-symbol formal_parameters) [2733 2759])
+                                    ("pageSize" variable (:type "int") (reparse-symbol formal_parameters) [2761 2773]))                                  )
+                                (reparse-symbol class_member_declaration) [2680 2969])
+                            ("writePage" function
+                               (:throws ("IOException")
+                                :typemodifiers ("public")
+                                :arguments 
+                                  ( ("bytes" variable (:type "BytesInput") (reparse-symbol formal_parameters) [3011 3027])
+                                    ("valueCount" variable (:type "int") (reparse-symbol formal_parameters) [3055 3069])
+                                    ("statistics" variable (:type "Statistics") (reparse-symbol formal_parameters) [3097 3118])
+                                    ("rlEncoding" variable (:type "Encoding") (reparse-symbol formal_parameters) [3146 3165])
+                                    ("dlEncoding" variable (:type "Encoding") (reparse-symbol formal_parameters) [3193 3212])
+                                    ("valuesEncoding" variable (:type "Encoding") (reparse-symbol formal_parameters) [3240 3263]))                                  
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [2989 4718])
+                            ("writePageV2" function
+                               (:throws ("IOException")
+                                :typemodifiers ("public")
+                                :arguments 
+                                  ( ("rowCount" variable (:type "int") (reparse-symbol formal_parameters) [4771 4783])
+                                    ("nullCount" variable (:type "int") (reparse-symbol formal_parameters) [4785 4798])
+                                    ("valueCount" variable (:type "int") (reparse-symbol formal_parameters) [4800 4814])
+                                    ("repetitionLevels" variable (:type "BytesInput") (reparse-symbol formal_parameters) [4824 4851])
+                                    ("definitionLevels" variable (:type "BytesInput") (reparse-symbol formal_parameters) [4853 4880])
+                                    ("dataEncoding" variable (:type "Encoding") (reparse-symbol formal_parameters) [4890 4911])
+                                    ("data" variable (:type "BytesInput") (reparse-symbol formal_parameters) [4913 4928])
+                                    ("" variable (:type "statistics") (reparse-symbol formal_parameters) [4952 4962]))                                  
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [4738 6375])
+                            ("toIntWithCheck" function
+                               (:typemodifiers ("private")
+                                :arguments 
+                                  ( ("size" variable (:type "long") (reparse-symbol formal_parameters) [6408 6417]))                                  
+                                :type "int")
+                                (reparse-symbol class_member_declaration) [6381 6639])
+                            ("getMemSize" function
+                               (:typemodifiers ("public")
+                                :type "long")
+                                (reparse-symbol class_member_declaration) [6659 6716])
+                            ("writeToFileWriter" function
+                               (:throws ("IOException")
+                                :typemodifiers ("public")
+                                :arguments 
+                                  ( ("writer" variable (:type "ParquetFileWriter") (reparse-symbol formal_parameters) [6752 6776]))                                  
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [6722 7783])
+                            ("allocatedSize" function
+                               (:typemodifiers ("public")
+                                :type "long")
+                                (reparse-symbol class_member_declaration) [7803 7863])
+                            ("writeDictionaryPage" function
+                               (:throws ("IOException")
+                                :typemodifiers ("public")
+                                :arguments 
+                                  ( ("dictionaryPage" variable (:type "DictionaryPage") (reparse-symbol formal_parameters) [7915 7944]))                                  
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [7883 8463])
+                            ("memUsageString" function
+                               (:typemodifiers ("public")
+                                :arguments 
+                                  ( ("prefix" variable (:type "String") (reparse-symbol formal_parameters) [8512 8525]))                                  
+                                :type "String")
+                                (reparse-symbol class_member_declaration) [8483 8602]))                          
+                        :type "class")
+                        (reparse-symbol class_member_declaration) [2088 8606])
+                    ("schema" variable
+                       (:typemodifiers ("private" "final")
+                        :type "MessageType")
+                        (reparse-symbol class_member_declaration) [8737 8770])
+                    ("ColumnChunkPageWriteStore" function
+                       (:constructor-flag t
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("compressor" variable (:type "BytesCompressor") (reparse-symbol formal_parameters) [8807 8833])
+                            ("schema" variable (:type "MessageType") (reparse-symbol formal_parameters) [8835 8853])
+                            ("pageSize" variable (:type "int") (reparse-symbol formal_parameters) [8855 8867]))                          )
+                        (reparse-symbol class_member_declaration) [8774 9043])
+                    ("getPageWriter" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("path" variable (:type "ColumnDescriptor") (reparse-symbol formal_parameters) [9091 9112]))                          
+                        :type "PageWriter")
+                        (reparse-symbol class_member_declaration) [9059 9149])
+                    ("flushToFileWriter" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("writer" variable (:type "ParquetFileWriter") (reparse-symbol formal_parameters) [9183 9207]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [9153 9399]))                  
+                :type "class")
+                nil [1845 9402]))          
+      :file "ColumnChunkPageWriteStore.java"
+      :pointmax 9403
+      :fsize 9402
+      :lastmodtime '(22840 64153 0 0)
+      :unmatched-syntax '((SEMICOLON 8733 . 8734) (PAREN_BLOCK 8731 . 8733) (GT 8730 . 8731) (COMMA 8707 . 8708) (LT 8690 . 8691) (NEW 8679 . 8682) (EQ 8677 . 8678) (GT 8667 . 8668) (COMMA 8644 . 8645) (PRIVATE 8610 . 8617) (LT 8627 . 8628) (GT 4950 . 4951) (QUESTION 4949 . 4950) (IDENTIFIER 4938 . 4948) (LT 4948 . 4949) (SEMICOLON 2632 . 2633) (PAREN_BLOCK 2630 . 2632) (GT 2629 . 2630) (LT 2620 . 2621) (NEW 2609 . 2612) (EQ 2607 . 2608) (GT 2595 . 2596) (PRIVATE 2575 . 2582) (LT 2586 . 2587) (IDENTIFIER 950 . 969) (DOT 949 . 950) (IDENTIFIER 939 . 949) (DOT 938 . 939) (IDENTIFIER 928 . 938) (DOT 927 . 928) (IDENTIFIER 921 . 927) (DOT 920 . 921) (IDENTIFIER 913 . 920) (DOT 912 . 913) (IDENTIFIER 906 . 912) (DOT 905 . 906) (IMPORT 888 . 894) (STATIC 895 . 901) (IDENTIFIER 902 . 905) (IDENTIFIER 882 . 886) (DOT 881 . 882) (IDENTIFIER 878 . 881) (DOT 877 . 878) (IDENTIFIER 870 . 877) (DOT 869 . 870) (IDENTIFIER 863 . 869) (DOT 862 . 863) (IMPORT 845 . 851) (STATIC 852 . 858) (IDENTIFIER 859 . 862))))
+  :file "!Users!ric!Downloads!trunk!thirdparty!parquet-mr!parquet-hadoop!src!main!java!org!apache!parquet!hadoop!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

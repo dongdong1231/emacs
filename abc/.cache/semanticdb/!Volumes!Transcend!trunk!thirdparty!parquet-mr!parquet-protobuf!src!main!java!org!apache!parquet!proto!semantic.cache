@@ -1,0 +1,331 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode java-mode
+      :tags 
+        '( ("org.apache.parquet.proto" package nil nil [812 845])
+            ("com.google.protobuf.ByteString" include nil nil [847 885])
+            ("com.google.protobuf.Descriptors" include nil nil [886 925])
+            ("com.google.protobuf.Message" include nil nil [926 961])
+            ("com.twitter.elephantbird.util.Protobufs" include nil nil [962 1009])
+            ("org.apache.parquet.column.Dictionary" include nil nil [1010 1054])
+            ("org.apache.parquet.io.InvalidRecordException" include nil nil [1055 1107])
+            ("org.apache.parquet.io.api.Binary" include nil nil [1108 1148])
+            ("org.apache.parquet.io.api.Converter" include nil nil [1149 1192])
+            ("org.apache.parquet.io.api.GroupConverter" include nil nil [1193 1241])
+            ("org.apache.parquet.io.api.PrimitiveConverter" include nil nil [1242 1294])
+            ("org.apache.parquet.schema.GroupType" include nil nil [1295 1338])
+            ("org.apache.parquet.schema.IncompatibleSchemaModificationException" include nil nil [1339 1412])
+            ("org.apache.parquet.schema.Type" include nil nil [1413 1451])
+            ("java.util.HashMap" include nil nil [1453 1478])
+            ("java.util.List" include nil nil [1479 1501])
+            ("java.util.Map" include nil nil [1502 1523])
+            ("java.util.Set" include nil nil [1524 1545])
+            ("ProtoMessageConverter" type
+               (:superclasses "GroupConverter"
+                :members 
+                  ( ("converters" variable
+                       (:dereference 1
+                        :typemodifiers ("private" "final")
+                        :type "Converter")
+                        (reparse-symbol class_member_declaration) [1884 1921])
+                    ("parent" variable
+                       (:typemodifiers ("private" "final")
+                        :type "ParentValueContainer")
+                        (reparse-symbol class_member_declaration) [1924 1966])
+                    ("myBuilder" variable
+                       (:typemodifiers ("private" "final")
+                        :type "Message.Builder")
+                        (reparse-symbol class_member_declaration) [1969 2009])
+                    ("ProtoMessageConverter" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("pvc" variable (:type "ParentValueContainer") (reparse-symbol formal_parameters) [2065 2089])
+                            ("" variable (:type "protoClass") (reparse-symbol formal_parameters) [2116 2126])
+                            ("parquetSchema" variable (:type "GroupType") (reparse-symbol formal_parameters) [2128 2151]))                          )
+                        (reparse-symbol class_member_declaration) [2043 2229])
+                    ("ProtoMessageConverter" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("pvc" variable (:type "ParentValueContainer") (reparse-symbol formal_parameters) [2289 2313])
+                            ("builder" variable (:type "Message.Builder") (reparse-symbol formal_parameters) [2315 2338])
+                            ("parquetSchema" variable (:type "GroupType") (reparse-symbol formal_parameters) [2340 2363]))                          )
+                        (reparse-symbol class_member_declaration) [2267 3336])
+                    ("getConverter" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("fieldIndex" variable (:type "int") (reparse-symbol formal_parameters) [3383 3397]))                          
+                        :type "Converter")
+                        (reparse-symbol class_member_declaration) [3353 3439])
+                    ("start" function
+                       (:typemodifiers ("public")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [3455 3481])
+                    ("end" function
+                       (:typemodifiers ("public")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [3497 3578])
+                    ("newMessageConverter" function
+                       (:typemodifiers ("private")
+                        :arguments 
+                          ( ("parentBuilder" variable
+                               (:typemodifiers ("final")
+                                :type "Message.Builder")
+                                (reparse-symbol formal_parameters) [3620 3655])
+                            ("fieldDescriptor" variable
+                               (:typemodifiers ("final")
+                                :type "Descriptors.FieldDescriptor")
+                                (reparse-symbol formal_parameters) [3657 3706])
+                            ("parquetType" variable (:type "Type") (reparse-symbol formal_parameters) [3708 3724]))                          
+                        :type "Converter")
+                        (reparse-symbol class_member_declaration) [3582 4314])
+                    ("newScalarConverter" function
+                       (:typemodifiers ("private")
+                        :arguments 
+                          ( ("pvc" variable (:type "ParentValueContainer") (reparse-symbol formal_parameters) [4356 4380])
+                            ("parentBuilder" variable (:type "Message.Builder") (reparse-symbol formal_parameters) [4382 4411])
+                            ("fieldDescriptor" variable (:type "Descriptors.FieldDescriptor") (reparse-symbol formal_parameters) [4413 4456])
+                            ("parquetType" variable (:type "Type") (reparse-symbol formal_parameters) [4458 4474]))                          
+                        :type "Converter")
+                        (reparse-symbol class_member_declaration) [4319 5384])
+                    ("getBuilder" function
+                       (:typemodifiers ("public")
+                        :type "Message.Builder")
+                        (reparse-symbol class_member_declaration) [5388 5451])
+                    ("ParentValueContainer" type
+                       (:typemodifiers ("static" "abstract")
+                        :members 
+                          ( ("add" function
+                               (:typemodifiers ("public" "abstract")
+                                :arguments 
+                                  ( ("value" variable (:type "Object") (reparse-symbol formal_parameters) [5583 5595]))                                  
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [5558 5597]))                          
+                        :type "class")
+                        (reparse-symbol class_member_declaration) [5455 5602])
+                    ("ProtoEnumConverter" type
+                       (:typemodifiers ("final")
+                        :superclasses "PrimitiveConverter"
+                        :members 
+                          ( ("fieldType" variable
+                               (:typemodifiers ("private" "final")
+                                :type "Descriptors.FieldDescriptor")
+                                (reparse-symbol class_member_declaration) [5671 5723])
+                            ("dict" variable
+                               (:dereference 1
+                                :typemodifiers ("private")
+                                :type "Descriptors.EnumValueDescriptor")
+                                (reparse-symbol class_member_declaration) [5803 5850])
+                            ("parent" variable
+                               (:typemodifiers ("private" "final")
+                                :type "ParentValueContainer")
+                                (reparse-symbol class_member_declaration) [5855 5897])
+                            ("ProtoEnumConverter" function
+                               (:constructor-flag t
+                                :typemodifiers ("public")
+                                :arguments 
+                                  ( ("parent" variable (:type "ParentValueContainer") (reparse-symbol formal_parameters) [5929 5956])
+                                    ("fieldType" variable (:type "Descriptors.FieldDescriptor") (reparse-symbol formal_parameters) [5958 5995]))                                  )
+                                (reparse-symbol class_member_declaration) [5903 6122])
+                            ("makeLookupStructure" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("enumFieldType" variable (:type "Descriptors.FieldDescriptor") (reparse-symbol formal_parameters) [6326 6367]))                                  )
+                                (reparse-symbol class_member_declaration) [6306 6884])
+                            ("translateEnumValue" function
+                               (:typemodifiers ("private")
+                                :arguments 
+                                  ( ("binaryValue" variable (:type "Binary") (reparse-symbol formal_parameters) [7137 7155]))                                  
+                                :type "Descriptors.EnumValueDescriptor")
+                                (reparse-symbol class_member_declaration) [7078 7618])
+                            ("addBinary" function
+                               (:typemodifiers ("final" "public")
+                                :arguments 
+                                  ( ("binaryValue" variable (:type "Binary") (reparse-symbol formal_parameters) [7666 7684]))                                  
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [7638 7807])
+                            ("addValueFromDictionary" function
+                               (:typemodifiers ("public")
+                                :arguments 
+                                  ( ("dictionaryId" variable (:type "int") (reparse-symbol formal_parameters) [7862 7878]))                                  
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [7827 7925])
+                            ("hasDictionarySupport" function
+                               (:typemodifiers ("public")
+                                :type "boolean")
+                                (reparse-symbol class_member_declaration) [7945 8009])
+                            ("setDictionary" function
+                               (:typemodifiers ("public")
+                                :arguments 
+                                  ( ("dictionary" variable (:type "Dictionary") (reparse-symbol formal_parameters) [8055 8076]))                                  
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [8029 8338]))                          
+                        :type "class")
+                        (reparse-symbol class_member_declaration) [5606 8343])
+                    ("ProtoBinaryConverter" type
+                       (:typemodifiers ("final")
+                        :superclasses "PrimitiveConverter"
+                        :members 
+                          ( ("parent" variable
+                               (:typemodifiers ("final")
+                                :type "ParentValueContainer")
+                                (reparse-symbol class_member_declaration) [8414 8448])
+                            ("ProtoBinaryConverter" function
+                               (:constructor-flag t
+                                :typemodifiers ("public")
+                                :arguments 
+                                  ( ("parent" variable (:type "ParentValueContainer") (reparse-symbol formal_parameters) [8482 8509]))                                  )
+                                (reparse-symbol class_member_declaration) [8454 8546])
+                            ("addBinary" function
+                               (:typemodifiers ("public")
+                                :arguments 
+                                  ( ("binary" variable (:type "Binary") (reparse-symbol formal_parameters) [8588 8601]))                                  
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [8566 8714]))                          
+                        :type "class")
+                        (reparse-symbol class_member_declaration) [8347 8718])
+                    ("ProtoBooleanConverter" type
+                       (:typemodifiers ("final")
+                        :superclasses "PrimitiveConverter"
+                        :members 
+                          ( ("parent" variable
+                               (:typemodifiers ("final")
+                                :type "ParentValueContainer")
+                                (reparse-symbol class_member_declaration) [8791 8825])
+                            ("ProtoBooleanConverter" function
+                               (:constructor-flag t
+                                :typemodifiers ("public")
+                                :arguments 
+                                  ( ("parent" variable (:type "ParentValueContainer") (reparse-symbol formal_parameters) [8860 8887]))                                  )
+                                (reparse-symbol class_member_declaration) [8831 8924])
+                            ("addBoolean" function
+                               (:typemodifiers ("final" "public")
+                                :arguments 
+                                  ( ("value" variable (:type "boolean") (reparse-symbol formal_parameters) [8973 8986]))                                  
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [8944 9020]))                          
+                        :type "class")
+                        (reparse-symbol class_member_declaration) [8723 9025])
+                    ("ProtoDoubleConverter" type
+                       (:typemodifiers ("final")
+                        :superclasses "PrimitiveConverter"
+                        :members 
+                          ( ("parent" variable
+                               (:typemodifiers ("final")
+                                :type "ParentValueContainer")
+                                (reparse-symbol class_member_declaration) [9096 9130])
+                            ("ProtoDoubleConverter" function
+                               (:constructor-flag t
+                                :typemodifiers ("public")
+                                :arguments 
+                                  ( ("parent" variable (:type "ParentValueContainer") (reparse-symbol formal_parameters) [9164 9191]))                                  )
+                                (reparse-symbol class_member_declaration) [9136 9228])
+                            ("addDouble" function
+                               (:typemodifiers ("public")
+                                :arguments 
+                                  ( ("value" variable (:type "double") (reparse-symbol formal_parameters) [9270 9282]))                                  
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [9248 9316]))                          
+                        :type "class")
+                        (reparse-symbol class_member_declaration) [9029 9320])
+                    ("ProtoFloatConverter" type
+                       (:typemodifiers ("final")
+                        :superclasses "PrimitiveConverter"
+                        :members 
+                          ( ("parent" variable
+                               (:typemodifiers ("final")
+                                :type "ParentValueContainer")
+                                (reparse-symbol class_member_declaration) [9390 9424])
+                            ("ProtoFloatConverter" function
+                               (:constructor-flag t
+                                :typemodifiers ("public")
+                                :arguments 
+                                  ( ("parent" variable (:type "ParentValueContainer") (reparse-symbol formal_parameters) [9457 9484]))                                  )
+                                (reparse-symbol class_member_declaration) [9430 9521])
+                            ("addFloat" function
+                               (:typemodifiers ("public")
+                                :arguments 
+                                  ( ("value" variable (:type "float") (reparse-symbol formal_parameters) [9562 9573]))                                  
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [9541 9607]))                          
+                        :type "class")
+                        (reparse-symbol class_member_declaration) [9324 9611])
+                    ("ProtoIntConverter" type
+                       (:typemodifiers ("final")
+                        :superclasses "PrimitiveConverter"
+                        :members 
+                          ( ("parent" variable
+                               (:typemodifiers ("final")
+                                :type "ParentValueContainer")
+                                (reparse-symbol class_member_declaration) [9679 9713])
+                            ("ProtoIntConverter" function
+                               (:constructor-flag t
+                                :typemodifiers ("public")
+                                :arguments 
+                                  ( ("parent" variable (:type "ParentValueContainer") (reparse-symbol formal_parameters) [9744 9771]))                                  )
+                                (reparse-symbol class_member_declaration) [9719 9808])
+                            ("addInt" function
+                               (:typemodifiers ("public")
+                                :arguments 
+                                  ( ("value" variable (:type "int") (reparse-symbol formal_parameters) [9847 9856]))                                  
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [9828 9890]))                          
+                        :type "class")
+                        (reparse-symbol class_member_declaration) [9615 9894])
+                    ("ProtoLongConverter" type
+                       (:typemodifiers ("final")
+                        :superclasses "PrimitiveConverter"
+                        :members 
+                          ( ("parent" variable
+                               (:typemodifiers ("final")
+                                :type "ParentValueContainer")
+                                (reparse-symbol class_member_declaration) [9963 9997])
+                            ("ProtoLongConverter" function
+                               (:constructor-flag t
+                                :typemodifiers ("public")
+                                :arguments 
+                                  ( ("parent" variable (:type "ParentValueContainer") (reparse-symbol formal_parameters) [10029 10056]))                                  )
+                                (reparse-symbol class_member_declaration) [10003 10093])
+                            ("addLong" function
+                               (:typemodifiers ("public")
+                                :arguments 
+                                  ( ("value" variable (:type "long") (reparse-symbol formal_parameters) [10133 10143]))                                  
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [10113 10177]))                          
+                        :type "class")
+                        (reparse-symbol class_member_declaration) [9898 10181])
+                    ("ProtoStringConverter" type
+                       (:typemodifiers ("final")
+                        :superclasses "PrimitiveConverter"
+                        :members 
+                          ( ("parent" variable
+                               (:typemodifiers ("final")
+                                :type "ParentValueContainer")
+                                (reparse-symbol class_member_declaration) [10252 10286])
+                            ("ProtoStringConverter" function
+                               (:constructor-flag t
+                                :typemodifiers ("public")
+                                :arguments 
+                                  ( ("parent" variable (:type "ParentValueContainer") (reparse-symbol formal_parameters) [10320 10347]))                                  )
+                                (reparse-symbol class_member_declaration) [10292 10384])
+                            ("addBinary" function
+                               (:typemodifiers ("public")
+                                :arguments 
+                                  ( ("binary" variable (:type "Binary") (reparse-symbol formal_parameters) [10426 10439]))                                  
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [10404 10518]))                          
+                        :type "class")
+                        (reparse-symbol class_member_declaration) [10185 10523]))                  
+                :type "class")
+                nil [1828 10525]))          
+      :file "ProtoMessageConverter.java"
+      :pointmax 10526
+      :fsize 10525
+      :lastmodtime '(23012 4713 0 0)
+      :unmatched-syntax '((GT 6304 . 6305) (COMMA 6271 . 6272) (PRIVATE 6253 . 6260) (LT 6264 . 6265) (SEMICOLON 5797 . 5798) (GT 5785 . 5786) (COMMA 5752 . 5753) (PRIVATE 5728 . 5735) (LT 5745 . 5746) (GT 2114 . 2115) (EXTENDS 2099 . 2106) (QUESTION 2097 . 2098) (IDENTIFIER 2091 . 2096) (LT 2096 . 2097) (IDENTIFIER 1609 . 1617) (DOT 1608 . 1609) (IDENTIFIER 1593 . 1608) (DOT 1592 . 1593) (IDENTIFIER 1581 . 1592) (DOT 1580 . 1581) (IDENTIFIER 1572 . 1580) (DOT 1571 . 1572) (IDENTIFIER 1565 . 1571) (DOT 1564 . 1565) (IMPORT 1547 . 1553) (STATIC 1554 . 1560) (IDENTIFIER 1561 . 1564))))
+  :file "!Volumes!Transcend!trunk!thirdparty!parquet-mr!parquet-protobuf!src!main!java!org!apache!parquet!proto!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

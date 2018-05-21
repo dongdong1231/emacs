@@ -1,0 +1,1412 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("DSP_LOGCGI_CLICKDEAL_KAFKACONSUMER_H_" variable (:constant-flag t) nil [155 192])
+            ("stdint.h" include (:system-flag t) nil [194 213])
+            ("string" include (:system-flag t) nil [214 231])
+            ("set" include (:system-flag t) nil [232 246])
+            ("common/base/scoped_ptr.h" include nil nil [247 282])
+            ("common/system/concurrency/thread.h" include nil nil [283 328])
+            ("common/system/concurrency/thread_pool.h" include nil nil [329 379])
+            ("thirdparty/librdkafka/src/rdkafka.h" include (:typemodifiers ("extern" "\"C\"")) (reparse-symbol extern-c-contents) [444 490])
+            ("thirdparty/librdkafka/src/rdkafka_int.h" include (:typemodifiers ("extern" "\"C\"")) (reparse-symbol extern-c-contents) [393 443])
+            ("google" type
+               (:members 
+                  ( ("protobuf" type
+                       (:members 
+                          ( ("Message" type
+                               (:prototype t
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [534 548]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [513 550]))                  
+                :type "namespace")
+                nil [494 552])
+            ("dsp" type
+               (:members 
+                  ( ("logcgi" type
+                       (:members 
+                          ( ("KafkaConsumer" type
+                               (:members 
+                                  ( ("private" label nil (reparse-symbol classsubparts) [614 622])
+                                    ("m_p_rdkafka_handle_" variable
+                                       (:pointer 1
+                                        :type ("rd_kafka_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [625 668])
+                                    ("m_p_rdkafka_topic_handle_" variable
+                                       (:pointer 1
+                                        :type ("rd_kafka_topic_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [671 720])
+                                    ("m_p_kafka_conf_" variable
+                                       (:pointer 1
+                                        :type ("rd_kafka_conf_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [723 762])
+                                    ("m_p_topic_conf_" variable
+                                       (:pointer 1
+                                        :type ("rd_kafka_topic_conf_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [765 804])
+                                    ("m_broker_list_" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [808 846])
+                                    ("m_topic_name_" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [849 886])
+                                    ("m_group_id_" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [889 924])
+                                    ("m_partition_" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [928 964])
+                                    ("m_offset_" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [967 1000])
+                                    ("m_init_" variable (:type "bool") (reparse-symbol classsubparts) [1003 1034])
+                                    ("m_commit_offset_" variable (:type "bool") (reparse-symbol classsubparts) [1037 1077])
+                                    ("public" label nil (reparse-symbol classsubparts) [1080 1087])
+                                    ("KafkaConsumer" function
+                                       (:prototype-flag t
+                                        :constructor-flag t
+                                        :arguments 
+                                          ( ("str_broker_list" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1109 1144])
+                                            ("str_topic_name" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1149 1183])
+                                            ("str_group_id" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1188 1220]))                                          
+                                        :type ("KafkaConsumer" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1090 1221])
+                                    ("KafkaConsumer" function
+                                       (:prototype-flag t
+                                        :destructor-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1224 1241])
+                                    ("InitRdkafkaConsumer" function
+                                       (:prototype-flag t
+                                        :type ("int32_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1271 1301])
+                                    ("GetPartitionNum" function
+                                       (:prototype-flag t
+                                        :methodconst-flag t
+                                        :arguments 
+                                          ( ("p_partition" variable
+                                               (:pointer 1
+                                                :type ("int32_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1329 1350]))                                          
+                                        :type ("int32_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1305 1357])
+                                    ("StartConsuming" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("partition" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1384 1402])
+                                            ("offset" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1403 1418]))                                          
+                                        :type ("int32_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1361 1419])
+                                    ("GetMessage" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("p_str_result" variable
+                                               (:pointer 1
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1442 1468]))                                          
+                                        :type ("int32_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1423 1469])
+                                    ("CommitOffset" function
+                                       (:prototype-flag t
+                                        :type ("int32_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1473 1496])
+                                    ("partition" function
+                                       (:prototype-flag t
+                                        :methodconst-flag t
+                                        :type ("int32_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1500 1526])
+                                    ("offset" function
+                                       (:prototype-flag t
+                                        :methodconst-flag t
+                                        :type ("int64_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1530 1553])
+                                    ("topic_name" function
+                                       (:prototype-flag t
+                                        :methodconst-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1557 1588])
+                                    ("CloseRdkafkaConsumer" function
+                                       (:prototype-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1592 1620])
+                                    ("private" label nil (reparse-symbol classsubparts) [1623 1631])
+                                    ("Run" function
+                                       (:prototype-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1634 1645]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [591 1648]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [571 1651]))                  
+                :type "namespace")
+                nil [555 1674]))          
+      :file "kafkaconsumer.h"
+      :pointmax 1746
+      :fsize 1745
+      :lastmodtime '(22840 64114 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("DSP_LOGCGI_CLICKDEAL_KAFKACONSUMER_H_")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("DSP_LOGCGI_CLICKDEAL_IMPRESSION_CACHE_H_" variable (:constant-flag t) nil [247 287])
+            ("map" include (:system-flag t) nil [289 303])
+            ("utility" include (:system-flag t) nil [304 322])
+            ("memory" include (:system-flag t) nil [323 340])
+            ("string" include (:system-flag t) nil [341 358])
+            ("common/system/concurrency/thread.h" include nil nil [360 405])
+            ("common/system/concurrency/mutex.h" include nil nil [406 450])
+            ("dsp/common/kafka_consumer.h" include nil nil [451 489])
+            ("dsp" type
+               (:members 
+                  ( ("logcgi" type
+                       (:members 
+                          ( ("ImpressionData" type
+                               (:members 
+                                  ( ("ImpressionData" function
+                                       (:constructor-flag t
+                                        :type ("ImpressionData" type (:type "struct") nil nil))
+                                        (reparse-symbol classsubparts) [553 605])
+                                    ("global_trace_id" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [608 636])
+                                    ("bid_request_time_utc" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [639 669])
+                                    ("dsp_impression_id" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [672 702]))                                  
+                                :type "struct")
+                                (reparse-symbol namespacesubparts) [527 705])
+                            ("ImpressionCache" type
+                               (:members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [732 739])
+                                    ("ImpressionCache" function
+                                       (:prototype-flag t
+                                        :constructor-flag t
+                                        :type ("ImpressionCache" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [742 760])
+                                    ("ImpressionCache" function
+                                       (:prototype-flag t
+                                        :destructor-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [763 782])
+                                    ("Initialize" function
+                                       (:prototype-flag t
+                                        :type ("int32_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [785 806])
+                                    ("GetImpressionInfo" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("creative_id" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [833 854])
+                                            ("global_trace_id" variable
+                                               (:pointer 1
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [855 884])
+                                            ("bid_request_time_utc" variable
+                                               (:pointer 1
+                                                :type ("uint32_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [910 941])
+                                            ("dsp_impression_id" variable
+                                               (:pointer 1
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [967 998]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [810 999])
+                                    ("UpdateData" function
+                                       (:prototype-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1002 1020])
+                                    ("private" label nil (reparse-symbol classsubparts) [1023 1031])
+                                    ("mutex_" variable (:type ("Mutex" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1034 1047])
+                                    ("data_" variable (:type ("std::map" type
+                                         (:template-specifier 
+                                            ( ("uint64_t" type nil nil nil)
+                                              ("ImpressionData" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [1050 1091])
+                                    ("consumer_" variable (:type "int") (reparse-symbol classsubparts) [1140 1150])
+                                    ("thread_" variable (:type ("std::shared_ptr" type
+                                         (:template-specifier 
+                                            ( ("Thread" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [1153 1185]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [707 1188]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [507 1192]))                  
+                :type "namespace")
+                nil [491 1215]))          
+      :file "impression_cache.h"
+      :pointmax 1287
+      :fsize 1340
+      :lastmodtime '(22869 47541 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("DSP_LOGCGI_CLICKDEAL_IMPRESSION_CACHE_H_")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("DSP_LOGCGI_CLICKDEAL_CLICKDEALSERVICE_H_" variable (:constant-flag t) nil [165 205])
+            ("string" include (:system-flag t) nil [208 225])
+            ("map" include (:system-flag t) nil [226 240])
+            ("dsp/logcgi/clickdeal/impression_cache.h" include nil nil [241 291])
+            ("common/base/scoped_ptr.h" include nil nil [292 327])
+            ("dsp/logger/logger_agent.h" include nil nil [328 364])
+            ("thirdparty/gtest/gtest_prod.h" include nil nil [365 405])
+            ("dsp/proto/bill/bill.pb.h" include nil nil [406 441])
+            ("dsp/proto/log/log.pb.h" include nil nil [443 476])
+            ("dsp/logcgi/proto/logcgi.pb.h" include nil nil [477 516])
+            ("dsp/logcgi/clickdeal/kafkaconsumer.h" include nil nil [517 564])
+            ("dsp/logcgi/clickdeal/zookeeperuser.h" include nil nil [565 612])
+            ("dsp" type
+               (:members 
+                  ( ("logcgi" type
+                       (:members 
+                          ( ("dsp::bill" using (:type ("dsp::bill" type
+                                 (:prototype t
+                                  :type "namespace")
+                                  nil nil)) (reparse-symbol namespacesubparts) [651 677])
+                            ("dsp::log" using (:type ("dsp::log" type
+                                 (:prototype t
+                                  :type "namespace")
+                                  nil nil)) (reparse-symbol namespacesubparts) [678 703])
+                            ("ClickDealService" type
+                               (:members 
+                                  ( ("private" label nil (reparse-symbol classsubparts) [732 740])
+                                    ("m_logger_config_" variable (:type ("LoggerConfig" type (:type "class") nil nil)) (reparse-symbol classsubparts) [743 789])
+                                    ("m_out_server_config_" variable (:type ("OutServerConfig" type (:type "class") nil nil)) (reparse-symbol classsubparts) [792 842])
+                                    ("m_timeout_minutes_" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [845 893])
+                                    ("m_init_" variable (:type "bool") (reparse-symbol classsubparts) [897 934])
+                                    ("m_partition_count_" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [937 985])
+                                    ("m_client_no_" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1014 1056])
+                                    ("m_client_count_" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1084 1129])
+                                    ("m_total_num_" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1155 1197])
+                                    ("m_success_num_" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1200 1244])
+                                    ("m_skip_num_" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1247 1288])
+                                    ("m_pid_" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1307 1343])
+                                    ("m_identity_" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1346 1387])
+                                    ("m_p_zookeeper_user_" variable (:type ("scoped_ptr" type
+                                         (:template-specifier 
+                                            ( ("ZooKeeperUser" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [1390 1446])
+                                    ("m_p_kafka_consumer_" variable (:type ("scoped_ptr" type
+                                         (:template-specifier 
+                                            ( ("KafkaConsumer" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [1478 1534])
+                                    ("m_map_kafka_consumer_" variable (:type ("std::map" type
+                                         (:template-specifier 
+                                            ( ("int32_t" type nil nil nil)
+                                              ("KafkaConsumer" type (:pointer 1) nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [1584 1642])
+                                    ("impression_cache_" variable (:type ("std::shared_ptr" type
+                                         (:template-specifier 
+                                            ( ("ImpressionCache" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [1645 1696])
+                                    ("public" label nil (reparse-symbol classsubparts) [1699 1706])
+                                    ("m_logger_agent_init_" variable
+                                       (:typemodifiers ("static")
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [1709 1766])
+                                    ("m_p_click_redo_agent_" variable
+                                       (:pointer 1
+                                        :typemodifiers ("static")
+                                        :type ("yd::dsp::LoggerAgent" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1769 1827])
+                                    ("m_p_click_log_agent_" variable
+                                       (:pointer 1
+                                        :typemodifiers ("static")
+                                        :type ("yd::dsp::LoggerAgent" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1830 1887])
+                                    ("m_p_click_timeout_agent_" variable
+                                       (:pointer 1
+                                        :typemodifiers ("static")
+                                        :type ("yd::dsp::LoggerAgent" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1890 1951])
+                                    ("public" label nil (reparse-symbol classsubparts) [1954 1961])
+                                    ("ClickDealService" function
+                                       (:prototype-flag t
+                                        :constructor-flag t
+                                        :arguments 
+                                          ( ("o_logger_config" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("LoggerConfig" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1986 2022])
+                                            ("o_out_server_config" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("OutServerConfig" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2027 2070])
+                                            ("timeout_minutes" variable
+                                               (:constant-flag t
+                                                :type ("uint32_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2075 2106]))                                          
+                                        :type ("ClickDealService" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1964 2107])
+                                    ("ClickDealService" function
+                                       (:prototype-flag t
+                                        :destructor-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [2110 2130])
+                                    ("public" label nil (reparse-symbol classsubparts) [2133 2140])
+                                    ("Init" function
+                                       (:prototype-flag t
+                                        :type ("int32_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [2143 2158])
+                                    ("Work" function
+                                       (:prototype-flag t
+                                        :type ("int32_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [2161 2176])
+                                    ("get_pid" function
+                                       (:prototype-flag t
+                                        :methodconst-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [2179 2207])
+                                    ("private" label nil (reparse-symbol classsubparts) [2210 2218])
+                                    ("InitLoggerAgents" function
+                                       (:prototype-flag t
+                                        :type ("int32_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [2221 2248])
+                                    ("GetPartitionNum" function
+                                       (:prototype-flag t
+                                        :type ("int32_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [2251 2277])
+                                    ("GetIdentity" function
+                                       (:prototype-flag t
+                                        :type ("int32_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [2280 2302])
+                                    ("BuildZookeeperConnection" function
+                                       (:prototype-flag t
+                                        :type ("int32_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [2306 2341])
+                                    ("CreatePartitionNode" function
+                                       (:prototype-flag t
+                                        :type ("int32_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [2344 2374])
+                                    ("GetClientSizeAndNo" function
+                                       (:prototype-flag t
+                                        :type ("int32_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [2377 2406])
+                                    ("BuildConnectionWithPartition" function
+                                       (:prototype-flag t
+                                        :type ("int32_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [2409 2448])
+                                    ("CommitOffset" function
+                                       (:prototype-flag t
+                                        :methodconst-flag t
+                                        :arguments 
+                                          ( ("p_kafka_consumer" variable
+                                               (:pointer 1
+                                                :type ("KafkaConsumer" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2472 2504]))                                          
+                                        :type ("int32_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [2451 2511])
+                                    ("CheckClientChange" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("check_father_node" variable
+                                               (:default-value "true"
+                                                :type "bool")
+                                                (reparse-symbol arg-sub-list) [2540 2569]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [2514 2571])
+                                    ("CheckPartitionChange" function
+                                       (:prototype-flag t
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [2574 2605])
+                                    ("CheckPartitionChange" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("p_kafka_consumer" variable
+                                               (:pointer 1
+                                                :type ("KafkaConsumer" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2637 2669]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [2608 2670])
+                                    ("DealClick" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("p_kafka_consumer" variable
+                                               (:pointer 1
+                                                :type ("KafkaConsumer" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2692 2724]))                                          
+                                        :type ("int32_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [2674 2725])
+                                    ("GetClickMessage" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("p_kafka_consumer" variable
+                                               (:pointer 1
+                                                :type ("KafkaConsumer" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2758 2790])
+                                            ("p_inner_request" variable
+                                               (:pointer 1
+                                                :type ("InnerRequest" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2795 2825]))                                          
+                                        :type ("int32_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [2729 2826])
+                                    ("CheckBillTypeSuit" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("o_inner_request" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("InnerRequest" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2853 2889])
+                                            ("p_bill" variable
+                                               (:pointer 1
+                                                :type ("Bill" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2894 2907]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [2830 2908])
+                                    ("BillAndResponse" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("o_inner_request" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("InnerRequest" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2940 2976])
+                                            ("b_record_file" variable (:type "bool") (reparse-symbol arg-sub-list) [2981 3000])
+                                            ("p_bill" variable
+                                               (:pointer 1
+                                                :type ("Bill" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3005 3018]))                                          
+                                        :type ("int32_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [2911 3019])
+                                    ("GenerateBillRequest" function
+                                       (:prototype-flag t
+                                        :methodconst-flag t
+                                        :arguments 
+                                          ( ("o_inner_request" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("InnerRequest" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3056 3092])
+                                            ("p_bill_request" variable
+                                               (:pointer 1
+                                                :type ("BillRequest" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3097 3126]))                                          
+                                        :type ("int32_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [3023 3133])
+                                    ("GenerateBillCPC" function
+                                       (:prototype-flag t
+                                        :methodconst-flag t
+                                        :arguments 
+                                          ( ("o_inner_request" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("InnerRequest" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3166 3202])
+                                            ("o_bill_response" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("BillResponse" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3207 3243])
+                                            ("p_bill_cpc" variable
+                                               (:pointer 1
+                                                :type ("Bill_BillCPC" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3248 3274]))                                          
+                                        :type ("int32_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [3137 3281])
+                                    ("GenerateBillCPCWithoutResponse" function
+                                       (:prototype-flag t
+                                        :methodconst-flag t
+                                        :arguments 
+                                          ( ("o_inner_request" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("InnerRequest" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3329 3365])
+                                            ("p_bill_cpc" variable
+                                               (:pointer 1
+                                                :type ("Bill_BillCPC" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3370 3396]))                                          
+                                        :type ("int32_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [3285 3403])
+                                    ("RecordFailedBill" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("o_bill_request" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("BillRequest" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3437 3471])
+                                            ("error_type" variable
+                                               (:constant-flag t
+                                                :type ("int32_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3476 3501]))                                          
+                                        :type ("int32_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [3407 3502])
+                                    ("RecordLog" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("o_inner_request" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("InnerRequest" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3529 3565])
+                                            ("o_bill" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("Bill" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3570 3589]))                                          
+                                        :type ("int32_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [3506 3590])
+                                    ("RecordClickLog" function
+                                       (:prototype-flag t
+                                        :methodconst-flag t
+                                        :arguments 
+                                          ( ("o_inner_request" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("InnerRequest" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3622 3658])
+                                            ("o_bill" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("Bill" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3663 3682]))                                          
+                                        :type ("int32_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [3594 3689])
+                                    ("GenerateClickLog" function
+                                       (:prototype-flag t
+                                        :methodconst-flag t
+                                        :arguments 
+                                          ( ("o_inner_request" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("InnerRequest" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3723 3759])
+                                            ("o_bill" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("Bill" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3764 3783])
+                                            ("p_dsp_log" variable
+                                               (:pointer 1
+                                                :type ("dsp::log::DspLog" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3788 3817]))                                          
+                                        :type ("int32_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [3693 3824])
+                                    ("RecordClickNeedRedo" function
+                                       (:prototype-flag t
+                                        :methodconst-flag t
+                                        :arguments 
+                                          ( ("o_inner_request" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("InnerRequest" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3861 3897]))                                          
+                                        :type ("int32_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [3828 3904])
+                                    ("GetLoggerInfo" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("log_type" variable
+                                               (:constant-flag t
+                                                :type ("LogType" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3935 3958])
+                                            ("p_logger_info" variable
+                                               (:pointer 1
+                                                :type ("LoggerInfo" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3963 3989]))                                          
+                                        :type ("int32_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [3908 3990])
+                                    ("InitLoggerAgent" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("e_log_type" variable
+                                               (:constant-flag t
+                                                :type ("LogType" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [4023 4048])
+                                            ("p_logger_agent" variable
+                                               (:pointer 2
+                                                :type ("yd::dsp::LoggerAgent" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [4053 4091])
+                                            ("str_path" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4096 4117]))                                          
+                                        :type ("int32_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [3994 4118])
+                                    ("GenerateHttpHeaderInfo" function
+                                       (:prototype-flag t
+                                        :methodconst-flag t
+                                        :arguments 
+                                          ( ("inner_request" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("InnerRequest" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [4158 4192])
+                                            ("p_http_header_info" variable
+                                               (:pointer 1
+                                                :type ("HttpHeaderInfo" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [4197 4232]))                                          
+                                        :type ("int32_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [4122 4239])
+                                    ("FillImpressionAdCore" function
+                                       (:prototype-flag t
+                                        :methodconst-flag t
+                                        :arguments 
+                                          ( ("inner_request" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("InnerRequest" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [4274 4308])
+                                            ("impression_ad_core" variable
+                                               (:pointer 1
+                                                :type ("dsp::log::ImpressionAdCore" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [4313 4360]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [4243 4367])
+                                    ("AddCreativeInfo" function
+                                       (:prototype-flag t
+                                        :methodconst-flag t
+                                        :arguments 
+                                          ( ("o_inner_request" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("InnerRequest" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [4400 4436])
+                                            ("p_creative_info" variable
+                                               (:pointer 1
+                                                :type ("dsp::log::ImpressionAdCore_CreativeInfo" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [4441 4499]))                                          
+                                        :type ("int32_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [4371 4506])
+                                    ("AddPromotion" function
+                                       (:prototype-flag t
+                                        :methodconst-flag t
+                                        :arguments 
+                                          ( ("o_inner_request" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("InnerRequest" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [4536 4572])
+                                            ("p_promotion_object" variable
+                                               (:pointer 1
+                                                :type ("dsp::log::ImpressionAdCore_PromotionObject" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [4577 4641]))                                          
+                                        :type ("int32_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [4510 4648])
+                                    ("RewriteClickLog" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("log" variable
+                                               (:pointer 1
+                                                :type ("dsp::log::DspLog" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [4673 4695]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [4652 4696]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [706 4699]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [631 4702]))                  
+                :type "namespace")
+                nil [615 4726]))          
+      :file "clickdealservice.h"
+      :pointmax 4798
+      :fsize 4831
+      :lastmodtime '(22868 51043 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("DSP_LOGCGI_CLICKDEAL_CLICKDEALSERVICE_H_")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :file "zookeeperuser.h"
+      :fsize 2573
+      :lastmodtime '(22840 64114 0 0))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("list" include (:system-flag t) nil [90 105])
+            ("set" include (:system-flag t) nil [106 120])
+            ("dsp/logcgi/clickdeal/impression_cache.h" include nil nil [122 172])
+            ("dsp/proto/log/log.pb.h" include nil nil [173 206])
+            ("DEFINE_string" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("consumer_group" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [222 237]))                  
+                :type "int")
+                nil [208 260])
+            ("DEFINE_string" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("impression_topic" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [275 292]))                  
+                :type "int")
+                nil [261 321])
+            ("DEFINE_string" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("kafka_zookeeper" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [336 352]))                  
+                :type "int")
+                nil [322 376])
+            ("dsp" type
+               (:members 
+                  ( ("logcgi" type
+                       (:members 
+                          ( ("ImpressionCache" function
+                               (:constructor-flag t
+                                :parent "ImpressionCache"
+                                :type ("ImpressionCache" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [414 452])
+                            ("ImpressionCache" function
+                               (:destructor-flag t
+                                :parent "ImpressionCache"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [454 547])
+                            ("Initialize" function
+                               (:parent "ImpressionCache"
+                                :type ("int32_t" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [549 1116])
+                            ("GetImpressionInfo" function
+                               (:parent "ImpressionCache"
+                                :arguments 
+                                  ( ("creative_id" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1163 1184])
+                                    ("global_trace_id" variable
+                                       (:pointer 1
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1185 1214])
+                                    ("bid_request_time_utc" variable
+                                       (:pointer 1
+                                        :type ("uint32_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1219 1250])
+                                    ("dsp_impression_id" variable
+                                       (:pointer 1
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1255 1286]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [1118 1631])
+                            ("UpdateData" function
+                               (:parent "ImpressionCache"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [1633 3766]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [394 3769]))                  
+                :type "namespace")
+                nil [378 3792]))          
+      :file "impression_cache.cc"
+      :pointmax 3811
+      :fsize 3810
+      :lastmodtime '(22869 48833 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("dsp/logcgi/clickdeal/impression_cache.h" include nil nil [91 141])
+            ("common/base/module.h" include nil nil [142 173])
+            ("common/base/string/algorithm.h" include nil nil [174 215])
+            ("common/base/string/concat.h" include nil nil [216 254])
+            ("common/base/string/format.h" include nil nil [255 293])
+            ("common/base/string/string_number.h" include nil nil [294 339])
+            ("thirdparty/gflags/gflags.h" include nil nil [340 377])
+            ("thirdparty/glog/logging.h" include nil nil [378 414])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [425 434])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [435 448]))                  
+                :type "int")
+                nil [416 693]))          
+      :file "impression_cache_test.cc"
+      :pointmax 694
+      :fsize 693
+      :lastmodtime '(22868 42712 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("stdlib.h" include (:system-flag t) nil [107 126])
+            ("string" include (:system-flag t) nil [127 144])
+            ("thirdparty/glog/logging.h" include nil nil [145 181])
+            ("thirdparty/gmock/gmock.h" include nil nil [182 217])
+            ("thirdparty/gtest/gtest.h" include nil nil [218 253])
+            ("dsp/common/load_protobuf_data.h" include nil nil [255 297])
+            ("dsp/logcgi/proto/logcgi.pb.h" include nil nil [298 337])
+            ("dsp/logcgi/clickdeal/clickdealservice.h" include nil nil [338 388])
+            ("dsp" type
+               (:members 
+                  ( ("logcgi" type
+                       (:members 
+                          ( ("kInitialFile" variable
+                               (:constant-flag t
+                                :default-value "\"clickdealservice.data\""
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [428 485])
+                            ("ClickDealServiceTest" type
+                               (:superclasses 
+                                  ( ("testing::Test" type
+                                       (:protection "public"
+                                        :type "class")
+                                        nil nil))                                  
+                                :members 
+                                  ( ("SetUp" function (:type "void") (reparse-symbol classsubparts) [542 851])
+                                    ("TearDown" function (:type "void") (reparse-symbol classsubparts) [855 876])
+                                    ("public" label nil (reparse-symbol classsubparts) [879 886])
+                                    ("p_click_deal_" variable
+                                       (:pointer 1
+                                        :typemodifiers ("static")
+                                        :type ("ClickDealService" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [889 929]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [488 932])
+                            ("ClickDealServiceTest::p_click_deal_" variable
+                               (:pointer 1
+                                :type ("ClickDealService" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [935 989])
+                            ("TEST_F" function
+                               (:arguments 
+                                  ( ("" variable (:type ("ClickDealServiceTest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1000 1021])
+                                    ("" variable (:type ("Check_Get_Message_From_Kafka" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1022 1051]))                                  
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [993 1162]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [407 1166]))                  
+                :type "namespace")
+                nil [391 1189]))          
+      :file "clickdealservice_test.cc"
+      :pointmax 1209
+      :fsize 1208
+      :lastmodtime '(22840 64114 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("sys/types.h" include (:system-flag t) nil [268 290])
+            ("unistd.h" include (:system-flag t) nil [291 310])
+            ("vector" include (:system-flag t) nil [311 328])
+            ("set" include (:system-flag t) nil [329 343])
+            ("iostream" include (:system-flag t) nil [344 363])
+            ("sstream" include (:system-flag t) nil [364 382])
+            ("fstream" include (:system-flag t) nil [383 401])
+            ("poppy/rpc_server.h" include nil nil [403 432])
+            ("poppy/rpc_channel.h" include nil nil [433 463])
+            ("poppy/rpc_client.h" include nil nil [464 493])
+            ("thirdparty/glog/logging.h" include nil nil [494 530])
+            ("thirdparty/librdkafka/src/rdkafka_int.h" include nil nil [531 581])
+            ("thirdparty/librdkafka/src/rdkafka.h" include nil nil [582 628])
+            ("common/base/string/concat.h" include nil nil [629 667])
+            ("dsp/logcgi/common/datadefine.h" include nil nil [669 710])
+            ("dsp/logcgi/clickdeal/clickdealservice.h" include nil nil [711 761])
+            ("dsp" type
+               (:members 
+                  ( ("logcgi" type
+                       (:members 
+                          ( ("DEFINE_int32" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("" variable (:type ("clickdeal_sampling_ratio" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [814 839]))                                  
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [801 881])
+                            ("DEFINE_bool" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("" variable (:type ("allow_duplicated" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [895 912])
+                                    ("" variable (:type ("false" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [913 919]))                                  
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [883 963])
+                            ("DEFINE_bool" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("" variable (:type ("rewrite_tanx_click" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [977 996])
+                                    ("" variable (:type ("false" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [997 1003]))                                  
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [965 1079])
+                            ("dsp::trace" using (:type ("dsp::trace" type
+                                 (:prototype t
+                                  :type "namespace")
+                                  nil nil)) (reparse-symbol namespacesubparts) [1081 1108])
+                            ("ClickDealService::m_logger_agent_init_" variable
+                               (:default-value "false"
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [1112 1185])
+                            ("ClickDealService::m_p_click_redo_agent_" variable
+                               (:pointer 1
+                                :default-value "nullptr"
+                                :type ("yd::dsp::LoggerAgent" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [1186 1261])
+                            ("ClickDealService::m_p_click_log_agent_" variable
+                               (:pointer 1
+                                :default-value "nullptr"
+                                :type ("yd::dsp::LoggerAgent" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [1262 1337])
+                            ("ClickDealService::m_p_click_timeout_agent_" variable
+                               (:pointer 1
+                                :default-value "nullptr"
+                                :type ("yd::dsp::LoggerAgent" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [1338 1413])
+                            ("kRootPath" variable
+                               (:constant-flag t
+                                :default-value "\"/clickdeal\""
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [1415 1458])
+                            ("ClickDealService" function
+                               (:constructor-flag t
+                                :parent "ClickDealService"
+                                :arguments 
+                                  ( ("o_logger_config" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("LoggerConfig" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1499 1535])
+                                    ("o_out_server_config" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("OutServerConfig" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1538 1581])
+                                    ("timeout_minutes" variable
+                                       (:constant-flag t
+                                        :type ("uint32_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1584 1615]))                                  
+                                :type ("ClickDealService" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [1461 1917])
+                            ("ClickDealService" function
+                               (:destructor-flag t
+                                :parent "ClickDealService"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [1960 2281])
+                            ("InitLoggerAgent" function
+                               (:parent "ClickDealService"
+                                :arguments 
+                                  ( ("e_log_type" variable
+                                       (:constant-flag t
+                                        :type ("LogType" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2329 2354])
+                                    ("p_logger_agent" variable
+                                       (:pointer 2
+                                        :type ("yd::dsp::LoggerAgent" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2357 2395])
+                                    ("str_path" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2398 2419]))                                  
+                                :type ("int32_t" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [2284 3862])
+                            ("InitLoggerAgents" function
+                               (:parent "ClickDealService"
+                                :type ("int32_t" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [3865 5154])
+                            ("GetPartitionNum" function
+                               (:parent "ClickDealService"
+                                :type ("int32_t" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [5157 6484])
+                            ("CreatePartitionNode" function
+                               (:parent "ClickDealService"
+                                :type ("int32_t" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [6487 7083])
+                            ("GetIdentity" function
+                               (:parent "ClickDealService"
+                                :type ("int32_t" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [7086 7468])
+                            ("BuildZookeeperConnection" function
+                               (:parent "ClickDealService"
+                                :type ("int32_t" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [7501 8585])
+                            ("GetClientSizeAndNo" function
+                               (:parent "ClickDealService"
+                                :type ("int32_t" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [8588 9853])
+                            ("BuildConnectionWithPartition" function
+                               (:parent "ClickDealService"
+                                :type ("int32_t" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [9856 12242])
+                            ("Init" function
+                               (:parent "ClickDealService"
+                                :type ("int32_t" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [12245 13107])
+                            ("CommitOffset" function
+                               (:methodconst-flag t
+                                :parent "ClickDealService"
+                                :arguments 
+                                  ( ("p_kafka_consumer" variable
+                                       (:pointer 1
+                                        :type ("KafkaConsumer" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [13149 13181]))                                  
+                                :type ("int32_t" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [13110 13931])
+                            ("CheckClientChange" function
+                               (:parent "ClickDealService"
+                                :arguments 
+                                  ( ("check_father_node" variable (:type "bool") (reparse-symbol arg-sub-list) [14119 14142]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [14078 14833])
+                            ("CheckPartitionChange" function
+                               (:parent "ClickDealService"
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [14836 15357])
+                            ("CheckPartitionChange" function
+                               (:parent "ClickDealService"
+                                :arguments 
+                                  ( ("p_kafka_consumer" variable
+                                       (:pointer 1
+                                        :type ("KafkaConsumer" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [15404 15436]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [15360 15886])
+                            ("Work" function
+                               (:parent "ClickDealService"
+                                :type ("int32_t" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [15889 16725])
+                            ("DealClick" function
+                               (:parent "ClickDealService"
+                                :arguments 
+                                  ( ("p_kafka_consumer" variable
+                                       (:pointer 1
+                                        :type ("KafkaConsumer" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [16764 16796]))                                  
+                                :type ("int32_t" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [16728 18306])
+                            ("GetClickMessage" function
+                               (:parent "ClickDealService"
+                                :arguments 
+                                  ( ("p_kafka_consumer" variable
+                                       (:pointer 1
+                                        :type ("KafkaConsumer" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [18354 18386])
+                                    ("p_inner_request" variable
+                                       (:pointer 1
+                                        :type ("InnerRequest" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [18389 18419]))                                  
+                                :type ("int32_t" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [18309 19291])
+                            ("CheckBillTypeSuit" function
+                               (:parent "ClickDealService"
+                                :arguments 
+                                  ( ("o_inner_request" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("InnerRequest" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [19345 19381])
+                                    ("p_bill" variable
+                                       (:pointer 1
+                                        :type ("Bill" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [19384 19397]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [19304 20091])
+                            ("BillAndResponse" function
+                               (:parent "ClickDealService"
+                                :arguments 
+                                  ( ("o_inner_request" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("InnerRequest" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [20188 20224])
+                                    ("b_record_file" variable (:type "bool") (reparse-symbol arg-sub-list) [20227 20246])
+                                    ("p_bill" variable
+                                       (:pointer 1
+                                        :type ("Bill" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [20291 20304]))                                  
+                                :type ("int32_t" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [20143 25325])
+                            ("GenerateBillRequest" function
+                               (:methodconst-flag t
+                                :parent "ClickDealService"
+                                :arguments 
+                                  ( ("o_inner_request" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("InnerRequest" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [25377 25413])
+                                    ("p_bill_request" variable
+                                       (:pointer 1
+                                        :type ("BillRequest" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [25416 25445]))                                  
+                                :type ("int32_t" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [25328 28016])
+                            ("GenerateBillCPC" function
+                               (:methodconst-flag t
+                                :parent "ClickDealService"
+                                :arguments 
+                                  ( ("o_inner_request" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("InnerRequest" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [28064 28100])
+                                    ("o_bill_response" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("BillResponse" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [28103 28139])
+                                    ("p_bill_cpc" variable
+                                       (:pointer 1
+                                        :type ("Bill_BillCPC" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [28142 28168]))                                  
+                                :type ("int32_t" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [28019 28677])
+                            ("GenerateBillCPCWithoutResponse" function
+                               (:methodconst-flag t
+                                :parent "ClickDealService"
+                                :arguments 
+                                  ( ("o_inner_request" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("InnerRequest" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [28740 28776])
+                                    ("p_bill_cpc" variable
+                                       (:pointer 1
+                                        :type ("Bill_BillCPC" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [28779 28805]))                                  
+                                :type ("int32_t" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [28680 28879])
+                            ("RecordFailedBill" function
+                               (:parent "ClickDealService"
+                                :arguments 
+                                  ( ("o_bill_request" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("BillRequest" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [28951 28985])
+                                    ("error_type" variable
+                                       (:constant-flag t
+                                        :type ("int32_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [28988 29013]))                                  
+                                :type ("int32_t" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [28905 30628])
+                            ("RecordLog" function
+                               (:parent "ClickDealService"
+                                :arguments 
+                                  ( ("o_inner_request" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("InnerRequest" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [30678 30714])
+                                    ("o_bill" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Bill" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [30717 30736]))                                  
+                                :type ("int32_t" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [30639 30808])
+                            ("RecordClickLog" function
+                               (:methodconst-flag t
+                                :parent "ClickDealService"
+                                :arguments 
+                                  ( ("o_inner_request" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("InnerRequest" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [30855 30891])
+                                    ("o_bill" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Bill" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [30894 30913]))                                  
+                                :type ("int32_t" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [30811 31859])
+                            ("GenerateClickLog" function
+                               (:methodconst-flag t
+                                :parent "ClickDealService"
+                                :arguments 
+                                  ( ("o_inner_request" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("InnerRequest" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [31908 31944])
+                                    ("o_bill" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Bill" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [31947 31966])
+                                    ("p_dsp_log" variable
+                                       (:pointer 1
+                                        :type ("dsp::log::DspLog" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [31969 31998]))                                  
+                                :type ("int32_t" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [31862 33605])
+                            ("RecordClickNeedRedo" function
+                               (:methodconst-flag t
+                                :parent "ClickDealService"
+                                :arguments 
+                                  ( ("o_inner_request" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("InnerRequest" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [33657 33693]))                                  
+                                :type ("int32_t" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [33608 33777])
+                            ("GetLoggerInfo" function
+                               (:parent "ClickDealService"
+                                :arguments 
+                                  ( ("LogType" variable
+                                       (:constant-flag t
+                                        :type ("LogType" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [33823 33845])
+                                    ("p_logger_info" variable
+                                       (:pointer 1
+                                        :type ("LoggerInfo" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [33848 33874]))                                  
+                                :type ("int32_t" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [33780 34406])
+                            ("get_pid" function
+                               (:methodconst-flag t
+                                :parent "ClickDealService"
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [34408 34474])
+                            ("GenerateHttpHeaderInfo" function
+                               (:methodconst-flag t
+                                :parent "ClickDealService"
+                                :arguments 
+                                  ( ("inner_request" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("InnerRequest" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [34529 34563])
+                                    ("p_http_header_info" variable
+                                       (:pointer 1
+                                        :type ("HttpHeaderInfo" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [34566 34601]))                                  
+                                :type ("int32_t" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [34477 36251])
+                            ("FillImpressionAdCore" function
+                               (:methodconst-flag t
+                                :parent "ClickDealService"
+                                :arguments 
+                                  ( ("inner_request" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("InnerRequest" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [36300 36334])
+                                    ("impression_ad_core" variable
+                                       (:pointer 1
+                                        :type ("dsp::log::ImpressionAdCore" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [36337 36384]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [36253 37198])
+                            ("AddCreativeInfo" function
+                               (:methodconst-flag t
+                                :parent "ClickDealService"
+                                :arguments 
+                                  ( ("inner_request" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("InnerRequest" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [37246 37280])
+                                    ("p_creative_info" variable
+                                       (:pointer 1
+                                        :type ("dsp::log::ImpressionAdCore_CreativeInfo" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [37283 37341]))                                  
+                                :type ("int32_t" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [37201 37787])
+                            ("AddPromotion" function
+                               (:methodconst-flag t
+                                :parent "ClickDealService"
+                                :arguments 
+                                  ( ("inner_request" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("InnerRequest" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [37832 37866])
+                                    ("p_promotion_object" variable
+                                       (:pointer 1
+                                        :type ("dsp::log::ImpressionAdCore_PromotionObject" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [37869 37933]))                                  
+                                :type ("int32_t" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [37790 38135])
+                            ("RewriteClickLog" function
+                               (:parent "ClickDealService"
+                                :arguments 
+                                  ( ("log" variable
+                                       (:pointer 1
+                                        :type ("dsp::log::DspLog" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [38176 38198]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [38137 39441]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [780 39444]))                  
+                :type "namespace")
+                nil [764 39467]))          
+      :file "clickdealservice.cc"
+      :pointmax 39486
+      :fsize 39855
+      :lastmodtime '(22869 47377 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("time.h" include (:system-flag t) nil [160 177])
+            ("signal.h" include (:system-flag t) nil [178 197])
+            ("unistd.h" include (:system-flag t) nil [198 217])
+            ("map" include (:system-flag t) nil [218 232])
+            ("common/base/string/string_number.h" include nil nil [233 278])
+            ("thirdparty/gflags/gflags.h" include nil nil [279 316])
+            ("thirdparty/glog/logging.h" include nil nil [317 353])
+            ("dsp/common/load_protobuf_data.h" include nil nil [354 396])
+            ("dsp/logcgi/common/datadefine.h" include nil nil [398 439])
+            ("dsp/logcgi/clickdeal/clickdealservice.h" include nil nil [440 490])
+            ("dsp::logcgi" using (:type ("dsp::logcgi" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [493 521])
+            ("DEFINE_string" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("server_config" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [538 552]))                  
+                :type "int")
+                nil [524 590])
+            ("DEFINE_int32" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("report_seconds" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [604 619]))                  
+                :type "int")
+                nil [591 683])
+            ("DEFINE_int32" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("max_report_seconds" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [697 716]))                  
+                :type "int")
+                nil [684 798])
+            ("kDefaultSplit" variable
+               (:constant-flag t
+                :default-value "\"\\t\""
+                :type ("std::string" type (:type "class") nil nil))
+                nil [801 840])
+            ("g_map_process_info" variable (:type ("std::map" type
+                 (:template-specifier 
+                    ( ("int32_t" type nil nil nil)
+                      ("int32_t" type nil nil nil))                    
+                  :type "class")
+                  nil nil)) nil [843 889])
+            ("StartProcess" function
+               (:arguments 
+                  ( ("fildes" variable
+                       (:dereference 1
+                        :type ("int32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [913 931]))                  
+                :type ("int32_t" type (:type "class") nil nil))
+                nil [892 2620])
+            ("CheckProcess" function
+               (:arguments 
+                  ( ("fildes" variable
+                       (:dereference 1
+                        :type ("int32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2701 2719]))                  
+                :type ("int32_t" type (:type "class") nil nil))
+                nil [2680 4946])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [4962 4971])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4972 4984]))                  
+                :type ("int32_t" type (:type "class") nil nil))
+                nil [4949 5790]))          
+      :file "main.cc"
+      :pointmax 5792
+      :fsize 5887
+      :lastmodtime '(22840 64114 0 0)
+      :unmatched-syntax '((string 724 . 796) (number 717 . 720) (string 626 . 681) (number 620 . 622) (string 571 . 588) (string 553 . 569))))
+  :file "!Users!ric!Downloads!trunk!dsp!logcgi!clickdeal!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

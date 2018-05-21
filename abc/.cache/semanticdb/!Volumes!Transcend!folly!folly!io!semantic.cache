@@ -1,0 +1,2221 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("FOLLY_IO_RECORDIO_H_" variable (:constant-flag t) nil [1007 1027])
+            ("atomic" include (:system-flag t) nil [1029 1046])
+            ("memory" include (:system-flag t) nil [1047 1064])
+            ("mutex" include (:system-flag t) nil [1065 1081])
+            ("folly/File.h" include (:system-flag t) nil [1083 1106])
+            ("folly/Range.h" include (:system-flag t) nil [1107 1131])
+            ("folly/io/IOBuf.h" include (:system-flag t) nil [1132 1159])
+            ("folly/system/MemoryMapping.h" include (:system-flag t) nil [1160 1199])
+            ("folly" type
+               (:members 
+                  ( ("RecordIOWriter" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [1346 1353])
+                            ("RecordIOWriter" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("file" variable (:type ("File" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2037 2047])
+                                    ("fileId" variable
+                                       (:default-value "1"
+                                        :type ("uint32_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2048 2067]))                                  
+                                :type ("RecordIOWriter" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2022 2069])
+                            ("write" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("buf" variable (:type ("std::unique_ptr" type
+                                         (:template-specifier 
+                                            ( ("IOBuf" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol arg-sub-list) [2240 2267]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2229 2268])
+                            ("filePos" function
+                               (:methodconst-flag t
+                                :type ("off_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2434 2476])
+                            ("private" label nil (reparse-symbol classsubparts) [2479 2487])
+                            ("file_" variable (:type ("File" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2490 2501])
+                            ("fileId_" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2504 2521])
+                            ("writeLock_" variable (:type ("std::unique_lock" type
+                                 (:template-specifier 
+                                    ( ("File" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [2524 2558])
+                            ("filePos_" variable (:type ("std::atomic" type
+                                 (:template-specifier 
+                                    ( ("off_t" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [2561 2589]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [1322 2592])
+                    ("RecordIOReader" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [2693 2700])
+                            ("Iterator" type
+                               (:prototype t
+                                :type "class")
+                                (reparse-symbol classsubparts) [2703 2718])
+                            ("iterator" type
+                               (:typedef ("Iterator" type (:type "class") nil nil)
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [2979 3005])
+                            ("const_iterator" type
+                               (:typedef ("Iterator" type (:type "class") nil nil)
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [3008 3040])
+                            ("value_type" type
+                               (:typedef ("std::pair" type
+                                     (:template-specifier 
+                                        ( ("ByteRange" type nil nil nil)
+                                          ("off_t" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil)
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [3043 3090])
+                            ("reference" variable (:type ("value_type" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3101 3123])
+                            ("const_reference" variable
+                               (:constant-flag t
+                                :type ("value_type" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3134 3168])
+                            ("RecordIOReader" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("file" variable (:type ("File" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3373 3383])
+                                    ("fileId" variable
+                                       (:default-value "0"
+                                        :type ("uint32_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3384 3403]))                                  
+                                :type ("RecordIOReader" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3358 3405])
+                            ("cbegin" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :type ("Iterator" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3409 3433])
+                            ("begin" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :type ("Iterator" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3436 3459])
+                            ("cend" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :type ("Iterator" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3462 3484])
+                            ("end" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :type ("Iterator" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3487 3508])
+                            ("seek" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :arguments 
+                                  ( ("pos" variable (:type ("off_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3599 3609]))                                  
+                                :type ("Iterator" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3585 3616])
+                            ("private" label nil (reparse-symbol classsubparts) [3619 3627])
+                            ("map_" variable (:type ("MemoryMapping" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3630 3649])
+                            ("fileId_" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3652 3669]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [2669 3672])
+                    ("recordio_helpers" type
+                       (:members 
+                          ( ("headerSize" function
+                               (:prototype-flag t
+                                :type ("size_t" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [3990 4010])
+                            ("prependHeader" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("buf" variable
+                                       (:reference 1
+                                        :type ("std::unique_ptr" type
+                                             (:template-specifier 
+                                                ( ("IOBuf" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [4586 4614])
+                                    ("fileId" variable
+                                       (:default-value "1"
+                                        :type ("uint32_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4615 4634]))                                  
+                                :type ("size_t" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [4565 4636])
+                            ("RecordInfo" type
+                               (:members 
+                                  ( ("fileId" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5038 5054])
+                                    ("record" variable (:type ("ByteRange" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5057 5074]))                                  
+                                :type "struct")
+                                (reparse-symbol namespacesubparts) [5016 5077])
+                            ("findRecord" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("searchRange" variable (:type ("ByteRange" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5100 5122])
+                                    ("wholeRange" variable (:type ("ByteRange" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5145 5166])
+                                    ("fileId" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5189 5205]))                                  
+                                :type ("RecordInfo" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [5078 5206])
+                            ("findRecord" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("range" variable (:type ("ByteRange" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5285 5301])
+                                    ("fileId" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5302 5318]))                                  
+                                :type ("RecordInfo" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [5263 5319])
+                            ("validateRecord" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("range" variable (:type ("ByteRange" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5510 5526])
+                                    ("fileId" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5527 5543]))                                  
+                                :type ("RecordInfo" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [5484 5544]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [3674 5547]))                  
+                :type "namespace")
+                nil [1201 5580])
+            ("folly/io/RecordIO-inl.h" include (:system-flag t) nil [5601 5635]))          
+      :file "RecordIO.h"
+      :pointmax 5636
+      :fsize 5635
+      :lastmodtime '(23032 17478 0 0)
+      :unmatched-syntax '((symbol 3980 . 3989) (EXPLICIT 3349 . 3357) (TYPEDEF 3126 . 3133) (TYPEDEF 3093 . 3100) (EXPLICIT 2013 . 2021) (symbol 994 . 998) (symbol 987 . 993) (punctuation 986 . 987))
+      :lexical-table 
+        '(("FOLLY_IO_RECORDIO_H_")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("__STDC_LIMIT_MACROS" variable (:constant-flag t) nil [634 653])
+            ("folly/io/IOBuf.h" include (:system-flag t) nil [662 689])
+            ("cassert" include (:system-flag t) nil [691 709])
+            ("cstdint" include (:system-flag t) nil [710 728])
+            ("cstdlib" include (:system-flag t) nil [729 747])
+            ("stdexcept" include (:system-flag t) nil [748 768])
+            ("folly/Conv.h" include (:system-flag t) nil [770 793])
+            ("folly/Likely.h" include (:system-flag t) nil [794 819])
+            ("folly/Memory.h" include (:system-flag t) nil [820 845])
+            ("folly/ScopeGuard.h" include (:system-flag t) nil [846 875])
+            ("folly/hash/SpookyHashV2.h" include (:system-flag t) nil [876 912])
+            ("folly/io/Cursor.h" include (:system-flag t) nil [913 941])
+            ("folly/lang/Align.h" include (:system-flag t) nil [942 971])
+            ("folly/memory/Malloc.h" include (:system-flag t) nil [972 1004])
+            ("std::unique_ptr" using (:type ("std::unique_ptr" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [1006 1028])
+            ("unnamed" type
+               (:members 
+                  ( ("uint16_t" variable (:type "int") (reparse-symbol namespacesubparts) [1050 1260])
+                    ("uint64_t" variable (:type "int") (reparse-symbol namespacesubparts) [1269 1849])
+                    ("takeOwnershipError" function
+                       (:arguments 
+                          ( ("freeOnError" variable (:type "bool") (reparse-symbol arg-sub-list) [1921 1938])
+                            ("buf" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [1939 1949])
+                            ("freeFn" variable (:type ("folly::IOBuf::FreeFunction" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1974 2008])
+                            ("userData" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [2033 2048]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1897 2382]))                  
+                :type "namespace")
+                nil [1030 2385])
+            ("folly" type
+               (:members 
+                  ( ("HeapPrefix" type
+                       (:parent "IOBuf"
+                        :members 
+                          ( ("HeapPrefix" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("flg" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2468 2481]))                                  
+                                :type ("HeapPrefix" type (:type "struct") nil nil))
+                                (reparse-symbol classsubparts) [2457 2516])
+                            ("HeapPrefix" function
+                               (:destructor-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [2519 2731])
+                            ("magic" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2735 2750])
+                            ("flags" variable (:type ("std::atomic" type
+                                 (:template-specifier 
+                                    ( ("uint16_t" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [2753 2781]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [2419 2784])
+                    ("HeapStorage" type
+                       (:parent "IOBuf"
+                        :members 
+                          ( ("prefix" variable (:type ("HeapPrefix" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2816 2834])
+                            ("buf" variable (:type ("folly::IOBuf" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2994 3011]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [2786 3014])
+                    ("HeapFullStorage" type
+                       (:parent "IOBuf"
+                        :members 
+                          ( ("static_assert" function
+                               (:prototype-flag t
+                                :type "int")
+                                (reparse-symbol classsubparts) [3198 3292])
+                            ("hs" variable (:type ("HeapStorage" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3296 3311])
+                            ("shared" variable (:type ("SharedInfo" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3314 3332])
+                            ("align" variable (:type ("folly::max_align_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3335 3360]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [3016 3363])
+                    ("SharedInfo" function
+                       (:constructor-flag t
+                        :parent "IOBuf::SharedInfo"
+                        :type ("SharedInfo" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [3365 3624])
+                    ("SharedInfo" function
+                       (:constructor-flag t
+                        :parent "IOBuf::SharedInfo"
+                        :arguments 
+                          ( ("fn" variable (:type ("FreeFunction" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3656 3672])
+                            ("arg" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [3673 3683]))                          
+                        :type ("SharedInfo" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [3626 3902])
+                    ("releaseStorage" function
+                       (:parent "IOBuf"
+                        :arguments 
+                          ( ("storage" variable
+                               (:pointer 1
+                                :type ("HeapStorage" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4590 4611])
+                            ("freeFlags" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4612 4631]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [4563 5823])
+                    ("freeInternalBuf" function
+                       (:parent "IOBuf"
+                        :arguments 
+                          ( ("" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [5853 5869])
+                            ("userData" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [5870 5885]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [5825 5983])
+                    ("IOBuf" function
+                       (:constructor-flag t
+                        :parent "IOBuf"
+                        :arguments 
+                          ( ("" variable (:type ("CreateOp" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5998 6007])
+                            ("capacity" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6008 6026]))                          
+                        :type ("IOBuf" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [5985 6240])
+                    ("IOBuf" function
+                       (:constructor-flag t
+                        :parent "IOBuf"
+                        :arguments 
+                          ( ("" variable (:type ("CopyBufferOp" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6255 6277])
+                            ("buf" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [6291 6307])
+                            ("size" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6321 6335])
+                            ("headroom" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6349 6367])
+                            ("minTailroom" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6381 6402]))                          
+                        :type ("IOBuf" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [6242 6585])
+                    ("IOBuf" function
+                       (:constructor-flag t
+                        :parent "IOBuf"
+                        :arguments 
+                          ( ("op" variable (:type ("CopyBufferOp" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6600 6616])
+                            ("br" variable (:type ("ByteRange" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6617 6630])
+                            ("headroom" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6644 6662])
+                            ("minTailroom" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6663 6684]))                          
+                        :type ("IOBuf" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [6587 6747])
+                    ("create" function
+                       (:parent "IOBuf"
+                        :arguments 
+                          ( ("capacity" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6781 6799]))                          
+                        :type ("unique_ptr" type
+                             (:template-specifier 
+                                ( ("IOBuf" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol namespacesubparts) [6749 7455])
+                    ("createCombined" function
+                       (:parent "IOBuf"
+                        :arguments 
+                          ( ("capacity" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7497 7515]))                          
+                        :type ("unique_ptr" type
+                             (:template-specifier 
+                                ( ("IOBuf" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol namespacesubparts) [7457 8388])
+                    ("createSeparate" function
+                       (:parent "IOBuf"
+                        :arguments 
+                          ( ("capacity" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8430 8448]))                          
+                        :type ("unique_ptr" type
+                             (:template-specifier 
+                                ( ("IOBuf" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol namespacesubparts) [8390 8504])
+                    ("createChain" function
+                       (:parent "IOBuf"
+                        :arguments 
+                          ( ("totalCapacity" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8548 8569])
+                            ("maxBufCapacity" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8570 8594]))                          
+                        :type ("unique_ptr" type
+                             (:template-specifier 
+                                ( ("IOBuf" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol namespacesubparts) [8506 9004])
+                    ("IOBuf" function
+                       (:constructor-flag t
+                        :parent "IOBuf"
+                        :arguments 
+                          ( ("" variable (:type ("TakeOwnershipOp" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9019 9035])
+                            ("buf" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [9036 9046])
+                            ("capacity" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9047 9065])
+                            ("length" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9066 9082])
+                            ("freeFn" variable (:type ("FreeFunction" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9096 9116])
+                            ("userData" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [9117 9132])
+                            ("freeOnError" variable (:type "bool") (reparse-symbol arg-sub-list) [9146 9163]))                          
+                        :type ("IOBuf" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [9006 9556])
+                    ("takeOwnership" function
+                       (:parent "IOBuf"
+                        :arguments 
+                          ( ("buf" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [9597 9607])
+                            ("capacity" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9608 9626])
+                            ("length" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9666 9682])
+                            ("freeFn" variable (:type ("FreeFunction" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9722 9742])
+                            ("userData" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [9782 9797])
+                            ("freeOnError" variable (:type "bool") (reparse-symbol arg-sub-list) [9837 9854]))                          
+                        :type ("unique_ptr" type
+                             (:template-specifier 
+                                ( ("IOBuf" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol namespacesubparts) [9558 10629])
+                    ("IOBuf" function
+                       (:constructor-flag t
+                        :parent "IOBuf"
+                        :arguments 
+                          ( ("" variable (:type ("WrapBufferOp" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10644 10657])
+                            ("buf" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [10658 10674])
+                            ("capacity" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10675 10693]))                          
+                        :type ("IOBuf" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [10631 11066])
+                    ("IOBuf" function
+                       (:constructor-flag t
+                        :parent "IOBuf"
+                        :arguments 
+                          ( ("op" variable (:type ("WrapBufferOp" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11081 11097])
+                            ("br" variable (:type ("ByteRange" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11098 11111]))                          
+                        :type ("IOBuf" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [11068 11151])
+                    ("wrapBuffer" function
+                       (:parent "IOBuf"
+                        :arguments 
+                          ( ("buf" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [11189 11205])
+                            ("capacity" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11206 11224]))                          
+                        :type ("unique_ptr" type
+                             (:template-specifier 
+                                ( ("IOBuf" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol namespacesubparts) [11153 11290])
+                    ("wrapBufferAsValue" function
+                       (:parent "IOBuf"
+                        :arguments 
+                          ( ("buf" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [11323 11339])
+                            ("capacity" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11340 11358]))                          
+                        :type ("IOBuf" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [11292 11420])
+                    ("flagsAndSharedInfo_" function
+                       (:arguments 
+                          ( ("" variable (:type ("other" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11628 11634])
+                            ("" variable (:type ("flagsAndSharedInfo_" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11634 11654]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [11608 12332])
+                    ("IOBuf" function
+                       (:constructor-flag t
+                        :parent "IOBuf"
+                        :arguments 
+                          ( ("other" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("IOBuf" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [12347 12366]))                          
+                        :type ("IOBuf" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [12334 12402])
+                    ("IOBuf" function
+                       (:constructor-flag t
+                        :parent "IOBuf"
+                        :arguments 
+                          ( ("" variable (:type ("InternalConstructor" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12417 12437])
+                            ("flagsAndSharedInfo" variable (:type ("uintptr_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12451 12480])
+                            ("buf" variable
+                               (:pointer 1
+                                :type ("uint8_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [12494 12507])
+                            ("capacity" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12521 12539])
+                            ("data" variable
+                               (:pointer 1
+                                :type ("uint8_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [12553 12567])
+                            ("length" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12581 12597]))                          
+                        :type ("IOBuf" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [12404 12823])
+                    ("IOBuf" function
+                       (:destructor-flag t
+                        :parent "IOBuf"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [12825 13244])
+                    ("=" function
+                       (:operator-flag t
+                        :parent "IOBuf"
+                        :arguments 
+                          ( ("other" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("IOBuf" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [14579 14598]))                          
+                        :type ("IOBuf" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [14555 14672])
+                    ("empty" function
+                       (:methodconst-flag t
+                        :parent "IOBuf"
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [14674 14875])
+                    ("countChainElements" function
+                       (:methodconst-flag t
+                        :parent "IOBuf"
+                        :type ("size_t" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [14877 15068])
+                    ("computeChainDataLength" function
+                       (:methodconst-flag t
+                        :parent "IOBuf"
+                        :type ("uint64_t" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [15070 15290])
+                    ("prependChain" function
+                       (:parent "IOBuf"
+                        :arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :type ("unique_ptr" type
+                                     (:template-specifier 
+                                        ( ("IOBuf" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [15317 15336])
+                            ("" variable (:type ("iobuf" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15337 15343]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [15292 15812])
+                    ("clone" function
+                       (:methodconst-flag t
+                        :parent "IOBuf"
+                        :type ("unique_ptr" type
+                             (:template-specifier 
+                                ( ("IOBuf" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol namespacesubparts) [15814 15906])
+                    ("cloneOne" function
+                       (:methodconst-flag t
+                        :parent "IOBuf"
+                        :type ("unique_ptr" type
+                             (:template-specifier 
+                                ( ("IOBuf" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol namespacesubparts) [15908 16006])
+                    ("cloneCoalesced" function
+                       (:methodconst-flag t
+                        :parent "IOBuf"
+                        :type ("unique_ptr" type
+                             (:template-specifier 
+                                ( ("IOBuf" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol namespacesubparts) [16008 16118])
+                    ("cloneAsValue" function
+                       (:methodconst-flag t
+                        :parent "IOBuf"
+                        :type ("IOBuf" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [16120 16328])
+                    ("cloneOneAsValue" function
+                       (:methodconst-flag t
+                        :parent "IOBuf"
+                        :type ("IOBuf" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [16330 16637])
+                    ("cloneCoalescedAsValue" function
+                       (:methodconst-flag t
+                        :parent "IOBuf"
+                        :type ("IOBuf" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [16639 17541])
+                    ("unshareOneSlow" function
+                       (:parent "IOBuf"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [17543 18331])
+                    ("unshareChained" function
+                       (:parent "IOBuf"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [18333 18908])
+                    ("markExternallyShared" function
+                       (:parent "IOBuf"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [18910 19079])
+                    ("makeManagedChained" function
+                       (:parent "IOBuf"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [19081 19294])
+                    ("coalesceSlow" function
+                       (:parent "IOBuf"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [19296 19785])
+                    ("coalesceSlow" function
+                       (:parent "IOBuf"
+                        :arguments 
+                          ( ("maxLength" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [19812 19829]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [19787 20515])
+                    ("coalesceAndReallocate" function
+                       (:parent "IOBuf"
+                        :arguments 
+                          ( ("newHeadroom" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [20551 20570])
+                            ("newLength" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [20605 20622])
+                            ("end" variable
+                               (:pointer 1
+                                :type ("IOBuf" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [20657 20668])
+                            ("newTailroom" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [20703 20722]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [20517 22070])
+                    ("decrementRefcount" function
+                       (:parent "IOBuf"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [22072 23252])
+                    ("reserveSlow" function
+                       (:parent "IOBuf"
+                        :arguments 
+                          ( ("minHeadroom" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [23278 23299])
+                            ("minTailroom" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [23300 23321]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [23254 27287])
+                    ("freeExtBuffer" function
+                       (:parent "IOBuf"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [27289 27728])
+                    ("allocExtBuffer" function
+                       (:parent "IOBuf"
+                        :arguments 
+                          ( ("minCapacity" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [27757 27778])
+                            ("bufReturn" variable
+                               (:pointer 2
+                                :type ("uint8_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [27806 27826])
+                            ("infoReturn" variable
+                               (:pointer 2
+                                :type ("SharedInfo" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [27854 27878])
+                            ("capacityReturn" variable
+                               (:pointer 1
+                                :type ("uint64_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [27906 27931]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [27730 28197])
+                    ("goodExtBufferSize" function
+                       (:parent "IOBuf"
+                        :arguments 
+                          ( ("minCapacity" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [28231 28252]))                          
+                        :type ("size_t" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [28199 28939])
+                    ("initExtBuffer" function
+                       (:parent "IOBuf"
+                        :arguments 
+                          ( ("buf" variable
+                               (:pointer 1
+                                :type ("uint8_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [28967 28980])
+                            ("mallocSize" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [28981 28999])
+                            ("infoReturn" variable
+                               (:pointer 2
+                                :type ("SharedInfo" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [29026 29050])
+                            ("capacityReturn" variable
+                               (:pointer 1
+                                :type ("uint64_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [29077 29102]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [28941 29393])
+                    ("moveToFbString" function
+                       (:parent "IOBuf"
+                        :type ("fbstring" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [29395 30445])
+                    ("cbegin" function
+                       (:methodconst-flag t
+                        :parent "IOBuf"
+                        :type ("IOBuf::Iterator" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [30447 30519])
+                    ("cend" function
+                       (:methodconst-flag t
+                        :parent "IOBuf"
+                        :type ("IOBuf::Iterator" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [30521 30597])
+                    ("getIov" function
+                       (:methodconst-flag t
+                        :parent "IOBuf"
+                        :type ("folly::fbvector" type
+                             (:template-specifier 
+                                ( ("iovec" type (:type "struct") nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol namespacesubparts) [30599 30763])
+                    ("appendToIov" function
+                       (:methodconst-flag t
+                        :parent "IOBuf"
+                        :arguments 
+                          ( ("iov" variable
+                               (:pointer 1
+                                :type ("folly::fbvector" type
+                                     (:template-specifier 
+                                        ( ("iovec" type (:type "struct") nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [30789 30824]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [30765 31077])
+                    ("fillIov" function
+                       (:methodconst-flag t
+                        :parent "IOBuf"
+                        :arguments 
+                          ( ("iov" variable
+                               (:pointer 1
+                                :type ("iovec" type
+                                     (:prototype t
+                                      :type "struct")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [31101 31119])
+                            ("len" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [31120 31131]))                          
+                        :type ("size_t" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [31079 31479])
+                    ("()" function
+                       (:methodconst-flag t
+                        :operator-flag t
+                        :parent "IOBufHash"
+                        :arguments 
+                          ( ("buf" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("IOBuf" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [31510 31527]))                          
+                        :type ("size_t" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [31481 31846])
+                    ("()" function
+                       (:methodconst-flag t
+                        :operator-flag t
+                        :parent "IOBufEqual"
+                        :arguments 
+                          ( ("a" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("IOBuf" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [31876 31891])
+                            ("b" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("IOBuf" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [31892 31907]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [31848 32330]))                  
+                :type "namespace")
+                nil [2400 32333]))          
+      :file "IOBuf.cpp"
+      :pointmax 32353
+      :fsize 32352
+      :lastmodtime '(23109 45034 0 0)
+      :unmatched-syntax '((punctuation 15335 . 15336) (semantic-list 13294 . 14553) (symbol 13285 . 13293) (semantic-list 13269 . 13284) (punctuation 13268 . 13269) (OPERATOR 13260 . 13268) (punctuation 13276 . 13277) (punctuation 13259 . 13260) (punctuation 13258 . 13259) (symbol 13253 . 13258) (punctuation 13276 . 13277) (punctuation 13251 . 13252) (symbol 13246 . 13251) (punctuation 13276 . 13277) (punctuation 11633 . 11634) (punctuation 11600 . 11601) (semantic-list 11583 . 11600) (symbol 11574 . 11583) (punctuation 11589 . 11590) (punctuation 11566 . 11567) (semantic-list 11551 . 11566) (symbol 11544 . 11551) (punctuation 11557 . 11558) (punctuation 11536 . 11537) (semantic-list 11524 . 11536) (symbol 11520 . 11524) (punctuation 11530 . 11531) (punctuation 11512 . 11513) (semantic-list 11499 . 11512) (symbol 11494 . 11499) (punctuation 11505 . 11506) (punctuation 11492 . 11493) (symbol 11479 . 11487) (semantic-list 11463 . 11478) (symbol 11458 . 11463) (punctuation 11470 . 11471) (punctuation 11457 . 11458) (punctuation 11456 . 11457) (symbol 11451 . 11456) (punctuation 11470 . 11471) (semantic-list 11446 . 11449) (symbol 11437 . 11445) (semantic-list 11434 . 11436) (symbol 11429 . 11434) (punctuation 11428 . 11429) (punctuation 11427 . 11428) (symbol 11422 . 11427) (semantic-list 4376 . 4561) (semantic-list 4364 . 4375) (DELETE 4358 . 4364) (OPERATOR 4349 . 4357) (punctuation 4348 . 4349) (punctuation 4347 . 4348) (symbol 4342 . 4347) (VOID 4337 . 4341) (semantic-list 4320 . 4335) (semantic-list 4289 . 4319) (NEW 4286 . 4289) (OPERATOR 4277 . 4285) (punctuation 4276 . 4277) (punctuation 4275 . 4276) (symbol 4270 . 4275) (punctuation 4268 . 4269) (VOID 4264 . 4268) (semantic-list 3943 . 4262) (semantic-list 3929 . 3942) (NEW 3926 . 3929) (OPERATOR 3917 . 3925) (punctuation 3916 . 3917) (punctuation 3915 . 3916) (symbol 3910 . 3915) (punctuation 3908 . 3909) (VOID 3904 . 3908) (string 3255 . 3290) (number 3235 . 3237) (punctuation 3233 . 3234) (punctuation 3232 . 3233) (semantic-list 3218 . 3231) (SIZEOF 3212 . 3218) (EXPLICIT 2448 . 2456) (punctuation 1267 . 1268) (ENUM 1262 . 1266) (punctuation 1048 . 1049) (ENUM 1043 . 1047))
+      :lexical-table 
+        '(("__STDC_LIMIT_MACROS")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("glog/logging.h" include (:system-flag t) nil [612 637])
+            ("atomic" include (:system-flag t) nil [638 655])
+            ("cassert" include (:system-flag t) nil [656 674])
+            ("cinttypes" include (:system-flag t) nil [675 695])
+            ("cstddef" include (:system-flag t) nil [696 714])
+            ("cstring" include (:system-flag t) nil [715 733])
+            ("limits" include (:system-flag t) nil [734 751])
+            ("memory" include (:system-flag t) nil [752 769])
+            ("type_traits" include (:system-flag t) nil [770 792])
+            ("boost/iterator/iterator_facade.hpp" include (:system-flag t) nil [794 839])
+            ("folly/FBString.h" include (:system-flag t) nil [841 868])
+            ("folly/FBVector.h" include (:system-flag t) nil [869 896])
+            ("folly/Portability.h" include (:system-flag t) nil [897 927])
+            ("folly/Range.h" include (:system-flag t) nil [928 952])
+            ("folly/portability/SysUio.h" include (:system-flag t) nil [953 990])
+            ("folly" type
+               (:members 
+                  ( ("detail" type
+                       (:members 
+                          ( ("IsUniquePtrToSL" type
+                               (:template 
+                                  ( ("T" type (:type "class") nil nil))                                  
+                                :type "struct"
+                                :superclasses 
+                                  ( ("std::false_type" type
+                                       (:protection "unspecified"
+                                        :type "class")
+                                        nil nil))                                  )
+                                (reparse-symbol namespacesubparts) [8918 8984])
+                            ("IsUniquePtrToSL" type
+                               (:template 
+                                  ( ("T" type (:type "class") nil nil)
+                                    ("D" type (:type "class") nil nil))                                  
+                                :type "struct"
+                                :superclasses 
+                                  ( ("std::is_standard_layout" type
+                                       (:protection "unspecified"
+                                        :type "class")
+                                        nil nil))                                  
+                                :template-specifier 
+                                  ( ("std::unique_ptr" type (:template-specifier 
+                                      ( ("T" type nil nil nil)
+                                        ("D" type nil nil nil))                                      ) nil nil))                                  )
+                                (reparse-symbol namespacesubparts) [8985 9097]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [8849 9099])
+                    ("IOBuf" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [9136 9143])
+                            ("Iterator" type
+                               (:prototype t
+                                :type "class")
+                                (reparse-symbol classsubparts) [9146 9161])
+                            ("CreateOp" type
+                               (:members 
+                                  ( ("CREATE" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [9181 9189]))                                  
+                                :type "enum")
+                                (reparse-symbol classsubparts) [9165 9190])
+                            ("WrapBufferOp" type
+                               (:members 
+                                  ( ("WRAP_BUFFER" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [9213 9226]))                                  
+                                :type "enum")
+                                (reparse-symbol classsubparts) [9193 9227])
+                            ("TakeOwnershipOp" type
+                               (:members 
+                                  ( ("TAKE_OWNERSHIP" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [9253 9269]))                                  
+                                :type "enum")
+                                (reparse-symbol classsubparts) [9230 9270])
+                            ("CopyBufferOp" type
+                               (:members 
+                                  ( ("COPY_BUFFER" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [9293 9306]))                                  
+                                :type "enum")
+                                (reparse-symbol classsubparts) [9273 9307])
+                            ("value_type" type
+                               (:typedef ("ByteRange" type (:type "class") nil nil)
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [9311 9340])
+                            ("iterator" type
+                               (:typedef ("Iterator" type (:type "class") nil nil)
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [9343 9369])
+                            ("const_iterator" type
+                               (:typedef ("Iterator" type (:type "class") nil nil)
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [9372 9404])
+                            ("FreeFunction" function
+                               (:prototype-flag t
+                                :function-pointer t
+                                :arguments 
+                                  ( ("buf" variable
+                                       (:pointer 1
+                                        :type "void")
+                                        (reparse-symbol arg-sub-list) [9437 9447])
+                                    ("userData" variable
+                                       (:pointer 1
+                                        :type "void")
+                                        (reparse-symbol arg-sub-list) [9448 9463]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [9416 9464])
+                            ("create" function
+                               (:prototype-flag t
+                                :typemodifiers ("static")
+                                :arguments 
+                                  ( ("capacity" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9925 9943]))                                  
+                                :type ("std::unique_ptr" type
+                                     (:template-specifier 
+                                        ( ("IOBuf" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [9888 9944])
+                            ("IOBuf" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("" variable (:type ("CreateOp" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9953 9962])
+                                    ("capacity" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9963 9981]))                                  
+                                :type ("IOBuf" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [9947 9982])
+                            ("createCombined" function
+                               (:prototype-flag t
+                                :typemodifiers ("static")
+                                :arguments 
+                                  ( ("capacity" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10572 10590]))                                  
+                                :type ("std::unique_ptr" type
+                                     (:template-specifier 
+                                        ( ("IOBuf" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [10527 10591])
+                            ("createSeparate" function
+                               (:prototype-flag t
+                                :typemodifiers ("static")
+                                :arguments 
+                                  ( ("capacity" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10932 10950]))                                  
+                                :type ("std::unique_ptr" type
+                                     (:template-specifier 
+                                        ( ("IOBuf" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [10887 10951])
+                            ("createChain" function
+                               (:prototype-flag t
+                                :typemodifiers ("static")
+                                :arguments 
+                                  ( ("totalCapacity" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11143 11164])
+                                    ("maxBufCapacity" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11165 11189]))                                  
+                                :type ("std::unique_ptr" type
+                                     (:template-specifier 
+                                        ( ("IOBuf" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [11094 11190])
+                            ("takeOwnership" function
+                               (:typemodifiers ("static")
+                                :arguments 
+                                  ( ("buf" variable
+                                       (:pointer 1
+                                        :type "void")
+                                        (reparse-symbol arg-sub-list) [12321 12331])
+                                    ("capacity" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12332 12350])
+                                    ("freeFn" variable
+                                       (:default-value "nullptr"
+                                        :type ("FreeFunction" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [12397 12426])
+                                    ("userData" variable
+                                       (:pointer 1
+                                        :default-value "nullptr"
+                                        :type "void")
+                                        (reparse-symbol arg-sub-list) [12474 12498])
+                                    ("freeOnError" variable
+                                       (:default-value "true"
+                                        :type "bool")
+                                        (reparse-symbol arg-sub-list) [12546 12569]))                                  
+                                :type ("std::unique_ptr" type
+                                     (:template-specifier 
+                                        ( ("IOBuf" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [12277 12683])
+                            ("IOBuf" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("op" variable (:type ("TakeOwnershipOp" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12692 12711])
+                                    ("buf" variable
+                                       (:pointer 1
+                                        :type "void")
+                                        (reparse-symbol arg-sub-list) [12712 12722])
+                                    ("capacity" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12723 12741])
+                                    ("freeFn" variable
+                                       (:default-value "nullptr"
+                                        :type ("FreeFunction" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [12750 12779])
+                                    ("userData" variable
+                                       (:pointer 1
+                                        :default-value "nullptr"
+                                        :type "void")
+                                        (reparse-symbol arg-sub-list) [12781 12805])
+                                    ("freeOnError" variable
+                                       (:default-value "true"
+                                        :type "bool")
+                                        (reparse-symbol arg-sub-list) [12815 12838]))                                  
+                                :type ("IOBuf" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [12686 12914])
+                            ("takeOwnership" function
+                               (:prototype-flag t
+                                :typemodifiers ("static")
+                                :arguments 
+                                  ( ("buf" variable
+                                       (:pointer 1
+                                        :type "void")
+                                        (reparse-symbol arg-sub-list) [12962 12972])
+                                    ("capacity" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12973 12991])
+                                    ("length" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13038 13054])
+                                    ("freeFn" variable
+                                       (:default-value "nullptr"
+                                        :type ("FreeFunction" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [13101 13130])
+                                    ("userData" variable
+                                       (:pointer 1
+                                        :default-value "nullptr"
+                                        :type "void")
+                                        (reparse-symbol arg-sub-list) [13178 13202])
+                                    ("freeOnError" variable
+                                       (:default-value "true"
+                                        :type "bool")
+                                        (reparse-symbol arg-sub-list) [13250 13273]))                                  
+                                :type ("std::unique_ptr" type
+                                     (:template-specifier 
+                                        ( ("IOBuf" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [12918 13275])
+                            ("IOBuf" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("" variable (:type ("TakeOwnershipOp" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13284 13300])
+                                    ("buf" variable
+                                       (:pointer 1
+                                        :type "void")
+                                        (reparse-symbol arg-sub-list) [13301 13311])
+                                    ("capacity" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13312 13330])
+                                    ("length" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13331 13347])
+                                    ("freeFn" variable
+                                       (:default-value "nullptr"
+                                        :type ("FreeFunction" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [13356 13385])
+                                    ("userData" variable
+                                       (:pointer 1
+                                        :default-value "nullptr"
+                                        :type "void")
+                                        (reparse-symbol arg-sub-list) [13387 13411])
+                                    ("freeOnError" variable
+                                       (:default-value "true"
+                                        :type "bool")
+                                        (reparse-symbol arg-sub-list) [13421 13444]))                                  
+                                :type ("IOBuf" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [13278 13446])
+                            ("takeOwnership" function
+                               (:template 
+                                  ( ("UniquePtr" type (:type "class") nil nil))                                  
+                                :type ("std::enable_if::type" type (:type "class") nil nil)
+                                :arguments 
+                                  ( ("" variable
+                                       (:reference 1
+                                        :type ("UniquePtr" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [14554 14565])
+                                    ("" variable (:type ("buf" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14566 14570])
+                                    ("count" variable
+                                       (:default-value "1"
+                                        :type ("size_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [14571 14585]))                                  
+                                :typemodifiers ("static" "typename")
+                                :prototype-flag t)
+                                (reparse-symbol classsubparts) [14372 14587])
+                            ("wrapBuffer" function
+                               (:prototype-flag t
+                                :typemodifiers ("static")
+                                :arguments 
+                                  ( ("buf" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "void")
+                                        (reparse-symbol arg-sub-list) [15512 15528])
+                                    ("capacity" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15529 15547]))                                  
+                                :type ("std::unique_ptr" type
+                                     (:template-specifier 
+                                        ( ("IOBuf" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [15471 15548])
+                            ("wrapBuffer" function
+                               (:typemodifiers ("static")
+                                :arguments 
+                                  ( ("br" variable (:type ("ByteRange" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15592 15605]))                                  
+                                :type ("std::unique_ptr" type
+                                     (:template-specifier 
+                                        ( ("IOBuf" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [15551 15656])
+                            ("wrapBufferAsValue" function
+                               (:prototype-flag t
+                                :typemodifiers ("static")
+                                :arguments 
+                                  ( ("buf" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "void")
+                                        (reparse-symbol arg-sub-list) [15797 15813])
+                                    ("capacity" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15814 15832]))                                  
+                                :type ("IOBuf" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [15766 15833])
+                            ("wrapBufferAsValue" function
+                               (:typemodifiers ("static")
+                                :arguments 
+                                  ( ("br" variable (:type ("ByteRange" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15867 15880]))                                  
+                                :type ("IOBuf" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [15836 15938])
+                            ("IOBuf" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("op" variable (:type ("WrapBufferOp" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15948 15964])
+                                    ("buf" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "void")
+                                        (reparse-symbol arg-sub-list) [15965 15981])
+                                    ("capacity" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15982 16000]))                                  
+                                :type ("IOBuf" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [15942 16001])
+                            ("IOBuf" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("op" variable (:type ("WrapBufferOp" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16010 16026])
+                                    ("br" variable (:type ("ByteRange" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16027 16040]))                                  
+                                :type ("IOBuf" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [16004 16041])
+                            ("copyBuffer" function
+                               (:prototype-flag t
+                                :typemodifiers ("static")
+                                :arguments 
+                                  ( ("buf" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "void")
+                                        (reparse-symbol arg-sub-list) [16272 16288])
+                                    ("size" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16289 16303])
+                                    ("headroom" variable
+                                       (:default-value "0"
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [16347 16366])
+                                    ("minTailroom" variable
+                                       (:default-value "0"
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [16411 16433]))                                  
+                                :type ("std::unique_ptr" type
+                                     (:template-specifier 
+                                        ( ("IOBuf" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [16231 16435])
+                            ("copyBuffer" function
+                               (:typemodifiers ("static")
+                                :arguments 
+                                  ( ("br" variable (:type ("ByteRange" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16479 16492])
+                                    ("headroom" variable
+                                       (:default-value "0"
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [16536 16555])
+                                    ("minTailroom" variable
+                                       (:default-value "0"
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [16600 16622]))                                  
+                                :type ("std::unique_ptr" type
+                                     (:template-specifier 
+                                        ( ("IOBuf" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [16438 16697])
+                            ("IOBuf" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("op" variable (:type ("CopyBufferOp" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16706 16722])
+                                    ("buf" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "void")
+                                        (reparse-symbol arg-sub-list) [16723 16739])
+                                    ("size" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16740 16754])
+                                    ("headroom" variable
+                                       (:default-value "0"
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [16763 16782])
+                                    ("minTailroom" variable
+                                       (:default-value "0"
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [16784 16806]))                                  
+                                :type ("IOBuf" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [16700 16808])
+                            ("IOBuf" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("op" variable (:type ("CopyBufferOp" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16817 16833])
+                                    ("br" variable (:type ("ByteRange" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16834 16847])
+                                    ("headroom" variable
+                                       (:default-value "0"
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [16856 16875])
+                                    ("minTailroom" variable
+                                       (:default-value "0"
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [16877 16899]))                                  
+                                :type ("IOBuf" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [16811 16901])
+                            ("copyBuffer" function
+                               (:prototype-flag t
+                                :typemodifiers ("static")
+                                :arguments 
+                                  ( ("buf" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [17491 17514])
+                                    ("headroom" variable
+                                       (:default-value "0"
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [17558 17577])
+                                    ("minTailroom" variable
+                                       (:default-value "0"
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [17622 17644]))                                  
+                                :type ("std::unique_ptr" type
+                                     (:template-specifier 
+                                        ( ("IOBuf" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [17450 17646])
+                            ("IOBuf" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("op" variable (:type ("CopyBufferOp" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [17655 17671])
+                                    ("buf" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [17672 17695])
+                                    ("headroom" variable
+                                       (:default-value "0"
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [17704 17723])
+                                    ("minTailroom" variable
+                                       (:default-value "0"
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [17725 17747]))                                  
+                                :type ("IOBuf" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [17649 17814])
+                            ("maybeCopyBuffer" function
+                               (:prototype-flag t
+                                :typemodifiers ("static")
+                                :arguments 
+                                  ( ("buf" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [17970 17993])
+                                    ("headroom" variable
+                                       (:default-value "0"
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [18042 18061])
+                                    ("minTailroom" variable
+                                       (:default-value "0"
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [18111 18133]))                                  
+                                :type ("std::unique_ptr" type
+                                     (:template-specifier 
+                                        ( ("IOBuf" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [17924 18135])
+                            ("destroy" function
+                               (:typemodifiers ("static")
+                                :arguments 
+                                  ( ("" variable
+                                       (:reference 1
+                                        :type ("std::unique_ptr" type
+                                             (:template-specifier 
+                                                ( ("IOBuf" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [18245 18269])
+                                    ("" variable (:type ("data" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [18270 18275]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [18225 18319])
+                            ("IOBuf" function
+                               (:prototype-flag t
+                                :destructor-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [18862 18871])
+                            ("empty" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :type "bool")
+                                (reparse-symbol classsubparts) [19203 19222])
+                            ("data" function
+                               (:methodconst-flag t
+                                :pointer 1
+                                :constant-flag t
+                                :type ("uint8_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [19285 19336])
+                            ("writableData" function
+                               (:pointer 1
+                                :type ("uint8_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [19534 19581])
+                            ("tail" function
+                               (:methodconst-flag t
+                                :pointer 1
+                                :constant-flag t
+                                :type ("uint8_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [19642 19703])
+                            ("writableTail" function
+                               (:pointer 1
+                                :type ("uint8_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [19899 19956])
+                            ("length" function
+                               (:methodconst-flag t
+                                :type ("uint64_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [19998 20047])
+                            ("headroom" function
+                               (:methodconst-flag t
+                                :type ("uint64_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [20179 20249])
+                            ("tailroom" function
+                               (:methodconst-flag t
+                                :type ("uint64_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [20378 20452])
+                            ("buffer" function
+                               (:methodconst-flag t
+                                :pointer 1
+                                :constant-flag t
+                                :type ("uint8_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [20742 20794])
+                            ("writableBuffer" function
+                               (:pointer 1
+                                :type ("uint8_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [20994 21042])
+                            ("bufferEnd" function
+                               (:methodconst-flag t
+                                :pointer 1
+                                :constant-flag t
+                                :type ("uint8_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [21320 21387])
+                            ("capacity" function
+                               (:methodconst-flag t
+                                :type ("uint64_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [21592 21645])
+                            ("next" function
+                               (:pointer 1
+                                :type ("IOBuf" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [21713 21750])
+                            ("next" function
+                               (:methodconst-flag t
+                                :pointer 1
+                                :constant-flag t
+                                :type ("IOBuf" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [21753 21802])
+                            ("prev" function
+                               (:pointer 1
+                                :type ("IOBuf" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [21874 21911])
+                            ("prev" function
+                               (:methodconst-flag t
+                                :pointer 1
+                                :constant-flag t
+                                :type ("IOBuf" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [21914 21963])
+                            ("advance" function
+                               (:arguments 
+                                  ( ("amount" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [22635 22651]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [22622 22843])
+                            ("retreat" function
+                               (:arguments 
+                                  ( ("amount" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [23342 23358]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [23329 23550])
+                            ("prepend" function
+                               (:arguments 
+                                  ( ("amount" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [23988 24004]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [23975 24089])
+                            ("append" function
+                               (:arguments 
+                                  ( ("amount" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [24519 24535]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [24507 24599])
+                            ("trimStart" function
+                               (:arguments 
+                                  ( ("amount" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [24984 25000]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [24969 25082])
+                            ("trimEnd" function
+                               (:arguments 
+                                  ( ("amount" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [25466 25482]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [25453 25543])
+                            ("clear" function (:type "void") (reparse-symbol classsubparts) [25664 25729])
+                            ("reserve" function
+                               (:arguments 
+                                  ( ("minHeadroom" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [26106 26127])
+                                    ("minTailroom" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [26128 26149]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [26093 26634])
+                            ("isChained" function
+                               (:methodconst-flag t
+                                :type "bool")
+                                (reparse-symbol classsubparts) [26774 26876])
+                            ("countChainElements" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :type ("size_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [27094 27128])
+                            ("computeChainDataLength" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :type ("uint64_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [27265 27305])
+                            ("prependChain" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("" variable
+                                       (:reference 1
+                                        :type ("std::unique_ptr" type
+                                             (:template-specifier 
+                                                ( ("IOBuf" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [28660 28684])
+                                    ("" variable (:type ("iobuf" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [28685 28691]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [28642 28692])
+                            ("appendChain" function
+                               (:arguments 
+                                  ( ("" variable
+                                       (:reference 1
+                                        :type ("std::unique_ptr" type
+                                             (:template-specifier 
+                                                ( ("IOBuf" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [29692 29716])
+                                    ("" variable (:type ("iobuf" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [29717 29723]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [29675 29836])
+                            ("unlink" function (:type ("std::unique_ptr" type
+                                 (:template-specifier 
+                                    ( ("IOBuf" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [30591 30757])
+                            ("pop" function (:type ("std::unique_ptr" type
+                                 (:template-specifier 
+                                    ( ("IOBuf" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [30901 31116])
+                            ("separateChain" function
+                               (:arguments 
+                                  ( ("head" variable
+                                       (:pointer 1
+                                        :type ("IOBuf" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [31846 31858])
+                                    ("tail" variable
+                                       (:pointer 1
+                                        :type ("IOBuf" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [31859 31871]))                                  
+                                :type ("std::unique_ptr" type
+                                     (:template-specifier 
+                                        ( ("IOBuf" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [31809 32097])
+                            ("isShared" function
+                               (:methodconst-flag t
+                                :type "bool")
+                                (reparse-symbol classsubparts) [32329 32570])
+                            ("isManaged" function
+                               (:methodconst-flag t
+                                :type "bool")
+                                (reparse-symbol classsubparts) [32763 33007])
+                            ("isManagedOne" function
+                               (:methodconst-flag t
+                                :type "bool")
+                                (reparse-symbol classsubparts) [33188 33244])
+                            ("isSharedOne" function
+                               (:methodconst-flag t
+                                :type "bool")
+                                (reparse-symbol classsubparts) [33670 34391])
+                            ("unshare" function (:type "void") (reparse-symbol classsubparts) [35252 35358])
+                            ("unshareOne" function (:type "void") (reparse-symbol classsubparts) [35757 35835])
+                            ("markExternallyShared" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [36157 36185])
+                            ("markExternallySharedOne" function (:type "void") (reparse-symbol classsubparts) [36526 36658])
+                            ("makeManaged" function (:type "void") (reparse-symbol classsubparts) [37060 37178])
+                            ("makeManagedOne" function (:type "void") (reparse-symbol classsubparts) [37558 37721])
+                            ("coalesce" function (:type ("ByteRange" type (:type "class") nil nil)) (reparse-symbol classsubparts) [38403 38518])
+                            ("gather" function
+                               (:arguments 
+                                  ( ("maxLength" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [39372 39391]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [39360 39494])
+                            ("clone" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :type ("std::unique_ptr" type
+                                     (:template-specifier 
+                                        ( ("IOBuf" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [39829 39866])
+                            ("cloneAsValue" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :type ("IOBuf" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [39971 39998])
+                            ("cloneOne" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :type ("std::unique_ptr" type
+                                     (:template-specifier 
+                                        ( ("IOBuf" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [40186 40226])
+                            ("cloneOneAsValue" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :type ("IOBuf" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [40334 40364])
+                            ("cloneCoalesced" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :type ("std::unique_ptr" type
+                                     (:template-specifier 
+                                        ( ("IOBuf" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [40857 40903])
+                            ("cloneCoalescedAsValue" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :type ("IOBuf" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [41017 41053])
+                            ("cloneInto" function
+                               (:methodconst-flag t
+                                :arguments 
+                                  ( ("other" variable
+                                       (:reference 1
+                                        :type ("IOBuf" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [41206 41219]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [41191 41259])
+                            ("cloneOneInto" function
+                               (:methodconst-flag t
+                                :arguments 
+                                  ( ("other" variable
+                                       (:reference 1
+                                        :type ("IOBuf" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [41380 41393]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [41362 41436])
+                            ("getIov" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :type ("folly::fbvector" type
+                                     (:template-specifier 
+                                        ( ("iovec" type (:type "struct") nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [41687 41732])
+                            ("appendToIov" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :arguments 
+                                  ( ("iov" variable
+                                       (:pointer 1
+                                        :type ("folly::fbvector" type
+                                             (:template-specifier 
+                                                ( ("iovec" type (:type "struct") nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [42050 42085]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [42033 42092])
+                            ("fillIov" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :arguments 
+                                  ( ("iov" variable
+                                       (:pointer 1
+                                        :type ("iovec" type
+                                             (:prototype t
+                                              :type "struct")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [42426 42444])
+                                    ("len" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [42445 42456]))                                  
+                                :type ("size_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [42411 42463])
+                            ("moveToFbString" function
+                               (:prototype-flag t
+                                :type ("fbstring" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [42955 42981])
+                            ("cbegin" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :type ("Iterator" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [43208 43232])
+                            ("cend" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :type ("Iterator" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [43235 43257])
+                            ("begin" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :type ("Iterator" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [43260 43283])
+                            ("end" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :type ("Iterator" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [43286 43307])
+                            ("noexcept" variable (:type "int") (reparse-symbol classsubparts) [43566 43575])
+                            ("noexcept" variable (:type "int") (reparse-symbol classsubparts) [44469 44478])
+                            ("noexcept" variable (:type "int") (reparse-symbol classsubparts) [44513 44522])
+                            ("IOBuf" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("other" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("IOBuf" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [44532 44551]))                                  
+                                :type ("IOBuf" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [44526 44552])
+                            ("=" function
+                               (:prototype-flag t
+                                :operator-flag t
+                                :arguments 
+                                  ( ("other" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("IOBuf" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [44572 44591]))                                  
+                                :type ("IOBuf" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [44555 44592])
+                            ("private" label nil (reparse-symbol classsubparts) [44595 44603])
+                            ("uintptr_t" variable (:type "int") (reparse-symbol classsubparts) [44623 44927])
+                            ("SharedInfo" type
+                               (:members 
+                                  ( ("SharedInfo" function
+                                       (:prototype-flag t
+                                        :constructor-flag t
+                                        :type ("SharedInfo" type (:type "struct") nil nil))
+                                        (reparse-symbol classsubparts) [44955 44968])
+                                    ("SharedInfo" function
+                                       (:prototype-flag t
+                                        :constructor-flag t
+                                        :arguments 
+                                          ( ("fn" variable (:type ("FreeFunction" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [44984 45000])
+                                            ("arg" variable
+                                               (:pointer 1
+                                                :type "void")
+                                                (reparse-symbol arg-sub-list) [45001 45011]))                                          
+                                        :type ("SharedInfo" type (:type "struct") nil nil))
+                                        (reparse-symbol classsubparts) [44973 45012])
+                                    ("freeFn" variable (:type ("FreeFunction" type (:type "class") nil nil)) (reparse-symbol classsubparts) [45156 45176])
+                                    ("userData" variable
+                                       (:pointer 1
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [45181 45196])
+                                    ("refcount" variable (:type ("std::atomic" type
+                                         (:template-specifier 
+                                            ( ("uint32_t" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [45201 45232])
+                                    ("externallyShared" variable (:type "bool") (reparse-symbol classsubparts) [45237 45266]))                                  
+                                :type "struct")
+                                (reparse-symbol classsubparts) [44931 45271])
+                            ("HeapPrefix" type
+                               (:prototype t
+                                :type "struct")
+                                (reparse-symbol classsubparts) [45329 45347])
+                            ("HeapStorage" type
+                               (:prototype t
+                                :type "struct")
+                                (reparse-symbol classsubparts) [45350 45369])
+                            ("HeapFullStorage" type
+                               (:prototype t
+                                :type "struct")
+                                (reparse-symbol classsubparts) [45372 45395])
+                            ("InternalConstructor" type (:type "struct") (reparse-symbol classsubparts) [45640 45670])
+                            ("IOBuf" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("" variable (:type ("InternalConstructor" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [45699 45719])
+                                    ("flagsAndSharedInfo" variable (:type ("uintptr_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [45720 45749])
+                                    ("buf" variable
+                                       (:pointer 1
+                                        :type ("uint8_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [45758 45771])
+                                    ("capacity" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [45772 45790])
+                                    ("data" variable
+                                       (:pointer 1
+                                        :type ("uint8_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [45799 45813])
+                                    ("length" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [45814 45830]))                                  
+                                :type ("IOBuf" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [45693 45831])
+                            ("unshareOneSlow" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [45835 45857])
+                            ("unshareChained" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [45860 45882])
+                            ("makeManagedChained" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [45885 45911])
+                            ("coalesceSlow" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [45914 45934])
+                            ("coalesceSlow" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("maxLength" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [45955 45972]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [45937 45973])
+                            ("coalesceAndReallocate" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("newHeadroom" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [46108 46127])
+                                    ("newLength" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [46134 46151])
+                                    ("end" variable
+                                       (:pointer 1
+                                        :type ("IOBuf" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [46158 46169])
+                                    ("newTailroom" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [46176 46195]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [46074 46196])
+                            ("coalesceAndReallocate" function
+                               (:arguments 
+                                  ( ("newLength" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [46226 46243])
+                                    ("end" variable
+                                       (:pointer 1
+                                        :type ("IOBuf" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [46244 46255]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [46199 46340])
+                            ("decrementRefcount" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [46343 46368])
+                            ("reserveSlow" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("minHeadroom" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [46388 46409])
+                                    ("minTailroom" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [46410 46431]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [46371 46432])
+                            ("freeExtBuffer" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [46435 46456])
+                            ("goodExtBufferSize" function
+                               (:prototype-flag t
+                                :typemodifiers ("static")
+                                :arguments 
+                                  ( ("minCapacity" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [46492 46513]))                                  
+                                :type ("size_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [46460 46514])
+                            ("initExtBuffer" function
+                               (:prototype-flag t
+                                :typemodifiers ("static")
+                                :arguments 
+                                  ( ("buf" variable
+                                       (:pointer 1
+                                        :type ("uint8_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [46543 46556])
+                                    ("mallocSize" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [46557 46575])
+                                    ("infoReturn" variable
+                                       (:pointer 2
+                                        :type ("SharedInfo" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [46604 46628])
+                                    ("capacityReturn" variable
+                                       (:pointer 1
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [46657 46682]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [46517 46683])
+                            ("allocExtBuffer" function
+                               (:prototype-flag t
+                                :typemodifiers ("static")
+                                :arguments 
+                                  ( ("minCapacity" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [46713 46734])
+                                    ("bufReturn" variable
+                                       (:pointer 2
+                                        :type ("uint8_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [46764 46784])
+                                    ("infoReturn" variable
+                                       (:pointer 2
+                                        :type ("SharedInfo" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [46814 46838])
+                                    ("capacityReturn" variable
+                                       (:pointer 1
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [46868 46893]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [46686 46894])
+                            ("releaseStorage" function
+                               (:prototype-flag t
+                                :typemodifiers ("static")
+                                :arguments 
+                                  ( ("storage" variable
+                                       (:pointer 1
+                                        :type ("HeapStorage" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [46924 46945])
+                                    ("freeFlags" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [46946 46965]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [46897 46966])
+                            ("freeInternalBuf" function
+                               (:prototype-flag t
+                                :typemodifiers ("static")
+                                :arguments 
+                                  ( ("buf" variable
+                                       (:pointer 1
+                                        :type "void")
+                                        (reparse-symbol arg-sub-list) [46997 47007])
+                                    ("userData" variable
+                                       (:pointer 1
+                                        :type "void")
+                                        (reparse-symbol arg-sub-list) [47008 47023]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [46969 47024])
+                            ("next_" variable
+                               (:pointer 1
+                                :type ("IOBuf" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [47371 47390])
+                            ("prev_" variable
+                               (:pointer 1
+                                :type ("IOBuf" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [47393 47412])
+                            ("data_" variable
+                               (:pointer 1
+                                :type ("uint8_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [47600 47624])
+                            ("buf_" variable
+                               (:pointer 1
+                                :type ("uint8_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [47627 47650])
+                            ("length_" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [47653 47673])
+                            ("capacity_" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [47676 47698])
+                            ("flagsAndSharedInfo_" variable
+                               (:typemodifiers ("mutable")
+                                :type ("uintptr_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [47770 47811])
+                            ("packFlagsAndSharedInfo" function
+                               (:typemodifiers ("static" "inline")
+                                :arguments 
+                                  ( ("flags" variable (:type ("uintptr_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [47862 47878])
+                                    ("info" variable
+                                       (:pointer 1
+                                        :type ("SharedInfo" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [47928 47945]))                                  
+                                :type ("uintptr_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [47815 48111])
+                            ("sharedInfo" function
+                               (:methodconst-flag t
+                                :pointer 1
+                                :typemodifiers ("inline")
+                                :type ("SharedInfo" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [48115 48234])
+                            ("setSharedInfo" function
+                               (:typemodifiers ("inline")
+                                :arguments 
+                                  ( ("info" variable
+                                       (:pointer 1
+                                        :type ("SharedInfo" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [48264 48281]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [48238 48451])
+                            ("flags" function
+                               (:methodconst-flag t
+                                :typemodifiers ("inline")
+                                :type ("uintptr_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [48455 48535])
+                            ("setFlags" function
+                               (:methodconst-flag t
+                                :typemodifiers ("inline")
+                                :arguments 
+                                  ( ("flags" variable (:type ("uintptr_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [48603 48619]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [48582 48704])
+                            ("clearFlags" function
+                               (:methodconst-flag t
+                                :typemodifiers ("inline")
+                                :arguments 
+                                  ( ("flags" variable (:type ("uintptr_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [48731 48747]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [48708 48833])
+                            ("setFlagsAndSharedInfo" function
+                               (:typemodifiers ("inline")
+                                :arguments 
+                                  ( ("flags" variable (:type ("uintptr_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [48871 48887])
+                                    ("info" variable
+                                       (:pointer 1
+                                        :type ("SharedInfo" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [48888 48905]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [48837 48974])
+                            ("DeleterBase" type
+                               (:members 
+                                  ( ("DeleterBase" function
+                                       (:destructor-flag t
+                                        :typemodifiers ("virtual")
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [49003 49029])
+                                    ("dispose" function
+                                       (:pure-virtual-flag t
+                                        :prototype-flag t
+                                        :typemodifiers ("virtual")
+                                        :arguments 
+                                          ( ("p" variable
+                                               (:pointer 1
+                                                :type "void")
+                                                (reparse-symbol arg-sub-list) [49055 49063]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [49034 49068]))                                  
+                                :type "struct")
+                                (reparse-symbol classsubparts) [48978 49073])
+                            ("UniquePtrDeleter" type
+                               (:template 
+                                  ( ("UniquePtr" type (:type "class") nil nil))                                  
+                                :type "struct"
+                                :members 
+                                  ( ("Pointer" type
+                                       (:typedef ("UniquePtr::pointer" type (:type "class") nil nil)
+                                        :type "typedef")
+                                        (reparse-symbol classsubparts) [49157 49201])
+                                    ("Deleter" type
+                                       (:typedef ("UniquePtr::deleter_type" type (:type "class") nil nil)
+                                        :type "typedef")
+                                        (reparse-symbol classsubparts) [49206 49255])
+                                    ("UniquePtrDeleter" function
+                                       (:constructor-flag t
+                                        :arguments 
+                                          ( ("deleter" variable (:type ("Deleter" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [49287 49303]))                                          
+                                        :type ("UniquePtrDeleter" type (:type "struct") nil nil))
+                                        (reparse-symbol classsubparts) [49270 49337])
+                                    ("private" label nil (reparse-symbol classsubparts) [49508 49516])
+                                    ("deleter_" variable (:type ("Deleter" type (:type "class") nil nil)) (reparse-symbol classsubparts) [49521 49538]))                                  
+                                :superclasses 
+                                  ( ("DeleterBase" type
+                                       (:protection "public"
+                                        :type "class")
+                                        nil nil))                                  )
+                                (reparse-symbol classsubparts) [49077 49543])
+                            ("freeUniquePtrBuffer" function
+                               (:typemodifiers ("static")
+                                :arguments 
+                                  ( ("ptr" variable
+                                       (:pointer 1
+                                        :type "void")
+                                        (reparse-symbol arg-sub-list) [49579 49589])
+                                    ("userData" variable
+                                       (:pointer 1
+                                        :type "void")
+                                        (reparse-symbol arg-sub-list) [49590 49605]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [49547 49666]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [9121 49669])
+                    ("IOBufHash" type
+                       (:members 
+                          ( ("()" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :operator-flag t
+                                :arguments 
+                                  ( ("buf" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("IOBuf" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [49791 49808]))                                  
+                                :type ("size_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [49773 49815])
+                            ("()" function
+                               (:methodconst-flag t
+                                :operator-flag t
+                                :arguments 
+                                  ( ("buf" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::unique_ptr" type
+                                             (:template-specifier 
+                                                ( ("IOBuf" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [49836 49870]))                                  
+                                :type ("size_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [49818 49918]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [49752 49921])
+                    ("IOBufEqual" type
+                       (:members 
+                          ( ("()" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :operator-flag t
+                                :arguments 
+                                  ( ("a" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("IOBuf" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [50045 50060])
+                                    ("b" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("IOBuf" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [50061 50076]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [50029 50083])
+                            ("()" function
+                               (:methodconst-flag t
+                                :operator-flag t
+                                :arguments 
+                                  ( ("a" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::unique_ptr" type
+                                             (:template-specifier 
+                                                ( ("IOBuf" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [50102 50134])
+                                    ("b" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::unique_ptr" type
+                                             (:template-specifier 
+                                                ( ("IOBuf" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [50153 50185]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [50086 50332]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [50007 50335])
+                    ("takeOwnership" function
+                       (:template 
+                          ( ("UniquePtr" type (:type "class") nil nil))                          
+                        :type ("std::enable_if::type" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :type ("UniquePtr" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [50506 50517])
+                            ("" variable (:type ("buf" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [50518 50522])
+                            ("count" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [50523 50536]))                          
+                        :typemodifiers ("typename")
+                        :parent "IOBuf")
+                        (reparse-symbol namespacesubparts) [50337 50827])
+                    ("copyBuffer" function
+                       (:parent "IOBuf"
+                        :typemodifiers ("inline")
+                        :arguments 
+                          ( ("data" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [50882 50899])
+                            ("size" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [50900 50914])
+                            ("headroom" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [50915 50933])
+                            ("minTailroom" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [50938 50959]))                          
+                        :type ("std::unique_ptr" type
+                             (:template-specifier 
+                                ( ("IOBuf" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol namespacesubparts) [50829 51194])
+                    ("copyBuffer" function
+                       (:parent "IOBuf"
+                        :typemodifiers ("inline")
+                        :arguments 
+                          ( ("buf" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [51244 51267])
+                            ("headroom" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [51316 51334])
+                            ("minTailroom" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [51383 51404]))                          
+                        :type ("std::unique_ptr" type
+                             (:template-specifier 
+                                ( ("IOBuf" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol namespacesubparts) [51196 51476])
+                    ("maybeCopyBuffer" function
+                       (:parent "IOBuf"
+                        :typemodifiers ("inline")
+                        :arguments 
+                          ( ("buf" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [51531 51554])
+                            ("headroom" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [51608 51626])
+                            ("minTailroom" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [51680 51701]))                          
+                        :type ("std::unique_ptr" type
+                             (:template-specifier 
+                                ( ("IOBuf" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol namespacesubparts) [51478 51818])
+                    ("Iterator" type
+                       (:parent "IOBuf"
+                        :superclasses 
+                          ( ("boost::iterator_facade" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("boost" friend nil (reparse-symbol classsubparts) [52006 52024])
+                            ("iterator_core_access" variable (:type "int") (reparse-symbol classsubparts) [52026 52047])
+                            ("public" label nil (reparse-symbol classsubparts) [52049 52056])
+                            ("Iterator" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("pos" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("IOBuf" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [52417 52434])
+                                    ("end" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("IOBuf" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [52435 52452]))                                  
+                                :type ("Iterator" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [52408 52592])
+                            ("Iterator" function
+                               (:constructor-flag t
+                                :type ("Iterator" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [52596 52609])
+                            ("private" label nil (reparse-symbol classsubparts) [52612 52620])
+                            ("setVal" function (:type "void") (reparse-symbol classsubparts) [52623 52692])
+                            ("adjustForEnd" function (:type "void") (reparse-symbol classsubparts) [52696 52835])
+                            ("dereference" function
+                               (:methodconst-flag t
+                                :constant-flag t
+                                :type ("ByteRange" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [52839 52898])
+                            ("equal" function
+                               (:methodconst-flag t
+                                :arguments 
+                                  ( ("other" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Iterator" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [52913 52935]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [52902 53177])
+                            ("increment" function (:type "void") (reparse-symbol classsubparts) [53181 53248])
+                            ("pos_" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("IOBuf" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [53252 53279])
+                            ("end_" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("IOBuf" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [53282 53309])
+                            ("val_" variable (:type ("ByteRange" type (:type "class") nil nil)) (reparse-symbol classsubparts) [53312 53327]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [51820 53330])
+                    ("begin" function
+                       (:methodconst-flag t
+                        :parent "IOBuf"
+                        :typemodifiers ("inline")
+                        :type ("IOBuf::Iterator" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [53332 53396])
+                    ("end" function
+                       (:methodconst-flag t
+                        :parent "IOBuf"
+                        :typemodifiers ("inline")
+                        :type ("IOBuf::Iterator" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [53397 53457]))                  
+                :type "namespace")
+                nil [1128 53460]))          
+      :file "IOBuf.h"
+      :pointmax 53499
+      :fsize 53498
+      :lastmodtime '(23032 17478 0 0)
+      :unmatched-syntax '((symbol 53481 . 53498) (EXPLICIT 52399 . 52407) (punctuation 52025 . 52026) (punctuation 52024 . 52025) (punctuation 50516 . 50517) (semantic-list 49373 . 49503) (symbol 49364 . 49372) (semantic-list 49354 . 49363) (symbol 49347 . 49354) (VOID 49342 . 49346) (EXPLICIT 49261 . 49269) (punctuation 44621 . 44622) (symbol 44611 . 44620) (ENUM 44606 . 44610) (semantic-list 44497 . 44512) (punctuation 44496 . 44497) (OPERATOR 44488 . 44496) (punctuation 44504 . 44505) (punctuation 44486 . 44487) (symbol 44481 . 44486) (punctuation 44504 . 44505) (semantic-list 44453 . 44468) (symbol 44448 . 44453) (punctuation 44460 . 44461) (semantic-list 43563 . 43565) (symbol 43558 . 43563) (punctuation 42785 . 42786) (semantic-list 42774 . 42785) (DELETE 42768 . 42774) (OPERATOR 42759 . 42767) (VOID 42754 . 42758) (punctuation 42750 . 42751) (semantic-list 42726 . 42750) (NEW 42723 . 42726) (OPERATOR 42714 . 42722) (punctuation 42712 . 42713) (VOID 42708 . 42712) (punctuation 42704 . 42705) (semantic-list 42691 . 42704) (NEW 42688 . 42691) (OPERATOR 42679 . 42687) (punctuation 42677 . 42678) (VOID 42673 . 42677) (punctuation 29715 . 29716) (punctuation 28683 . 28684) (punctuation 18268 . 18269) (punctuation 14564 . 14565) (TYPEDEF 9408 . 9415) (semantic-list 1114 . 1126) (symbol 1089 . 1114) (string 1115 . 1125) (symbol 1070 . 1088) (string 1115 . 1125) (symbol 606 . 610) (symbol 599 . 605) (punctuation 598 . 599))))
+  :file "!Volumes!Transcend!folly!folly!io!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

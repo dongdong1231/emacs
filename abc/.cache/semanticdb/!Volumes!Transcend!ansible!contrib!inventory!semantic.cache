@@ -1,0 +1,400 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("'''
+Azure External Inventory Script
+===============================
+Generates dynamic inventory by making API requests to the Azure Resource
+Manager using the Azure Python SDK. For instruction on installing the
+Azure Python SDK see http://azure-sdk-for-python.readthedocs.org/
+
+Authentication
+--------------
+The order of precedence is command line arguments, environment variables,
+and finally the [default] profile found in ~/.azure/credentials.
+
+If using a credentials file, it should be an ini formatted file with one or
+more sections, which we refer to as profiles. The script looks for a
+[default] section, if a profile is not specified either on the command line
+or with an environment variable. The keys in a profile will match the
+list of command line arguments below.
+
+For command line arguments and environment variables specify a profile found
+in your ~/.azure/credentials file, or a service principal or Active Directory
+user.
+
+Command line arguments:
+ - profile
+ - client_id
+ - secret
+ - subscription_id
+ - tenant
+ - ad_user
+ - password
+
+Environment variables:
+ - AZURE_PROFILE
+ - AZURE_CLIENT_ID
+ - AZURE_SECRET
+ - AZURE_SUBSCRIPTION_ID
+ - AZURE_TENANT
+ - AZURE_AD_USER
+ - AZURE_PASSWORD
+
+Run for Specific Host
+-----------------------
+When run for a specific host using the --host option, a resource group is
+required. For a specific host, this script returns the following variables:
+
+{
+  \"ansible_host\": \"XXX.XXX.XXX.XXX\",
+  \"computer_name\": \"computer_name2\",
+  \"fqdn\": null,
+  \"id\": \"/subscriptions/subscription-id/resourceGroups/galaxy-production/providers/Microsoft.Compute/virtualMachines/object-name\",
+  \"image\": {
+    \"offer\": \"CentOS\",
+    \"publisher\": \"OpenLogic\",
+    \"sku\": \"7.1\",
+    \"version\": \"latest\"
+  },
+  \"location\": \"westus\",
+  \"mac_address\": \"00-00-5E-00-53-FE\",
+  \"name\": \"object-name\",
+  \"network_interface\": \"interface-name\",
+  \"network_interface_id\": \"/subscriptions/subscription-id/resourceGroups/galaxy-production/providers/Microsoft.Network/networkInterfaces/object-name1\",
+  \"network_security_group\": null,
+  \"network_security_group_id\": null,
+  \"os_disk\": {
+    \"name\": \"object-name\",
+    \"operating_system_type\": \"Linux\"
+  },
+  \"plan\": null,
+  \"powerstate\": \"running\",
+  \"private_ip\": \"172.26.3.6\",
+  \"private_ip_alloc_method\": \"Static\",
+  \"provisioning_state\": \"Succeeded\",
+  \"public_ip\": \"XXX.XXX.XXX.XXX\",
+  \"public_ip_alloc_method\": \"Static\",
+  \"public_ip_id\": \"/subscriptions/subscription-id/resourceGroups/galaxy-production/providers/Microsoft.Network/publicIPAddresses/object-name\",
+  \"public_ip_name\": \"object-name\",
+  \"resource_group\": \"galaxy-production\",
+  \"security_group\": \"object-name\",
+  \"security_group_id\": \"/subscriptions/subscription-id/resourceGroups/galaxy-production/providers/Microsoft.Network/networkSecurityGroups/object-name\",
+  \"tags\": {
+      \"db\": \"database\"
+  },
+  \"type\": \"Microsoft.Compute/virtualMachines\",
+  \"virtual_machine_size\": \"Standard_DS4\"
+}
+
+Groups
+------
+When run in --list mode, instances are grouped by the following categories:
+ - azure
+ - location
+ - resource_group
+ - security_group
+ - tag key
+ - tag key_value
+
+Control groups using azure_rm.ini or set environment variables:
+
+AZURE_GROUP_BY_RESOURCE_GROUP=yes
+AZURE_GROUP_BY_LOCATION=yes
+AZURE_GROUP_BY_SECURITY_GROUP=yes
+AZURE_GROUP_BY_TAG=yes
+
+Select hosts within specific resource groups by assigning a comma separated list to:
+
+AZURE_RESOURCE_GROUPS=resource_group_a,resource_group_b
+
+Select hosts for specific tag key by assigning a comma separated list of tag keys to:
+
+AZURE_TAGS=key1,key2,key3
+
+Select hosts for specific locations:
+
+AZURE_LOCATIONS=eastus,westus,eastus2
+
+Or, select hosts for specific tag key:value pairs by assigning a comma separated list key:value pairs to:
+
+AZURE_TAGS=key1:value1,key2:value2
+
+If you don't need the powerstate, you can improve performance by turning off powerstate fetching:
+AZURE_INCLUDE_POWERSTATE=no
+
+azure_rm.ini
+------------
+As mentioned above, you can control execution using environment variables or a .ini file. A sample
+azure_rm.ini is included. The name of the .ini file is the basename of the inventory script (in this case
+'azure_rm') with a .ini extension. It also assumes the .ini file is alongside the script. To specify
+a different path for the .ini file, define the AZURE_INI_PATH environment variable:
+
+  export AZURE_INI_PATH=/path/to/custom.ini
+
+Powerstate:
+-----------
+The powerstate attribute indicates whether or not a host is running. If the value is 'running', the machine is
+up. If the value is anything other than 'running', the machine is down, and will be unreachable.
+
+Examples:
+---------
+  Execute /bin/uname on all instances in the galaxy-qa resource group
+  $ ansible -i azure_rm.py galaxy-qa -m shell -a \"/bin/uname -a\"
+
+  Use the inventory script to print instance specific information
+  $ contrib/inventory/azure_rm.py --host my_instance_host_name --pretty
+
+  Use with a playbook
+  $ ansible-playbook -i contrib/inventory/azure_rm.py my_playbook.yml --limit galaxy-qa
+
+
+Insecure Platform Warning
+-------------------------
+If you receive InsecurePlatformWarning from urllib3, install the
+requests security packages:
+
+    pip install requests[security]
+
+
+author:
+    - Chris Houseknecht (@chouseknecht)
+    - Matt Davis (@nitzmahone)
+
+Company: Ansible by Red Hat
+
+Version: 1.0.0
+'''" code nil nil [795 6101])
+            ("argparse" include nil nil [6103 6118])
+            ("ConfigParser" include nil nil [6119 6138])
+            ("json" include nil nil [6139 6150])
+            ("os" include nil nil [6151 6160])
+            ("re" include nil nil [6161 6170])
+            ("sys" include nil nil [6171 6181])
+            ("packaging.version" include nil nil [6183 6220])
+            ("os.path" include nil nil [6222 6252])
+            ("HAS_AZURE" variable nil nil [6254 6270])
+            ("HAS_AZURE_EXC" variable nil nil [6271 6291])
+            ("AZURE_CREDENTIAL_ENV_MAPPING" variable nil nil [6934 7192])
+            ("AZURE_CONFIG_SETTINGS" variable nil nil [7194 7586])
+            ("AZURE_MIN_VERSION" variable nil nil [7588 7619])
+            ("azure_id_to_dict" function (:arguments 
+              ( ("id" variable nil (reparse-symbol function_parameters) [7643 7645]))              ) nil [7622 7847])
+            ("AzureRM" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [7911 7928])
+                            ("self" variable nil (reparse-symbol indented_block_body) [7937 7964])
+                            ("self" variable nil (reparse-symbol indented_block_body) [7973 8001])
+                            ("self" variable nil (reparse-symbol indented_block_body) [8010 8037])
+                            ("self" variable nil (reparse-symbol indented_block_body) [8047 8065])
+                            ("if" code nil (reparse-symbol indented_block_body) [8074 8119])
+                            ("self" variable nil (reparse-symbol indented_block_body) [8128 8174])
+                            ("if" code nil (reparse-symbol indented_block_body) [8183 8384])
+                            ("if" code nil (reparse-symbol indented_block_body) [8393 8529])
+                            ("self" code nil (reparse-symbol indented_block_body) [8537 8572])
+                            ("self" variable nil (reparse-symbol indented_block_body) [8581 8639])
+                            ("if" code nil (reparse-symbol indented_block_body) [8649 9815]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7890 7894])
+                            ("args" variable nil (reparse-symbol function_parameters) [7896 7900]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [7877 9815])
+                    ("log" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9828 9832])
+                            ("msg" variable nil (reparse-symbol function_parameters) [9834 9837]))                          )
+                        (reparse-symbol indented_block_body) [9820 9894])
+                    ("fail" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9908 9912])
+                            ("msg" variable nil (reparse-symbol function_parameters) [9914 9917]))                          )
+                        (reparse-symbol indented_block_body) [9899 9949])
+                    ("_get_profile" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9971 9975])
+                            ("profile" variable nil (reparse-symbol function_parameters) [9977 9984]))                          )
+                        (reparse-symbol indented_block_body) [9954 10697])
+                    ("_get_env_credentials" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10727 10731]))                          )
+                        (reparse-symbol indented_block_body) [10702 11227])
+                    ("_get_credentials" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11253 11257])
+                            ("params" variable nil (reparse-symbol function_parameters) [11259 11265]))                          )
+                        (reparse-symbol indented_block_body) [11232 12531])
+                    ("_register" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12550 12554])
+                            ("key" variable nil (reparse-symbol function_parameters) [12556 12559]))                          )
+                        (reparse-symbol indented_block_body) [12536 13293])
+                    ("network_client" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [13331 13335]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [13298 13607])
+                    ("rm_client" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [13640 13644]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [13612 13881])
+                    ("compute_client" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [13919 13923]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [13886 14195]))                  
+                :type "class")
+                nil [7849 14195])
+            ("AzureInventory" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [14261 14296])
+                            ("self" variable nil (reparse-symbol indented_block_body) [14431 14471])
+                            ("self" variable nil (reparse-symbol indented_block_body) [14480 14520])
+                            ("self" variable nil (reparse-symbol indented_block_body) [14529 14565])
+                            ("self" variable nil (reparse-symbol indented_block_body) [14574 14602])
+                            ("self" variable nil (reparse-symbol indented_block_body) [14612 14637])
+                            ("self" variable nil (reparse-symbol indented_block_body) [14646 14662])
+                            ("self" variable nil (reparse-symbol indented_block_body) [14671 14692])
+                            ("self" variable nil (reparse-symbol indented_block_body) [14701 14736])
+                            ("self" variable nil (reparse-symbol indented_block_body) [14745 14780])
+                            ("self" variable nil (reparse-symbol indented_block_body) [14789 14818])
+                            ("self" variable nil (reparse-symbol indented_block_body) [14827 14862])
+                            ("self" variable nil (reparse-symbol indented_block_body) [14871 14895])
+                            ("self" variable nil (reparse-symbol indented_block_body) [14904 14934])
+                            ("self" variable nil (reparse-symbol indented_block_body) [14944 15069])
+                            ("self" code nil (reparse-symbol indented_block_body) [15079 15099])
+                            ("if" code nil (reparse-symbol indented_block_body) [15109 15213])
+                            ("if" code nil (reparse-symbol indented_block_body) [15222 15293])
+                            ("if" code nil (reparse-symbol indented_block_body) [15302 15388])
+                            ("if" code nil (reparse-symbol indented_block_body) [15397 15470])
+                            ("self" code nil (reparse-symbol indented_block_body) [15479 15499])
+                            ("print" code nil (reparse-symbol indented_block_body) [15508 15563])
+                            ("sys" code nil (reparse-symbol indented_block_body) [15572 15583]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [14245 14249]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [14232 15584])
+                    ("_parse_cli_args" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [15609 15613]))                          )
+                        (reparse-symbol indented_block_body) [15589 17838])
+                    ("get_inventory" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [17861 17865]))                          )
+                        (reparse-symbol indented_block_body) [17843 19130])
+                    ("_load_machines" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [19154 19158])
+                            ("machines" variable nil (reparse-symbol function_parameters) [19160 19168]))                          )
+                        (reparse-symbol indented_block_body) [19135 24841])
+                    ("_selected_machines" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [24869 24873])
+                            ("virtual_machines" variable nil (reparse-symbol function_parameters) [24875 24891]))                          )
+                        (reparse-symbol indented_block_body) [24846 25359])
+                    ("_get_security_groups" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [25389 25393])
+                            ("resource_group" variable nil (reparse-symbol function_parameters) [25395 25409]))                          )
+                        (reparse-symbol indented_block_body) [25364 26111])
+                    ("_get_powerstate" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [26136 26140])
+                            ("resource_group" variable nil (reparse-symbol function_parameters) [26142 26156])
+                            ("name" variable nil (reparse-symbol function_parameters) [26158 26162]))                          )
+                        (reparse-symbol indented_block_body) [26116 26682])
+                    ("_add_host" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [26701 26705])
+                            ("vars" variable nil (reparse-symbol function_parameters) [26707 26711]))                          )
+                        (reparse-symbol indented_block_body) [26687 28288])
+                    ("_json_format_dict" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [28315 28319])
+                            ("pretty" variable nil (reparse-symbol function_parameters) [28321 28327]))                          )
+                        (reparse-symbol indented_block_body) [28293 28525])
+                    ("_get_settings" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [28548 28552]))                          )
+                        (reparse-symbol indented_block_body) [28530 29703])
+                    ("_parse_ref_id" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [29726 29730])
+                            ("reference" variable nil (reparse-symbol function_parameters) [29732 29741]))                          )
+                        (reparse-symbol indented_block_body) [29708 29989])
+                    ("_to_boolean" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [30010 30014])
+                            ("value" variable nil (reparse-symbol function_parameters) [30016 30021]))                          )
+                        (reparse-symbol indented_block_body) [29994 30264])
+                    ("_get_env_settings" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [30291 30295]))                          )
+                        (reparse-symbol indented_block_body) [30269 30499])
+                    ("_load_settings" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [30523 30527]))                          )
+                        (reparse-symbol indented_block_body) [30504 31228])
+                    ("_tags_match" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [31249 31253])
+                            ("tag_obj" variable nil (reparse-symbol function_parameters) [31255 31262])
+                            ("tag_args" variable nil (reparse-symbol function_parameters) [31264 31272]))                          )
+                        (reparse-symbol indented_block_body) [31233 32060])
+                    ("_to_safe" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [32078 32082])
+                            ("word" variable nil (reparse-symbol function_parameters) [32084 32088]))                          )
+                        (reparse-symbol indented_block_body) [32065 32346]))                  
+                :type "class")
+                nil [14197 32346])
+            ("main" function nil nil [32348 32855])
+            ("if" code nil nil [32857 32895]))          
+      :file "azure_rm.py"
+      :pointmax 32895
+      :fsize 32894
+      :lastmodtime '(22947 56662 0 0)
+      :unmatched-syntax '((INDENT_BLOCK 26433 . 26528) (NEWLINE 26432 . 26433) (COLON 26431 . 26432) (TRY 26173 . 26176) (AS 26425 . 26427) (INDENT_BLOCK 18777 . 18861) (NEWLINE 18776 . 18777) (COLON 18775 . 18776) (TRY 18651 . 18654) (AS 18769 . 18771) (INDENT_BLOCK 18178 . 18305) (NEWLINE 18177 . 18178) (COLON 18176 . 18177) (TRY 18034 . 18037) (AS 18170 . 18172) (INDENT_BLOCK 14379 . 14422) (NEWLINE 14378 . 14379) (COLON 14377 . 14378) (TRY 14306 . 14309) (AS 14373 . 14375) (INDENT_BLOCK 12870 . 13293) (NEWLINE 12869 . 12870) (COLON 12868 . 12869) (TRY 12570 . 12573) (AS 12862 . 12864) (INDENT_BLOCK 10191 . 10343) (NEWLINE 10190 . 10191) (COLON 10189 . 10190) (TRY 10074 . 10077) (AS 10183 . 10185) (INDENT_BLOCK 6886 . 6932) (COLON 6884 . 6885) (TRY 6293 . 6296) (AS 6878 . 6880))))
+  :file "!Volumes!Transcend!ansible!contrib!inventory!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

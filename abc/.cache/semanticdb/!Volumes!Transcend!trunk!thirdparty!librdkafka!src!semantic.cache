@@ -1,0 +1,3031 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1781 1799])
+            ("inttypes.h" include (:system-flag t) nil [1800 1821])
+            ("sys/types.h" include (:system-flag t) nil [1822 1844])
+            ("C" extern nil nil [1865 1885])
+            ("sys/socket.h" include (:system-flag t) nil [2431 2454])
+            ("RD_UNUSED" variable (:constant-flag t) nil [2487 2496])
+            ("RD_INLINE" variable (:constant-flag t) nil [2529 2538])
+            ("RD_EXPORT" variable (:constant-flag t) nil [2554 2563])
+            ("RD_DEPRECATED" variable (:constant-flag t) nil [2572 2585])
+            ("LIBRDKAFKA_TYPECHECKS" variable (:constant-flag t) nil [2653 2674])
+            ("_LRK_TYPECHECK" variable (:constant-flag t) nil [2842 2856])
+            ("_LRK_TYPECHECK2" variable (:constant-flag t) nil [2963 2978])
+            ("RD_KAFKA_VERSION" variable (:constant-flag t) nil [3864 3880])
+            ("rd_kafka_version" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [4157 4162]))                  
+                :type "int")
+                nil [4136 4163])
+            ("rd_kafka_version_str" function
+               (:prototype-flag t
+                :pointer 1
+                :constant-flag t
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [4299 4304]))                  
+                :type "char")
+                nil [4265 4305])
+            ("rd_kafka_type_t" type
+               (:members 
+                  ( ("RD_KAFKA_PRODUCER" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [4507 4525])
+                    ("RD_KAFKA_CONSUMER" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [4558 4602]))                  
+                :type "enum")
+                nil [4468 4619])
+            ("rd_kafka_type_t" type
+               (:typedef ("rd_kafka_type_t" type (:type "enum") nil nil)
+                :type "typedef")
+                nil [4468 4619])
+            ("rd_kafka_timestamp_type_t" type
+               (:members 
+                  ( ("RD_KAFKA_TIMESTAMP_NOT_AVAILABLE" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [4743 4776])
+                    ("RD_KAFKA_TIMESTAMP_CREATE_TIME" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [4819 4850])
+                    ("RD_KAFKA_TIMESTAMP_LOG_APPEND_TIME" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [4893 4954]))                  
+                :type "enum")
+                nil [4694 4981])
+            ("rd_kafka_timestamp_type_t" type
+               (:typedef ("rd_kafka_timestamp_type_t" type (:type "enum") nil nil)
+                :type "typedef")
+                nil [4694 4981])
+            ("rd_kafka_get_debug_contexts" function
+               (:prototype-flag t
+                :pointer 1
+                :constant-flag t
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [5230 5235]))                  
+                :type "char")
+                nil [5190 5236])
+            ("RD_KAFKA_DEBUG_CONTEXTS" variable (:constant-flag t) nil [5494 5517])
+            ("rd_kafka_t" type
+               (:typedef ("rd_kafka_s" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [5721 5758])
+            ("rd_kafka_topic_t" type
+               (:typedef ("rd_kafka_itopic_s" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [5759 5809])
+            ("rd_kafka_conf_t" type
+               (:typedef ("rd_kafka_conf_s" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [5810 5857])
+            ("rd_kafka_topic_conf_t" type
+               (:typedef ("rd_kafka_topic_conf_s" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [5858 5917])
+            ("rd_kafka_queue_t" type
+               (:typedef ("rd_kafka_queue_s" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [5918 5967])
+            ("rd_kafka_resp_err_t" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("RD_KAFKA_RESP_ERR__BEGIN" variable
+                             (:constant-flag t
+                              :default-value (6613 6617)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [6586 6617])
+                          ("RD_KAFKA_RESP_ERR__BAD_MSG" variable
+                             (:constant-flag t
+                              :default-value (6701 6705)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [6672 6705])
+                          ("RD_KAFKA_RESP_ERR__BAD_COMPRESSION" variable
+                             (:constant-flag t
+                              :default-value (6791 6795)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [6754 6795])
+                          ("RD_KAFKA_RESP_ERR__DESTROY" variable
+                             (:constant-flag t
+                              :default-value (6870 6874)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [6841 6874])
+                          ("RD_KAFKA_RESP_ERR__FAIL" variable
+                             (:constant-flag t
+                              :default-value (6941 6945)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [6915 6945])
+                          ("RD_KAFKA_RESP_ERR__TRANSPORT" variable
+                             (:constant-flag t
+                              :default-value (7026 7030)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [6995 7030])
+                          ("RD_KAFKA_RESP_ERR__CRIT_SYS_RESOURCE" variable
+                             (:constant-flag t
+                              :default-value (7119 7123)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [7080 7123])
+                          ("RD_KAFKA_RESP_ERR__RESOLVE" variable
+                             (:constant-flag t
+                              :default-value (7202 7206)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [7173 7206])
+                          ("RD_KAFKA_RESP_ERR__MSG_TIMED_OUT" variable
+                             (:constant-flag t
+                              :default-value (7292 7296)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [7257 7296])
+                          ("RD_KAFKA_RESP_ERR__PARTITION_EOF" variable
+                             (:constant-flag t
+                              :default-value (7448 7452)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [7413 7452])
+                          ("RD_KAFKA_RESP_ERR__UNKNOWN_PARTITION" variable
+                             (:constant-flag t
+                              :default-value (7564 7568)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [7525 7568])
+                          ("RD_KAFKA_RESP_ERR__FS" variable
+                             (:constant-flag t
+                              :default-value (7642 7646)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [7618 7646])
+                          ("RD_KAFKA_RESP_ERR__UNKNOWN_TOPIC" variable
+                             (:constant-flag t
+                              :default-value (7750 7754)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [7715 7754])
+                          ("RD_KAFKA_RESP_ERR__ALL_BROKERS_DOWN" variable
+                             (:constant-flag t
+                              :default-value (7850 7854)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [7812 7854])
+                          ("RD_KAFKA_RESP_ERR__INVALID_ARG" variable
+                             (:constant-flag t
+                              :default-value (7955 7959)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [7922 7959])
+                          ("RD_KAFKA_RESP_ERR__TIMED_OUT" variable
+                             (:constant-flag t
+                              :default-value (8035 8039)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [8004 8039])
+                          ("RD_KAFKA_RESP_ERR__QUEUE_FULL" variable
+                             (:constant-flag t
+                              :default-value (8110 8114)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [8078 8114])
+                          ("RD_KAFKA_RESP_ERR__ISR_INSUFF" variable
+                             (:constant-flag t
+                              :default-value (8197 8201)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [8165 8201])
+                          ("RD_KAFKA_RESP_ERR__NODE_UPDATE" variable
+                             (:constant-flag t
+                              :default-value (8278 8282)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [8245 8282])
+                          ("RD_KAFKA_RESP_ERR__SSL" variable
+                             (:constant-flag t
+                              :default-value (8342 8346)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [8317 8346])
+                          ("RD_KAFKA_RESP_ERR__WAIT_COORD" variable
+                             (:constant-flag t
+                              :default-value (8448 8452)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [8416 8452])
+                          ("RD_KAFKA_RESP_ERR__UNKNOWN_GROUP" variable
+                             (:constant-flag t
+                              :default-value (8533 8537)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [8498 8537])
+                          ("RD_KAFKA_RESP_ERR__IN_PROGRESS" variable
+                             (:constant-flag t
+                              :default-value (8617 8621)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [8584 8621])
+                          ("RD_KAFKA_RESP_ERR__PREV_IN_PROGRESS" variable
+                             (:constant-flag t
+                              :default-value (8739 8743)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [8701 8743])
+                          ("RD_KAFKA_RESP_ERR__EXISTING_SUBSCRIPTION" variable
+                             (:constant-flag t
+                              :default-value (8872 8876)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [8829 8876])
+                          ("RD_KAFKA_RESP_ERR__ASSIGN_PARTITIONS" variable
+                             (:constant-flag t
+                              :default-value (8975 8979)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [8936 8979])
+                          ("RD_KAFKA_RESP_ERR__REVOKE_PARTITIONS" variable
+                             (:constant-flag t
+                              :default-value (9077 9081)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [9038 9081])
+                          ("RD_KAFKA_RESP_ERR__CONFLICT" variable
+                             (:constant-flag t
+                              :default-value (9152 9156)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [9122 9156])
+                          ("RD_KAFKA_RESP_ERR__STATE" variable
+                             (:constant-flag t
+                              :default-value (9220 9224)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [9193 9224])
+                          ("RD_KAFKA_RESP_ERR__UNKNOWN_PROTOCOL" variable
+                             (:constant-flag t
+                              :default-value (9304 9308)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [9266 9308])
+                          ("RD_KAFKA_RESP_ERR__NOT_IMPLEMENTED" variable
+                             (:constant-flag t
+                              :default-value (9386 9390)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [9349 9390])
+                          ("RD_KAFKA_RESP_ERR__AUTHENTICATION" variable
+                             (:constant-flag t
+                              :default-value (9473 9477)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [9437 9477])
+                          ("RD_KAFKA_RESP_ERR__NO_OFFSET" variable
+                             (:constant-flag t
+                              :default-value (9550 9554)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [9519 9554])
+                          ("RD_KAFKA_RESP_ERR__OUTDATED" variable
+                             (:constant-flag t
+                              :default-value (9618 9622)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [9588 9622])
+                          ("RD_KAFKA_RESP_ERR__TIMED_OUT_QUEUE" variable
+                             (:constant-flag t
+                              :default-value (9703 9707)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [9666 9707])
+                          ("RD_KAFKA_RESP_ERR__UNSUPPORTED_FEATURE" variable
+                             (:constant-flag t
+                              :default-value (9805 9809)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [9764 9809])
+                          ("RD_KAFKA_RESP_ERR__WAIT_CACHE" variable
+                             (:constant-flag t
+                              :default-value (9888 9892)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [9856 9892])
+                          ("RD_KAFKA_RESP_ERR__END" variable
+                             (:constant-flag t
+                              :default-value (9968 9972)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [9943 9972])
+                          ("RD_KAFKA_RESP_ERR_UNKNOWN" variable
+                             (:constant-flag t
+                              :default-value (10082 10084)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [10054 10084])
+                          ("RD_KAFKA_RESP_ERR_NO_ERROR" variable
+                             (:constant-flag t
+                              :default-value (10146 10147)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [10117 10147])
+                          ("RD_KAFKA_RESP_ERR_OFFSET_OUT_OF_RANGE" variable
+                             (:constant-flag t
+                              :default-value (10232 10233)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [10192 10233])
+                          ("RD_KAFKA_RESP_ERR_INVALID_MSG" variable
+                             (:constant-flag t
+                              :default-value (10306 10307)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [10274 10307])
+                          ("RD_KAFKA_RESP_ERR_UNKNOWN_TOPIC_OR_PART" variable
+                             (:constant-flag t
+                              :default-value (10401 10402)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [10359 10402])
+                          ("RD_KAFKA_RESP_ERR_INVALID_MSG_SIZE" variable
+                             (:constant-flag t
+                              :default-value (10485 10486)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [10448 10486])
+                          ("RD_KAFKA_RESP_ERR_LEADER_NOT_AVAILABLE" variable
+                             (:constant-flag t
+                              :default-value (10573 10574)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [10532 10574])
+                          ("RD_KAFKA_RESP_ERR_NOT_LEADER_FOR_PARTITION" variable
+                             (:constant-flag t
+                              :default-value (10669 10670)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [10624 10670])
+                          ("RD_KAFKA_RESP_ERR_REQUEST_TIMED_OUT" variable
+                             (:constant-flag t
+                              :default-value (10751 10752)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [10713 10752])
+                          ("RD_KAFKA_RESP_ERR_BROKER_NOT_AVAILABLE" variable
+                             (:constant-flag t
+                              :default-value (10839 10840)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [10798 10840])
+                          ("RD_KAFKA_RESP_ERR_REPLICA_NOT_AVAILABLE" variable
+                             (:constant-flag t
+                              :default-value (10929 10930)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [10887 10930])
+                          ("RD_KAFKA_RESP_ERR_MSG_SIZE_TOO_LARGE" variable
+                             (:constant-flag t
+                              :default-value (11017 11019)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [10978 11019])
+                          ("RD_KAFKA_RESP_ERR_STALE_CTRL_EPOCH" variable
+                             (:constant-flag t
+                              :default-value (11106 11108)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [11069 11108])
+                          ("RD_KAFKA_RESP_ERR_OFFSET_METADATA_TOO_LARGE" variable
+                             (:constant-flag t
+                              :default-value (11212 11214)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [11166 11214])
+                          ("RD_KAFKA_RESP_ERR_NETWORK_EXCEPTION" variable
+                             (:constant-flag t
+                              :default-value (11322 11324)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [11284 11324])
+                          ("RD_KAFKA_RESP_ERR_GROUP_LOAD_IN_PROGRESS" variable
+                             (:constant-flag t
+                              :default-value (11427 11429)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [11384 11429])
+                          ("RD_KAFKA_RESP_ERR_GROUP_COORDINATOR_NOT_AVAILABLE" variable
+                             (:constant-flag t
+                              :default-value (11538 11540)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [11486 11540])
+                          ("RD_KAFKA_RESP_ERR_NOT_COORDINATOR_FOR_GROUP" variable
+                             (:constant-flag t
+                              :default-value (11637 11639)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [11591 11639])
+                          ("RD_KAFKA_RESP_ERR_TOPIC_EXCEPTION" variable
+                             (:constant-flag t
+                              :default-value (11714 11716)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [11678 11716])
+                          ("RD_KAFKA_RESP_ERR_RECORD_LIST_TOO_LARGE" variable
+                             (:constant-flag t
+                              :default-value (11840 11842)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [11798 11842])
+                          ("RD_KAFKA_RESP_ERR_NOT_ENOUGH_REPLICAS" variable
+                             (:constant-flag t
+                              :default-value (11935 11937)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [11895 11937])
+                          ("RD_KAFKA_RESP_ERR_NOT_ENOUGH_REPLICAS_AFTER_APPEND" variable
+                             (:constant-flag t
+                              :default-value (12077 12079)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [12024 12079])
+                          ("RD_KAFKA_RESP_ERR_INVALID_REQUIRED_ACKS" variable
+                             (:constant-flag t
+                              :default-value (12174 12176)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [12132 12176])
+                          ("RD_KAFKA_RESP_ERR_ILLEGAL_GENERATION" variable
+                             (:constant-flag t
+                              :default-value (12283 12285)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [12244 12285])
+                          ("RD_KAFKA_RESP_ERR_INCONSISTENT_GROUP_PROTOCOL" variable
+                             (:constant-flag t
+                              :default-value (12386 12388)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [12338 12388])
+                          ("RD_KAFKA_RESP_ERR_INVALID_GROUP_ID" variable
+                             (:constant-flag t
+                              :default-value (12467 12469)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [12430 12469])
+                          ("RD_KAFKA_RESP_ERR_UNKNOWN_MEMBER_ID" variable
+                             (:constant-flag t
+                              :default-value (12547 12549)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [12509 12549])
+                          ("RD_KAFKA_RESP_ERR_INVALID_SESSION_TIMEOUT" variable
+                             (:constant-flag t
+                              :default-value (12642 12644)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [12598 12644])
+                          ("RD_KAFKA_RESP_ERR_REBALANCE_IN_PROGRESS" variable
+                             (:constant-flag t
+                              :default-value (12739 12741)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [12697 12741])
+                          ("RD_KAFKA_RESP_ERR_INVALID_COMMIT_OFFSET_SIZE" variable
+                             (:constant-flag t
+                              :default-value (12850 12852)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [12803 12852])
+                          ("RD_KAFKA_RESP_ERR_TOPIC_AUTHORIZATION_FAILED" variable
+                             (:constant-flag t
+                              :default-value (12951 12953)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [12904 12953])
+                          ("RD_KAFKA_RESP_ERR_GROUP_AUTHORIZATION_FAILED" variable
+                             (:constant-flag t
+                              :default-value (13052 13054)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [13005 13054])
+                          ("RD_KAFKA_RESP_ERR_CLUSTER_AUTHORIZATION_FAILED" variable
+                             (:constant-flag t
+                              :default-value (13157 13159)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [13108 13159])
+                          ("RD_KAFKA_RESP_ERR_INVALID_TIMESTAMP" variable
+                             (:constant-flag t
+                              :default-value (13240 13242)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [13202 13242])
+                          ("RD_KAFKA_RESP_ERR_UNSUPPORTED_SASL_MECHANISM" variable
+                             (:constant-flag t
+                              :default-value (13341 13343)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [13294 13343])
+                          ("RD_KAFKA_RESP_ERR_ILLEGAL_SASL_STATE" variable
+                             (:constant-flag t
+                              :default-value (13426 13428)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [13387 13428])
+                          ("RD_KAFKA_RESP_ERR_UNSUPPORTED_VERSION" variable
+                             (:constant-flag t
+                              :default-value (13513 13515)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [13473 13515])
+                          ("RD_KAFKA_RESP_ERR_TOPIC_ALREADY_EXISTS" variable
+                             (:constant-flag t
+                              :default-value (13602 13604)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [13561 13604])
+                          ("RD_KAFKA_RESP_ERR_INVALID_PARTITIONS" variable
+                             (:constant-flag t
+                              :default-value (13697 13699)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [13658 13699])
+                          ("RD_KAFKA_RESP_ERR_INVALID_REPLICATION_FACTOR" variable
+                             (:constant-flag t
+                              :default-value (13798 13800)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [13751 13800])
+                          ("RD_KAFKA_RESP_ERR_INVALID_REPLICA_ASSIGNMENT" variable
+                             (:constant-flag t
+                              :default-value (13899 13901)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [13852 13901])
+                          ("RD_KAFKA_RESP_ERR_INVALID_CONFIG" variable
+                             (:constant-flag t
+                              :default-value (13976 13978)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [13941 13978])
+                          ("RD_KAFKA_RESP_ERR_NOT_CONTROLLER" variable
+                             (:constant-flag t
+                              :default-value (14065 14067)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [14030 14067])
+                          ("RD_KAFKA_RESP_ERR_INVALID_REQUEST" variable
+                             (:constant-flag t
+                              :default-value (14144 14146)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [14108 14146])
+                          ("RD_KAFKA_RESP_ERR_UNSUPPORTED_FOR_MESSAGE_FORMAT" variable
+                             (:constant-flag t
+                              :default-value (14272 14274)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [14221 14274])
+                          ("RD_KAFKA_RESP_ERR_END_ALL" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [14285 14311]))                        
+                      :type "enum")
+                      nil nil)
+                :type "typedef")
+                nil [6479 14334])
+            ("rd_kafka_err_desc" type
+               (:members 
+                  ( ("code" variable (:type ("rd_kafka_resp_err_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [14555 14580])
+                    ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol classsubparts) [14607 14624])
+                    ("desc" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol classsubparts) [14688 14705]))                  
+                :type "struct")
+                nil [14520 14755])
+            ("rd_kafka_get_err_descs" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("errdescs" variable
+                       (:pointer 2
+                        :constant-flag t
+                        :type ("rd_kafka_err_desc" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [14853 14895])
+                    ("cntp" variable
+                       (:pointer 1
+                        :type ("size_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14925 14938]))                  
+                :type "void")
+                nil [14824 14939])
+            ("rd_kafka_err2str" function
+               (:prototype-flag t
+                :pointer 1
+                :constant-flag t
+                :arguments 
+                  ( ("err" variable (:type ("rd_kafka_resp_err_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15101 15125]))                  
+                :type "char")
+                nil [15071 15126])
+            ("rd_kafka_err2name" function
+               (:prototype-flag t
+                :pointer 1
+                :constant-flag t
+                :arguments 
+                  ( ("err" variable (:type ("rd_kafka_resp_err_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15271 15295]))                  
+                :type "char")
+                nil [15240 15296])
+            ("rd_kafka_last_error" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [16164 16169]))                  
+                :type ("rd_kafka_resp_err_t" type (:type "class") nil nil))
+                nil [16123 16170])
+            ("rd_kafka_errno2err" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("errnox" variable (:type "int") (reparse-symbol arg-sub-list) [16883 16894]))                  
+                :type ("rd_kafka_resp_err_t" type (:type "class") nil nil))
+                nil [16844 16895])
+            ("rd_kafka_errno" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [17262 17267]))                  
+                :type "int")
+                nil [17242 17268])
+            ("rd_kafka_topic_partition_s" type
+               (:members 
+                  ( ("topic" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [17797 17816])
+                    ("partition" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [17856 17879])
+                    ("offset" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [17914 17934])
+                    ("metadata" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol classsubparts) [17969 17991])
+                    ("metadata_size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [18026 18053])
+                    ("opaque" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol classsubparts) [18088 18108])
+                    ("err" variable (:type ("rd_kafka_resp_err_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [18155 18179])
+                    ("_private" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol classsubparts) [18233 18254]))                  
+                :type "struct")
+                nil [17745 18399])
+            ("rd_kafka_topic_partition_t" type
+               (:typedef ("rd_kafka_topic_partition_s" type (:type "struct") nil nil)
+                :type "typedef")
+                nil [17745 18399])
+            ("rd_kafka_topic_partition_destroy" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("rktpar" variable
+                       (:pointer 1
+                        :type ("rd_kafka_topic_partition_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18582 18617]))                  
+                :type "void")
+                nil [18543 18618])
+            ("rd_kafka_topic_partition_list_s" type
+               (:members 
+                  ( ("cnt" variable (:type "int") (reparse-symbol classsubparts) [18736 18744])
+                    ("size" variable (:type "int") (reparse-symbol classsubparts) [18802 18811])
+                    ("elems" variable
+                       (:pointer 1
+                        :type ("rd_kafka_topic_partition_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [18864 18898]))                  
+                :type "struct")
+                nil [18679 18957])
+            ("rd_kafka_topic_partition_list_t" type
+               (:typedef ("rd_kafka_topic_partition_list_s" type (:type "struct") nil nil)
+                :type "typedef")
+                nil [18679 18957])
+            ("rd_kafka_topic_partition_list_new" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("size" variable (:type "int") (reparse-symbol arg-sub-list) [19565 19574]))                  
+                :type ("rd_kafka_topic_partition_list_t" type (:type "class") nil nil))
+                nil [19497 19575])
+            ("rd_kafka_topic_partition_list_destroy" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("rkparlist" variable
+                       (:pointer 1
+                        :type ("rd_kafka_topic_partition_list_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [19707 19750]))                  
+                :type "void")
+                nil [19663 19751])
+            ("rd_kafka_topic_partition_list_add" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("rktparlist" variable
+                       (:pointer 1
+                        :type ("rd_kafka_topic_partition_list_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [20062 20106])
+                    ("topic" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [20142 20160])
+                    ("partition" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [20161 20179]))                  
+                :type ("rd_kafka_topic_partition_t" type (:type "class") nil nil))
+                nil [19998 20180])
+            ("rd_kafka_topic_partition_list_add_range" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("rktparlist" variable
+                       (:pointer 1
+                        :type ("rd_kafka_topic_partition_list_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [20500 20585])
+                    ("topic" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [20627 20645])
+                    ("start" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [20687 20701])
+                    ("stop" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [20702 20715]))                  
+                :type "void")
+                nil [20454 20716])
+            ("rd_kafka_topic_partition_list_del" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("rktparlist" variable
+                       (:pointer 1
+                        :type ("rd_kafka_topic_partition_list_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [21080 21124])
+                    ("topic" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [21160 21178])
+                    ("partition" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [21179 21197]))                  
+                :type "int")
+                nil [21041 21198])
+            ("rd_kafka_topic_partition_list_del_by_idx" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("rktparlist" variable
+                       (:pointer 1
+                        :type ("rd_kafka_topic_partition_list_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [21438 21482])
+                    ("idx" variable (:type "int") (reparse-symbol arg-sub-list) [21491 21499]))                  
+                :type "int")
+                nil [21383 21500])
+            ("rd_kafka_topic_partition_list_copy" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("src" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("rd_kafka_topic_partition_list_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [21748 21791]))                  
+                :type ("rd_kafka_topic_partition_list_t" type (:type "class") nil nil))
+                nil [21678 21792])
+            ("rd_kafka_topic_partition_list_set_offset" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("rktparlist" variable
+                       (:pointer 1
+                        :type ("rd_kafka_topic_partition_list_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [22110 22154])
+                    ("topic" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [22163 22181])
+                    ("partition" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [22182 22200])
+                    ("offset" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [22201 22216]))                  
+                :type ("rd_kafka_resp_err_t" type (:type "class") nil nil))
+                nil [22039 22217])
+            ("rd_kafka_topic_partition_list_find" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("rktparlist" variable
+                       (:pointer 1
+                        :type ("rd_kafka_topic_partition_list_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [22435 22479])
+                    ("topic" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [22516 22534])
+                    ("partition" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [22535 22553]))                  
+                :type ("rd_kafka_topic_partition_t" type (:type "class") nil nil))
+                nil [22370 22554])
+            ("rd_kafka_topic_partition_list_sort" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("rktparlist" variable
+                       (:pointer 1
+                        :type ("rd_kafka_topic_partition_list_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [22777 22821])
+                    ("cmp" function
+                       (:function-pointer t
+                        :arguments 
+                          ( ("a" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [22870 22884])
+                            ("b" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [22885 22899])
+                            ("opaque" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [22948 22961]))                          
+                        :type "int")
+                        nil nil)
+                    ("opaque" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [22999 23012]))                  
+                :type "void")
+                nil [22736 23013])
+            ("rd_kafka_vtype_t" type
+               (:members 
+                  ( ("RD_KAFKA_VTYPE_END" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [23207 23226])
+                    ("RD_KAFKA_VTYPE_TOPIC" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [23265 23286])
+                    ("RD_KAFKA_VTYPE_RKT" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [23333 23352])
+                    ("RD_KAFKA_VTYPE_PARTITION" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [23409 23434])
+                    ("RD_KAFKA_VTYPE_VALUE" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [23471 23492])
+                    ("RD_KAFKA_VTYPE_KEY" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [23553 23572])
+                    ("RD_KAFKA_VTYPE_OPAQUE" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [23624 23646])
+                    ("RD_KAFKA_VTYPE_MSGFLAGS" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [23694 23718])
+                    ("RD_KAFKA_VTYPE_TIMESTAMP" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [23766 23791]))                  
+                :type "enum")
+                nil [23167 23858])
+            ("rd_kafka_vtype_t" type
+               (:typedef ("rd_kafka_vtype_t" type (:type "enum") nil nil)
+                :type "typedef")
+                nil [23167 23858])
+            ("RD_KAFKA_V_END" variable (:constant-flag t) nil [24063 24077])
+            ("RD_KAFKA_V_TOPIC" variable (:constant-flag t) nil [24143 24159])
+            ("RD_KAFKA_V_RKT" variable (:constant-flag t) nil [24364 24378])
+            ("RD_KAFKA_V_PARTITION" variable (:constant-flag t) nil [24583 24603])
+            ("RD_KAFKA_V_VALUE" variable (:constant-flag t) nil [24835 24851])
+            ("RD_KAFKA_V_KEY" variable (:constant-flag t) nil [25094 25108])
+            ("RD_KAFKA_V_OPAQUE" variable (:constant-flag t) nil [25323 25340])
+            ("RD_KAFKA_V_MSGFLAGS" variable (:constant-flag t) nil [25552 25571])
+            ("RD_KAFKA_V_TIMESTAMP" variable (:constant-flag t) nil [25745 25765])
+            ("rd_kafka_message_s" type
+               (:members 
+                  ( ("err" variable (:type ("rd_kafka_resp_err_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [26662 26686])
+                    ("rkt" variable
+                       (:pointer 1
+                        :type ("rd_kafka_topic_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [26735 26757])
+                    ("partition" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [26784 26802])
+                    ("payload" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol classsubparts) [26837 26853])
+                    ("len" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [27129 27141])
+                    ("key" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol classsubparts) [27350 27362])
+                    ("key_len" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [27498 27514])
+                    ("offset" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [27652 27667])
+                    ("_private" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol classsubparts) [28357 28373]))                  
+                :type "struct")
+                nil [26618 28626])
+            ("rd_kafka_message_t" type
+               (:typedef ("rd_kafka_message_s" type (:type "struct") nil nil)
+                :type "typedef")
+                nil [26618 28626])
+            ("rd_kafka_message_destroy" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("rkmessage" variable
+                       (:pointer 1
+                        :type ("rd_kafka_message_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [28757 28787]))                  
+                :type "void")
+                nil [28727 28788])
+            ("rd_kafka_message_errstr" function
+               (:pointer 1
+                :typemodifiers ("static" "inline")
+                :constant-flag t
+                :arguments 
+                  ( ("rkmessage" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("rd_kafka_message_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [28975 29011]))                  
+                :type "char")
+                nil [28911 29213])
+            ("rd_kafka_message_timestamp" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("rkmessage" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("rd_kafka_message_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [29615 29651])
+                    ("tstype" variable
+                       (:pointer 1
+                        :type ("rd_kafka_timestamp_type_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [29688 29722]))                  
+                :type ("int64_t" type (:type "class") nil nil))
+                nil [29579 29723])
+            ("rd_kafka_conf_res_t" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("RD_KAFKA_CONF_UNKNOWN" variable
+                             (:constant-flag t
+                              :default-value (29966 29968)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [29942 29968])
+                          ("RD_KAFKA_CONF_INVALID" variable
+                             (:constant-flag t
+                              :default-value (30038 30040)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [30014 30040])
+                          ("RD_KAFKA_CONF_OK" variable
+                             (:constant-flag t
+                              :default-value (30106 30107)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [30087 30107]))                        
+                      :type "enum")
+                      nil nil)
+                :type "typedef")
+                nil [29919 30164])
+            ("rd_kafka_conf_new" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [31153 31158]))                  
+                :type ("rd_kafka_conf_t" type (:type "class") nil nil))
+                nil [31118 31159])
+            ("rd_kafka_conf_destroy" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("conf" variable
+                       (:pointer 1
+                        :type ("rd_kafka_conf_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [31241 31263]))                  
+                :type "void")
+                nil [31214 31264])
+            ("rd_kafka_conf_dup" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("conf" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("rd_kafka_conf_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [31387 31415]))                  
+                :type ("rd_kafka_conf_t" type (:type "class") nil nil))
+                nil [31352 31416])
+            ("rd_kafka_conf_set" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("conf" variable
+                       (:pointer 1
+                        :type ("rd_kafka_conf_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [32089 32111])
+                    ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [32150 32167])
+                    ("value" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [32206 32224])
+                    ("errstr" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [32263 32276])
+                    ("errstr_size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [32277 32296]))                  
+                :type ("rd_kafka_conf_res_t" type (:type "class") nil nil))
+                nil [32051 32297])
+            ("rd_kafka_conf_set_events" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("conf" variable
+                       (:pointer 1
+                        :type ("rd_kafka_conf_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [32497 32519])
+                    ("events" variable (:type "int") (reparse-symbol arg-sub-list) [32520 32531]))                  
+                :type "void")
+                nil [32467 32532])
+            ("rd_kafka_conf_set_dr_cb" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("conf" variable
+                       (:pointer 1
+                        :type ("rd_kafka_conf_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [32630 32652])
+                    ("dr_cb" function
+                       (:function-pointer t
+                        :arguments 
+                          ( ("rk" variable
+                               (:pointer 1
+                                :type ("rd_kafka_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [32697 32712])
+                            ("payload" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [32757 32771])
+                            ("len" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [32772 32783])
+                            ("err" variable (:type ("rd_kafka_resp_err_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [32828 32852])
+                            ("opaque" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [32897 32910])
+                            ("msg_opaque" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [32911 32928]))                          
+                        :type "void")
+                        nil nil))                  
+                :type "void")
+                nil [32601 32930])
+            ("rd_kafka_conf_set_dr_msg_cb" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("conf" variable
+                       (:pointer 1
+                        :type ("rd_kafka_conf_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [33543 33565])
+                    ("dr_msg_cb" function
+                       (:function-pointer t
+                        :arguments 
+                          ( ("rk" variable
+                               (:pointer 1
+                                :type ("rd_kafka_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [33618 33633])
+                            ("rkmessage" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("rd_kafka_message_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [33686 33775])
+                            ("opaque" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [33828 33841]))                          
+                        :type "void")
+                        nil nil))                  
+                :type "void")
+                nil [33510 33843])
+            ("rd_kafka_conf_set_consume_cb" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("conf" variable
+                       (:pointer 1
+                        :type ("rd_kafka_conf_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [33984 34006])
+                    ("consume_cb" function
+                       (:function-pointer t
+                        :arguments 
+                          ( ("rkmessage" variable
+                               (:pointer 1
+                                :type ("rd_kafka_message_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [34062 34148])
+                            ("opaque" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [34204 34217]))                          
+                        :type "void")
+                        nil nil))                  
+                :type "void")
+                nil [33949 34219])
+            ("rd_kafka_conf_set_rebalance_cb" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("conf" variable
+                       (:pointer 1
+                        :type ("rd_kafka_conf_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [36755 36777])
+                    ("rebalance_cb" function
+                       (:function-pointer t
+                        :arguments 
+                          ( ("rk" variable
+                               (:pointer 1
+                                :type ("rd_kafka_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [36808 36823])
+                            ("err" variable (:type ("rd_kafka_resp_err_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [36854 36878])
+                            ("partitions" variable
+                               (:pointer 1
+                                :type ("rd_kafka_topic_partition_list_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [36909 36953])
+                            ("opaque" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [36984 36997]))                          
+                        :type "void")
+                        nil nil))                  
+                :type "void")
+                nil [36709 36999])
+            ("rd_kafka_conf_set_offset_commit_cb" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("conf" variable
+                       (:pointer 1
+                        :type ("rd_kafka_conf_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [37599 37621])
+                    ("offset_commit_cb" function
+                       (:function-pointer t
+                        :arguments 
+                          ( ("rk" variable
+                               (:pointer 1
+                                :type ("rd_kafka_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [37656 37671])
+                            ("err" variable (:type ("rd_kafka_resp_err_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [37706 37730])
+                            ("offsets" variable
+                               (:pointer 1
+                                :type ("rd_kafka_topic_partition_list_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [37765 37806])
+                            ("opaque" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [37841 37854]))                          
+                        :type "void")
+                        nil nil))                  
+                :type "void")
+                nil [37549 37856])
+            ("rd_kafka_conf_set_error_cb" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("conf" variable
+                       (:pointer 1
+                        :type ("rd_kafka_conf_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [38142 38164])
+                    ("error_cb" function
+                       (:function-pointer t
+                        :arguments 
+                          ( ("rk" variable
+                               (:pointer 1
+                                :type ("rd_kafka_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [38216 38231])
+                            ("err" variable (:type "int") (reparse-symbol arg-sub-list) [38232 38240])
+                            ("reason" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [38292 38311])
+                            ("opaque" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [38363 38376]))                          
+                        :type "void")
+                        nil nil))                  
+                :type "void")
+                nil [38110 38378])
+            ("rd_kafka_conf_set_throttle_cb" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("conf" variable
+                       (:pointer 1
+                        :type ("rd_kafka_conf_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [38920 38942])
+                    ("throttle_cb" function
+                       (:function-pointer t
+                        :arguments 
+                          ( ("rk" variable
+                               (:pointer 1
+                                :type ("rd_kafka_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [39045 39060])
+                            ("broker_name" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [39105 39129])
+                            ("broker_id" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [39174 39192])
+                            ("throttle_time_ms" variable (:type "int") (reparse-symbol arg-sub-list) [39237 39258])
+                            ("opaque" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [39303 39316]))                          
+                        :type "void")
+                        nil nil))                  
+                :type "void")
+                nil [38884 39318])
+            ("rd_kafka_conf_set_log_cb" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("conf" variable
+                       (:pointer 1
+                        :type ("rd_kafka_conf_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [40083 40105])
+                    ("log_cb" function
+                       (:function-pointer t
+                        :arguments 
+                          ( ("rk" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("rd_kafka_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [40152 40173])
+                            ("level" variable (:type "int") (reparse-symbol arg-sub-list) [40174 40184])
+                            ("fac" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [40231 40247])
+                            ("buf" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [40248 40264]))                          
+                        :type "void")
+                        nil nil))                  
+                :type "void")
+                nil [40053 40266])
+            ("rd_kafka_conf_set_stats_cb" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("conf" variable
+                       (:pointer 1
+                        :type ("rd_kafka_conf_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [40981 41003])
+                    ("stats_cb" function
+                       (:function-pointer t
+                        :arguments 
+                          ( ("rk" variable
+                               (:pointer 1
+                                :type ("rd_kafka_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [41053 41068])
+                            ("json" variable
+                               (:pointer 1
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [41118 41129])
+                            ("json_len" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [41179 41195])
+                            ("opaque" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [41245 41258]))                          
+                        :type "int")
+                        nil nil))                  
+                :type "void")
+                nil [40949 41260])
+            ("rd_kafka_conf_set_socket_cb" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("conf" variable
+                       (:pointer 1
+                        :type ("rd_kafka_conf_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [41726 41748])
+                    ("socket_cb" function
+                       (:function-pointer t
+                        :arguments 
+                          ( ("domain" variable (:type "int") (reparse-symbol arg-sub-list) [41800 41811])
+                            ("type" variable (:type "int") (reparse-symbol arg-sub-list) [41812 41821])
+                            ("protocol" variable (:type "int") (reparse-symbol arg-sub-list) [41873 41886])
+                            ("opaque" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [41938 41951]))                          
+                        :type "int")
+                        nil nil))                  
+                :type "void")
+                nil [41693 41953])
+            ("rd_kafka_conf_set_connect_cb" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("conf" variable
+                       (:pointer 1
+                        :type ("rd_kafka_conf_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [42378 42400])
+                    ("connect_cb" function
+                       (:function-pointer t
+                        :arguments 
+                          ( ("sockfd" variable (:type "int") (reparse-symbol arg-sub-list) [42450 42461])
+                            ("addr" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("sockaddr" type
+                                     (:prototype t
+                                      :type "struct")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [42511 42539])
+                            ("addrlen" variable (:type "int") (reparse-symbol arg-sub-list) [42589 42601])
+                            ("id" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [42651 42666])
+                            ("opaque" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [42716 42729]))                          
+                        :type "int")
+                        nil nil))                  
+                :type "void")
+                nil [42343 42731])
+            ("rd_kafka_conf_set_closesocket_cb" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("conf" variable
+                       (:pointer 1
+                        :type ("rd_kafka_conf_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [42964 42986])
+                    ("closesocket_cb" function
+                       (:function-pointer t
+                        :arguments 
+                          ( ("sockfd" variable (:type "int") (reparse-symbol arg-sub-list) [43044 43055])
+                            ("opaque" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [43113 43126]))                          
+                        :type "int")
+                        nil nil))                  
+                :type "void")
+                nil [42925 43128])
+            ("rd_kafka_conf_set_open_cb" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("conf" variable
+                       (:pointer 1
+                        :type ("rd_kafka_conf_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [43580 43602])
+                    ("open_cb" function
+                       (:function-pointer t
+                        :arguments 
+                          ( ("pathname" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [43651 43672])
+                            ("flags" variable (:type "int") (reparse-symbol arg-sub-list) [43721 43731])
+                            ("mode" variable (:type ("mode_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [43732 43744])
+                            ("opaque" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [43793 43806]))                          
+                        :type "int")
+                        nil nil))                  
+                :type "void")
+                nil [43548 43808])
+            ("rd_kafka_conf_set_opaque" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("conf" variable
+                       (:pointer 1
+                        :type ("rd_kafka_conf_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [43946 43968])
+                    ("opaque" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [43969 43982]))                  
+                :type "void")
+                nil [43916 43983])
+            ("rd_kafka_opaque" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("rk" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("rd_kafka_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [44111 44132]))                  
+                :type "void")
+                nil [44089 44133])
+            ("rd_kafka_conf_set_default_topic_conf" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("conf" variable
+                       (:pointer 1
+                        :type ("rd_kafka_conf_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [44382 44404])
+                    ("tconf" variable
+                       (:pointer 1
+                        :type ("rd_kafka_topic_conf_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [44448 44477]))                  
+                :type "void")
+                nil [44339 44478])
+            ("rd_kafka_conf_get" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("conf" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("rd_kafka_conf_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [45221 45249])
+                    ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [45289 45306])
+                    ("dest" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [45346 45357])
+                    ("dest_size" variable
+                       (:pointer 1
+                        :type ("size_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [45358 45376]))                  
+                :type ("rd_kafka_conf_res_t" type (:type "class") nil nil))
+                nil [45182 45377])
+            ("rd_kafka_topic_conf_get" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("conf" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("rd_kafka_topic_conf_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [45540 45574])
+                    ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [45620 45637])
+                    ("dest" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [45683 45694])
+                    ("dest_size" variable
+                       (:pointer 1
+                        :type ("size_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [45695 45713]))                  
+                :type ("rd_kafka_conf_res_t" type (:type "class") nil nil))
+                nil [45495 45714])
+            ("rd_kafka_conf_dump" function
+               (:prototype-flag t
+                :pointer 2
+                :constant-flag t
+                :arguments 
+                  ( ("conf" variable
+                       (:pointer 1
+                        :type ("rd_kafka_conf_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [46015 46037])
+                    ("cntp" variable
+                       (:pointer 1
+                        :type ("size_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [46038 46051]))                  
+                :type "char")
+                nil [45983 46052])
+            ("rd_kafka_topic_conf_dump" function
+               (:prototype-flag t
+                :pointer 2
+                :constant-flag t
+                :arguments 
+                  ( ("conf" variable
+                       (:pointer 1
+                        :type ("rd_kafka_topic_conf_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [46365 46393])
+                    ("cntp" variable
+                       (:pointer 1
+                        :type ("size_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [46432 46445]))                  
+                :type "char")
+                nil [46327 46446])
+            ("rd_kafka_conf_dump_free" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("arr" variable
+                       (:pointer 2
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [46611 46628])
+                    ("cnt" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [46629 46640]))                  
+                :type "void")
+                nil [46582 46641])
+            ("rd_kafka_conf_properties_show" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("fp" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [46830 46839]))                  
+                :type "void")
+                nil [46795 46840])
+            ("rd_kafka_topic_conf_new" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [47114 47119]))                  
+                :type ("rd_kafka_topic_conf_t" type (:type "class") nil nil))
+                nil [47067 47120])
+            ("rd_kafka_topic_conf_dup" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("conf" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("rd_kafka_topic_conf_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [47262 47343]))                  
+                :type ("rd_kafka_topic_conf_t" type (:type "class") nil nil))
+                nil [47215 47344])
+            ("rd_kafka_topic_conf_destroy" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("topic_conf" variable
+                       (:pointer 1
+                        :type ("rd_kafka_topic_conf_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [47438 47472]))                  
+                :type "void")
+                nil [47405 47473])
+            ("rd_kafka_topic_conf_set" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("conf" variable
+                       (:pointer 1
+                        :type ("rd_kafka_topic_conf_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [47767 47795])
+                    ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [47840 47857])
+                    ("value" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [47902 47920])
+                    ("errstr" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [47965 47978])
+                    ("errstr_size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [47979 47998]))                  
+                :type ("rd_kafka_conf_res_t" type (:type "class") nil nil))
+                nil [47723 47999])
+            ("rd_kafka_topic_conf_set_opaque" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("conf" variable
+                       (:pointer 1
+                        :type ("rd_kafka_topic_conf_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [48180 48208])
+                    ("opaque" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [48209 48222]))                  
+                :type "void")
+                nil [48144 48223])
+            ("rd_kafka_topic_conf_set_partitioner_cb" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("topic_conf" variable
+                       (:pointer 1
+                        :type ("rd_kafka_topic_conf_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [48856 48890])
+                    ("partitioner" function
+                       (:function-pointer t
+                        :arguments 
+                          ( ("rkt" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("rd_kafka_topic_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [49004 49032])
+                            ("keydata" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [49081 49101])
+                            ("keylen" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [49150 49164])
+                            ("partition_cnt" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [49213 49235])
+                            ("rkt_opaque" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [49284 49301])
+                            ("msg_opaque" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [49350 49367]))                          
+                        :type ("int32_t" type (:type "class") nil nil))
+                        nil nil))                  
+                :type "void")
+                nil [48811 49369])
+            ("rd_kafka_topic_partition_available" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("rkt" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("rd_kafka_topic_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [49633 49661])
+                    ("partition" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [49701 49719]))                  
+                :type "int")
+                nil [49594 49720])
+            ("rd_kafka_msg_partitioner_random" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("rkt" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("rd_kafka_topic_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [50220 50248])
+                    ("key" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [50289 50305])
+                    ("keylen" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [50306 50320])
+                    ("partition_cnt" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [50361 50383])
+                    ("opaque" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [50424 50437])
+                    ("msg_opaque" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [50438 50455]))                  
+                :type ("int32_t" type (:type "class") nil nil))
+                nil [50180 50456])
+            ("rd_kafka_msg_partitioner_consistent" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("rkt" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("rd_kafka_topic_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [50753 50781])
+                    ("key" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [50827 50843])
+                    ("keylen" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [50844 50858])
+                    ("partition_cnt" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [50904 50926])
+                    ("opaque" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [50972 50985])
+                    ("msg_opaque" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [50986 51003]))                  
+                :type ("int32_t" type (:type "class") nil nil))
+                nil [50708 51004])
+            ("rd_kafka_msg_partitioner_consistent_random" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("rkt" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("rd_kafka_topic_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [51439 51467])
+                    ("key" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [51520 51536])
+                    ("keylen" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [51537 51551])
+                    ("partition_cnt" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [51604 51626])
+                    ("opaque" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [51679 51692])
+                    ("msg_opaque" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [51693 51710]))                  
+                :type ("int32_t" type (:type "class") nil nil))
+                nil [51387 51711])
+            ("rd_kafka_new" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("type" variable (:type ("rd_kafka_type_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [53083 53104])
+                    ("conf" variable
+                       (:pointer 1
+                        :type ("rd_kafka_conf_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [53105 53127])
+                    ("errstr" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [53153 53166])
+                    ("errstr_size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [53167 53186]))                  
+                :type ("rd_kafka_t" type (:type "class") nil nil))
+                nil [53058 53187])
+            ("rd_kafka_destroy" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("rk" variable
+                       (:pointer 1
+                        :type ("rd_kafka_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [53313 53328]))                  
+                :type "void")
+                nil [53284 53329])
+            ("rd_kafka_name" function
+               (:prototype-flag t
+                :pointer 1
+                :constant-flag t
+                :arguments 
+                  ( ("rk" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("rd_kafka_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [53414 53435]))                  
+                :type "char")
+                nil [53388 53436])
+            ("rd_kafka_memberid" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("rk" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("rd_kafka_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [53841 53862]))                  
+                :type "char")
+                nil [53816 53863])
+            ("rd_kafka_topic_new" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("rk" variable
+                       (:pointer 1
+                        :type ("rd_kafka_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [54868 54883])
+                    ("topic" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [54884 54902])
+                    ("conf" variable
+                       (:pointer 1
+                        :type ("rd_kafka_topic_conf_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [54940 54968]))                  
+                :type ("rd_kafka_topic_t" type (:type "class") nil nil))
+                nil [54831 54969])
+            ("rd_kafka_topic_destroy" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("rkt" variable
+                       (:pointer 1
+                        :type ("rd_kafka_topic_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [55356 55378]))                  
+                :type "void")
+                nil [55328 55379])
+            ("rd_kafka_topic_name" function
+               (:prototype-flag t
+                :pointer 1
+                :constant-flag t
+                :arguments 
+                  ( ("rkt" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("rd_kafka_topic_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [55466 55494]))                  
+                :type "char")
+                nil [55434 55495])
+            ("rd_kafka_topic_opaque" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("rkt" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("rd_kafka_topic_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [55626 55654]))                  
+                :type "void")
+                nil [55597 55655])
+            ("RD_KAFKA_PARTITION_UA" variable (:constant-flag t) nil [55853 55874])
+            ("rd_kafka_poll" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("rk" variable
+                       (:pointer 1
+                        :type ("rd_kafka_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [56763 56778])
+                    ("timeout_ms" variable (:type "int") (reparse-symbol arg-sub-list) [56779 56794]))                  
+                :type "int")
+                nil [56745 56795])
+            ("rd_kafka_yield" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("rk" variable
+                       (:pointer 1
+                        :type ("rd_kafka_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [57190 57205]))                  
+                :type "void")
+                nil [57169 57206])
+            ("rd_kafka_pause_partitions" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("rk" variable
+                       (:pointer 1
+                        :type ("rd_kafka_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [57479 57494])
+                    ("partitions" variable
+                       (:pointer 1
+                        :type ("rd_kafka_topic_partition_list_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [57522 57566]))                  
+                :type ("rd_kafka_resp_err_t" type (:type "class") nil nil))
+                nil [57432 57567])
+            ("rd_kafka_resume_partitions" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("rk" variable
+                       (:pointer 1
+                        :type ("rd_kafka_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [57838 57853])
+                    ("partitions" variable
+                       (:pointer 1
+                        :type ("rd_kafka_topic_partition_list_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [57882 57926]))                  
+                :type ("rd_kafka_resp_err_t" type (:type "class") nil nil))
+                nil [57790 57927])
+            ("rd_kafka_query_watermark_offsets" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("rk" variable
+                       (:pointer 1
+                        :type ("rd_kafka_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [58256 58271])
+                    ("topic" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [58306 58324])
+                    ("partition" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [58325 58343])
+                    ("low" variable
+                       (:pointer 1
+                        :type ("int64_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [58378 58391])
+                    ("high" variable
+                       (:pointer 1
+                        :type ("int64_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [58392 58406])
+                    ("timeout_ms" variable (:type "int") (reparse-symbol arg-sub-list) [58407 58422]))                  
+                :type ("rd_kafka_resp_err_t" type (:type "class") nil nil))
+                nil [58202 58423])
+            ("rd_kafka_get_watermark_offsets" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("rk" variable
+                       (:pointer 1
+                        :type ("rd_kafka_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [59115 59130])
+                    ("topic" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [59163 59181])
+                    ("partition" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [59182 59200])
+                    ("low" variable
+                       (:pointer 1
+                        :type ("int64_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [59233 59246])
+                    ("high" variable
+                       (:pointer 1
+                        :type ("int64_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [59247 59261]))                  
+                :type ("rd_kafka_resp_err_t" type (:type "class") nil nil))
+                nil [59063 59262])
+            ("rd_kafka_offsets_for_times" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("rk" variable
+                       (:pointer 1
+                        :type ("rd_kafka_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [60063 60078])
+                    ("offsets" variable
+                       (:pointer 1
+                        :type ("rd_kafka_topic_partition_list_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [60107 60148])
+                    ("timeout_ms" variable (:type "int") (reparse-symbol arg-sub-list) [60177 60192]))                  
+                :type ("rd_kafka_resp_err_t" type (:type "class") nil nil))
+                nil [60015 60193])
+            ("rd_kafka_mem_free" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("rk" variable
+                       (:pointer 1
+                        :type ("rd_kafka_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [60737 60752])
+                    ("ptr" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [60753 60763]))                  
+                :type "void")
+                nil [60713 60764])
+            ("rd_kafka_queue_new" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("rk" variable
+                       (:pointer 1
+                        :type ("rd_kafka_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [61317 61332]))                  
+                :type ("rd_kafka_queue_t" type (:type "class") nil nil))
+                nil [61280 61333])
+            ("rd_kafka_queue_destroy" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("rkqu" variable
+                       (:pointer 1
+                        :type ("rd_kafka_queue_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [61439 61462]))                  
+                :type "void")
+                nil [61411 61463])
+            ("rd_kafka_queue_get_main" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("rk" variable
+                       (:pointer 1
+                        :type ("rd_kafka_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [61694 61709]))                  
+                :type ("rd_kafka_queue_t" type (:type "class") nil nil))
+                nil [61651 61710])
+            ("rd_kafka_queue_get_consumer" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("rk" variable
+                       (:pointer 1
+                        :type ("rd_kafka_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [62075 62090]))                  
+                :type ("rd_kafka_queue_t" type (:type "class") nil nil))
+                nil [62028 62091])
+            ("rd_kafka_queue_get_partition" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("rk" variable
+                       (:pointer 1
+                        :type ("rd_kafka_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [62434 62449])
+                    ("topic" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [62498 62516])
+                    ("partition" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [62565 62583]))                  
+                :type ("rd_kafka_queue_t" type (:type "class") nil nil))
+                nil [62386 62584])
+            ("rd_kafka_queue_forward" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("src" variable
+                       (:pointer 1
+                        :type ("rd_kafka_queue_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [62969 62991])
+                    ("dst" variable
+                       (:pointer 1
+                        :type ("rd_kafka_queue_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [62992 63014]))                  
+                :type "void")
+                nil [62940 63015])
+            ("rd_kafka_set_log_queue" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("rk" variable
+                       (:pointer 1
+                        :type ("rd_kafka_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [63665 63680])
+                    ("rkqu" variable
+                       (:pointer 1
+                        :type ("rd_kafka_queue_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [63725 63748]))                  
+                :type ("rd_kafka_resp_err_t" type (:type "class") nil nil))
+                nil [63621 63749])
+            ("rd_kafka_queue_length" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("rkqu" variable
+                       (:pointer 1
+                        :type ("rd_kafka_queue_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [63853 63876]))                  
+                :type ("size_t" type (:type "class") nil nil))
+                nil [63823 63877])
+            ("rd_kafka_queue_io_event_enable" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("rkqu" variable
+                       (:pointer 1
+                        :type ("rd_kafka_queue_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [64483 64506])
+                    ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [64507 64514])
+                    ("payload" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [64552 64572])
+                    ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [64573 64585]))                  
+                :type "void")
+                nil [64446 64586])
+            ("RD_KAFKA_OFFSET_BEGINNING" variable (:constant-flag t) nil [64665 64690])
+            ("RD_KAFKA_OFFSET_END" variable (:constant-flag t) nil [64822 64841])
+            ("RD_KAFKA_OFFSET_STORED" variable (:constant-flag t) nil [64971 64993])
+            ("RD_KAFKA_OFFSET_INVALID" variable (:constant-flag t) nil [65116 65139])
+            ("RD_KAFKA_OFFSET_TAIL_BASE" variable (:constant-flag t) nil [65199 65224])
+            ("RD_KAFKA_OFFSET_TAIL" variable (:constant-flag t) nil [65494 65514])
+            ("rd_kafka_consume_start" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("rkt" variable
+                       (:pointer 1
+                        :type ("rd_kafka_topic_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [67084 67106])
+                    ("partition" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [67107 67125])
+                    ("offset" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [67153 67168]))                  
+                :type "int")
+                nil [67057 67169])
+            ("rd_kafka_consume_start_queue" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("rkt" variable
+                       (:pointer 1
+                        :type ("rd_kafka_topic_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [67822 67844])
+                    ("partition" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [67845 67863])
+                    ("offset" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [67897 67912])
+                    ("rkqu" variable
+                       (:pointer 1
+                        :type ("rd_kafka_queue_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [67913 67936]))                  
+                :type "int")
+                nil [67789 67937])
+            ("rd_kafka_consume_stop" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("rkt" variable
+                       (:pointer 1
+                        :type ("rd_kafka_topic_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [68459 68481])
+                    ("partition" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [68482 68500]))                  
+                :type "int")
+                nil [68433 68501])
+            ("rd_kafka_seek" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("rkt" variable
+                       (:pointer 1
+                        :type ("rd_kafka_topic_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [69138 69160])
+                    ("partition" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [69196 69214])
+                    ("offset" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [69250 69265])
+                    ("timeout_ms" variable (:type "int") (reparse-symbol arg-sub-list) [69301 69316]))                  
+                :type ("rd_kafka_resp_err_t" type (:type "class") nil nil))
+                nil [69103 69317])
+            ("rd_kafka_consume" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("rkt" variable
+                       (:pointer 1
+                        :type ("rd_kafka_topic_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [70336 70358])
+                    ("partition" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [70359 70377])
+                    ("timeout_ms" variable (:type "int") (reparse-symbol arg-sub-list) [70415 70430]))                  
+                :type ("rd_kafka_message_t" type (:type "class") nil nil))
+                nil [70299 70431])
+            ("rd_kafka_consume_batch" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("rkt" variable
+                       (:pointer 1
+                        :type ("rd_kafka_topic_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [71386 71408])
+                    ("partition" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [71409 71427])
+                    ("timeout_ms" variable (:type "int") (reparse-symbol arg-sub-list) [71459 71474])
+                    ("rkmessages" variable
+                       (:pointer 2
+                        :type ("rd_kafka_message_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [71506 71538])
+                    ("rkmessages_size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [71570 71593]))                  
+                :type ("ssize_t" type (:type "class") nil nil))
+                nil [71355 71594])
+            ("rd_kafka_consume_callback" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("rkt" variable
+                       (:pointer 1
+                        :type ("rd_kafka_topic_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [72346 72368])
+                    ("partition" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [72369 72387])
+                    ("timeout_ms" variable (:type "int") (reparse-symbol arg-sub-list) [72418 72433])
+                    ("consume_cb" function
+                       (:function-pointer t
+                        :arguments 
+                          ( ("rkmessage" variable
+                               (:pointer 1
+                                :type ("rd_kafka_message_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [72484 72564])
+                            ("opaque" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [72615 72628]))                          
+                        :type "void")
+                        nil nil)
+                    ("opaque" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [72660 72673]))                  
+                :type "int")
+                nil [72316 72674])
+            ("rd_kafka_consume_queue" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("rkqu" variable
+                       (:pointer 1
+                        :type ("rd_kafka_queue_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [73202 73225])
+                    ("timeout_ms" variable (:type "int") (reparse-symbol arg-sub-list) [73269 73284]))                  
+                :type ("rd_kafka_message_t" type (:type "class") nil nil))
+                nil [73159 73285])
+            ("rd_kafka_consume_batch_queue" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("rkqu" variable
+                       (:pointer 1
+                        :type ("rd_kafka_queue_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [73420 73443])
+                    ("timeout_ms" variable (:type "int") (reparse-symbol arg-sub-list) [73481 73496])
+                    ("rkmessages" variable
+                       (:pointer 2
+                        :type ("rd_kafka_message_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [73534 73566])
+                    ("rkmessages_size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [73604 73627]))                  
+                :type ("ssize_t" type (:type "class") nil nil))
+                nil [73383 73628])
+            ("rd_kafka_consume_callback_queue" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("rkqu" variable
+                       (:pointer 1
+                        :type ("rd_kafka_queue_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [73783 73806])
+                    ("timeout_ms" variable (:type "int") (reparse-symbol arg-sub-list) [73843 73858])
+                    ("consume_cb" function
+                       (:function-pointer t
+                        :arguments 
+                          ( ("rkmessage" variable
+                               (:pointer 1
+                                :type ("rd_kafka_message_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [73915 74001])
+                            ("opaque" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [74058 74071]))                          
+                        :type "void")
+                        nil nil)
+                    ("opaque" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [74109 74122]))                  
+                :type "int")
+                nil [73747 74123])
+            ("rd_kafka_offset_store" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("rkt" variable
+                       (:pointer 1
+                        :type ("rd_kafka_topic_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [74835 74857])
+                    ("partition" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [74900 74918])
+                    ("offset" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [74919 74934]))                  
+                :type ("rd_kafka_resp_err_t" type (:type "class") nil nil))
+                nil [74793 74935])
+            ("rd_kafka_offsets_store" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("rk" variable
+                       (:pointer 1
+                        :type ("rd_kafka_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [75498 75513])
+                    ("offsets" variable
+                       (:pointer 1
+                        :type ("rd_kafka_topic_partition_list_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [75537 75578]))                  
+                :type ("rd_kafka_resp_err_t" type (:type "class") nil nil))
+                nil [75455 75579])
+            ("rd_kafka_subscribe" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("rk" variable
+                       (:pointer 1
+                        :type ("rd_kafka_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [76245 76260])
+                    ("topics" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("rd_kafka_topic_partition_list_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [76281 76327]))                  
+                :type ("rd_kafka_resp_err_t" type (:type "class") nil nil))
+                nil [76205 76328])
+            ("rd_kafka_unsubscribe" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("rk" variable
+                       (:pointer 1
+                        :type ("rd_kafka_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [76448 76463]))                  
+                :type ("rd_kafka_resp_err_t" type (:type "class") nil nil))
+                nil [76406 76464])
+            ("rd_kafka_subscription" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("rk" variable
+                       (:pointer 1
+                        :type ("rd_kafka_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [76847 76862])
+                    ("topics" variable
+                       (:pointer 2
+                        :type ("rd_kafka_topic_partition_list_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [76886 76927]))                  
+                :type ("rd_kafka_resp_err_t" type (:type "class") nil nil))
+                nil [76804 76928])
+            ("rd_kafka_consumer_poll" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("rk" variable
+                       (:pointer 1
+                        :type ("rd_kafka_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [77693 77708])
+                    ("timeout_ms" variable (:type "int") (reparse-symbol arg-sub-list) [77709 77724]))                  
+                :type ("rd_kafka_message_t" type (:type "class") nil nil))
+                nil [77649 77725])
+            ("rd_kafka_consumer_close" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("rk" variable
+                       (:pointer 1
+                        :type ("rd_kafka_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [78369 78384]))                  
+                :type ("rd_kafka_resp_err_t" type (:type "class") nil nil))
+                nil [78324 78385])
+            ("rd_kafka_assign" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("rk" variable
+                       (:pointer 1
+                        :type ("rd_kafka_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [78989 79004])
+                    ("partitions" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("rd_kafka_topic_partition_list_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [79022 79072]))                  
+                :type ("rd_kafka_resp_err_t" type (:type "class") nil nil))
+                nil [78952 79073])
+            ("rd_kafka_assignment" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("rk" variable
+                       (:pointer 1
+                        :type ("rd_kafka_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [79464 79479])
+                    ("partitions" variable
+                       (:pointer 2
+                        :type ("rd_kafka_topic_partition_list_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [79501 79546]))                  
+                :type ("rd_kafka_resp_err_t" type (:type "class") nil nil))
+                nil [79423 79547])
+            ("rd_kafka_commit" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("rk" variable
+                       (:pointer 1
+                        :type ("rd_kafka_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [80199 80214])
+                    ("offsets" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("rd_kafka_topic_partition_list_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [80215 80262])
+                    ("async" variable (:type "int") (reparse-symbol arg-sub-list) [80280 80290]))                  
+                :type ("rd_kafka_resp_err_t" type (:type "class") nil nil))
+                nil [80162 80291])
+            ("rd_kafka_commit_message" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("rk" variable
+                       (:pointer 1
+                        :type ("rd_kafka_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [80456 80471])
+                    ("rkmessage" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("rd_kafka_message_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [80472 80508])
+                    ("async" variable (:type "int") (reparse-symbol arg-sub-list) [80534 80544]))                  
+                :type ("rd_kafka_resp_err_t" type (:type "class") nil nil))
+                nil [80411 80545])
+            ("rd_kafka_commit_queue" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("rk" variable
+                       (:pointer 1
+                        :type ("rd_kafka_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [81420 81435])
+                    ("offsets" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("rd_kafka_topic_partition_list_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [81459 81506])
+                    ("rkqu" variable
+                       (:pointer 1
+                        :type ("rd_kafka_queue_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [81530 81553])
+                    ("cb" function
+                       (:function-pointer t
+                        :arguments 
+                          ( ("rk" variable
+                               (:pointer 1
+                                :type ("rd_kafka_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [81589 81604])
+                            ("err" variable (:type ("rd_kafka_resp_err_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [81640 81664])
+                            ("offsets" variable
+                               (:pointer 1
+                                :type ("rd_kafka_topic_partition_list_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [81700 81741])
+                            ("opaque" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [81777 81790]))                          
+                        :type "void")
+                        nil nil)
+                    ("opaque" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [81815 81828]))                  
+                :type ("rd_kafka_resp_err_t" type (:type "class") nil nil))
+                nil [81377 81829])
+            ("rd_kafka_committed" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("rk" variable
+                       (:pointer 1
+                        :type ("rd_kafka_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [82391 82406])
+                    ("partitions" variable
+                       (:pointer 1
+                        :type ("rd_kafka_topic_partition_list_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [82427 82471])
+                    ("timeout_ms" variable (:type "int") (reparse-symbol arg-sub-list) [82492 82507]))                  
+                :type ("rd_kafka_resp_err_t" type (:type "class") nil nil))
+                nil [82351 82508])
+            ("rd_kafka_position" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("rk" variable
+                       (:pointer 1
+                        :type ("rd_kafka_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [83085 83100])
+                    ("partitions" variable
+                       (:pointer 1
+                        :type ("rd_kafka_topic_partition_list_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [83120 83164]))                  
+                :type ("rd_kafka_resp_err_t" type (:type "class") nil nil))
+                nil [83046 83165])
+            ("RD_KAFKA_MSG_F_FREE" variable (:constant-flag t) nil [83272 83291])
+            ("RD_KAFKA_MSG_F_COPY" variable (:constant-flag t) nil [83353 83372])
+            ("RD_KAFKA_MSG_F_BLOCK" variable (:constant-flag t) nil [83435 83455])
+            ("rd_kafka_produce" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("rkt" variable
+                       (:pointer 1
+                        :type ("rd_kafka_topic_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [87239 87261])
+                    ("partition" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [87262 87280])
+                    ("msgflags" variable (:type "int") (reparse-symbol arg-sub-list) [87302 87315])
+                    ("payload" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [87337 87351])
+                    ("len" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [87352 87363])
+                    ("key" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [87385 87401])
+                    ("keylen" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [87402 87416])
+                    ("msg_opaque" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [87438 87455]))                  
+                :type "int")
+                nil [87218 87456])
+            ("rd_kafka_producev" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("rk" variable
+                       (:pointer 1
+                        :type ("rd_kafka_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [87835 87850])
+                    ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [87851 87855]))                  
+                :type ("rd_kafka_resp_err_t" type (:type "class") nil nil))
+                nil [87796 87856])
+            ("rd_kafka_produce_batch" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("rkt" variable
+                       (:pointer 1
+                        :type ("rd_kafka_topic_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [88761 88783])
+                    ("partition" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [88784 88802])
+                    ("msgflags" variable (:type "int") (reparse-symbol arg-sub-list) [88830 88843])
+                    ("rkmessages" variable
+                       (:pointer 1
+                        :type ("rd_kafka_message_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [88871 88902])
+                    ("message_cnt" variable (:type "int") (reparse-symbol arg-sub-list) [88903 88919]))                  
+                :type "int")
+                nil [88734 88920])
+            ("rd_kafka_flush" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("rk" variable
+                       (:pointer 1
+                        :type ("rd_kafka_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [89492 89507])
+                    ("timeout_ms" variable (:type "int") (reparse-symbol arg-sub-list) [89508 89523]))                  
+                :type ("rd_kafka_resp_err_t" type (:type "class") nil nil))
+                nil [89456 89524])
+            ("rd_kafka_metadata_broker" type
+               (:members 
+                  ( ("id" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [89668 89683])
+                    ("host" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [89722 89739])
+                    ("port" variable (:type "int") (reparse-symbol classsubparts) [89782 89799]))                  
+                :type "struct")
+                nil [89618 89869])
+            ("rd_kafka_metadata_broker_t" type
+               (:typedef ("rd_kafka_metadata_broker" type (:type "struct") nil nil)
+                :type "typedef")
+                nil [89618 89869])
+            ("rd_kafka_metadata_partition" type
+               (:members 
+                  ( ("id" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [89964 89979])
+                    ("err" variable (:type ("rd_kafka_resp_err_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [90021 90045])
+                    ("leader" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [90100 90119])
+                    ("replica_cnt" variable (:type "int") (reparse-symbol classsubparts) [90158 90182])
+                    ("replicas" variable
+                       (:pointer 1
+                        :type ("int32_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [90235 90256])
+                    ("isr_cnt" variable (:type "int") (reparse-symbol classsubparts) [90295 90315])
+                    ("isrs" variable
+                       (:pointer 1
+                        :type ("int32_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [90372 90389]))                  
+                :type "struct")
+                nil [89911 90464])
+            ("rd_kafka_metadata_partition_t" type
+               (:typedef ("rd_kafka_metadata_partition" type (:type "struct") nil nil)
+                :type "typedef")
+                nil [89911 90464])
+            ("rd_kafka_metadata_topic" type
+               (:members 
+                  ( ("topic" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [90551 90569])
+                    ("partition_cnt" variable (:type "int") (reparse-symbol classsubparts) [90606 90632])
+                    ("partitions" variable
+                       (:pointer 1
+                        :type ("rd_kafka_metadata_partition" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [90687 90734])
+                    ("err" variable (:type ("rd_kafka_resp_err_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [90762 90786]))                  
+                :type "struct")
+                nil [90502 90857])
+            ("rd_kafka_metadata_topic_t" type
+               (:typedef ("rd_kafka_metadata_topic" type (:type "struct") nil nil)
+                :type "typedef")
+                nil [90502 90857])
+            ("rd_kafka_metadata" type
+               (:members 
+                  ( ("broker_cnt" variable (:type "int") (reparse-symbol classsubparts) [90940 90963])
+                    ("brokers" variable
+                       (:pointer 1
+                        :type ("rd_kafka_metadata_broker" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [91016 91057])
+                    ("topic_cnt" variable (:type "int") (reparse-symbol classsubparts) [91084 91106])
+                    ("topics" variable
+                       (:pointer 1
+                        :type ("rd_kafka_metadata_topic" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [91158 91197])
+                    ("orig_broker_id" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [91225 91252])
+                    ("orig_broker_name" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [91304 91333]))                  
+                :type "struct")
+                nil [90897 91391])
+            ("rd_kafka_metadata_t" type
+               (:typedef ("rd_kafka_metadata" type (:type "struct") nil nil)
+                :type "typedef")
+                nil [90897 91391])
+            ("rd_kafka_metadata" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("rk" variable
+                       (:pointer 1
+                        :type ("rd_kafka_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [92122 92137])
+                    ("all_topics" variable (:type "int") (reparse-symbol arg-sub-list) [92138 92153])
+                    ("only_rkt" variable
+                       (:pointer 1
+                        :type ("rd_kafka_topic_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [92173 92200])
+                    ("metadatap" variable
+                       (:pointer 2
+                        :constant-flag t
+                        :type ("rd_kafka_metadata" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [92220 92263])
+                    ("timeout_ms" variable (:type "int") (reparse-symbol arg-sub-list) [92283 92298]))                  
+                :type ("rd_kafka_resp_err_t" type (:type "class") nil nil))
+                nil [92083 92299])
+            ("rd_kafka_metadata_destroy" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("metadata" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("rd_kafka_metadata" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [92385 92426]))                  
+                :type "void")
+                nil [92354 92427])
+            ("rd_kafka_group_member_info" type
+               (:members 
+                  ( ("member_id" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [92775 92791])
+                    ("client_id" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [92851 92867])
+                    ("client_host" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [92917 92935])
+                    ("member_metadata" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol classsubparts) [92979 93001])
+                    ("member_metadata_size" variable (:type "int") (reparse-symbol classsubparts) [93126 93153])
+                    ("member_assignment" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol classsubparts) [93200 93224])
+                    ("member_assignment_size" variable (:type "int") (reparse-symbol classsubparts) [93350 93379]))                  
+                :type "struct")
+                nil [92731 93422])
+            ("rd_kafka_group_info" type
+               (:members 
+                  ( ("broker" variable (:type ("rd_kafka_metadata_broker" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [93497 93536])
+                    ("group" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [93577 93589])
+                    ("err" variable (:type ("rd_kafka_resp_err_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [93644 93668])
+                    ("state" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [93724 93736])
+                    ("protocol_type" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [93792 93812])
+                    ("protocol" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [93868 93883])
+                    ("members" variable
+                       (:pointer 1
+                        :type ("rd_kafka_group_member_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [93939 93982])
+                    ("member_cnt" variable (:type "int") (reparse-symbol classsubparts) [94013 94030]))                  
+                :type "struct")
+                nil [93460 94082])
+            ("rd_kafka_group_list" type
+               (:members 
+                  ( ("groups" variable
+                       (:pointer 1
+                        :type ("rd_kafka_group_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [94218 94253])
+                    ("group_cnt" variable (:type "int") (reparse-symbol classsubparts) [94279 94296]))                  
+                :type "struct")
+                nil [94181 94339])
+            ("rd_kafka_list_groups" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("rk" variable
+                       (:pointer 1
+                        :type ("rd_kafka_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [94989 95004])
+                    ("group" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [95005 95023])
+                    ("grplistp" variable
+                       (:pointer 2
+                        :constant-flag t
+                        :type ("rd_kafka_group_list" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [95046 95090])
+                    ("timeout_ms" variable (:type "int") (reparse-symbol arg-sub-list) [95113 95128]))                  
+                :type ("rd_kafka_resp_err_t" type (:type "class") nil nil))
+                nil [94947 95129])
+            ("rd_kafka_group_list_destroy" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("grplist" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("rd_kafka_group_list" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [95213 95255]))                  
+                :type "void")
+                nil [95179 95256])
+            ("rd_kafka_brokers_add" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("rk" variable
+                       (:pointer 1
+                        :type ("rd_kafka_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [96518 96533])
+                    ("brokerlist" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [96534 96557]))                  
+                :type "int")
+                nil [96493 96558])
+            ("rd_kafka_set_logger" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("rk" variable
+                       (:pointer 1
+                        :type ("rd_kafka_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [97020 97035])
+                    ("func" function
+                       (:function-pointer t
+                        :arguments 
+                          ( ("rk" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("rd_kafka_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [97075 97096])
+                            ("level" variable (:type "int") (reparse-symbol arg-sub-list) [97097 97107])
+                            ("fac" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [97147 97163])
+                            ("buf" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [97164 97180]))                          
+                        :type "void")
+                        nil nil))                  
+                :type "void")
+                nil [96995 97182])
+            ("rd_kafka_set_log_level" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("rk" variable
+                       (:pointer 1
+                        :type ("rd_kafka_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [97453 97468])
+                    ("level" variable (:type "int") (reparse-symbol arg-sub-list) [97469 97479]))                  
+                :type "void")
+                nil [97425 97480])
+            ("rd_kafka_log_print" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("rk" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("rd_kafka_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [97579 97600])
+                    ("level" variable (:type "int") (reparse-symbol arg-sub-list) [97601 97611])
+                    ("fac" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [97636 97652])
+                    ("buf" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [97653 97669]))                  
+                :type "void")
+                nil [97555 97670])
+            ("rd_kafka_log_syslog" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("rk" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("rd_kafka_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [97761 97782])
+                    ("level" variable (:type "int") (reparse-symbol arg-sub-list) [97783 97793])
+                    ("fac" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [97819 97835])
+                    ("buf" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [97836 97852]))                  
+                :type "void")
+                nil [97736 97853])
+            ("rd_kafka_outq_len" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("rk" variable
+                       (:pointer 1
+                        :type ("rd_kafka_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [98267 98282]))                  
+                :type "int")
+                nil [98237 98283])
+            ("rd_kafka_dump" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("fp" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [98517 98526])
+                    ("rk" variable
+                       (:pointer 1
+                        :type ("rd_kafka_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [98527 98542]))                  
+                :type "void")
+                nil [98498 98543])
+            ("rd_kafka_thread_cnt" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [98692 98697]))                  
+                :type "int")
+                nil [98668 98698])
+            ("rd_kafka_wait_destroyed" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("timeout_ms" variable (:type "int") (reparse-symbol arg-sub-list) [99064 99079]))                  
+                :type "int")
+                nil [99036 99080])
+            ("rd_kafka_poll_set_consumer" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("rk" variable
+                       (:pointer 1
+                        :type ("rd_kafka_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [99459 99474]))                  
+                :type ("rd_kafka_resp_err_t" type (:type "class") nil nil))
+                nil [99411 99475])
+            ("rd_kafka_event_type_t" type
+               (:typedef ("int")
+                :type "typedef")
+                nil [99696 99730])
+            ("RD_KAFKA_EVENT_NONE" variable (:constant-flag t) nil [99739 99758])
+            ("RD_KAFKA_EVENT_DR" variable (:constant-flag t) nil [99780 99797])
+            ("RD_KAFKA_EVENT_FETCH" variable (:constant-flag t) nil [99861 99881])
+            ("RD_KAFKA_EVENT_LOG" variable (:constant-flag t) nil [99938 99956])
+            ("RD_KAFKA_EVENT_ERROR" variable (:constant-flag t) nil [100000 100020])
+            ("RD_KAFKA_EVENT_REBALANCE" variable (:constant-flag t) nil [100056 100080])
+            ("RD_KAFKA_EVENT_OFFSET_COMMIT" variable (:constant-flag t) nil [100133 100161])
+            ("rd_kafka_event_t" type
+               (:typedef ("rd_kafka_op_s" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [100198 100244])
+            ("rd_kafka_event_type" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("rkev" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("rd_kafka_event_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [100480 100509]))                  
+                :type ("rd_kafka_event_type_t" type (:type "class") nil nil))
+                nil [100437 100510])
+            ("rd_kafka_event_name" function
+               (:prototype-flag t
+                :pointer 1
+                :constant-flag t
+                :arguments 
+                  ( ("rkev" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("rd_kafka_event_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [100755 100784]))                  
+                :type "char")
+                nil [100722 100785])
+            ("rd_kafka_event_destroy" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("rkev" variable
+                       (:pointer 1
+                        :type ("rd_kafka_event_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [101097 101120]))                  
+                :type "void")
+                nil [101068 101121])
+            ("rd_kafka_event_message_next" function
+               (:prototype-flag t
+                :pointer 1
+                :constant-flag t
+                :arguments 
+                  ( ("rkev" variable
+                       (:pointer 1
+                        :type ("rd_kafka_event_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [101490 101513]))                  
+                :type ("rd_kafka_message_t" type (:type "class") nil nil))
+                nil [101435 101514])
+            ("rd_kafka_event_message_array" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("rkev" variable
+                       (:pointer 1
+                        :type ("rd_kafka_event_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [101831 101854])
+                    ("rkmessages" variable
+                       (:pointer 2
+                        :constant-flag t
+                        :type ("rd_kafka_message_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [101892 101930])
+                    ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [101968 101980]))                  
+                :type ("size_t" type (:type "class") nil nil))
+                nil [101794 101981])
+            ("rd_kafka_event_message_count" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("rkev" variable
+                       (:pointer 1
+                        :type ("rd_kafka_event_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [102202 102225]))                  
+                :type ("size_t" type (:type "class") nil nil))
+                nil [102165 102226])
+            ("rd_kafka_event_error" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("rkev" variable
+                       (:pointer 1
+                        :type ("rd_kafka_event_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [102360 102383]))                  
+                :type ("rd_kafka_resp_err_t" type (:type "class") nil nil))
+                nil [102318 102384])
+            ("rd_kafka_event_error_string" function
+               (:prototype-flag t
+                :pointer 1
+                :constant-flag t
+                :arguments 
+                  ( ("rkev" variable
+                       (:pointer 1
+                        :type ("rd_kafka_event_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [102641 102664]))                  
+                :type "char")
+                nil [102600 102665])
+            ("rd_kafka_event_opaque" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("rkev" variable
+                       (:pointer 1
+                        :type ("rd_kafka_event_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [102801 102824]))                  
+                :type "void")
+                nil [102772 102825])
+            ("rd_kafka_event_log" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("rkev" variable
+                       (:pointer 1
+                        :type ("rd_kafka_event_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [103021 103044])
+                    ("fac" variable
+                       (:pointer 2
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [103069 103086])
+                    ("str" variable
+                       (:pointer 2
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [103087 103104])
+                    ("level" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [103105 103116]))                  
+                :type "int")
+                nil [102997 103117])
+            ("rd_kafka_event_topic_partition_list" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("rkev" variable
+                       (:pointer 1
+                        :type ("rd_kafka_event_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [103433 103456]))                  
+                :type ("rd_kafka_topic_partition_list_t" type (:type "class") nil nil))
+                nil [103362 103457])
+            ("rd_kafka_event_topic_partition" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("rkev" variable
+                       (:pointer 1
+                        :type ("rd_kafka_event_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [103818 103841]))                  
+                :type ("rd_kafka_topic_partition_t" type (:type "class") nil nil))
+                nil [103757 103842])
+            ("rd_kafka_queue_poll" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("rkqu" variable
+                       (:pointer 1
+                        :type ("rd_kafka_queue_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [104057 104080])
+                    ("timeout_ms" variable (:type "int") (reparse-symbol arg-sub-list) [104081 104096]))                  
+                :type ("rd_kafka_event_t" type (:type "class") nil nil))
+                nil [104018 104097])
+            ("rd_kafka_queue_poll_callback" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("rkqu" variable
+                       (:pointer 1
+                        :type ("rd_kafka_queue_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [104423 104446])
+                    ("timeout_ms" variable (:type "int") (reparse-symbol arg-sub-list) [104447 104462]))                  
+                :type "int")
+                nil [104389 104463]))          
+      :file "rdkafka.h"
+      :pointmax 104503
+      :fsize 104502
+      :lastmodtime '(23012 4642 0 0)
+      :unmatched-syntax '((close-paren 104494 . 104495) (symbol 1775 . 1779) (symbol 1768 . 1774) (punctuation 1767 . 1768))
+      :lexical-table 
+        '(("RD_INLINE" . ((INLINE "inline" 2539 . 2545)))
+          ("RD_KAFKA_EVENT_LOG" . ((number "0x4" 99967 . 99970)))
+          ("RD_EXPORT")
+          ("RD_KAFKA_V_PARTITION" (spp-arg-list ("partition") 24603 . 24614) . 
+              ((symbol "_LRK_TYPECHECK" 24657 . 24671) (semantic-list "(RD_KAFKA_VTYPE_PARTITION, int32_t, partition)" 24671 . 24717) (punctuation "," 24717 . 24718) (semantic-list "(int32_t)" 24739 . 24748) (symbol "partition" 24748 . 24757)))
+          ("RD_KAFKA_EVENT_DR" . ((number "0x1" 99809 . 99812)))
+          ("RD_KAFKA_EVENT_ERROR" . ((number "0x8" 100029 . 100032)))
+          ("RD_KAFKA_EVENT_REBALANCE" . ((number "0x10" 100085 . 100089)))
+          ("_LRK_TYPECHECK2" (spp-arg-list ("RET" "TYPE" "ARG" "TYPE2" "ARG2") 2978 . 3003) . ((semantic-list "({                                              \\
+                if (0) {                                \\
+                        TYPE __t RD_UNUSED = (ARG);     \\
+                        TYPE2 __t2 RD_UNUSED = (ARG2);  \\
+                }                                       \\
+                RET; })" 3021 . 3326)))
+          ("RD_KAFKA_EVENT_FETCH" . ((number "0x2" 99890 . 99893)))
+          ("LIBRDKAFKA_TYPECHECKS" . ((number "1" 2675 . 2676)))
+          ("RD_KAFKA_V_MSGFLAGS" (spp-arg-list ("msgflags") 25571 . 25581) . 
+              ((symbol "_LRK_TYPECHECK" 25618 . 25632) (semantic-list "(RD_KAFKA_VTYPE_MSGFLAGS, int, msgflags)" 25632 . 25672) (punctuation "," 25672 . 25673) (semantic-list "(int)" 25692 . 25697) (symbol "msgflags" 25697 . 25705)))
+          ("RD_KAFKA_EVENT_OFFSET_COMMIT" . ((number "0x20" 100162 . 100166)))
+          ("RD_KAFKA_OFFSET_END" . ((punctuation "-" 64848 . 64849) (number "1" 64849 . 64850)))
+          ("RD_KAFKA_V_TOPIC" (spp-arg-list ("topic") 24159 . 24166) . 
+              ((symbol "_LRK_TYPECHECK" 24213 . 24227) (semantic-list "(RD_KAFKA_VTYPE_TOPIC, const char *, topic)" 24227 . 24270) (punctuation "," 24270 . 24271) (semantic-list "(const char *)" 24291 . 24305) (symbol "topic" 24305 . 24310)))
+          ("RD_KAFKA_V_TIMESTAMP" (spp-arg-list ("timestamp") 25765 . 25776) . 
+              ((symbol "_LRK_TYPECHECK" 25819 . 25833) (semantic-list "(RD_KAFKA_VTYPE_TIMESTAMP, int64_t, timestamp)" 25833 . 25879) (punctuation "," 25879 . 25880) (semantic-list "(int64_t)" 25901 . 25910) (symbol "timestamp" 25910 . 25919)))
+          ("RD_KAFKA_MSG_F_COPY" . ((number "0x2" 83374 . 83377)))
+          ("RD_KAFKA_MSG_F_BLOCK" . ((number "0x4" 83456 . 83459)))
+          ("RD_KAFKA_V_RKT" (spp-arg-list ("rkt") 24378 . 24383) . 
+              ((symbol "_LRK_TYPECHECK" 24438 . 24452) (semantic-list "(RD_KAFKA_VTYPE_RKT, rd_kafka_topic_t *, rkt)" 24452 . 24497) (punctuation "," 24497 . 24498) (semantic-list "(rd_kafka_topic_t *)" 24520 . 24540) (symbol "rkt" 24540 . 24543)))
+          ("RD_KAFKA_PARTITION_UA" . ((semantic-list "((int32_t)-1)" 55876 . 55889)))
+          ("RD_KAFKA_OFFSET_STORED" . ((punctuation "-" 64994 . 64995) (number "1000" 64995 . 64999)))
+          ("RD_DEPRECATED" . ((symbol "__attribute__" 2586 . 2599) (semantic-list "((deprecated))" 2599 . 2613)))
+          ("RD_KAFKA_VERSION" . ((number "0x00090500" 3882 . 3892)))
+          ("RD_KAFKA_DEBUG_CONTEXTS" . ((string "\"all,generic,broker,topic,metadata,queue,msg,protocol,cgrp,security,fetch,feature\"" 5568 . 5650)))
+          ("RD_KAFKA_V_KEY" (spp-arg-list ("KEY" "LEN") 25108 . 25117) . 
+              ((symbol "_LRK_TYPECHECK2" 25168 . 25183) (semantic-list "(RD_KAFKA_VTYPE_KEY, const void *, KEY, size_t, LEN)" 25183 . 25235) (punctuation "," 25235 . 25236) (semantic-list "(void *)" 25255 . 25263) (symbol "KEY" 25263 . 25266) (punctuation "," 25266 . 25267) (semantic-list "(size_t)" 25268 . 25276) (symbol "LEN" 25276 . 25279)))
+          ("RD_KAFKA_MSG_F_FREE" . ((number "0x1" 83293 . 83296)))
+          ("RD_KAFKA_EVENT_NONE" . ((number "0x0" 99768 . 99771)))
+          ("RD_KAFKA_OFFSET_BEGINNING" . ((punctuation "-" 64691 . 64692) (number "2" 64692 . 64693)))
+          ("RD_UNUSED" . ((symbol "__attribute__" 2497 . 2510) (semantic-list "((unused))" 2510 . 2520)))
+          ("_LRK_TYPECHECK" (spp-arg-list ("RET" "TYPE" "ARG") 2856 . 2870) . ((semantic-list "({ if (0) { TYPE __t RD_UNUSED = (ARG); } RET; })" 2904 . 2953)))
+          ("RD_KAFKA_OFFSET_TAIL" (spp-arg-list ("CNT") 65514 . 65519) . ((semantic-list "(RD_KAFKA_OFFSET_TAIL_BASE - (CNT))" 65521 . 65556)))
+          ("RD_KAFKA_V_OPAQUE" (spp-arg-list ("opaque") 25340 . 25348) . 
+              ((symbol "_LRK_TYPECHECK" 25389 . 25403) (semantic-list "(RD_KAFKA_VTYPE_OPAQUE, void *, opaque)" 25403 . 25442) (punctuation "," 25442 . 25443) (semantic-list "(void *)" 25463 . 25471) (symbol "opaque" 25471 . 25477)))
+          ("RD_KAFKA_V_END" . ((symbol "RD_KAFKA_VTYPE_END" 24078 . 24096)))
+          ("RD_KAFKA_V_VALUE" (spp-arg-list ("VALUE" "LEN") 24851 . 24862) . 
+              ((symbol "_LRK_TYPECHECK2" 24909 . 24924) (semantic-list "(RD_KAFKA_VTYPE_VALUE, void *, VALUE, size_t, LEN)" 24924 . 24974) (punctuation "," 24974 . 24975) (semantic-list "(void *)" 24994 . 25002) (symbol "VALUE" 25002 . 25007) (punctuation "," 25007 . 25008) (semantic-list "(size_t)" 25009 . 25017) (symbol "LEN" 25017 . 25020)))
+          ("RD_KAFKA_OFFSET_INVALID" . ((punctuation "-" 65140 . 65141) (number "1001" 65141 . 65145)))
+          ("RD_KAFKA_OFFSET_TAIL_BASE" . ((punctuation "-" 65225 . 65226) (number "2000" 65226 . 65230)))
+          )
+))
+  :file "!Volumes!Transcend!trunk!thirdparty!librdkafka!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,625 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode java-mode
+      :tags 
+        '( ("org.apache.parquet.format" package nil nil [810 844])
+            ("java.io.IOException" include nil nil [1555 1582])
+            ("java.io.InputStream" include nil nil [1583 1610])
+            ("java.io.OutputStream" include nil nil [1611 1639])
+            ("java.util.List" include nil nil [1640 1662])
+            ("org.apache.thrift.TBase" include nil nil [1664 1695])
+            ("org.apache.thrift.TException" include nil nil [1696 1732])
+            ("org.apache.thrift.protocol.TCompactProtocol" include nil nil [1733 1784])
+            ("org.apache.thrift.protocol.TProtocol" include nil nil [1785 1829])
+            ("org.apache.thrift.transport.TIOStreamTransport" include nil nil [1830 1884])
+            ("org.apache.parquet.format.event.Consumers.Consumer" include nil nil [1886 1944])
+            ("org.apache.parquet.format.event.Consumers.DelegatingFieldConsumer" include nil nil [1945 2018])
+            ("org.apache.parquet.format.event.EventBasedThriftReader" include nil nil [2019 2081])
+            ("org.apache.parquet.format.event.TypedConsumer.I32Consumer" include nil nil [2082 2147])
+            ("org.apache.parquet.format.event.TypedConsumer.I64Consumer" include nil nil [2148 2213])
+            ("org.apache.parquet.format.event.TypedConsumer.StringConsumer" include nil nil [2214 2282])
+            ("Util" type
+               (:typemodifiers ("public")
+                :members 
+                  ( ("writePageHeader" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("pageHeader" variable (:type "PageHeader") (reparse-symbol formal_parameters) [2468 2489])
+                            ("to" variable (:type "OutputStream") (reparse-symbol formal_parameters) [2491 2506]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [2433 2559])
+                    ("readPageHeader" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("from" variable (:type "InputStream") (reparse-symbol formal_parameters) [2603 2619]))                          
+                        :type "PageHeader")
+                        (reparse-symbol class_member_declaration) [2563 2686])
+                    ("writeFileMetaData" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("fileMetadata" variable (:type "org.apache.parquet.format.FileMetaData") (reparse-symbol formal_parameters) [2727 2778])
+                            ("to" variable (:type "OutputStream") (reparse-symbol formal_parameters) [2780 2795]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [2690 2850])
+                    ("readFileMetaData" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("from" variable (:type "InputStream") (reparse-symbol formal_parameters) [2898 2914]))                          
+                        :type "FileMetaData")
+                        (reparse-symbol class_member_declaration) [2854 2983])
+                    ("readFileMetaData" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("from" variable (:type "InputStream") (reparse-symbol formal_parameters) [3261 3277])
+                            ("skipRowGroups" variable (:type "boolean") (reparse-symbol formal_parameters) [3279 3300]))                          
+                        :type "FileMetaData")
+                        (reparse-symbol class_member_declaration) [3217 3531])
+                    ("FileMetaDataConsumer" type
+                       (:typemodifiers ("public" "static" "abstract")
+                        :members 
+                          ( ("setVersion" function
+                               (:typemodifiers ("abstract" "public")
+                                :arguments 
+                                  ( ("version" variable (:type "int") (reparse-symbol formal_parameters) [3718 3729]))                                  
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [3686 3731])
+                            ("setSchema" function
+                               (:typemodifiers ("abstract" "public")
+                                :arguments 
+                                  ( ("" variable (:type "schema") (reparse-symbol formal_parameters) [3787 3793]))                                  
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [3736 3795])
+                            ("setNumRows" function
+                               (:typemodifiers ("abstract" "public")
+                                :arguments 
+                                  ( ("numRows" variable (:type "long") (reparse-symbol formal_parameters) [3832 3844]))                                  
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [3800 3846])
+                            ("addRowGroup" function
+                               (:typemodifiers ("abstract" "public")
+                                :arguments 
+                                  ( ("rowGroup" variable (:type "RowGroup") (reparse-symbol formal_parameters) [3884 3901]))                                  
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [3851 3903])
+                            ("addKeyValueMetaData" function
+                               (:typemodifiers ("abstract" "public")
+                                :arguments 
+                                  ( ("kv" variable (:type "KeyValue") (reparse-symbol formal_parameters) [3949 3960]))                                  
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [3908 3962])
+                            ("setCreatedBy" function
+                               (:typemodifiers ("abstract" "public")
+                                :arguments 
+                                  ( ("createdBy" variable (:type "String") (reparse-symbol formal_parameters) [4001 4017]))                                  
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [3967 4019]))                          
+                        :type "class")
+                        (reparse-symbol class_member_declaration) [3630 4023])
+                    ("DefaultFileMetaDataConsumer" type
+                       (:typemodifiers ("public" "static" "final")
+                        :superclasses "FileMetaDataConsumer"
+                        :members 
+                          ( ("md" variable
+                               (:typemodifiers ("private" "final")
+                                :type "FileMetaData")
+                                (reparse-symbol class_member_declaration) [4215 4245])
+                            ("DefaultFileMetaDataConsumer" function
+                               (:constructor-flag t
+                                :typemodifiers ("public")
+                                :arguments 
+                                  ( ("md" variable (:type "FileMetaData") (reparse-symbol formal_parameters) [4286 4301]))                                  )
+                                (reparse-symbol class_member_declaration) [4251 4330])
+                            ("setVersion" function
+                               (:typemodifiers ("public")
+                                :arguments 
+                                  ( ("version" variable (:type "int") (reparse-symbol formal_parameters) [4373 4384]))                                  
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [4350 4423])
+                            ("setSchema" function
+                               (:typemodifiers ("public")
+                                :arguments 
+                                  ( ("" variable (:type "schema") (reparse-symbol formal_parameters) [4485 4491]))                                  
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [4443 4528])
+                            ("setNumRows" function
+                               (:typemodifiers ("public")
+                                :arguments 
+                                  ( ("numRows" variable (:type "long") (reparse-symbol formal_parameters) [4571 4583]))                                  
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [4548 4623])
+                            ("setCreatedBy" function
+                               (:typemodifiers ("public")
+                                :arguments 
+                                  ( ("createdBy" variable (:type "String") (reparse-symbol formal_parameters) [4668 4684]))                                  
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [4643 4728])
+                            ("addRowGroup" function
+                               (:typemodifiers ("public")
+                                :arguments 
+                                  ( ("rowGroup" variable (:type "RowGroup") (reparse-symbol formal_parameters) [4772 4789]))                                  
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [4748 4834])
+                            ("addKeyValueMetaData" function
+                               (:typemodifiers ("public")
+                                :arguments 
+                                  ( ("kv" variable (:type "KeyValue") (reparse-symbol formal_parameters) [4886 4897]))                                  
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [4854 4944]))                          
+                        :type "class")
+                        (reparse-symbol class_member_declaration) [4126 4948])
+                    ("readFileMetaData" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("from" variable (:type "InputStream") (reparse-symbol formal_parameters) [4988 5004])
+                            ("consumer" variable (:type "FileMetaDataConsumer") (reparse-symbol formal_parameters) [5006 5035]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [4952 5106])
+                    ("readFileMetaData" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("from" variable (:type "InputStream") (reparse-symbol formal_parameters) [5146 5162])
+                            ("consumer" variable
+                               (:typemodifiers ("final")
+                                :type "FileMetaDataConsumer")
+                                (reparse-symbol formal_parameters) [5164 5199])
+                            ("skipRowGroups" variable (:type "boolean") (reparse-symbol formal_parameters) [5201 5222]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [5110 6727])
+                    ("protocol" function
+                       (:typemodifiers ("private" "static")
+                        :arguments 
+                          ( ("to" variable (:type "OutputStream") (reparse-symbol formal_parameters) [6765 6780]))                          
+                        :type "TProtocol")
+                        (reparse-symbol class_member_declaration) [6731 6836])
+                    ("protocol" function
+                       (:typemodifiers ("private" "static")
+                        :arguments 
+                          ( ("from" variable (:type "InputStream") (reparse-symbol formal_parameters) [6874 6890]))                          
+                        :type "TProtocol")
+                        (reparse-symbol class_member_declaration) [6840 6948])
+                    ("protocol" function
+                       (:typemodifiers ("private" "static")
+                        :arguments 
+                          ( ("t" variable (:type "TIOStreamTransport") (reparse-symbol formal_parameters) [6994 7014]))                          
+                        :type "InterningProtocol")
+                        (reparse-symbol class_member_declaration) [6952 7080])
+                    ("read" function
+                       (:throws ("IOException")
+                        :arguments 
+                          ( ("from" variable (:type "InputStream") (reparse-symbol formal_parameters) [7129 7145])
+                            ("tbase" variable (:type "T") (reparse-symbol formal_parameters) [7147 7154]))                          
+                        :type "T")
+                        (reparse-symbol class_member_declaration) [7122 7371])
+                    ("write" function
+                       (:throws ("IOException")
+                        :typemodifiers ("private" "static")
+                        :arguments 
+                          ( ("" variable (:type "tbase") (reparse-symbol formal_parameters) [7413 7418])
+                            ("to" variable (:type "OutputStream") (reparse-symbol formal_parameters) [7420 7435]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [7375 7597]))                  
+                :type "class")
+                nil [2410 7599]))          
+      :file "Util.java"
+      :pointmax 7600
+      :fsize 7599
+      :lastmodtime '(22925 24454 0 0)
+      :unmatched-syntax '((GT 7411 . 7412) (QUESTION 7410 . 7411) (COMMA 7408 . 7409) (QUESTION 7407 . 7408) (IDENTIFIER 7401 . 7406) (LT 7406 . 7407) (RSHIFT 7119 . 7121) (QUESTION 7118 . 7119) (COMMA 7117 . 7118) (QUESTION 7116 . 7117) (LT 7115 . 7116) (EXTENDS 7102 . 7109) (PRIVATE 7084 . 7091) (LT 7099 . 7100) (GT 4483 . 4484) (IDENTIFIER 4465 . 4469) (LT 4469 . 4470) (GT 3785 . 3786) (IDENTIFIER 3767 . 3771) (LT 3771 . 3772) (IDENTIFIER 1546 . 1552) (DOT 1545 . 1546) (IDENTIFIER 1536 . 1545) (DOT 1535 . 1536) (IDENTIFIER 1530 . 1535) (DOT 1529 . 1530) (IDENTIFIER 1523 . 1529) (DOT 1522 . 1523) (IDENTIFIER 1515 . 1522) (DOT 1514 . 1515) (IDENTIFIER 1508 . 1514) (DOT 1507 . 1508) (IMPORT 1490 . 1496) (STATIC 1497 . 1503) (IDENTIFIER 1504 . 1507) (IDENTIFIER 1482 . 1488) (DOT 1481 . 1482) (IDENTIFIER 1472 . 1481) (DOT 1471 . 1472) (IDENTIFIER 1466 . 1471) (DOT 1465 . 1466) (IDENTIFIER 1459 . 1465) (DOT 1458 . 1459) (IDENTIFIER 1451 . 1458) (DOT 1450 . 1451) (IDENTIFIER 1444 . 1450) (DOT 1443 . 1444) (IMPORT 1426 . 1432) (STATIC 1433 . 1439) (IDENTIFIER 1440 . 1443) (IDENTIFIER 1410 . 1424) (DOT 1409 . 1410) (IDENTIFIER 1400 . 1409) (DOT 1399 . 1400) (IDENTIFIER 1394 . 1399) (DOT 1393 . 1394) (IDENTIFIER 1387 . 1393) (DOT 1386 . 1387) (IDENTIFIER 1379 . 1386) (DOT 1378 . 1379) (IDENTIFIER 1372 . 1378) (DOT 1371 . 1372) (IMPORT 1354 . 1360) (STATIC 1361 . 1367) (IDENTIFIER 1368 . 1371) (IDENTIFIER 1339 . 1352) (DOT 1338 . 1339) (IDENTIFIER 1329 . 1338) (DOT 1328 . 1329) (IDENTIFIER 1323 . 1328) (DOT 1322 . 1323) (IDENTIFIER 1316 . 1322) (DOT 1315 . 1316) (IDENTIFIER 1308 . 1315) (DOT 1307 . 1308) (IDENTIFIER 1301 . 1307) (DOT 1300 . 1301) (IMPORT 1283 . 1289) (STATIC 1290 . 1296) (IDENTIFIER 1297 . 1300) (IDENTIFIER 1274 . 1281) (DOT 1273 . 1274) (IDENTIFIER 1266 . 1273) (DOT 1265 . 1266) (IDENTIFIER 1253 . 1265) (DOT 1252 . 1253) (IDENTIFIER 1246 . 1252) (DOT 1245 . 1246) (IDENTIFIER 1238 . 1245) (DOT 1237 . 1238) (IDENTIFIER 1231 . 1237) (DOT 1230 . 1231) (IMPORT 1213 . 1219) (STATIC 1220 . 1226) (IDENTIFIER 1227 . 1230) (IDENTIFIER 1205 . 1211) (DOT 1204 . 1205) (IDENTIFIER 1197 . 1204) (DOT 1196 . 1197) (IDENTIFIER 1184 . 1196) (DOT 1183 . 1184) (IDENTIFIER 1177 . 1183) (DOT 1176 . 1177) (IDENTIFIER 1169 . 1176) (DOT 1168 . 1169) (IDENTIFIER 1162 . 1168) (DOT 1161 . 1162) (IMPORT 1144 . 1150) (STATIC 1151 . 1157) (IDENTIFIER 1158 . 1161) (IDENTIFIER 1132 . 1142) (DOT 1131 . 1132) (IDENTIFIER 1124 . 1131) (DOT 1123 . 1124) (IDENTIFIER 1111 . 1123) (DOT 1110 . 1111) (IDENTIFIER 1104 . 1110) (DOT 1103 . 1104) (IDENTIFIER 1096 . 1103) (DOT 1095 . 1096) (IDENTIFIER 1089 . 1095) (DOT 1088 . 1089) (IMPORT 1071 . 1077) (STATIC 1078 . 1084) (IDENTIFIER 1085 . 1088) (IDENTIFIER 1061 . 1069) (DOT 1060 . 1061) (IDENTIFIER 1053 . 1060) (DOT 1052 . 1053) (IDENTIFIER 1040 . 1052) (DOT 1039 . 1040) (IDENTIFIER 1033 . 1039) (DOT 1032 . 1033) (IDENTIFIER 1025 . 1032) (DOT 1024 . 1025) (IDENTIFIER 1018 . 1024) (DOT 1017 . 1018) (IMPORT 1000 . 1006) (STATIC 1007 . 1013) (IDENTIFIER 1014 . 1017) (IDENTIFIER 980 . 998) (DOT 979 . 980) (IDENTIFIER 972 . 979) (DOT 971 . 972) (IDENTIFIER 959 . 971) (DOT 958 . 959) (IDENTIFIER 952 . 958) (DOT 951 . 952) (IDENTIFIER 944 . 951) (DOT 943 . 944) (IDENTIFIER 937 . 943) (DOT 936 . 937) (IMPORT 919 . 925) (STATIC 926 . 932) (IDENTIFIER 933 . 936) (IDENTIFIER 907 . 917) (DOT 906 . 907) (IDENTIFIER 899 . 906) (DOT 898 . 899) (IDENTIFIER 886 . 898) (DOT 885 . 886) (IDENTIFIER 879 . 885) (DOT 878 . 879) (IDENTIFIER 871 . 878) (DOT 870 . 871) (IDENTIFIER 864 . 870) (DOT 863 . 864) (IMPORT 846 . 852) (STATIC 853 . 859) (IDENTIFIER 860 . 863)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode java-mode
+      :tags 
+        '( ("org.apache.parquet.format" package nil nil [810 844])
+            ("java.nio.ByteBuffer" include nil nil [846 873])
+            ("org.apache.thrift.TException" include nil nil [875 911])
+            ("org.apache.thrift.protocol.TField" include nil nil [912 953])
+            ("org.apache.thrift.protocol.TList" include nil nil [954 994])
+            ("org.apache.thrift.protocol.TMap" include nil nil [995 1034])
+            ("org.apache.thrift.protocol.TMessage" include nil nil [1035 1078])
+            ("org.apache.thrift.protocol.TProtocol" include nil nil [1079 1123])
+            ("org.apache.thrift.protocol.TSet" include nil nil [1124 1163])
+            ("org.apache.thrift.protocol.TStruct" include nil nil [1164 1206])
+            ("org.apache.thrift.transport.TTransport" include nil nil [1207 1253])
+            ("InterningProtocol" type
+               (:typemodifiers ("public")
+                :superclasses "TProtocol"
+                :members 
+                  ( ("delegate" variable
+                       (:typemodifiers ("private" "final")
+                        :type "TProtocol")
+                        (reparse-symbol class_member_declaration) [1387 1420])
+                    ("InterningProtocol" function
+                       (:constructor-flag t
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("delegate" variable (:type "TProtocol") (reparse-symbol formal_parameters) [1449 1467]))                          )
+                        (reparse-symbol class_member_declaration) [1424 1540])
+                    ("getTransport" function
+                       (:typemodifiers ("public")
+                        :type "TTransport")
+                        (reparse-symbol class_member_declaration) [1544 1618])
+                    ("writeMessageBegin" function
+                       (:throws ("TException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("message" variable (:type "TMessage") (reparse-symbol formal_parameters) [1652 1668]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [1622 1734])
+                    ("writeMessageEnd" function
+                       (:throws ("TException")
+                        :typemodifiers ("public")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [1738 1823])
+                    ("hashCode" function
+                       (:typemodifiers ("public")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [1827 1886])
+                    ("writeStructBegin" function
+                       (:throws ("TException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("struct" variable (:type "TStruct") (reparse-symbol formal_parameters) [1919 1933]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [1890 1997])
+                    ("writeStructEnd" function
+                       (:throws ("TException")
+                        :typemodifiers ("public")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [2001 2084])
+                    ("writeFieldBegin" function
+                       (:throws ("TException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("field" variable (:type "TField") (reparse-symbol formal_parameters) [2116 2128]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [2088 2190])
+                    ("writeFieldEnd" function
+                       (:throws ("TException")
+                        :typemodifiers ("public")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [2194 2275])
+                    ("writeFieldStop" function
+                       (:throws ("TException")
+                        :typemodifiers ("public")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [2279 2362])
+                    ("writeMapBegin" function
+                       (:throws ("TException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("map" variable (:type "TMap") (reparse-symbol formal_parameters) [2392 2400]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [2366 2458])
+                    ("writeMapEnd" function
+                       (:throws ("TException")
+                        :typemodifiers ("public")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [2462 2539])
+                    ("writeListBegin" function
+                       (:throws ("TException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("list" variable (:type "TList") (reparse-symbol formal_parameters) [2570 2580]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [2543 2640])
+                    ("writeListEnd" function
+                       (:throws ("TException")
+                        :typemodifiers ("public")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [2644 2723])
+                    ("writeSetBegin" function
+                       (:throws ("TException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("set" variable (:type "TSet") (reparse-symbol formal_parameters) [2753 2761]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [2727 2819])
+                    ("writeSetEnd" function
+                       (:throws ("TException")
+                        :typemodifiers ("public")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [2823 2900])
+                    ("writeBool" function
+                       (:throws ("TException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("b" variable (:type "boolean") (reparse-symbol formal_parameters) [2926 2935]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [2904 2987])
+                    ("writeByte" function
+                       (:throws ("TException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("b" variable (:type "byte") (reparse-symbol formal_parameters) [3013 3019]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [2991 3071])
+                    ("writeI16" function
+                       (:throws ("TException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("i16" variable (:type "short") (reparse-symbol formal_parameters) [3096 3105]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [3075 3158])
+                    ("writeI32" function
+                       (:throws ("TException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("i32" variable (:type "int") (reparse-symbol formal_parameters) [3183 3190]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [3162 3243])
+                    ("writeI64" function
+                       (:throws ("TException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("i64" variable (:type "long") (reparse-symbol formal_parameters) [3268 3276]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [3247 3329])
+                    ("writeDouble" function
+                       (:throws ("TException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("dub" variable (:type "double") (reparse-symbol formal_parameters) [3357 3367]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [3333 3423])
+                    ("writeString" function
+                       (:throws ("TException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("str" variable (:type "String") (reparse-symbol formal_parameters) [3451 3461]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [3427 3517])
+                    ("writeBinary" function
+                       (:throws ("TException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("buf" variable (:type "ByteBuffer") (reparse-symbol formal_parameters) [3545 3559]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [3521 3615])
+                    ("readMessageBegin" function
+                       (:throws ("TException")
+                        :typemodifiers ("public")
+                        :type "TMessage")
+                        (reparse-symbol class_member_declaration) [3619 3717])
+                    ("readMessageEnd" function
+                       (:throws ("TException")
+                        :typemodifiers ("public")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [3721 3804])
+                    ("readStructBegin" function
+                       (:throws ("TException")
+                        :typemodifiers ("public")
+                        :type "TStruct")
+                        (reparse-symbol class_member_declaration) [3808 3903])
+                    ("readStructEnd" function
+                       (:throws ("TException")
+                        :typemodifiers ("public")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [3907 3988])
+                    ("readFieldBegin" function
+                       (:throws ("TException")
+                        :typemodifiers ("public")
+                        :type "TField")
+                        (reparse-symbol class_member_declaration) [3992 4084])
+                    ("readFieldEnd" function
+                       (:throws ("TException")
+                        :typemodifiers ("public")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [4088 4167])
+                    ("readMapBegin" function
+                       (:throws ("TException")
+                        :typemodifiers ("public")
+                        :type "TMap")
+                        (reparse-symbol class_member_declaration) [4171 4257])
+                    ("readMapEnd" function
+                       (:throws ("TException")
+                        :typemodifiers ("public")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [4261 4336])
+                    ("readListBegin" function
+                       (:throws ("TException")
+                        :typemodifiers ("public")
+                        :type "TList")
+                        (reparse-symbol class_member_declaration) [4340 4429])
+                    ("readListEnd" function
+                       (:throws ("TException")
+                        :typemodifiers ("public")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [4433 4510])
+                    ("readSetBegin" function
+                       (:throws ("TException")
+                        :typemodifiers ("public")
+                        :type "TSet")
+                        (reparse-symbol class_member_declaration) [4514 4600])
+                    ("readSetEnd" function
+                       (:throws ("TException")
+                        :typemodifiers ("public")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [4604 4679])
+                    ("equals" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("obj" variable (:type "Object") (reparse-symbol formal_parameters) [4705 4715]))                          
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [4683 4755])
+                    ("readBool" function
+                       (:throws ("TException")
+                        :typemodifiers ("public")
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [4759 4840])
+                    ("readByte" function
+                       (:throws ("TException")
+                        :typemodifiers ("public")
+                        :type "byte")
+                        (reparse-symbol class_member_declaration) [4844 4922])
+                    ("readI16" function
+                       (:throws ("TException")
+                        :typemodifiers ("public")
+                        :type "short")
+                        (reparse-symbol class_member_declaration) [4926 5003])
+                    ("readI32" function
+                       (:throws ("TException")
+                        :typemodifiers ("public")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [5007 5082])
+                    ("readI64" function
+                       (:throws ("TException")
+                        :typemodifiers ("public")
+                        :type "long")
+                        (reparse-symbol class_member_declaration) [5086 5162])
+                    ("readDouble" function
+                       (:throws ("TException")
+                        :typemodifiers ("public")
+                        :type "double")
+                        (reparse-symbol class_member_declaration) [5166 5250])
+                    ("readString" function
+                       (:throws ("TException")
+                        :typemodifiers ("public")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [5254 5390])
+                    ("readBinary" function
+                       (:throws ("TException")
+                        :typemodifiers ("public")
+                        :type "ByteBuffer")
+                        (reparse-symbol class_member_declaration) [5394 5482])
+                    ("reset" function
+                       (:typemodifiers ("public")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [5486 5533])
+                    ("toString" function
+                       (:typemodifiers ("public")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [5537 5599]))                  
+                :type "class")
+                nil [1333 5602]))          
+      :file "InterningProtocol.java"
+      :pointmax 5603
+      :fsize 5602
+      :lastmodtime '(22925 24454 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode java-mode
+      :tags 
+        '( ("org.apache.parquet.format" package nil nil [810 844])
+            ("LogicalTypes" type
+               (:typemodifiers ("public")
+                :members 
+                  ( ("TimeUnits" type
+                       (:typemodifiers ("public" "static")
+                        :members 
+                          ( ("MILLIS" variable
+                               (:typemodifiers ("public" "static" "final")
+                                :type "TimeUnit")
+                                (reparse-symbol class_member_declaration) [970 1044])
+                            ("MICROS" variable
+                               (:typemodifiers ("public" "static" "final")
+                                :type "TimeUnit")
+                                (reparse-symbol class_member_declaration) [1049 1123]))                          
+                        :type "class")
+                        (reparse-symbol class_member_declaration) [934 1127])
+                    ("DECIMAL" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("scale" variable (:type "int") (reparse-symbol formal_parameters) [1165 1174])
+                            ("precision" variable (:type "int") (reparse-symbol formal_parameters) [1176 1189]))                          
+                        :type "LogicalType")
+                        (reparse-symbol class_member_declaration) [1131 1263])
+                    ("UTF8" variable
+                       (:typemodifiers ("public" "static" "final")
+                        :type "LogicalType")
+                        (reparse-symbol class_member_declaration) [1267 1343])
+                    ("MAP" variable
+                       (:typemodifiers ("public" "static" "final")
+                        :type "LogicalType")
+                        (reparse-symbol class_member_declaration) [1346 1416])
+                    ("LIST" variable
+                       (:typemodifiers ("public" "static" "final")
+                        :type "LogicalType")
+                        (reparse-symbol class_member_declaration) [1419 1491])
+                    ("ENUM" variable
+                       (:typemodifiers ("public" "static" "final")
+                        :type "LogicalType")
+                        (reparse-symbol class_member_declaration) [1494 1566])
+                    ("DATE" variable
+                       (:typemodifiers ("public" "static" "final")
+                        :type "LogicalType")
+                        (reparse-symbol class_member_declaration) [1569 1641])
+                    ("TIME_MILLIS" variable
+                       (:typemodifiers ("public" "static" "final")
+                        :type "LogicalType")
+                        (reparse-symbol class_member_declaration) [1644 1745])
+                    ("TIME_MICROS" variable
+                       (:typemodifiers ("public" "static" "final")
+                        :type "LogicalType")
+                        (reparse-symbol class_member_declaration) [1748 1849])
+                    ("TIMESTAMP_MILLIS" variable
+                       (:typemodifiers ("public" "static" "final")
+                        :type "LogicalType")
+                        (reparse-symbol class_member_declaration) [1852 1968])
+                    ("TIMESTAMP_MICROS" variable
+                       (:typemodifiers ("public" "static" "final")
+                        :type "LogicalType")
+                        (reparse-symbol class_member_declaration) [1971 2087])
+                    ("INT_8" variable
+                       (:typemodifiers ("public" "static" "final")
+                        :type "LogicalType")
+                        (reparse-symbol class_member_declaration) [2090 2179])
+                    ("INT_16" variable
+                       (:typemodifiers ("public" "static" "final")
+                        :type "LogicalType")
+                        (reparse-symbol class_member_declaration) [2182 2273])
+                    ("INT_32" variable
+                       (:typemodifiers ("public" "static" "final")
+                        :type "LogicalType")
+                        (reparse-symbol class_member_declaration) [2276 2367])
+                    ("INT_64" variable
+                       (:typemodifiers ("public" "static" "final")
+                        :type "LogicalType")
+                        (reparse-symbol class_member_declaration) [2370 2461])
+                    ("UINT_8" variable
+                       (:typemodifiers ("public" "static" "final")
+                        :type "LogicalType")
+                        (reparse-symbol class_member_declaration) [2464 2555])
+                    ("UINT_16" variable
+                       (:typemodifiers ("public" "static" "final")
+                        :type "LogicalType")
+                        (reparse-symbol class_member_declaration) [2558 2651])
+                    ("UINT_32" variable
+                       (:typemodifiers ("public" "static" "final")
+                        :type "LogicalType")
+                        (reparse-symbol class_member_declaration) [2654 2747])
+                    ("UINT_64" variable
+                       (:typemodifiers ("public" "static" "final")
+                        :type "LogicalType")
+                        (reparse-symbol class_member_declaration) [2750 2843])
+                    ("UNKNOWN" variable
+                       (:typemodifiers ("public" "static" "final")
+                        :type "LogicalType")
+                        (reparse-symbol class_member_declaration) [2846 2924])
+                    ("JSON" variable
+                       (:typemodifiers ("public" "static" "final")
+                        :type "LogicalType")
+                        (reparse-symbol class_member_declaration) [2927 2999])
+                    ("BSON" variable
+                       (:typemodifiers ("public" "static" "final")
+                        :type "LogicalType")
+                        (reparse-symbol class_member_declaration) [3002 3074]))                  
+                :type "class")
+                nil [904 3076]))          
+      :file "LogicalTypes.java"
+      :pointmax 3077
+      :fsize 3076
+      :lastmodtime '(23107 22308 0 0)
+      :unmatched-syntax nil))
+  :file "!Volumes!Transcend!parquet-format!src!main!java!org!apache!parquet!format!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,151 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("grpc/grpc.h" include (:system-flag t) nil [605 627])
+            ("string.h" include (:system-flag t) nil [629 648])
+            ("grpc/support/alloc.h" include (:system-flag t) nil [650 681])
+            ("grpc/support/string_util.h" include (:system-flag t) nil [682 719])
+            ("src/core/ext/filters/client_channel/client_channel.h" include nil nil [721 784])
+            ("src/core/ext/filters/client_channel/resolver_registry.h" include nil nil [785 851])
+            ("src/core/ext/filters/client_channel/uri_parser.h" include nil nil [852 911])
+            ("src/core/ext/transport/chttp2/client/chttp2_connector.h" include nil nil [912 978])
+            ("src/core/lib/channel/channel_args.h" include nil nil [979 1025])
+            ("src/core/lib/iomgr/sockaddr_utils.h" include nil nil [1026 1072])
+            ("src/core/lib/security/credentials/credentials.h" include nil nil [1073 1131])
+            ("src/core/lib/security/transport/lb_targets_info.h" include nil nil [1132 1192])
+            ("src/core/lib/security/transport/security_connector.h" include nil nil [1193 1256])
+            ("src/core/lib/slice/slice_hash_table.h" include nil nil [1257 1305])
+            ("src/core/lib/slice/slice_internal.h" include nil nil [1306 1352])
+            ("src/core/lib/surface/api_trace.h" include nil nil [1353 1396])
+            ("src/core/lib/surface/channel.h" include nil nil [1397 1438])
+            ("client_channel_factory_ref" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("cc_factory" variable
+                       (:pointer 1
+                        :type ("grpc_client_channel_factory" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1484 1524]))                  
+                :type "void")
+                nil [1440 1527])
+            ("client_channel_factory_unref" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("exec_ctx" variable
+                       (:pointer 1
+                        :type ("grpc_exec_ctx" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1575 1599])
+                    ("cc_factory" variable
+                       (:pointer 1
+                        :type ("grpc_client_channel_factory" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1600 1640]))                  
+                :type "void")
+                nil [1529 1643])
+            ("get_secure_naming_subchannel_args" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("exec_ctx" variable
+                       (:pointer 1
+                        :type ("grpc_exec_ctx" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1713 1737])
+                    ("args" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grpc_subchannel_args" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1738 1771]))                  
+                :type ("grpc_subchannel_args" type (:type "class") nil nil))
+                nil [1645 5773])
+            ("client_channel_factory_create_subchannel" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("exec_ctx" variable
+                       (:pointer 1
+                        :type ("grpc_exec_ctx" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5845 5869])
+                    ("cc_factory" variable
+                       (:pointer 1
+                        :type ("grpc_client_channel_factory" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5870 5910])
+                    ("args" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grpc_subchannel_args" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5915 5948]))                  
+                :type ("grpc_subchannel" type (:type "class") nil nil))
+                nil [5775 6565])
+            ("client_channel_factory_create_channel" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("exec_ctx" variable
+                       (:pointer 1
+                        :type ("grpc_exec_ctx" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6631 6655])
+                    ("cc_factory" variable
+                       (:pointer 1
+                        :type ("grpc_client_channel_factory" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6656 6696])
+                    ("target" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [6701 6720])
+                    ("type" variable (:type ("grpc_client_channel_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6721 6751])
+                    ("args" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grpc_channel_args" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6756 6786]))                  
+                :type ("grpc_channel" type (:type "class") nil nil))
+                nil [6567 7521])
+            ("client_channel_factory_vtable" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :default-value "{client_channel_factory_ref, client_channel_factory_unref,
+     client_channel_factory_create_subchannel,
+     client_channel_factory_create_channel}"
+                :type ("grpc_client_channel_factory_vtable" type (:type "class") nil nil))
+                nil [7523 7757])
+            ("client_channel_factory" variable
+               (:typemodifiers ("static")
+                :default-value "{
+    &client_channel_factory_vtable}"
+                :type ("grpc_client_channel_factory" type (:type "class") nil nil))
+                nil [7759 7857])
+            ("grpc_secure_channel_create" function
+               (:pointer 1
+                :arguments 
+                  ( ("creds" variable
+                       (:pointer 1
+                        :type ("grpc_channel_credentials" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8087 8119])
+                    ("target" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [8161 8180])
+                    ("args" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grpc_channel_args" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8222 8252])
+                    ("reserved" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [8294 8309]))                  
+                :type ("grpc_channel" type (:type "class") nil nil))
+                nil [8046 9519]))          
+      :file "secure_channel_create.cc"
+      :pointmax 9520
+      :fsize 9519
+      :lastmodtime '(23013 48469 0 0)
+      :unmatched-syntax nil))
+  :file "!Volumes!Transcend!grpc!src!core!ext!transport!chttp2!client!secure!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

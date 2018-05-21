@@ -1,0 +1,776 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("DMP_BIGQUERY_IMPALA_CLIENT_H_" variable (:constant-flag t) nil [609 638])
+            ("map" include (:system-flag t) nil [640 654])
+            ("memory" include (:system-flag t) nil [655 672])
+            ("string" include (:system-flag t) nil [673 690])
+            ("vector" include (:system-flag t) nil [691 708])
+            ("common/base/uncopyable.h" include nil nil [710 745])
+            ("common/system/concurrency/mutex.h" include nil nil [746 790])
+            ("common/system/concurrency/thread_pool.h" include nil nil [791 841])
+            ("common/system/timer/timer_manager.h" include nil nil [842 888])
+            ("dmp/proto/bigquery/bigquery.pb.h" include nil nil [890 933])
+            ("beeswax" type
+               (:members 
+                  ( ("QueryHandle" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [955 973]))                  
+                :type "namespace")
+                nil [935 975])
+            ("impala" type
+               (:members 
+                  ( ("Status" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [1018 1031])
+                    ("ImpalaServiceClient" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [1032 1058])
+                    ("ClientCache" type
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type "class"
+                        :prototype t)
+                        (reparse-symbol namespacesubparts) [1059 1095])
+                    ("ClientConnection" type
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type "class"
+                        :prototype t)
+                        (reparse-symbol namespacesubparts) [1096 1137]))                  
+                :type "namespace")
+                nil [999 1139])
+            ("yesdat" type
+               (:members 
+                  ( ("bigquery" type
+                       (:members 
+                          ( ("ImpalaClient" type
+                               (:members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [1225 1232])
+                                    ("ImpalaClient" function
+                                       (:prototype-flag t
+                                        :constructor-flag t
+                                        :type ("ImpalaClient" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1235 1250])
+                                    ("ImpalaClient" function
+                                       (:prototype-flag t
+                                        :destructor-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1253 1269])
+                                    ("Init" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("impala_servers" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1350 1384]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [1340 1385])
+                                    ("Close" function
+                                       (:prototype-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1388 1401])
+                                    ("Query" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("request" variable
+                                               (:pointer 1
+                                                :constant-flag t
+                                                :type ("QueryRequest" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1416 1444])
+                                            ("response" variable
+                                               (:pointer 1
+                                                :type ("QueryResponse" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1458 1482])
+                                            ("done" variable
+                                               (:pointer 1
+                                                :type ("Closure" type
+                                                     (:template-specifier 
+                                                        ( ("void" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [1496 1516]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1405 1517])
+                                    ("private" label nil (reparse-symbol classsubparts) [1520 1528])
+                                    ("ImpalaClientCache" type
+                                       (:typedef ("impala::ClientCache" type
+                                             (:template-specifier 
+                                                ( ("impala::ImpalaServiceClient" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil)
+                                        :type "typedef")
+                                        (reparse-symbol classsubparts) [1531 1606])
+                                    ("ImpalaClientConnection" type
+                                       (:typedef ("impala::ClientConnection" type
+                                             (:template-specifier 
+                                                ( ("impala::ImpalaServiceClient" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil)
+                                        :type "typedef")
+                                        (reparse-symbol classsubparts) [1609 1700])
+                                    ("ImpalaRpc" function
+                                       (:template 
+                                          ( ("Request" type (:type "class") nil nil)
+                                            ("Response" type (:type "class") nil nil))                                          
+                                        :type ("impala::Status" type (:type "class") nil nil)
+                                        :arguments 
+                                          ( ("request" variable
+                                               (:pointer 1
+                                                :type ("Request" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1778 1795])
+                                            ("response" variable
+                                               (:pointer 1
+                                                :type ("Response" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1796 1815])
+                                            ("client_key" variable
+                                               (:pointer 1
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1843 1867]))                                          
+                                        :prototype-flag t)
+                                        (reparse-symbol classsubparts) [1704 1868])
+                                    ("SendImpalaRpc" function
+                                       (:template 
+                                          ( ("Request" type (:type "class") nil nil)
+                                            ("Response" type (:type "class") nil nil))                                          
+                                        :type "void"
+                                        :arguments 
+                                          ( ("client" variable
+                                               (:pointer 1
+                                                :type ("ImpalaClientConnection" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1940 1971])
+                                            ("request" variable
+                                               (:pointer 1
+                                                :constant-flag t
+                                                :type ("Request" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1993 2016])
+                                            ("response" variable
+                                               (:pointer 1
+                                                :type ("Response" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2017 2036]))                                          
+                                        :prototype-flag t)
+                                        (reparse-symbol classsubparts) [1872 2037])
+                                    ("PendingRequest" type
+                                       (:prototype t
+                                        :type "class")
+                                        (reparse-symbol classsubparts) [2041 2062])
+                                    ("PendingRequestMap" type
+                                       (:typedef ("std::map" type
+                                             (:template-specifier 
+                                                ( ("beeswax::QueryHandle" type nil nil nil)
+                                                  ("PendingRequest" type (:pointer 1) nil nil))                                                
+                                              :type "class")
+                                              nil nil)
+                                        :type "typedef")
+                                        (reparse-symbol classsubparts) [2065 2139])
+                                    ("ImpalaGetState" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("request" variable
+                                               (:pointer 1
+                                                :type ("PendingRequest" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2185 2209])
+                                            ("timer_id" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2210 2228]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [2165 2229])
+                                    ("ImpalaFetch" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("request" variable
+                                               (:pointer 1
+                                                :type ("PendingRequest" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2249 2273])
+                                            ("timer_id" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2274 2292]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [2232 2293])
+                                    ("ImpalaClose" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("request" variable
+                                               (:pointer 1
+                                                :type ("PendingRequest" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2313 2337]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [2296 2338])
+                                    ("ImpalaGetResultsMetadata" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("request" variable
+                                               (:pointer 1
+                                                :type ("PendingRequest" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2371 2395]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [2341 2396])
+                                    ("FinishImpalaRequest" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("request" variable
+                                               (:pointer 1
+                                                :type ("PendingRequest" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2425 2449]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [2400 2450])
+                                    ("CleanUpImpalaRequest" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("request" variable
+                                               (:pointer 1
+                                                :type ("PendingRequest" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2479 2503]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [2453 2504])
+                                    ("BuildSuccessfulResponse" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("request" variable
+                                               (:pointer 1
+                                                :type ("PendingRequest" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2537 2561]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [2508 2562])
+                                    ("BuildErrorResponse" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("status" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("impala::Status" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2589 2618])
+                                            ("response" variable
+                                               (:pointer 1
+                                                :type ("QueryResponse" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2645 2669]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [2565 2670])
+                                    ("AddDelayedTask" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("interval" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2694 2711])
+                                            ("callback" variable
+                                               (:pointer 1
+                                                :type ("TimerManager::CallbackClosure" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2712 2752])
+                                            ("request" variable
+                                               (:pointer 1
+                                                :type ("PendingRequest" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2775 2799]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [2674 2800])
+                                    ("TranslateTypeName" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("type_name" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2833 2862]))                                          
+                                        :type ("Field::Type" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [2803 2863])
+                                    ("private" label nil (reparse-symbol classsubparts) [2866 2874])
+                                    ("impala_client_cache_" variable (:type ("std::unique_ptr" type
+                                         (:template-specifier 
+                                            ( ("ImpalaClientCache" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [2877 2933])
+                                    ("impala_servers_" variable (:type ("std::vector" type
+                                         (:template-specifier 
+                                            ( ("std::string" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [2937 2978])
+                                    ("impala_server_index_" variable (:type "int") (reparse-symbol classsubparts) [2981 3006])
+                                    ("impala_user_" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3009 3034])
+                                    ("pending_requests_lock_" variable (:type ("Mutex" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3038 3067])
+                                    ("pending_requests_" variable (:type ("PendingRequestMap" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3070 3106])
+                                    ("rpc_workers_" variable (:type ("ThreadPool" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3110 3134])
+                                    ("timer_manager_" variable (:type ("TimerManager" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3137 3165])
+                                    ("private" label nil (reparse-symbol classsubparts) [3168 3176])
+                                    ("DECLARE_UNCOPYABLE" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("" variable (:type ("ImpalaClient" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3198 3211]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [3179 3212]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [1203 3215]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1181 3218]))                  
+                :type "namespace")
+                nil [1162 3243]))          
+      :file "impala_client.h"
+      :pointmax 3307
+      :fsize 3840
+      :lastmodtime '(22840 64099 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("DMP_BIGQUERY_IMPALA_CLIENT_H_")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("dmp/bigquery/impala_client.h" include nil nil [73 112])
+            ("sstream" include (:system-flag t) nil [114 132])
+            ("vector" include (:system-flag t) nil [133 150])
+            ("common/base/module.h" include nil nil [152 183])
+            ("common/base/string/algorithm.h" include nil nil [184 225])
+            ("common/encoding/pb_to_json.h" include nil nil [226 265])
+            ("thirdparty/gflags/gflags.h" include nil nil [266 303])
+            ("thirdparty/glog/logging.h" include nil nil [304 340])
+            ("thirdparty/impala_lite/be/src/rpc/authentication.h" include nil nil [341 402])
+            ("thirdparty/impala_lite/be/src/runtime/client-cache.h" include nil nil [403 466])
+            ("thirdparty/impala_lite/common/thrift/ImpalaService.h" include nil nil [467 530])
+            ("thirdparty/impala_lite/be/src/util/network-util.h" include nil nil [531 591])
+            ("dmp/bigquery/bigquery_inner.pb.h" include nil nil [593 636])
+            ("DEFINE_bool" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("impala_use_kerberos" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [650 670])
+                    ("" variable (:type ("false" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [671 677]))                  
+                :type "int")
+                nil [638 735])
+            ("DEFINE_string" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("impala_kerberos_service_name" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [750 779]))                  
+                :type "int")
+                nil [736 852])
+            ("DEFINE_bool" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("impala_use_ssl" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [865 880])
+                    ("" variable (:type ("false" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [881 887]))                  
+                :type "int")
+                nil [853 940])
+            ("DEFINE_string" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("impala_ca_cert" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [955 970]))                  
+                :type "int")
+                nil [941 1031])
+            ("DEFINE_string" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("impala_user" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1046 1058]))                  
+                :type "int")
+                nil [1032 1131])
+            ("DEFINE_int32" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("impala_client_connection_attempts" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1146 1180]))                  
+                :type "int")
+                nil [1133 1259])
+            ("DEFINE_int32" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("impala_client_connection_retry_interval_ms" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1273 1316]))                  
+                :type "int")
+                nil [1260 1380])
+            ("DEFINE_int32" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("impala_client_send_timeout_ms" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1394 1424]))                  
+                :type "int")
+                nil [1381 1501])
+            ("DEFINE_int32" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("impala_client_recv_timeout_ms" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1515 1545]))                  
+                :type "int")
+                nil [1502 1626])
+            ("DEFINE_string" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("impala_client_service_name" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1641 1668]))                  
+                :type "int")
+                nil [1627 1721])
+            ("DEFINE_int32" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("impala_max_pending_requests" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1736 1764]))                  
+                :type "int")
+                nil [1723 1822])
+            ("DEFINE_int32" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("impala_fetch_size" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1836 1854]))                  
+                :type "int")
+                nil [1823 1920])
+            ("DEFINE_int32" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("impala_get_state_interval_ms" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1934 1963]))                  
+                :type "int")
+                nil [1921 2034])
+            ("DEFINE_int32" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("impala_fetch_retry_interval_ms" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2048 2079]))                  
+                :type "int")
+                nil [2035 2140])
+            ("DEFINE_int32" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("impala_max_attempts_per_rpc" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2154 2182]))                  
+                :type "int")
+                nil [2141 2231])
+            ("beeswax" type
+               (:members 
+                  ( ("<" function
+                       (:methodconst-flag t
+                        :operator-flag t
+                        :parent "QueryHandle"
+                        :arguments 
+                          ( ("other" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("QueryHandle" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2322 2347]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [2294 2489]))                  
+                :type "namespace")
+                nil [2233 2492])
+            ("yesdat" type
+               (:members 
+                  ( ("bigquery" type
+                       (:members 
+                          ( ("kErrorLocation" variable
+                               (:dereference 1
+                                :typemodifiers ("static")
+                                :constant-flag t
+                                :default-value "\"impala client\""
+                                :type "char")
+                                (reparse-symbol namespacesubparts) [2557 2610])
+                            ("PendingRequest" type
+                               (:parent "ImpalaClient"
+                                :members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [2850 2857])
+                                    ("request" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("QueryRequest" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [2881 2909])
+                                    ("response" variable
+                                       (:pointer 1
+                                        :type ("QueryResponse" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [2912 2936])
+                                    ("callback" variable
+                                       (:pointer 1
+                                        :type ("Closure" type
+                                             (:template-specifier 
+                                                ( ("void" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol classsubparts) [2939 2963])
+                                    ("query_handle" variable (:type ("beeswax::QueryHandle" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2984 3018])
+                                    ("client_key" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3021 3044])
+                                    ("result_set" variable (:type ("inner::ResultSet" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3047 3075])
+                                    ("expect_results_metadata" variable (:type "bool") (reparse-symbol classsubparts) [3078 3107])
+                                    ("results_metadata" variable (:type ("beeswax::ResultsMetadata" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3110 3152]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [2812 3155])
+                            ("ImpalaClient" function
+                               (:constructor-flag t
+                                :parent "ImpalaClient"
+                                :type ("ImpalaClient" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [3157 3472])
+                            ("ImpalaClient" function
+                               (:destructor-flag t
+                                :parent "ImpalaClient"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [3474 3518])
+                            ("Init" function
+                               (:parent "ImpalaClient"
+                                :arguments 
+                                  ( ("impala_servers" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3544 3578]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [3520 3916])
+                            ("Close" function
+                               (:parent "ImpalaClient"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [3918 4483])
+                            ("TranslateTypeName" function
+                               (:parent "ImpalaClient"
+                                :arguments 
+                                  ( ("type" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4529 4553]))                                  
+                                :type ("Field::Type" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [4485 5207])
+                            ("BuildSuccessfulResponse" function
+                               (:parent "ImpalaClient"
+                                :arguments 
+                                  ( ("request" variable
+                                       (:pointer 1
+                                        :type ("PendingRequest" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5252 5276]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [5209 6150])
+                            ("BuildErrorResponse" function
+                               (:parent "ImpalaClient"
+                                :arguments 
+                                  ( ("status" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("impala::Status" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [6190 6219])
+                                    ("response" variable
+                                       (:pointer 1
+                                        :type ("QueryResponse" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [6258 6282]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [6152 6542])
+                            ("SendImpalaRpc" function
+                               (:template 
+                                  ( ("Request" type (:type "class") nil nil)
+                                    ("Response" type (:type "class") nil nil))                                  
+                                :type "void"
+                                :arguments 
+                                  ( ("client" variable
+                                       (:pointer 1
+                                        :type ("ImpalaClient::ImpalaClientConnection" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [6787 6832])
+                                    ("request" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("Request" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [6866 6889])
+                                    ("response" variable
+                                       (:pointer 1
+                                        :type ("Response" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [6890 6909]))                                  
+                                :parent "ImpalaClient")
+                                (reparse-symbol namespacesubparts) [6707 7061])
+                            ("SendImpalaRpc" function
+                               (:type "void"
+                                :arguments 
+                                  ( ("client" variable
+                                       (:pointer 1
+                                        :type ("ImpalaClient::ImpalaClientConnection" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [7196 7241])
+                                    ("query" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("beeswax::Query" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [7275 7303])
+                                    ("query_handle" variable
+                                       (:pointer 1
+                                        :type ("beeswax::QueryHandle" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [7337 7372]))                                  
+                                :parent "ImpalaClient")
+                                (reparse-symbol namespacesubparts) [7151 7419])
+                            ("SendImpalaRpc" function
+                               (:type "void"
+                                :arguments 
+                                  ( ("client" variable
+                                       (:pointer 1
+                                        :type ("ImpalaClient::ImpalaClientConnection" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [7559 7604])
+                                    ("query_handle" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("beeswax::QueryHandle" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [7638 7679])
+                                    ("type" variable
+                                       (:pointer 1
+                                        :type ("beeswax::QueryState::type" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [7713 7745]))                                  
+                                :parent "ImpalaClient")
+                                (reparse-symbol namespacesubparts) [7514 7796])
+                            ("SendImpalaRpc" function
+                               (:type "void"
+                                :arguments 
+                                  ( ("client" variable
+                                       (:pointer 1
+                                        :type ("ImpalaClient::ImpalaClientConnection" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [8007 8052])
+                                    ("query_handle" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("beeswax::QueryHandle" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [8086 8127])
+                                    ("results" variable
+                                       (:pointer 1
+                                        :type ("beeswax::Results" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [8161 8187]))                                  
+                                :parent "ImpalaClient")
+                                (reparse-symbol namespacesubparts) [7962 8268])
+                            ("SendImpalaRpc" function
+                               (:type "void"
+                                :arguments 
+                                  ( ("client" variable
+                                       (:pointer 1
+                                        :type ("ImpalaClient::ImpalaClientConnection" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [8388 8433])
+                                    ("query_handle" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("beeswax::QueryHandle" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [8467 8508])
+                                    ("result" variable
+                                       (:pointer 1
+                                        :type "bool")
+                                        (reparse-symbol arg-sub-list) [8542 8555]))                                  
+                                :parent "ImpalaClient")
+                                (reparse-symbol namespacesubparts) [8343 8612])
+                            ("SendImpalaRpc" function
+                               (:type "void"
+                                :arguments 
+                                  ( ("client" variable
+                                       (:pointer 1
+                                        :type ("ImpalaClient::ImpalaClientConnection" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [8825 8870])
+                                    ("query_handle" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("beeswax::QueryHandle" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [8904 8945])
+                                    ("metadata" variable
+                                       (:pointer 1
+                                        :type ("beeswax::ResultsMetadata" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [8979 9014]))                                  
+                                :parent "ImpalaClient")
+                                (reparse-symbol namespacesubparts) [8780 9079])
+                            ("ImpalaRpc" function
+                               (:template 
+                                  ( ("Request" type (:type "class") nil nil)
+                                    ("Response" type (:type "class") nil nil))                                  
+                                :type ("impala::Status" type (:type "class") nil nil)
+                                :arguments 
+                                  ( ("request" variable
+                                       (:pointer 1
+                                        :type ("Request" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [9326 9343])
+                                    ("response" variable
+                                       (:pointer 1
+                                        :type ("Response" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [9344 9363])
+                                    ("client_key" variable
+                                       (:pointer 1
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [9403 9427]))                                  
+                                :parent "ImpalaClient")
+                                (reparse-symbol namespacesubparts) [9240 11375])
+                            ("Query" function
+                               (:parent "ImpalaClient"
+                                :arguments 
+                                  ( ("request" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("QueryRequest" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [11525 11553])
+                                    ("response" variable
+                                       (:pointer 1
+                                        :type ("QueryResponse" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [11579 11603])
+                                    ("done" variable
+                                       (:pointer 1
+                                        :type ("Closure" type
+                                             (:template-specifier 
+                                                ( ("void" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [11629 11649]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [11500 14283])
+                            ("ImpalaGetState" function
+                               (:parent "ImpalaClient"
+                                :arguments 
+                                  ( ("request" variable
+                                       (:pointer 1
+                                        :type ("PendingRequest" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [14319 14343])
+                                    ("timer_id" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14344 14362]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [14285 15721])
+                            ("ImpalaFetch" function
+                               (:parent "ImpalaClient"
+                                :arguments 
+                                  ( ("request" variable
+                                       (:pointer 1
+                                        :type ("PendingRequest" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [15754 15778])
+                                    ("timer_id" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15779 15797]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [15723 17766])
+                            ("ImpalaGetResultsMetadata" function
+                               (:parent "ImpalaClient"
+                                :arguments 
+                                  ( ("request" variable
+                                       (:pointer 1
+                                        :type ("PendingRequest" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [17812 17836]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [17768 18355])
+                            ("ImpalaClose" function
+                               (:parent "ImpalaClient"
+                                :arguments 
+                                  ( ("request" variable
+                                       (:pointer 1
+                                        :type ("PendingRequest" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [18388 18412]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [18357 18876])
+                            ("FinishImpalaRequest" function
+                               (:parent "ImpalaClient"
+                                :arguments 
+                                  ( ("request" variable
+                                       (:pointer 1
+                                        :type ("PendingRequest" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [18917 18941]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [18878 18978])
+                            ("CleanUpImpalaRequest" function
+                               (:parent "ImpalaClient"
+                                :arguments 
+                                  ( ("request" variable
+                                       (:pointer 1
+                                        :type ("PendingRequest" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [19020 19044]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [18980 19316])
+                            ("AddDelayedTask" function
+                               (:parent "ImpalaClient"
+                                :arguments 
+                                  ( ("interval" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [19352 19369])
+                                    ("callback" variable
+                                       (:pointer 1
+                                        :type ("TimerManager::CallbackClosure" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [19404 19444])
+                                    ("request" variable
+                                       (:pointer 1
+                                        :type ("PendingRequest" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [19479 19503]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [19318 19639]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [2535 19642]))                  
+                :type "namespace")
+                nil [2516 19667])
+            ("DEFINE_MODULE" function
+               (:arguments 
+                  ( ("" variable (:type ("ImpalaRuntime" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [19704 19718]))                  
+                :type "int")
+                nil [19690 19814]))          
+      :file "impala_client.cc"
+      :pointmax 19815
+      :fsize 19980
+      :lastmodtime '(22840 64099 0 0)
+      :unmatched-syntax '((string 2199 . 2229) (number 2183 . 2184) (string 2097 . 2138) (number 2080 . 2082) (string 1981 . 2032) (number 1964 . 1966) (string 1874 . 1918) (number 1855 . 1859) (string 1783 . 1820) (number 1765 . 1768) (string 1687 . 1719) (string 1669 . 1671) (string 1566 . 1624) (number 1546 . 1551) (string 1445 . 1499) (number 1425 . 1430) (string 1336 . 1378) (number 1317 . 1321) (string 1197 . 1257) (number 1181 . 1182) (string 1084 . 1129) (string 1059 . 1068) (string 989 . 1029) (string 971 . 973) (string 900 . 938) (string 804 . 850) (string 780 . 788) (string 690 . 733))))
+  :file "!Users!ric!Downloads!trunk!dmp!bigquery!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,717 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("RETRIEVAL_MODULE_LAMBDA_PARSER_H_" variable (:constant-flag t) nil [142 175])
+            ("map" include (:system-flag t) nil [176 190])
+            ("iostream" include (:system-flag t) nil [191 210])
+            ("common/base/macros.h" include nil nil [227 258])
+            ("common/base/scoped_ptr.h" include nil nil [259 294])
+            ("targeting/common.pb.h" include nil nil [295 327])
+            ("targeting/bitset.h" include nil nil [328 357])
+            ("thirdparty/gtest/gtest_prod.h" include nil nil [358 398])
+            ("common/base/string/string_number.h" include nil nil [399 444])
+            ("LambdaParser" type
+               (:template 
+                  ( ("int" type (:typevar "kMaxRepositorySize") nil nil)
+                    ("T" type (:type "class") nil nil))                  
+                :type "class"
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [558 565])
+                    ("Lambda" type
+                       (:typedef ("T::Lambda" type (:type "class") nil nil)
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [568 602])
+                    ("Repository" type
+                       (:typedef ("T::Repository" type (:type "class") nil nil)
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [605 647])
+                    ("Set" type
+                       (:typedef ("uint8_t" type (:type "class") nil nil)
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [650 700])
+                    ("SetOfSet" type
+                       (:typedef ("Set" type (:type "class") nil nil)
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [703 744])
+                    ("RepositoryTable" type
+                       (:typedef ("std::map" type
+                             (:template-specifier 
+                                ( ("Repository" type
+                                     (:pointer 1
+                                      :constant-flag t)
+                                      nil nil)
+                                  ("int" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [747 804])
+                    ("Id2RepositoryTable" type
+                       (:typedef ("std::vector" type
+                             (:template-specifier 
+                                ( ("std::pair" type (:template-specifier 
+                                    ( ("Repository" type
+                                         (:pointer 1
+                                          :constant-flag t)
+                                          nil nil)
+                                      ("bool" type nil nil nil))                                    ) nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [807 884])
+                    ("private" label nil (reparse-symbol classsubparts) [887 895])
+                    ("kMaxSetOfSetNumber" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :default-value "kMaxRepositorySize"
+                        :type "int")
+                        (reparse-symbol classsubparts) [898 955])
+                    ("repository2id_" variable (:type ("RepositoryTable" type (:type "class") nil nil)) (reparse-symbol classsubparts) [958 989])
+                    ("id2repository_" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("std::pair" type (:template-specifier 
+                                ( ("Repository" type
+                                     (:pointer 1
+                                      :constant-flag t)
+                                      nil nil)
+                                  ("bool" type nil nil nil))                                ) nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [992 1057])
+                    ("set_of_set_array_" variable (:type ("scoped_array" type
+                         (:template-specifier 
+                            ( ("SetOfSet" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [1060 1101])
+                    ("set_of_set_" variable
+                       (:pointer 1
+                        :type ("SetOfSet" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1104 1126])
+                    ("set_of_set_indice_" variable
+                       (:dereference 1
+                        :type "int")
+                        (reparse-symbol classsubparts) [1129 1172])
+                    ("active_set_of_set_" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("SetOfSet" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1175 1210])
+                    ("allocate_set_of_set_index_" variable (:type "int") (reparse-symbol classsubparts) [1213 1244])
+                    ("tmp_" variable (:type ("SetOfSet" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1247 1261])
+                    ("public" label nil (reparse-symbol classsubparts) [1264 1271])
+                    ("LambdaParser" function
+                       (:constructor-flag t
+                        :type ("LambdaParser" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1274 1448])
+                    ("Parse" function
+                       (:arguments 
+                          ( ("t" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1463 1474]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1452 1821])
+                    ("set" function
+                       (:methodconst-flag t
+                        :constant-flag t
+                        :arguments 
+                          ( ("i" variable (:type "int") (reparse-symbol arg-sub-list) [1842 1848]))                          
+                        :type ("Bitset" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1825 1920])
+                    ("set_size" function
+                       (:methodconst-flag t
+                        :type ("size_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1924 2018])
+                    ("max_id" function
+                       (:methodconst-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [2022 2080])
+                    ("repository" function
+                       (:methodconst-flag t
+                        :constant-flag t
+                        :arguments 
+                          ( ("i" variable (:type "int") (reparse-symbol arg-sub-list) [2137 2143]))                          
+                        :type ("std::pair" type
+                             (:template-specifier 
+                                ( ("Repository" type
+                                     (:pointer 1
+                                      :constant-flag t)
+                                      nil nil)
+                                  ("bool" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [2084 2323])
+                    ("repository_id" function
+                       (:methodconst-flag t
+                        :arguments 
+                          ( ("repository" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("Repository" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2345 2374]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [2327 2553])
+                    ("DumpSet" function
+                       (:arguments 
+                          ( ("x" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("SetOfSet" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2577 2595]))                          
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2557 2837])
+                    ("private" label nil (reparse-symbol classsubparts) [2840 2848])
+                    ("SetToBitset" function
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :arguments 
+                          ( ("x" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Set" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2883 2896])
+                            ("max_id" variable (:type "int") (reparse-symbol arg-sub-list) [2897 2908]))                          
+                        :type ("Bitset" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2851 2989])
+                    ("SetCartesianProduct" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("src" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("SetOfSet" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3023 3043])
+                            ("dest" variable
+                               (:pointer 1
+                                :type ("SetOfSet" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3044 3059]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [2993 3060])
+                    ("FRIEND_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("LambdaParserTest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3075 3092])
+                            ("" variable (:type ("TestSetCartesianProduct" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3093 3117]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [3063 3118])
+                    ("SetAdd" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("src" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("SetOfSet" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3134 3154])
+                            ("dest" variable
+                               (:pointer 1
+                                :type ("SetOfSet" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3155 3170]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3122 3171])
+                    ("FRIEND_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("LambdaParserTest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3186 3203])
+                            ("" variable (:type ("TestSetAdd" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3204 3215]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [3174 3216])
+                    ("InternalParse" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :arguments 
+                          ( ("lambda" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("Lambda" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3244 3265])
+                            ("not_operator" variable (:type "bool") (reparse-symbol arg-sub-list) [3266 3284]))                          
+                        :type ("SetOfSet" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3220 3285])
+                    ("AllocateSetOfSet" function
+                       (:pointer 1
+                        :type ("SetOfSet" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3289 3610]))                  )
+                nil [490 3615])
+            ("SetCartesianProduct" function
+               (:template 
+                  ( ("int" type (:typevar "kMaxRepositorySize") nil nil)
+                    ("T" type (:type "class") nil nil))                  
+                :type "bool"
+                :arguments 
+                  ( ("src" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("SetOfSet" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3728 3748])
+                    ("dest" variable
+                       (:pointer 1
+                        :type ("SetOfSet" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3749 3764]))                  
+                :parent "LambdaParser")
+                nil [3617 4689])
+            ("SetAdd" function
+               (:template 
+                  ( ("int" type (:typevar "kMaxRepositorySize") nil nil)
+                    ("T" type (:type "class") nil nil))                  
+                :type "void"
+                :arguments 
+                  ( ("src" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("SetOfSet" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4808 4828])
+                    ("dest" variable
+                       (:pointer 1
+                        :type ("SetOfSet" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4829 4844]))                  
+                :parent "LambdaParser")
+                nil [4713 5370])
+            ("InternalParse" function
+               (:pointer 1
+                :parent "LambdaParser"
+                :arguments 
+                  ( ("lambda" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("Lambda" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5530 5551])
+                    ("not_operator" variable (:type "bool") (reparse-symbol arg-sub-list) [5552 5570]))                  
+                :type ("SetOfSet" type (:type "class") nil nil))
+                nil [5464 8461]))          
+      :file "lambda_parser.h"
+      :pointmax 8507
+      :fsize 8506
+      :lastmodtime '(22884 28162 0 0)
+      :unmatched-syntax '((punctuation 5463 . 5464) (punctuation 5462 . 5463) (punctuation 5461 . 5462) (symbol 5460 . 5461) (punctuation 5458 . 5459) (symbol 5440 . 5458) (punctuation 5439 . 5440) (symbol 5427 . 5439) (TYPENAME 5418 . 5426) (punctuation 5416 . 5417) (symbol 5415 . 5416) (TYPENAME 5406 . 5414) (punctuation 5404 . 5405) (symbol 5386 . 5404) (INT 5382 . 5385) (punctuation 5381 . 5382) (TEMPLATE 5372 . 5380))
+      :lexical-table 
+        '(("RETRIEVAL_MODULE_LAMBDA_PARSER_H_")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("APP_QZAP_SERVICE_RETRIEVAL_TARGETING_INCLUDE_BITSET_H" variable (:constant-flag t) nil [162 215])
+            ("math.h" include (:system-flag t) nil [216 233])
+            ("set" include (:system-flag t) nil [234 248])
+            ("common/base/string/string_number.h" include nil nil [249 294])
+            ("Bitset" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [311 318])
+                    ("Iterator" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [342 349])
+                            ("Iterator" function
+                               (:constructor-flag t
+                                :type ("Iterator" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [356 398])
+                            ("Iterator" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("s" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Bitset" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [414 430]))                                  
+                                :type ("Iterator" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [405 460])
+                            ("SeekToFirst" function (:type "void") (reparse-symbol classsubparts) [468 533])
+                            ("IsValid" function
+                               (:methodconst-flag t
+                                :type "bool")
+                                (reparse-symbol classsubparts) [541 607])
+                            ("index" function
+                               (:methodconst-flag t
+                                :type "int")
+                                (reparse-symbol classsubparts) [615 665])
+                            ("Next" function (:type "void") (reparse-symbol classsubparts) [673 1669])
+                            ("private" label nil (reparse-symbol classsubparts) [1674 1682])
+                            ("s_" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("Bitset" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1689 1706])
+                            ("index_" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1713 1727]))                          
+                        :type "class")
+                        (reparse-symbol classsubparts) [321 1732])
+                    ("Bitset" function
+                       (:constructor-flag t
+                        :type ("Bitset" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1736 1793])
+                    ("Bitset" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("buffer" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [1804 1823])
+                            ("buffer_size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1824 1843]))                          
+                        :type ("Bitset" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1797 1919])
+                    ("size" function
+                       (:methodconst-flag t
+                        :type ("size_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1923 2093])
+                    ("GetMask" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("size" variable (:type "int") (reparse-symbol arg-sub-list) [2116 2125]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [2097 2267])
+                    ("SetBit" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("buffer" variable
+                               (:pointer 1
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [2290 2303])
+                            ("index" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2304 2319])
+                            ("mask" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2320 2334]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2271 2397])
+                    ("ClearBit" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("buffer" variable
+                               (:pointer 1
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [2422 2435])
+                            ("index" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2436 2451])
+                            ("mask" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2452 2466]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2401 2532])
+                    ("HasBit" function
+                       (:methodconst-flag t
+                        :arguments 
+                          ( ("index" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2548 2563]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [2536 2642])
+                    ("buffer" function
+                       (:methodconst-flag t
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2646 2731])
+                    ("CreateFromSet" function
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :arguments 
+                          ( ("buffer" variable
+                               (:pointer 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2769 2789])
+                            ("x" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::set" type
+                                     (:template-specifier 
+                                        ( ("uint32_t" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [2790 2818]))                          
+                        :type ("Bitset" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2735 3486])
+                    ("And" function
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :arguments 
+                          ( ("buffer" variable
+                               (:pointer 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3514 3534])
+                            ("x1" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Bitset" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3535 3552])
+                            ("x2" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Bitset" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3553 3570])
+                            ("is_empty" variable
+                               (:pointer 1
+                                :type "bool")
+                                (reparse-symbol arg-sub-list) [3571 3586]))                          
+                        :type ("Bitset" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3490 4116])
+                    ("Or" function
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :arguments 
+                          ( ("buffer" variable
+                               (:pointer 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4143 4163])
+                            ("x1" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Bitset" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4164 4181])
+                            ("x2" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Bitset" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4182 4199]))                          
+                        :type ("Bitset" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4120 4926])
+                    ("IsAndNotEmpty" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("x1" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Bitset" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4956 4973])
+                            ("x2" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Bitset" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4974 4991]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [4930 5249])
+                    ("Contains" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("x1" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Bitset" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5274 5291])
+                            ("x2" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Bitset" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5292 5309]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [5253 5580])
+                    ("DebugString" function
+                       (:methodconst-flag t
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5584 5830])
+                    ("buffer_size" function
+                       (:methodconst-flag t
+                        :type ("size_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5834 5891])
+                    ("private" label nil (reparse-symbol classsubparts) [5894 5902])
+                    ("buffer_" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol classsubparts) [5905 5925])
+                    ("buffer_size_" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5928 5948])
+                    ("mask_" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5951 5964])
+                    ("Iterator" friend nil (reparse-symbol classsubparts) [5967 5988]))                  
+                :type "class")
+                nil [295 5992]))          
+      :file "bitset.h"
+      :pointmax 6057
+      :fsize 6056
+      :lastmodtime '(22884 20229 0 0)
+      :unmatched-syntax '((punctuation 5988 . 5989))
+      :lexical-table 
+        '(("APP_QZAP_SERVICE_RETRIEVAL_TARGETING_INCLUDE_BITSET_H")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("TARGETING_H_" variable (:constant-flag t) nil [104 116])
+            ("vector" include (:system-flag t) nil [117 134])
+            ("set" include (:system-flag t) nil [135 149])
+            ("map" include (:system-flag t) nil [150 164])
+            ("string" include (:system-flag t) nil [165 182])
+            ("interval.h" include nil nil [184 205])
+            ("yd" type
+               (:members 
+                  ( ("Targeting" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [243 250])
+                            ("Targeting" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("buffer" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [263 282])
+                                    ("len" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [283 295]))                                  
+                                :type ("Targeting" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [253 296])
+                            ("Targeting" function
+                               (:prototype-flag t
+                                :destructor-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [299 312])
+                            ("Build" function
+                               (:prototype-flag t
+                                :typemodifiers ("static")
+                                :arguments 
+                                  ( ("ads" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("std::shared_ptr" type (:template-specifier 
+                                                    ( ("AD::TargetingBid" type nil nil nil))                                                    ) nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [337 395]))                                  
+                                :type ("int32_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [316 396])
+                            ("Search" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :arguments 
+                                  ( ("id" variable
+                                       (:pointer 1
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [412 425])
+                                    ("id_size" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [426 442])
+                                    ("match_ads" variable
+                                       (:pointer 1
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("uint64_t" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [443 476]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [400 483])
+                            ("private" label nil (reparse-symbol classsubparts) [486 494])
+                            ("FormatTargetingBid" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :typemodifiers ("static")
+                                :arguments 
+                                  ( ("in" variable (:type ("std::shared_ptr" type
+                                         (:template-specifier 
+                                            ( ("AD::TargetingBid" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol arg-sub-list) [528 565])
+                                    ("out" variable
+                                       (:pointer 1
+                                        :type ("AD::TargetingBid" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [566 588]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [497 595])
+                            ("private" label nil (reparse-symbol classsubparts) [598 606])
+                            ("ads_" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("uint64_t" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [609 636])
+                            ("bid_" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("BidBlock" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [640 667])
+                            ("bid_aindex_" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("int32_t" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [670 703])
+                            ("and_" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("AndBlock" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [707 734])
+                            ("andset_bidindex_" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("int32_t" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [737 775])
+                            ("or_" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("OrBlock" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [779 804])
+                            ("orset_andindex_" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("int32_t" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [807 844])
+                            ("or_index_" variable (:type ("std::map" type
+                                 (:template-specifier 
+                                    ( ("Interval" type nil nil nil)
+                                      ("int32_t" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [847 885])
+                            ("private" label nil (reparse-symbol classsubparts) [888 896])
+                            ("OrSetComparor" type
+                               (:members 
+                                  ( ("()" function
+                                       (:methodconst-flag t
+                                        :operator-flag t
+                                        :arguments 
+                                          ( ("lhs" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("OrSet" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [943 960])
+                                            ("rhs" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("OrSet" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [961 978]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [926 1180]))                                  
+                                :type "struct")
+                                (reparse-symbol classsubparts) [899 1185])
+                            ("OrBlock" type
+                               (:members 
+                                  ( ("interval" variable (:type ("Interval" type
+                                         (:template-specifier 
+                                            ( ("uint64_t" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [1210 1238])
+                                    ("and_index_offset_begin" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1243 1274])
+                                    ("and_index_offset_end" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1279 1308]))                                  
+                                :type "struct")
+                                (reparse-symbol classsubparts) [1189 1313])
+                            ("AndBlock" type
+                               (:members 
+                                  ( ("bid_index_offset_begin" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1339 1370])
+                                    ("bid_index_offset_end" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1396 1425]))                                  
+                                :type "struct")
+                                (reparse-symbol classsubparts) [1317 1451])
+                            ("BidBlock" type
+                               (:members 
+                                  ( ("hit_count" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1477 1495])
+                                    ("ad_index_offset_begin" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1524 1554])
+                                    ("ad_index_offset_end" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1580 1608]))                                  
+                                :type "struct")
+                                (reparse-symbol classsubparts) [1455 1634]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [224 1637]))                  
+                :type "namespace")
+                nil [208 1641]))          
+      :file "targeting.h"
+      :pointmax 1686
+      :fsize 1759
+      :lastmodtime '(22888 61354 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("TARGETING_H_")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags nil
+      :file "targeting.cc"
+      :pointmax 7681
+      :fsize 8144
+      :lastmodtime '(22895 9410 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :file "interval.h"
+      :fsize 7714
+      :lastmodtime '(22888 34204 0 0)))
+  :file "!Users!ric!Downloads!trunk!targeting!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,190 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("common/base/module.h" include nil nil [77 108])
+            ("common/base/string/algorithm.h" include nil nil [109 150])
+            ("common/base/string/concat.h" include nil nil [151 189])
+            ("common/base/string/format.h" include nil nil [190 228])
+            ("common/base/string/string_number.h" include nil nil [229 274])
+            ("thirdparty/gflags/gflags.h" include nil nil [275 312])
+            ("thirdparty/glog/logging.h" include nil nil [313 349])
+            ("thirdparty/folly/io/async/EventBase.h" include nil nil [350 398])
+            ("thirdparty/folly/io/async/AsyncSocket.h" include nil nil [399 449])
+            ("thirdparty/folly/io/ShutdownSocketSet.h" include nil nil [450 500])
+            ("DEFINE_string" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("server_ip" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [516 526]))                  
+                :type "int")
+                nil [502 555])
+            ("DEFINE_int32" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("server_port" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [569 581]))                  
+                :type "int")
+                nil [556 601])
+            ("DEFINE_int32" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("connect_count" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [615 629]))                  
+                :type "int")
+                nil [602 661])
+            ("DEFINE_int32" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("connect_timeout" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [675 691]))                  
+                :type "int")
+                nil [662 724])
+            ("folly" using (:type ("folly" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [726 748])
+            ("g_sockets" variable (:type ("std::vector" type
+                 (:template-specifier 
+                    ( ("AsyncSocket" type (:pointer 1) nil nil))                    
+                  :type "class")
+                  nil nil)) nil [750 786])
+            ("ConnectCallback" type
+               (:superclasses 
+                  ( ("folly::AsyncSocket::ConnectCallback" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [858 865])
+                    ("ConnectCallback" function
+                       (:constructor-flag t
+                        :type ("ConnectCallback" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [868 943])
+                    ("Stat" function (:type "void") (reparse-symbol classsubparts) [1330 1472])
+                    ("private" label nil (reparse-symbol classsubparts) [1475 1483])
+                    ("success_connect_count_" variable (:type ("std::atomic" type
+                         (:template-specifier 
+                            ( ("int32_t" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [1486 1530])
+                    ("fail_connect_count_" variable (:type ("std::atomic" type
+                         (:template-specifier 
+                            ( ("int32_t" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [1533 1574]))                  
+                :type "class")
+                nil [788 1577])
+            ("StateEnum" type
+               (:members 
+                  ( ("STATE_WAITING" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1598 1612])
+                    ("STATE_SUCCEEDED" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1615 1631])
+                    ("STATE_FAILED" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1634 1648]))                  
+                :type "enum")
+                nil [1579 1649])
+            ("ReadCallback" type
+               (:superclasses 
+                  ( ("folly::AsyncReader::ReadCallback" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [1716 1723])
+                    ("ReadCallback" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("_maxBufferSz" variable
+                               (:default-value "1024"
+                                :type ("size_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1748 1774]))                          
+                        :type ("ReadCallback" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1735 1926])
+                    ("verifyData" function
+                       (:methodconst-flag t
+                        :arguments 
+                          ( ("expected" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [2901 2922])
+                            ("expectedLen" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2923 2942]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2885 3304])
+                    ("dataRead" function
+                       (:methodconst-flag t
+                        :type ("size_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3308 3442])
+                    ("Buffer" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [3464 3471])
+                            ("Buffer" function
+                               (:constructor-flag t
+                                :type ("Buffer" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3476 3516])
+                            ("Buffer" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("buf" variable
+                                       (:pointer 1
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [3528 3538])
+                                    ("len" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3539 3550]))                                  
+                                :type ("Buffer" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3521 3580])
+                            ("reset" function (:type "void") (reparse-symbol classsubparts) [3586 3648])
+                            ("allocate" function
+                               (:arguments 
+                                  ( ("len" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3667 3678]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [3653 3799])
+                            ("free" function (:type "void") (reparse-symbol classsubparts) [3804 3860])
+                            ("buffer" variable
+                               (:pointer 1
+                                :type "char")
+                                (reparse-symbol classsubparts) [3866 3879])
+                            ("length" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3884 3898]))                          
+                        :type "class")
+                        (reparse-symbol classsubparts) [3446 3903])
+                    ("state" variable (:type ("StateEnum" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3907 3923])
+                    ("exception" variable (:type ("folly::AsyncSocketException" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3926 3964])
+                    ("buffers" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("Buffer" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [3967 3995])
+                    ("currentBuffer" variable (:type ("Buffer" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3998 4019])
+                    ("VoidCallback" variable (:type "int") (reparse-symbol classsubparts) [4053 4066])
+                    ("dataAvailableCallback" variable (:type ("VoidCallback" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4069 4104])
+                    ("maxBufferSz" variable
+                       (:constant-flag t
+                        :type ("size_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4107 4132]))                  
+                :type "class")
+                nil [1652 4135])
+            ("connect_callback" variable (:type ("ConnectCallback" type (:type "class") nil nil)) nil [4137 4170])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [4184 4193])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4194 4206]))                  
+                :type ("int32_t" type (:type "class") nil nil))
+                nil [4171 5747]))          
+      :file "pression_test.cc"
+      :pointmax 5748
+      :fsize 5747
+      :lastmodtime '(22921 6425 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!ric!Downloads!trunk!thirdparty!folly!pression_test!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

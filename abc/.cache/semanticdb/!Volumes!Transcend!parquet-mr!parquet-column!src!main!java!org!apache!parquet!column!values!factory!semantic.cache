@@ -1,0 +1,195 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode java-mode
+      :tags 
+        '( ("org.apache.parquet.column.values.factory" package nil nil [809 858])
+            ("org.apache.parquet.column.ColumnDescriptor" include nil nil [860 910])
+            ("org.apache.parquet.column.ParquetProperties" include nil nil [911 962])
+            ("org.apache.parquet.column.values.ValuesWriter" include nil nil [963 1016])
+            ("ValuesWriterFactory" type
+               (:typemodifiers ("public")
+                :members 
+                  ( ("initialize" function
+                       (:arguments 
+                          ( ("parquetProperties" variable (:type "ParquetProperties") (reparse-symbol formal_parameters) [1914 1949]))                          
+                        :type "void")
+                        (reparse-symbol interface_member_declaration) [1898 1951])
+                    ("newValuesWriter" function
+                       (:arguments 
+                          ( ("descriptor" variable (:type "ColumnDescriptor") (reparse-symbol formal_parameters) [2062 2089]))                          
+                        :type "ValuesWriter")
+                        (reparse-symbol interface_member_declaration) [2033 2091]))                  
+                :type "interface")
+                nil [1760 2093]))          
+      :file "ValuesWriterFactory.java"
+      :pointmax 2094
+      :fsize 2093
+      :lastmodtime '(23115 11492 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode java-mode
+      :tags 
+        '( ("org.apache.parquet.column.values.factory" package nil nil [809 858])
+            ("org.apache.parquet.column.ColumnDescriptor" include nil nil [860 910])
+            ("org.apache.parquet.column.Encoding" include nil nil [911 953])
+            ("org.apache.parquet.column.ParquetProperties" include nil nil [954 1005])
+            ("org.apache.parquet.column.ParquetProperties.WriterVersion" include nil nil [1006 1071])
+            ("org.apache.parquet.column.values.ValuesWriter" include nil nil [1072 1125])
+            ("org.apache.parquet.column.values.dictionary.DictionaryValuesWriter" include nil nil [1126 1200])
+            ("org.apache.parquet.column.values.fallback.FallbackValuesWriter" include nil nil [1201 1271])
+            ("DefaultValuesWriterFactory" type
+               (:typemodifiers ("public")
+                :interfaces ("ValuesWriterFactory")
+                :members 
+                  ( ("delegateFactory" variable
+                       (:typemodifiers ("private")
+                        :type "ValuesWriterFactory")
+                        (reparse-symbol class_member_declaration) [1459 1503])
+                    ("DEFAULT_V1_WRITER_FACTORY" variable
+                       (:typemodifiers ("private" "static" "final")
+                        :type "ValuesWriterFactory")
+                        (reparse-symbol class_member_declaration) [1507 1611])
+                    ("DEFAULT_V2_WRITER_FACTORY" variable
+                       (:typemodifiers ("private" "static" "final")
+                        :type "ValuesWriterFactory")
+                        (reparse-symbol class_member_declaration) [1614 1718])
+                    ("initialize" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("properties" variable (:type "ParquetProperties") (reparse-symbol formal_parameters) [1757 1785]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [1734 2028])
+                    ("newValuesWriter" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("descriptor" variable (:type "ColumnDescriptor") (reparse-symbol formal_parameters) [2080 2107]))                          
+                        :type "ValuesWriter")
+                        (reparse-symbol class_member_declaration) [2044 2170])
+                    ("dictionaryWriter" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("path" variable (:type "ColumnDescriptor") (reparse-symbol formal_parameters) [2221 2242])
+                            ("properties" variable (:type "ParquetProperties") (reparse-symbol formal_parameters) [2244 2272])
+                            ("dictPageEncoding" variable (:type "Encoding") (reparse-symbol formal_parameters) [2274 2299])
+                            ("dataPageEncoding" variable (:type "Encoding") (reparse-symbol formal_parameters) [2301 2326]))                          
+                        :type "DictionaryValuesWriter")
+                        (reparse-symbol class_member_declaration) [2174 4040])
+                    ("dictWriterWithFallBack" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("path" variable (:type "ColumnDescriptor") (reparse-symbol formal_parameters) [4087 4108])
+                            ("parquetProperties" variable (:type "ParquetProperties") (reparse-symbol formal_parameters) [4110 4145])
+                            ("dictPageEncoding" variable (:type "Encoding") (reparse-symbol formal_parameters) [4147 4172])
+                            ("dataPageEncoding" variable (:type "Encoding") (reparse-symbol formal_parameters) [4174 4199])
+                            ("writerToFallBackTo" variable (:type "ValuesWriter") (reparse-symbol formal_parameters) [4201 4232]))                          
+                        :type "ValuesWriter")
+                        (reparse-symbol class_member_declaration) [4044 4495]))                  
+                :type "class")
+                nil [1383 4497]))          
+      :file "DefaultValuesWriterFactory.java"
+      :pointmax 4498
+      :fsize 4497
+      :lastmodtime '(23115 11492 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode java-mode
+      :tags 
+        '( ("org.apache.parquet.column.values.factory" package nil nil [809 858])
+            ("org.apache.parquet.column.ColumnDescriptor" include nil nil [860 910])
+            ("org.apache.parquet.column.Encoding" include nil nil [911 953])
+            ("org.apache.parquet.column.ParquetProperties" include nil nil [954 1005])
+            ("org.apache.parquet.column.values.ValuesWriter" include nil nil [1006 1059])
+            ("org.apache.parquet.column.values.delta.DeltaBinaryPackingValuesWriterForInteger" include nil nil [1060 1147])
+            ("org.apache.parquet.column.values.delta.DeltaBinaryPackingValuesWriterForLong" include nil nil [1148 1232])
+            ("org.apache.parquet.column.values.deltastrings.DeltaByteArrayWriter" include nil nil [1233 1307])
+            ("org.apache.parquet.column.values.plain.FixedLenByteArrayPlainValuesWriter" include nil nil [1308 1389])
+            ("org.apache.parquet.column.values.plain.PlainValuesWriter" include nil nil [1390 1454])
+            ("org.apache.parquet.column.values.rle.RunLengthBitPackingHybridValuesWriter" include nil nil [1455 1537])
+            ("DefaultV2ValuesWriterFactory" type
+               (:typemodifiers ("public")
+                :interfaces ("ValuesWriterFactory")
+                :members 
+                  ( ("parquetProperties" variable
+                       (:typemodifiers ("private")
+                        :type "ParquetProperties")
+                        (reparse-symbol class_member_declaration) [1739 1783])
+                    ("initialize" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("properties" variable (:type "ParquetProperties") (reparse-symbol formal_parameters) [1822 1850]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [1799 1898])
+                    ("getEncodingForDataPage" function
+                       (:typemodifiers ("private")
+                        :type "Encoding")
+                        (reparse-symbol class_member_declaration) [1902 1976])
+                    ("getEncodingForDictionaryPage" function
+                       (:typemodifiers ("private")
+                        :type "Encoding")
+                        (reparse-symbol class_member_declaration) [1980 2051])
+                    ("newValuesWriter" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("descriptor" variable (:type "ColumnDescriptor") (reparse-symbol formal_parameters) [2103 2130]))                          
+                        :type "ValuesWriter")
+                        (reparse-symbol class_member_declaration) [2067 2839])
+                    ("getBooleanValuesWriter" function
+                       (:typemodifiers ("private")
+                        :type "ValuesWriter")
+                        (reparse-symbol class_member_declaration) [2843 3109])
+                    ("getFixedLenByteArrayValuesWriter" function
+                       (:typemodifiers ("private")
+                        :arguments 
+                          ( ("path" variable (:type "ColumnDescriptor") (reparse-symbol formal_parameters) [3167 3188]))                          
+                        :type "ValuesWriter")
+                        (reparse-symbol class_member_declaration) [3113 3532])
+                    ("getBinaryValuesWriter" function
+                       (:typemodifiers ("private")
+                        :arguments 
+                          ( ("path" variable (:type "ColumnDescriptor") (reparse-symbol formal_parameters) [3579 3600]))                          
+                        :type "ValuesWriter")
+                        (reparse-symbol class_member_declaration) [3536 3944])
+                    ("getInt32ValuesWriter" function
+                       (:typemodifiers ("private")
+                        :arguments 
+                          ( ("path" variable (:type "ColumnDescriptor") (reparse-symbol formal_parameters) [3990 4011]))                          
+                        :type "ValuesWriter")
+                        (reparse-symbol class_member_declaration) [3948 4375])
+                    ("getInt64ValuesWriter" function
+                       (:typemodifiers ("private")
+                        :arguments 
+                          ( ("path" variable (:type "ColumnDescriptor") (reparse-symbol formal_parameters) [4421 4442]))                          
+                        :type "ValuesWriter")
+                        (reparse-symbol class_member_declaration) [4379 4803])
+                    ("getInt96ValuesWriter" function
+                       (:typemodifiers ("private")
+                        :arguments 
+                          ( ("path" variable (:type "ColumnDescriptor") (reparse-symbol formal_parameters) [4849 4870]))                          
+                        :type "ValuesWriter")
+                        (reparse-symbol class_member_declaration) [4807 5232])
+                    ("getDoubleValuesWriter" function
+                       (:typemodifiers ("private")
+                        :arguments 
+                          ( ("path" variable (:type "ColumnDescriptor") (reparse-symbol formal_parameters) [5279 5300]))                          
+                        :type "ValuesWriter")
+                        (reparse-symbol class_member_declaration) [5236 5641])
+                    ("getFloatValuesWriter" function
+                       (:typemodifiers ("private")
+                        :arguments 
+                          ( ("path" variable (:type "ColumnDescriptor") (reparse-symbol formal_parameters) [5687 5708]))                          
+                        :type "ValuesWriter")
+                        (reparse-symbol class_member_declaration) [5645 6049]))                  
+                :type "class")
+                nil [1661 6051]))          
+      :file "DefaultV2ValuesWriterFactory.java"
+      :pointmax 6052
+      :fsize 6051
+      :lastmodtime '(23115 11492 0 0)
+      :unmatched-syntax '((IDENTIFIER 1644 . 1658) (DOT 1643 . 1644) (IDENTIFIER 1635 . 1643) (DOT 1634 . 1635) (IDENTIFIER 1628 . 1634) (DOT 1627 . 1628) (IDENTIFIER 1620 . 1627) (DOT 1619 . 1620) (IDENTIFIER 1613 . 1619) (DOT 1612 . 1613) (IMPORT 1595 . 1601) (STATIC 1602 . 1608) (IDENTIFIER 1609 . 1612) (IDENTIFIER 1588 . 1593) (DOT 1587 . 1588) (IDENTIFIER 1579 . 1587) (DOT 1578 . 1579) (IDENTIFIER 1572 . 1578) (DOT 1571 . 1572) (IDENTIFIER 1564 . 1571) (DOT 1563 . 1564) (IDENTIFIER 1557 . 1563) (DOT 1556 . 1557) (IMPORT 1539 . 1545) (STATIC 1546 . 1552) (IDENTIFIER 1553 . 1556))))
+  :file "!Volumes!Transcend!parquet-mr!parquet-column!src!main!java!org!apache!parquet!column!values!factory!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

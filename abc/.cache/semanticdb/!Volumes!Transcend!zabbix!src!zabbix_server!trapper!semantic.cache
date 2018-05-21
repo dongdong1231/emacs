@@ -1,0 +1,626 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :file "trapper.h"
+      :fsize 980
+      :lastmodtime '(22952 1211 0 0))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("common.h" include nil nil [778 797])
+            ("comms.h" include nil nil [799 817])
+            ("log.h" include nil nil [818 834])
+            ("zbxjson.h" include nil nil [835 855])
+            ("zbxserver.h" include nil nil [856 878])
+            ("dbcache.h" include nil nil [879 899])
+            ("proxy.h" include nil nil [900 918])
+            ("zbxself.h" include nil nil [919 939])
+            ("trapper.h" include nil nil [941 961])
+            ("active.h" include nil nil [962 981])
+            ("nodecommand.h" include nil nil [982 1006])
+            ("proxyconfig.h" include nil nil [1007 1031])
+            ("proxydiscovery.h" include nil nil [1032 1059])
+            ("proxyautoreg.h" include nil nil [1060 1085])
+            ("proxyhosts.h" include nil nil [1086 1109])
+            ("proxydata.h" include nil nil [1110 1132])
+            ("daemon.h" include nil nil [1134 1153])
+            ("../../libs/zbxcrypto/tls.h" include nil nil [1154 1191])
+            ("ZBX_MAX_SECTION_ENTRIES" variable (:constant-flag t) nil [1201 1224])
+            ("ZBX_MAX_ENTRY_ATTRIBUTES" variable (:constant-flag t) nil [1236 1260])
+            ("process_type" variable
+               (:typemodifiers ("extern")
+                :type "unsigned char")
+                nil [1264 1312])
+            ("program_type" variable
+               (:typemodifiers ("extern")
+                :type "unsigned char")
+                nil [1264 1312])
+            ("server_num" variable
+               (:typemodifiers ("extern")
+                :type "int")
+                nil [1313 1349])
+            ("process_num" variable
+               (:typemodifiers ("extern")
+                :type "int")
+                nil [1313 1349])
+            ("find_psk_in_cache" function
+               (:prototype-flag t
+                :function-pointer t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [1386 1408])
+                    ("" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [1409 1425])
+                    ("" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1426 1433]))                  
+                :type ("size_t" type (:type "class") nil nil))
+                nil [1350 1434])
+            ("zbx_user_stats_t" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("online" variable (:type ("zbx_counter_value_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1454 1481])
+                          ("offline" variable (:type ("zbx_counter_value_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1483 1511]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [1436 1531])
+            ("zbx_entry_info_t" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("counter" variable (:type ("zbx_counter_value_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1550 1578])
+                          ("counters" variable (:type ("zbx_vector_ptr_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1608 1634]))                        
+                      :type "union")
+                      nil nil)
+                :type "typedef")
+                nil [1533 1688])
+            ("zbx_entry_attribute_t" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("name" variable
+                             (:pointer 1
+                              :constant-flag t
+                              :type "char")
+                              (reparse-symbol classsubparts) [1708 1725])
+                          ("value" variable (:type ("zbx_uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1727 1746]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [1690 1771])
+            ("zbx_section_entry_t" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("info" variable
+                             (:pointer 1
+                              :type ("zbx_entry_info_t" type (:type "class") nil nil))
+                              (reparse-symbol classsubparts) [1791 1814])
+                          ("counter_type" variable (:type ("zbx_counter_type_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1816 1848])
+                          ("attributes" variable
+                             (:dereference 1
+                              :type ("zbx_entry_attribute_t" type (:type "class") nil nil))
+                              (reparse-symbol classsubparts) [1850 1909]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [1773 1932])
+            ("zbx_entry_type_t" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("ZBX_SECTION_ENTRY_THE_ONLY" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [1950 1977])
+                          ("ZBX_SECTION_ENTRY_PER_PROXY" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [1979 2008]))                        
+                      :type "enum")
+                      nil nil)
+                :type "typedef")
+                nil [1934 2026])
+            ("zbx_status_section_t" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("name" variable
+                             (:pointer 1
+                              :constant-flag t
+                              :type "char")
+                              (reparse-symbol classsubparts) [2046 2064])
+                          ("entry_type" variable (:type ("zbx_entry_type_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2066 2094])
+                          ("access_level" variable (:type ("zbx_user_type_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2096 2126])
+                          ("res" variable
+                             (:pointer 1
+                              :type "int")
+                              (reparse-symbol classsubparts) [2128 2139])
+                          ("entries" variable
+                             (:dereference 1
+                              :type ("zbx_section_entry_t" type (:type "class") nil nil))
+                              (reparse-symbol classsubparts) [2141 2194]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [2028 2218])
+            ("recv_agenthistory" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("sock" variable
+                       (:pointer 1
+                        :type ("zbx_socket_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2811 2830])
+                    ("jp" variable
+                       (:pointer 1
+                        :type ("zbx_json_parse" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2831 2857])
+                    ("ts" variable
+                       (:pointer 1
+                        :type ("zbx_timespec_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2858 2877]))                  
+                :type "void")
+                nil [2781 3339])
+            ("recv_senderhistory" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("sock" variable
+                       (:pointer 1
+                        :type ("zbx_socket_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3933 3952])
+                    ("jp" variable
+                       (:pointer 1
+                        :type ("zbx_json_parse" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3953 3979])
+                    ("ts" variable
+                       (:pointer 1
+                        :type ("zbx_timespec_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3980 3999]))                  
+                :type "void")
+                nil [3902 4456])
+            ("recv_proxyhistory" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("sock" variable
+                       (:pointer 1
+                        :type ("zbx_socket_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5049 5068])
+                    ("jp" variable
+                       (:pointer 1
+                        :type ("zbx_json_parse" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [5069 5095])
+                    ("ts" variable
+                       (:pointer 1
+                        :type ("zbx_timespec_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5096 5115]))                  
+                :type "void")
+                nil [5019 6166])
+            ("send_proxyhistory" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("sock" variable
+                       (:pointer 1
+                        :type ("zbx_socket_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6919 6938]))                  
+                :type "void")
+                nil [6889 7381])
+            ("recv_proxy_heartbeat" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("sock" variable
+                       (:pointer 1
+                        :type ("zbx_socket_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8377 8396])
+                    ("jp" variable
+                       (:pointer 1
+                        :type ("zbx_json_parse" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [8397 8423]))                  
+                :type "void")
+                nil [8344 9256])
+            ("ZBX_GET_QUEUE_UNKNOWN" variable (:constant-flag t) nil [9266 9287])
+            ("ZBX_GET_QUEUE_OVERVIEW" variable (:constant-flag t) nil [9300 9322])
+            ("ZBX_GET_QUEUE_PROXY" variable (:constant-flag t) nil [9334 9353])
+            ("ZBX_GET_QUEUE_DETAILS" variable (:constant-flag t) nil [9365 9386])
+            ("zbx_queue_stats_t" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("id" variable (:type ("zbx_uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [9448 9464])
+                          ("delay5" variable (:type "int") (reparse-symbol classsubparts) [9466 9478])
+                          ("delay10" variable (:type "int") (reparse-symbol classsubparts) [9480 9493])
+                          ("delay30" variable (:type "int") (reparse-symbol classsubparts) [9495 9508])
+                          ("delay60" variable (:type "int") (reparse-symbol classsubparts) [9510 9523])
+                          ("delay300" variable (:type "int") (reparse-symbol classsubparts) [9525 9539])
+                          ("delay600" variable (:type "int") (reparse-symbol classsubparts) [9541 9555]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [9430 9576])
+            ("queue_stats_update" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("stats" variable
+                       (:pointer 1
+                        :type ("zbx_queue_stats_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10410 10435])
+                    ("delay" variable (:type "int") (reparse-symbol arg-sub-list) [10436 10446]))                  
+                :type "void")
+                nil [10379 10689])
+            ("queue_stats_export" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("queue_stats" variable
+                       (:pointer 1
+                        :type ("zbx_hashset_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11603 11630])
+                    ("id_name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [11631 11651])
+                    ("json" variable
+                       (:pointer 1
+                        :type ("zbx_json" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [11652 11674]))                  
+                :type "void")
+                nil [11572 12349])
+            ("queue_compare_by_nextcheck_asc" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("d1" variable
+                       (:pointer 2
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [12462 12472])
+                    ("d2" variable
+                       (:pointer 2
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [12473 12483]))                  
+                :type "int")
+                nil [12420 12567])
+            ("recv_getqueue" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("sock" variable
+                       (:pointer 1
+                        :type ("zbx_socket_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [13635 13654])
+                    ("jp" variable
+                       (:pointer 1
+                        :type ("zbx_json_parse" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [13655 13681]))                  
+                :type "int")
+                nil [13610 17919])
+            ("DBget_template_count" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("count" variable
+                       (:pointer 1
+                        :type ("zbx_uint64_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [17953 17973]))                  
+                :type "int")
+                nil [17921 18293])
+            ("DBget_user_count" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("count_online" variable
+                       (:pointer 1
+                        :type ("zbx_uint64_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18323 18350])
+                    ("count_offline" variable
+                       (:pointer 1
+                        :type ("zbx_uint64_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18351 18379]))                  
+                :type "int")
+                nil [18295 19235])
+            ("templates" variable (:type ("zbx_entry_info_t" type (:type "class") nil nil)) nil [19290 19542])
+            ("hosts_monitored" variable (:type ("zbx_entry_info_t" type (:type "class") nil nil)) nil [19290 19542])
+            ("hosts_not_monitored" variable (:type ("zbx_entry_info_t" type (:type "class") nil nil)) nil [19290 19542])
+            ("items_active_normal" variable (:type ("zbx_entry_info_t" type (:type "class") nil nil)) nil [19290 19542])
+            ("items_active_notsupported" variable (:type ("zbx_entry_info_t" type (:type "class") nil nil)) nil [19290 19542])
+            ("items_disabled" variable (:type ("zbx_entry_info_t" type (:type "class") nil nil)) nil [19290 19542])
+            ("triggers_enabled_ok" variable (:type ("zbx_entry_info_t" type (:type "class") nil nil)) nil [19290 19542])
+            ("triggers_enabled_problem" variable (:type ("zbx_entry_info_t" type (:type "class") nil nil)) nil [19290 19542])
+            ("triggers_disabled" variable (:type ("zbx_entry_info_t" type (:type "class") nil nil)) nil [19290 19542])
+            ("users_online" variable (:type ("zbx_entry_info_t" type (:type "class") nil nil)) nil [19290 19542])
+            ("users_offline" variable (:type ("zbx_entry_info_t" type (:type "class") nil nil)) nil [19290 19542])
+            ("required_performance" variable (:type ("zbx_entry_info_t" type (:type "class") nil nil)) nil [19290 19542])
+            ("templates_res" variable (:type "int") nil [19543 19574])
+            ("users_res" variable (:type "int") nil [19543 19574])
+            ("zbx_status_counters_init" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [19613 19618]))                  
+                :type "void")
+                nil [19576 19950])
+            ("zbx_status_counters_free" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [19989 19994]))                  
+                :type "void")
+                nil [19952 20841])
+            ("status_sections" variable
+               (:dereference 1
+                :constant-flag t
+                :default-value "{
+/*	{SECTION NAME,			NUMBER OF SECTION ENTRIES	SECTION ACCESS LEVEL	SECTION READYNESS, */
+/*		{                                                                                                  */
+/*			{ENTRY INFORMATION,		COUNTER TYPE,                                              */
+/*				{                                                                                  */
+/*					{ATTR. NAME,	ATTRIBUTE VALUE},                                          */
+/*					... (up to ZBX_MAX_ENTRY_ATTRIBUTES)                                       */
+/*				}                                                                                  */
+/*			},                                                                                         */
+/*			... (up to ZBX_MAX_SECTION_ENTRIES)                                                        */
+/*		}                                                                                                  */
+/*	},                                                                                                         */
+/*	...                                                                                                        */
+	{\"template stats\",		ZBX_SECTION_ENTRY_THE_ONLY,	USER_TYPE_ZABBIX_USER,	&templates_res,
+		{
+			{&templates,			ZBX_COUNTER_TYPE_UI64,
+				{
+					{NULL}
+				}
+			},
+			{NULL}
+		}
+	},
+	{\"host stats\",			ZBX_SECTION_ENTRY_PER_PROXY,	USER_TYPE_ZABBIX_USER,	NULL,
+		{
+			{&hosts_monitored,		ZBX_COUNTER_TYPE_UI64,
+				{
+					{\"status\",	HOST_STATUS_MONITORED},
+					{NULL}
+				}
+			},
+			{&hosts_not_monitored,		ZBX_COUNTER_TYPE_UI64,
+				{
+					{\"status\",	HOST_STATUS_NOT_MONITORED},
+					{NULL}
+				}
+			},
+			{NULL}
+		}
+	},
+	{\"item stats\",			ZBX_SECTION_ENTRY_PER_PROXY,	USER_TYPE_ZABBIX_USER,	NULL,
+		{
+			{&items_active_normal,		ZBX_COUNTER_TYPE_UI64,
+				{
+					{\"status\",	ITEM_STATUS_ACTIVE},
+					{\"state\",	ITEM_STATE_NORMAL},
+					{NULL}
+				}
+			},
+			{&items_active_notsupported,	ZBX_COUNTER_TYPE_UI64,
+				{
+					{\"status\",	ITEM_STATUS_ACTIVE},
+					{\"state\",	ITEM_STATE_NOTSUPPORTED},
+					{NULL}
+				}
+			},
+			{&items_disabled,		ZBX_COUNTER_TYPE_UI64,
+				{
+					{\"status\",	ITEM_STATUS_DISABLED},
+					{NULL}
+				}
+			},
+			{NULL}
+		}
+	},
+	{\"trigger stats\",		ZBX_SECTION_ENTRY_THE_ONLY,	USER_TYPE_ZABBIX_USER,	NULL,
+		{
+			{&triggers_enabled_ok,		ZBX_COUNTER_TYPE_UI64,
+				{
+					{\"status\",	TRIGGER_STATUS_ENABLED},
+					{\"value\",	TRIGGER_VALUE_OK},
+					{NULL}
+				}
+			},
+			{&triggers_enabled_problem,	ZBX_COUNTER_TYPE_UI64,
+				{
+					{\"status\",	TRIGGER_STATUS_ENABLED},
+					{\"value\",	TRIGGER_VALUE_PROBLEM},
+					{NULL}
+				}
+			},
+			{&triggers_disabled,		ZBX_COUNTER_TYPE_UI64,
+				{
+					{\"status\",	TRIGGER_STATUS_DISABLED},
+					{NULL}
+				}
+			},
+			{NULL}
+		}
+	},
+	{\"user stats\",			ZBX_SECTION_ENTRY_THE_ONLY,	USER_TYPE_ZABBIX_USER,	&users_res,
+		{
+			{&users_online,			ZBX_COUNTER_TYPE_UI64,
+				{
+					{\"status\",	ZBX_SESSION_ACTIVE},
+					{NULL}
+				}
+			},
+			{&users_offline,		ZBX_COUNTER_TYPE_UI64,
+				{
+					{\"status\",	ZBX_SESSION_PASSIVE},
+					{NULL}
+				}
+			},
+			{NULL}
+		}
+	},
+	{\"required performance\",	ZBX_SECTION_ENTRY_PER_PROXY,	USER_TYPE_SUPER_ADMIN,	NULL,
+		{
+			{&required_performance,		ZBX_COUNTER_TYPE_DBL,
+				{
+					{NULL}
+				}
+			},
+			{NULL}
+		}
+	},
+	{NULL}
+}"
+                :type ("zbx_status_section_t" type (:type "class") nil nil))
+                nil [20843 24162])
+            ("status_entry_export" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("json" variable
+                       (:pointer 1
+                        :type ("zbx_json" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [24196 24218])
+                    ("entry" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("zbx_section_entry_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [24219 24252])
+                    ("counter_value" variable (:type ("zbx_counter_value_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [24255 24289])
+                    ("proxyid" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("zbx_uint64_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [24290 24318]))                  
+                :type "void")
+                nil [24164 25146])
+            ("status_stats_export" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("json" variable
+                       (:pointer 1
+                        :type ("zbx_json" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [25180 25202])
+                    ("access_level" variable (:type ("zbx_user_type_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [25203 25232]))                  
+                :type "void")
+                nil [25148 26887])
+            ("recv_getstatus" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("sock" variable
+                       (:pointer 1
+                        :type ("zbx_socket_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [27956 27975])
+                    ("jp" variable
+                       (:pointer 1
+                        :type ("zbx_json_parse" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [27976 28002]))                  
+                :type "int")
+                nil [27930 30023])
+            ("active_passive_misconfig" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("sock" variable
+                       (:pointer 1
+                        :type ("zbx_socket_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [30062 30081]))                  
+                :type "void")
+                nil [30025 30401])
+            ("process_trap" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("sock" variable
+                       (:pointer 1
+                        :type ("zbx_socket_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [30427 30446])
+                    ("s" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [30447 30455])
+                    ("ts" variable
+                       (:pointer 1
+                        :type ("zbx_timespec_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [30456 30475]))                  
+                :type "int")
+                nil [30403 36363])
+            ("process_trapper_child" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("sock" variable
+                       (:pointer 1
+                        :type ("zbx_socket_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [36399 36418])
+                    ("ts" variable
+                       (:pointer 1
+                        :type ("zbx_timespec_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [36419 36438]))                  
+                :type "void")
+                nil [36365 36555])
+            ("ZBX_THREAD_ENTRY" function
+               (:arguments 
+                  ( ("" variable (:type ("trapper_thread" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [36574 36589])
+                    ("" variable (:type ("args" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [36590 36595]))                  
+                :type "int")
+                nil [36557 38456]))          
+      :file "trapper.c"
+      :pointmax 38457
+      :fsize 38456
+      :lastmodtime '(22952 1211 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("ZBX_GET_QUEUE_DETAILS" . ((number "2" 9388 . 9389)))
+          ("ZBX_MAX_SECTION_ENTRIES" . ((number "4" 1226 . 1227)))
+          ("ZBX_GET_QUEUE_OVERVIEW" . ((number "0" 9324 . 9325)))
+          ("ZBX_GET_QUEUE_PROXY" . ((number "1" 9355 . 9356)))
+          ("ZBX_MAX_ENTRY_ATTRIBUTES" . ((number "3" 1261 . 1262)))
+          ("ZBX_GET_QUEUE_UNKNOWN" . ((punctuation "-" 9289 . 9290) (number "1" 9290 . 9291)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :file "active.h"
+      :fsize 1108
+      :lastmodtime '(22952 1211 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "nodecommand.h"
+      :fsize 1071
+      :lastmodtime '(22952 1212 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "proxyconfig.h"
+      :fsize 1082
+      :lastmodtime '(22952 1211 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "proxydiscovery.h"
+      :fsize 1058
+      :lastmodtime '(22952 1211 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "proxyautoreg.h"
+      :fsize 1044
+      :lastmodtime '(22952 1211 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "proxyhosts.h"
+      :fsize 1036
+      :lastmodtime '(22952 1210 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "proxydata.h"
+      :fsize 1263
+      :lastmodtime '(22952 1211 0 0)))
+  :file "!Volumes!Transcend!zabbix!src!zabbix_server!trapper!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

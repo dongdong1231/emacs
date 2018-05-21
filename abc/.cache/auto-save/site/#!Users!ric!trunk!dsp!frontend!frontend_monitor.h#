@@ -1,0 +1,360 @@
+// Copyright (c) 2015 YesDat Inc.
+// Author: Fei He (jason@yesdat.com)
+
+#ifndef DSP_FRONTEND_FRONTEND_MONITOR_H_
+#define DSP_FRONTEND_FRONTEND_MONITOR_H_
+
+#include <string>
+#include <vector>
+
+#include "common/base/scoped_ptr.h"
+#include "common/base/singleton.h"
+#include "common/base/static_assert.h"
+#include "common/base/stl_container_deleter.h"
+#include "thirdparty/gflags/gflags.h"
+#include "thirdparty/protobuf/descriptor.h"
+#include "thirdparty/protobuf/message.h"
+
+#include "dsp/monitor/counter.h"
+#include "dsp/monitor/monitor.h"
+#include "dsp/monitor/traffic_monitor_base.h"
+
+namespace yd {
+namespace frontend {
+
+template<typename EnumType>
+class FrontendMonitor :
+      public SingletonBase<FrontendMonitor<EnumType> >,
+             monitor::TrafficMonitorBase<EnumType> {
+  friend class SingletonBase<FrontendMonitor<EnumType> >;
+ public:
+  void Init(const std::string& response_time_thresholds,
+            const std::string& bid_price_thresholds,
+            const std::string& module_name);
+  virtual ~FrontendMonitor();
+
+  void AddLatency(EnumType ssp_type, int64_t response_time);
+  void AddBidPrice(EnumType ssp_type, int64_t bid_price);
+
+  void IncrementBid(EnumType ssp_type);
+  void IncrementGiveup(EnumType ssp_type);
+  void IncrementDiscard(EnumType ssp_type);
+  void IncrementInternalError(EnumType ssp_type);
+  void IncrementParseInvalidRequest(EnumType ssp_type);
+  void IncrementPing(EnumType ssp_type);
+  void IncrementTooBusy(EnumType ssp_type);
+  void IncrementRequest(EnumType ssp_type);
+
+  void IncrementIpHit(EnumType ssp_type);
+  void IncrementIpProvinceHit(EnumType ssp_type);
+  void IncrementIpCityHit(EnumType ssp_type);
+
+ private:
+  struct MonitorCell {
+    scoped_ptr<monitor::Monitor> latency_monitor;
+    scoped_ptr<monitor::Monitor> bid_price_monitor;
+    scoped_ptr<monitor::Counter> request_counter;
+    scoped_ptr<monitor::Counter> ping_counter;
+    scoped_ptr<monitor::Counter> bid_counter;
+    scoped_ptr<monitor::Counter> parse_invalid_counter;
+    scoped_ptr<monitor::Counter> internal_error_counter;
+    scoped_ptr<monitor::Counter> too_busy_counter;
+    scoped_ptr<monitor::Counter> giveup_counter;
+    scoped_ptr<monitor::Counter> discard_counter;
+
+    scoped_ptr<monitor::Counter> ip_hit_counter;
+    scoped_ptr<monitor::Counter> ip_province_hit_counter;
+    scoped_ptr<monitor::Counter> ip_city_hit_counter;
+  };
+
+  FrontendMonitor();
+
+  std::vector<MonitorCell*> monitors_;
+  MonitorCell total_monitor_;
+};
+
+emplate <typename EnumType>
+FrontendMonitor<EnumType>::FrontendMonitor() {
+}
+
+template <typename EnumType>
+void FrontendMonitor<EnumType>::Init(
+    const std::string& response_time_thresholds,
+    const std::string& bid_price_thresholds,
+    const std::string& module_name) {
+  monitors_.clear();
+
+  // initialize each enum value
+  for (int i = 0; i < this->enum_descriptor_->value_count(); ++i) {
+    MonitorCell* monitor_cell = new MonitorCell;
+    const google::protobuf::EnumValueDescriptor* enum_value =
+        this->enum_descriptor_->value(i);
+
+    monitor_cell->latency_monitor.reset(
+        new yd::monitor::Monitor(
+            "##" + module_name + "_response_time_distribution_" +
+            enum_value->name(),
+            response_time_thresholds));
+
+    monitor_cell->bid_price_monitor.reset(
+        new yd::monitor::Monitor(
+            "##" + module_name + "_bid_price_distribution_" +
+            enum_value->name(),
+            bid_price_thresholds));
+
+    monitor_cell->request_counter.reset(
+        new yd::monitor::Counter(
+            "##" + module_name + "_request_counter_" +
+            enum_value->name()));
+
+    monitor_cell->parse_invalid_counter.reset(
+        new yd::monitor::Counter(
+            "##" + module_name + "_parse_invalid_counter_" +
+            enum_value->name()));
+
+    monitor_cell->internal_error_counter.reset(
+        new yd::monitor::Counter(
+            "##" + module_name + "_internal_error_counter_" +
+            enum_value->name()));
+
+    monitor_cell->too_busy_counter.reset(
+        new yd::monitor::Counter(
+            "##" + module_name + "_too_busy_counter_" +
+            enum_value->name()));
+
+    monitor_cell->giveup_counter.reset(
+        new yd::monitor::Counter(
+            "##" + module_name + "_giveup_counter_" +
+            enum_value->name()));
+
+    monitor_cell->discard_counter.reset(
+        new yd::monitor::Counter(
+            "##" + module_name + "_discard_counter_" +
+            enum_value->name()));
+
+    monitor_cell->bid_counter.reset(
+        new yd::monitor::Counter(
+            "##" + module_name + "_bid_counter_" +
+            enum_value->name()));
+
+    monitor_cell->ping_counter.reset(
+        new yd::monitor::Counter(
+            "##" + module_name + "_ping_counter_" +
+            enum_value->name()));
+
+    monitor_cell->ip_hit_counter.reset(
+        new yd::monitor::Counter(
+            "##" + module_name + "_ip_hit_counter_" +
+            enum_value->name()));
+
+    monitor_cell->ip_province_hit_counter.reset(
+        new yd::monitor::Counter(
+            "##" + module_name + "_ip_province_hit_counter_" +
+            enum_value->name()));
+
+    monitor_cell->ip_city_hit_counter.reset(
+        new yd::monitor::Counter(
+            "##" + module_name + "_ip_city_hit_counter_" +
+            enum_value->name()));
+
+    monitors_.push_back(monitor_cell);
+  }
+
+  // total monitor cell
+  total_monitor_.latency_monitor.reset(
+      new yd::monitor::Monitor(
+          "##" + module_name + "_response_time_distribution_all",
+          response_time_thresholds));
+
+  total_monitor_.bid_price_monitor.reset(
+      new yd::monitor::Monitor(
+          "##" + module_name + "_bid_price_distribution_all",
+          bid_price_thresholds));
+
+  total_monitor_.request_counter.reset(
+      new yd::monitor::Counter(
+          "##" + module_name + "_request_counter_all"));
+
+  total_monitor_.parse_invalid_counter.reset(
+      new yd::monitor::Counter(
+          "##" + module_name + "_parse_invalid_counter_all"));
+
+  total_monitor_.internal_error_counter.reset(
+      new yd::monitor::Counter(
+          "##" + module_name + "_internal_error_counter_all"));
+
+  total_monitor_.too_busy_counter.reset(
+      new yd::monitor::Counter(
+          "##" + module_name + "_too_busy_counter_all"));
+
+  total_monitor_.giveup_counter.reset(
+      new yd::monitor::Counter(
+          "##" + module_name + "_giveup_counter_all"));
+
+  total_monitor_.discard_counter.reset(
+      new yd::monitor::Counter(
+          "##" + module_name + "_discard_counter_all"));
+
+  total_monitor_.bid_counter.reset(
+      new yd::monitor::Counter(
+          "##" + module_name + "_bid_counter_all"));
+
+  total_monitor_.ping_counter.reset(
+      new yd::monitor::Counter(
+          "##" + module_name + "_ping_counter_all"));
+
+  total_monitor_.ip_hit_counter.reset(
+      new yd::monitor::Counter(
+          "##" + module_name + "_ip_hit_counter_all"));
+
+  total_monitor_.ip_province_hit_counter.reset(
+      new yd::monitor::Counter(
+          "##" + module_name + "_ip_province_hit_counter_all"));
+
+  total_monitor_.ip_city_hit_counter.reset(
+      new yd::monitor::Counter(
+          "##" + module_name + "_ip_city_hit_counter_all"));
+}
+
+template <typename EnumType>
+FrontendMonitor<EnumType>::~FrontendMonitor() {
+  STLDeleteElements(&monitors_);
+}
+
+template <typename EnumType>
+void FrontendMonitor<EnumType>::AddLatency(
+    EnumType ssp_type, int64_t response_time) {
+  total_monitor_.latency_monitor->Add(response_time);
+  const google::protobuf::EnumValueDescriptor* enum_value =
+      this->enum_descriptor_->FindValueByNumber(ssp_type);
+  if (enum_value != NULL) {
+    monitors_[enum_value->index()]->latency_monitor->Add(response_time);
+  }
+}
+
+template <typename EnumType>
+void FrontendMonitor<EnumType>::AddBidPrice(
+    EnumType ssp_type, int64_t bid_price) {
+  total_monitor_.bid_price_monitor->Add(bid_price);
+  const google::protobuf::EnumValueDescriptor* enum_value =
+      this->enum_descriptor_->FindValueByNumber(ssp_type);
+  if (enum_value != NULL) {
+    monitors_[enum_value->index()]->bid_price_monitor->Add(bid_price);
+  }
+}
+
+template <typename EnumType>
+void FrontendMonitor<EnumType>::IncrementRequest(EnumType ssp_type) {
+  total_monitor_.request_counter->Add(1);
+  const google::protobuf::EnumValueDescriptor* enum_value =
+      this->enum_descriptor_->FindValueByNumber(ssp_type);
+  if (enum_value != NULL) {
+    monitors_[enum_value->index()]->request_counter->Add(1);
+  }
+}
+
+template <typename EnumType>
+void FrontendMonitor<EnumType>::IncrementBid(EnumType ssp_type) {
+  total_monitor_.bid_counter->Add(1);
+  const google::protobuf::EnumValueDescriptor* enum_value =
+      this->enum_descriptor_->FindValueByNumber(ssp_type);
+  if (enum_value != NULL) {
+    monitors_[enum_value->index()]->bid_counter->Add(1);
+  }
+}
+
+template <typename EnumType>
+void FrontendMonitor<EnumType>::IncrementInternalError(EnumType ssp_type) {
+  total_monitor_.internal_error_counter->Add(1);
+  const google::protobuf::EnumValueDescriptor* enum_value =
+      this->enum_descriptor_->FindValueByNumber(ssp_type);
+  if (enum_value != NULL) {
+    monitors_[enum_value->index()]->internal_error_counter->Add(1);
+  }
+}
+
+template <typename EnumType>
+void FrontendMonitor<EnumType>::IncrementGiveup(EnumType ssp_type) {
+  total_monitor_.giveup_counter->Add(1);
+  const google::protobuf::EnumValueDescriptor* enum_value =
+      this->enum_descriptor_->FindValueByNumber(ssp_type);
+  if (enum_value != NULL) {
+    monitors_[enum_value->index()]->giveup_counter->Add(1);
+  }
+}
+
+template <typename EnumType>
+void FrontendMonitor<EnumType>::IncrementDiscard(EnumType ssp_type) {
+  total_monitor_.discard_counter->Add(1);
+  const google::protobuf::EnumValueDescriptor* enum_value =
+      this->enum_descriptor_->FindValueByNumber(ssp_type);
+  if (enum_value != NULL) {
+    monitors_[enum_value->index()]->discard_counter->Add(1);
+  }
+}
+
+template <typename EnumType>
+void FrontendMonitor<EnumType>::IncrementParseInvalidRequest(
+    EnumType ssp_type) {
+  total_monitor_.parse_invalid_counter->Add(1);
+  const google::protobuf::EnumValueDescriptor* enum_value =
+      this->enum_descriptor_->FindValueByNumber(ssp_type);
+  if (enum_value != NULL) {
+    monitors_[enum_value->index()]->parse_invalid_counter->Add(1);
+  }
+}
+
+template <typename EnumType>
+void FrontendMonitor<EnumType>::IncrementPing(EnumType ssp_type) {
+  total_monitor_.ping_counter->Add(1);
+  const google::protobuf::EnumValueDescriptor* enum_value =
+      this->enum_descriptor_->FindValueByNumber(ssp_type);
+  if (enum_value != NULL) {
+    monitors_[enum_value->index()]->ping_counter->Add(1);
+  }
+}
+
+template <typename EnumType>
+void FrontendMonitor<EnumType>::IncrementTooBusy(EnumType ssp_type) {
+  total_monitor_.too_busy_counter->Add(1);
+  const google::protobuf::EnumValueDescriptor* enum_value =
+      this->enum_descriptor_->FindValueByNumber(ssp_type);
+  if (enum_value != NULL) {
+    monitors_[enum_value->index()]->too_busy_counter->Add(1);
+  }
+}
+
+template <typename EnumType>
+void FrontendMonitor<EnumType>::IncrementIpHit(EnumType ssp_type) {
+  total_monitor_.ip_hit_counter->Add(1);
+  const google::protobuf::EnumValueDescriptor* enum_value =
+      this->enum_descriptor_->FindValueByNumber(ssp_type);
+  if (enum_value != NULL) {
+    monitors_[enum_value->index()]->ip_hit_counter->Add(1);
+  }
+}
+
+template <typename EnumType>
+void FrontendMonitor<EnumType>::IncrementIpProvinceHit(EnumType ssp_type) {
+  total_monitor_.ip_province_hit_counter->Add(1);
+  const google::protobuf::EnumValueDescriptor* enum_value =
+      this->enum_descriptor_->FindValueByNumber(ssp_type);
+  if (enum_value != NULL) {
+    monitors_[enum_value->index()]->ip_province_hit_counter->Add(1);
+  }
+}
+
+template <typename EnumType>
+void FrontendMonitor<EnumType>::IncrementIpCityHit(EnumType ssp_type) {
+  total_monitor_.ip_city_hit_counter->Add(1);
+  const google::protobuf::EnumValueDescriptor* enum_value =
+      this->enum_descriptor_->FindValueByNumber(ssp_type);
+  if (enum_value != NULL) {
+    monitors_[enum_value->index()]->ip_city_hit_counter->Add(1);
+  }
+}
+
+}  // namespace frontend
+}  // namespace yd
+
+#endif  // DSP_FRONTEND_FRONTEND_MONITOR_H_

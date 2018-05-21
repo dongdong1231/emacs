@@ -1,0 +1,619 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode java-mode
+      :tags 
+        '( ("org.apache.impala.planner" package nil nil [803 837])
+            ("java.util.ArrayList" include nil nil [839 866])
+            ("java.util.List" include nil nil [867 889])
+            ("java.util.Set" include nil nil [890 911])
+            ("org.slf4j.Logger" include nil nil [913 937])
+            ("org.slf4j.LoggerFactory" include nil nil [938 969])
+            ("org.apache.impala.analysis.AggregateInfo" include nil nil [971 1019])
+            ("org.apache.impala.analysis.Analyzer" include nil nil [1020 1063])
+            ("org.apache.impala.analysis.Expr" include nil nil [1064 1103])
+            ("org.apache.impala.analysis.FunctionCallExpr" include nil nil [1104 1155])
+            ("org.apache.impala.analysis.SlotId" include nil nil [1156 1197])
+            ("org.apache.impala.common.InternalException" include nil nil [1198 1248])
+            ("org.apache.impala.thrift.TAggregationNode" include nil nil [1249 1298])
+            ("org.apache.impala.thrift.TExplainLevel" include nil nil [1299 1345])
+            ("org.apache.impala.thrift.TExpr" include nil nil [1346 1384])
+            ("org.apache.impala.thrift.TPlanNode" include nil nil [1385 1427])
+            ("org.apache.impala.thrift.TPlanNodeType" include nil nil [1428 1474])
+            ("org.apache.impala.thrift.TQueryOptions" include nil nil [1475 1521])
+            ("org.apache.impala.util.BitUtil" include nil nil [1522 1560])
+            ("com.google.common.base.Objects" include nil nil [1562 1600])
+            ("com.google.common.base.Preconditions" include nil nil [1601 1645])
+            ("com.google.common.collect.Lists" include nil nil [1646 1685])
+            ("com.google.common.collect.Sets" include nil nil [1686 1724])
+            ("AggregationNode" type
+               (:typemodifiers ("public")
+                :superclasses "PlanNode"
+                :members 
+                  ( ("LOG" variable
+                       (:typemodifiers ("private" "final" "static")
+                        :type "Logger")
+                        (reparse-symbol class_member_declaration) [1815 1896])
+                    ("DEFAULT_PER_INSTANCE_MEM" variable
+                       (:typemodifiers ("private" "final" "static")
+                        :type "long")
+                        (reparse-symbol class_member_declaration) [2032 2106])
+                    ("MIN_HASH_TBL_MEM" variable
+                       (:typemodifiers ("private" "final" "static")
+                        :type "long")
+                        (reparse-symbol class_member_declaration) [2189 2254])
+                    ("aggInfo_" variable
+                       (:typemodifiers ("private" "final")
+                        :type "AggregateInfo")
+                        (reparse-symbol class_member_declaration) [2258 2295])
+                    ("needsFinalize_" variable
+                       (:typemodifiers ("private")
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [2435 2466])
+                    ("useStreamingPreagg_" variable
+                       (:typemodifiers ("private")
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [2558 2594])
+                    ("AggregationNode" function
+                       (:constructor-flag t
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("id" variable (:type "PlanNodeId") (reparse-symbol formal_parameters) [2671 2684])
+                            ("input" variable (:type "PlanNode") (reparse-symbol formal_parameters) [2686 2700])
+                            ("aggInfo" variable (:type "AggregateInfo") (reparse-symbol formal_parameters) [2702 2723]))                          )
+                        (reparse-symbol class_member_declaration) [2648 2872])
+                    ("AggregationNode" function
+                       (:constructor-flag t
+                        :typemodifiers ("private")
+                        :arguments 
+                          ( ("id" variable (:type "PlanNodeId") (reparse-symbol formal_parameters) [2945 2958])
+                            ("src" variable (:type "AggregationNode") (reparse-symbol formal_parameters) [2960 2979]))                          )
+                        (reparse-symbol class_member_declaration) [2921 3089])
+                    ("getAggInfo" function
+                       (:typemodifiers ("public")
+                        :type "AggregateInfo")
+                        (reparse-symbol class_member_declaration) [3093 3147])
+                    ("unsetNeedsFinalize" function
+                       (:typemodifiers ("public")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [3284 3396])
+                    ("setIsPreagg" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("ctx_" variable (:type "PlannerContext") (reparse-symbol formal_parameters) [3546 3565]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [3522 3757])
+                    ("setIntermediateTuple" function
+                       (:typemodifiers ("public")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [3876 4129])
+                    ("isBlockingNode" function
+                       (:typemodifiers ("public")
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [4145 4209])
+                    ("init" function
+                       (:throws ("InternalException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("analyzer" variable (:type "Analyzer") (reparse-symbol formal_parameters) [4242 4259]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [4225 6642])
+                    ("computeStats" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("analyzer" variable (:type "Analyzer") (reparse-symbol formal_parameters) [6683 6700]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [6658 8704])
+                    ("debugString" function
+                       (:typemodifiers ("protected")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [8720 8904])
+                    ("toThrift" function
+                       (:typemodifiers ("protected")
+                        :arguments 
+                          ( ("msg" variable (:type "TPlanNode") (reparse-symbol formal_parameters) [8944 8957]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [8920 9717])
+                    ("getDisplayLabelDetail" function
+                       (:typemodifiers ("protected")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [9733 9888])
+                    ("getNodeExplainString" function
+                       (:typemodifiers ("protected")
+                        :arguments 
+                          ( ("prefix" variable (:type "String") (reparse-symbol formal_parameters) [9942 9955])
+                            ("detailPrefix" variable (:type "String") (reparse-symbol formal_parameters) [9957 9976])
+                            ("detailLevel" variable (:type "TExplainLevel") (reparse-symbol formal_parameters) [9984 10009]))                          
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [9904 11231])
+                    ("computeNodeResourceProfile" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("queryOptions" variable (:type "TQueryOptions") (reparse-symbol formal_parameters) [11286 11312]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [11247 13262]))                  
+                :type "class")
+                nil [1765 13264]))          
+      :file "AggregationNode.java"
+      :pointmax 13265
+      :fsize 13264
+      :lastmodtime '(22925 26281 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode java-mode
+      :tags 
+        '( ("org.apache.impala.planner" package nil nil [803 837])
+            ("java.io.IOException" include nil nil [839 866])
+            ("java.util.ArrayList" include nil nil [867 894])
+            ("java.util.Collections" include nil nil [895 924])
+            ("java.util.HashSet" include nil nil [925 950])
+            ("java.util.List" include nil nil [951 973])
+            ("java.util.Map" include nil nil [974 995])
+            ("java.util.Set" include nil nil [996 1017])
+            ("org.apache.hadoop.conf.Configuration" include nil nil [1019 1063])
+            ("org.apache.hadoop.fs.FileSystem" include nil nil [1064 1103])
+            ("org.apache.impala.analysis.AggregateInfo" include nil nil [1104 1152])
+            ("org.apache.impala.analysis.Analyzer" include nil nil [1153 1196])
+            ("org.apache.impala.analysis.BinaryPredicate" include nil nil [1197 1247])
+            ("org.apache.impala.analysis.DescriptorTable" include nil nil [1248 1298])
+            ("org.apache.impala.analysis.Expr" include nil nil [1299 1338])
+            ("org.apache.impala.analysis.ExprSubstitutionMap" include nil nil [1339 1393])
+            ("org.apache.impala.analysis.FunctionCallExpr" include nil nil [1394 1445])
+            ("org.apache.impala.analysis.FunctionName" include nil nil [1446 1493])
+            ("org.apache.impala.analysis.FunctionParams" include nil nil [1494 1543])
+            ("org.apache.impala.analysis.InPredicate" include nil nil [1544 1590])
+            ("org.apache.impala.analysis.LiteralExpr" include nil nil [1591 1637])
+            ("org.apache.impala.analysis.NullLiteral" include nil nil [1638 1684])
+            ("org.apache.impala.analysis.SlotDescriptor" include nil nil [1685 1734])
+            ("org.apache.impala.analysis.SlotId" include nil nil [1735 1776])
+            ("org.apache.impala.analysis.SlotRef" include nil nil [1777 1819])
+            ("org.apache.impala.analysis.TableRef" include nil nil [1820 1863])
+            ("org.apache.impala.analysis.TableSampleClause" include nil nil [1864 1916])
+            ("org.apache.impala.analysis.TupleDescriptor" include nil nil [1917 1967])
+            ("org.apache.impala.analysis.TupleId" include nil nil [1968 2010])
+            ("org.apache.impala.catalog.Column" include nil nil [2011 2051])
+            ("org.apache.impala.catalog.HdfsFileFormat" include nil nil [2052 2100])
+            ("org.apache.impala.catalog.HdfsPartition.FileBlock" include nil nil [2101 2158])
+            ("org.apache.impala.catalog.HdfsPartition.FileDescriptor" include nil nil [2159 2221])
+            ("org.apache.impala.catalog.HdfsPartition" include nil nil [2222 2269])
+            ("org.apache.impala.catalog.HdfsTable" include nil nil [2270 2313])
+            ("org.apache.impala.catalog.Type" include nil nil [2314 2352])
+            ("org.apache.impala.common.FileSystemUtil" include nil nil [2353 2400])
+            ("org.apache.impala.common.ImpalaException" include nil nil [2401 2449])
+            ("org.apache.impala.common.ImpalaRuntimeException" include nil nil [2450 2505])
+            ("org.apache.impala.common.NotImplementedException" include nil nil [2506 2562])
+            ("org.apache.impala.common.PrintUtils" include nil nil [2563 2606])
+            ("org.apache.impala.common.RuntimeEnv" include nil nil [2607 2650])
+            ("org.apache.impala.fb.FbFileBlock" include nil nil [2651 2691])
+            ("org.apache.impala.service.BackendConfig" include nil nil [2692 2739])
+            ("org.apache.impala.thrift.TExplainLevel" include nil nil [2740 2786])
+            ("org.apache.impala.thrift.TExpr" include nil nil [2787 2825])
+            ("org.apache.impala.thrift.THdfsFileSplit" include nil nil [2826 2873])
+            ("org.apache.impala.thrift.THdfsScanNode" include nil nil [2874 2920])
+            ("org.apache.impala.thrift.TNetworkAddress" include nil nil [2921 2969])
+            ("org.apache.impala.thrift.TPlanNode" include nil nil [2970 3012])
+            ("org.apache.impala.thrift.TPlanNodeType" include nil nil [3013 3059])
+            ("org.apache.impala.thrift.TQueryOptions" include nil nil [3060 3106])
+            ("org.apache.impala.thrift.TReplicaPreference" include nil nil [3107 3158])
+            ("org.apache.impala.thrift.TScanRange" include nil nil [3159 3202])
+            ("org.apache.impala.thrift.TScanRangeLocation" include nil nil [3203 3254])
+            ("org.apache.impala.thrift.TScanRangeLocationList" include nil nil [3255 3310])
+            ("org.apache.impala.util.MembershipSnapshot" include nil nil [3311 3360])
+            ("org.slf4j.Logger" include nil nil [3361 3385])
+            ("org.slf4j.LoggerFactory" include nil nil [3386 3417])
+            ("com.google.common.base.Joiner" include nil nil [3419 3456])
+            ("com.google.common.base.Objects" include nil nil [3457 3495])
+            ("com.google.common.base.Objects.ToStringHelper" include nil nil [3496 3549])
+            ("com.google.common.base.Preconditions" include nil nil [3550 3594])
+            ("com.google.common.collect.Lists" include nil nil [3595 3634])
+            ("com.google.common.collect.Maps" include nil nil [3635 3673])
+            ("com.google.common.collect.Sets" include nil nil [3674 3712])
+            ("HdfsScanNode" type
+               (:typemodifiers ("public")
+                :superclasses "ScanNode"
+                :members 
+                  ( ("LOG" variable
+                       (:typemodifiers ("private" "final" "static")
+                        :type "Logger")
+                        (reparse-symbol class_member_declaration) [5102 5180])
+                    ("MAX_IO_BUFFERS_PER_THREAD" variable
+                       (:typemodifiers ("private" "final" "static")
+                        :type "long")
+                        (reparse-symbol class_member_declaration) [5332 5389])
+                    ("MAX_THREAD_TOKENS_PER_CORE" variable
+                       (:typemodifiers ("private" "final" "static")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [5570 5626])
+                    ("SCAN_RANGE_SKEW_FACTOR" variable
+                       (:typemodifiers ("private" "final" "static")
+                        :type "double")
+                        (reparse-symbol class_member_declaration) [5884 5941])
+                    ("tbl_" variable
+                       (:typemodifiers ("private" "final")
+                        :type "HdfsTable")
+                        (reparse-symbol class_member_declaration) [5945 5974])
+                    ("sampleParams_" variable
+                       (:typemodifiers ("private" "final")
+                        :type "TableSampleClause")
+                        (reparse-symbol class_member_declaration) [6154 6200])
+                    ("replicaPreference_" variable
+                       (:typemodifiers ("private" "final")
+                        :type "TReplicaPreference")
+                        (reparse-symbol class_member_declaration) [6204 6256])
+                    ("randomReplica_" variable
+                       (:typemodifiers ("private" "final")
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [6259 6296])
+                    ("aggInfo_" variable
+                       (:typemodifiers ("private" "final")
+                        :type "AggregateInfo")
+                        (reparse-symbol class_member_declaration) [6444 6481])
+                    ("numPartitions_" variable
+                       (:typemodifiers ("private")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [6631 6662])
+                    ("totalFiles_" variable
+                       (:typemodifiers ("private")
+                        :type "long")
+                        (reparse-symbol class_member_declaration) [6665 6694])
+                    ("totalBytes_" variable
+                       (:typemodifiers ("private")
+                        :type "long")
+                        (reparse-symbol class_member_declaration) [6697 6726])
+                    ("statsNumRows_" variable
+                       (:typemodifiers ("private")
+                        :type "long")
+                        (reparse-symbol class_member_declaration) [6825 6857])
+                    ("extrapolatedNumRows_" variable
+                       (:typemodifiers ("private")
+                        :type "long")
+                        (reparse-symbol class_member_declaration) [6860 6899])
+                    ("useMtScanNode_" variable
+                       (:typemodifiers ("private")
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [6980 7011])
+                    ("optimizedAggSmap_" variable
+                       (:typemodifiers ("protected")
+                        :type "ExprSubstitutionMap")
+                        (reparse-symbol class_member_declaration) [7233 7281])
+                    ("hasCorruptTableStats_" variable
+                       (:typemodifiers ("private")
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [7959 7997])
+                    ("skipHeaderLineCount_" variable
+                       (:typemodifiers ("private")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [8131 8168])
+                    ("numScanRangesNoDiskIds_" variable
+                       (:typemodifiers ("private")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [8279 8319])
+                    ("numFilesNoDiskIds_" variable
+                       (:typemodifiers ("private")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [8322 8357])
+                    ("numPartitionsNoDiskIds_" variable
+                       (:typemodifiers ("private")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [8360 8400])
+                    ("CONF" variable
+                       (:typemodifiers ("private" "static" "final")
+                        :type "Configuration")
+                        (reparse-symbol class_member_declaration) [8404 8466])
+                    ("minMaxTuple_" variable
+                       (:typemodifiers ("private")
+                        :type "TupleDescriptor")
+                        (reparse-symbol class_member_declaration) [9110 9147])
+                    ("countStarSlot_" variable
+                       (:typemodifiers ("private")
+                        :type "SlotDescriptor")
+                        (reparse-symbol class_member_declaration) [9297 9342])
+                    ("HdfsScanNode" function
+                       (:constructor-flag t
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("id" variable (:type "PlanNodeId") (reparse-symbol formal_parameters) [9651 9664])
+                            ("desc" variable (:type "TupleDescriptor") (reparse-symbol formal_parameters) [9666 9686])
+                            ("" variable (:type "conjuncts") (reparse-symbol formal_parameters) [9699 9708])
+                            ("" variable (:type "partitions") (reparse-symbol formal_parameters) [9736 9746])
+                            ("hdfsTblRef" variable (:type "TableRef") (reparse-symbol formal_parameters) [9748 9767])
+                            ("aggInfo" variable (:type "AggregateInfo") (reparse-symbol formal_parameters) [9769 9790]))                          )
+                        (reparse-symbol class_member_declaration) [9631 10565])
+                    ("debugString" function
+                       (:typemodifiers ("protected")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [10581 10870])
+                    ("applyParquetCountStartOptimization" function
+                       (:typemodifiers ("private")
+                        :arguments 
+                          ( ("analyzer" variable (:type "Analyzer") (reparse-symbol formal_parameters) [11259 11276]))                          
+                        :type "SlotDescriptor")
+                        (reparse-symbol class_member_declaration) [11201 11978])
+                    ("canApplyParquetCountStarOptimization" function
+                       (:typemodifiers ("private")
+                        :arguments 
+                          ( ("analyzer" variable (:type "Analyzer") (reparse-symbol formal_parameters) [12160 12177])
+                            ("" variable (:type "fileFormats") (reparse-symbol formal_parameters) [12205 12216]))                          
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [12107 12595])
+                    ("init" function
+                       (:throws ("ImpalaException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("analyzer" variable (:type "Analyzer") (reparse-symbol formal_parameters) [12692 12709]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [12675 14174])
+                    ("checkForSupportedFileFormats" function
+                       (:throws ("NotImplementedException")
+                        :typemodifiers ("protected")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [14448 16577])
+                    ("assignCollectionConjuncts" function
+                       (:typemodifiers ("private")
+                        :arguments 
+                          ( ("analyzer" variable (:type "Analyzer") (reparse-symbol formal_parameters) [16863 16880]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [16824 16969])
+                    ("buildStatsPredicate" function
+                       (:typemodifiers ("private")
+                        :arguments 
+                          ( ("analyzer" variable (:type "Analyzer") (reparse-symbol formal_parameters) [17239 17256])
+                            ("inputSlot" variable (:type "SlotRef") (reparse-symbol formal_parameters) [17258 17275])
+                            ("inputPred" variable (:type "BinaryPredicate") (reparse-symbol formal_parameters) [17283 17308])
+                            ("op" variable (:type "BinaryPredicate.Operator") (reparse-symbol formal_parameters) [17310 17337]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [17206 17875])
+                    ("tryComputeBinaryMinMaxPredicate" function
+                       (:typemodifiers ("private")
+                        :arguments 
+                          ( ("analyzer" variable (:type "Analyzer") (reparse-symbol formal_parameters) [17924 17941])
+                            ("binaryPred" variable (:type "BinaryPredicate") (reparse-symbol formal_parameters) [17949 17975]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [17879 19482])
+                    ("tryComputeInListMinMaxPredicate" function
+                       (:typemodifiers ("private")
+                        :arguments 
+                          ( ("analyzer" variable (:type "Analyzer") (reparse-symbol formal_parameters) [19531 19548])
+                            ("inPred" variable (:type "InPredicate") (reparse-symbol formal_parameters) [19550 19568]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [19486 21220])
+                    ("computeMinMaxTupleAndConjuncts" function
+                       (:throws ("ImpalaException")
+                        :typemodifiers ("private")
+                        :arguments 
+                          ( ("analyzer" variable (:type "Analyzer") (reparse-symbol formal_parameters) [21576 21593]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [21532 22220])
+                    ("assignCollectionConjuncts" function
+                       (:typemodifiers ("private")
+                        :arguments 
+                          ( ("tupleDesc" variable (:type "TupleDescriptor") (reparse-symbol formal_parameters) [23185 23210])
+                            ("analyzer" variable (:type "Analyzer") (reparse-symbol formal_parameters) [23212 23229]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [23146 24889])
+                    ("computeDictionaryFilterConjuncts" function
+                       (:typemodifiers ("private")
+                        :arguments 
+                          ( ("analyzer" variable (:type "Analyzer") (reparse-symbol formal_parameters) [25022 25039]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [24976 26752])
+                    ("computeScanRangeLocations" function
+                       (:constructor-flag t
+                        :throws ("ImpalaRuntimeException")
+                        :arguments 
+                          ( ("analyzer" variable (:type "Analyzer") (reparse-symbol formal_parameters) [27154 27171]))                          )
+                        (reparse-symbol class_member_declaration) [27128 32632])
+                    ("computeStats" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("analyzer" variable (:type "Analyzer") (reparse-symbol formal_parameters) [33689 33706]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [33664 35092])
+                    ("computeCardinalities" function
+                       (:typemodifiers ("private")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [35321 37666])
+                    ("computeNumNodes" function
+                       (:typemodifiers ("protected")
+                        :arguments 
+                          ( ("analyzer" variable (:type "Analyzer") (reparse-symbol formal_parameters) [38028 38045])
+                            ("cardinality" variable (:type "long") (reparse-symbol formal_parameters) [38047 38063]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [37997 40632])
+                    ("toThrift" function
+                       (:typemodifiers ("protected")
+                        :arguments 
+                          ( ("msg" variable (:type "TPlanNode") (reparse-symbol formal_parameters) [40672 40685]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [40648 42130])
+                    ("getNodeExplainString" function
+                       (:typemodifiers ("protected")
+                        :arguments 
+                          ( ("prefix" variable (:type "String") (reparse-symbol formal_parameters) [42184 42197])
+                            ("detailPrefix" variable (:type "String") (reparse-symbol formal_parameters) [42199 42218])
+                            ("detailLevel" variable (:type "TExplainLevel") (reparse-symbol formal_parameters) [42226 42251]))                          
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [42146 45732])
+                    ("computeNodeResourceProfile" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("queryOptions" variable (:type "TQueryOptions") (reparse-symbol formal_parameters) [45787 45813]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [45748 48494])
+                    ("getPerHostMemUpperBound" function
+                       (:typemodifiers ("public" "static")
+                        :type "long")
+                        (reparse-symbol class_member_declaration) [48888 49202])
+                    ("getOptimizedAggSmap" function
+                       (:typemodifiers ("public")
+                        :type "ExprSubstitutionMap")
+                        (reparse-symbol class_member_declaration) [49206 49284])
+                    ("isTableMissingTableStats" function
+                       (:typemodifiers ("public")
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [49300 49441])
+                    ("hasCorruptTableStats" function
+                       (:typemodifiers ("public")
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [49457 49528])
+                    ("hasMissingDiskIds" function
+                       (:typemodifiers ("public")
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [49532 49606]))                  
+                :type "class")
+                nil [5055 49608]))          
+      :file "HdfsScanNode.java"
+      :pointmax 49609
+      :fsize 49608
+      :lastmodtime '(22925 26281 0 0)
+      :unmatched-syntax '((GT 27126 . 27127) (PRIVATE 27100 . 27107) (LT 27111 . 27112) (GT 12203 . 12204) (IDENTIFIER 12185 . 12188) (LT 12188 . 12189) (GT 9734 . 9735) (IDENTIFIER 9716 . 9720) (LT 9720 . 9721) (GT 9697 . 9698) (IDENTIFIER 9688 . 9692) (LT 9692 . 9693) (SEMICOLON 8829 . 8830) (PAREN_BLOCK 8827 . 8829) (EQ 8807 . 8808) (GT 8780 . 8781) (LT 8775 . 8776) (SEMICOLON 8656 . 8657) (PAREN_BLOCK 8654 . 8656) (EQ 8634 . 8635) (GT 8615 . 8616) (PRIVATE 8598 . 8605) (LT 8610 . 8611) (SEMICOLON 7824 . 7825) (PAREN_BLOCK 7822 . 7824) (EQ 7793 . 7794) (RSHIFT 7763 . 7765) (LT 7755 . 7756) (COMMA 7749 . 7750) (LT 7741 . 7742) (SEMICOLON 7620 . 7621) (PAREN_BLOCK 7618 . 7620) (EQ 7589 . 7590) (RSHIFT 7565 . 7567) (LT 7560 . 7561) (COMMA 7554 . 7555) (PRIVATE 7521 . 7528) (LT 7538 . 7539) (SEMICOLON 6091 . 6092) (GT 6078 . 6079) (PRIVATE 6046 . 6053) (LT 6064 . 6065)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode java-mode
+      :tags 
+        '( ("org.apache.impala.planner" package nil nil [803 837])
+            ("java.util.List" include nil nil [839 861])
+            ("org.apache.impala.analysis.SlotDescriptor" include nil nil [863 912])
+            ("org.apache.impala.analysis.TupleDescriptor" include nil nil [913 963])
+            ("org.apache.impala.catalog.HdfsFileFormat" include nil nil [964 1012])
+            ("org.apache.impala.catalog.Table" include nil nil [1013 1052])
+            ("org.apache.impala.catalog.HdfsTable" include nil nil [1053 1096])
+            ("org.apache.impala.catalog.Type" include nil nil [1097 1135])
+            ("org.apache.impala.common.NotImplementedException" include nil nil [1136 1192])
+            ("org.apache.impala.common.PrintUtils" include nil nil [1193 1236])
+            ("org.apache.impala.thrift.TExplainLevel" include nil nil [1237 1283])
+            ("org.apache.impala.thrift.TNetworkAddress" include nil nil [1284 1332])
+            ("org.apache.impala.thrift.TScanRangeLocationList" include nil nil [1333 1388])
+            ("org.apache.impala.thrift.TTableStats" include nil nil [1389 1433])
+            ("com.google.common.base.Joiner" include nil nil [1435 1472])
+            ("com.google.common.base.Objects" include nil nil [1473 1511])
+            ("com.google.common.base.Preconditions" include nil nil [1512 1556])
+            ("com.google.common.collect.Lists" include nil nil [1557 1596])
+            ("ScanNode" type
+               (:typemodifiers ("abstract" "public")
+                :superclasses "PlanNode"
+                :members 
+                  ( ("desc_" variable
+                       (:typemodifiers ("protected" "final")
+                        :type "TupleDescriptor")
+                        (reparse-symbol class_member_declaration) [1718 1756])
+                    ("inputCardinality_" variable
+                       (:typemodifiers ("protected")
+                        :type "long")
+                        (reparse-symbol class_member_declaration) [1819 1857])
+                    ("numPartitionsMissingStats_" variable
+                       (:typemodifiers ("protected")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [1923 1968])
+                    ("ScanNode" function
+                       (:constructor-flag t
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("id" variable (:type "PlanNodeId") (reparse-symbol formal_parameters) [2099 2112])
+                            ("desc" variable (:type "TupleDescriptor") (reparse-symbol formal_parameters) [2114 2134])
+                            ("displayName" variable (:type "String") (reparse-symbol formal_parameters) [2136 2154]))                          )
+                        (reparse-symbol class_member_declaration) [2083 2230])
+                    ("getTupleDesc" function
+                       (:typemodifiers ("public")
+                        :type "TupleDescriptor")
+                        (reparse-symbol class_member_declaration) [2234 2289])
+                    ("checkForSupportedFileFormats" function
+                       (:throws ("NotImplementedException")
+                        :typemodifiers ("protected")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [2766 3509])
+                    ("getScanRangeLocations" function (:constructor-flag t) (reparse-symbol class_member_declaration) [3612 3740])
+                    ("debugString" function
+                       (:typemodifiers ("protected")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [3756 4021])
+                    ("getStatsExplainString" function
+                       (:typemodifiers ("protected")
+                        :arguments 
+                          ( ("prefix" variable (:type "String") (reparse-symbol formal_parameters) [4376 4389])
+                            ("detailLevel" variable (:type "TExplainLevel") (reparse-symbol formal_parameters) [4391 4416]))                          
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [4337 5839])
+                    ("isTableMissingStats" function
+                       (:typemodifiers ("public")
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [5979 6091])
+                    ("isTableMissingTableStats" function
+                       (:typemodifiers ("public")
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [6095 6243])
+                    ("isAccessingCollectionType" function
+                       (:typemodifiers ("public")
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [6343 6514])
+                    ("isTableMissingColumnStats" function
+                       (:typemodifiers ("public")
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [6518 6720])
+                    ("hasCorruptTableStats" function
+                       (:typemodifiers ("public")
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [6908 6963])
+                    ("addressToTNetworkAddress" function
+                       (:typemodifiers ("protected" "static")
+                        :arguments 
+                          ( ("address" variable (:type "String") (reparse-symbol formal_parameters) [7191 7205]))                          
+                        :type "TNetworkAddress")
+                        (reparse-symbol class_member_declaration) [7133 7411])
+                    ("getInputCardinality" function
+                       (:typemodifiers ("public")
+                        :type "long")
+                        (reparse-symbol class_member_declaration) [7427 7563])
+                    ("getDisplayLabelDetail" function
+                       (:typemodifiers ("protected")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [7579 7988]))                  
+                :type "class")
+                nil [1666 7990]))          
+      :file "ScanNode.java"
+      :pointmax 7991
+      :fsize 7990
+      :lastmodtime '(22925 26281 0 0)
+      :unmatched-syntax '((GT 3610 . 3611) (PUBLIC 3576 . 3582) (LT 3587 . 3588) (SEMICOLON 2078 . 2079) (GT 2065 . 2066) (PROTECTED 2028 . 2037) (LT 2042 . 2043)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode java-mode
+      :tags 
+        '( ("org.apache.impala.planner" package nil nil [803 837])
+            ("java.util.ArrayList" include nil nil [839 866])
+            ("java.util.Collection" include nil nil [867 895])
+            ("java.util.Collections" include nil nil [896 925])
+            ("java.util.List" include nil nil [926 948])
+            ("java.util.Set" include nil nil [949 970])
+            ("org.apache.impala.analysis.Analyzer" include nil nil [972 1015])
+            ("org.apache.impala.analysis.Expr" include nil nil [1016 1055])
+            ("org.apache.impala.analysis.ExprId" include nil nil [1056 1097])
+            ("org.apache.impala.analysis.ExprSubstitutionMap" include nil nil [1098 1152])
+            ("org.apache.impala.analysis.TupleDescriptor" include nil nil [1153 1203])
+            ("org.apache.impala.analysis.TupleId" include nil nil [1204 1246])
+            ("org.apache.impala.common.ImpalaException" include nil nil [1247 1295])
+            ("org.apache.impala.common.PrintUtils" include nil nil [1296 1339])
+            ("org.apache.impala.common.TreeNode" include nil nil [1340 1381])
+            ("org.apache.impala.planner.RuntimeFilterGenerator.RuntimeFilter" include nil nil [1382 1452])
+            ("org.apache.impala.thrift.TBackendResourceProfile" include nil nil [1453 1509])
+            ("org.apache.impala.thrift.TExecStats" include nil nil [1510 1553])
+            ("org.apache.impala.thrift.TExplainLevel" include nil nil [1554 1600])
+            ("org.apache.impala.thrift.TPlan" include nil nil [1601 1639])
+            ("org.apache.impala.thrift.TPlanNode" include nil nil [1640 1682])
+            ("org.apache.impala.thrift.TQueryOptions" include nil nil [1683 1729])
+            ("org.slf4j.Logger" include nil nil [1730 1754])
+            ("org.slf4j.LoggerFactory" include nil nil [1755 1786])
+            ("com.google.common.base.Joiner" include nil nil [1788 1825])
+            ("com.google.common.base.Preconditions" include nil nil [1826 1870])
+            ("com.google.common.collect.Lists" include nil nil [1871 1910])
+            ("com.google.common.collect.Sets" include nil nil [1911 1949])
+            ("com.google.common.math.LongMath" include nil nil [1950 1989]))          
+      :file "PlanNode.java"
+      :pointmax 30310
+      :fsize 30309
+      :lastmodtime '(22925 26281 0 0)
+      :unmatched-syntax '((BRACE_BLOCK 2814 . 30309) (GT 2812 . 2813) (IDENTIFIER 2804 . 2812) (ABSTRACT 2756 . 2764) (LT 2803 . 2804))))
+  :file "!Volumes!Transcend!Impala!fe!src!main!java!org!apache!impala!planner!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

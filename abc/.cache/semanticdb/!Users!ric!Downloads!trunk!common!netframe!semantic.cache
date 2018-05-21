@@ -1,0 +1,459 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("COMMON_NETFRAME_STREAM_SOCKET_CONTEXT_H" variable (:constant-flag t) nil [541 580])
+            ("common/netframe/socket_context.h" include nil nil [582 625])
+            ("netframe" type
+               (:members 
+                  ( ("StreamSocketContext" type
+                       (:superclasses 
+                          ( ("SocketContext" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [722 729])
+                            ("StreamSocketContext" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("netframe" variable
+                                       (:pointer 1
+                                        :type ("NetFrame" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [763 782])
+                                    ("local_address" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("SocketAddress" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [791 826])
+                                    ("remote_address" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("SocketAddress" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [835 871])
+                                    ("sock_id" variable (:type ("SocketId" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [880 897])
+                                    ("handler" variable
+                                       (:pointer 1
+                                        :type ("StreamSocketHandler" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [906 935])
+                                    ("max_packet_size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [944 967])
+                                    ("options" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("NetFrame::EndPointOptions" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [976 1017])
+                                    ("connected" variable (:type "bool") (reparse-symbol arg-sub-list) [1026 1046]))                                  
+                                :type ("StreamSocketContext" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [734 1047])
+                            ("StreamSocketContext" function
+                               (:prototype-flag t
+                                :destructor-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [1052 1075])
+                            ("private" label nil (reparse-symbol classsubparts) [1077 1085])
+                            ("HandleIoEvent" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("event" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("IoEvent" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1116 1137]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [1090 1138])
+                            ("HandleCommandEvent" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("event" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("CommandEvent" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1186 1212]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [1155 1213])
+                            ("GetWantedEventMask" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :typemodifiers ("virtual")
+                                :type "unsigned int")
+                                (reparse-symbol classsubparts) [1230 1278])
+                            ("HandleInput" function
+                               (:prototype-flag t
+                                :type "bool")
+                                (reparse-symbol classsubparts) [1370 1389])
+                            ("HandleOutput" function
+                               (:prototype-flag t
+                                :type "bool")
+                                (reparse-symbol classsubparts) [1469 1489])
+                            ("SendPacket" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("packet" variable
+                                       (:pointer 1
+                                        :type ("Packet" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1634 1649]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [1619 1650])
+                            ("SendBuffer" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("buffer" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "void")
+                                        (reparse-symbol arg-sub-list) [1769 1788])
+                                    ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1789 1801]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [1754 1802])
+                            ("Receive" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("buffer" variable
+                                       (:pointer 1
+                                        :type "void")
+                                        (reparse-symbol arg-sub-list) [1845 1858])
+                                    ("buffer_length" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1859 1880]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [1833 1881])
+                            ("SplitAndIndicatePackets" function
+                               (:prototype-flag t
+                                :type "int")
+                                (reparse-symbol classsubparts) [1968 1998])
+                            ("CheckAndIndicatePacket" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("" variable
+                                       (:pointer 1
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [2031 2037])
+                                    ("" variable (:type ("buffer" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2038 2045])
+                                    ("left_length" variable
+                                       (:reference 1
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [2046 2063]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [2004 2064])
+                            ("AdjustReceiveBufferSize" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [2070 2101])
+                            ("ResizeReceiveBuffer" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2131 2143]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2106 2144])
+                            ("private" label nil (reparse-symbol classsubparts) [2145 2153])
+                            ("GetEventHandler" function
+                               (:methodconst-flag t
+                                :pointer 1
+                                :typemodifiers ("virtual")
+                                :type ("StreamSocketHandler" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2158 2318])
+                            ("private" label nil (reparse-symbol classsubparts) [2319 2327])
+                            ("m_Connected" variable (:type "bool") (reparse-symbol classsubparts) [2332 2351])
+                            ("m_SentLength" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2378 2398])
+                            ("m_MinBufferLength" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2431 2456])
+                            ("m_ReceiveBuffer" variable
+                               (:pointer 1
+                                :type "char")
+                                (reparse-symbol classsubparts) [2479 2502])
+                            ("m_ReceiveBufferLength" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2527 2556])
+                            ("m_ReceivedLength" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2578 2602])
+                            ("m_DetectedPacketLength" variable (:type "int") (reparse-symbol classsubparts) [2630 2660])
+                            ("m_ReceivePacket" variable (:type ("Packet" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2680 2703]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [671 2729]))                  
+                :type "namespace")
+                nil [649 2732]))          
+      :file "stream_socket_context.h"
+      :pointmax 2831
+      :fsize 3238
+      :lastmodtime '(22840 64125 0 0)
+      :unmatched-syntax '((punctuation 2036 . 2037))
+      :lexical-table 
+        '(("COMMON_NETFRAME_STREAM_SOCKET_CONTEXT_H")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :file "socket_context.h"
+      :fsize 4336
+      :lastmodtime '(22840 64125 0 0))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("COMMON_NETFRAME_SOCKET_HANDLER_H" variable (:constant-flag t) nil [534 566])
+            ("string" include (:system-flag t) nil [568 585])
+            ("vector" include (:system-flag t) nil [586 603])
+            ("common/netframe/netframe.h" include nil nil [604 641])
+            ("common/netframe/packet.h" include nil nil [642 677])
+            ("netframe" type
+               (:members 
+                  ( ("SocketHandler" type
+                       (:members 
+                          ( ("protected" label nil (reparse-symbol classsubparts) [763 773])
+                            ("SocketHandler" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("netframe" variable
+                                       (:reference 1
+                                        :type ("NetFrame" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [801 820]))                                  
+                                :type ("SocketHandler" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [787 887])
+                            ("m_EndPoint" variable (:type ("NetFrame::EndPoint" type (:type "class") nil nil)) (reparse-symbol classsubparts) [892 922])
+                            ("public" label nil (reparse-symbol classsubparts) [924 931])
+                            ("SocketHandler" function
+                               (:destructor-flag t
+                                :typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [936 963])
+                            ("SetEndPointId" function
+                               (:arguments 
+                                  ( ("id" variable (:type ("SocketId" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [988 1000]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [969 1050])
+                            ("GetEndPoint" function
+                               (:typemodifiers ("virtual")
+                                :type ("NetFrame::EndPoint" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1055 1135])
+                            ("GetNetFrame" function
+                               (:methodconst-flag t
+                                :type ("NetFrame" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1140 1208])
+                            ("GetCommandQueueLength" function (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1214 1293])
+                            ("SetCommandQueueLength" function
+                               (:arguments 
+                                  ( ("length" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1325 1339]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1298 1390])
+                            ("OnClose" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("error_code" variable (:type "int") (reparse-symbol arg-sub-list) [1558 1573]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1537 1578])
+                            ("OnSendingFailed" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("packet" variable
+                                       (:pointer 1
+                                        :type ("Packet" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1943 1958])
+                                    ("error_code" variable (:type "int") (reparse-symbol arg-sub-list) [1959 1974]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [1914 2007])
+                            ("private" label nil (reparse-symbol classsubparts) [2009 2017])
+                            ("m_NetFrame" variable (:type ("NetFrame" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2022 2043])
+                            ("m_CommandQueueLength" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2048 2076]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [741 2079])
+                    ("StreamSocketHandler" type
+                       (:superclasses 
+                          ( ("SocketHandler" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [2132 2139])
+                            ("StreamSocketHandler" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("netframe" variable
+                                       (:reference 1
+                                        :type ("NetFrame" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2173 2192]))                                  
+                                :type ("StreamSocketHandler" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2153 2237])
+                            ("OnConnected" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [2279 2310])
+                            ("DetectPacketSize" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("data" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "void")
+                                        (reparse-symbol arg-sub-list) [2454 2471])
+                                    ("length" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2472 2486]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [2425 2491])
+                            ("GetEndPoint" function (:type ("NetFrame::StreamEndPoint" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2497 2628])
+                            ("OnReceived" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("packet" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Packet" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2681 2702]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2657 2707])
+                            ("OnSent" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("packet" variable
+                                       (:pointer 1
+                                        :type ("Packet" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2888 2903]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [2868 2936])
+                            ("SetRemoteAddress" function
+                               (:arguments 
+                                  ( ("address" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("SocketAddress" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3003 3032]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2981 3076])
+                            ("GetRemoteAddress" function
+                               (:methodconst-flag t
+                                :constant-flag t
+                                :type ("SocketAddress" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3082 3168])
+                            ("private" label nil (reparse-symbol classsubparts) [3170 3178])
+                            ("m_remote_address" variable (:type ("SocketAddressStorage" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3183 3221]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [2081 3224])
+                    ("DatagramSocketHandler" type
+                       (:superclasses 
+                          ( ("SocketHandler" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [3279 3286])
+                            ("DatagramSocketHandler" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("netframe" variable
+                                       (:reference 1
+                                        :type ("NetFrame" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3322 3341]))                                  
+                                :type ("DatagramSocketHandler" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3300 3386])
+                            ("GetEndPoint" function
+                               (:typemodifiers ("virtual")
+                                :type ("NetFrame::DatagramEndPoint" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3392 3535])
+                            ("OnReceived" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("packet" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Packet" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3588 3609]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [3564 3614])
+                            ("OnSent" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("packet" variable
+                                       (:pointer 1
+                                        :type ("Packet" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3664 3679]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [3644 3712]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [3226 3715])
+                    ("ListenSocketHandler" type
+                       (:superclasses 
+                          ( ("SocketHandler" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [3768 3775])
+                            ("ListenSocketHandler" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("netframe" variable
+                                       (:reference 1
+                                        :type ("NetFrame" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3809 3828]))                                  
+                                :type ("ListenSocketHandler" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3789 3873])
+                            ("OnAccepted" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :pointer 1
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("id" variable (:type ("SocketId" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3983 3995]))                                  
+                                :type ("StreamSocketHandler" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3943 4000])
+                            ("GetEndPoint" function (:type ("NetFrame::ListenEndPoint" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4006 4137]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [3717 4140])
+                    ("LineStreamSocketHandler" type
+                       (:superclasses 
+                          ( ("StreamSocketHandler" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [4220 4227])
+                            ("LineStreamSocketHandler" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("netframe" variable
+                                       (:reference 1
+                                        :type ("NetFrame" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4265 4284]))                                  
+                                :type ("LineStreamSocketHandler" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4241 4327])
+                            ("DetectPacketSize" function
+                               (:arguments 
+                                  ( ("header" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "void")
+                                        (reparse-symbol arg-sub-list) [4353 4372])
+                                    ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4373 4385]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [4332 4561]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [4159 4564]))                  
+                :type "namespace")
+                nil [701 4567]))          
+      :file "socket_handler.h"
+      :pointmax 4659
+      :fsize 5422
+      :lastmodtime '(22840 64125 0 0)
+      :unmatched-syntax '((EXPLICIT 4232 . 4240) (EXPLICIT 3780 . 3788) (EXPLICIT 3291 . 3299) (EXPLICIT 2144 . 2152) (EXPLICIT 778 . 786))
+      :lexical-table 
+        '(("COMMON_NETFRAME_SOCKET_HANDLER_H")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :file "netframe.h"
+      :fsize 10621
+      :lastmodtime '(22840 64125 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "packet.h"
+      :fsize 3113
+      :lastmodtime '(22840 64125 0 0)))
+  :file "!Users!ric!Downloads!trunk!common!netframe!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

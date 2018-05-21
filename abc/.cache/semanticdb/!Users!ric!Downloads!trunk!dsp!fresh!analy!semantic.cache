@@ -1,0 +1,197 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("stdio.h" include (:system-flag t) nil [73 91])
+            ("string" include (:system-flag t) nil [92 109])
+            ("thirdparty/gflags/gflags.h" include nil nil [111 148])
+            ("thirdparty/glog/logging.h" include nil nil [149 185])
+            ("common/base/module.h" include nil nil [186 217])
+            ("dsp/common/load_protobuf_data.h" include nil nil [218 260])
+            ("dsp/fresh/proto/fresh_inner.pb.h" include nil nil [261 304])
+            ("dsp/fresh/analy/read_data.h" include nil nil [305 343])
+            ("dsp/fresh/strategy/strategy_processor.h" include nil nil [344 394])
+            ("dsp/fresh/common/output_manager.h" include nil nil [395 439])
+            ("DEFINE_string" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("config_file" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [456 468]))                  
+                :type "int")
+                nil [442 528])
+            ("DEFINE_int32" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("sleep_seconds" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [542 556]))                  
+                :type "int")
+                nil [529 607])
+            ("Init" function
+               (:arguments 
+                  ( ("p_read_data" variable
+                       (:pointer 1
+                        :type ("dsp::fresh::ReadData" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [623 657])
+                    ("p_strategy_processor" variable
+                       (:pointer 1
+                        :type ("dsp::fresh::StrategyProcessor" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [660 712])
+                    ("p_output_manager" variable
+                       (:pointer 1
+                        :type ("dsp::fresh::OutputManager" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [715 759]))                  
+                :type ("int32_t" type (:type "class") nil nil))
+                nil [610 1711])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1726 1739])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1740 1753]))                  
+                :type ("int32_t" type (:type "class") nil nil))
+                nil [1713 3464]))          
+      :file "fresh_analy_main.cc"
+      :pointmax 3465
+      :fsize 3464
+      :lastmodtime '(22840 64119 0 0)
+      :unmatched-syntax '((string 561 . 605) (number 557 . 559) (string 496 . 526) (string 469 . 492)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("map" include (:system-flag t) nil [74 88])
+            ("list" include (:system-flag t) nil [89 104])
+            ("set" include (:system-flag t) nil [105 119])
+            ("common/system/net/ip_address.h" include nil nil [121 162])
+            ("dsp/aerospike/aerospike_status.h" include nil nil [163 206])
+            ("dsp/fresh/analy/read_data.h" include nil nil [207 245])
+            ("DEFINE_string" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("user_data_bins" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [262 277]))                  
+                :type "int")
+                nil [248 330])
+            ("dsp" type
+               (:members 
+                  ( ("fresh" type
+                       (:members 
+                          ( ("ReadData" function
+                               (:constructor-flag t
+                                :parent "ReadData"
+                                :type ("ReadData" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [368 392])
+                            ("ReadData" function
+                               (:destructor-flag t
+                                :parent "ReadData"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [394 419])
+                            ("Init" function
+                               (:parent "ReadData"
+                                :arguments 
+                                  ( ("input_config" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("InputConfig" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [441 473]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [421 761])
+                            ("InitKafka" function
+                               (:parent "ReadData"
+                                :arguments 
+                                  ( ("kafka_config" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("KafkaConsumerConfig" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [788 828]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [763 1588])
+                            ("InitAerospike" function
+                               (:parent "ReadData"
+                                :arguments 
+                                  ( ("aerospike_config" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("AerospikeConfig" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1619 1659]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [1590 2373])
+                            ("GetHost" function
+                               (:parent "ReadData"
+                                :arguments 
+                                  ( ("host" variable
+                                       (:pointer 1
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2398 2416]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [2375 2661])
+                            ("GetData" function
+                               (:parent "ReadData"
+                                :arguments 
+                                  ( ("vec_data_set" variable
+                                       (:pointer 1
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("UserStatDataSet" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [2686 2729]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [2663 3491])
+                            ("GetDataFromKafka" function
+                               (:parent "ReadData"
+                                :arguments 
+                                  ( ("vec_key" variable
+                                       (:pointer 1
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("std::string" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [3525 3559]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [3493 3890])
+                            ("CommitKafkaOffset" function
+                               (:parent "ReadData"
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [3892 3981])
+                            ("GetDataFromAerospike" function
+                               (:parent "ReadData"
+                                :arguments 
+                                  ( ("vec_key" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("std::string" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [4022 4062])
+                                    ("vec_data_set" variable
+                                       (:pointer 1
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("UserStatDataSet" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [4065 4108]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [3983 5282]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [349 5285]))                  
+                :type "namespace")
+                nil [333 5307]))          
+      :file "read_data.cc"
+      :pointmax 5326
+      :fsize 5325
+      :lastmodtime '(22960 43113 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :file "read_data.h"
+      :fsize 1354
+      :lastmodtime '(22840 64119 0 0)))
+  :file "!Users!ric!Downloads!trunk!dsp!fresh!analy!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

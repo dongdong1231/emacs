@@ -1,0 +1,2222 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("db.h" include nil nil [735 750])
+            ("commdef.h" include nil nil [751 771])
+            ("utils_include.h" include nil nil [772 798])
+            ("phxpaxos" type
+               (:members 
+                  ( ("Compare" function
+                       (:methodconst-flag t
+                        :parent "PaxosComparator"
+                        :arguments 
+                          ( ("a" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("leveldb::Slice" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [853 878])
+                            ("b" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("leveldb::Slice" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [879 904]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [822 941])
+                    ("PCompare" function
+                       (:parent "PaxosComparator"
+                        :arguments 
+                          ( ("a" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("leveldb::Slice" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [975 1000])
+                            ("b" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("leveldb::Slice" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1001 1026]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [943 1578])
+                    ("Database" function
+                       (:constructor-flag t
+                        :parent "Database"
+                        :type ("Database" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [1606 1728])
+                    ("Database" function
+                       (:destructor-flag t
+                        :parent "Database"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1730 1870])
+                    ("ClearAllLog" function
+                       (:parent "Database"
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [1872 3473])
+                    ("Init" function
+                       (:parent "Database"
+                        :arguments 
+                          ( ("sDBPath" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3496 3524])
+                            ("iMyGroupIdx" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [3525 3547]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [3475 4524])
+                    ("GetDBPath" function
+                       (:parent "Database"
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [4526 4593])
+                    ("GetMaxInstanceIDFileID" function
+                       (:parent "Database"
+                        :arguments 
+                          ( ("sFileID" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4634 4656])
+                            ("llInstanceID" variable
+                               (:reference 1
+                                :type ("uint64_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4657 4681]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [4595 5425])
+                    ("RebuildOneIndex" function
+                       (:parent "Database"
+                        :arguments 
+                          ( ("llInstanceID" variable
+                               (:constant-flag t
+                                :type ("uint64_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5459 5487])
+                            ("sFileID" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5488 5516]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [5427 5948])
+                    ("GetFromLevelDB" function
+                       (:parent "Database"
+                        :arguments 
+                          ( ("llInstanceID" variable
+                               (:constant-flag t
+                                :type ("uint64_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6055 6083])
+                            ("sValue" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6084 6105]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [6024 6634])
+                    ("Get" function
+                       (:parent "Database"
+                        :arguments 
+                          ( ("llInstanceID" variable
+                               (:constant-flag t
+                                :type ("uint64_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6656 6684])
+                            ("sValue" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6685 6706]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [6636 7309])
+                    ("ValueToFileID" function
+                       (:parent "Database"
+                        :arguments 
+                          ( ("oWriteOptions" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("WriteOptions" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7341 7376])
+                            ("llInstanceID" variable
+                               (:constant-flag t
+                                :type ("uint64_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7377 7405])
+                            ("sValue" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7406 7433])
+                            ("sFileID" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7434 7456]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [7311 7699])
+                    ("FileIDToValue" function
+                       (:parent "Database"
+                        :arguments 
+                          ( ("sFileID" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7731 7759])
+                            ("llInstanceID" variable
+                               (:reference 1
+                                :type ("uint64_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7760 7784])
+                            ("sValue" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7785 7806]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [7701 7980])
+                    ("PutToLevelDB" function
+                       (:parent "Database"
+                        :arguments 
+                          ( ("bSync" variable
+                               (:constant-flag t
+                                :type "bool")
+                                (reparse-symbol arg-sub-list) [8011 8028])
+                            ("llInstanceID" variable
+                               (:constant-flag t
+                                :type ("uint64_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [8029 8057])
+                            ("sValue" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [8058 8085]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [7982 8604])
+                    ("Put" function
+                       (:parent "Database"
+                        :arguments 
+                          ( ("oWriteOptions" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("WriteOptions" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [8626 8661])
+                            ("llInstanceID" variable
+                               (:constant-flag t
+                                :type ("uint64_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [8662 8690])
+                            ("sValue" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [8691 8718]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [8606 9029])
+                    ("ForceDel" function
+                       (:parent "Database"
+                        :arguments 
+                          ( ("oWriteOptions" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("WriteOptions" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [9056 9091])
+                            ("llInstanceID" variable
+                               (:constant-flag t
+                                :type ("uint64_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [9092 9120]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [9031 10053])
+                    ("Del" function
+                       (:parent "Database"
+                        :arguments 
+                          ( ("oWriteOptions" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("WriteOptions" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [10075 10110])
+                            ("llInstanceID" variable
+                               (:constant-flag t
+                                :type ("uint64_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [10111 10139]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [10055 11249])
+                    ("GetMaxInstanceID" function
+                       (:parent "Database"
+                        :arguments 
+                          ( ("llInstanceID" variable
+                               (:reference 1
+                                :type ("uint64_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [11284 11308]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [11251 11858])
+                    ("GenKey" function
+                       (:parent "Database"
+                        :arguments 
+                          ( ("llInstanceID" variable
+                               (:constant-flag t
+                                :type ("uint64_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [11891 11919]))                          
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [11860 12015])
+                    ("GetInstanceIDFromKey" function
+                       (:parent "Database"
+                        :constant-flag t
+                        :arguments 
+                          ( ("sKey" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [12065 12090]))                          
+                        :type ("uint64_t" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [12017 12209])
+                    ("GetMinChosenInstanceID" function
+                       (:parent "Database"
+                        :arguments 
+                          ( ("llMinInstanceID" variable
+                               (:reference 1
+                                :type ("uint64_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [12250 12277]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [12211 13322])
+                    ("SetMinChosenInstanceID" function
+                       (:parent "Database"
+                        :arguments 
+                          ( ("oWriteOptions" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("WriteOptions" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [13363 13398])
+                            ("llMinInstanceID" variable
+                               (:constant-flag t
+                                :type ("uint64_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [13399 13430]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [13324 13870])
+                    ("SetSystemVariables" function
+                       (:parent "Database"
+                        :arguments 
+                          ( ("oWriteOptions" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("WriteOptions" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [13908 13943])
+                            ("sBuffer" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [13944 13972]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [13873 14102])
+                    ("GetSystemVariables" function
+                       (:parent "Database"
+                        :arguments 
+                          ( ("sBuffer" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [14139 14161]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [14104 14287])
+                    ("SetMasterVariables" function
+                       (:parent "Database"
+                        :arguments 
+                          ( ("oWriteOptions" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("WriteOptions" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [14324 14359])
+                            ("sBuffer" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [14360 14388]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [14289 14518])
+                    ("GetMasterVariables" function
+                       (:parent "Database"
+                        :arguments 
+                          ( ("sBuffer" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [14555 14577]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [14520 14703])
+                    ("MultiDatabase" function
+                       (:constructor-flag t
+                        :parent "MultiDatabase"
+                        :type ("MultiDatabase" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [14759 14795])
+                    ("MultiDatabase" function
+                       (:destructor-flag t
+                        :parent "MultiDatabase"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [14797 14903])
+                    ("Init" function
+                       (:parent "MultiDatabase"
+                        :arguments 
+                          ( ("sDBPath" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [14931 14959])
+                            ("iGroupCount" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [14960 14982]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [14905 15903])
+                    ("GetLogStorageDirPath" function
+                       (:parent "MultiDatabase"
+                        :constant-flag t
+                        :arguments 
+                          ( ("iGroupIdx" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [15961 15981]))                          
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [15905 16111])
+                    ("Get" function
+                       (:parent "MultiDatabase"
+                        :arguments 
+                          ( ("iGroupIdx" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [16138 16158])
+                            ("llInstanceID" variable
+                               (:constant-flag t
+                                :type ("uint64_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [16159 16187])
+                            ("sValue" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [16188 16209]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [16113 16353])
+                    ("Put" function
+                       (:parent "MultiDatabase"
+                        :arguments 
+                          ( ("oWriteOptions" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("WriteOptions" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [16380 16415])
+                            ("iGroupIdx" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [16416 16436])
+                            ("llInstanceID" variable
+                               (:constant-flag t
+                                :type ("uint64_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [16437 16465])
+                            ("sValue" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [16466 16493]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [16355 16652])
+                    ("Del" function
+                       (:parent "MultiDatabase"
+                        :arguments 
+                          ( ("oWriteOptions" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("WriteOptions" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [16679 16714])
+                            ("iGroupIdx" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [16715 16735])
+                            ("llInstanceID" variable
+                               (:constant-flag t
+                                :type ("uint64_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [16736 16764]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [16654 16915])
+                    ("ForceDel" function
+                       (:parent "MultiDatabase"
+                        :arguments 
+                          ( ("oWriteOptions" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("WriteOptions" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [16947 16982])
+                            ("iGroupIdx" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [16983 17003])
+                            ("llInstanceID" variable
+                               (:constant-flag t
+                                :type ("uint64_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [17004 17032]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [16917 17188])
+                    ("GetMaxInstanceID" function
+                       (:parent "MultiDatabase"
+                        :arguments 
+                          ( ("iGroupIdx" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [17228 17248])
+                            ("llInstanceID" variable
+                               (:reference 1
+                                :type ("uint64_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [17249 17273]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [17190 17422])
+                    ("SetMinChosenInstanceID" function
+                       (:parent "MultiDatabase"
+                        :arguments 
+                          ( ("oWriteOptions" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("WriteOptions" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [17468 17503])
+                            ("iGroupIdx" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [17504 17524])
+                            ("llMinInstanceID" variable
+                               (:constant-flag t
+                                :type ("uint64_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [17525 17556]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [17424 17729])
+                    ("GetMinChosenInstanceID" function
+                       (:parent "MultiDatabase"
+                        :arguments 
+                          ( ("iGroupIdx" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [17775 17795])
+                            ("llMinInstanceID" variable
+                               (:reference 1
+                                :type ("uint64_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [17796 17823]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [17731 17981])
+                    ("ClearAllLog" function
+                       (:parent "MultiDatabase"
+                        :arguments 
+                          ( ("iGroupIdx" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [18016 18036]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [17983 18168])
+                    ("SetSystemVariables" function
+                       (:parent "MultiDatabase"
+                        :arguments 
+                          ( ("oWriteOptions" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("WriteOptions" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [18210 18245])
+                            ("iGroupIdx" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [18246 18266])
+                            ("sBuffer" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [18267 18295]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [18170 18456])
+                    ("GetSystemVariables" function
+                       (:parent "MultiDatabase"
+                        :arguments 
+                          ( ("iGroupIdx" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [18498 18518])
+                            ("sBuffer" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [18519 18541]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [18458 18687])
+                    ("SetMasterVariables" function
+                       (:parent "MultiDatabase"
+                        :arguments 
+                          ( ("oWriteOptions" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("WriteOptions" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [18729 18764])
+                            ("iGroupIdx" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [18765 18785])
+                            ("sBuffer" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [18786 18814]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [18689 18975])
+                    ("GetMasterVariables" function
+                       (:parent "MultiDatabase"
+                        :arguments 
+                          ( ("iGroupIdx" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [19017 19037])
+                            ("sBuffer" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [19038 19060]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [18977 19206]))                  
+                :type "namespace")
+                nil [800 19209]))          
+      :file "db.cpp"
+      :pointmax 19210
+      :fsize 19209
+      :lastmodtime '(23072 63409 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("leveldb/db.h" include nil nil [749 772])
+            ("leveldb/comparator.h" include nil nil [773 804])
+            ("vector" include (:system-flag t) nil [805 822])
+            ("string" include (:system-flag t) nil [823 840])
+            ("map" include (:system-flag t) nil [841 855])
+            ("comm_include.h" include nil nil [856 881])
+            ("phxpaxos/storage.h" include nil nil [882 911])
+            ("log_store.h" include nil nil [912 934])
+            ("phxpaxos" type
+               (:members 
+                  ( ("PaxosComparator" type
+                       (:superclasses 
+                          ( ("leveldb::Comparator" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [1011 1018])
+                            ("Compare" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :arguments 
+                                  ( ("a" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("leveldb::Slice" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1035 1060])
+                                    ("b" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("leveldb::Slice" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1061 1086]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [1023 1093])
+                            ("PCompare" function
+                               (:prototype-flag t
+                                :typemodifiers ("static")
+                                :arguments 
+                                  ( ("a" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("leveldb::Slice" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1119 1144])
+                                    ("b" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("leveldb::Slice" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1145 1170]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [1099 1171])
+                            ("Name" function
+                               (:methodconst-flag t
+                                :pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol classsubparts) [1177 1230])
+                            ("FindShortestSeparator" function
+                               (:methodconst-flag t
+                                :arguments 
+                                  ( ("" variable
+                                       (:pointer 1
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1263 1277])
+                                    ("" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("leveldb::Slice" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1278 1301]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1236 1310])
+                            ("FindShortSuccessor" function
+                               (:methodconst-flag t
+                                :arguments 
+                                  ( ("" variable
+                                       (:pointer 1
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1340 1354]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1316 1363]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [958 1366])
+                    ("MINCHOSEN_KEY" variable (:constant-flag t) (reparse-symbol namespacesubparts) [1420 1433])
+                    ("SYSTEMVARIABLES_KEY" variable (:constant-flag t) (reparse-symbol namespacesubparts) [1457 1476])
+                    ("MASTERVARIABLES_KEY" variable (:constant-flag t) (reparse-symbol namespacesubparts) [1500 1519])
+                    ("Database" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [1553 1560])
+                            ("Database" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :type ("Database" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1565 1576])
+                            ("Database" function
+                               (:prototype-flag t
+                                :destructor-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [1581 1593])
+                            ("Init" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("sDBPath" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1608 1636])
+                                    ("iMyGroupIdx" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1637 1659]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [1599 1660])
+                            ("GetDBPath" function
+                               (:prototype-flag t
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1666 1696])
+                            ("ClearAllLog" function
+                               (:prototype-flag t
+                                :type "int")
+                                (reparse-symbol classsubparts) [1702 1720])
+                            ("Get" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("llInstanceID" variable
+                                       (:constant-flag t
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1734 1762])
+                                    ("sValue" variable
+                                       (:reference 1
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1763 1784]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [1726 1785])
+                            ("Put" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("oWriteOptions" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("WriteOptions" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1799 1834])
+                                    ("llInstanceID" variable
+                                       (:constant-flag t
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1835 1863])
+                                    ("sValue" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1864 1891]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [1791 1892])
+                            ("Del" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("oWriteOptions" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("WriteOptions" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1906 1941])
+                                    ("llInstanceID" variable
+                                       (:constant-flag t
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1942 1970]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [1898 1971])
+                            ("ForceDel" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("oWriteOptions" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("WriteOptions" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1990 2025])
+                                    ("llInstanceID" variable
+                                       (:constant-flag t
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2026 2054]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [1977 2055])
+                            ("GetMaxInstanceID" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("llInstanceID" variable
+                                       (:reference 1
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2082 2106]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [2061 2107])
+                            ("SetMinChosenInstanceID" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("oWriteOptions" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("WriteOptions" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2140 2175])
+                                    ("llMinInstanceID" variable
+                                       (:constant-flag t
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2176 2207]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [2113 2208])
+                            ("GetMinChosenInstanceID" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("llMinInstanceID" variable
+                                       (:reference 1
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2241 2268]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [2214 2269])
+                            ("SetSystemVariables" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("oWriteOptions" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("WriteOptions" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2298 2333])
+                                    ("sBuffer" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2334 2362]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [2275 2363])
+                            ("GetSystemVariables" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("sBuffer" variable
+                                       (:reference 1
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2392 2414]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [2369 2415])
+                            ("SetMasterVariables" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("oWriteOptions" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("WriteOptions" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2444 2479])
+                                    ("sBuffer" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2480 2508]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [2421 2509])
+                            ("GetMasterVariables" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("sBuffer" variable
+                                       (:reference 1
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2538 2560]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [2515 2561])
+                            ("public" label nil (reparse-symbol classsubparts) [2563 2570])
+                            ("GetMaxInstanceIDFileID" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("sFileID" variable
+                                       (:reference 1
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2602 2624])
+                                    ("llInstanceID" variable
+                                       (:reference 1
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2625 2649]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [2575 2650])
+                            ("RebuildOneIndex" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("llInstanceID" variable
+                                       (:constant-flag t
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2676 2704])
+                                    ("sFileID" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2705 2733]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [2656 2734])
+                            ("private" label nil (reparse-symbol classsubparts) [2736 2744])
+                            ("ValueToFileID" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("oWriteOptions" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("WriteOptions" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2767 2802])
+                                    ("llInstanceID" variable
+                                       (:constant-flag t
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2803 2831])
+                                    ("sValue" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2832 2859])
+                                    ("sFileID" variable
+                                       (:reference 1
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2860 2882]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [2749 2883])
+                            ("FileIDToValue" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("sFileID" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2907 2935])
+                                    ("llInstanceID" variable
+                                       (:reference 1
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2936 2960])
+                                    ("sValue" variable
+                                       (:reference 1
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2961 2982]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [2889 2983])
+                            ("GetFromLevelDB" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("llInstanceID" variable
+                                       (:constant-flag t
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3008 3036])
+                                    ("sValue" variable
+                                       (:reference 1
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3037 3058]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [2989 3059])
+                            ("PutToLevelDB" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("bSync" variable
+                                       (:constant-flag t
+                                        :type "bool")
+                                        (reparse-symbol arg-sub-list) [3082 3099])
+                                    ("llInstanceID" variable
+                                       (:constant-flag t
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3100 3128])
+                                    ("sValue" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3129 3156]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [3065 3157])
+                            ("private" label nil (reparse-symbol classsubparts) [3159 3167])
+                            ("GenKey" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("llInstanceID" variable
+                                       (:constant-flag t
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3191 3219]))                                  
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3172 3220])
+                            ("GetInstanceIDFromKey" function
+                               (:prototype-flag t
+                                :constant-flag t
+                                :arguments 
+                                  ( ("sKey" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3262 3287]))                                  
+                                :type ("uint64_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3226 3288])
+                            ("public" label nil (reparse-symbol classsubparts) [3290 3297])
+                            ("m_poLevelDB" variable
+                               (:pointer 1
+                                :type ("leveldb::DB" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3313 3339])
+                            ("m_oPaxosCmp" variable (:type ("PaxosComparator" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3344 3372])
+                            ("m_bHasInit" variable (:type "bool") (reparse-symbol classsubparts) [3377 3393])
+                            ("m_poValueStore" variable
+                               (:pointer 1
+                                :type ("LogStore" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3399 3425])
+                            ("m_sDBPath" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3430 3452])
+                            ("m_iMyGroupIdx" variable (:type "int") (reparse-symbol classsubparts) [3458 3476])
+                            ("private" label nil (reparse-symbol classsubparts) [3478 3486])
+                            ("m_oTimeStat" variable (:type ("TimeStat" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3491 3512]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [1536 3515])
+                    ("MultiDatabase" type
+                       (:superclasses 
+                          ( ("LogStorage" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [3603 3610])
+                            ("MultiDatabase" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :type ("MultiDatabase" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3615 3631])
+                            ("MultiDatabase" function
+                               (:prototype-flag t
+                                :destructor-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [3636 3653])
+                            ("Init" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("sDBPath" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3668 3696])
+                                    ("iGroupCount" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [3697 3719]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [3659 3720])
+                            ("GetLogStorageDirPath" function
+                               (:prototype-flag t
+                                :constant-flag t
+                                :arguments 
+                                  ( ("iGroupIdx" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [3765 3785]))                                  
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3726 3786])
+                            ("Get" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("iGroupIdx" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [3800 3820])
+                                    ("llInstanceID" variable
+                                       (:constant-flag t
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3821 3849])
+                                    ("sValue" variable
+                                       (:reference 1
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3850 3871]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [3792 3872])
+                            ("Put" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("oWriteOptions" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("WriteOptions" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3886 3921])
+                                    ("iGroupIdx" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [3922 3942])
+                                    ("llInstanceID" variable
+                                       (:constant-flag t
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3943 3971])
+                                    ("sValue" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3972 3999]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [3878 4000])
+                            ("Del" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("oWriteOptions" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("WriteOptions" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4014 4049])
+                                    ("iGroupIdx" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [4050 4070])
+                                    ("llInstanceID" variable
+                                       (:constant-flag t
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4071 4099]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [4006 4100])
+                            ("ForceDel" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("oWriteOptions" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("WriteOptions" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4119 4154])
+                                    ("iGroupIdx" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [4155 4175])
+                                    ("llInstanceID" variable
+                                       (:constant-flag t
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4176 4204]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [4106 4205])
+                            ("GetMaxInstanceID" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("iGroupIdx" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [4232 4252])
+                                    ("llInstanceID" variable
+                                       (:reference 1
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4253 4277]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [4211 4278])
+                            ("SetMinChosenInstanceID" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("oWriteOptions" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("WriteOptions" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4311 4346])
+                                    ("iGroupIdx" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [4347 4367])
+                                    ("llMinInstanceID" variable
+                                       (:constant-flag t
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4368 4399]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [4284 4400])
+                            ("GetMinChosenInstanceID" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("iGroupIdx" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [4433 4453])
+                                    ("llMinInstanceID" variable
+                                       (:reference 1
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4454 4481]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [4406 4482])
+                            ("ClearAllLog" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("iGroupIdx" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [4504 4524]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [4488 4525])
+                            ("SetSystemVariables" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("oWriteOptions" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("WriteOptions" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4554 4589])
+                                    ("iGroupIdx" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [4590 4610])
+                                    ("sBuffer" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4611 4639]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [4531 4640])
+                            ("GetSystemVariables" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("iGroupIdx" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [4669 4689])
+                                    ("sBuffer" variable
+                                       (:reference 1
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4690 4712]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [4646 4713])
+                            ("SetMasterVariables" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("oWriteOptions" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("WriteOptions" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4742 4777])
+                                    ("iGroupIdx" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [4778 4798])
+                                    ("sBuffer" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4799 4827]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [4719 4828])
+                            ("GetMasterVariables" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("iGroupIdx" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [4857 4877])
+                                    ("sBuffer" variable
+                                       (:reference 1
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4878 4900]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [4834 4901])
+                            ("private" label nil (reparse-symbol classsubparts) [4903 4911])
+                            ("m_vecDBList" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("Database" type (:pointer 1) nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [4916 4952]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [3561 4955]))                  
+                :type "namespace")
+                nil [936 4958]))          
+      :file "db.h"
+      :pointmax 4959
+      :fsize 4958
+      :lastmodtime '(23253 56754 0 0)
+      :unmatched-syntax '((symbol 743 . 747) (symbol 736 . 742) (punctuation 735 . 736) (symbol 743 . 747) (symbol 736 . 742) (punctuation 735 . 736) (symbol 752 . 756) (symbol 745 . 751) (punctuation 744 . 745))
+      :lexical-table 
+        '(("MASTERVARIABLES_KEY" . ((semantic-list "((uint64_t)-3)" 1520 . 1534)))
+          ("SYSTEMVARIABLES_KEY" . ((semantic-list "((uint64_t)-2)" 1477 . 1491)))
+          ("MINCHOSEN_KEY" . ((semantic-list "((uint64_t)-1)" 1434 . 1448)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode makefile-bsdmake-mode
+      :tags 
+        '( ("SRC_BASE_PATH" variable (:default-value ("/home/ric/phxpaxos")) nil [1 34])
+            ("all" function (:arguments ("lib_logstorage")) nil [35 55])
+            ("$(SRC_BASE_PATH)/makefile.mk" include nil nil [56 93])
+            ("Makefile.define" include nil nil [94 118])
+            ("LOGSTORAGE_SRC" variable (:default-value ("$(LOGSTORAGE_OBJ)")) nil [118 151])
+            ("LOGSTORAGE_INCS" variable (:default-value ("$(sort $(SRC_BASE_PATH)/src/utils $(SRC_BASE_PATH)/src/comm $(PROTOBUF_INCLUDE_PATH) $(SRC_BASE_PATH)/include $(SRC_BASE_PATH)/src/logstorage $(LEVELDB_INCLUDE_PATH))")) nil [151 334])
+            ("LOGSTORAGE_FULL_LIB_PATH" variable (:default-value ("$(SRC_BASE_PATH)/include" "$(SRC_BASE_PATH)/src/utils" "$(SRC_BASE_PATH)/src/comm" "$(SRC_BASE_PATH)//src/logstorage")) nil [334 470])
+            ("LOGSTORAGE_EXTRA_CPPFLAGS" variable (:default-value ("-Wall" "-Werror")) nil [470 510])
+            ("CPPFLAGS" variable (:default-value ("$(patsubst %,-I%, $(LOGSTORAGE_INCS))")) nil [511 559])
+            ("CPPFLAGS" variable (:default-value ("$(LOGSTORAGE_EXTRA_CPPFLAGS)")) nil [559 598])
+            ("lib_logstorage" function (:arguments ("$(SRC_BASE_PATH)/.lib/liblogstorage.a")) nil [599 652])
+            ("$(SRC_BASE_PATH)" function (:arguments ("$(LOGSTORAGE_SRC)")) nil [653 740])
+            ("clean" function nil nil [741 806]))          
+      :file "Makefile"
+      :pointmax 807
+      :fsize 806
+      :lastmodtime '(23072 49578 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :file "Makefile.define"
+      :fsize 1096
+      :lastmodtime '(23072 47985 0 0))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("string" include (:system-flag t) nil [749 766])
+            ("mutex" include (:system-flag t) nil [767 783])
+            ("commdef.h" include nil nil [784 804])
+            ("utils_include.h" include nil nil [805 831])
+            ("commdef.h" include nil nil [832 852])
+            ("comm_include.h" include nil nil [853 878])
+            ("phxpaxos" type
+               (:members 
+                  ( ("Database" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [902 917])
+                    ("FILEID_LEN" variable (:constant-flag t) (reparse-symbol namespacesubparts) [927 937])
+                    ("LogStoreLogger" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [1009 1016])
+                            ("LogStoreLogger" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :type ("LogStoreLogger" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1021 1038])
+                            ("LogStoreLogger" function
+                               (:prototype-flag t
+                                :destructor-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [1043 1061])
+                            ("Init" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("sPath" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1077 1103]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1067 1104])
+                            ("Log" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("pcFormat" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [1118 1140])
+                                    ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [1141 1145]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1109 1146])
+                            ("private" label nil (reparse-symbol classsubparts) [1148 1156])
+                            ("m_iLogFd" variable (:type "int") (reparse-symbol classsubparts) [1161 1174]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [986 1177])
+                    ("LogStore" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [1196 1203])
+                            ("LogStore" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :type ("LogStore" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1208 1219])
+                            ("LogStore" function
+                               (:prototype-flag t
+                                :destructor-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [1224 1236])
+                            ("Init" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("sPath" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1251 1277])
+                                    ("iMyGroupIdx" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1278 1300])
+                                    ("poDatabase" variable
+                                       (:pointer 1
+                                        :type ("Database" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1301 1323]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [1242 1324])
+                            ("Append" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("oWriteOptions" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("WriteOptions" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1341 1376])
+                                    ("llInstanceID" variable
+                                       (:constant-flag t
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1377 1405])
+                                    ("sBuffer" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1406 1434])
+                                    ("sFileID" variable
+                                       (:reference 1
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1435 1457]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [1330 1458])
+                            ("Read" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("sFileID" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1473 1501])
+                                    ("llInstanceID" variable
+                                       (:reference 1
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1502 1526])
+                                    ("sBuffer" variable
+                                       (:reference 1
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1527 1549]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [1464 1550])
+                            ("Del" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("sFileID" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1564 1592])
+                                    ("llInstanceID" variable
+                                       (:constant-flag t
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1593 1621]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [1556 1622])
+                            ("ForceDel" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("sFileID" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1641 1669])
+                                    ("llInstanceID" variable
+                                       (:constant-flag t
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1670 1698]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [1628 1699])
+                            ("IsValidFileID" function
+                               (:prototype-flag t
+                                :constant-flag t
+                                :arguments 
+                                  ( ("sFileID" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1780 1808]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [1755 1809])
+                            ("RebuildIndex" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("poDatabase" variable
+                                       (:pointer 1
+                                        :type ("Database" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1882 1904])
+                                    ("iNowFileWriteOffset" variable
+                                       (:reference 1
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1905 1931]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [1865 1932])
+                            ("RebuildIndexForOneFile" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("iFileID" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1965 1983])
+                                    ("iOffset" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1984 2002])
+                                    ("poDatabase" variable
+                                       (:pointer 1
+                                        :type ("Database" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2015 2037])
+                                    ("iNowFileWriteOffset" variable
+                                       (:reference 1
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [2038 2064])
+                                    ("llNowInstanceID" variable
+                                       (:reference 1
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2065 2092]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [1938 2093])
+                            ("private" label nil (reparse-symbol classsubparts) [2095 2103])
+                            ("GenFileID" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("iFileID" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [2123 2141])
+                                    ("iOffset" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [2142 2160])
+                                    ("iCheckSum" variable
+                                       (:constant-flag t
+                                        :type ("uint32_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2161 2186])
+                                    ("sFileID" variable
+                                       (:reference 1
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2187 2209]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2108 2210])
+                            ("ParseFileID" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("sFileID" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2233 2261])
+                                    ("iFileID" variable
+                                       (:reference 1
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [2262 2276])
+                                    ("iOffset" variable
+                                       (:reference 1
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [2277 2291])
+                                    ("iCheckSum" variable
+                                       (:reference 1
+                                        :type ("uint32_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2292 2313]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2216 2314])
+                            ("IncreaseFileID" function
+                               (:prototype-flag t
+                                :type "int")
+                                (reparse-symbol classsubparts) [2320 2341])
+                            ("OpenFile" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("iFileID" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [2360 2378])
+                                    ("iFd" variable
+                                       (:reference 1
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [2379 2389]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [2347 2390])
+                            ("DeleteFile" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("iFileID" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [2411 2429]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [2396 2430])
+                            ("GetFileFD" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("iNeedWriteSize" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [2450 2475])
+                                    ("iFd" variable
+                                       (:reference 1
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [2476 2486])
+                                    ("iFileID" variable
+                                       (:reference 1
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [2487 2501])
+                                    ("iOffset" variable
+                                       (:reference 1
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [2502 2516]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [2436 2517])
+                            ("ExpandFile" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("iFd" variable (:type "int") (reparse-symbol arg-sub-list) [2538 2546])
+                                    ("iFileSize" variable
+                                       (:reference 1
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [2547 2563]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [2523 2564])
+                            ("private" label nil (reparse-symbol classsubparts) [2566 2574])
+                            ("m_iFd" variable (:type "int") (reparse-symbol classsubparts) [2579 2589])
+                            ("m_iMetaFd" variable (:type "int") (reparse-symbol classsubparts) [2594 2608])
+                            ("m_iFileID" variable (:type "int") (reparse-symbol classsubparts) [2613 2627])
+                            ("m_sPath" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2632 2652])
+                            ("m_oTmpBuffer" variable (:type ("BytesBuffer" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2657 2682])
+                            ("m_oTmpAppendBuffer" variable (:type ("BytesBuffer" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2687 2718])
+                            ("m_oMutex" variable (:type ("std::mutex" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2724 2744])
+                            ("m_oReadMutex" variable (:type ("std::mutex" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2749 2773])
+                            ("m_iDeletedMaxFileID" variable (:type "int") (reparse-symbol classsubparts) [2779 2803])
+                            ("m_iMyGroupIdx" variable (:type "int") (reparse-symbol classsubparts) [2808 2826])
+                            ("m_iNowFileSize" variable (:type "int") (reparse-symbol classsubparts) [2832 2851])
+                            ("m_iNowFileOffset" variable (:type "int") (reparse-symbol classsubparts) [2856 2877])
+                            ("private" label nil (reparse-symbol classsubparts) [2879 2887])
+                            ("m_oTimeStat" variable (:type ("TimeStat" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2892 2913])
+                            ("m_oFileLogger" variable (:type ("LogStoreLogger" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2918 2947]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [1179 2950]))                  
+                :type "namespace")
+                nil [880 2953]))          
+      :file "log_store.h"
+      :pointmax 2954
+      :fsize 2953
+      :lastmodtime '(23253 57975 0 0)
+      :unmatched-syntax '((symbol 743 . 747) (symbol 736 . 742) (punctuation 735 . 736))
+      :lexical-table 
+        '(("FILEID_LEN" . ((semantic-list "(sizeof(int) + sizeof(int) + sizeof(uint32_t))" 938 . 984)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("string" include (:system-flag t) nil [749 766])
+            ("vector" include (:system-flag t) nil [767 784])
+            ("inttypes.h" include (:system-flag t) nil [785 806])
+            ("phxpaxos/storage.h" include nil nil [807 836])
+            ("paxos_msg.pb.h" include nil nil [837 862])
+            ("phxpaxos" type
+               (:members 
+                  ( ("PaxosLog" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [903 910])
+                            ("PaxosLog" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("poLogStorage" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("LogStorage" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [924 956]))                                  
+                                :type ("PaxosLog" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [915 957])
+                            ("PaxosLog" function
+                               (:prototype-flag t
+                                :destructor-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [962 974])
+                            ("WriteLog" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("oWriteOptions" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("WriteOptions" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [993 1028])
+                                    ("iGroupIdx" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1029 1049])
+                                    ("llInstanceID" variable
+                                       (:constant-flag t
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1050 1078])
+                                    ("sValue" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1079 1106]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [980 1107])
+                            ("ReadLog" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("iGroupIdx" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1125 1145])
+                                    ("llInstanceID" variable
+                                       (:constant-flag t
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1146 1174])
+                                    ("sValue" variable
+                                       (:reference 1
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1175 1196]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [1113 1197])
+                            ("GetMaxInstanceIDFromLog" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("iGroupIdx" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1231 1251])
+                                    ("llInstanceID" variable
+                                       (:reference 1
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1252 1276]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [1203 1277])
+                            ("WriteState" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("oWriteOptions" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("WriteOptions" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1298 1333])
+                                    ("iGroupIdx" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1334 1354])
+                                    ("llInstanceID" variable
+                                       (:constant-flag t
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1355 1383])
+                                    ("oState" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("AcceptorStateData" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1384 1417]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [1283 1418])
+                            ("ReadState" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("iGroupIdx" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1438 1458])
+                                    ("llInstanceID" variable
+                                       (:constant-flag t
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1459 1487])
+                                    ("oState" variable
+                                       (:reference 1
+                                        :type ("AcceptorStateData" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1488 1515]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [1424 1516])
+                            ("private" label nil (reparse-symbol classsubparts) [1518 1526])
+                            ("m_poLogStorage" variable
+                               (:pointer 1
+                                :type ("LogStorage" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1531 1559]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [886 1562]))                  
+                :type "namespace")
+                nil [864 1565]))          
+      :file "paxos_log.h"
+      :pointmax 1566
+      :fsize 1565
+      :lastmodtime '(23253 59710 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("string" include (:system-flag t) nil [758 775])
+            ("vector" include (:system-flag t) nil [776 793])
+            ("inttypes.h" include (:system-flag t) nil [794 815])
+            ("phxpaxos/storage.h" include nil nil [816 845])
+            ("paxos_msg.pb.h" include nil nil [846 871])
+            ("phxpaxos" type
+               (:members 
+                  ( ("SystemVariablesStore" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [924 931])
+                            ("SystemVariablesStore" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("poLogStorage" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("LogStorage" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [957 989]))                                  
+                                :type ("SystemVariablesStore" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [936 990])
+                            ("SystemVariablesStore" function
+                               (:prototype-flag t
+                                :destructor-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [995 1019])
+                            ("Write" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("oWriteOptions" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("WriteOptions" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1035 1070])
+                                    ("iGroupIdx" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1072 1092])
+                                    ("oVariables" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("SystemVariables" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1093 1128]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [1025 1129])
+                            ("Read" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("iGroupIdx" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1144 1164])
+                                    ("oVariables" variable
+                                       (:reference 1
+                                        :type ("SystemVariables" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1165 1194]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [1135 1195])
+                            ("private" label nil (reparse-symbol classsubparts) [1197 1205])
+                            ("m_poLogStorage" variable
+                               (:pointer 1
+                                :type ("LogStorage" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1210 1238]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [895 1241]))                  
+                :type "namespace")
+                nil [873 1244]))          
+      :file "system_variables_store.h"
+      :pointmax 1245
+      :fsize 1244
+      :lastmodtime '(23072 47985 0 0)
+      :unmatched-syntax '((symbol 752 . 756) (symbol 745 . 751) (punctuation 744 . 745)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("log_store.h" include nil nil [735 757])
+            ("stdarg.h" include (:system-flag t) nil [758 777])
+            ("sys/types.h" include (:system-flag t) nil [778 800])
+            ("sys/stat.h" include (:system-flag t) nil [801 822])
+            ("fcntl.h" include (:system-flag t) nil [823 841])
+            ("unistd.h" include (:system-flag t) nil [842 861])
+            ("crc32.h" include nil nil [862 880])
+            ("comm_include.h" include nil nil [881 906])
+            ("db.h" include nil nil [907 922])
+            ("paxos_msg.pb.h" include nil nil [923 948])
+            ("phxpaxos" type
+               (:members 
+                  ( ("LogStore" function
+                       (:constructor-flag t
+                        :parent "LogStore"
+                        :type ("LogStore" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [972 1159])
+                    ("LogStore" function
+                       (:destructor-flag t
+                        :parent "LogStore"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1161 1307])
+                    ("Init" function
+                       (:parent "LogStore"
+                        :arguments 
+                          ( ("sPath" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1330 1356])
+                            ("iMyGroupIdx" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [1357 1379])
+                            ("poDatabase" variable
+                               (:pointer 1
+                                :type ("Database" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1380 1402]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [1309 3785])
+                    ("ExpandFile" function
+                       (:parent "LogStore"
+                        :arguments 
+                          ( ("iFd" variable (:type "int") (reparse-symbol arg-sub-list) [3814 3822])
+                            ("iFileSize" variable
+                               (:reference 1
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [3823 3839]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [3787 4567])
+                    ("IncreaseFileID" function
+                       (:parent "LogStore"
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [4569 5356])
+                    ("OpenFile" function
+                       (:parent "LogStore"
+                        :arguments 
+                          ( ("iFileID" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [5383 5401])
+                            ("iFd" variable
+                               (:reference 1
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [5402 5412]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [5358 5756])
+                    ("DeleteFile" function
+                       (:parent "LogStore"
+                        :arguments 
+                          ( ("iFileID" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [5785 5803]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [5758 6922])
+                    ("GetFileFD" function
+                       (:parent "LogStore"
+                        :arguments 
+                          ( ("iNeedWriteSize" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [6950 6975])
+                            ("iFd" variable
+                               (:reference 1
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [6976 6986])
+                            ("iFileID" variable
+                               (:reference 1
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [6987 7001])
+                            ("iOffset" variable
+                               (:reference 1
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [7002 7016]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [6924 8615])
+                    ("Append" function
+                       (:parent "LogStore"
+                        :arguments 
+                          ( ("oWriteOptions" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("WriteOptions" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [8640 8675])
+                            ("llInstanceID" variable
+                               (:constant-flag t
+                                :type ("uint64_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [8676 8704])
+                            ("sBuffer" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [8705 8733])
+                            ("sFileID" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [8734 8756]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [8617 10557])
+                    ("Read" function
+                       (:parent "LogStore"
+                        :arguments 
+                          ( ("sFileID" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [10580 10608])
+                            ("llInstanceID" variable
+                               (:reference 1
+                                :type ("uint64_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [10609 10633])
+                            ("sBuffer" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [10634 10656]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [10559 12167])
+                    ("Del" function
+                       (:parent "LogStore"
+                        :arguments 
+                          ( ("sFileID" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [12189 12217])
+                            ("llInstanceID" variable
+                               (:constant-flag t
+                                :type ("uint64_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [12218 12246]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [12169 12609])
+                    ("ForceDel" function
+                       (:parent "LogStore"
+                        :arguments 
+                          ( ("sFileID" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [12636 12664])
+                            ("llInstanceID" variable
+                               (:constant-flag t
+                                :type ("uint64_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [12665 12693]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [12611 13222])
+                    ("GenFileID" function
+                       (:parent "LogStore"
+                        :arguments 
+                          ( ("iFileID" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [13252 13270])
+                            ("iOffset" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [13271 13289])
+                            ("iCheckSum" variable
+                               (:constant-flag t
+                                :type ("uint32_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [13290 13315])
+                            ("sFileID" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [13316 13338]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [13225 13685])
+                    ("ParseFileID" function
+                       (:parent "LogStore"
+                        :arguments 
+                          ( ("sFileID" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [13716 13744])
+                            ("iFileID" variable
+                               (:reference 1
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [13745 13759])
+                            ("iOffset" variable
+                               (:reference 1
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [13760 13774])
+                            ("iCheckSum" variable
+                               (:reference 1
+                                :type ("uint32_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [13775 13796]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [13687 14113])
+                    ("IsValidFileID" function
+                       (:parent "LogStore"
+                        :constant-flag t
+                        :arguments 
+                          ( ("sFileID" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [14152 14180]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [14115 14274])
+                    ("RebuildIndex" function
+                       (:parent "LogStore"
+                        :arguments 
+                          ( ("poDatabase" variable
+                               (:pointer 1
+                                :type ("Database" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [14373 14395])
+                            ("iNowFileWriteOffset" variable
+                               (:reference 1
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [14396 14422]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [14344 15717])
+                    ("RebuildIndexForOneFile" function
+                       (:parent "LogStore"
+                        :arguments 
+                          ( ("iFileID" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [15758 15776])
+                            ("iOffset" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [15777 15795])
+                            ("poDatabase" variable
+                               (:pointer 1
+                                :type ("Database" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [15804 15826])
+                            ("iNowFileWriteOffset" variable
+                               (:reference 1
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [15827 15853])
+                            ("llNowInstanceID" variable
+                               (:reference 1
+                                :type ("uint64_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [15854 15881]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [15719 19681])
+                    ("LogStoreLogger" function
+                       (:constructor-flag t
+                        :parent "LogStoreLogger"
+                        :type ("LogStoreLogger" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [19743 19800])
+                    ("LogStoreLogger" function
+                       (:destructor-flag t
+                        :parent "LogStoreLogger"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [19802 19902])
+                    ("Init" function
+                       (:parent "LogStoreLogger"
+                        :arguments 
+                          ( ("sPath" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [19932 19958]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [19904 20143])
+                    ("Log" function
+                       (:parent "LogStoreLogger"
+                        :arguments 
+                          ( ("pcFormat" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [20172 20194])
+                            ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [20195 20199]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [20145 21055]))                  
+                :type "namespace")
+                nil [950 21058]))          
+      :file "log_store.cpp"
+      :pointmax 21059
+      :fsize 21058
+      :lastmodtime '(23253 57955 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("paxos_log.h" include nil nil [735 757])
+            ("db.h" include nil nil [758 773])
+            ("phxpaxos" type
+               (:members 
+                  ( ("PaxosLog" function
+                       (:constructor-flag t
+                        :parent "PaxosLog"
+                        :arguments 
+                          ( ("poLogStorage" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("LogStorage" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [818 850]))                          
+                        :type ("PaxosLog" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [797 899])
+                    ("PaxosLog" function
+                       (:destructor-flag t
+                        :parent "PaxosLog"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [901 928])
+                    ("WriteLog" function
+                       (:parent "PaxosLog"
+                        :arguments 
+                          ( ("oWriteOptions" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("WriteOptions" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [955 990])
+                            ("iGroupIdx" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [991 1011])
+                            ("llInstanceID" variable
+                               (:constant-flag t
+                                :type ("uint64_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1012 1040])
+                            ("sValue" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1041 1068]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [930 1723])
+                    ("ReadLog" function
+                       (:parent "PaxosLog"
+                        :arguments 
+                          ( ("iGroupIdx" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [1749 1769])
+                            ("llInstanceID" variable
+                               (:constant-flag t
+                                :type ("uint64_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1770 1798])
+                            ("sValue" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1799 1820]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [1725 2292])
+                    ("WriteState" function
+                       (:parent "PaxosLog"
+                        :arguments 
+                          ( ("oWriteOptions" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("WriteOptions" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2321 2356])
+                            ("iGroupIdx" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [2357 2377])
+                            ("llInstanceID" variable
+                               (:constant-flag t
+                                :type ("uint64_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2378 2406])
+                            ("oState" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("AcceptorStateData" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2407 2440]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [2294 2911])
+                    ("ReadState" function
+                       (:parent "PaxosLog"
+                        :arguments 
+                          ( ("iGroupIdx" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [2939 2959])
+                            ("llInstanceID" variable
+                               (:constant-flag t
+                                :type ("uint64_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2960 2988])
+                            ("oState" variable
+                               (:reference 1
+                                :type ("AcceptorStateData" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2989 3016]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [2913 3607])
+                    ("GetMaxInstanceIDFromLog" function
+                       (:parent "PaxosLog"
+                        :arguments 
+                          ( ("iGroupIdx" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [3649 3669])
+                            ("llInstanceID" variable
+                               (:reference 1
+                                :type ("uint64_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3670 3694]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [3609 4150]))                  
+                :type "namespace")
+                nil [775 4153]))          
+      :file "paxos_log.cpp"
+      :pointmax 4154
+      :fsize 4153
+      :lastmodtime '(23253 59707 0 0)
+      :unmatched-syntax nil))
+  :file "!Volumes!Transcend!phxpaxos!src!logstorage!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

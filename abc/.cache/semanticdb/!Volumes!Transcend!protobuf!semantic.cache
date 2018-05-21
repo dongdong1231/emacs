@@ -1,0 +1,184 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("_GetPath" function (:arguments 
+              ( ("ctx" variable nil (reparse-symbol function_parameters) [14 17])
+                ("path" variable nil (reparse-symbol function_parameters) [19 23]))              ) nil [1 130])
+            ("_IsNewExternal" function (:arguments 
+              ( ("ctx" variable nil (reparse-symbol function_parameters) [150 153]))              ) nil [131 437])
+            ("_GenDir" function (:arguments 
+              ( ("ctx" variable nil (reparse-symbol function_parameters) [450 453]))              ) nil [438 928])
+            ("_SourceDir" function (:arguments 
+              ( ("ctx" variable nil (reparse-symbol function_parameters) [944 947]))              ) nil [929 1235])
+            ("_CcHdrs" function (:arguments 
+              ( ("srcs" variable nil (reparse-symbol function_parameters) [1248 1252])
+                ("use_grpc_plugin" variable nil (reparse-symbol function_parameters) [1254 1269]))              ) nil [1236 1427])
+            ("_CcSrcs" function (:arguments 
+              ( ("srcs" variable nil (reparse-symbol function_parameters) [1440 1444])
+                ("use_grpc_plugin" variable nil (reparse-symbol function_parameters) [1446 1461]))              ) nil [1428 1621])
+            ("_CcOuts" function (:arguments 
+              ( ("srcs" variable nil (reparse-symbol function_parameters) [1634 1638])
+                ("use_grpc_plugin" variable nil (reparse-symbol function_parameters) [1640 1655]))              ) nil [1622 1737])
+            ("_PyOuts" function (:arguments 
+              ( ("srcs" variable nil (reparse-symbol function_parameters) [1750 1754]))              ) nil [1738 1813])
+            ("_RelativeOutputPath" function (:arguments 
+              ( ("path" variable nil (reparse-symbol function_parameters) [1838 1842])
+                ("include" variable nil (reparse-symbol function_parameters) [1844 1851])
+                ("dest" variable nil (reparse-symbol function_parameters) [1853 1857]))              ) nil [1814 2180])
+            ("_proto_gen_impl" function
+               (:documentation "General implementation for generating protos"
+                :arguments 
+                  ( ("ctx" variable nil (reparse-symbol function_parameters) [2201 2204]))                  )
+                nil [2181 3692])
+            ("proto_gen" variable nil nil [3693 4427])
+            ("\"\"\"Generates codes from Protocol Buffers definitions.
+
+This rule helps you to implement Skylark macros specific to the target
+language. You should prefer more specific `cc_proto_library `,
+`py_proto_library` and others unless you are adding such wrapper macros.
+
+Args:
+  srcs: Protocol Buffers definition files (.proto) to run the protocol compiler
+    against.
+  deps: a list of dependency labels; must be other proto libraries.
+  includes: a list of include paths to .proto files.
+  protoc: the label of the protocol compiler to generate the sources.
+  plugin: the label of the protocol compiler plugin to be passed to the protocol
+    compiler.
+  plugin_language: the language of the generated sources
+  plugin_options: a list of options to be passed to the plugin
+  gen_cc: generates C++ sources in addition to the ones from the plugin.
+  gen_py: generates Python sources in addition to the ones from the plugin.
+  outs: a list of labels of the expected outputs from the protocol compiler.
+\"\"\"" code nil nil [4428 5425])
+            ("cc_proto_library" function
+               (:documentation "Bazel rule to create a C++ protobuf library from proto source files
+
+  NOTE: the rule is only an internal workaround to generate protos. The
+  interface may change and the rule may be removed when bazel has introduced
+  the native rule.
+
+  Args:
+    name: the name of the cc_proto_library.
+    srcs: the .proto files of the cc_proto_library.
+    deps: a list of dependency labels; must be cc_proto_library.
+    cc_libs: a list of other cc_library targets depended by the generated
+        cc_library.
+    include: a string indicating the include path of the .proto files.
+    protoc: the label of the protocol compiler to generate the sources.
+    internal_bootstrap_hack: a flag indicate the cc_proto_library is used only
+        for bootstraping. When it is set to True, no files will be generated.
+        The rule will simply be a provider for .proto files, so that other
+        cc_proto_library can depend on it.
+    use_grpc_plugin: a flag to indicate whether to call the grpc C++ plugin
+        when processing the proto files.
+    default_runtime: the implicitly default runtime which will be depended on by
+        the generated cc_library target.
+    **kargs: other keyword arguments that are passed to cc_library.
+
+  "
+                :arguments 
+                  ( ("name" variable nil (reparse-symbol function_parameters) [5457 5461])
+                    ("srcs" variable nil (reparse-symbol function_parameters) [5471 5475])
+                    ("deps" variable nil (reparse-symbol function_parameters) [5488 5492])
+                    ("cc_libs" variable nil (reparse-symbol function_parameters) [5505 5512])
+                    ("include" variable nil (reparse-symbol function_parameters) [5525 5532])
+                    ("protoc" variable nil (reparse-symbol function_parameters) [5547 5553])
+                    ("internal_bootstrap_hack" variable nil (reparse-symbol function_parameters) [5575 5598])
+                    ("use_grpc_plugin" variable nil (reparse-symbol function_parameters) [5614 5629])
+                    ("default_runtime" variable nil (reparse-symbol function_parameters) [5645 5660])
+                    ("kargs" variable nil (reparse-symbol function_parameters) [5684 5691]))                  )
+                nil [5427 8317])
+            ("internal_gen_well_known_protos_java" function
+               (:documentation "Bazel rule to generate the gen_well_known_protos_java genrule
+
+  Args:
+    srcs: the well known protos
+  "
+                :arguments 
+                  ( ("srcs" variable nil (reparse-symbol function_parameters) [8358 8362]))                  )
+                nil [8318 9019])
+            ("internal_copied_filegroup" function
+               (:documentation "Macro to copy files to a different directory and then create a filegroup.
+
+  This is used by the //:protobuf_python py_proto_library target to work around
+  an issue caused by Python source files that are part of the same Python
+  package being in separate directories.
+
+  Args:
+    srcs: The source files to copy and add to the filegroup.
+    strip_prefix: Path to the root of the files to copy.
+    dest: The directory to copy the source files into.
+    **kwargs: extra arguments that will be passesd to the filegroup.
+  "
+                :arguments 
+                  ( ("name" variable nil (reparse-symbol function_parameters) [9050 9054])
+                    ("srcs" variable nil (reparse-symbol function_parameters) [9056 9060])
+                    ("strip_prefix" variable nil (reparse-symbol function_parameters) [9062 9074])
+                    ("dest" variable nil (reparse-symbol function_parameters) [9076 9080])
+                    ("kwargs" variable nil (reparse-symbol function_parameters) [9082 9090]))                  )
+                nil [9020 10010])
+            ("py_proto_library" function
+               (:documentation "Bazel rule to create a Python protobuf library from proto source files
+
+  NOTE: the rule is only an internal workaround to generate protos. The
+  interface may change and the rule may be removed when bazel has introduced
+  the native rule.
+
+  Args:
+    name: the name of the py_proto_library.
+    srcs: the .proto files of the py_proto_library.
+    deps: a list of dependency labels; must be py_proto_library.
+    py_libs: a list of other py_library targets depended by the generated
+        py_library.
+    py_extra_srcs: extra source files that will be added to the output
+        py_library. This attribute is used for internal bootstrapping.
+    include: a string indicating the include path of the .proto files.
+    default_runtime: the implicitly default runtime which will be depended on by
+        the generated py_library target.
+    protoc: the label of the protocol compiler to generate the sources.
+    use_grpc_plugin: a flag to indicate whether to call the Python C++ plugin
+        when processing the proto files.
+    **kargs: other keyword arguments that are passed to cc_library.
+
+  "
+                :arguments 
+                  ( ("name" variable nil (reparse-symbol function_parameters) [10041 10045])
+                    ("srcs" variable nil (reparse-symbol function_parameters) [10055 10059])
+                    ("deps" variable nil (reparse-symbol function_parameters) [10072 10076])
+                    ("py_libs" variable nil (reparse-symbol function_parameters) [10089 10096])
+                    ("py_extra_srcs" variable nil (reparse-symbol function_parameters) [10109 10122])
+                    ("include" variable nil (reparse-symbol function_parameters) [10135 10142])
+                    ("default_runtime" variable nil (reparse-symbol function_parameters) [10157 10172])
+                    ("protoc" variable nil (reparse-symbol function_parameters) [10203 10209])
+                    ("use_grpc_plugin" variable nil (reparse-symbol function_parameters) [10231 10246])
+                    ("kargs" variable nil (reparse-symbol function_parameters) [10262 10269]))                  )
+                nil [10011 12295])
+            ("internal_protobuf_py_tests" function
+               (:documentation "Bazel rules to create batch tests for protobuf internal.
+
+  Args:
+    name: the name of the rule.
+    modules: a list of modules for tests. The macro will create a py_test for
+        each of the parameter with the source \"google/protobuf/%s.py\"
+    kargs: extra parameters that will be passed into the py_test.
+
+  "
+                :arguments 
+                  ( ("name" variable nil (reparse-symbol function_parameters) [12332 12336])
+                    ("modules" variable nil (reparse-symbol function_parameters) [12342 12349])
+                    ("kargs" variable nil (reparse-symbol function_parameters) [12358 12365]))                  )
+                nil [12296 12861]))          
+      :file "protobuf.bzl"
+      :pointmax 12861
+      :fsize 12860
+      :lastmodtime '(22966 30237 0 0)
+      :unmatched-syntax nil))
+  :file "!Volumes!Transcend!protobuf!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

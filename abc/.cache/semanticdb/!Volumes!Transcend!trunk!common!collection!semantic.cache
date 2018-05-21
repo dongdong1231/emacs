@@ -1,0 +1,350 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("COMMON_COLLECTION_HASHED_MEMORY_CACHE_H_" variable (:constant-flag t) nil [258 298])
+            ("common/base/container_of.h" include nil nil [313 350])
+            ("common/base/stdext/intrusive_list.h" include nil nil [351 397])
+            ("common/system/concurrency/mutex.h" include nil nil [398 442])
+            ("common/system/time/timestamp.h" include nil nil [443 484])
+            ("thirdparty/google/sparse_hash_map" include nil nil [485 529])
+            ("HashMemoryCache" type
+               (:template 
+                  ( ("Key" type (:type "class") nil nil)
+                    ("Value" type (:type "class") nil nil)
+                    ("LockType" type (:type "class") nil nil))                  
+                :type "class"
+                :members 
+                  ( ("DECLARE_UNCOPYABLE" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("HashMemoryCache" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [669 685]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [650 686])
+                    ("Node" type
+                       (:members 
+                          ( ("value" variable (:type ("Value" type (:type "class") nil nil)) (reparse-symbol classsubparts) [717 729])
+                            ("expiry_time_in_ms" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [738 764])
+                            ("link" variable
+                               (:typemodifiers ("mutable")
+                                :type ("list_node" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [773 796]))                          
+                        :type "struct")
+                        (reparse-symbol classsubparts) [691 803])
+                    ("MapType" type
+                       (:typedef ("google::sparse_hash_map" type
+                             (:template-specifier 
+                                ( ("Key" type nil nil nil)
+                                  ("Node" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [808 859])
+                    ("public" label nil (reparse-symbol classsubparts) [860 867])
+                    ("HashMemoryCache" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("capacity" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1032 1048])
+                            ("deleted_key" variable (:type ("Key" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1049 1065])
+                            ("min_load_factor" variable
+                               (:default-value "0.2"
+                                :type "float")
+                                (reparse-symbol arg-sub-list) [1095 1122])
+                            ("max_load_factor" variable
+                               (:default-value "0.8"
+                                :type "float")
+                                (reparse-symbol arg-sub-list) [1153 1180]))                          
+                        :type ("HashMemoryCache" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1016 1420])
+                    ("Capacity" function
+                       (:methodconst-flag t
+                        :type ("size_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1426 1488])
+                    ("Size" function
+                       (:methodconst-flag t
+                        :type ("size_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1494 1604])
+                    ("IsEmpty" function
+                       (:methodconst-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1610 1722])
+                    ("IsFull" function
+                       (:methodconst-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1728 1852])
+                    ("Insert" function
+                       (:arguments 
+                          ( ("key" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Key" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1913 1928])
+                            ("value" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Value" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1929 1948]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1901 2024])
+                    ("InsertWithExpiry" function
+                       (:arguments 
+                          ( ("key" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Key" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2095 2110])
+                            ("value" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Value" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2137 2156])
+                            ("life_cycle_in_ms" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2183 2208]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [2073 2843])
+                    ("Replace" function
+                       (:arguments 
+                          ( ("key" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Key" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2904 2919])
+                            ("value" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Value" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2920 2939]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [2891 3016])
+                    ("ReplaceWithExpiry" function
+                       (:arguments 
+                          ( ("key" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Key" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3087 3102])
+                            ("value" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Value" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3103 3122])
+                            ("life_cycle_in_ms" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3123 3148]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [3064 3569])
+                    ("Put" function
+                       (:arguments 
+                          ( ("key" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Key" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3630 3645])
+                            ("value" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Value" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3646 3665]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [3621 3738])
+                    ("PutWithExpiry" function
+                       (:arguments 
+                          ( ("key" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Key" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3809 3824])
+                            ("value" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Value" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3825 3844])
+                            ("life_cycle_in_ms" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3845 3870]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [3790 4265])
+                    ("PutWithAbsoluteExpiry" function
+                       (:arguments 
+                          ( ("key" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Key" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4298 4313])
+                            ("value" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Value" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4314 4333])
+                            ("expiry_time_in_ms" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4334 4360]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [4271 4731])
+                    ("Get" function
+                       (:methodconst-flag t
+                        :arguments 
+                          ( ("key" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Key" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4781 4796])
+                            ("value" variable
+                               (:pointer 1
+                                :type ("Value" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4797 4810]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [4772 5180])
+                    ("GetWithTimestamp" function
+                       (:methodconst-flag t
+                        :arguments 
+                          ( ("key" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Key" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5208 5223])
+                            ("value" variable
+                               (:pointer 1
+                                :type ("Value" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5224 5237])
+                            ("timestamp_in_ms" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5238 5262])
+                            ("expired" variable
+                               (:pointer 1
+                                :type "bool")
+                                (reparse-symbol arg-sub-list) [5263 5277]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [5186 5693])
+                    ("GetOrDefault" function
+                       (:methodconst-flag t
+                        :arguments 
+                          ( ("key" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Key" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5773 5788])
+                            ("default_value" variable
+                               (:reference 1
+                                :constant-flag t
+                                :default-value "Value()"
+                                :type ("Value" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5789 5825]))                          
+                        :type ("Value" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5754 5958])
+                    ("Contains" function
+                       (:methodconst-flag t
+                        :arguments 
+                          ( ("key" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Key" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6008 6023]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [5994 6325])
+                    ("Remove" function
+                       (:arguments 
+                          ( ("key" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Key" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6343 6358]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [6331 6458])
+                    ("Clear" function (:type "void") (reparse-symbol classsubparts) [6464 6597])
+                    ("First" function
+                       (:methodconst-flag t
+                        :arguments 
+                          ( ("key" variable
+                               (:pointer 1
+                                :type ("Key" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6654 6663])
+                            ("value" variable
+                               (:pointer 1
+                                :type ("Value" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6664 6677]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [6643 6809])
+                    ("Next" function
+                       (:methodconst-flag t
+                        :arguments 
+                          ( ("key" variable
+                               (:pointer 1
+                                :type ("Key" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6864 6873])
+                            ("value" variable
+                               (:pointer 1
+                                :type ("Value" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6874 6887]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [6854 7029])
+                    ("Discard" function
+                       (:arguments 
+                          ( ("count" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7134 7147]))                          
+                        :type ("size_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [7119 7250])
+                    ("DiscardExpired" function (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [7398 7526])
+                    ("private" label nil (reparse-symbol classsubparts) [7528 7536])
+                    ("kMaxCountDiscardExpired" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :default-value "10"
+                        :type ("size_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [7621 7670])
+                    ("MarkAsHot" function
+                       (:methodconst-flag t
+                        :arguments 
+                          ( ("node" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("Node" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7690 7707]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [7675 7893])
+                    ("DiscardWithinLock" function
+                       (:arguments 
+                          ( ("count" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7924 7937]))                          
+                        :type ("size_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [7899 8413])
+                    ("FindNextWithinExpiry" function
+                       (:methodconst-flag t
+                        :arguments 
+                          ( ("start" variable
+                               (:typemodifiers ("typename")
+                                :type ("MapType::const_iterator" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [8445 8484])
+                            ("key" variable
+                               (:pointer 1
+                                :type ("Key" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [8485 8494])
+                            ("value" variable
+                               (:pointer 1
+                                :type ("Value" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [8495 8508]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [8419 8912])
+                    ("DiscardExpiredWithinLock" function (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [8964 9601])
+                    ("private" label nil (reparse-symbol classsubparts) [9603 9611])
+                    ("m_lock" variable
+                       (:typemodifiers ("mutable")
+                        :type ("Mutex" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [9616 9637])
+                    ("m_capacity" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [9642 9660])
+                    ("m_map" variable (:type ("MapType" type (:type "class") nil nil)) (reparse-symbol classsubparts) [9665 9679])
+                    ("m_lru_list" variable
+                       (:typemodifiers ("mutable")
+                        :type ("intrusive_list" type
+                             (:template-specifier 
+                                ( ("Node" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [9684 9724])
+                    ("m_auto_discard_expired" variable (:type "bool") (reparse-symbol classsubparts) [9729 9757]))                  )
+                nil [555 9760]))          
+      :file "hash_memory_cache.h"
+      :pointmax 9840
+      :fsize 9993
+      :lastmodtime '(23012 3524 0 0)
+      :unmatched-syntax '((punctuation 7615 . 7616) (number 7611 . 7615) (punctuation 7609 . 7610) (number 7606 . 7608) (punctuation 7604 . 7605) (number 7601 . 7603) (punctuation 7599 . 7600) (number 7596 . 7598) (punctuation 7594 . 7595) (number 7590 . 7593) (punctuation 7588 . 7589) (symbol 7582 . 7587) (punctuation 7580 . 7581) (symbol 7562 . 7579) (symbol 7554 . 7561) (CONST 7548 . 7553) (STATIC 7541 . 7547) (EXPLICIT 1007 . 1015) (symbol 307 . 311) (symbol 300 . 306) (punctuation 299 . 300))
+      :lexical-table 
+        '(("COMMON_COLLECTION_HASHED_MEMORY_CACHE_H_")
+          )
+))
+  :file "!Volumes!Transcend!trunk!common!collection!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

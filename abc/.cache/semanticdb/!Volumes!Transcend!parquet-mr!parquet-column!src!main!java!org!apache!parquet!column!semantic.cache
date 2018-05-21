@@ -1,0 +1,622 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode java-mode
+      :tags 
+        '( ("org.apache.parquet.column" package nil nil [812 846])
+            ("org.apache.parquet.io.api.Binary" include nil nil [848 888])
+            ("ColumnWriter" type
+               (:typemodifiers ("public")
+                :members 
+                  ( ("write" function
+                       (:arguments 
+                          ( ("value" variable (:type "int") (reparse-symbol formal_parameters) [1159 1168])
+                            ("repetitionLevel" variable (:type "int") (reparse-symbol formal_parameters) [1170 1189])
+                            ("definitionLevel" variable (:type "int") (reparse-symbol formal_parameters) [1191 1210]))                          
+                        :type "void")
+                        (reparse-symbol interface_member_declaration) [1148 1212])
+                    ("write" function
+                       (:arguments 
+                          ( ("value" variable (:type "long") (reparse-symbol formal_parameters) [1343 1353])
+                            ("repetitionLevel" variable (:type "int") (reparse-symbol formal_parameters) [1355 1374])
+                            ("definitionLevel" variable (:type "int") (reparse-symbol formal_parameters) [1376 1395]))                          
+                        :type "void")
+                        (reparse-symbol interface_member_declaration) [1332 1397])
+                    ("write" function
+                       (:arguments 
+                          ( ("value" variable (:type "boolean") (reparse-symbol formal_parameters) [1528 1541])
+                            ("repetitionLevel" variable (:type "int") (reparse-symbol formal_parameters) [1543 1562])
+                            ("definitionLevel" variable (:type "int") (reparse-symbol formal_parameters) [1564 1583]))                          
+                        :type "void")
+                        (reparse-symbol interface_member_declaration) [1517 1585])
+                    ("write" function
+                       (:arguments 
+                          ( ("value" variable (:type "Binary") (reparse-symbol formal_parameters) [1716 1728])
+                            ("repetitionLevel" variable (:type "int") (reparse-symbol formal_parameters) [1730 1749])
+                            ("definitionLevel" variable (:type "int") (reparse-symbol formal_parameters) [1751 1770]))                          
+                        :type "void")
+                        (reparse-symbol interface_member_declaration) [1705 1772])
+                    ("write" function
+                       (:arguments 
+                          ( ("value" variable (:type "float") (reparse-symbol formal_parameters) [1903 1914])
+                            ("repetitionLevel" variable (:type "int") (reparse-symbol formal_parameters) [1916 1935])
+                            ("definitionLevel" variable (:type "int") (reparse-symbol formal_parameters) [1937 1956]))                          
+                        :type "void")
+                        (reparse-symbol interface_member_declaration) [1892 1958])
+                    ("write" function
+                       (:arguments 
+                          ( ("value" variable (:type "double") (reparse-symbol formal_parameters) [2089 2101])
+                            ("repetitionLevel" variable (:type "int") (reparse-symbol formal_parameters) [2103 2122])
+                            ("definitionLevel" variable (:type "int") (reparse-symbol formal_parameters) [2124 2143]))                          
+                        :type "void")
+                        (reparse-symbol interface_member_declaration) [2078 2145])
+                    ("writeNull" function
+                       (:arguments 
+                          ( ("repetitionLevel" variable (:type "int") (reparse-symbol formal_parameters) [2267 2286])
+                            ("definitionLevel" variable (:type "int") (reparse-symbol formal_parameters) [2288 2307]))                          
+                        :type "void")
+                        (reparse-symbol interface_member_declaration) [2252 2309])
+                    ("close" function (:type "void") (reparse-symbol interface_member_declaration) [2424 2437])
+                    ("getBufferedSizeInMemory" function (:type "long") (reparse-symbol interface_member_declaration) [2582 2613]))                  
+                :type "interface")
+                nil [997 2615]))          
+      :file "ColumnWriter.java"
+      :pointmax 2617
+      :fsize 2616
+      :lastmodtime '(23115 11492 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode java-mode
+      :tags 
+        '( ("org.apache.parquet.column" package nil nil [812 846])
+            ("org.apache.parquet.Preconditions" include nil nil [848 888])
+            ("org.apache.parquet.bytes.ByteBufferAllocator" include nil nil [889 941])
+            ("org.apache.parquet.bytes.CapacityByteArrayOutputStream" include nil nil [942 1004])
+            ("org.apache.parquet.bytes.HeapByteBufferAllocator" include nil nil [1005 1061])
+            ("org.apache.parquet.column.impl.ColumnWriteStoreV1" include nil nil [1133 1190])
+            ("org.apache.parquet.column.impl.ColumnWriteStoreV2" include nil nil [1191 1248])
+            ("org.apache.parquet.column.page.PageWriteStore" include nil nil [1249 1302])
+            ("org.apache.parquet.column.values.ValuesWriter" include nil nil [1303 1356])
+            ("org.apache.parquet.column.values.bitpacking.DevNullValuesWriter" include nil nil [1357 1428])
+            ("org.apache.parquet.column.values.factory.DefaultValuesWriterFactory" include nil nil [1429 1504])
+            ("org.apache.parquet.column.values.rle.RunLengthBitPackingHybridEncoder" include nil nil [1505 1582])
+            ("org.apache.parquet.column.values.rle.RunLengthBitPackingHybridValuesWriter" include nil nil [1583 1665])
+            ("org.apache.parquet.column.values.factory.ValuesWriterFactory" include nil nil [1666 1734])
+            ("org.apache.parquet.schema.MessageType" include nil nil [1735 1780])
+            ("ParquetProperties" type
+               (:typemodifiers ("public")
+                :members 
+                  ( ("DEFAULT_PAGE_SIZE" variable
+                       (:typemodifiers ("public" "static" "final")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [1918 1974])
+                    ("DEFAULT_DICTIONARY_PAGE_SIZE" variable
+                       (:typemodifiers ("public" "static" "final")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [1977 2050])
+                    ("DEFAULT_IS_DICTIONARY_ENABLED" variable
+                       (:typemodifiers ("public" "static" "final")
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [2053 2118])
+                    ("DEFAULT_WRITER_VERSION" variable
+                       (:typemodifiers ("public" "static" "final")
+                        :type "WriterVersion")
+                        (reparse-symbol class_member_declaration) [2121 2206])
+                    ("DEFAULT_ESTIMATE_ROW_COUNT_FOR_PAGE_SIZE_CHECK" variable
+                       (:typemodifiers ("public" "static" "final")
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [2209 2291])
+                    ("DEFAULT_MINIMUM_RECORD_COUNT_FOR_CHECK" variable
+                       (:typemodifiers ("public" "static" "final")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [2294 2363])
+                    ("DEFAULT_MAXIMUM_RECORD_COUNT_FOR_CHECK" variable
+                       (:typemodifiers ("public" "static" "final")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [2366 2437])
+                    ("DEFAULT_VALUES_WRITER_FACTORY" variable
+                       (:typemodifiers ("public" "static" "final")
+                        :type "ValuesWriterFactory")
+                        (reparse-symbol class_member_declaration) [2441 2546])
+                    ("MIN_SLAB_SIZE" variable
+                       (:typemodifiers ("private" "static" "final")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [2550 2594])
+                    ("initialSlabSize" variable
+                       (:typemodifiers ("private" "final")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [3122 3156])
+                    ("pageSizeThreshold" variable
+                       (:typemodifiers ("private" "final")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [3159 3195])
+                    ("dictionaryPageSizeThreshold" variable
+                       (:typemodifiers ("private" "final")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [3198 3244])
+                    ("writerVersion" variable
+                       (:typemodifiers ("private" "final")
+                        :type "WriterVersion")
+                        (reparse-symbol class_member_declaration) [3247 3289])
+                    ("enableDictionary" variable
+                       (:typemodifiers ("private" "final")
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [3292 3331])
+                    ("minRowCountForPageSizeCheck" variable
+                       (:typemodifiers ("private" "final")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [3334 3380])
+                    ("maxRowCountForPageSizeCheck" variable
+                       (:typemodifiers ("private" "final")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [3383 3429])
+                    ("estimateNextSizeCheck" variable
+                       (:typemodifiers ("private" "final")
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [3432 3476])
+                    ("allocator" variable
+                       (:typemodifiers ("private" "final")
+                        :type "ByteBufferAllocator")
+                        (reparse-symbol class_member_declaration) [3479 3523])
+                    ("valuesWriterFactory" variable
+                       (:typemodifiers ("private" "final")
+                        :type "ValuesWriterFactory")
+                        (reparse-symbol class_member_declaration) [3526 3580])
+                    ("ParquetProperties" function
+                       (:constructor-flag t
+                        :typemodifiers ("private")
+                        :arguments 
+                          ( ("writerVersion" variable (:type "WriterVersion") (reparse-symbol formal_parameters) [3610 3637])
+                            ("pageSize" variable (:type "int") (reparse-symbol formal_parameters) [3639 3651])
+                            ("dictPageSize" variable (:type "int") (reparse-symbol formal_parameters) [3653 3669])
+                            ("enableDict" variable (:type "boolean") (reparse-symbol formal_parameters) [3671 3689])
+                            ("minRowCountForPageSizeCheck" variable (:type "int") (reparse-symbol formal_parameters) [3691 3722])
+                            ("maxRowCountForPageSizeCheck" variable (:type "int") (reparse-symbol formal_parameters) [3752 3783])
+                            ("estimateNextSizeCheck" variable (:type "boolean") (reparse-symbol formal_parameters) [3785 3814])
+                            ("allocator" variable (:type "ByteBufferAllocator") (reparse-symbol formal_parameters) [3816 3845])
+                            ("writerFactory" variable (:type "ValuesWriterFactory") (reparse-symbol formal_parameters) [3875 3908]))                          )
+                        (reparse-symbol class_member_declaration) [3584 4486])
+                    ("newRepetitionLevelWriter" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("path" variable (:type "ColumnDescriptor") (reparse-symbol formal_parameters) [4535 4556]))                          
+                        :type "ValuesWriter")
+                        (reparse-symbol class_member_declaration) [4490 4637])
+                    ("newDefinitionLevelWriter" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("path" variable (:type "ColumnDescriptor") (reparse-symbol formal_parameters) [4686 4707]))                          
+                        :type "ValuesWriter")
+                        (reparse-symbol class_member_declaration) [4641 4788])
+                    ("newColumnDescriptorValuesWriter" function
+                       (:typemodifiers ("private")
+                        :arguments 
+                          ( ("maxLevel" variable (:type "int") (reparse-symbol formal_parameters) [4845 4857]))                          
+                        :type "ValuesWriter")
+                        (reparse-symbol class_member_declaration) [4792 5090])
+                    ("newRepetitionLevelEncoder" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("path" variable (:type "ColumnDescriptor") (reparse-symbol formal_parameters) [5160 5181]))                          
+                        :type "RunLengthBitPackingHybridEncoder")
+                        (reparse-symbol class_member_declaration) [5094 5246])
+                    ("newDefinitionLevelEncoder" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("path" variable (:type "ColumnDescriptor") (reparse-symbol formal_parameters) [5316 5337]))                          
+                        :type "RunLengthBitPackingHybridEncoder")
+                        (reparse-symbol class_member_declaration) [5250 5402])
+                    ("newLevelEncoder" function
+                       (:typemodifiers ("private")
+                        :arguments 
+                          ( ("maxLevel" variable (:type "int") (reparse-symbol formal_parameters) [5463 5475]))                          
+                        :type "RunLengthBitPackingHybridEncoder")
+                        (reparse-symbol class_member_declaration) [5406 5615])
+                    ("newValuesWriter" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("path" variable (:type "ColumnDescriptor") (reparse-symbol formal_parameters) [5655 5676]))                          
+                        :type "ValuesWriter")
+                        (reparse-symbol class_member_declaration) [5619 5737])
+                    ("getPageSizeThreshold" function
+                       (:typemodifiers ("public")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [5741 5810])
+                    ("getInitialSlabSize" function
+                       (:typemodifiers ("public")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [5814 5879])
+                    ("getDictionaryPageSizeThreshold" function
+                       (:typemodifiers ("public")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [5883 5972])
+                    ("getWriterVersion" function
+                       (:typemodifiers ("public")
+                        :type "WriterVersion")
+                        (reparse-symbol class_member_declaration) [5976 6047])
+                    ("isEnableDictionary" function
+                       (:typemodifiers ("public")
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [6051 6121])
+                    ("getAllocator" function
+                       (:typemodifiers ("public")
+                        :type "ByteBufferAllocator")
+                        (reparse-symbol class_member_declaration) [6125 6194])
+                    ("newColumnWriteStore" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("schema" variable (:type "MessageType") (reparse-symbol formal_parameters) [6242 6260])
+                            ("pageStore" variable (:type "PageWriteStore") (reparse-symbol formal_parameters) [6308 6332]))                          
+                        :type "ColumnWriteStore")
+                        (reparse-symbol class_member_declaration) [6198 6625])
+                    ("getMinRowCountForPageSizeCheck" function
+                       (:typemodifiers ("public")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [6629 6718])
+                    ("getMaxRowCountForPageSizeCheck" function
+                       (:typemodifiers ("public")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [6722 6811])
+                    ("getValuesWriterFactory" function
+                       (:typemodifiers ("public")
+                        :type "ValuesWriterFactory")
+                        (reparse-symbol class_member_declaration) [6815 6904])
+                    ("estimateNextSizeCheck" function
+                       (:typemodifiers ("public")
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [6908 6986])
+                    ("builder" function
+                       (:typemodifiers ("public" "static")
+                        :type "Builder")
+                        (reparse-symbol class_member_declaration) [6990 7053])
+                    ("copy" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("toCopy" variable (:type "ParquetProperties") (reparse-symbol formal_parameters) [7084 7108]))                          
+                        :type "Builder")
+                        (reparse-symbol class_member_declaration) [7057 7147])
+                    ("Builder" type
+                       (:typemodifiers ("public" "static")
+                        :members 
+                          ( ("pageSize" variable
+                               (:typemodifiers ("private")
+                                :type "int")
+                                (reparse-symbol class_member_declaration) [7185 7226])
+                            ("dictPageSize" variable
+                               (:typemodifiers ("private")
+                                :type "int")
+                                (reparse-symbol class_member_declaration) [7231 7287])
+                            ("enableDict" variable
+                               (:typemodifiers ("private")
+                                :type "boolean")
+                                (reparse-symbol class_member_declaration) [7292 7351])
+                            ("writerVersion" variable
+                               (:typemodifiers ("private")
+                                :type "WriterVersion")
+                                (reparse-symbol class_member_declaration) [7356 7417])
+                            ("minRowCountForPageSizeCheck" variable
+                               (:typemodifiers ("private")
+                                :type "int")
+                                (reparse-symbol class_member_declaration) [7422 7503])
+                            ("maxRowCountForPageSizeCheck" variable
+                               (:typemodifiers ("private")
+                                :type "int")
+                                (reparse-symbol class_member_declaration) [7508 7589])
+                            ("estimateNextSizeCheck" variable
+                               (:typemodifiers ("private")
+                                :type "boolean")
+                                (reparse-symbol class_member_declaration) [7594 7681])
+                            ("allocator" variable
+                               (:typemodifiers ("private")
+                                :type "ByteBufferAllocator")
+                                (reparse-symbol class_member_declaration) [7686 7756])
+                            ("valuesWriterFactory" variable
+                               (:typemodifiers ("private")
+                                :type "ValuesWriterFactory")
+                                (reparse-symbol class_member_declaration) [7761 7841])
+                            ("Builder" function
+                               (:constructor-flag t
+                                :typemodifiers ("private"))
+                                (reparse-symbol class_member_declaration) [7847 7872])
+                            ("Builder" function
+                               (:constructor-flag t
+                                :typemodifiers ("private")
+                                :arguments 
+                                  ( ("toCopy" variable (:type "ParquetProperties") (reparse-symbol formal_parameters) [7894 7918]))                                  )
+                                (reparse-symbol class_member_declaration) [7878 8347])
+                            ("withPageSize" function
+                               (:typemodifiers ("public")
+                                :arguments 
+                                  ( ("pageSize" variable (:type "int") (reparse-symbol formal_parameters) [8542 8554]))                                  
+                                :type "Builder")
+                                (reparse-symbol class_member_declaration) [8514 8719])
+                            ("withDictionaryEncoding" function
+                               (:typemodifiers ("public")
+                                :arguments 
+                                  ( ("enableDictionary" variable (:type "boolean") (reparse-symbol formal_parameters) [8958 8982]))                                  
+                                :type "Builder")
+                                (reparse-symbol class_member_declaration) [8920 9052])
+                            ("withDictionaryPageSize" function
+                               (:typemodifiers ("public")
+                                :arguments 
+                                  ( ("dictionaryPageSize" variable (:type "int") (reparse-symbol formal_parameters) [9278 9300]))                                  
+                                :type "Builder")
+                                (reparse-symbol class_member_declaration) [9240 9510])
+                            ("withWriterVersion" function
+                               (:typemodifiers ("public")
+                                :arguments 
+                                  ( ("version" variable (:type "WriterVersion") (reparse-symbol formal_parameters) [9720 9741]))                                  
+                                :type "Builder")
+                                (reparse-symbol class_member_declaration) [9687 9805])
+                            ("withMinRowCountForPageSizeCheck" function
+                               (:typemodifiers ("public")
+                                :arguments 
+                                  ( ("min" variable (:type "int") (reparse-symbol formal_parameters) [9858 9865]))                                  
+                                :type "Builder")
+                                (reparse-symbol class_member_declaration) [9811 10054])
+                            ("withMaxRowCountForPageSizeCheck" function
+                               (:typemodifiers ("public")
+                                :arguments 
+                                  ( ("max" variable (:type "int") (reparse-symbol formal_parameters) [10107 10114]))                                  
+                                :type "Builder")
+                                (reparse-symbol class_member_declaration) [10060 10303])
+                            ("estimateRowCountForPageSizeCheck" function
+                               (:typemodifiers ("public")
+                                :arguments 
+                                  ( ("estimateNextSizeCheck" variable (:type "boolean") (reparse-symbol formal_parameters) [10467 10496]))                                  
+                                :type "Builder")
+                                (reparse-symbol class_member_declaration) [10419 10582])
+                            ("withAllocator" function
+                               (:typemodifiers ("public")
+                                :arguments 
+                                  ( ("allocator" variable (:type "ByteBufferAllocator") (reparse-symbol formal_parameters) [10617 10646]))                                  
+                                :type "Builder")
+                                (reparse-symbol class_member_declaration) [10588 10776])
+                            ("withValuesWriterFactory" function
+                               (:typemodifiers ("public")
+                                :arguments 
+                                  ( ("factory" variable (:type "ValuesWriterFactory") (reparse-symbol formal_parameters) [10821 10848]))                                  
+                                :type "Builder")
+                                (reparse-symbol class_member_declaration) [10782 10984])
+                            ("build" function
+                               (:typemodifiers ("public")
+                                :type "ParquetProperties")
+                                (reparse-symbol class_member_declaration) [10990 11682]))                          
+                        :type "class")
+                        (reparse-symbol class_member_declaration) [7151 11687]))                  
+                :type "class")
+                nil [1882 11689]))          
+      :file "ParquetProperties.java"
+      :pointmax 11690
+      :fsize 11689
+      :lastmodtime '(23115 11492 0 0)
+      :unmatched-syntax '((IDENTIFIER 1113 . 1131) (DOT 1112 . 1113) (IDENTIFIER 1102 . 1112) (DOT 1101 . 1102) (IDENTIFIER 1096 . 1101) (DOT 1095 . 1096) (IDENTIFIER 1088 . 1095) (DOT 1087 . 1088) (IDENTIFIER 1081 . 1087) (DOT 1080 . 1081) (IMPORT 1063 . 1069) (STATIC 1070 . 1076) (IDENTIFIER 1077 . 1080)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode java-mode
+      :tags 
+        '( ("org.apache.parquet.column" package nil nil [824 858])
+            ("java.util.Collection" include nil nil [860 888])
+            ("java.util.Collections" include nil nil [889 918])
+            ("java.util.HashSet" include nil nil [919 944])
+            ("java.util.LinkedHashMap" include nil nil [945 976])
+            ("java.util.Map" include nil nil [977 998])
+            ("java.util.Set" include nil nil [999 1020])
+            ("EncodingStats" type
+               (:typemodifiers ("public")
+                :members 
+                  ( ("usesV2Pages" variable
+                       (:typemodifiers ("private" "final")
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [1663 1697])
+                    ("EncodingStats" function
+                       (:constructor-flag t
+                        :typemodifiers ("private")
+                        :arguments 
+                          ( ("" variable (:type "Encoding") (reparse-symbol formal_parameters) [1727 1735])
+                            ("" variable (:type "dictStats") (reparse-symbol formal_parameters) [1746 1755])
+                            ("" variable (:type "Encoding") (reparse-symbol formal_parameters) [1785 1793])
+                            ("" variable (:type "dataStats") (reparse-symbol formal_parameters) [1804 1813])
+                            ("usesV2Pages" variable (:type "boolean") (reparse-symbol formal_parameters) [1839 1858]))                          )
+                        (reparse-symbol class_member_declaration) [1701 1965])
+                    ("getDictionaryEncodings" function (:constructor-flag t) (reparse-symbol class_member_declaration) [1990 2051])
+                    ("getDataEncodings" function (:constructor-flag t) (reparse-symbol class_member_declaration) [2076 2131])
+                    ("getNumDictionaryPagesEncodedAs" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("enc" variable (:type "Encoding") (reparse-symbol formal_parameters) [2177 2189]))                          
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [2135 2302])
+                    ("getNumDataPagesEncodedAs" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("enc" variable (:type "Encoding") (reparse-symbol formal_parameters) [2342 2354]))                          
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [2306 2467])
+                    ("hasDictionaryPages" function
+                       (:typemodifiers ("public")
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [2471 2545])
+                    ("hasDictionaryEncodedPages" function
+                       (:typemodifiers ("public")
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [2549 2736])
+                    ("hasNonDictionaryEncodedPages" function
+                       (:typemodifiers ("public")
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [2740 3249])
+                    ("usesV2Pages" function
+                       (:typemodifiers ("public")
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [3253 3311])
+                    ("Builder" type
+                       (:typemodifiers ("public" "static")
+                        :members 
+                          ( ("usesV2Pages" variable
+                               (:typemodifiers ("private")
+                                :type "boolean")
+                                (reparse-symbol class_member_declaration) [3647 3683])
+                            ("clear" function
+                               (:typemodifiers ("public")
+                                :type "Builder")
+                                (reparse-symbol class_member_declaration) [3689 3820])
+                            ("withV2Pages" function
+                               (:typemodifiers ("public")
+                                :type "Builder")
+                                (reparse-symbol class_member_declaration) [3826 3912])
+                            ("addDictEncoding" function
+                               (:typemodifiers ("public")
+                                :arguments 
+                                  ( ("encoding" variable (:type "Encoding") (reparse-symbol formal_parameters) [3949 3966]))                                  
+                                :type "Builder")
+                                (reparse-symbol class_member_declaration) [3918 4018])
+                            ("addDictEncoding" function
+                               (:typemodifiers ("public")
+                                :arguments 
+                                  ( ("encoding" variable (:type "Encoding") (reparse-symbol formal_parameters) [4055 4072])
+                                    ("numPages" variable (:type "int") (reparse-symbol formal_parameters) [4074 4086]))                                  
+                                :type "Builder")
+                                (reparse-symbol class_member_declaration) [4024 4232])
+                            ("addDataEncodings" function
+                               (:typemodifiers ("public")
+                                :arguments 
+                                  ( ("" variable (:type "encodings") (reparse-symbol formal_parameters) [4291 4300]))                                  
+                                :type "Builder")
+                                (reparse-symbol class_member_declaration) [4238 4415])
+                            ("addDataEncoding" function
+                               (:typemodifiers ("public")
+                                :arguments 
+                                  ( ("encoding" variable (:type "Encoding") (reparse-symbol formal_parameters) [4452 4469]))                                  
+                                :type "Builder")
+                                (reparse-symbol class_member_declaration) [4421 4521])
+                            ("addDataEncoding" function
+                               (:typemodifiers ("public")
+                                :arguments 
+                                  ( ("encoding" variable (:type "Encoding") (reparse-symbol formal_parameters) [4558 4575])
+                                    ("numPages" variable (:type "int") (reparse-symbol formal_parameters) [4577 4589]))                                  
+                                :type "Builder")
+                                (reparse-symbol class_member_declaration) [4527 4735])
+                            ("build" function
+                               (:typemodifiers ("public")
+                                :type "EncodingStats")
+                                (reparse-symbol class_member_declaration) [4741 5009]))                          
+                        :type "class")
+                        (reparse-symbol class_member_declaration) [3427 5013]))                  
+                :type "class")
+                nil [1548 5015]))          
+      :file "EncodingStats.java"
+      :pointmax 5016
+      :fsize 5015
+      :lastmodtime '(22925 23160 0 0)
+      :unmatched-syntax '((GT 4289 . 4290) (IDENTIFIER 4270 . 4280) (LT 4280 . 4281) (SEMICOLON 3641 . 3642) (PAREN_BLOCK 3639 . 3641) (GT 3638 . 3639) (COMMA 3629 . 3630) (LT 3620 . 3621) (NEW 3603 . 3606) (EQ 3601 . 3602) (GT 3589 . 3590) (COMMA 3580 . 3581) (LT 3571 . 3572) (SEMICOLON 3548 . 3549) (PAREN_BLOCK 3546 . 3548) (GT 3545 . 3546) (COMMA 3536 . 3537) (LT 3527 . 3528) (NEW 3510 . 3513) (EQ 3508 . 3509) (GT 3496 . 3497) (COMMA 3487 . 3488) (PRIVATE 3461 . 3468) (LT 3478 . 3479) (GT 2074 . 2075) (PUBLIC 2055 . 2061) (LT 2065 . 2066) (GT 1988 . 1989) (PUBLIC 1969 . 1975) (LT 1979 . 1980) (IDENTIFIER 1795 . 1802) (GT 1802 . 1803) (IDENTIFIER 1781 . 1784) (LT 1784 . 1785) (IDENTIFIER 1737 . 1744) (GT 1744 . 1745) (IDENTIFIER 1723 . 1726) (LT 1726 . 1727) (SEMICOLON 1659 . 1660) (GT 1648 . 1649) (COMMA 1639 . 1640) (LT 1630 . 1631) (SEMICOLON 1617 . 1618) (GT 1606 . 1607) (COMMA 1597 . 1598) (FINAL 1579 . 1584) (LT 1588 . 1589) (IDENTIFIER 1138 . 1152) (DOT 1137 . 1138) (IDENTIFIER 1129 . 1137) (DOT 1128 . 1129) (IDENTIFIER 1122 . 1128) (DOT 1121 . 1122) (IDENTIFIER 1114 . 1121) (DOT 1113 . 1114) (IDENTIFIER 1107 . 1113) (DOT 1106 . 1107) (IMPORT 1089 . 1095) (STATIC 1096 . 1102) (IDENTIFIER 1103 . 1106) (IDENTIFIER 1071 . 1087) (DOT 1070 . 1071) (IDENTIFIER 1062 . 1070) (DOT 1061 . 1062) (IDENTIFIER 1055 . 1061) (DOT 1054 . 1055) (IDENTIFIER 1047 . 1054) (DOT 1046 . 1047) (IDENTIFIER 1040 . 1046) (DOT 1039 . 1040) (IMPORT 1022 . 1028) (STATIC 1029 . 1035) (IDENTIFIER 1036 . 1039)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode java-mode
+      :tags 
+        '( ("org.apache.parquet.column" package nil nil [812 846])
+            ("java.io.IOException" include nil nil [1339 1366])
+            ("org.apache.parquet.bytes.BytesUtils" include nil nil [1368 1411])
+            ("org.apache.parquet.column.page.DictionaryPage" include nil nil [1412 1465])
+            ("org.apache.parquet.column.values.ValuesReader" include nil nil [1466 1519])
+            ("org.apache.parquet.column.values.bitpacking.ByteBitPackingValuesReader" include nil nil [1520 1598])
+            ("org.apache.parquet.column.values.rle.ZeroIntegerValuesReader" include nil nil [1599 1667])
+            ("org.apache.parquet.column.values.delta.DeltaBinaryPackingValuesReader" include nil nil [1668 1745])
+            ("org.apache.parquet.column.values.deltalengthbytearray.DeltaLengthByteArrayValuesReader" include nil nil [1746 1840])
+            ("org.apache.parquet.column.values.deltastrings.DeltaByteArrayReader" include nil nil [1841 1915])
+            ("org.apache.parquet.column.values.dictionary.DictionaryValuesReader" include nil nil [1916 1990])
+            ("org.apache.parquet.column.values.dictionary.PlainValuesDictionary.PlainBinaryDictionary" include nil nil [1991 2086])
+            ("org.apache.parquet.column.values.dictionary.PlainValuesDictionary.PlainDoubleDictionary" include nil nil [2087 2182])
+            ("org.apache.parquet.column.values.dictionary.PlainValuesDictionary.PlainFloatDictionary" include nil nil [2183 2277])
+            ("org.apache.parquet.column.values.dictionary.PlainValuesDictionary.PlainIntegerDictionary" include nil nil [2278 2374])
+            ("org.apache.parquet.column.values.dictionary.PlainValuesDictionary.PlainLongDictionary" include nil nil [2375 2468])
+            ("org.apache.parquet.column.values.plain.BinaryPlainValuesReader" include nil nil [2469 2539])
+            ("org.apache.parquet.column.values.plain.FixedLenByteArrayPlainValuesReader" include nil nil [2540 2621])
+            ("org.apache.parquet.column.values.plain.BooleanPlainValuesReader" include nil nil [2622 2693])
+            ("org.apache.parquet.column.values.plain.PlainValuesReader.DoublePlainValuesReader" include nil nil [2694 2782])
+            ("org.apache.parquet.column.values.plain.PlainValuesReader.FloatPlainValuesReader" include nil nil [2783 2870])
+            ("org.apache.parquet.column.values.plain.PlainValuesReader.IntegerPlainValuesReader" include nil nil [2871 2960])
+            ("org.apache.parquet.column.values.plain.PlainValuesReader.LongPlainValuesReader" include nil nil [2961 3047])
+            ("org.apache.parquet.column.values.rle.RunLengthBitPackingHybridValuesReader" include nil nil [3048 3130])
+            ("org.apache.parquet.io.ParquetDecodingException" include nil nil [3131 3185]))          
+      :file "Encoding.java"
+      :pointmax 11025
+      :fsize 11024
+      :lastmodtime '(23115 11492 0 0)
+      :unmatched-syntax '((BRACE_BLOCK 3271 . 11024) (IDENTIFIER 3262 . 3270) (PUBLIC 3250 . 3256) (IDENTIFIER 3257 . 3261) (IDENTIFIER 1329 . 1336) (DOT 1328 . 1329) (IDENTIFIER 1311 . 1328) (DOT 1310 . 1311) (IDENTIFIER 1297 . 1310) (DOT 1296 . 1297) (IDENTIFIER 1290 . 1296) (DOT 1289 . 1290) (IDENTIFIER 1282 . 1289) (DOT 1281 . 1282) (IDENTIFIER 1275 . 1281) (DOT 1274 . 1275) (IMPORT 1257 . 1263) (STATIC 1264 . 1270) (IDENTIFIER 1271 . 1274) (IDENTIFIER 1249 . 1255) (DOT 1248 . 1249) (IDENTIFIER 1231 . 1248) (DOT 1230 . 1231) (IDENTIFIER 1217 . 1230) (DOT 1216 . 1217) (IDENTIFIER 1210 . 1216) (DOT 1209 . 1210) (IDENTIFIER 1202 . 1209) (DOT 1201 . 1202) (IDENTIFIER 1195 . 1201) (DOT 1194 . 1195) (IMPORT 1177 . 1183) (STATIC 1184 . 1190) (IDENTIFIER 1191 . 1194) (IDENTIFIER 1170 . 1175) (DOT 1169 . 1170) (IDENTIFIER 1152 . 1169) (DOT 1151 . 1152) (IDENTIFIER 1138 . 1151) (DOT 1137 . 1138) (IDENTIFIER 1131 . 1137) (DOT 1130 . 1131) (IDENTIFIER 1123 . 1130) (DOT 1122 . 1123) (IDENTIFIER 1116 . 1122) (DOT 1115 . 1116) (IMPORT 1098 . 1104) (STATIC 1105 . 1111) (IDENTIFIER 1112 . 1115) (IDENTIFIER 1091 . 1096) (DOT 1090 . 1091) (IDENTIFIER 1073 . 1090) (DOT 1072 . 1073) (IDENTIFIER 1059 . 1072) (DOT 1058 . 1059) (IDENTIFIER 1052 . 1058) (DOT 1051 . 1052) (IDENTIFIER 1044 . 1051) (DOT 1043 . 1044) (IDENTIFIER 1037 . 1043) (DOT 1036 . 1037) (IMPORT 1019 . 1025) (STATIC 1026 . 1032) (IDENTIFIER 1033 . 1036) (IDENTIFIER 997 . 1017) (DOT 996 . 997) (IDENTIFIER 979 . 996) (DOT 978 . 979) (IDENTIFIER 965 . 978) (DOT 964 . 965) (IDENTIFIER 958 . 964) (DOT 957 . 958) (IDENTIFIER 950 . 957) (DOT 949 . 950) (IDENTIFIER 943 . 949) (DOT 942 . 943) (IMPORT 925 . 931) (STATIC 932 . 938) (IDENTIFIER 939 . 942) (IDENTIFIER 913 . 923) (DOT 912 . 913) (IDENTIFIER 906 . 912) (DOT 905 . 906) (IDENTIFIER 895 . 905) (DOT 894 . 895) (IDENTIFIER 888 . 894) (DOT 887 . 888) (IDENTIFIER 881 . 887) (DOT 880 . 881) (IDENTIFIER 873 . 880) (DOT 872 . 873) (IDENTIFIER 866 . 872) (DOT 865 . 866) (IMPORT 848 . 854) (STATIC 855 . 861) (IDENTIFIER 862 . 865)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode java-mode
+      :tags 
+        '( ("org.apache.parquet.column" package nil nil [812 846])
+            ("ColumnWriteStore" type
+               (:typemodifiers ("public")
+                :members 
+                  ( ("getColumnWriter" function
+                       (:typemodifiers ("abstract" "public")
+                        :arguments 
+                          ( ("path" variable (:type "ColumnDescriptor") (reparse-symbol formal_parameters) [1176 1197]))                          
+                        :type "ColumnWriter")
+                        (reparse-symbol interface_member_declaration) [1131 1199])
+                    ("flush" function
+                       (:typemodifiers ("abstract" "public")
+                        :type "void")
+                        (reparse-symbol interface_member_declaration) [1280 1309])
+                    ("endRecord" function
+                       (:typemodifiers ("abstract" "public")
+                        :type "void")
+                        (reparse-symbol interface_member_declaration) [1368 1401])
+                    ("getAllocatedSize" function
+                       (:typemodifiers ("abstract" "public")
+                        :type "long")
+                        (reparse-symbol interface_member_declaration) [1488 1528])
+                    ("getBufferedSize" function
+                       (:typemodifiers ("abstract" "public")
+                        :type "long")
+                        (reparse-symbol interface_member_declaration) [1648 1687])
+                    ("memUsageString" function
+                       (:typemodifiers ("abstract" "public")
+                        :type "String")
+                        (reparse-symbol interface_member_declaration) [1802 1842])
+                    ("close" function
+                       (:typemodifiers ("abstract" "public")
+                        :type "void")
+                        (reparse-symbol interface_member_declaration) [1921 1950]))                  
+                :type "interface")
+                nil [972 1953]))          
+      :file "ColumnWriteStore.java"
+      :pointmax 1954
+      :fsize 1953
+      :lastmodtime '(23115 11492 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode java-mode
+      :tags 
+        '( ("org.apache.parquet.column" package nil nil [812 846])
+            ("org.apache.parquet.io.api.Binary" include nil nil [848 888])
+            ("ColumnReader" type
+               (:typemodifiers ("public")
+                :members 
+                  ( ("getTotalValueCount" function (:type "long") (reparse-symbol interface_member_declaration) [1996 2022])
+                    ("consume" function (:type "void") (reparse-symbol interface_member_declaration) [2098 2113])
+                    ("getCurrentRepetitionLevel" function (:type "int") (reparse-symbol interface_member_declaration) [2235 2267])
+                    ("getCurrentDefinitionLevel" function (:type "int") (reparse-symbol interface_member_declaration) [2339 2371])
+                    ("writeCurrentValueToConverter" function (:type "void") (reparse-symbol interface_member_declaration) [2434 2470])
+                    ("skip" function (:type "void") (reparse-symbol interface_member_declaration) [2514 2526])
+                    ("getCurrentValueDictionaryID" function (:type "int") (reparse-symbol interface_member_declaration) [2659 2693])
+                    ("getInteger" function (:type "int") (reparse-symbol interface_member_declaration) [2740 2757])
+                    ("getBoolean" function (:type "boolean") (reparse-symbol interface_member_declaration) [2804 2825])
+                    ("getLong" function (:type "long") (reparse-symbol interface_member_declaration) [2872 2887])
+                    ("getBinary" function (:type "Binary") (reparse-symbol interface_member_declaration) [2934 2953])
+                    ("getFloat" function (:type "float") (reparse-symbol interface_member_declaration) [3000 3017])
+                    ("getDouble" function (:type "double") (reparse-symbol interface_member_declaration) [3064 3083])
+                    ("getDescriptor" function (:type "ColumnDescriptor") (reparse-symbol interface_member_declaration) [3138 3171]))                  
+                :type "interface")
+                nil [1896 3174]))          
+      :file "ColumnReader.java"
+      :pointmax 3175
+      :fsize 3174
+      :lastmodtime '(22925 23160 0 0)
+      :unmatched-syntax nil))
+  :file "!Volumes!Transcend!parquet-mr!parquet-column!src!main!java!org!apache!parquet!column!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,3369 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("BITCOIN_WALLET_FEES_H" variable (:constant-flag t) nil [278 299])
+            ("amount.h" include (:system-flag t) nil [301 320])
+            ("CBlockPolicyEstimator" type
+               (:prototype t
+                :type "class")
+                nil [322 350])
+            ("CCoinControl" type
+               (:prototype t
+                :type "class")
+                nil [351 370])
+            ("CFeeRate" type
+               (:prototype t
+                :type "class")
+                nil [371 386])
+            ("CTxMemPool" type
+               (:prototype t
+                :type "class")
+                nil [387 404])
+            ("FeeCalculation" type
+               (:prototype t
+                :type "struct")
+                nil [405 427])
+            ("GetRequiredFee" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("nTxBytes" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [578 600]))                  
+                :type ("CAmount" type (:type "class") nil nil))
+                nil [555 601])
+            ("GetMinimumFee" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("nTxBytes" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [717 739])
+                    ("coin_control" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CCoinControl" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [740 773])
+                    ("pool" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CTxMemPool" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [774 797])
+                    ("estimator" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CBlockPolicyEstimator" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [798 837])
+                    ("feeCalc" variable
+                       (:pointer 1
+                        :type ("FeeCalculation" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [838 862]))                  
+                :type ("CAmount" type (:type "class") nil nil))
+                nil [695 863])
+            ("GetDiscardRate" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("estimator" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CBlockPolicyEstimator" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [950 989]))                  
+                :type ("CFeeRate" type (:type "class") nil nil))
+                nil [926 990]))          
+      :file "fees.h"
+      :pointmax 1024
+      :fsize 1023
+      :lastmodtime '(23069 20043 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("BITCOIN_WALLET_FEES_H")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("BITCOIN_WALLET_INIT_H" variable (:constant-flag t) nil [278 299])
+            ("string" include (:system-flag t) nil [301 318])
+            ("CRPCTable" type
+               (:prototype t
+                :type "class")
+                nil [320 336])
+            ("CScheduler" type
+               (:prototype t
+                :type "class")
+                nil [337 354])
+            ("GetWalletHelpString" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("showDebug" variable (:type "bool") (reparse-symbol arg-sub-list) [425 440]))                  
+                :type ("std::string" type (:type "class") nil nil))
+                nil [393 441])
+            ("WalletParameterInteraction" function
+               (:prototype-flag t
+                :type "bool")
+                nil [477 511])
+            ("RegisterWalletRPC" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("tableRPC" variable
+                       (:reference 1
+                        :type ("CRPCTable" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [562 582]))                  
+                :type "void")
+                nil [539 583])
+            ("VerifyWallets" function
+               (:prototype-flag t
+                :type "bool")
+                nil [903 924])
+            ("OpenWallets" function
+               (:prototype-flag t
+                :type "bool")
+                nil [953 972])
+            ("StartWallets" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("scheduler" variable
+                       (:reference 1
+                        :type ("CScheduler" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1025 1047]))                  
+                :type "void")
+                nil [1007 1048])
+            ("FlushWallets" function
+               (:prototype-flag t
+                :type "void")
+                nil [1101 1121])
+            ("StopWallets" function
+               (:prototype-flag t
+                :type "void")
+                nil [1176 1195])
+            ("CloseWallets" function
+               (:prototype-flag t
+                :type "void")
+                nil [1220 1240]))          
+      :file "init.h"
+      :pointmax 1274
+      :fsize 1273
+      :lastmodtime '(23012 22756 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("BITCOIN_WALLET_INIT_H")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("BITCOIN_WALLET_WALLET_H" variable (:constant-flag t) nil [280 303])
+            ("amount.h" include (:system-flag t) nil [305 324])
+            ("policy/feerate.h" include (:system-flag t) nil [325 352])
+            ("streams.h" include (:system-flag t) nil [353 373])
+            ("tinyformat.h" include (:system-flag t) nil [374 397])
+            ("ui_interface.h" include (:system-flag t) nil [398 423])
+            ("utilstrencodings.h" include (:system-flag t) nil [424 453])
+            ("validationinterface.h" include (:system-flag t) nil [454 486])
+            ("script/ismine.h" include (:system-flag t) nil [487 513])
+            ("script/sign.h" include (:system-flag t) nil [514 538])
+            ("wallet/crypter.h" include (:system-flag t) nil [539 566])
+            ("wallet/walletdb.h" include (:system-flag t) nil [567 595])
+            ("wallet/rpcwallet.h" include (:system-flag t) nil [596 625])
+            ("algorithm" include (:system-flag t) nil [627 647])
+            ("atomic" include (:system-flag t) nil [648 665])
+            ("map" include (:system-flag t) nil [666 680])
+            ("set" include (:system-flag t) nil [681 695])
+            ("stdexcept" include (:system-flag t) nil [696 716])
+            ("stdint.h" include (:system-flag t) nil [717 736])
+            ("string" include (:system-flag t) nil [737 754])
+            ("utility" include (:system-flag t) nil [755 773])
+            ("vector" include (:system-flag t) nil [774 791])
+            ("CWalletRef" type
+               (:typedef ("CWallet" type (:type "class") nil nil)
+                :pointer 1
+                :type "typedef")
+                nil [793 821])
+            ("vpwallets" variable
+               (:typemodifiers ("extern")
+                :type ("std::vector" type
+                     (:template-specifier 
+                        ( ("CWalletRef" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [822 863])
+            ("payTxFee" variable
+               (:typemodifiers ("extern")
+                :type ("CFeeRate" type (:type "class") nil nil))
+                nil [885 910])
+            ("nTxConfirmTarget" variable
+               (:typemodifiers ("extern")
+                :type "unsigned int")
+                nil [911 948])
+            ("bSpendZeroConfChange" variable
+               (:typemodifiers ("extern")
+                :type "bool")
+                nil [949 982])
+            ("fWalletRbf" variable
+               (:typemodifiers ("extern")
+                :type "bool")
+                nil [983 1006])
+            ("DEFAULT_KEYPOOL_SIZE" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :default-value "1000"
+                :type "unsigned int")
+                nil [1008 1062])
+            ("DEFAULT_TRANSACTION_FEE" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :default-value "0"
+                :type ("CAmount" type (:type "class") nil nil))
+                nil [1085 1134])
+            ("DEFAULT_FALLBACK_FEE" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :default-value "20000"
+                :type ("CAmount" type (:type "class") nil nil))
+                nil [1160 1210])
+            ("DEFAULT_DISCARD_FEE" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :default-value "10000"
+                :type ("CAmount" type (:type "class") nil nil))
+                nil [1239 1288])
+            ("DEFAULT_TRANSACTION_MINFEE" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :default-value "1000"
+                :type ("CAmount" type (:type "class") nil nil))
+                nil [1311 1366])
+            ("WALLET_INCREMENTAL_RELAY_FEE" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :default-value "5000"
+                :type ("CAmount" type (:type "class") nil nil))
+                nil [1429 1486])
+            ("MIN_CHANGE" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :default-value "CENT"
+                :type ("CAmount" type (:type "class") nil nil))
+                nil [1520 1559])
+            ("MIN_FINAL_CHANGE" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :default-value "MIN_CHANGE/2"
+                :type ("CAmount" type (:type "class") nil nil))
+                nil [1614 1667])
+            ("DEFAULT_SPEND_ZEROCONF_CHANGE" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :default-value "true"
+                :type "bool")
+                nil [1705 1760])
+            ("DEFAULT_WALLET_REJECT_LONG_CHAINS" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :default-value "false"
+                :type "bool")
+                nil [1801 1861])
+            ("DEFAULT_TX_CONFIRM_TARGET" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :default-value "6"
+                :type "unsigned int")
+                nil [1891 1947])
+            ("DEFAULT_WALLET_RBF" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :default-value "false"
+                :type "bool")
+                nil [1971 2016])
+            ("DEFAULT_WALLETBROADCAST" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :default-value "true"
+                :type "bool")
+                nil [2017 2066])
+            ("DEFAULT_DISABLE_WALLET" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :default-value "false"
+                :type "bool")
+                nil [2067 2116])
+            ("DEFAULT_WALLET_DAT" variable
+               (:pointer 1
+                :typemodifiers ("extern")
+                :constant-flag t
+                :type "char")
+                nil [2118 2157])
+            ("TIMESTAMP_MIN" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :default-value "0"
+                :type ("int64_t" type (:type "class") nil nil))
+                nil [2159 2198])
+            ("CBlockIndex" type
+               (:prototype t
+                :type "class")
+                nil [2200 2218])
+            ("CCoinControl" type
+               (:prototype t
+                :type "class")
+                nil [2219 2238])
+            ("COutput" type
+               (:prototype t
+                :type "class")
+                nil [2239 2253])
+            ("CReserveKey" type
+               (:prototype t
+                :type "class")
+                nil [2254 2272])
+            ("CScript" type
+               (:prototype t
+                :type "class")
+                nil [2273 2287])
+            ("CScheduler" type
+               (:prototype t
+                :type "class")
+                nil [2288 2305])
+            ("CTxMemPool" type
+               (:prototype t
+                :type "class")
+                nil [2306 2323])
+            ("CBlockPolicyEstimator" type
+               (:prototype t
+                :type "class")
+                nil [2324 2352])
+            ("CWalletTx" type
+               (:prototype t
+                :type "class")
+                nil [2353 2369])
+            ("FeeCalculation" type
+               (:prototype t
+                :type "struct")
+                nil [2370 2392])
+            ("FeeEstimateMode" type
+               (:prototype t
+                :type "class")
+                nil [2398 2420])
+            ("WalletFeature" type
+               (:members 
+                  ( ("FEATURE_BASE" variable
+                       (:constant-flag t
+                        :default-value (2525 2530)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2510 2530])
+                    ("FEATURE_WALLETCRYPT" variable
+                       (:constant-flag t
+                        :default-value (2659 2664)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2637 2664])
+                    ("FEATURE_COMPRPUBKEY" variable
+                       (:constant-flag t
+                        :default-value (2713 2718)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2691 2718])
+                    ("FEATURE_HD" variable
+                       (:constant-flag t
+                        :default-value (2764 2770)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2751 2770])
+                    ("FEATURE_HD_SPLIT" variable
+                       (:constant-flag t
+                        :default-value (2851 2857)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2832 2857])
+                    ("FEATURE_NO_DEFAULT_KEY" variable
+                       (:constant-flag t
+                        :default-value (2955 2961)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2930 2961])
+                    ("FEATURE_LATEST" variable
+                       (:constant-flag t
+                        :default-value (3025 3044)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [3008 3044]))                  
+                :type "enum")
+                nil [2485 3108])
+            ("OutputType" type
+               (:members 
+                  ( ("OUTPUT_TYPE_NONE" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [3132 3149])
+                    ("OUTPUT_TYPE_LEGACY" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [3154 3173])
+                    ("OUTPUT_TYPE_P2SH_SEGWIT" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [3178 3202])
+                    ("OUTPUT_TYPE_BECH32" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [3207 3226])
+                    ("OUTPUT_TYPE_DEFAULT" variable
+                       (:constant-flag t
+                        :default-value (3254 3277)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [3232 3277]))                  
+                :type "enum")
+                nil [3110 3280])
+            ("g_address_type" variable
+               (:typemodifiers ("extern")
+                :type ("OutputType" type (:type "class") nil nil))
+                nil [3282 3315])
+            ("g_change_type" variable
+               (:typemodifiers ("extern")
+                :type ("OutputType" type (:type "class") nil nil))
+                nil [3316 3348])
+            ("CKeyPool" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [3392 3399])
+                    ("nTime" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3404 3418])
+                    ("vchPubKey" variable (:type ("CPubKey" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3423 3441])
+                    ("fInternal" variable (:type "bool") (reparse-symbol classsubparts) [3446 3461])
+                    ("CKeyPool" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :type ("CKeyPool" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3489 3500])
+                    ("CKeyPool" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("vchPubKeyIn" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("CPubKey" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3514 3541])
+                            ("internalIn" variable (:type "bool") (reparse-symbol arg-sub-list) [3542 3558]))                          
+                        :type ("CKeyPool" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3505 3559])
+                    ("ADD_SERIALIZE_METHODS" variable (:type "int") (reparse-symbol classsubparts) [3565 3587])
+                    ("SerializationOp" function
+                       (:template 
+                          ( ("Stream" type (:type "class") nil nil)
+                            ("Operation" type (:type "class") nil nil))                          
+                        :type "void"
+                        :arguments 
+                          ( ("s" variable
+                               (:reference 1
+                                :type ("Stream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3672 3682])
+                            ("ser_action" variable (:type ("Operation" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3683 3704]))                          
+                        :typemodifiers ("inline"))
+                        (reparse-symbol classsubparts) [3593 4329]))                  
+                :type "class")
+                nil [3375 4332])
+            ("CAddressBookData" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [4384 4391])
+                    ("name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4396 4413])
+                    ("purpose" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4418 4438])
+                    ("CAddressBookData" function
+                       (:constructor-flag t
+                        :type ("CAddressBookData" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4444 4486])
+                    ("StringMap" type
+                       (:typedef ("std::map" type
+                             (:template-specifier 
+                                ( ("std::string" type nil nil nil)
+                                  ("std::string" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [4492 4545])
+                    ("destdata" variable (:type ("StringMap" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4550 4569]))                  
+                :type "class")
+                nil [4359 4572])
+            ("CRecipient" type
+               (:members 
+                  ( ("scriptPubKey" variable (:type ("CScript" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4598 4619])
+                    ("nAmount" variable (:type ("CAmount" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4624 4640])
+                    ("fSubtractFeeFromAmount" variable (:type "bool") (reparse-symbol classsubparts) [4645 4673]))                  
+                :type "struct")
+                nil [4574 4676])
+            ("mapValue_t" type
+               (:typedef ("std::map" type
+                     (:template-specifier 
+                        ( ("std::string" type nil nil nil)
+                          ("std::string" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :type "typedef")
+                nil [4678 4732])
+            ("ReadOrderPos" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("nOrderPos" variable
+                       (:reference 1
+                        :type ("int64_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4767 4786])
+                    ("mapValue" variable
+                       (:reference 1
+                        :type ("mapValue_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4787 4808]))                  
+                :type "void")
+                nil [4735 4970])
+            ("WriteOrderPos" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("nOrderPos" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("int64_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5006 5031])
+                    ("mapValue" variable
+                       (:reference 1
+                        :type ("mapValue_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5032 5053]))                  
+                :type "void")
+                nil [4973 5139])
+            ("COutputEntry" type
+               (:members 
+                  ( ("destination" variable (:type ("CTxDestination" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5167 5194])
+                    ("amount" variable (:type ("CAmount" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5199 5214])
+                    ("vout" variable (:type "int") (reparse-symbol classsubparts) [5219 5228]))                  
+                :type "struct")
+                nil [5141 5231])
+            ("CMerkleTx" type
+               (:members 
+                  ( ("private" label nil (reparse-symbol classsubparts) [5324 5332])
+                    ("ABANDON_HASH" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("uint256" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5407 5441])
+                    ("public" label nil (reparse-symbol classsubparts) [5443 5450])
+                    ("tx" variable (:type ("CTransactionRef" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5455 5474])
+                    ("hashBlock" variable (:type ("uint256" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5479 5497])
+                    ("nIndex" variable (:type "int") (reparse-symbol classsubparts) [5768 5779])
+                    ("CMerkleTx" function
+                       (:constructor-flag t
+                        :type ("CMerkleTx" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5785 5861])
+                    ("CMerkleTx" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("arg" variable (:type ("CTransactionRef" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5886 5906]))                          
+                        :type ("CMerkleTx" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5876 5965])
+                    ("Init" function (:type "void") (reparse-symbol classsubparts) [5971 6046])
+                    ("SetTx" function
+                       (:arguments 
+                          ( ("arg" variable (:type ("CTransactionRef" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6063 6083]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [6052 6124])
+                    ("ADD_SERIALIZE_METHODS" variable (:type "int") (reparse-symbol classsubparts) [6130 6152])
+                    ("SerializationOp" function
+                       (:template 
+                          ( ("Stream" type (:type "class") nil nil)
+                            ("Operation" type (:type "class") nil nil))                          
+                        :type "void"
+                        :arguments 
+                          ( ("s" variable
+                               (:reference 1
+                                :type ("Stream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6237 6247])
+                            ("ser_action" variable (:type ("Operation" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6248 6269]))                          
+                        :typemodifiers ("inline"))
+                        (reparse-symbol classsubparts) [6158 6477])
+                    ("SetMerkleBranch" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("pIndex" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("CBlockIndex" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6504 6530])
+                            ("posInBlock" variable (:type "int") (reparse-symbol arg-sub-list) [6531 6546]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [6483 6547])
+                    ("GetDepthInMainChain" function
+                       (:prototype-flag t
+                        :methodconst-flag t
+                        :arguments 
+                          ( ("" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("CBlockIndex" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6829 6849])
+                            ("" variable (:type ("pindexRet" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6849 6859]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [6805 6866])
+                    ("GetDepthInMainChain" function
+                       (:methodconst-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [6871 6975])
+                    ("IsInMainChain" function
+                       (:methodconst-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [6980 7083])
+                    ("GetBlocksToMaturity" function
+                       (:prototype-flag t
+                        :methodconst-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [7088 7120])
+                    ("hashUnset" function
+                       (:methodconst-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [7125 7209])
+                    ("isAbandoned" function
+                       (:methodconst-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [7214 7278])
+                    ("setAbandoned" function (:type "void") (reparse-symbol classsubparts) [7283 7332])
+                    ("GetHash" function
+                       (:methodconst-flag t
+                        :constant-flag t
+                        :type ("uint256" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [7338 7394])
+                    ("IsCoinBase" function
+                       (:methodconst-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [7399 7451]))                  
+                :type "class")
+                nil [5306 7454])
+            ("CWalletTx" type
+               (:superclasses 
+                  ( ("CMerkleTx" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("private" label nil (reparse-symbol classsubparts) [7670 7678])
+                    ("pwallet" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CWallet" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [7683 7706])
+                    ("public" label nil (reparse-symbol classsubparts) [7708 7715])
+                    ("mapValue" variable (:type ("mapValue_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [9048 9068])
+                    ("vOrderForm" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("std::pair" type (:template-specifier 
+                                ( ("std::string" type nil nil nil)
+                                  ("std::string" type nil nil nil))                                ) nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [9073 9134])
+                    ("fTimeReceivedIsTxTime" variable (:type "unsigned int") (reparse-symbol classsubparts) [9139 9174])
+                    ("nTimeReceived" variable (:type "unsigned int") (reparse-symbol classsubparts) [9179 9206])
+                    ("nTimeSmart" variable (:type "unsigned int") (reparse-symbol classsubparts) [9745 9769])
+                    ("fFromMe" variable (:type "char") (reparse-symbol classsubparts) [10025 10038])
+                    ("strFromAccount" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [10043 10070])
+                    ("nOrderPos" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [10075 10093])
+                    ("fDebitCached" variable
+                       (:typemodifiers ("mutable")
+                        :type "bool")
+                        (reparse-symbol classsubparts) [10160 10186])
+                    ("fCreditCached" variable
+                       (:typemodifiers ("mutable")
+                        :type "bool")
+                        (reparse-symbol classsubparts) [10191 10218])
+                    ("fImmatureCreditCached" variable
+                       (:typemodifiers ("mutable")
+                        :type "bool")
+                        (reparse-symbol classsubparts) [10223 10258])
+                    ("fAvailableCreditCached" variable
+                       (:typemodifiers ("mutable")
+                        :type "bool")
+                        (reparse-symbol classsubparts) [10263 10299])
+                    ("fWatchDebitCached" variable
+                       (:typemodifiers ("mutable")
+                        :type "bool")
+                        (reparse-symbol classsubparts) [10304 10335])
+                    ("fWatchCreditCached" variable
+                       (:typemodifiers ("mutable")
+                        :type "bool")
+                        (reparse-symbol classsubparts) [10340 10372])
+                    ("fImmatureWatchCreditCached" variable
+                       (:typemodifiers ("mutable")
+                        :type "bool")
+                        (reparse-symbol classsubparts) [10377 10417])
+                    ("fAvailableWatchCreditCached" variable
+                       (:typemodifiers ("mutable")
+                        :type "bool")
+                        (reparse-symbol classsubparts) [10422 10463])
+                    ("fChangeCached" variable
+                       (:typemodifiers ("mutable")
+                        :type "bool")
+                        (reparse-symbol classsubparts) [10468 10495])
+                    ("fInMempool" variable
+                       (:typemodifiers ("mutable")
+                        :type "bool")
+                        (reparse-symbol classsubparts) [10500 10524])
+                    ("nDebitCached" variable
+                       (:typemodifiers ("mutable")
+                        :type ("CAmount" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [10529 10558])
+                    ("nCreditCached" variable
+                       (:typemodifiers ("mutable")
+                        :type ("CAmount" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [10563 10593])
+                    ("nImmatureCreditCached" variable
+                       (:typemodifiers ("mutable")
+                        :type ("CAmount" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [10598 10636])
+                    ("nAvailableCreditCached" variable
+                       (:typemodifiers ("mutable")
+                        :type ("CAmount" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [10641 10680])
+                    ("nWatchDebitCached" variable
+                       (:typemodifiers ("mutable")
+                        :type ("CAmount" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [10685 10719])
+                    ("nWatchCreditCached" variable
+                       (:typemodifiers ("mutable")
+                        :type ("CAmount" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [10724 10759])
+                    ("nImmatureWatchCreditCached" variable
+                       (:typemodifiers ("mutable")
+                        :type ("CAmount" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [10764 10807])
+                    ("nAvailableWatchCreditCached" variable
+                       (:typemodifiers ("mutable")
+                        :type ("CAmount" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [10812 10856])
+                    ("nChangeCached" variable
+                       (:typemodifiers ("mutable")
+                        :type ("CAmount" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [10861 10891])
+                    ("CWalletTx" function
+                       (:constructor-flag t
+                        :type ("CWalletTx" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [10897 10943])
+                    ("CWalletTx" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("pwalletIn" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("CWallet" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [10959 10984])
+                            ("arg" variable (:type ("CTransactionRef" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10985 11005]))                          
+                        :type ("CWalletTx" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [10949 11070])
+                    ("Init" function
+                       (:arguments 
+                          ( ("pwalletIn" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("CWallet" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [11086 11111]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [11076 12031])
+                    ("ADD_SERIALIZE_METHODS" variable (:type "int") (reparse-symbol classsubparts) [12037 12059])
+                    ("SerializationOp" function
+                       (:template 
+                          ( ("Stream" type (:type "class") nil nil)
+                            ("Operation" type (:type "class") nil nil))                          
+                        :type "void"
+                        :arguments 
+                          ( ("s" variable
+                               (:reference 1
+                                :type ("Stream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [12144 12154])
+                            ("ser_action" variable (:type ("Operation" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12155 12176]))                          
+                        :typemodifiers ("inline"))
+                        (reparse-symbol classsubparts) [12065 13254])
+                    ("MarkDirty" function (:type "void") (reparse-symbol classsubparts) [13304 13663])
+                    ("BindWallet" function
+                       (:arguments 
+                          ( ("pwalletIn" variable
+                               (:pointer 1
+                                :type ("CWallet" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [13685 13704]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [13669 13766])
+                    ("GetDebit" function
+                       (:prototype-flag t
+                        :methodconst-flag t
+                        :arguments 
+                          ( ("filter" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("isminefilter" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [13857 13884]))                          
+                        :type ("CAmount" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [13840 13891])
+                    ("GetCredit" function
+                       (:prototype-flag t
+                        :methodconst-flag t
+                        :arguments 
+                          ( ("filter" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("isminefilter" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [13914 13941]))                          
+                        :type ("CAmount" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [13896 13948])
+                    ("GetImmatureCredit" function
+                       (:prototype-flag t
+                        :methodconst-flag t
+                        :arguments 
+                          ( ("fUseCache" variable
+                               (:default-value "true"
+                                :type "bool")
+                                (reparse-symbol arg-sub-list) [13979 13998]))                          
+                        :type ("CAmount" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [13953 14006])
+                    ("GetAvailableCredit" function
+                       (:prototype-flag t
+                        :methodconst-flag t
+                        :arguments 
+                          ( ("fUseCache" variable
+                               (:default-value "true"
+                                :type "bool")
+                                (reparse-symbol arg-sub-list) [14038 14057]))                          
+                        :type ("CAmount" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [14011 14065])
+                    ("GetImmatureWatchOnlyCredit" function
+                       (:prototype-flag t
+                        :methodconst-flag t
+                        :arguments 
+                          ( ("fUseCache" variable
+                               (:constant-flag t
+                                :default-value "true"
+                                :type "bool")
+                                (reparse-symbol arg-sub-list) [14105 14130]))                          
+                        :type ("CAmount" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [14070 14138])
+                    ("GetAvailableWatchOnlyCredit" function
+                       (:prototype-flag t
+                        :methodconst-flag t
+                        :arguments 
+                          ( ("fUseCache" variable
+                               (:constant-flag t
+                                :default-value "true"
+                                :type "bool")
+                                (reparse-symbol arg-sub-list) [14179 14204]))                          
+                        :type ("CAmount" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [14143 14212])
+                    ("GetChange" function
+                       (:prototype-flag t
+                        :methodconst-flag t
+                        :type ("CAmount" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [14217 14243])
+                    ("GetAmounts" function
+                       (:prototype-flag t
+                        :methodconst-flag t
+                        :arguments 
+                          ( ("listReceived" variable
+                               (:reference 1
+                                :type ("std::list" type
+                                     (:template-specifier 
+                                        ( ("COutputEntry" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [14265 14303])
+                            ("listSent" variable
+                               (:reference 1
+                                :type ("std::list" type
+                                     (:template-specifier 
+                                        ( ("COutputEntry" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [14324 14358])
+                            ("nFee" variable
+                               (:reference 1
+                                :type ("CAmount" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [14359 14373])
+                            ("strSentAccount" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [14374 14402])
+                            ("filter" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("isminefilter" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [14403 14430]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [14249 14437])
+                    ("IsFromMe" function
+                       (:methodconst-flag t
+                        :arguments 
+                          ( ("filter" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("isminefilter" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [14457 14484]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [14443 14541])
+                    ("IsEquivalentTo" function
+                       (:prototype-flag t
+                        :methodconst-flag t
+                        :arguments 
+                          ( ("tx" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("CWalletTx" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [14612 14632]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [14592 14639])
+                    ("InMempool" function
+                       (:prototype-flag t
+                        :methodconst-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [14645 14668])
+                    ("IsTrusted" function
+                       (:prototype-flag t
+                        :methodconst-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [14673 14696])
+                    ("GetTxTime" function
+                       (:prototype-flag t
+                        :methodconst-flag t
+                        :type ("int64_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [14702 14728])
+                    ("GetRequestCount" function
+                       (:prototype-flag t
+                        :methodconst-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [14733 14761])
+                    ("RelayWalletTransaction" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("connman" variable
+                               (:pointer 1
+                                :type ("CConnman" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [14871 14889]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [14843 14890])
+                    ("AcceptToMemoryPool" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("nAbsurdFee" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("CAmount" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [15011 15037])
+                            ("state" variable
+                               (:reference 1
+                                :type ("CValidationState" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [15038 15062]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [14987 15063])
+                    ("GetConflicts" function
+                       (:prototype-flag t
+                        :methodconst-flag t
+                        :type ("std::set" type
+                             (:template-specifier 
+                                ( ("uint256" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [15069 15108]))                  
+                :type "class")
+                nil [7633 15111])
+            ("CInputCoin" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [15133 15140])
+                    ("CInputCoin" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("walletTx" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("CWalletTx" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [15156 15182])
+                            ("i" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [15183 15198]))                          
+                        :type ("CInputCoin" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [15145 15516])
+                    ("outpoint" variable (:type ("COutPoint" type (:type "class") nil nil)) (reparse-symbol classsubparts) [15522 15541])
+                    ("txout" variable (:type ("CTxOut" type (:type "class") nil nil)) (reparse-symbol classsubparts) [15546 15559])
+                    ("<" function
+                       (:methodconst-flag t
+                        :operator-flag t
+                        :arguments 
+                          ( ("rhs" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("CInputCoin" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [15580 15602]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [15565 15656])
+                    ("!=" function
+                       (:methodconst-flag t
+                        :operator-flag t
+                        :arguments 
+                          ( ("rhs" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("CInputCoin" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [15678 15700]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [15662 15755])
+                    ("==" function
+                       (:methodconst-flag t
+                        :operator-flag t
+                        :arguments 
+                          ( ("rhs" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("CInputCoin" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [15777 15799]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [15761 15854]))                  
+                :type "class")
+                nil [15114 15857])
+            ("COutput" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [15875 15882])
+                    ("tx" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CWalletTx" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [15887 15907])
+                    ("i" variable (:type "int") (reparse-symbol classsubparts) [15912 15918])
+                    ("nDepth" variable (:type "int") (reparse-symbol classsubparts) [15923 15934])
+                    ("fSpendable" variable (:type "bool") (reparse-symbol classsubparts) [16005 16021])
+                    ("fSolvable" variable (:type "bool") (reparse-symbol classsubparts) [16106 16121])
+                    ("fSafe" variable (:type "bool") (reparse-symbol classsubparts) [16375 16386])
+                    ("COutput" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("txIn" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("CWalletTx" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [16400 16422])
+                            ("iIn" variable (:type "int") (reparse-symbol arg-sub-list) [16423 16431])
+                            ("nDepthIn" variable (:type "int") (reparse-symbol arg-sub-list) [16432 16445])
+                            ("fSpendableIn" variable (:type "bool") (reparse-symbol arg-sub-list) [16446 16464])
+                            ("fSolvableIn" variable (:type "bool") (reparse-symbol arg-sub-list) [16465 16482])
+                            ("fSafeIn" variable (:type "bool") (reparse-symbol arg-sub-list) [16483 16496]))                          
+                        :type ("COutput" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [16392 16624])
+                    ("ToString" function
+                       (:prototype-flag t
+                        :methodconst-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [16630 16659]))                  
+                :type "class")
+                nil [15859 16662])
+            ("CWalletKey" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [16766 16773])
+                    ("vchPrivKey" variable (:type ("CPrivKey" type (:type "class") nil nil)) (reparse-symbol classsubparts) [16778 16798])
+                    ("nTimeCreated" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [16803 16824])
+                    ("nTimeExpires" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [16829 16850])
+                    ("strComment" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [16855 16878])
+                    ("CWalletKey" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("nExpires" variable
+                               (:default-value "0"
+                                :type ("int64_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [17049 17067]))                          
+                        :type ("CWalletKey" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [17038 17069])
+                    ("ADD_SERIALIZE_METHODS" variable (:type "int") (reparse-symbol classsubparts) [17075 17097])
+                    ("SerializationOp" function
+                       (:template 
+                          ( ("Stream" type (:type "class") nil nil)
+                            ("Operation" type (:type "class") nil nil))                          
+                        :type "void"
+                        :arguments 
+                          ( ("s" variable
+                               (:reference 1
+                                :type ("Stream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [17182 17192])
+                            ("ser_action" variable (:type ("Operation" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [17193 17214]))                          
+                        :typemodifiers ("inline"))
+                        (reparse-symbol classsubparts) [17103 17487]))                  
+                :type "class")
+                nil [16747 17490])
+            ("CAccountingEntry" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [17594 17601])
+                    ("strAccount" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [17606 17629])
+                    ("nCreditDebit" variable (:type ("CAmount" type (:type "class") nil nil)) (reparse-symbol classsubparts) [17634 17655])
+                    ("nTime" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [17660 17674])
+                    ("strOtherAccount" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [17679 17707])
+                    ("strComment" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [17712 17735])
+                    ("mapValue" variable (:type ("mapValue_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [17740 17760])
+                    ("nOrderPos" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [17765 17783])
+                    ("nEntryNo" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [17830 17848])
+                    ("CAccountingEntry" function
+                       (:constructor-flag t
+                        :type ("CAccountingEntry" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [17854 17903])
+                    ("SetNull" function (:type "void") (reparse-symbol classsubparts) [17909 18115])
+                    ("ADD_SERIALIZE_METHODS" variable (:type "int") (reparse-symbol classsubparts) [18121 18143])
+                    ("SerializationOp" function
+                       (:template 
+                          ( ("Stream" type (:type "class") nil nil)
+                            ("Operation" type (:type "class") nil nil))                          
+                        :type "void"
+                        :arguments 
+                          ( ("s" variable
+                               (:reference 1
+                                :type ("Stream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [18228 18238])
+                            ("ser_action" variable (:type ("Operation" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [18239 18260]))                          
+                        :typemodifiers ("inline"))
+                        (reparse-symbol classsubparts) [18149 19675])
+                    ("private" label nil (reparse-symbol classsubparts) [19677 19685])
+                    ("_ssExtra" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("char" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [19690 19717]))                  
+                :type "class")
+                nil [17569 19720])
+            ("CValidationInterface" variable (:type "int") nil [19942 41762])
+            ("CReserveScript" variable (:type "int") nil [41839 42436])
+            ("CAccount" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [42545 42552])
+                    ("vchPubKey" variable (:type ("CPubKey" type (:type "class") nil nil)) (reparse-symbol classsubparts) [42557 42575])
+                    ("CAccount" function
+                       (:constructor-flag t
+                        :type ("CAccount" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [42581 42622])
+                    ("SetNull" function (:type "void") (reparse-symbol classsubparts) [42628 42685])
+                    ("ADD_SERIALIZE_METHODS" variable (:type "int") (reparse-symbol classsubparts) [42691 42713])
+                    ("SerializationOp" function
+                       (:template 
+                          ( ("Stream" type (:type "class") nil nil)
+                            ("Operation" type (:type "class") nil nil))                          
+                        :type "void"
+                        :arguments 
+                          ( ("s" variable
+                               (:reference 1
+                                :type ("Stream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [42798 42808])
+                            ("ser_action" variable (:type ("Operation" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [42809 42830]))                          
+                        :typemodifiers ("inline"))
+                        (reparse-symbol classsubparts) [42719 42982]))                  
+                :type "class")
+                nil [42528 42985])
+            ("DummySignTx" function
+               (:template 
+                  ( ("ContainerType" type (:type "class") nil nil))                  
+                :type "bool"
+                :arguments 
+                  ( ("txNew" variable
+                       (:reference 1
+                        :type ("CMutableTransaction" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [43254 43281])
+                    ("coins" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ContainerType" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [43282 43309]))                  
+                :parent "CWallet"
+                :methodconst-flag t)
+                nil [43194 43762])
+            ("ParseOutputType" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("str" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [43791 43814])
+                    ("default_type" variable
+                       (:default-value "OUTPUT_TYPE_DEFAULT"
+                        :type ("OutputType" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [43815 43860]))                  
+                :type ("OutputType" type (:type "class") nil nil))
+                nil [43764 43862])
+            ("FormatOutputType" function
+               (:prototype-flag t
+                :constant-flag t
+                :arguments 
+                  ( ("type" variable (:type ("OutputType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [43899 43915]))                  
+                :type ("std::string" type (:type "class") nil nil))
+                nil [43863 43916])
+            ("GetDestinationForKey" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("key" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CPubKey" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [44118 44137])
+                    ("" variable (:type ("OutputType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [44138 44149]))                  
+                :type ("CTxDestination" type (:type "class") nil nil))
+                nil [44082 44150])
+            ("GetAllDestinationsForKey" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("key" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CPubKey" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [44290 44309]))                  
+                :type ("std::vector" type
+                     (:template-specifier 
+                        ( ("CTxDestination" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [44237 44310]))          
+      :file "wallet.h"
+      :pointmax 44346
+      :fsize 44345
+      :lastmodtime '(23128 22954 0 0)
+      :unmatched-syntax '((PUBLIC 41832 . 41838) (punctuation 41830 . 41831) (symbol 41824 . 41829) (symbol 41812 . 41823) (CLASS 41806 . 41811) (PUBLIC 19935 . 19941) (punctuation 19933 . 19934) (symbol 19918 . 19933) (PUBLIC 19911 . 19917) (punctuation 19909 . 19910) (symbol 19903 . 19908) (symbol 19895 . 19902) (CLASS 19889 . 19894) (EXPLICIT 17029 . 17037) (punctuation 6848 . 6849) (EXPLICIT 5867 . 5875) (ENUM 2393 . 2397))
+      :lexical-table 
+        '(("BITCOIN_WALLET_WALLET_H")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("wallet/wallet.h" include (:system-flag t) nil [240 266])
+            ("base58.h" include (:system-flag t) nil [268 287])
+            ("checkpoints.h" include (:system-flag t) nil [288 312])
+            ("chain.h" include (:system-flag t) nil [313 331])
+            ("wallet/coincontrol.h" include (:system-flag t) nil [332 363])
+            ("consensus/consensus.h" include (:system-flag t) nil [364 396])
+            ("consensus/validation.h" include (:system-flag t) nil [397 430])
+            ("fs.h" include (:system-flag t) nil [431 446])
+            ("wallet/init.h" include (:system-flag t) nil [447 471])
+            ("key.h" include (:system-flag t) nil [472 488])
+            ("keystore.h" include (:system-flag t) nil [489 510])
+            ("validation.h" include (:system-flag t) nil [511 534])
+            ("net.h" include (:system-flag t) nil [535 551])
+            ("policy/fees.h" include (:system-flag t) nil [552 576])
+            ("policy/policy.h" include (:system-flag t) nil [577 603])
+            ("policy/rbf.h" include (:system-flag t) nil [604 627])
+            ("primitives/block.h" include (:system-flag t) nil [628 657])
+            ("primitives/transaction.h" include (:system-flag t) nil [658 693])
+            ("script/script.h" include (:system-flag t) nil [694 720])
+            ("scheduler.h" include (:system-flag t) nil [721 743])
+            ("timedata.h" include (:system-flag t) nil [744 765])
+            ("txmempool.h" include (:system-flag t) nil [766 788])
+            ("util.h" include (:system-flag t) nil [789 806])
+            ("utilmoneystr.h" include (:system-flag t) nil [807 832])
+            ("wallet/fees.h" include (:system-flag t) nil [833 857])
+            ("assert.h" include (:system-flag t) nil [859 878])
+            ("future" include (:system-flag t) nil [879 896])
+            ("boost/algorithm/string/replace.hpp" include (:system-flag t) nil [898 943])
+            ("boost/thread.hpp" include (:system-flag t) nil [944 971])
+            ("vpwallets" variable (:type ("std::vector" type
+                 (:template-specifier 
+                    ( ("CWalletRef" type nil nil nil))                    
+                  :type "class")
+                  nil nil)) nil [973 1007])
+            ("payTxFee" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("DEFAULT_TRANSACTION_FEE" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1065 1089]))                  
+                :type ("CFeeRate" type (:type "class") nil nil))
+                nil [1047 1090])
+            ("nTxConfirmTarget" variable
+               (:default-value "DEFAULT_TX_CONFIRM_TARGET"
+                :type "unsigned int")
+                nil [1091 1149])
+            ("bSpendZeroConfChange" variable
+               (:default-value "DEFAULT_SPEND_ZEROCONF_CHANGE"
+                :type "bool")
+                nil [1150 1208])
+            ("fWalletRbf" variable
+               (:default-value "DEFAULT_WALLET_RBF"
+                :type "bool")
+                nil [1209 1246])
+            ("g_address_type" variable
+               (:default-value "OUTPUT_TYPE_NONE"
+                :type ("OutputType" type (:type "class") nil nil))
+                nil [1247 1292])
+            ("g_change_type" variable
+               (:default-value "OUTPUT_TYPE_NONE"
+                :type ("OutputType" type (:type "class") nil nil))
+                nil [1293 1337])
+            ("DEFAULT_WALLET_DAT" variable
+               (:pointer 1
+                :constant-flag t
+                :default-value "\"wallet.dat\""
+                :type "char")
+                nil [1339 1386])
+            ("BIP32_HARDENED_KEY_LIMIT" variable
+               (:constant-flag t
+                :default-value "0x80000000"
+                :type ("uint32_t" type (:type "class") nil nil))
+                nil [1387 1440])
+            ("CWallet::minTxFee" variable
+               (:default-value "CFeeRate(DEFAULT_TRANSACTION_MINFEE)"
+                :type ("CFeeRate" type (:type "class") nil nil))
+                nil [1567 1633])
+            ("CWallet::fallbackFee" variable
+               (:default-value "CFeeRate(DEFAULT_FALLBACK_FEE)"
+                :type ("CFeeRate" type (:type "class") nil nil))
+                nil [1808 1871])
+            ("CWallet::m_discard_rate" variable
+               (:default-value "CFeeRate(DEFAULT_DISCARD_FEE)"
+                :type ("CFeeRate" type (:type "class") nil nil))
+                nil [1873 1938])
+            ("ABANDON_HASH" function
+               (:prototype-flag t
+                :parent "CMerkleTx"
+                :constant-flag t
+                :arguments 
+                  ( ("" variable (:type ("uint256S" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1978 2054]))                  
+                :type ("uint256" type (:type "class") nil nil))
+                nil [1940 2056])
+            ("CompareValueOnly" type
+               (:members 
+                  ( ("()" function
+                       (:methodconst-flag t
+                        :operator-flag t
+                        :arguments 
+                          ( ("t1" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("CInputCoin" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2142 2163])
+                            ("t2" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("CInputCoin" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2184 2205]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [2126 2273]))                  
+                :type "struct")
+                nil [2096 2276])
+            ("ToString" function
+               (:methodconst-flag t
+                :parent "COutput"
+                :type ("std::string" type (:type "class") nil nil))
+                nil [2278 2443])
+            ("CAffectedKeysVisitor" type
+               (:superclasses 
+                  ( ("boost::static_visitor" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("private" label nil (reparse-symbol classsubparts) [2511 2519])
+                    ("keystore" variable
+                       (:constant-flag t
+                        :type ("CKeyStore" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2524 2550])
+                    ("vKeys" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("CKeyID" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [2555 2582])
+                    ("public" label nil (reparse-symbol classsubparts) [2584 2591])
+                    ("CAffectedKeysVisitor" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("keystoreIn" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("CKeyStore" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2617 2645])
+                            ("vKeysIn" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("CKeyID" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [2646 2675]))                          
+                        :type ("CAffectedKeysVisitor" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2596 2717])
+                    ("Process" function
+                       (:arguments 
+                          ( ("script" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("CScript" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2736 2758]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2723 3038])
+                    ("()" function
+                       (:operator-flag t
+                        :arguments 
+                          ( ("keyId" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("CKeyID" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3060 3080]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3044 3161])
+                    ("()" function
+                       (:operator-flag t
+                        :arguments 
+                          ( ("scriptId" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("CScriptID" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3183 3209]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3167 3321])
+                    ("()" function
+                       (:operator-flag t
+                        :arguments 
+                          ( ("scriptID" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("WitnessV0ScriptHash" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3343 3379]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3327 3594])
+                    ("()" function
+                       (:operator-flag t
+                        :arguments 
+                          ( ("keyid" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("WitnessV0KeyHash" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3616 3646]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3600 3763])
+                    ("()" function
+                       (:template 
+                          ( ("X" type (:type "class") nil nil))                          
+                        :type "void"
+                        :arguments 
+                          ( ("none" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("X" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3810 3824]))                          
+                        :operator-flag t)
+                        (reparse-symbol classsubparts) [3769 3827]))                  
+                :type "class")
+                nil [2445 3830])
+            ("GetWalletTx" function
+               (:methodconst-flag t
+                :pointer 1
+                :parent "CWallet"
+                :constant-flag t
+                :arguments 
+                  ( ("hash" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("uint256" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3870 3890]))                  
+                :type ("CWalletTx" type (:type "class") nil nil))
+                nil [3832 4078])
+            ("GenerateNewKey" function
+               (:parent "CWallet"
+                :arguments 
+                  ( ("walletdb" variable
+                       (:reference 1
+                        :type ("CWalletDB" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4112 4132])
+                    ("internal" variable (:type "bool") (reparse-symbol arg-sub-list) [4133 4147]))                  
+                :type ("CPubKey" type (:type "class") nil nil))
+                nil [4080 5187])
+            ("DeriveNewChildKey" function
+               (:parent "CWallet"
+                :arguments 
+                  ( ("walletdb" variable
+                       (:reference 1
+                        :type ("CWalletDB" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5221 5241])
+                    ("metadata" variable
+                       (:reference 1
+                        :type ("CKeyMetadata" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5242 5265])
+                    ("secret" variable
+                       (:reference 1
+                        :type ("CKey" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5266 5279])
+                    ("internal" variable (:type "bool") (reparse-symbol arg-sub-list) [5280 5294]))                  
+                :type "void")
+                nil [5189 7420])
+            ("AddKeyPubKeyWithDB" function
+               (:parent "CWallet"
+                :arguments 
+                  ( ("walletdb" variable
+                       (:reference 1
+                        :type ("CWalletDB" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7455 7475])
+                    ("secret" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CKey" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7476 7495])
+                    ("pubkey" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CPubKey" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7496 7518]))                  
+                :type "bool")
+                nil [7422 8609])
+            ("AddKeyPubKey" function
+               (:parent "CWallet"
+                :arguments 
+                  ( ("secret" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CKey" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8638 8657])
+                    ("pubkey" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CPubKey" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8658 8680]))                  
+                :type "bool")
+                nil [8611 8780])
+            ("AddCryptedKey" function
+               (:parent "CWallet"
+                :arguments 
+                  ( ("vchPubKey" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CPubKey" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8810 8835])
+                    ("vchCryptedSecret" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("unsigned char" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [8864 8915]))                  
+                :type "bool")
+                nil [8782 9563])
+            ("LoadKeyMetadata" function
+               (:parent "CWallet"
+                :arguments 
+                  ( ("keyID" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CKeyID" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9595 9615])
+                    ("meta" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CKeyMetadata" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9616 9641]))                  
+                :type "bool")
+                nil [9565 9787])
+            ("LoadScriptMetadata" function
+               (:parent "CWallet"
+                :arguments 
+                  ( ("script_id" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CScriptID" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9822 9849])
+                    ("meta" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CKeyMetadata" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9850 9875]))                  
+                :type "bool")
+                nil [9789 10031])
+            ("LoadCryptedKey" function
+               (:parent "CWallet"
+                :arguments 
+                  ( ("vchPubKey" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CPubKey" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10062 10087])
+                    ("vchCryptedSecret" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("unsigned char" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [10088 10139]))                  
+                :type "bool")
+                nil [10033 10215])
+            ("UpdateTimeFirstKey" function
+               (:parent "CWallet"
+                :arguments 
+                  ( ("nCreateTime" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10399 10419]))                  
+                :type "void")
+                nil [10366 10730])
+            ("AddCScript" function
+               (:parent "CWallet"
+                :arguments 
+                  ( ("redeemScript" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CScript" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10757 10785]))                  
+                :type "bool")
+                nil [10732 10941])
+            ("LoadCScript" function
+               (:parent "CWallet"
+                :arguments 
+                  ( ("redeemScript" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CScript" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10969 10997]))                  
+                :type "bool")
+                nil [10943 11667])
+            ("AddWatchOnly" function
+               (:parent "CWallet"
+                :arguments 
+                  ( ("dest" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CScript" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11696 11716]))                  
+                :type "bool")
+                nil [11669 11986])
+            ("AddWatchOnly" function
+               (:parent "CWallet"
+                :arguments 
+                  ( ("dest" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CScript" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12015 12035])
+                    ("nCreateTime" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12036 12056]))                  
+                :type "bool")
+                nil [11988 12157])
+            ("RemoveWatchOnly" function
+               (:parent "CWallet"
+                :arguments 
+                  ( ("dest" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CScript" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12189 12209]))                  
+                :type "bool")
+                nil [12159 12467])
+            ("LoadWatchOnly" function
+               (:parent "CWallet"
+                :arguments 
+                  ( ("dest" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CScript" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12497 12517]))                  
+                :type "bool")
+                nil [12469 12569])
+            ("Unlock" function
+               (:parent "CWallet"
+                :arguments 
+                  ( ("strWalletPassphrase" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("SecureString" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12592 12632]))                  
+                :type "bool")
+                nil [12571 13253])
+            ("ChangeWalletPassphrase" function
+               (:parent "CWallet"
+                :arguments 
+                  ( ("strOldWalletPassphrase" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("SecureString" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [13292 13335])
+                    ("strNewWalletPassphrase" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("SecureString" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [13336 13379]))                  
+                :type "bool")
+                nil [13255 15617])
+            ("SetBestChain" function
+               (:parent "CWallet"
+                :arguments 
+                  ( ("loc" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CBlockLocator" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15646 15671]))                  
+                :type "void")
+                nil [15619 15739])
+            ("SetMinVersion" function
+               (:parent "CWallet"
+                :arguments 
+                  ( ("nVersion" variable (:type ("WalletFeature" type (:type "enum") nil nil)) (reparse-symbol arg-sub-list) [15769 15797])
+                    ("pwalletdbIn" variable
+                       (:pointer 1
+                        :type ("CWalletDB" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15798 15821])
+                    ("fExplicit" variable (:type "bool") (reparse-symbol arg-sub-list) [15822 15837]))                  
+                :type "bool")
+                nil [15741 16493])
+            ("SetMaxVersion" function
+               (:parent "CWallet"
+                :arguments 
+                  ( ("nVersion" variable (:type "int") (reparse-symbol arg-sub-list) [16523 16536]))                  
+                :type "bool")
+                nil [16495 16754])
+            ("GetConflicts" function
+               (:methodconst-flag t
+                :parent "CWallet"
+                :arguments 
+                  ( ("txid" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("uint256" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16796 16816]))                  
+                :type ("std::set" type
+                     (:template-specifier 
+                        ( ("uint256" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [16756 17495])
+            ("HasWalletSpend" function
+               (:methodconst-flag t
+                :parent "CWallet"
+                :arguments 
+                  ( ("txid" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("uint256" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [17526 17546]))                  
+                :type "bool")
+                nil [17497 17716])
+            ("Flush" function
+               (:parent "CWallet"
+                :arguments 
+                  ( ("shutdown" variable (:type "bool") (reparse-symbol arg-sub-list) [17738 17752]))                  
+                :type "void")
+                nil [17718 17782])
+            ("SyncMetaData" function
+               (:parent "CWallet"
+                :arguments 
+                  ( ("range" variable (:type ("std::pair" type
+                         (:template-specifier 
+                            ( ("TxSpends::iterator" type nil nil nil)
+                              ("TxSpends::iterator" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [17811 17867]))                  
+                :type "void")
+                nil [17784 19296])
+            ("IsSpent" function
+               (:methodconst-flag t
+                :parent "CWallet"
+                :arguments 
+                  ( ("hash" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("uint256" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [19397 19417])
+                    ("n" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [19418 19433]))                  
+                :type "bool")
+                nil [19375 20055])
+            ("AddToSpends" function
+               (:parent "CWallet"
+                :arguments 
+                  ( ("outpoint" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("COutPoint" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [20083 20109])
+                    ("wtxid" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("uint256" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [20110 20131]))                  
+                :type "void")
+                nil [20057 20326])
+            ("AddToSpends" function
+               (:parent "CWallet"
+                :arguments 
+                  ( ("wtxid" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("uint256" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [20355 20376]))                  
+                :type "void")
+                nil [20329 20656])
+            ("EncryptWallet" function
+               (:parent "CWallet"
+                :arguments 
+                  ( ("strWalletPassphrase" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("SecureString" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [20686 20726]))                  
+                :type "bool")
+                nil [20658 23960])
+            ("ReorderTransactions" function
+               (:parent "CWallet"
+                :type ("DBErrors" type (:type "class") nil nil))
+                nil [23962 26408])
+            ("IncOrderPosNext" function
+               (:parent "CWallet"
+                :arguments 
+                  ( ("pwalletdb" variable
+                       (:pointer 1
+                        :type ("CWalletDB" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [26443 26464]))                  
+                :type ("int64_t" type (:type "class") nil nil))
+                nil [26410 26720])
+            ("AccountMove" function
+               (:parent "CWallet"
+                :arguments 
+                  ( ("strFrom" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [26748 26768])
+                    ("strTo" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [26769 26787])
+                    ("nAmount" variable (:type ("CAmount" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [26788 26804])
+                    ("strComment" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [26805 26828]))                  
+                :type "bool")
+                nil [26722 27623])
+            ("GetAccountDestination" function
+               (:parent "CWallet"
+                :arguments 
+                  ( ("dest" variable
+                       (:reference 1
+                        :type ("CTxDestination" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [27661 27682])
+                    ("strAccount" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [27683 27706])
+                    ("bForceNew" variable (:type "bool") (reparse-symbol arg-sub-list) [27707 27722]))                  
+                :type "bool")
+                nil [27625 29048])
+            ("MarkDirty" function
+               (:parent "CWallet"
+                :type "void")
+                nil [29050 29221])
+            ("MarkReplaced" function
+               (:parent "CWallet"
+                :arguments 
+                  ( ("originalHash" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("uint256" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [29250 29278])
+                    ("newHash" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("uint256" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [29279 29302]))                  
+                :type "bool")
+                nil [29223 30008])
+            ("AddToWallet" function
+               (:parent "CWallet"
+                :arguments 
+                  ( ("wtxIn" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CWalletTx" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [30036 30059])
+                    ("fFlushOnClose" variable (:type "bool") (reparse-symbol arg-sub-list) [30060 30079]))                  
+                :type "bool")
+                nil [30010 32804])
+            ("LoadToWallet" function
+               (:parent "CWallet"
+                :arguments 
+                  ( ("wtxIn" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CWalletTx" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [32833 32856]))                  
+                :type "bool")
+                nil [32806 33443])
+            ("AddToWalletIfInvolvingMe" function
+               (:parent "CWallet"
+                :arguments 
+                  ( ("ptx" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CTransactionRef" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [34232 34259])
+                    ("pIndex" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CBlockIndex" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [34260 34286])
+                    ("posInBlock" variable (:type "int") (reparse-symbol arg-sub-list) [34287 34302])
+                    ("fUpdate" variable (:type "bool") (reparse-symbol arg-sub-list) [34303 34316]))                  
+                :type "bool")
+                nil [34193 36943])
+            ("TransactionCanBeAbandoned" function
+               (:methodconst-flag t
+                :parent "CWallet"
+                :arguments 
+                  ( ("hashTx" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("uint256" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [36985 37007]))                  
+                :type "bool")
+                nil [36945 37191])
+            ("AbandonTransaction" function
+               (:parent "CWallet"
+                :arguments 
+                  ( ("hashTx" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("uint256" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [37226 37248]))                  
+                :type "bool")
+                nil [37193 39412])
+            ("MarkConflicted" function
+               (:parent "CWallet"
+                :arguments 
+                  ( ("hashBlock" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("uint256" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [39443 39468])
+                    ("hashTx" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("uint256" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [39469 39491]))                  
+                :type "void")
+                nil [39414 41718])
+            ("SyncTransaction" function
+               (:parent "CWallet"
+                :arguments 
+                  ( ("ptx" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CTransactionRef" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [41750 41777])
+                    ("pindex" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CBlockIndex" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [41778 41804])
+                    ("posInBlock" variable (:type "int") (reparse-symbol arg-sub-list) [41805 41820]))                  
+                :type "void")
+                nil [41720 42309])
+            ("TransactionAddedToMempool" function
+               (:parent "CWallet"
+                :arguments 
+                  ( ("ptx" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CTransactionRef" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [42351 42378]))                  
+                :type "void")
+                nil [42311 42563])
+            ("TransactionRemovedFromMempool" function
+               (:parent "CWallet"
+                :arguments 
+                  ( ("ptx" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CTransactionRef" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [42609 42636]))                  
+                :type "void")
+                nil [42565 42785])
+            ("BlockConnected" function
+               (:parent "CWallet"
+                :arguments 
+                  ( ("pblock" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::shared_ptr" type
+                             (:template-specifier 
+                                ( ("CBlock" type (:constant-flag t) nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [42816 42860])
+                    ("pindex" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CBlockIndex" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [42861 42887])
+                    ("vtxConflicted" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("CTransactionRef" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [42888 42938]))                  
+                :type "void")
+                nil [42787 43823])
+            ("BlockDisconnected" function
+               (:parent "CWallet"
+                :arguments 
+                  ( ("pblock" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::shared_ptr" type
+                             (:template-specifier 
+                                ( ("CBlock" type (:constant-flag t) nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [43857 43901]))                  
+                :type "void")
+                nil [43825 44026])
+            ("BlockUntilSyncedToCurrentChain" function
+               (:parent "CWallet"
+                :type "void")
+                nil [44030 44967])
+            ("IsMine" function
+               (:methodconst-flag t
+                :parent "CWallet"
+                :arguments 
+                  ( ("txin" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CTxIn" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [44997 45015]))                  
+                :type ("isminetype" type (:type "class") nil nil))
+                nil [44970 45399])
+            ("GetDebit" function
+               (:methodconst-flag t
+                :parent "CWallet"
+                :arguments 
+                  ( ("txin" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CTxIn" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [45556 45574])
+                    ("filter" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("isminefilter" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [45575 45602]))                  
+                :type ("CAmount" type (:type "class") nil nil))
+                nil [45530 46049])
+            ("IsMine" function
+               (:methodconst-flag t
+                :parent "CWallet"
+                :arguments 
+                  ( ("txout" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CTxOut" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [46078 46098]))                  
+                :type ("isminetype" type (:type "class") nil nil))
+                nil [46051 46156])
+            ("GetCredit" function
+               (:methodconst-flag t
+                :parent "CWallet"
+                :arguments 
+                  ( ("txout" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CTxOut" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [46185 46205])
+                    ("filter" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("isminefilter" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [46206 46233]))                  
+                :type ("CAmount" type (:type "class") nil nil))
+                nil [46158 46418])
+            ("IsChange" function
+               (:methodconst-flag t
+                :parent "CWallet"
+                :arguments 
+                  ( ("txout" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CTxOut" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [46443 46463]))                  
+                :type "bool")
+                nil [46420 47279])
+            ("GetChange" function
+               (:methodconst-flag t
+                :parent "CWallet"
+                :arguments 
+                  ( ("txout" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CTxOut" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [47308 47328]))                  
+                :type ("CAmount" type (:type "class") nil nil))
+                nil [47281 47504])
+            ("IsMine" function
+               (:methodconst-flag t
+                :parent "CWallet"
+                :arguments 
+                  ( ("tx" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CTransaction" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [47527 47550]))                  
+                :type "bool")
+                nil [47506 47670])
+            ("IsFromMe" function
+               (:methodconst-flag t
+                :parent "CWallet"
+                :arguments 
+                  ( ("tx" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CTransaction" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [47695 47718]))                  
+                :type "bool")
+                nil [47672 47771])
+            ("GetDebit" function
+               (:methodconst-flag t
+                :parent "CWallet"
+                :arguments 
+                  ( ("tx" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CTransaction" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [47799 47822])
+                    ("filter" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("isminefilter" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [47823 47850]))                  
+                :type ("CAmount" type (:type "class") nil nil))
+                nil [47773 48113])
+            ("IsAllFromMe" function
+               (:methodconst-flag t
+                :parent "CWallet"
+                :arguments 
+                  ( ("tx" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CTransaction" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [48141 48164])
+                    ("filter" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("isminefilter" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [48165 48192]))                  
+                :type "bool")
+                nil [48115 48677])
+            ("GetCredit" function
+               (:methodconst-flag t
+                :parent "CWallet"
+                :arguments 
+                  ( ("tx" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CTransaction" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [48706 48729])
+                    ("filter" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("isminefilter" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [48730 48757]))                  
+                :type ("CAmount" type (:type "class") nil nil))
+                nil [48679 49029])
+            ("GetChange" function
+               (:methodconst-flag t
+                :parent "CWallet"
+                :arguments 
+                  ( ("tx" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CTransaction" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [49058 49081]))                  
+                :type ("CAmount" type (:type "class") nil nil))
+                nil [49031 49345])
+            ("GenerateNewHDMasterKey" function
+               (:parent "CWallet"
+                :type ("CPubKey" type (:type "class") nil nil))
+                nil [49347 50098])
+            ("SetHDMasterKey" function
+               (:parent "CWallet"
+                :arguments 
+                  ( ("pubkey" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CPubKey" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [50129 50151]))                  
+                :type "bool")
+                nil [50100 50546])
+            ("SetHDChain" function
+               (:parent "CWallet"
+                :arguments 
+                  ( ("chain" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CHDChain" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [50573 50595])
+                    ("memonly" variable (:type "bool") (reparse-symbol arg-sub-list) [50596 50609]))                  
+                :type "bool")
+                nil [50548 50815])
+            ("IsHDEnabled" function
+               (:methodconst-flag t
+                :parent "CWallet"
+                :type "bool")
+                nil [50817 50896])
+            ("GetTxTime" function
+               (:methodconst-flag t
+                :parent "CWalletTx"
+                :type ("int64_t" type (:type "class") nil nil))
+                nil [50898 51000])
+            ("GetRequestCount" function
+               (:methodconst-flag t
+                :parent "CWalletTx"
+                :type "int")
+                nil [51002 52307])
+            ("GetAmounts" function
+               (:methodconst-flag t
+                :parent "CWalletTx"
+                :arguments 
+                  ( ("listReceived" variable
+                       (:reference 1
+                        :type ("std::list" type
+                             (:template-specifier 
+                                ( ("COutputEntry" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [52336 52374])
+                    ("listSent" variable
+                       (:reference 1
+                        :type ("std::list" type
+                             (:template-specifier 
+                                ( ("COutputEntry" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [52402 52436])
+                    ("nFee" variable
+                       (:reference 1
+                        :type ("CAmount" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [52437 52451])
+                    ("strSentAccount" variable
+                       (:reference 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [52452 52480])
+                    ("filter" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("isminefilter" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [52481 52508]))                  
+                :type "void")
+                nil [52309 54163])
+            ("RescanFromTime" function
+               (:parent "CWallet"
+                :arguments 
+                  ( ("startTime" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [54544 54562])
+                    ("update" variable (:type "bool") (reparse-symbol arg-sub-list) [54563 54575]))                  
+                :type ("int64_t" type (:type "class") nil nil))
+                nil [54512 55305])
+            ("ScanForWalletTransactions" function
+               (:pointer 1
+                :parent "CWallet"
+                :arguments 
+                  ( ("pindexStart" variable
+                       (:pointer 1
+                        :type ("CBlockIndex" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [55839 55864])
+                    ("pindexStop" variable
+                       (:pointer 1
+                        :type ("CBlockIndex" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [55865 55889])
+                    ("fUpdate" variable (:type "bool") (reparse-symbol arg-sub-list) [55890 55903]))                  
+                :type ("CBlockIndex" type (:type "class") nil nil))
+                nil [55791 57972])
+            ("ReacceptWalletTransactions" function
+               (:parent "CWallet"
+                :type "void")
+                nil [57974 58967])
+            ("RelayWalletTransaction" function
+               (:parent "CWalletTx"
+                :arguments 
+                  ( ("connman" variable
+                       (:pointer 1
+                        :type ("CConnman" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [59008 59026]))                  
+                :type "bool")
+                nil [58969 59679])
+            ("GetConflicts" function
+               (:methodconst-flag t
+                :parent "CWalletTx"
+                :type ("std::set" type
+                     (:template-specifier 
+                        ( ("uint256" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [59681 59937])
+            ("GetDebit" function
+               (:methodconst-flag t
+                :parent "CWalletTx"
+                :arguments 
+                  ( ("filter" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("isminefilter" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [59967 59994]))                  
+                :type ("CAmount" type (:type "class") nil nil))
+                nil [59939 60669])
+            ("GetCredit" function
+               (:methodconst-flag t
+                :parent "CWalletTx"
+                :arguments 
+                  ( ("filter" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("isminefilter" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [60700 60727]))                  
+                :type ("CAmount" type (:type "class") nil nil))
+                nil [60671 61606])
+            ("GetImmatureCredit" function
+               (:methodconst-flag t
+                :parent "CWalletTx"
+                :arguments 
+                  ( ("fUseCache" variable (:type "bool") (reparse-symbol arg-sub-list) [61645 61660]))                  
+                :type ("CAmount" type (:type "class") nil nil))
+                nil [61608 62008])
+            ("GetAvailableCredit" function
+               (:methodconst-flag t
+                :parent "CWalletTx"
+                :arguments 
+                  ( ("fUseCache" variable (:type "bool") (reparse-symbol arg-sub-list) [62048 62063]))                  
+                :type ("CAmount" type (:type "class") nil nil))
+                nil [62010 62884])
+            ("GetImmatureWatchOnlyCredit" function
+               (:methodconst-flag t
+                :parent "CWalletTx"
+                :arguments 
+                  ( ("fUseCache" variable
+                       (:constant-flag t
+                        :type "bool")
+                        (reparse-symbol arg-sub-list) [62932 62953]))                  
+                :type ("CAmount" type (:type "class") nil nil))
+                nil [62886 63327])
+            ("GetAvailableWatchOnlyCredit" function
+               (:methodconst-flag t
+                :parent "CWalletTx"
+                :arguments 
+                  ( ("fUseCache" variable
+                       (:constant-flag t
+                        :type "bool")
+                        (reparse-symbol arg-sub-list) [63376 63397]))                  
+                :type ("CAmount" type (:type "class") nil nil))
+                nil [63329 64209])
+            ("GetChange" function
+               (:methodconst-flag t
+                :parent "CWalletTx"
+                :type ("CAmount" type (:type "class") nil nil))
+                nil [64211 64401])
+            ("InMempool" function
+               (:methodconst-flag t
+                :parent "CWalletTx"
+                :type "bool")
+                nil [64403 64463])
+            ("IsTrusted" function
+               (:methodconst-flag t
+                :parent "CWalletTx"
+                :type "bool")
+                nil [64465 65416])
+            ("IsEquivalentTo" function
+               (:methodconst-flag t
+                :parent "CWalletTx"
+                :arguments 
+                  ( ("_tx" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CWalletTx" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [65449 65470]))                  
+                :type "bool")
+                nil [65418 65749])
+            ("ResendWalletTransactionsBefore" function
+               (:parent "CWallet"
+                :arguments 
+                  ( ("nTime" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [65812 65826])
+                    ("connman" variable
+                       (:pointer 1
+                        :type ("CConnman" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [65827 65845]))                  
+                :type ("std::vector" type
+                     (:template-specifier 
+                        ( ("uint256" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [65751 66526])
+            ("ResendWalletTransactions" function
+               (:parent "CWallet"
+                :arguments 
+                  ( ("nBestBlockTime" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [66567 66590])
+                    ("connman" variable
+                       (:pointer 1
+                        :type ("CConnman" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [66591 66609]))                  
+                :type "void")
+                nil [66528 67370])
+            ("GetBalance" function
+               (:methodconst-flag t
+                :parent "CWallet"
+                :type ("CAmount" type (:type "class") nil nil))
+                nil [67443 67780])
+            ("GetUnconfirmedBalance" function
+               (:methodconst-flag t
+                :parent "CWallet"
+                :type ("CAmount" type (:type "class") nil nil))
+                nil [67782 68189])
+            ("GetImmatureBalance" function
+               (:methodconst-flag t
+                :parent "CWallet"
+                :type ("CAmount" type (:type "class") nil nil))
+                nil [68191 68494])
+            ("GetWatchOnlyBalance" function
+               (:methodconst-flag t
+                :parent "CWallet"
+                :type ("CAmount" type (:type "class") nil nil))
+                nil [68496 68851])
+            ("GetUnconfirmedWatchOnlyBalance" function
+               (:methodconst-flag t
+                :parent "CWallet"
+                :type ("CAmount" type (:type "class") nil nil))
+                nil [68853 69278])
+            ("GetImmatureWatchOnlyBalance" function
+               (:methodconst-flag t
+                :parent "CWallet"
+                :type ("CAmount" type (:type "class") nil nil))
+                nil [69280 69601])
+            ("GetLegacyBalance" function
+               (:methodconst-flag t
+                :parent "CWallet"
+                :arguments 
+                  ( ("filter" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("isminefilter" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [70033 70060])
+                    ("minDepth" variable (:type "int") (reparse-symbol arg-sub-list) [70061 70074])
+                    ("account" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [70075 70102]))                  
+                :type ("CAmount" type (:type "class") nil nil))
+                nil [69999 71279])
+            ("GetAvailableBalance" function
+               (:methodconst-flag t
+                :parent "CWallet"
+                :arguments 
+                  ( ("coinControl" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CCoinControl" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [71318 71350]))                  
+                :type ("CAmount" type (:type "class") nil nil))
+                nil [71281 71658])
+            ("AvailableCoins" function
+               (:methodconst-flag t
+                :parent "CWallet"
+                :arguments 
+                  ( ("vCoins" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("COutput" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [71689 71718])
+                    ("fOnlySafe" variable (:type "bool") (reparse-symbol arg-sub-list) [71719 71734])
+                    ("coinControl" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CCoinControl" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [71735 71767])
+                    ("nMinimumAmount" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CAmount" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [71768 71798])
+                    ("nMaximumAmount" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CAmount" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [71799 71829])
+                    ("nMinimumSumAmount" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CAmount" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [71830 71863])
+                    ("nMaximumCount" variable
+                       (:constant-flag t
+                        :type ("uint64_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [71864 71893])
+                    ("nMinDepth" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [71894 71914])
+                    ("nMaxDepth" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [71915 71935]))                  
+                :type "void")
+                nil [71660 76321])
+            ("ListCoins" function
+               (:methodconst-flag t
+                :parent "CWallet"
+                :type ("std::map" type
+                     (:template-specifier 
+                        ( ("CTxDestination" type nil nil nil)
+                          ("std::vector" type (:template-specifier 
+                            ( ("COutput" type nil nil nil))                            ) nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [76323 78229])
+            ("FindNonChangeParentOutput" function
+               (:methodconst-flag t
+                :parent "CWallet"
+                :constant-flag t
+                :arguments 
+                  ( ("tx" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CTransaction" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [78280 78303])
+                    ("output" variable (:type "int") (reparse-symbol arg-sub-list) [78304 78315]))                  
+                :type ("CTxOut" type (:type "class") nil nil))
+                nil [78231 78797])
+            ("ApproximateBestSubset" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("vValue" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("CInputCoin" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [78833 78871])
+                    ("nTotalLower" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CAmount" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [78872 78899])
+                    ("nTargetValue" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CAmount" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [78900 78928])
+                    ("vfBest" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("char" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [78963 78989])
+                    ("nBest" variable
+                       (:reference 1
+                        :type ("CAmount" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [78990 79005])
+                    ("iterations" variable
+                       (:default-value "1000"
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [79006 79027]))                  
+                :type "void")
+                nil [78799 80601])
+            ("SelectCoinsMinConf" function
+               (:methodconst-flag t
+                :parent "CWallet"
+                :arguments 
+                  ( ("nTargetValue" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CAmount" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [80636 80664])
+                    ("nConfMine" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [80665 80685])
+                    ("nConfTheirs" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [80686 80708])
+                    ("nMaxAncestors" variable
+                       (:constant-flag t
+                        :type ("uint64_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [80709 80738])
+                    ("vCoins" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("COutput" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [80739 80767])
+                    ("setCoinsRet" variable
+                       (:reference 1
+                        :type ("std::set" type
+                             (:template-specifier 
+                                ( ("CInputCoin" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [80801 80835])
+                    ("nValueRet" variable
+                       (:reference 1
+                        :type ("CAmount" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [80836 80855]))                  
+                :type "bool")
+                nil [80603 84113])
+            ("SelectCoins" function
+               (:methodconst-flag t
+                :parent "CWallet"
+                :arguments 
+                  ( ("vAvailableCoins" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("COutput" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [84141 84185])
+                    ("nTargetValue" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CAmount" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [84186 84214])
+                    ("setCoinsRet" variable
+                       (:reference 1
+                        :type ("std::set" type
+                             (:template-specifier 
+                                ( ("CInputCoin" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [84215 84249])
+                    ("nValueRet" variable
+                       (:reference 1
+                        :type ("CAmount" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [84250 84269])
+                    ("coinControl" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CCoinControl" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [84270 84302]))                  
+                :type "bool")
+                nil [84115 87644])
+            ("SignTransaction" function
+               (:parent "CWallet"
+                :arguments 
+                  ( ("tx" variable
+                       (:reference 1
+                        :type ("CMutableTransaction" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [87676 87700]))                  
+                :type "bool")
+                nil [87646 88522])
+            ("FundTransaction" function
+               (:parent "CWallet"
+                :arguments 
+                  ( ("tx" variable
+                       (:reference 1
+                        :type ("CMutableTransaction" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [88554 88578])
+                    ("nFeeRet" variable
+                       (:reference 1
+                        :type ("CAmount" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [88579 88596])
+                    ("nChangePosInOut" variable
+                       (:reference 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [88597 88618])
+                    ("strFailReason" variable
+                       (:reference 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [88619 88646])
+                    ("lockUnspents" variable (:type "bool") (reparse-symbol arg-sub-list) [88647 88665])
+                    ("setSubtractFeeFromOutputs" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::set" type
+                             (:template-specifier 
+                                ( ("int" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [88666 88713])
+                    ("coinControl" variable (:type ("CCoinControl" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [88714 88739]))                  
+                :type "bool")
+                nil [88524 90469])
+            ("CreateTransaction" function
+               (:parent "CWallet"
+                :arguments 
+                  ( ("vecSend" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("CRecipient" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [90503 90542])
+                    ("wtxNew" variable
+                       (:reference 1
+                        :type ("CWalletTx" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [90543 90561])
+                    ("reservekey" variable
+                       (:reference 1
+                        :type ("CReserveKey" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [90562 90586])
+                    ("nFeeRet" variable
+                       (:reference 1
+                        :type ("CAmount" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [90587 90604])
+                    ("nChangePosInOut" variable
+                       (:reference 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [90637 90658])
+                    ("strFailReason" variable
+                       (:reference 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [90659 90686])
+                    ("coin_control" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CCoinControl" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [90687 90720])
+                    ("sign" variable (:type "bool") (reparse-symbol arg-sub-list) [90721 90731]))                  
+                :type "bool")
+                nil [90471 107994])
+            ("CommitTransaction" function
+               (:parent "CWallet"
+                :arguments 
+                  ( ("wtxNew" variable
+                       (:reference 1
+                        :type ("CWalletTx" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [108093 108111])
+                    ("reservekey" variable
+                       (:reference 1
+                        :type ("CReserveKey" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [108112 108136])
+                    ("connman" variable
+                       (:pointer 1
+                        :type ("CConnman" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [108137 108155])
+                    ("state" variable
+                       (:reference 1
+                        :type ("CValidationState" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [108156 108180]))                  
+                :type "bool")
+                nil [108061 109679])
+            ("ListAccountCreditDebit" function
+               (:parent "CWallet"
+                :arguments 
+                  ( ("strAccount" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [109718 109748])
+                    ("entries" variable
+                       (:reference 1
+                        :type ("std::list" type
+                             (:template-specifier 
+                                ( ("CAccountingEntry" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [109749 109786]))                  
+                :type "void")
+                nil [109681 109885])
+            ("AddAccountingEntry" function
+               (:parent "CWallet"
+                :arguments 
+                  ( ("acentry" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CAccountingEntry" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [109920 109952]))                  
+                :type "bool")
+                nil [109887 110038])
+            ("AddAccountingEntry" function
+               (:parent "CWallet"
+                :arguments 
+                  ( ("acentry" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CAccountingEntry" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [110073 110105])
+                    ("pwalletdb" variable
+                       (:pointer 1
+                        :type ("CWalletDB" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [110106 110127]))                  
+                :type "bool")
+                nil [110040 110425])
+            ("LoadWallet" function
+               (:parent "CWallet"
+                :arguments 
+                  ( ("fFirstRunRet" variable
+                       (:reference 1
+                        :type "bool")
+                        (reparse-symbol arg-sub-list) [110456 110475]))                  
+                :type ("DBErrors" type (:type "class") nil nil))
+                nil [110427 111355])
+            ("ZapSelectTx" function
+               (:parent "CWallet"
+                :arguments 
+                  ( ("vHashIn" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("uint256" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [111387 111417])
+                    ("vHashOut" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("uint256" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [111418 111449]))                  
+                :type ("DBErrors" type (:type "class") nil nil))
+                nil [111357 112185])
+            ("ZapWalletTx" function
+               (:parent "CWallet"
+                :arguments 
+                  ( ("vWtx" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("CWalletTx" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [112217 112246]))                  
+                :type ("DBErrors" type (:type "class") nil nil))
+                nil [112187 112869])
+            ("SetAddressBook" function
+               (:parent "CWallet"
+                :arguments 
+                  ( ("address" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CTxDestination" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [112901 112931])
+                    ("strName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [112932 112959])
+                    ("strPurpose" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [112960 112990]))                  
+                :type "bool")
+                nil [112872 113765])
+            ("DelAddressBook" function
+               (:parent "CWallet"
+                :arguments 
+                  ( ("address" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CTxDestination" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [113796 113826]))                  
+                :type "bool")
+                nil [113767 114462])
+            ("GetAccountName" function
+               (:methodconst-flag t
+                :parent "CWallet"
+                :constant-flag t
+                :arguments 
+                  ( ("scriptPubKey" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CScript" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [114507 114535]))                  
+                :type ("std::string" type (:type "class") nil nil))
+                nil [114464 115006])
+            ("NewKeyPool" function
+               (:parent "CWallet"
+                :type "bool")
+                nil [115079 115641])
+            ("KeypoolCountExternalKeys" function
+               (:parent "CWallet"
+                :type ("size_t" type (:type "class") nil nil))
+                nil [115643 115780])
+            ("LoadKeyPool" function
+               (:parent "CWallet"
+                :arguments 
+                  ( ("nIndex" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [115808 115823])
+                    ("keypool" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CKeyPool" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [115824 115848]))                  
+                :type "void")
+                nil [115782 116490])
+            ("TopUpKeyPool" function
+               (:parent "CWallet"
+                :arguments 
+                  ( ("kpSize" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [116519 116539]))                  
+                :type "bool")
+                nil [116492 118667])
+            ("ReserveKeyFromKeyPool" function
+               (:parent "CWallet"
+                :arguments 
+                  ( ("nIndex" variable
+                       (:reference 1
+                        :type ("int64_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [118705 118721])
+                    ("keypool" variable
+                       (:reference 1
+                        :type ("CKeyPool" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [118722 118740])
+                    ("fRequestedInternal" variable (:type "bool") (reparse-symbol arg-sub-list) [118741 118765]))                  
+                :type "void")
+                nil [118669 119944])
+            ("KeepKey" function
+               (:parent "CWallet"
+                :arguments 
+                  ( ("nIndex" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [119968 119983]))                  
+                :type "void")
+                nil [119946 120121])
+            ("ReturnKey" function
+               (:parent "CWallet"
+                :arguments 
+                  ( ("nIndex" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [120147 120162])
+                    ("fInternal" variable (:type "bool") (reparse-symbol arg-sub-list) [120163 120178])
+                    ("pubkey" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CPubKey" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [120179 120201]))                  
+                :type "void")
+                nil [120123 120514])
+            ("GetKeyFromPool" function
+               (:parent "CWallet"
+                :arguments 
+                  ( ("result" variable
+                       (:reference 1
+                        :type ("CPubKey" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [120545 120561])
+                    ("internal" variable (:type "bool") (reparse-symbol arg-sub-list) [120562 120576]))                  
+                :type "bool")
+                nil [120516 121011])
+            ("GetOldestKeyTimeInPool" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("setKeyPool" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::set" type
+                             (:template-specifier 
+                                ( ("int64_t" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [121051 121087])
+                    ("walletdb" variable
+                       (:reference 1
+                        :type ("CWalletDB" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [121088 121108]))                  
+                :type ("int64_t" type (:type "class") nil nil))
+                nil [121013 121458])
+            ("GetOldestKeyPoolTime" function
+               (:parent "CWallet"
+                :type ("int64_t" type (:type "class") nil nil))
+                nil [121460 121879])
+            ("GetAddressBalances" function
+               (:parent "CWallet"
+                :type ("std::map" type
+                     (:template-specifier 
+                        ( ("CTxDestination" type nil nil nil)
+                          ("CAmount" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [121881 123031])
+            ("GetAddressGroupings" function
+               (:parent "CWallet"
+                :type ("std::set" type
+                     (:template-specifier 
+                        ( ("std::set" type (:template-specifier 
+                            ( ("CTxDestination" type nil nil nil))                            ) nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [123033 126303])
+            ("GetAccountAddresses" function
+               (:methodconst-flag t
+                :parent "CWallet"
+                :arguments 
+                  ( ("strAccount" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [126359 126389]))                  
+                :type ("std::set" type
+                     (:template-specifier 
+                        ( ("CTxDestination" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [126305 126749])
+            ("GetReservedKey" function
+               (:parent "CReserveKey"
+                :arguments 
+                  ( ("pubkey" variable
+                       (:reference 1
+                        :type ("CPubKey" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [126784 126800])
+                    ("internal" variable (:type "bool") (reparse-symbol arg-sub-list) [126801 126815]))                  
+                :type "bool")
+                nil [126751 127179])
+            ("KeepKey" function
+               (:parent "CReserveKey"
+                :type "void")
+                nil [127181 127312])
+            ("ReturnKey" function
+               (:parent "CReserveKey"
+                :type "void")
+                nil [127314 127479])
+            ("MarkReserveKeysAsUsed" function
+               (:parent "CWallet"
+                :arguments 
+                  ( ("keypool_id" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [127517 127536]))                  
+                :type "void")
+                nil [127481 128366])
+            ("GetScriptForMining" function
+               (:parent "CWallet"
+                :arguments 
+                  ( ("script" variable
+                       (:reference 1
+                        :type ("std::shared_ptr" type
+                             (:template-specifier 
+                                ( ("CReserveScript" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [128401 128441]))                  
+                :type "void")
+                nil [128368 128695])
+            ("LockCoin" function
+               (:parent "CWallet"
+                :arguments 
+                  ( ("output" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("COutPoint" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [128720 128744]))                  
+                :type "void")
+                nil [128697 128832])
+            ("UnlockCoin" function
+               (:parent "CWallet"
+                :arguments 
+                  ( ("output" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("COutPoint" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [128859 128883]))                  
+                :type "void")
+                nil [128834 128970])
+            ("UnlockAllCoins" function
+               (:parent "CWallet"
+                :type "void")
+                nil [128972 129083])
+            ("IsLockedCoin" function
+               (:methodconst-flag t
+                :parent "CWallet"
+                :arguments 
+                  ( ("hash" variable (:type ("uint256" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [129112 129125])
+                    ("n" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [129126 129141]))                  
+                :type "bool")
+                nil [129085 129277])
+            ("ListLockedCoins" function
+               (:methodconst-flag t
+                :parent "CWallet"
+                :arguments 
+                  ( ("vOutpts" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("COutPoint" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [129309 129341]))                  
+                :type "void")
+                nil [129279 129586])
+            ("GetKeyBirthTimes" function
+               (:methodconst-flag t
+                :parent "CWallet"
+                :arguments 
+                  ( ("mapKeyBirth" variable
+                       (:reference 1
+                        :type ("std::map" type
+                             (:template-specifier 
+                                ( ("CTxDestination" type nil nil nil)
+                                  ("int64_t" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [129648 129695]))                  
+                :type "void")
+                nil [129617 131811])
+            ("ComputeTimeSmart" function
+               (:methodconst-flag t
+                :parent "CWallet"
+                :arguments 
+                  ( ("wtx" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CWalletTx" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [132829 132850]))                  
+                :type "unsigned int")
+                nil [132790 134530])
+            ("AddDestData" function
+               (:parent "CWallet"
+                :arguments 
+                  ( ("dest" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CTxDestination" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [134558 134585])
+                    ("key" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [134586 134609])
+                    ("value" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [134610 134635]))                  
+                :type "bool")
+                nil [134532 134854])
+            ("EraseDestData" function
+               (:parent "CWallet"
+                :arguments 
+                  ( ("dest" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CTxDestination" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [134884 134911])
+                    ("key" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [134912 134935]))                  
+                :type "bool")
+                nil [134856 135084])
+            ("LoadDestData" function
+               (:parent "CWallet"
+                :arguments 
+                  ( ("dest" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CTxDestination" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [135113 135140])
+                    ("key" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [135141 135164])
+                    ("value" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [135165 135190]))                  
+                :type "bool")
+                nil [135086 135281])
+            ("GetDestData" function
+               (:methodconst-flag t
+                :parent "CWallet"
+                :arguments 
+                  ( ("dest" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CTxDestination" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [135309 135336])
+                    ("key" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [135337 135360])
+                    ("value" variable
+                       (:pointer 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [135361 135380]))                  
+                :type "bool")
+                nil [135283 135779])
+            ("GetDestValues" function
+               (:methodconst-flag t
+                :parent "CWallet"
+                :arguments 
+                  ( ("prefix" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [135829 135855]))                  
+                :type ("std::vector" type
+                     (:template-specifier 
+                        ( ("std::string" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [135781 136195])
+            ("CreateWalletFromFile" function
+               (:pointer 1
+                :parent "CWallet"
+                :arguments 
+                  ( ("walletFile" variable
+                       (:constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [136236 136265]))                  
+                :type ("CWallet" type (:type "class") nil nil))
+                nil [136197 144464])
+            ("fFlushScheduled" function
+               (:prototype-flag t
+                :parent "CWallet"
+                :arguments 
+                  ( ("" variable (:type ("false" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [144509 144515]))                  
+                :type ("std::atomic" type
+                     (:template-specifier 
+                        ( ("bool" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [144466 144516])
+            ("postInitProcess" function
+               (:parent "CWallet"
+                :arguments 
+                  ( ("scheduler" variable
+                       (:reference 1
+                        :type ("CScheduler" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [144548 144570]))                  
+                :type "void")
+                nil [144518 144916])
+            ("BackupWallet" function
+               (:parent "CWallet"
+                :arguments 
+                  ( ("strDest" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [144945 144972]))                  
+                :type "bool")
+                nil [144918 145009])
+            ("CKeyPool" function
+               (:constructor-flag t
+                :parent "CKeyPool"
+                :type ("CKeyPool" type (:type "class") nil nil))
+                nil [145011 145081])
+            ("CKeyPool" function
+               (:constructor-flag t
+                :parent "CKeyPool"
+                :arguments 
+                  ( ("vchPubKeyIn" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CPubKey" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [145102 145129])
+                    ("internalIn" variable (:type "bool") (reparse-symbol arg-sub-list) [145130 145146]))                  
+                :type ("CKeyPool" type (:type "class") nil nil))
+                nil [145083 145230])
+            ("CWalletKey" function
+               (:constructor-flag t
+                :parent "CWalletKey"
+                :arguments 
+                  ( ("nExpires" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [145255 145272]))                  
+                :type ("CWalletKey" type (:type "class") nil nil))
+                nil [145232 145352])
+            ("SetMerkleBranch" function
+               (:parent "CMerkleTx"
+                :arguments 
+                  ( ("pindex" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CBlockIndex" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [145386 145412])
+                    ("posInBlock" variable (:type "int") (reparse-symbol arg-sub-list) [145413 145428]))                  
+                :type "void")
+                nil [145354 145587])
+            ("GetDepthInMainChain" function
+               (:methodconst-flag t
+                :parent "CMerkleTx"
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CBlockIndex" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [145624 145644])
+                    ("" variable (:type ("pindexRet" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [145644 145654]))                  
+                :type "int")
+                nil [145589 146107])
+            ("GetBlocksToMaturity" function
+               (:methodconst-flag t
+                :parent "CMerkleTx"
+                :type "int")
+                nil [146109 146267])
+            ("AcceptToMemoryPool" function
+               (:parent "CWalletTx"
+                :arguments 
+                  ( ("nAbsurdFee" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CAmount" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [146305 146331])
+                    ("state" variable
+                       (:reference 1
+                        :type ("CValidationState" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [146332 146356]))                  
+                :type "bool")
+                nil [146270 147083])
+            ("OUTPUT_TYPE_STRING_LEGACY" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :default-value "\"legacy\""
+                :type ("std::string" type (:type "class") nil nil))
+                nil [147085 147147])
+            ("OUTPUT_TYPE_STRING_P2SH_SEGWIT" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :default-value "\"p2sh-segwit\""
+                :type ("std::string" type (:type "class") nil nil))
+                nil [147148 147220])
+            ("OUTPUT_TYPE_STRING_BECH32" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :default-value "\"bech32\""
+                :type ("std::string" type (:type "class") nil nil))
+                nil [147221 147283])
+            ("ParseOutputType" function
+               (:arguments 
+                  ( ("type" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [147312 147336])
+                    ("default_type" variable (:type ("OutputType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [147337 147361]))                  
+                :type ("OutputType" type (:type "class") nil nil))
+                nil [147285 147741])
+            ("FormatOutputType" function
+               (:constant-flag t
+                :arguments 
+                  ( ("type" variable (:type ("OutputType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [147779 147795]))                  
+                :type ("std::string" type (:type "class") nil nil))
+                nil [147743 148052])
+            ("LearnRelatedScripts" function
+               (:parent "CWallet"
+                :arguments 
+                  ( ("key" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CPubKey" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [148088 148107])
+                    ("type" variable (:type ("OutputType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [148108 148124]))                  
+                :type "void")
+                nil [148054 148484])
+            ("LearnAllRelatedScripts" function
+               (:parent "CWallet"
+                :arguments 
+                  ( ("key" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CPubKey" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [148523 148542]))                  
+                :type "void")
+                nil [148486 148681])
+            ("GetDestinationForKey" function
+               (:arguments 
+                  ( ("key" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CPubKey" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [148719 148738])
+                    ("type" variable (:type ("OutputType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [148739 148755]))                  
+                :type ("CTxDestination" type (:type "class") nil nil))
+                nil [148683 149251])
+            ("GetAllDestinationsForKey" function
+               (:arguments 
+                  ( ("key" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CPubKey" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [149306 149325]))                  
+                :type ("std::vector" type
+                     (:template-specifier 
+                        ( ("CTxDestination" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [149253 149701])
+            ("AddAndGetDestinationForScript" function
+               (:parent "CWallet"
+                :arguments 
+                  ( ("script" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CScript" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [149757 149779])
+                    ("type" variable (:type ("OutputType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [149780 149796]))                  
+                :type ("CTxDestination" type (:type "class") nil nil))
+                nil [149703 150681]))          
+      :file "wallet.cpp"
+      :pointmax 150682
+      :fsize 150681
+      :lastmodtime '(23128 22954 0 0)
+      :unmatched-syntax '((punctuation 145643 . 145644) (semantic-list 1986 . 2054))))
+  :file "!Volumes!Transcend!bitcoin!src!wallet!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

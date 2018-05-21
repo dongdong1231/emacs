@@ -1,0 +1,1173 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode java-mode
+      :tags 
+        '( ("org.apache.parquet.column.values.bitpacking" package nil nil [812 864])
+            ("java.io.IOException" include nil nil [866 893])
+            ("java.io.InputStream" include nil nil [894 921])
+            ("java.io.OutputStream" include nil nil [922 950])
+            ("org.apache.parquet.bytes.BytesUtils" include nil nil [952 995])
+            ("org.apache.parquet.column.values.bitpacking.BitPacking.BitPackingReader" include nil nil [996 1075])
+            ("org.apache.parquet.column.values.bitpacking.BitPacking.BitPackingWriter" include nil nil [1076 1155])
+            ("BitPacking" type
+               (:typemodifiers ("public")
+                :members 
+                  ( ("BitPackingWriter" type
+                       (:typemodifiers ("abstract" "public" "static")
+                        :members 
+                          ( ("write" function
+                               (:throws ("IOException")
+                                :typemodifiers ("abstract" "public")
+                                :arguments 
+                                  ( ("val" variable (:type "int") (reparse-symbol formal_parameters) [1818 1825]))                                  
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [1791 1846])
+                            ("finish" function
+                               (:throws ("IOException")
+                                :typemodifiers ("abstract" "public")
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [1967 2016]))                          
+                        :type "class")
+                        (reparse-symbol class_member_declaration) [1579 2020])
+                    ("BitPackingReader" type
+                       (:typemodifiers ("abstract" "public" "static")
+                        :members 
+                          ( ("read" function
+                               (:throws ("IOException")
+                                :typemodifiers ("abstract" "public")
+                                :type "int")
+                                (reparse-symbol class_member_declaration) [2305 2351]))                          
+                        :type "class")
+                        (reparse-symbol class_member_declaration) [2144 2355])
+                    ("BitPacking" function
+                       (:constructor-flag t
+                        :typemodifiers ("private"))
+                        (reparse-symbol class_member_declaration) [2359 2385])
+                    ("getBitPackingWriter" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("bitLength" variable (:type "int") (reparse-symbol formal_parameters) [2620 2633])
+                            ("out" variable (:type "OutputStream") (reparse-symbol formal_parameters) [2635 2651]))                          
+                        :type "BitPackingWriter")
+                        (reparse-symbol class_member_declaration) [2569 3282])
+                    ("createBitPackingReader" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("bitLength" variable (:type "int") (reparse-symbol formal_parameters) [3524 3537])
+                            ("in" variable (:type "InputStream") (reparse-symbol formal_parameters) [3539 3553])
+                            ("valueCount" variable (:type "long") (reparse-symbol formal_parameters) [3555 3570]))                          
+                        :type "BitPackingReader")
+                        (reparse-symbol class_member_declaration) [3470 4241]))                  
+                :type "class")
+                nil [1350 4243])
+            ("BaseBitPackingWriter" type
+               (:typemodifiers ("abstract")
+                :superclasses "BitPackingWriter"
+                :members 
+                  ( ("finish" function
+                       (:throws ("IOException")
+                        :arguments 
+                          ( ("numberOfBits" variable (:type "int") (reparse-symbol formal_parameters) [4323 4339])
+                            ("buffer" variable (:type "int") (reparse-symbol formal_parameters) [4341 4351])
+                            ("out" variable (:type "OutputStream") (reparse-symbol formal_parameters) [4353 4369]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [4311 4658])
+                    ("finish" function
+                       (:throws ("IOException")
+                        :arguments 
+                          ( ("numberOfBits" variable (:type "int") (reparse-symbol formal_parameters) [4674 4690])
+                            ("buffer" variable (:type "long") (reparse-symbol formal_parameters) [4692 4703])
+                            ("out" variable (:type "OutputStream") (reparse-symbol formal_parameters) [4705 4721]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [4662 5015]))                  
+                :type "class")
+                nil [4245 5017])
+            ("BaseBitPackingReader" type
+               (:typemodifiers ("abstract")
+                :superclasses "BitPackingReader"
+                :members 
+                  ( ("alignToBytes" function
+                       (:arguments 
+                          ( ("bitsCount" variable (:type "int") (reparse-symbol formal_parameters) [5101 5114]))                          
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [5084 5179]))                  
+                :type "class")
+                nil [5018 5182])
+            ("ZeroBitPackingWriter" type
+               (:superclasses "BitPackingWriter"
+                :members 
+                  ( ("write" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("val" variable (:type "int") (reparse-symbol formal_parameters) [5271 5278]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [5253 5304])
+                    ("finish" function
+                       (:typemodifiers ("public")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [5320 5346]))                  
+                :type "class")
+                nil [5184 5349])
+            ("ZeroBitPackingReader" type
+               (:superclasses "BitPackingReader"
+                :members 
+                  ( ("read" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [5419 5475]))                  
+                :type "class")
+                nil [5350 5478])
+            ("OneBitPackingWriter" type
+               (:superclasses "BitPackingWriter"
+                :members 
+                  ( ("out" variable
+                       (:typemodifiers ("private")
+                        :type "OutputStream")
+                        (reparse-symbol class_member_declaration) [5536 5561])
+                    ("buffer" variable
+                       (:typemodifiers ("private")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [5565 5588])
+                    ("count" variable
+                       (:typemodifiers ("private")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [5591 5613])
+                    ("OneBitPackingWriter" function
+                       (:constructor-flag t
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("out" variable (:type "OutputStream") (reparse-symbol formal_parameters) [5644 5660]))                          )
+                        (reparse-symbol class_member_declaration) [5617 5687])
+                    ("write" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("val" variable (:type "int") (reparse-symbol formal_parameters) [5721 5728]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [5703 5901])
+                    ("finish" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [5917 6064]))                  
+                :type "class")
+                nil [5480 6067])
+            ("OneBitPackingReader" type
+               (:superclasses "BitPackingReader"
+                :members 
+                  ( ("in" variable
+                       (:typemodifiers ("private" "final")
+                        :type "InputStream")
+                        (reparse-symbol class_member_declaration) [6124 6153])
+                    ("buffer" variable
+                       (:typemodifiers ("private")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [6157 6180])
+                    ("count" variable
+                       (:typemodifiers ("private")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [6183 6205])
+                    ("OneBitPackingReader" function
+                       (:constructor-flag t
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("in" variable (:type "InputStream") (reparse-symbol formal_parameters) [6236 6250]))                          )
+                        (reparse-symbol class_member_declaration) [6209 6275])
+                    ("read" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [6291 6483]))                  
+                :type "class")
+                nil [6068 6486])
+            ("TwoBitPackingWriter" type
+               (:superclasses "BitPackingWriter"
+                :members 
+                  ( ("out" variable
+                       (:typemodifiers ("private")
+                        :type "OutputStream")
+                        (reparse-symbol class_member_declaration) [6544 6569])
+                    ("buffer" variable
+                       (:typemodifiers ("private")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [6573 6596])
+                    ("count" variable
+                       (:typemodifiers ("private")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [6599 6621])
+                    ("TwoBitPackingWriter" function
+                       (:constructor-flag t
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("out" variable (:type "OutputStream") (reparse-symbol formal_parameters) [6652 6668]))                          )
+                        (reparse-symbol class_member_declaration) [6625 6695])
+                    ("write" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("val" variable (:type "int") (reparse-symbol formal_parameters) [6729 6736]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [6711 6909])
+                    ("finish" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [6925 7072]))                  
+                :type "class")
+                nil [6488 7075])
+            ("TwoBitPackingReader" type
+               (:superclasses "BitPackingReader"
+                :members 
+                  ( ("in" variable
+                       (:typemodifiers ("private" "final")
+                        :type "InputStream")
+                        (reparse-symbol class_member_declaration) [7132 7161])
+                    ("buffer" variable
+                       (:typemodifiers ("private")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [7165 7188])
+                    ("count" variable
+                       (:typemodifiers ("private")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [7191 7213])
+                    ("TwoBitPackingReader" function
+                       (:constructor-flag t
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("in" variable (:type "InputStream") (reparse-symbol formal_parameters) [7244 7258]))                          )
+                        (reparse-symbol class_member_declaration) [7217 7283])
+                    ("read" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [7299 7497]))                  
+                :type "class")
+                nil [7076 7500])
+            ("ThreeBitPackingWriter" type
+               (:superclasses "BaseBitPackingWriter"
+                :members 
+                  ( ("out" variable
+                       (:typemodifiers ("private")
+                        :type "OutputStream")
+                        (reparse-symbol class_member_declaration) [7564 7589])
+                    ("buffer" variable
+                       (:typemodifiers ("private")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [7593 7616])
+                    ("count" variable
+                       (:typemodifiers ("private")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [7619 7641])
+                    ("ThreeBitPackingWriter" function
+                       (:constructor-flag t
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("out" variable (:type "OutputStream") (reparse-symbol formal_parameters) [7674 7690]))                          )
+                        (reparse-symbol class_member_declaration) [7645 7717])
+                    ("write" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("val" variable (:type "int") (reparse-symbol formal_parameters) [7751 7758]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [7733 8029])
+                    ("finish" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [8045 8285]))                  
+                :type "class")
+                nil [7502 8288])
+            ("ThreeBitPackingReader" type
+               (:superclasses "BaseBitPackingReader"
+                :members 
+                  ( ("in" variable
+                       (:typemodifiers ("private" "final")
+                        :type "InputStream")
+                        (reparse-symbol class_member_declaration) [8351 8380])
+                    ("valueCount" variable
+                       (:typemodifiers ("private" "final")
+                        :type "long")
+                        (reparse-symbol class_member_declaration) [8383 8413])
+                    ("buffer" variable
+                       (:typemodifiers ("private")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [8417 8440])
+                    ("count" variable
+                       (:typemodifiers ("private")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [8443 8465])
+                    ("totalRead" variable
+                       (:typemodifiers ("private")
+                        :type "long")
+                        (reparse-symbol class_member_declaration) [8469 8496])
+                    ("ThreeBitPackingReader" function
+                       (:constructor-flag t
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("in" variable (:type "InputStream") (reparse-symbol formal_parameters) [8529 8543])
+                            ("valueCount" variable (:type "long") (reparse-symbol formal_parameters) [8545 8560]))                          )
+                        (reparse-symbol class_member_declaration) [8500 8619])
+                    ("read" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [8635 9257]))                  
+                :type "class")
+                nil [8289 9260])
+            ("FourBitPackingWriter" type
+               (:superclasses "BitPackingWriter"
+                :members 
+                  ( ("out" variable
+                       (:typemodifiers ("private")
+                        :type "OutputStream")
+                        (reparse-symbol class_member_declaration) [9319 9344])
+                    ("buffer" variable
+                       (:typemodifiers ("private")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [9348 9371])
+                    ("count" variable
+                       (:typemodifiers ("private")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [9374 9396])
+                    ("FourBitPackingWriter" function
+                       (:constructor-flag t
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("out" variable (:type "OutputStream") (reparse-symbol formal_parameters) [9428 9444]))                          )
+                        (reparse-symbol class_member_declaration) [9400 9471])
+                    ("write" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("val" variable (:type "int") (reparse-symbol formal_parameters) [9505 9512]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [9487 9685])
+                    ("finish" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [9701 9911]))                  
+                :type "class")
+                nil [9262 9914])
+            ("FourBitPackingReader" type
+               (:superclasses "BitPackingReader"
+                :members 
+                  ( ("in" variable
+                       (:typemodifiers ("private" "final")
+                        :type "InputStream")
+                        (reparse-symbol class_member_declaration) [9972 10001])
+                    ("buffer" variable
+                       (:typemodifiers ("private")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [10005 10028])
+                    ("count" variable
+                       (:typemodifiers ("private")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [10031 10053])
+                    ("FourBitPackingReader" function
+                       (:constructor-flag t
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("in" variable (:type "InputStream") (reparse-symbol formal_parameters) [10085 10099]))                          )
+                        (reparse-symbol class_member_declaration) [10057 10124])
+                    ("read" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [10140 10339]))                  
+                :type "class")
+                nil [9915 10342])
+            ("FiveBitPackingWriter" type
+               (:superclasses "BaseBitPackingWriter"
+                :members 
+                  ( ("out" variable
+                       (:typemodifiers ("private")
+                        :type "OutputStream")
+                        (reparse-symbol class_member_declaration) [10405 10430])
+                    ("buffer" variable
+                       (:typemodifiers ("private")
+                        :type "long")
+                        (reparse-symbol class_member_declaration) [10434 10458])
+                    ("count" variable
+                       (:typemodifiers ("private")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [10461 10483])
+                    ("FiveBitPackingWriter" function
+                       (:constructor-flag t
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("out" variable (:type "OutputStream") (reparse-symbol formal_parameters) [10515 10531]))                          )
+                        (reparse-symbol class_member_declaration) [10487 10558])
+                    ("write" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("val" variable (:type "int") (reparse-symbol formal_parameters) [10592 10599]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [10574 10977])
+                    ("finish" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [10993 11233]))                  
+                :type "class")
+                nil [10344 11236])
+            ("FiveBitPackingReader" type
+               (:superclasses "BaseBitPackingReader"
+                :members 
+                  ( ("in" variable
+                       (:typemodifiers ("private" "final")
+                        :type "InputStream")
+                        (reparse-symbol class_member_declaration) [11298 11327])
+                    ("valueCount" variable
+                       (:typemodifiers ("private" "final")
+                        :type "long")
+                        (reparse-symbol class_member_declaration) [11330 11360])
+                    ("buffer" variable
+                       (:typemodifiers ("private")
+                        :type "long")
+                        (reparse-symbol class_member_declaration) [11364 11388])
+                    ("count" variable
+                       (:typemodifiers ("private")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [11391 11413])
+                    ("totalRead" variable
+                       (:typemodifiers ("private")
+                        :type "long")
+                        (reparse-symbol class_member_declaration) [11416 11443])
+                    ("FiveBitPackingReader" function
+                       (:constructor-flag t
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("in" variable (:type "InputStream") (reparse-symbol formal_parameters) [11476 11490])
+                            ("valueCount" variable (:type "long") (reparse-symbol formal_parameters) [11492 11507]))                          )
+                        (reparse-symbol class_member_declaration) [11448 11566])
+                    ("read" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [11582 12361]))                  
+                :type "class")
+                nil [11237 12364])
+            ("SixBitPackingWriter" type
+               (:superclasses "BaseBitPackingWriter"
+                :members 
+                  ( ("out" variable
+                       (:typemodifiers ("private")
+                        :type "OutputStream")
+                        (reparse-symbol class_member_declaration) [12426 12451])
+                    ("buffer" variable
+                       (:typemodifiers ("private")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [12455 12478])
+                    ("count" variable
+                       (:typemodifiers ("private")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [12481 12503])
+                    ("SixBitPackingWriter" function
+                       (:constructor-flag t
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("out" variable (:type "OutputStream") (reparse-symbol formal_parameters) [12534 12550]))                          )
+                        (reparse-symbol class_member_declaration) [12507 12577])
+                    ("write" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("val" variable (:type "int") (reparse-symbol formal_parameters) [12611 12618]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [12593 12889])
+                    ("finish" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [12905 13145]))                  
+                :type "class")
+                nil [12366 13148])
+            ("SixBitPackingReader" type
+               (:superclasses "BaseBitPackingReader"
+                :members 
+                  ( ("in" variable
+                       (:typemodifiers ("private" "final")
+                        :type "InputStream")
+                        (reparse-symbol class_member_declaration) [13209 13238])
+                    ("valueCount" variable
+                       (:typemodifiers ("private" "final")
+                        :type "long")
+                        (reparse-symbol class_member_declaration) [13241 13271])
+                    ("buffer" variable
+                       (:typemodifiers ("private")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [13275 13298])
+                    ("count" variable
+                       (:typemodifiers ("private")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [13301 13323])
+                    ("totalRead" variable
+                       (:typemodifiers ("private")
+                        :type "long")
+                        (reparse-symbol class_member_declaration) [13327 13354])
+                    ("SixBitPackingReader" function
+                       (:constructor-flag t
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("in" variable (:type "InputStream") (reparse-symbol formal_parameters) [13386 13400])
+                            ("valueCount" variable (:type "long") (reparse-symbol formal_parameters) [13402 13417]))                          )
+                        (reparse-symbol class_member_declaration) [13359 13476])
+                    ("read" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [13492 14114]))                  
+                :type "class")
+                nil [13149 14117])
+            ("SevenBitPackingWriter" type
+               (:superclasses "BaseBitPackingWriter"
+                :members 
+                  ( ("out" variable
+                       (:typemodifiers ("private")
+                        :type "OutputStream")
+                        (reparse-symbol class_member_declaration) [14181 14206])
+                    ("buffer" variable
+                       (:typemodifiers ("private")
+                        :type "long")
+                        (reparse-symbol class_member_declaration) [14210 14234])
+                    ("count" variable
+                       (:typemodifiers ("private")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [14237 14259])
+                    ("SevenBitPackingWriter" function
+                       (:constructor-flag t
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("out" variable (:type "OutputStream") (reparse-symbol formal_parameters) [14292 14308]))                          )
+                        (reparse-symbol class_member_declaration) [14263 14335])
+                    ("write" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("val" variable (:type "int") (reparse-symbol formal_parameters) [14369 14376]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [14351 14846])
+                    ("finish" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [14862 15102]))                  
+                :type "class")
+                nil [14119 15105])
+            ("SevenBitPackingReader" type
+               (:superclasses "BaseBitPackingReader"
+                :members 
+                  ( ("in" variable
+                       (:typemodifiers ("private" "final")
+                        :type "InputStream")
+                        (reparse-symbol class_member_declaration) [15168 15197])
+                    ("valueCount" variable
+                       (:typemodifiers ("private" "final")
+                        :type "long")
+                        (reparse-symbol class_member_declaration) [15200 15230])
+                    ("buffer" variable
+                       (:typemodifiers ("private")
+                        :type "long")
+                        (reparse-symbol class_member_declaration) [15234 15258])
+                    ("count" variable
+                       (:typemodifiers ("private")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [15261 15283])
+                    ("totalRead" variable
+                       (:typemodifiers ("private")
+                        :type "long")
+                        (reparse-symbol class_member_declaration) [15286 15313])
+                    ("SevenBitPackingReader" function
+                       (:constructor-flag t
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("in" variable (:type "InputStream") (reparse-symbol formal_parameters) [15347 15361])
+                            ("valueCount" variable (:type "long") (reparse-symbol formal_parameters) [15363 15378]))                          )
+                        (reparse-symbol class_member_declaration) [15318 15437])
+                    ("read" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [15453 16330]))                  
+                :type "class")
+                nil [15106 16333])
+            ("EightBitPackingWriter" type
+               (:superclasses "BitPackingWriter"
+                :members 
+                  ( ("out" variable
+                       (:typemodifiers ("private")
+                        :type "OutputStream")
+                        (reparse-symbol class_member_declaration) [16393 16418])
+                    ("EightBitPackingWriter" function
+                       (:constructor-flag t
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("out" variable (:type "OutputStream") (reparse-symbol formal_parameters) [16451 16467]))                          )
+                        (reparse-symbol class_member_declaration) [16422 16494])
+                    ("write" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("val" variable (:type "int") (reparse-symbol formal_parameters) [16528 16535]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [16510 16581])
+                    ("finish" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [16597 16697]))                  
+                :type "class")
+                nil [16335 16700])
+            ("EightBitPackingReader" type
+               (:superclasses "BitPackingReader"
+                :members 
+                  ( ("in" variable
+                       (:typemodifiers ("private" "final")
+                        :type "InputStream")
+                        (reparse-symbol class_member_declaration) [16759 16788])
+                    ("EightBitPackingReader" function
+                       (:constructor-flag t
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("in" variable (:type "InputStream") (reparse-symbol formal_parameters) [16821 16835]))                          )
+                        (reparse-symbol class_member_declaration) [16792 16860])
+                    ("read" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [16876 16940]))                  
+                :type "class")
+                nil [16701 16943]))          
+      :file "BitPacking.java"
+      :pointmax 16944
+      :fsize 16943
+      :lastmodtime '(22925 23160 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode java-mode
+      :tags 
+        '( ("org.apache.parquet.column.values.bitpacking" package nil nil [812 864])
+            ("java.nio.ByteBuffer" include nil nil [866 893])
+            ("BytePacker" type
+               (:typemodifiers ("public" "abstract")
+                :members 
+                  ( ("bitWidth" variable
+                       (:typemodifiers ("private" "final")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [1119 1146])
+                    ("BytePacker" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("bitWidth" variable (:type "int") (reparse-symbol formal_parameters) [1161 1173]))                          )
+                        (reparse-symbol class_member_declaration) [1150 1210])
+                    ("getBitWidth" function
+                       (:typemodifiers ("public" "final")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [1355 1412])
+                    ("pack8Values" function
+                       (:typemodifiers ("public" "abstract")
+                        :arguments 
+                          ( ("input" variable
+                               (:dereference 1
+                                :typemodifiers ("final")
+                                :type "int")
+                                (reparse-symbol formal_parameters) [1760 1777])
+                            ("inPos" variable
+                               (:typemodifiers ("final")
+                                :type "int")
+                                (reparse-symbol formal_parameters) [1779 1794])
+                            ("output" variable
+                               (:dereference 1
+                                :typemodifiers ("final")
+                                :type "byte")
+                                (reparse-symbol formal_parameters) [1796 1815])
+                            ("outPos" variable
+                               (:typemodifiers ("final")
+                                :type "int")
+                                (reparse-symbol formal_parameters) [1817 1833]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [1727 1835])
+                    ("pack32Values" function
+                       (:typemodifiers ("public" "abstract")
+                        :arguments 
+                          ( ("input" variable
+                               (:dereference 1
+                                :type "int")
+                                (reparse-symbol formal_parameters) [2194 2205])
+                            ("inPos" variable (:type "int") (reparse-symbol formal_parameters) [2207 2216])
+                            ("output" variable
+                               (:dereference 1
+                                :type "byte")
+                                (reparse-symbol formal_parameters) [2218 2231])
+                            ("outPos" variable (:type "int") (reparse-symbol formal_parameters) [2233 2243]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [2160 2245])
+                    ("unpack8Values" function
+                       (:typemodifiers ("public" "abstract")
+                        :arguments 
+                          ( ("input" variable
+                               (:typemodifiers ("final")
+                                :type "ByteBuffer")
+                                (reparse-symbol formal_parameters) [2597 2619])
+                            ("inPos" variable
+                               (:typemodifiers ("final")
+                                :type "int")
+                                (reparse-symbol formal_parameters) [2621 2636])
+                            ("output" variable
+                               (:dereference 1
+                                :typemodifiers ("final")
+                                :type "int")
+                                (reparse-symbol formal_parameters) [2638 2656])
+                            ("outPos" variable
+                               (:typemodifiers ("final")
+                                :type "int")
+                                (reparse-symbol formal_parameters) [2658 2674]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [2562 2676])
+                    ("unpack8Values" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("input" variable
+                               (:dereference 1
+                                :typemodifiers ("final")
+                                :type "byte")
+                                (reparse-symbol formal_parameters) [2755 2773])
+                            ("inPos" variable
+                               (:typemodifiers ("final")
+                                :type "int")
+                                (reparse-symbol formal_parameters) [2775 2790])
+                            ("output" variable
+                               (:dereference 1
+                                :typemodifiers ("final")
+                                :type "int")
+                                (reparse-symbol formal_parameters) [2792 2810])
+                            ("outPos" variable
+                               (:typemodifiers ("final")
+                                :type "int")
+                                (reparse-symbol formal_parameters) [2812 2828]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [2729 2901])
+                    ("unpack32Values" function
+                       (:typemodifiers ("public" "abstract")
+                        :arguments 
+                          ( ("input" variable (:type "ByteBuffer") (reparse-symbol formal_parameters) [3264 3280])
+                            ("inPos" variable (:type "int") (reparse-symbol formal_parameters) [3282 3291])
+                            ("output" variable
+                               (:dereference 1
+                                :type "int")
+                                (reparse-symbol formal_parameters) [3293 3305])
+                            ("outPos" variable (:type "int") (reparse-symbol formal_parameters) [3307 3317]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [3228 3319])
+                    ("unpack32Values" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("input" variable
+                               (:dereference 1
+                                :type "byte")
+                                (reparse-symbol formal_parameters) [3399 3411])
+                            ("inPos" variable (:type "int") (reparse-symbol formal_parameters) [3413 3422])
+                            ("output" variable
+                               (:dereference 1
+                                :type "int")
+                                (reparse-symbol formal_parameters) [3424 3436])
+                            ("outPos" variable (:type "int") (reparse-symbol formal_parameters) [3438 3448]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [3372 3522]))                  
+                :type "class")
+                nil [1081 3524]))          
+      :file "BytePacker.java"
+      :pointmax 3525
+      :fsize 3524
+      :lastmodtime '(23115 11493 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode java-mode
+      :tags 
+        '( ("org.apache.parquet.column.values.bitpacking" package nil nil [812 864])
+            ("IntPacker" type
+               (:typemodifiers ("public" "abstract")
+                :members 
+                  ( ("bitWidth" variable
+                       (:typemodifiers ("private" "final")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [1062 1089])
+                    ("IntPacker" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("bitWidth" variable (:type "int") (reparse-symbol formal_parameters) [1103 1115]))                          )
+                        (reparse-symbol class_member_declaration) [1093 1152])
+                    ("getBitWidth" function
+                       (:typemodifiers ("public" "final")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [1267 1324])
+                    ("pack32Values" function
+                       (:typemodifiers ("public" "abstract")
+                        :arguments 
+                          ( ("input" variable
+                               (:dereference 1
+                                :type "int")
+                                (reparse-symbol formal_parameters) [1673 1684])
+                            ("inPos" variable (:type "int") (reparse-symbol formal_parameters) [1686 1695])
+                            ("output" variable
+                               (:dereference 1
+                                :type "int")
+                                (reparse-symbol formal_parameters) [1697 1709])
+                            ("outPos" variable (:type "int") (reparse-symbol formal_parameters) [1711 1721]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [1639 1723])
+                    ("unpack32Values" function
+                       (:typemodifiers ("public" "abstract")
+                        :arguments 
+                          ( ("input" variable
+                               (:dereference 1
+                                :type "int")
+                                (reparse-symbol formal_parameters) [2075 2086])
+                            ("inPos" variable (:type "int") (reparse-symbol formal_parameters) [2088 2097])
+                            ("output" variable
+                               (:dereference 1
+                                :type "int")
+                                (reparse-symbol formal_parameters) [2099 2111])
+                            ("outPos" variable (:type "int") (reparse-symbol formal_parameters) [2113 2123]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [2039 2125]))                  
+                :type "class")
+                nil [1025 2128]))          
+      :file "IntPacker.java"
+      :pointmax 2129
+      :fsize 2128
+      :lastmodtime '(22925 23160 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode java-mode
+      :tags 
+        '( ("org.apache.parquet.column.values.bitpacking" package nil nil [812 864]))          
+      :file "Packer.java"
+      :pointmax 4317
+      :fsize 4316
+      :lastmodtime '(23115 11493 0 0)
+      :unmatched-syntax '((BRACE_BLOCK 963 . 4316) (IDENTIFIER 956 . 962) (PUBLIC 944 . 950) (IDENTIFIER 951 . 955)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode java-mode
+      :tags 
+        '( ("org.apache.parquet.column.values.bitpacking" package nil nil [809 861])
+            ("org.apache.parquet.bytes.BytesInput" include nil nil [863 906])
+            ("org.apache.parquet.bytes.BytesUtils" include nil nil [907 950])
+            ("org.slf4j.Logger" include nil nil [951 975])
+            ("org.slf4j.LoggerFactory" include nil nil [976 1007])
+            ("java.io.IOException" include nil nil [1009 1036])
+            ("java.util.ArrayList" include nil nil [1037 1064])
+            ("java.util.List" include nil nil [1065 1087])
+            ("ByteBasedBitPackingEncoder" type
+               (:typemodifiers ("public")
+                :members 
+                  ( ("LOG" variable
+                       (:typemodifiers ("private" "static" "final")
+                        :type "Logger")
+                        (reparse-symbol class_member_declaration) [1308 1400])
+                    ("VALUES_WRITTEN_AT_A_TIME" variable
+                       (:typemodifiers ("private" "static" "final")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [1404 1458])
+                    ("MAX_SLAB_SIZE_MULT" variable
+                       (:typemodifiers ("private" "static" "final")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [1461 1517])
+                    ("INITIAL_SLAB_SIZE_MULT" variable
+                       (:typemodifiers ("private" "static" "final")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [1520 1575])
+                    ("bitWidth" variable
+                       (:typemodifiers ("private" "final")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [1579 1606])
+                    ("packer" variable
+                       (:typemodifiers ("private" "final")
+                        :type "BytePacker")
+                        (reparse-symbol class_member_declaration) [1609 1641])
+                    ("input" variable
+                       (:dereference 1
+                        :typemodifiers ("private" "final")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [1644 1706])
+                    ("slabSize" variable
+                       (:typemodifiers ("private")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [1709 1730])
+                    ("totalFullSlabSize" variable
+                       (:typemodifiers ("private")
+                        :type "long")
+                        (reparse-symbol class_member_declaration) [1733 1764])
+                    ("inputSize" variable
+                       (:typemodifiers ("private")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [1767 1789])
+                    ("packed" variable
+                       (:dereference 1
+                        :typemodifiers ("private")
+                        :type "byte")
+                        (reparse-symbol class_member_declaration) [1792 1814])
+                    ("packedPosition" variable
+                       (:typemodifiers ("private")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [1817 1844])
+                    ("totalValues" variable
+                       (:typemodifiers ("private")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [1917 1941])
+                    ("ByteBasedBitPackingEncoder" function
+                       (:constructor-flag t
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("bitWidth" variable (:type "int") (reparse-symbol formal_parameters) [2053 2065])
+                            ("packer" variable (:type "Packer") (reparse-symbol formal_parameters) [2067 2080]))                          )
+                        (reparse-symbol class_member_declaration) [2019 2362])
+                    ("writeInt" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("value" variable (:type "int") (reparse-symbol formal_parameters) [2553 2562]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [2532 2953])
+                    ("pack" function
+                       (:typemodifiers ("private")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [2957 3121])
+                    ("initPackedSlab" function
+                       (:typemodifiers ("private")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [3125 3217])
+                    ("toBytes" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public")
+                        :type "BytesInput")
+                        (reparse-symbol class_member_declaration) [3312 3752])
+                    ("getBufferSize" function
+                       (:typemodifiers ("public")
+                        :type "long")
+                        (reparse-symbol class_member_declaration) [3821 3939])
+                    ("getAllocatedSize" function
+                       (:typemodifiers ("public")
+                        :type "long")
+                        (reparse-symbol class_member_declaration) [3991 4092])
+                    ("memUsageString" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("prefix" variable (:type "String") (reparse-symbol formal_parameters) [4125 4138]))                          
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [4096 4253])
+                    ("getNumSlabs" function (:type "int") (reparse-symbol class_member_declaration) [4343 4395]))                  
+                :type "class")
+                nil [1264 4397]))          
+      :file "ByteBasedBitPackingEncoder.java"
+      :pointmax 4398
+      :fsize 4397
+      :lastmodtime '(23115 11493 0 0)
+      :unmatched-syntax '((SEMICOLON 1913 . 1914) (PAREN_BLOCK 1911 . 1913) (GT 1910 . 1911) (LT 1899 . 1900) (NEW 1886 . 1889) (EQ 1884 . 1885) (GT 1876 . 1877) (PRIVATE 1847 . 1854) (LT 1865 . 1866) (IDENTIFIER 1139 . 1145) (DOT 1138 . 1139) (IDENTIFIER 1128 . 1138) (DOT 1127 . 1128) (IDENTIFIER 1122 . 1127) (DOT 1121 . 1122) (IDENTIFIER 1114 . 1121) (DOT 1113 . 1114) (IDENTIFIER 1107 . 1113) (DOT 1106 . 1107) (IMPORT 1089 . 1095) (STATIC 1096 . 1102) (IDENTIFIER 1103 . 1106)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode java-mode
+      :tags 
+        '( ("org.apache.parquet.column.values.bitpacking" package nil nil [812 864])
+            ("BytePackerFactory" type
+               (:typemodifiers ("public")
+                :members 
+                  ( ("newBytePacker" function
+                       (:arguments 
+                          ( ("width" variable (:type "int") (reparse-symbol formal_parameters) [931 940]))                          
+                        :type "BytePacker")
+                        (reparse-symbol interface_member_declaration) [906 942]))                  
+                :type "interface")
+                nil [866 945]))          
+      :file "BytePackerFactory.java"
+      :pointmax 946
+      :fsize 945
+      :lastmodtime '(22925 23160 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode java-mode
+      :tags 
+        '( ("org.apache.parquet.column.values.bitpacking" package nil nil [793 845])
+            ("java.nio.ByteBuffer" include nil nil [847 874])
+            ("BytePackerForLong" type
+               (:typemodifiers ("public" "abstract")
+                :members 
+                  ( ("bitWidth" variable
+                       (:typemodifiers ("private" "final")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [1109 1136])
+                    ("BytePackerForLong" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("bitWidth" variable (:type "int") (reparse-symbol formal_parameters) [1158 1170]))                          )
+                        (reparse-symbol class_member_declaration) [1140 1207])
+                    ("getBitWidth" function
+                       (:typemodifiers ("public" "final")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [1365 1422])
+                    ("pack8Values" function
+                       (:typemodifiers ("public" "abstract")
+                        :arguments 
+                          ( ("input" variable
+                               (:dereference 1
+                                :typemodifiers ("final")
+                                :type "long")
+                                (reparse-symbol formal_parameters) [1776 1794])
+                            ("inPos" variable
+                               (:typemodifiers ("final")
+                                :type "int")
+                                (reparse-symbol formal_parameters) [1796 1811])
+                            ("output" variable
+                               (:dereference 1
+                                :typemodifiers ("final")
+                                :type "byte")
+                                (reparse-symbol formal_parameters) [1813 1832])
+                            ("outPos" variable
+                               (:typemodifiers ("final")
+                                :type "int")
+                                (reparse-symbol formal_parameters) [1840 1856]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [1743 1858])
+                    ("pack32Values" function
+                       (:typemodifiers ("public" "abstract")
+                        :arguments 
+                          ( ("input" variable
+                               (:dereference 1
+                                :type "long")
+                                (reparse-symbol formal_parameters) [2223 2235])
+                            ("inPos" variable (:type "int") (reparse-symbol formal_parameters) [2237 2246])
+                            ("output" variable
+                               (:dereference 1
+                                :type "byte")
+                                (reparse-symbol formal_parameters) [2248 2261])
+                            ("outPos" variable (:type "int") (reparse-symbol formal_parameters) [2263 2273]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [2189 2275])
+                    ("unpack8Values" function
+                       (:typemodifiers ("public" "abstract")
+                        :arguments 
+                          ( ("input" variable
+                               (:typemodifiers ("final")
+                                :type "ByteBuffer")
+                                (reparse-symbol formal_parameters) [2633 2655])
+                            ("inPos" variable
+                               (:typemodifiers ("final")
+                                :type "int")
+                                (reparse-symbol formal_parameters) [2657 2672])
+                            ("output" variable
+                               (:dereference 1
+                                :typemodifiers ("final")
+                                :type "long")
+                                (reparse-symbol formal_parameters) [2674 2693])
+                            ("outPos" variable
+                               (:typemodifiers ("final")
+                                :type "int")
+                                (reparse-symbol formal_parameters) [2701 2717]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [2598 2719])
+                    ("unpack32Values" function
+                       (:typemodifiers ("public" "abstract")
+                        :arguments 
+                          ( ("input" variable (:type "ByteBuffer") (reparse-symbol formal_parameters) [3088 3104])
+                            ("inPos" variable (:type "int") (reparse-symbol formal_parameters) [3106 3115])
+                            ("output" variable
+                               (:dereference 1
+                                :type "long")
+                                (reparse-symbol formal_parameters) [3117 3130])
+                            ("outPos" variable (:type "int") (reparse-symbol formal_parameters) [3132 3142]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [3052 3144])
+                    ("unpack8Values" function
+                       (:typemodifiers ("public" "abstract")
+                        :arguments 
+                          ( ("input" variable
+                               (:dereference 1
+                                :typemodifiers ("final")
+                                :type "byte")
+                                (reparse-symbol formal_parameters) [3502 3520])
+                            ("inPos" variable
+                               (:typemodifiers ("final")
+                                :type "int")
+                                (reparse-symbol formal_parameters) [3522 3537])
+                            ("output" variable
+                               (:dereference 1
+                                :typemodifiers ("final")
+                                :type "long")
+                                (reparse-symbol formal_parameters) [3539 3558])
+                            ("outPos" variable
+                               (:typemodifiers ("final")
+                                :type "int")
+                                (reparse-symbol formal_parameters) [3566 3582]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [3467 3584])
+                    ("unpack32Values" function
+                       (:typemodifiers ("public" "abstract")
+                        :arguments 
+                          ( ("input" variable
+                               (:dereference 1
+                                :type "byte")
+                                (reparse-symbol formal_parameters) [3953 3965])
+                            ("inPos" variable (:type "int") (reparse-symbol formal_parameters) [3967 3976])
+                            ("output" variable
+                               (:dereference 1
+                                :type "long")
+                                (reparse-symbol formal_parameters) [3978 3991])
+                            ("outPos" variable (:type "int") (reparse-symbol formal_parameters) [3993 4003]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [3917 4005]))                  
+                :type "class")
+                nil [1064 4007]))          
+      :file "BytePackerForLong.java"
+      :pointmax 4008
+      :fsize 4007
+      :lastmodtime '(23115 11493 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode java-mode
+      :tags 
+        '( ("org.apache.parquet.column.values.bitpacking" package nil nil [812 864])
+            ("BytePackerForLongFactory" type
+               (:typemodifiers ("public")
+                :members 
+                  ( ("newBytePackerForLong" function
+                       (:arguments 
+                          ( ("width" variable (:type "int") (reparse-symbol formal_parameters) [952 961]))                          
+                        :type "BytePackerForLong")
+                        (reparse-symbol interface_member_declaration) [913 963]))                  
+                :type "interface")
+                nil [866 966]))          
+      :file "BytePackerForLongFactory.java"
+      :pointmax 967
+      :fsize 966
+      :lastmodtime '(23115 11493 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode java-mode
+      :tags 
+        '( ("org.apache.parquet.column.values.bitpacking" package nil nil [812 864])
+            ("IntPackerFactory" type
+               (:typemodifiers ("public")
+                :members 
+                  ( ("newIntPacker" function
+                       (:arguments 
+                          ( ("width" variable (:type "int") (reparse-symbol formal_parameters) [928 937]))                          
+                        :type "IntPacker")
+                        (reparse-symbol interface_member_declaration) [905 939]))                  
+                :type "interface")
+                nil [866 942]))          
+      :file "IntPackerFactory.java"
+      :pointmax 943
+      :fsize 942
+      :lastmodtime '(22925 23160 0 0)
+      :unmatched-syntax nil))
+  :file "!Volumes!Transcend!parquet-mr!parquet-encoding!src!main!java!org!apache!parquet!column!values!bitpacking!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

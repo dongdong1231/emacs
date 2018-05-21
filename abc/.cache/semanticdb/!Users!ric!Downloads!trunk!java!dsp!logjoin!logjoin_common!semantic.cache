@@ -1,0 +1,1325 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode java-mode
+      :tags 
+        '( ("com.yesdat.dsp.LogjoinCommon" package nil nil [78 115])
+            ("java.io.*" include nil nil [117 134])
+            ("java.text.SimpleDateFormat" include nil nil [135 169])
+            ("java.util.*" include nil nil [170 189])
+            ("org.apache.hadoop.hbase.client.Put" include nil nil [191 233])
+            ("org.apache.hadoop.hbase.client.Get" include nil nil [234 276])
+            ("org.apache.hadoop.hbase.util.Bytes" include nil nil [277 319])
+            ("com.google.protobuf.*" include nil nil [321 350])
+            ("org.apache.log4j.Logger" include nil nil [351 382])
+            ("org.jboss.netty.buffer.*" include nil nil [383 415])
+            ("org.xerial.snappy.Snappy" include nil nil [417 449])
+            ("com.yesdat.proto.YdDspLog.*" include nil nil [451 486])
+            ("yd.openrtb.*" include nil nil [487 507])
+            ("LogjoinLogic" type
+               (:typemodifiers ("public")
+                :members 
+                  ( ("logger" variable
+                       (:typemodifiers ("private" "static" "final")
+                        :type "Logger")
+                        (reparse-symbol class_member_declaration) [539 613])
+                    ("BID_QUALIFIER" variable
+                       (:typemodifiers ("public" "static" "final")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [616 665])
+                    ("WIN_NOTICE_QUALIFIER" variable
+                       (:typemodifiers ("public" "static" "final")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [668 725])
+                    ("BILL_WIN_NOTICE_QUALIFIER" variable
+                       (:typemodifiers ("public" "static" "final")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [728 791])
+                    ("WIN_NOTICE_JOIN_QUALIFIER" variable
+                       (:typemodifiers ("public" "static" "final")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [794 857])
+                    ("IMPRESSION_QUALIFIER" variable
+                       (:typemodifiers ("public" "static" "final")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [860 918])
+                    ("BILL_IMPRESSION_QUALIFIER" variable
+                       (:typemodifiers ("public" "static" "final")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [921 985])
+                    ("IMPRESSION_JOIN_QUALIFIER" variable
+                       (:typemodifiers ("public" "static" "final")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [988 1052])
+                    ("CLICK_QUALIFIER" variable
+                       (:typemodifiers ("public" "static" "final")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [1055 1108])
+                    ("CLICK_JOIN_QUALIFIER" variable
+                       (:typemodifiers ("public" "static" "final")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [1111 1170])
+                    ("CONVERSION_QUALIFIER" variable
+                       (:typemodifiers ("public" "static" "final")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [1173 1231])
+                    ("CONVERSION_JOIN_QUALIFIER" variable
+                       (:typemodifiers ("public" "static" "final")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [1234 1298])
+                    ("landing_bid" variable
+                       (:typemodifiers ("public" "static")
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [1301 1343])
+                    ("discard_bid_count" variable
+                       (:typemodifiers ("private" "static")
+                        :type "long")
+                        (reparse-symbol class_member_declaration) [1346 1388])
+                    ("landing_bid_count" variable
+                       (:typemodifiers ("private" "static")
+                        :type "long")
+                        (reparse-symbol class_member_declaration) [1391 1433])
+                    ("LogjoinLogic" function
+                       (:constructor-flag t
+                        :typemodifiers ("public"))
+                        (reparse-symbol class_member_declaration) [1437 1515])
+                    ("winNoticeJoinBid" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("bid" variable (:type "DspLog") (reparse-symbol formal_parameters) [1613 1623])
+                            ("winNotice" variable (:type "DspLog") (reparse-symbol formal_parameters) [1665 1681]))                          
+                        :type "DspLog")
+                        (reparse-symbol class_member_declaration) [1575 1950])
+                    ("impressionJoinBid" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("bid" variable (:type "DspLog") (reparse-symbol formal_parameters) [2016 2026])
+                            ("impression" variable (:type "DspLog") (reparse-symbol formal_parameters) [2069 2086]))                          
+                        :type "DspLog")
+                        (reparse-symbol class_member_declaration) [1977 2339])
+                    ("clickJoinBidAndImpression" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("bid" variable (:type "DspLog") (reparse-symbol formal_parameters) [2420 2430])
+                            ("impression" variable (:type "DspLog") (reparse-symbol formal_parameters) [2481 2498])
+                            ("click" variable (:type "DspLog") (reparse-symbol formal_parameters) [2549 2561]))                          
+                        :type "DspLog")
+                        (reparse-symbol class_member_declaration) [2373 2897])
+                    ("conversionJoinClick" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("conversionLog" variable (:type "DspLog") (reparse-symbol formal_parameters) [2966 2986])
+                            ("clickLog" variable (:type "DspLog") (reparse-symbol formal_parameters) [3031 3046]))                          
+                        :type "DspLog")
+                        (reparse-symbol class_member_declaration) [2925 3759])
+                    ("putBid" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("record" variable (:type "LogjoinTaskMsg") (reparse-symbol formal_parameters) [3813 3834])
+                            ("bidFamily" variable (:type "String") (reparse-symbol formal_parameters) [3863 3879])
+                            ("compress" variable (:type "boolean") (reparse-symbol formal_parameters) [3908 3924]))                          
+                        :type "Put")
+                        (reparse-symbol class_member_declaration) [3788 4827])
+                    ("putBids" function
+                       (:constructor-flag t
+                        :throws ("IOException")
+                        :arguments 
+                          ( ("" variable (:type "records") (reparse-symbol formal_parameters) [4883 4890])
+                            ("bidFamily" variable (:type "String") (reparse-symbol formal_parameters) [4926 4942])
+                            ("compress" variable (:type "boolean") (reparse-symbol formal_parameters) [4978 4994]))                          )
+                        (reparse-symbol class_member_declaration) [4854 5244])
+                    ("putWinNotice" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("record" variable (:type "LogjoinTaskMsg") (reparse-symbol formal_parameters) [5311 5332])
+                            ("winFamily" variable (:type "String") (reparse-symbol formal_parameters) [5367 5383])
+                            ("compress" variable (:type "boolean") (reparse-symbol formal_parameters) [5418 5434]))                          
+                        :type "Put")
+                        (reparse-symbol class_member_declaration) [5280 5857])
+                    ("putWinNotices" function
+                       (:constructor-flag t
+                        :throws ("IOException")
+                        :arguments 
+                          ( ("" variable (:type "records") (reparse-symbol formal_parameters) [5919 5926])
+                            ("winFamily" variable (:type "String") (reparse-symbol formal_parameters) [5968 5984])
+                            ("compress" variable (:type "boolean") (reparse-symbol formal_parameters) [6026 6042]))                          )
+                        (reparse-symbol class_member_declaration) [5884 6242])
+                    ("putWinNoticeJoined" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("record" variable (:type "LogjoinTaskMsg") (reparse-symbol formal_parameters) [6283 6304])
+                            ("winFamily" variable (:type "String") (reparse-symbol formal_parameters) [6345 6361]))                          
+                        :type "Put")
+                        (reparse-symbol class_member_declaration) [6246 6666])
+                    ("putWinNoticeJoineds" function
+                       (:constructor-flag t
+                        :throws ("IOException")
+                        :arguments 
+                          ( ("" variable (:type "records") (reparse-symbol formal_parameters) [6734 6741])
+                            ("winFamily" variable (:type "String") (reparse-symbol formal_parameters) [6789 6805]))                          )
+                        (reparse-symbol class_member_declaration) [6693 7001])
+                    ("putImpression" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("record" variable (:type "LogjoinTaskMsg") (reparse-symbol formal_parameters) [7061 7082])
+                            ("impressionFamily" variable (:type "String") (reparse-symbol formal_parameters) [7118 7141])
+                            ("compress" variable (:type "boolean") (reparse-symbol formal_parameters) [7177 7193]))                          
+                        :type "Put")
+                        (reparse-symbol class_member_declaration) [7029 7777])
+                    ("putImpressions" function
+                       (:constructor-flag t
+                        :throws ("IOException")
+                        :arguments 
+                          ( ("" variable (:type "records") (reparse-symbol formal_parameters) [7841 7848])
+                            ("impressionFamily" variable (:type "String") (reparse-symbol formal_parameters) [7891 7914])
+                            ("compress" variable (:type "boolean") (reparse-symbol formal_parameters) [7957 7973]))                          )
+                        (reparse-symbol class_member_declaration) [7805 8181])
+                    ("putImpressionJoined" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("record" variable (:type "LogjoinTaskMsg") (reparse-symbol formal_parameters) [8223 8244])
+                            ("impressionFamily" variable (:type "String") (reparse-symbol formal_parameters) [8286 8309]))                          
+                        :type "Put")
+                        (reparse-symbol class_member_declaration) [8185 8801])
+                    ("putImpressionJoineds" function
+                       (:constructor-flag t
+                        :throws ("IOException")
+                        :arguments 
+                          ( ("" variable (:type "records") (reparse-symbol formal_parameters) [8871 8878])
+                            ("impressionFamily" variable (:type "String") (reparse-symbol formal_parameters) [8927 8950]))                          )
+                        (reparse-symbol class_member_declaration) [8829 9154])
+                    ("putClick" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("record" variable (:type "LogjoinTaskMsg") (reparse-symbol formal_parameters) [9212 9233])
+                            ("clickFamily" variable (:type "String") (reparse-symbol formal_parameters) [9264 9282])
+                            ("compress" variable (:type "boolean") (reparse-symbol formal_parameters) [9313 9329]))                          
+                        :type "Put")
+                        (reparse-symbol class_member_declaration) [9185 9758])
+                    ("putClicks" function
+                       (:constructor-flag t
+                        :throws ("IOException")
+                        :arguments 
+                          ( ("" variable (:type "records") (reparse-symbol formal_parameters) [9817 9824])
+                            ("clickFamily" variable (:type "String") (reparse-symbol formal_parameters) [9862 9880])
+                            ("compress" variable (:type "boolean") (reparse-symbol formal_parameters) [9918 9934]))                          )
+                        (reparse-symbol class_member_declaration) [9786 10132])
+                    ("putClickJoined" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("record" variable (:type "LogjoinTaskMsg") (reparse-symbol formal_parameters) [10169 10190])
+                            ("clickFamily" variable (:type "String") (reparse-symbol formal_parameters) [10227 10245]))                          
+                        :type "Put")
+                        (reparse-symbol class_member_declaration) [10136 10562])
+                    ("putClickJoineds" function
+                       (:constructor-flag t
+                        :throws ("IOException")
+                        :arguments 
+                          ( ("" variable (:type "records") (reparse-symbol formal_parameters) [10627 10634])
+                            ("clickFamily" variable (:type "String") (reparse-symbol formal_parameters) [10678 10696]))                          )
+                        (reparse-symbol class_member_declaration) [10590 10890])
+                    ("get" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("record" variable (:type "LogjoinTaskMsg") (reparse-symbol formal_parameters) [10916 10937])
+                            ("" variable (:type "String") (reparse-symbol formal_parameters) [10943 10949])
+                            ("" variable (:type "infos") (reparse-symbol formal_parameters) [10965 10970]))                          
+                        :type "Get")
+                        (reparse-symbol class_member_declaration) [10894 11441])
+                    ("gets" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("" variable (:type "records") (reparse-symbol formal_parameters) [11495 11502])
+                            ("" variable (:type "String") (reparse-symbol formal_parameters) [11508 11514])
+                            ("" variable (:type "infos") (reparse-symbol formal_parameters) [11530 11535]))                          )
+                        (reparse-symbol class_member_declaration) [11469 11693])
+                    ("makeRowKey" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("pvId" variable (:type "String") (reparse-symbol formal_parameters) [11747 11758])
+                            ("processTime" variable (:type "long") (reparse-symbol formal_parameters) [11760 11776]))                          
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [11715 12388])
+                    ("makeIdRegistryRowKey" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("id" variable (:type "String") (reparse-symbol formal_parameters) [12452 12461])
+                            ("processTime" variable (:type "long") (reparse-symbol formal_parameters) [12463 12479]))                          
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [12410 12930])
+                    ("makeRetryRowKey" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("id" variable (:type "String") (reparse-symbol formal_parameters) [12989 12998]))                          
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [12952 13020])
+                    ("makeBidQuaId" function
+                       (:typemodifiers ("public" "static")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [13046 13113])
+                    ("makeWinNoticeQuaId" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("record" variable (:type "LogjoinTaskMsg") (reparse-symbol formal_parameters) [13157 13178]))                          
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [13117 13539])
+                    ("makeWinNoticeQuaId" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("subid" variable (:type "String") (reparse-symbol formal_parameters) [13584 13596]))                          
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [13544 13774])
+                    ("makeWinNoticeJoinQuaId" function
+                       (:typemodifiers ("public" "static")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [13778 13867])
+                    ("makeImpressionQuaId" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("record" variable (:type "LogjoinTaskMsg") (reparse-symbol formal_parameters) [13912 13933]))                          
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [13871 14608])
+                    ("makeImpressionQuaId" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("dspLog" variable (:type "DspLog") (reparse-symbol formal_parameters) [14653 14666]))                          
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [14612 15166])
+                    ("makeImpressionJoinQuaId" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("dspLog" variable (:type "DspLog") (reparse-symbol formal_parameters) [15215 15228]))                          
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [15170 15733])
+                    ("makeClickQuaId" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("dspLog" variable (:type "DspLog") (reparse-symbol formal_parameters) [15789 15802]))                          
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [15753 16142])
+                    ("makeClickJoinQuaId" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("dspLog" variable (:type "DspLog") (reparse-symbol formal_parameters) [16204 16217]))                          
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [16164 16423])
+                    ("makeConversionQuaId" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("dspLog" variable (:type "DspLog") (reparse-symbol formal_parameters) [16468 16481]))                          
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [16427 16702]))                  
+                :type "class")
+                nil [509 16704]))          
+      :file "LogjoinLogic.java"
+      :pointmax 16705
+      :fsize 16932
+      :lastmodtime '(22840 64102 0 0)
+      :unmatched-syntax '((RSHIFT 11527 . 11529) (IDENTIFIER 11516 . 11520) (LT 11520 . 11521) (IDENTIFIER 11504 . 11507) (LT 11507 . 11508) (GT 11493 . 11494) (IDENTIFIER 11474 . 11478) (LT 11478 . 11479) (GT 11467 . 11468) (PUBLIC 11445 . 11451) (LT 11463 . 11464) (RSHIFT 10962 . 10964) (IDENTIFIER 10951 . 10955) (LT 10955 . 10956) (IDENTIFIER 10939 . 10942) (LT 10942 . 10943) (GT 10625 . 10626) (IDENTIFIER 10606 . 10610) (LT 10610 . 10611) (GT 10588 . 10589) (PUBLIC 10566 . 10572) (LT 10584 . 10585) (GT 9815 . 9816) (IDENTIFIER 9796 . 9800) (LT 9800 . 9801) (GT 9784 . 9785) (PUBLIC 9762 . 9768) (LT 9780 . 9781) (GT 8869 . 8870) (IDENTIFIER 8850 . 8854) (LT 8854 . 8855) (GT 8827 . 8828) (PUBLIC 8805 . 8811) (LT 8823 . 8824) (GT 7839 . 7840) (IDENTIFIER 7820 . 7824) (LT 7824 . 7825) (GT 7803 . 7804) (PUBLIC 7781 . 7787) (LT 7799 . 7800) (GT 6732 . 6733) (IDENTIFIER 6713 . 6717) (LT 6717 . 6718) (GT 6691 . 6692) (PUBLIC 6669 . 6675) (LT 6687 . 6688) (GT 5917 . 5918) (IDENTIFIER 5898 . 5902) (LT 5902 . 5903) (GT 5882 . 5883) (PUBLIC 5860 . 5866) (LT 5878 . 5879) (GT 4881 . 4882) (IDENTIFIER 4862 . 4866) (LT 4866 . 4867) (GT 4852 . 4853) (PUBLIC 4830 . 4836) (LT 4848 . 4849)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode java-mode
+      :tags 
+        '( ("com.yesdat.dsp.LogjoinCommon" package nil nil [76 113])
+            ("org.apache.hadoop.hbase.client.Put" include nil nil [116 158])
+            ("org.apache.hadoop.hbase.util.Bytes" include nil nil [159 201])
+            ("org.apache.log4j.Logger" include nil nil [202 233])
+            ("org.xerial.snappy.Snappy" include nil nil [234 266])
+            ("java.text.SimpleDateFormat" include nil nil [268 302])
+            ("java.util.Date" include nil nil [303 325])
+            ("java.util.Map" include nil nil [326 347])
+            ("java.io.IOException" include nil nil [348 375])
+            ("java.util.List" include nil nil [376 398])
+            ("java.util.regex.Matcher" include nil nil [399 430])
+            ("java.util.regex.Pattern" include nil nil [431 462])
+            ("java.util.TimeZone" include nil nil [463 489])
+            ("com.google.protobuf.*" include nil nil [491 520])
+            ("com.yesdat.proto.YdDspLog.*" include nil nil [521 556])
+            ("LogjoinTaskMsg" type
+               (:typemodifiers ("public")
+                :members 
+                  ( ("logger" variable
+                       (:typemodifiers ("private" "static" "final")
+                        :type "Logger")
+                        (reparse-symbol class_member_declaration) [590 666])
+                    ("TIME_GRANUALRITY" variable
+                       (:typemodifiers ("private" "static" "final")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [669 729])
+                    ("logName" variable
+                       (:typemodifiers ("private")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [1032 1055])
+                    ("logData" variable
+                       (:typemodifiers ("private")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [1068 1091])
+                    ("logData1" variable
+                       (:dereference 1
+                        :typemodifiers ("private")
+                        :type "byte")
+                        (reparse-symbol class_member_declaration) [1104 1129])
+                    ("type" variable
+                       (:typemodifiers ("private")
+                        :type "LogType")
+                        (reparse-symbol class_member_declaration) [1140 1161])
+                    ("pbLog" variable
+                       (:typemodifiers ("private")
+                        :type "DspLog")
+                        (reparse-symbol class_member_declaration) [1176 1197])
+                    ("joinPbLog" variable
+                       (:typemodifiers ("private")
+                        :type "DspLog")
+                        (reparse-symbol class_member_declaration) [1216 1241])
+                    ("rowKey" variable
+                       (:typemodifiers ("private")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [1260 1282])
+                    ("id" variable
+                       (:typemodifiers ("private")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [1336 1354])
+                    ("subid" variable
+                       (:typemodifiers ("private")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [1401 1422])
+                    ("receiveTime" variable
+                       (:typemodifiers ("private")
+                        :type "long")
+                        (reparse-symbol class_member_declaration) [1468 1493])
+                    ("doTime" variable
+                       (:typemodifiers ("private")
+                        :type "long")
+                        (reparse-symbol class_member_declaration) [1512 1532])
+                    ("doneTime" variable
+                       (:typemodifiers ("private")
+                        :type "long")
+                        (reparse-symbol class_member_declaration) [1556 1578])
+                    ("processTime" variable
+                       (:typemodifiers ("private")
+                        :type "long")
+                        (reparse-symbol class_member_declaration) [1600 1625])
+                    ("subprocessTime" variable
+                       (:typemodifiers ("private")
+                        :type "long")
+                        (reparse-symbol class_member_declaration) [1677 1705])
+                    ("createTime" variable
+                       (:typemodifiers ("private")
+                        :type "long")
+                        (reparse-symbol class_member_declaration) [1735 1759])
+                    ("joinDataExist" variable
+                       (:typemodifiers ("private")
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [1975 2005])
+                    ("expireProcessTimeFlag" variable
+                       (:typemodifiers ("private")
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [2337 2383])
+                    ("expireProcessTime" variable
+                       (:typemodifiers ("private")
+                        :type "long")
+                        (reparse-symbol class_member_declaration) [2386 2417])
+                    ("LogjoinTaskMsg" function
+                       (:constructor-flag t
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("logName" variable (:type "String") (reparse-symbol formal_parameters) [2480 2494])
+                            ("data" variable (:type "String") (reparse-symbol formal_parameters) [2496 2507])
+                            ("expireTime" variable (:type "long") (reparse-symbol formal_parameters) [2509 2524]))                          )
+                        (reparse-symbol class_member_declaration) [2458 2674])
+                    ("LogjoinTaskMsg" function
+                       (:constructor-flag t
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("logName" variable (:type "String") (reparse-symbol formal_parameters) [2700 2714])
+                            ("data" variable
+                               (:dereference 1
+                                :type "byte")
+                                (reparse-symbol formal_parameters) [2716 2728])
+                            ("expireTime" variable (:type "long") (reparse-symbol formal_parameters) [2730 2745]))                          )
+                        (reparse-symbol class_member_declaration) [2678 2896])
+                    ("LogjoinTaskMsg" function
+                       (:constructor-flag t
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("logName" variable (:type "String") (reparse-symbol formal_parameters) [2922 2936])
+                            ("pbLog" variable (:type "DspLog") (reparse-symbol formal_parameters) [2938 2950])
+                            ("expireTime" variable (:type "long") (reparse-symbol formal_parameters) [2952 2967]))                          )
+                        (reparse-symbol class_member_declaration) [2900 3118])
+                    ("typeToLogName" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("type" variable (:type "LogType") (reparse-symbol formal_parameters) [3157 3169]))                          
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [3122 3802])
+                    ("parseMsgProcess" function
+                       (:typemodifiers ("public")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [3806 4272])
+                    ("init" function (:type "void") (reparse-symbol class_member_declaration) [4276 6360])
+                    ("getImpressionId" function
+                       (:typemodifiers ("public")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [6364 6755])
+                    ("getClickId" function
+                       (:typemodifiers ("public")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [6759 7026])
+                    ("makeCreateTime" function
+                       (:typemodifiers ("public")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [7044 7790])
+                    ("getRowKey" function
+                       (:typemodifiers ("public")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [7794 7849])
+                    ("message" function
+                       (:typemodifiers ("public")
+                        :type "byte[]")
+                        (reparse-symbol class_member_declaration) [7854 7915])
+                    ("type" function
+                       (:typemodifiers ("public")
+                        :type "LogType")
+                        (reparse-symbol class_member_declaration) [7931 7975])
+                    ("pbLog" function
+                       (:typemodifiers ("public")
+                        :type "DspLog")
+                        (reparse-symbol class_member_declaration) [7995 8040])
+                    ("setJoinPbLog" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("log" variable (:type "DspLog") (reparse-symbol formal_parameters) [8161 8171]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [8136 8199])
+                    ("joinPbLog" function
+                       (:typemodifiers ("public")
+                        :type "DspLog")
+                        (reparse-symbol class_member_declaration) [8221 8274])
+                    ("receiveTime" function
+                       (:typemodifiers ("public")
+                        :type "long")
+                        (reparse-symbol class_member_declaration) [8292 8347])
+                    ("doTime" function
+                       (:typemodifiers ("public")
+                        :type "long")
+                        (reparse-symbol class_member_declaration) [8367 8412])
+                    ("doneTime" function
+                       (:typemodifiers ("public")
+                        :type "long")
+                        (reparse-symbol class_member_declaration) [8430 8479])
+                    ("processTime" function
+                       (:typemodifiers ("public")
+                        :type "long")
+                        (reparse-symbol class_member_declaration) [8497 8552])
+                    ("subprocessTime" function
+                       (:typemodifiers ("public")
+                        :type "long")
+                        (reparse-symbol class_member_declaration) [8556 8617])
+                    ("createTime" function
+                       (:typemodifiers ("public")
+                        :type "long")
+                        (reparse-symbol class_member_declaration) [8635 8688])
+                    ("makeDoTime" function
+                       (:typemodifiers ("public")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [8708 8779])
+                    ("makeDoneTime" function
+                       (:typemodifiers ("public")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [8799 8874])
+                    ("logName" function
+                       (:typemodifiers ("public")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [8899 8948])
+                    ("id" function
+                       (:typemodifiers ("public")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [8972 9011])
+                    ("subid" function
+                       (:typemodifiers ("public")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [9015 9060])
+                    ("delayBetweenCreateAndDone" function
+                       (:typemodifiers ("public")
+                        :type "long")
+                        (reparse-symbol class_member_declaration) [9085 9192])
+                    ("delayBetweenReceiveAndDone" function
+                       (:typemodifiers ("public")
+                        :type "long")
+                        (reparse-symbol class_member_declaration) [9217 9326])
+                    ("getProcessTimeInStringFormat" function
+                       (:typemodifiers ("public")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [9424 9851])
+                    ("setJoinDataExist" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("r" variable (:type "boolean") (reparse-symbol formal_parameters) [9884 9893]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [9855 9928])
+                    ("getJoinDataExist" function
+                       (:typemodifiers ("public")
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [9932 10002])
+                    ("setExtraLog" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("" variable (:type "String") (reparse-symbol formal_parameters) [10034 10040])
+                            ("" variable (:type "logs") (reparse-symbol formal_parameters) [10050 10054]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [10006 10088])
+                    ("getExtraLog" function (:constructor-flag t) (reparse-symbol class_member_declaration) [10119 10165])
+                    ("checkProcessTimeExpire" function
+                       (:typemodifiers ("private")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [10220 10414])
+                    ("IsExpireProcessTime" function
+                       (:typemodifiers ("public")
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [10418 10494]))                  
+                :type "class")
+                nil [558 10496]))          
+      :file "LogjoinTaskMsg.java"
+      :pointmax 10497
+      :fsize 11260
+      :lastmodtime '(22840 64102 0 0)
+      :unmatched-syntax '((GT 10117 . 10118) (COMMA 10109 . 10110) (PUBLIC 10092 . 10098) (LT 10102 . 10103) (BYTE 10042 . 10046) (GT 10048 . 10049) (IDENTIFIER 10030 . 10033) (LT 10033 . 10034) (SEMICOLON 2286 . 2287) (GT 2275 . 2276) (COMMA 2267 . 2268) (PRIVATE 2249 . 2256) (LT 2260 . 2261) (PUBLIC 732 . 738) (BRACE_BLOCK 752 . 1027) (SEMICOLON 1027 . 1028)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode java-mode
+      :tags 
+        '( ("com.yesdat.dsp.LogjoinCommon" package nil nil [76 113])
+            ("java.io.IOException" include nil nil [115 142])
+            ("java.util.ArrayList" include nil nil [143 170])
+            ("java.util.Collections" include nil nil [171 200])
+            ("java.util.Comparator" include nil nil [201 229])
+            ("java.util.concurrent.ExecutorService" include nil nil [230 274])
+            ("java.util.NavigableMap" include nil nil [275 305])
+            ("java.util.HashMap" include nil nil [306 331])
+            ("java.util.List" include nil nil [332 354])
+            ("java.util.LinkedList" include nil nil [355 383])
+            ("java.util.Map" include nil nil [384 405])
+            ("org.apache.log4j.Logger" include nil nil [407 438])
+            ("org.apache.hadoop.conf.Configuration" include nil nil [439 483])
+            ("org.apache.hadoop.hbase.HBaseConfiguration" include nil nil [484 534])
+            ("org.apache.hadoop.hbase.client.Admin" include nil nil [535 579])
+            ("org.apache.hadoop.hbase.TableExistsException" include nil nil [580 632])
+            ("org.apache.hadoop.hbase.HColumnDescriptor" include nil nil [633 682])
+            ("org.apache.hadoop.hbase.HTableDescriptor" include nil nil [683 731])
+            ("org.apache.hadoop.hbase.HRegionInfo" include nil nil [732 775])
+            ("org.apache.hadoop.hbase.client.Durability" include nil nil [776 825])
+            ("org.apache.hadoop.hbase.client.Result" include nil nil [826 871])
+            ("org.apache.hadoop.hbase.client.ResultScanner" include nil nil [872 924])
+            ("org.apache.hadoop.hbase.client.HBaseAdmin" include nil nil [925 974])
+            ("org.apache.hadoop.hbase.client.Connection" include nil nil [975 1024])
+            ("org.apache.hadoop.hbase.client.Table" include nil nil [1025 1069])
+            ("org.apache.hadoop.hbase.client.Increment" include nil nil [1070 1118])
+            ("org.apache.hadoop.hbase.client.Delete" include nil nil [1119 1164])
+            ("org.apache.hadoop.hbase.client.Put" include nil nil [1165 1207])
+            ("org.apache.hadoop.hbase.client.Get" include nil nil [1208 1250])
+            ("org.apache.hadoop.hbase.client.HTablePool" include nil nil [1251 1300])
+            ("org.apache.hadoop.hbase.client.Scan" include nil nil [1301 1344])
+            ("org.apache.hadoop.hbase.KeyValue" include nil nil [1345 1385])
+            ("org.apache.hadoop.hbase.TableName" include nil nil [1386 1427])
+            ("org.apache.hadoop.hbase.util.Bytes" include nil nil [1428 1470])
+            ("org.apache.hadoop.hbase.ZooKeeperConnectionException" include nil nil [1471 1531])
+            ("org.xerial.snappy.Snappy" include nil nil [1532 1564])
+            ("com.yesdat.proto.YDLogjoinConfig.LogjoinConfig" include nil nil [1566 1620])
+            ("OpTable" type
+               (:typemodifiers ("public")
+                :members 
+                  ( ("logger" variable
+                       (:typemodifiers ("private" "static" "final")
+                        :type "Logger")
+                        (reparse-symbol class_member_declaration) [1647 1716])
+                    ("MAX_RETRY" variable
+                       (:typemodifiers ("private" "static" "final")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [1719 1758])
+                    ("conf" variable
+                       (:typemodifiers ("private")
+                        :type "Configuration")
+                        (reparse-symbol class_member_declaration) [1762 1796])
+                    ("conn" variable
+                       (:typemodifiers ("private")
+                        :type "Connection")
+                        (reparse-symbol class_member_declaration) [1799 1830])
+                    ("tabName" variable
+                       (:typemodifiers ("private")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [1833 1861])
+                    ("tableName" variable
+                       (:typemodifiers ("private")
+                        :type "TableName")
+                        (reparse-symbol class_member_declaration) [1864 1892])
+                    ("isCompress" variable
+                       (:typemodifiers ("private")
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [1896 1931])
+                    ("OpTable" function
+                       (:constructor-flag t
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("conf" variable (:type "Configuration") (reparse-symbol formal_parameters) [1977 1995])
+                            ("conn" variable (:type "Connection") (reparse-symbol formal_parameters) [1997 2012])
+                            ("tabName" variable (:type "String") (reparse-symbol formal_parameters) [2031 2045])
+                            ("isCompress" variable (:type "boolean") (reparse-symbol formal_parameters) [2047 2065]))                          )
+                        (reparse-symbol class_member_declaration) [1962 2275])
+                    ("attach" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("conf" variable (:type "Configuration") (reparse-symbol formal_parameters) [2317 2335])
+                            ("conn" variable (:type "Connection") (reparse-symbol formal_parameters) [2337 2352])
+                            ("tabName" variable (:type "String") (reparse-symbol formal_parameters) [2354 2368]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [2298 2496])
+                    ("createTable" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("conf" variable (:type "Configuration") (reparse-symbol formal_parameters) [2553 2571])
+                            ("conn" variable (:type "Connection") (reparse-symbol formal_parameters) [2573 2588])
+                            ("tabName" variable (:type "String") (reparse-symbol formal_parameters) [2626 2640])
+                            ("" variable (:type "families") (reparse-symbol formal_parameters) [2652 2660]))                          
+                        :type "OpTable")
+                        (reparse-symbol class_member_declaration) [2519 4050])
+                    ("delRow" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("rowKey" variable (:type "String") (reparse-symbol formal_parameters) [4093 4106]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [4074 4543])
+                    ("delRowBatch" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("rowKeys" variable
+                               (:dereference 1
+                                :type "String")
+                                (reparse-symbol formal_parameters) [4600 4616]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [4576 5083])
+                    ("addRow" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("rowKey" variable (:type "String") (reparse-symbol formal_parameters) [5123 5136])
+                            ("family" variable (:type "String") (reparse-symbol formal_parameters) [5138 5151])
+                            ("column" variable (:type "String") (reparse-symbol formal_parameters) [5153 5166])
+                            ("value" variable
+                               (:dereference 1
+                                :type "byte")
+                                (reparse-symbol formal_parameters) [5168 5180]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [5104 5915])
+                    ("addRow" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("rowKey" variable (:type "String") (reparse-symbol formal_parameters) [5973 5986])
+                            ("family" variable (:type "String") (reparse-symbol formal_parameters) [5988 6001])
+                            ("" variable (:type "String") (reparse-symbol formal_parameters) [6007 6013])
+                            ("" variable (:type "kvPairs") (reparse-symbol formal_parameters) [6023 6030]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [5954 6939])
+                    ("addRow" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("rowKey" variable (:type "String") (reparse-symbol formal_parameters) [6997 7010])
+                            ("family" variable (:type "String") (reparse-symbol formal_parameters) [7012 7025])
+                            ("" variable (:type "kvPairs") (reparse-symbol formal_parameters) [7037 7044]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [6978 7924])
+                    ("addRow" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("put" variable (:type "Put") (reparse-symbol formal_parameters) [7973 7980]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [7954 8298])
+                    ("addRows" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("" variable (:type "puts") (reparse-symbol formal_parameters) [8332 8336]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [8302 8654])
+                    ("getNearlyResult" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("bucketId" variable (:type "int") (reparse-symbol formal_parameters) [8712 8724])
+                            ("family" variable (:type "String") (reparse-symbol formal_parameters) [8726 8739]))                          
+                        :type "Result")
+                        (reparse-symbol class_member_declaration) [8682 8872])
+                    ("getNearlyResult" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("bucketId" variable (:type "int") (reparse-symbol formal_parameters) [8929 8941])
+                            ("family" variable (:type "String") (reparse-symbol formal_parameters) [8943 8956])
+                            ("lastId" variable (:type "long") (reparse-symbol formal_parameters) [8958 8969]))                          
+                        :type "Result")
+                        (reparse-symbol class_member_declaration) [8899 9866])
+                    ("getNearlyRow" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("bucketId" variable (:type "int") (reparse-symbol formal_parameters) [9928 9940])
+                            ("family" variable (:type "String") (reparse-symbol formal_parameters) [9942 9955]))                          
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [9901 10131])
+                    ("exists" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("rowKey" variable (:type "String") (reparse-symbol formal_parameters) [10174 10187]))                          
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [10152 10602])
+                    ("checkExists" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("" variable (:type "gets") (reparse-symbol formal_parameters) [10646 10650]))                          
+                        :type "boolean[]")
+                        (reparse-symbol class_member_declaration) [10606 10799])
+                    ("exists" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("rowKey" variable (:type "String") (reparse-symbol formal_parameters) [10860 10873])
+                            ("family" variable (:type "String") (reparse-symbol formal_parameters) [10875 10888])
+                            ("" variable (:type "columns") (reparse-symbol formal_parameters) [10900 10907]))                          
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [10838 11431])
+                    ("checkAndPut" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("oldRowKey" variable (:type "String") (reparse-symbol formal_parameters) [11482 11498])
+                            ("oldFamily" variable (:type "String") (reparse-symbol formal_parameters) [11500 11516])
+                            ("oldColumn" variable (:type "String") (reparse-symbol formal_parameters) [11518 11534])
+                            ("oldValue" variable
+                               (:dereference 1
+                                :type "byte")
+                                (reparse-symbol formal_parameters) [11565 11580])
+                            ("newRowKey" variable (:type "String") (reparse-symbol formal_parameters) [11582 11598])
+                            ("newFamily" variable (:type "String") (reparse-symbol formal_parameters) [11600 11616])
+                            ("newColumn" variable (:type "String") (reparse-symbol formal_parameters) [11647 11663])
+                            ("newValue" variable
+                               (:dereference 1
+                                :type "byte")
+                                (reparse-symbol formal_parameters) [11665 11680]))                          
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [11455 12815])
+                    ("getRow" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("get" variable (:type "Get") (reparse-symbol formal_parameters) [12842 12849]))                          
+                        :type "Result")
+                        (reparse-symbol class_member_declaration) [12821 13221])
+                    ("getRow" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("record" variable (:type "LogjoinTaskMsg") (reparse-symbol formal_parameters) [13244 13265])
+                            ("get" variable (:type "Get") (reparse-symbol formal_parameters) [13267 13274]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [13225 13644])
+                    ("getRow" function
+                       (:constructor-flag t
+                        :throws ("IOException")
+                        :arguments 
+                          ( ("rowKey" variable (:type "String") (reparse-symbol formal_parameters) [13675 13688])
+                            ("family" variable (:type "String") (reparse-symbol formal_parameters) [13690 13703])
+                            ("qualifier" variable (:type "String") (reparse-symbol formal_parameters) [13705 13721]))                          )
+                        (reparse-symbol class_member_declaration) [13668 14652])
+                    ("getRows" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("" variable (:type "records") (reparse-symbol formal_parameters) [14697 14704])
+                            ("" variable (:type "gets") (reparse-symbol formal_parameters) [14716 14720]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [14656 15164])
+                    ("parseGetRowResult" function
+                       (:constructor-flag t
+                        :throws ("IOException")
+                        :arguments 
+                          ( ("result" variable (:type "Result") (reparse-symbol formal_parameters) [15214 15227]))                          )
+                        (reparse-symbol class_member_declaration) [15196 16602])
+                    ("addRowBatch" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("" variable (:type "puts") (reparse-symbol formal_parameters) [16655 16659]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [16621 17128])
+                    ("increment" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("rowKey" variable (:type "String") (reparse-symbol formal_parameters) [17168 17181])
+                            ("family" variable (:type "String") (reparse-symbol formal_parameters) [17183 17196])
+                            ("column" variable (:type "String") (reparse-symbol formal_parameters) [17198 17211])
+                            ("amount" variable (:type "long") (reparse-symbol formal_parameters) [17213 17224]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [17146 17577])
+                    ("increment" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("rowKey" variable (:type "String") (reparse-symbol formal_parameters) [17617 17630])
+                            ("family" variable (:type "String") (reparse-symbol formal_parameters) [17632 17645])
+                            ("" variable (:type "String") (reparse-symbol formal_parameters) [17651 17657])
+                            ("" variable (:type "kvPairs") (reparse-symbol formal_parameters) [17665 17672]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [17595 18047])
+                    ("scanFamily" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("family" variable (:type "String") (reparse-symbol formal_parameters) [18098 18111])
+                            ("qualifier" variable (:type "String") (reparse-symbol formal_parameters) [18113 18129])
+                            ("type" variable (:type "LogjoinTaskMsg.LogType") (reparse-symbol formal_parameters) [18131 18158])
+                            ("expireTime" variable (:type "long") (reparse-symbol formal_parameters) [18185 18200])
+                            ("" variable (:type "records") (reparse-symbol formal_parameters) [18223 18230]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [18075 19367])
+                    ("putSingleLog" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("record" variable (:type "LogjoinTaskMsg") (reparse-symbol formal_parameters) [19423 19444])
+                            ("family" variable (:type "String") (reparse-symbol formal_parameters) [19446 19459])
+                            ("qualifier" variable (:type "String") (reparse-symbol formal_parameters) [19461 19477]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [19398 20349])
+                    ("putSingle" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("put" variable (:type "Put") (reparse-symbol formal_parameters) [20377 20384]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [20355 20900])
+                    ("packageRow" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("rowKey" variable (:type "String") (reparse-symbol formal_parameters) [20926 20939])
+                            ("family" variable (:type "String") (reparse-symbol formal_parameters) [20941 20954])
+                            ("column" variable (:type "String") (reparse-symbol formal_parameters) [20980 20993])
+                            ("data" variable
+                               (:dereference 1
+                                :type "byte")
+                                (reparse-symbol formal_parameters) [20995 21006]))                          
+                        :type "Put")
+                        (reparse-symbol class_member_declaration) [20904 21290]))                  
+                :type "class")
+                nil [1622 21294]))          
+      :file "OpTable.java"
+      :pointmax 21295
+      :fsize 21620
+      :lastmodtime '(22840 64102 0 0)
+      :unmatched-syntax '((GT 18221 . 18222) (IDENTIFIER 18202 . 18206) (LT 18206 . 18207) (IDENTIFIER 17659 . 17663) (GT 17663 . 17664) (IDENTIFIER 17647 . 17650) (LT 17650 . 17651) (GT 16653 . 16654) (IDENTIFIER 16645 . 16649) (LT 16649 . 16650) (GT 15194 . 15195) (COMMA 15186 . 15187) (PRIVATE 15168 . 15175) (LT 15179 . 15180) (GT 14714 . 14715) (IDENTIFIER 14706 . 14710) (LT 14710 . 14711) (GT 14695 . 14696) (IDENTIFIER 14676 . 14680) (LT 14680 . 14681) (GT 13666 . 13667) (PUBLIC 13648 . 13654) (LT 13659 . 13660) (DOT 10898 . 10899) (IDENTIFIER 10890 . 10896) (DOT 10897 . 10898) (GT 10644 . 10645) (IDENTIFIER 10636 . 10640) (LT 10640 . 10641) (GT 8330 . 8331) (IDENTIFIER 8322 . 8326) (LT 8326 . 8327) (DOT 7035 . 7036) (DOT 7034 . 7035) (BYTE 7027 . 7031) (DOT 7033 . 7034) (BYTE 6015 . 6019) (GT 6021 . 6022) (IDENTIFIER 6003 . 6006) (LT 6006 . 6007) (DOT 2650 . 2651) (IDENTIFIER 2642 . 2648) (DOT 2649 . 2650)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode java-mode
+      :tags 
+        '( ("com.yesdat.dsp.LogjoinCommon" package nil nil [163 200])
+            ("java.io.IOException" include nil nil [202 229])
+            ("java.util.ArrayList" include nil nil [230 257])
+            ("java.util.Collections" include nil nil [258 287])
+            ("java.util.Comparator" include nil nil [288 316])
+            ("java.util.concurrent.ExecutorService" include nil nil [317 361])
+            ("java.util.HashMap" include nil nil [362 387])
+            ("java.util.LinkedList" include nil nil [388 416])
+            ("java.util.List" include nil nil [417 439])
+            ("java.util.Map" include nil nil [440 461])
+            ("org.apache.log4j.Logger" include nil nil [463 494])
+            ("org.apache.hadoop.conf.Configuration" include nil nil [495 539])
+            ("org.apache.hadoop.hbase.TableExistsException" include nil nil [540 592])
+            ("org.apache.hadoop.hbase.HBaseConfiguration" include nil nil [593 643])
+            ("org.apache.hadoop.hbase.client.HBaseAdmin" include nil nil [644 693])
+            ("org.apache.hadoop.hbase.HColumnDescriptor" include nil nil [694 743])
+            ("org.apache.hadoop.hbase.HTableDescriptor" include nil nil [744 792])
+            ("org.apache.hadoop.hbase.HRegionInfo" include nil nil [793 836])
+            ("org.apache.hadoop.hbase.client.Admin" include nil nil [837 881])
+            ("org.apache.hadoop.hbase.client.Result" include nil nil [882 927])
+            ("org.apache.hadoop.hbase.TableName" include nil nil [928 969])
+            ("org.apache.hadoop.hbase.client.Connection" include nil nil [970 1019])
+            ("org.apache.hadoop.hbase.client.HConnectionManager" include nil nil [1020 1077])
+            ("org.apache.hadoop.hbase.client.HTable" include nil nil [1078 1123])
+            ("org.apache.hadoop.hbase.client.HTableInterface" include nil nil [1124 1178])
+            ("org.apache.hadoop.hbase.client.Increment" include nil nil [1179 1227])
+            ("org.apache.hadoop.hbase.client.Delete" include nil nil [1228 1273])
+            ("org.apache.hadoop.hbase.client.Put" include nil nil [1274 1316])
+            ("org.apache.hadoop.hbase.client.Get" include nil nil [1317 1359])
+            ("org.apache.hadoop.hbase.client.HTablePool" include nil nil [1360 1409])
+            ("org.apache.hadoop.hbase.KeyValue" include nil nil [1410 1450])
+            ("org.apache.hadoop.hbase.util.Bytes" include nil nil [1451 1493])
+            ("org.apache.hadoop.hbase.ZooKeeperConnectionException" include nil nil [1494 1554])
+            ("org.xerial.snappy.Snappy" include nil nil [1555 1587])
+            ("com.yesdat.proto.YDLogjoinConfig.*" include nil nil [1589 1631])
+            ("TimePartitionTable" type
+               (:typemodifiers ("public")
+                :members 
+                  ( ("logger" variable
+                       (:typemodifiers ("private" "static" "final")
+                        :type "Logger")
+                        (reparse-symbol class_member_declaration) [1669 1749])
+                    ("conf" variable
+                       (:typemodifiers ("private")
+                        :type "Configuration")
+                        (reparse-symbol class_member_declaration) [1753 1787])
+                    ("conn" variable
+                       (:typemodifiers ("private")
+                        :type "Connection")
+                        (reparse-symbol class_member_declaration) [1790 1821])
+                    ("tableNamePrefix" variable
+                       (:typemodifiers ("private")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [1824 1860])
+                    ("isCompress" variable
+                       (:typemodifiers ("private")
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [1863 1898])
+                    ("familyList" variable
+                       (:dereference 1
+                        :typemodifiers ("private")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [1901 1937])
+                    ("lastUpdatedTimeFamily" variable
+                       (:typemodifiers ("private" "final")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [1940 2003])
+                    ("lastUpdatedTimeQualifier" variable
+                       (:typemodifiers ("private" "final")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [2006 2067])
+                    ("lastUpdatedTimeValue" variable
+                       (:typemodifiers ("private" "final")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [2070 2118])
+                    ("TimePartitionTable" function
+                       (:constructor-flag t
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("conf" variable (:type "Configuration") (reparse-symbol formal_parameters) [2149 2167])
+                            ("conn" variable (:type "Connection") (reparse-symbol formal_parameters) [2197 2212])
+                            ("tableNamePrefix" variable (:type "String") (reparse-symbol formal_parameters) [2242 2264])
+                            ("isCompress" variable (:type "boolean") (reparse-symbol formal_parameters) [2294 2312]))                          )
+                        (reparse-symbol class_member_declaration) [2123 2441])
+                    ("setFamilyList" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("familyList" variable
+                               (:dereference 1
+                                :type "String")
+                                (reparse-symbol formal_parameters) [2471 2491]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [2445 2532])
+                    ("dispatch" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("" variable (:type "records") (reparse-symbol formal_parameters) [2662 2669]))                          )
+                        (reparse-symbol class_member_declaration) [2632 3145])
+                    ("constructTableName" function
+                       (:throws ("IOException")
+                        :typemodifiers ("private")
+                        :arguments 
+                          ( ("datetime" variable (:type "String") (reparse-symbol formal_parameters) [3183 3198]))                          
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [3149 3936])
+                    ("putBid" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("" variable (:type "records") (reparse-symbol formal_parameters) [3981 3988])
+                            ("bidFamily" variable (:type "String") (reparse-symbol formal_parameters) [3990 4006]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [3941 4511])
+                    ("putAddLastUpdateTimeAttr" function
+                       (:typemodifiers ("private")
+                        :arguments 
+                          ( ("put" variable (:type "Put") (reparse-symbol formal_parameters) [4553 4560]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [4515 4730])
+                    ("putBidWithLastUpdateTime" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("" variable (:type "records") (reparse-symbol formal_parameters) [4792 4799])
+                            ("bidFamily" variable (:type "String") (reparse-symbol formal_parameters) [4840 4856]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [4734 5501])
+                    ("putWinNotice" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("" variable (:type "records") (reparse-symbol formal_parameters) [5551 5558])
+                            ("winFamily" variable (:type "String") (reparse-symbol formal_parameters) [5560 5576]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [5505 6087])
+                    ("putWinNoticeWithLastUpdateTime" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("" variable (:type "records") (reparse-symbol formal_parameters) [6154 6161])
+                            ("winFamily" variable (:type "String") (reparse-symbol formal_parameters) [6163 6179]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [6090 6818])
+                    ("putWinNoticeJoin" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("" variable (:type "records") (reparse-symbol formal_parameters) [6872 6879])
+                            ("winFamily" variable (:type "String") (reparse-symbol formal_parameters) [6881 6897]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [6822 7408])
+                    ("putImpression" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("" variable (:type "records") (reparse-symbol formal_parameters) [7459 7466])
+                            ("impressionFamily" variable (:type "String") (reparse-symbol formal_parameters) [7468 7491]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [7412 8010])
+                    ("putImpressionWithLastUpdateTime" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("" variable (:type "records") (reparse-symbol formal_parameters) [8079 8086])
+                            ("impressionFamily" variable (:type "String") (reparse-symbol formal_parameters) [8088 8111]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [8014 8758])
+                    ("putImpressionJoin" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("" variable (:type "records") (reparse-symbol formal_parameters) [8815 8822])
+                            ("impressionFamily" variable (:type "String") (reparse-symbol formal_parameters) [8824 8847]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [8764 9366])
+                    ("checkBidExist" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("" variable (:type "records") (reparse-symbol formal_parameters) [9417 9424])
+                            ("bidFamily" variable (:type "String") (reparse-symbol formal_parameters) [9426 9442]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [9370 10231])
+                    ("checkImpressionExist" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("" variable (:type "records") (reparse-symbol formal_parameters) [10289 10296])
+                            ("impressionFamily" variable (:type "String") (reparse-symbol formal_parameters) [10298 10321]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [10235 11117])
+                    ("get" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("" variable (:type "records") (reparse-symbol formal_parameters) [11158 11165])
+                            ("" variable (:type "String") (reparse-symbol formal_parameters) [11171 11177])
+                            ("" variable (:type "infos") (reparse-symbol formal_parameters) [11193 11198]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [11121 11697])
+                    ("get" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("record" variable (:type "LogjoinTaskMsg") (reparse-symbol formal_parameters) [11717 11738])
+                            ("" variable (:type "String") (reparse-symbol formal_parameters) [11744 11750])
+                            ("" variable (:type "infos") (reparse-symbol formal_parameters) [11766 11771]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [11701 12048])
+                    ("putSingleLog" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("record" variable (:type "LogjoinTaskMsg") (reparse-symbol formal_parameters) [12115 12136])
+                            ("family" variable (:type "String") (reparse-symbol formal_parameters) [12138 12151])
+                            ("qualifier" variable (:type "String") (reparse-symbol formal_parameters) [12153 12169]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [12090 12509])
+                    ("putSingleLogWithLastUpdateTime" function
+                       (:throws ("IOException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("record" variable (:type "LogjoinTaskMsg") (reparse-symbol formal_parameters) [12556 12577])
+                            ("family" variable (:type "String") (reparse-symbol formal_parameters) [12624 12637])
+                            ("qualifier" variable (:type "String") (reparse-symbol formal_parameters) [12684 12700]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [12513 13359]))                  
+                :type "class")
+                nil [1633 13361]))          
+      :file "TimePartitionTable.java"
+      :pointmax 13362
+      :fsize 13403
+      :lastmodtime '(22840 64102 0 0)
+      :unmatched-syntax '((RSHIFT 11763 . 11765) (IDENTIFIER 11752 . 11756) (LT 11756 . 11757) (IDENTIFIER 11740 . 11743) (LT 11743 . 11744) (RSHIFT 11190 . 11192) (IDENTIFIER 11179 . 11183) (LT 11183 . 11184) (IDENTIFIER 11167 . 11170) (LT 11170 . 11171) (GT 11156 . 11157) (IDENTIFIER 11137 . 11141) (LT 11141 . 11142) (GT 10287 . 10288) (IDENTIFIER 10268 . 10272) (LT 10272 . 10273) (GT 9415 . 9416) (IDENTIFIER 9396 . 9400) (LT 9400 . 9401) (GT 8813 . 8814) (IDENTIFIER 8794 . 8798) (LT 8798 . 8799) (GT 8077 . 8078) (IDENTIFIER 8058 . 8062) (LT 8062 . 8063) (GT 7457 . 7458) (IDENTIFIER 7438 . 7442) (LT 7442 . 7443) (GT 6870 . 6871) (IDENTIFIER 6851 . 6855) (LT 6855 . 6856) (GT 6152 . 6153) (IDENTIFIER 6133 . 6137) (LT 6137 . 6138) (GT 5549 . 5550) (IDENTIFIER 5530 . 5534) (LT 5534 . 5535) (GT 4790 . 4791) (IDENTIFIER 4771 . 4775) (LT 4775 . 4776) (GT 3979 . 3980) (IDENTIFIER 3960 . 3964) (LT 3964 . 3965) (GT 2660 . 2661) (IDENTIFIER 2641 . 2645) (LT 2645 . 2646) (GT 2630 . 2631) (GT 2628 . 2629) (LT 2613 . 2614) (COMMA 2602 . 2603) (IDENTIFIER 2588 . 2595) (LT 2595 . 2596)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode java-mode
+      :tags 
+        '( ("com.yesdat.dsp.LogjoinCommon" package nil nil [76 113])
+            ("java.io.IOException" include nil nil [115 142])
+            ("java.lang.Integer" include nil nil [143 168])
+            ("java.lang.InterruptedException" include nil nil [169 207])
+            ("java.lang.management.ManagementFactory" include nil nil [208 254])
+            ("java.lang.management.RuntimeMXBean" include nil nil [255 297])
+            ("java.util.ArrayList" include nil nil [298 325])
+            ("java.util.HashSet" include nil nil [326 351])
+            ("java.util.List" include nil nil [352 374])
+            ("java.util.Random" include nil nil [375 399])
+            ("org.apache.log4j.Logger" include nil nil [400 431])
+            ("org.apache.zookeeper.*" include nil nil [432 462])
+            ("org.apache.zookeeper.Watcher.Event.KeeperState" include nil nil [463 517])
+            ("org.apache.zookeeper.Watcher.Event.EventType" include nil nil [518 570])
+            ("org.apache.zookeeper.KeeperException" include nil nil [571 615])
+            ("org.apache.zookeeper.KeeperException.Code" include nil nil [616 665])
+            ("com.yesdat.proto.YDLogjoinConfig.*" include nil nil [667 709])
+            ("BucketSelector" type
+               (:typemodifiers ("public")
+                :members 
+                  ( ("logger" variable
+                       (:typemodifiers ("private" "static" "final")
+                        :type "Logger")
+                        (reparse-symbol class_member_declaration) [795 871])
+                    ("zk" variable
+                       (:typemodifiers ("private")
+                        :type "ZooKeeper")
+                        (reparse-symbol class_member_declaration) [875 903])
+                    ("DEFAULT_SESSION_TIMEOUT" variable
+                       (:typemodifiers ("private" "static" "final")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [906 963])
+                    ("PREFIX_NODE" variable
+                       (:typemodifiers ("private" "static" "final")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [974 1025])
+                    ("MAX_GET_BUCKET_NUM" variable
+                       (:typemodifiers ("private" "static" "final")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [1028 1077])
+                    ("hosts" variable
+                       (:typemodifiers ("private")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [1141 1169])
+                    ("timeoutMs" variable
+                       (:typemodifiers ("private")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [1172 1198])
+                    ("runtime" variable
+                       (:typemodifiers ("private" "final")
+                        :type "RuntimeMXBean")
+                        (reparse-symbol class_member_declaration) [1201 1276])
+                    ("info" variable
+                       (:typemodifiers ("private" "final")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [1279 1325])
+                    ("nicName" variable
+                       (:typemodifiers ("private")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [1328 1358])
+                    ("pid" variable
+                       (:typemodifiers ("private")
+                        :type "long")
+                        (reparse-symbol class_member_declaration) [1361 1382])
+                    ("config" variable
+                       (:typemodifiers ("private")
+                        :type "LogjoinConfig")
+                        (reparse-symbol class_member_declaration) [1385 1414])
+                    ("prefixPath" variable
+                       (:typemodifiers ("private")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [1417 1443])
+                    ("maxBucketNum" variable
+                       (:typemodifiers ("private")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [1446 1475])
+                    ("BucketSelectorWatcher" type
+                       (:interfaces ("Watcher")
+                        :members 
+                          ( ("process" function
+                               (:typemodifiers ("public")
+                                :arguments 
+                                  ( ("event" variable (:type "WatchedEvent") (reparse-symbol formal_parameters) [1679 1697]))                                  
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [1659 1953]))                          
+                        :type "class")
+                        (reparse-symbol class_member_declaration) [1543 1957])
+                    ("BucketSelector" function
+                       (:constructor-flag t
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("config" variable (:type "LogjoinConfig") (reparse-symbol formal_parameters) [1983 2003]))                          )
+                        (reparse-symbol class_member_declaration) [1961 2428])
+                    ("getHosts" function
+                       (:typemodifiers ("private")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [2432 2903])
+                    ("close" function
+                       (:typemodifiers ("public" "synchronized")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [2907 3265])
+                    ("init" function
+                       (:typemodifiers ("public" "synchronized")
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [3301 3665])
+                    ("getBucketNum" function
+                       (:typemodifiers ("public" "synchronized")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [3695 3764])
+                    ("getBucketList" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("num" variable (:type "int") (reparse-symbol formal_parameters) [3921 3928]))                          )
+                        (reparse-symbol class_member_declaration) [3907 4837])
+                    ("getZkClient" function
+                       (:typemodifiers ("public" "synchronized")
+                        :type "ZooKeeper")
+                        (reparse-symbol class_member_declaration) [4880 4945])
+                    ("makesureConnected" function
+                       (:typemodifiers ("private" "synchronized")
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [4987 5975])
+                    ("createRoot" function
+                       (:typemodifiers ("private" "synchronized")
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [6012 6569])
+                    ("getBucketId" function
+                       (:typemodifiers ("private" "synchronized")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [6658 8017])
+                    ("tryGetBuckets" function
+                       (:constructor-flag t
+                        :throws ("KeeperException" "InterruptedException"))
+                        (reparse-symbol class_member_declaration) [8085 9175])
+                    ("createTmp" function
+                       (:typemodifiers ("private" "synchronized")
+                        :arguments 
+                          ( ("id" variable (:type "int") (reparse-symbol formal_parameters) [9249 9255]))                          
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [9210 10221]))                  
+                :type "class")
+                nil [763 10223]))          
+      :file "BucketSelector.java"
+      :pointmax 10224
+      :fsize 10865
+      :lastmodtime '(22840 64102 0 0)
+      :unmatched-syntax '((GT 8083 . 8084) (PRIVATE 8050 . 8057) (LT 8075 . 8076) (GT 3905 . 3906) (PUBLIC 3873 . 3879) (LT 3897 . 3898) (SEMICOLON 1137 . 1138) (EQ 1131 . 1132) (GT 1118 . 1119) (PRIVATE 1098 . 1105) (LT 1110 . 1111))))
+  :file "!Users!ric!Downloads!trunk!java!dsp!logjoin!logjoin_common!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

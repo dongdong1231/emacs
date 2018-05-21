@@ -1,0 +1,249 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("BITCOIN_BENCH_BENCH_H" variable (:constant-flag t) nil [234 255])
+            ("functional" include (:system-flag t) nil [257 278])
+            ("limits" include (:system-flag t) nil [279 296])
+            ("map" include (:system-flag t) nil [297 311])
+            ("string" include (:system-flag t) nil [312 329])
+            ("vector" include (:system-flag t) nil [330 347])
+            ("chrono" include (:system-flag t) nil [348 365])
+            ("boost/preprocessor/cat.hpp" include (:system-flag t) nil [367 404])
+            ("boost/preprocessor/stringize.hpp" include (:system-flag t) nil [405 448])
+            ("benchmark" type
+               (:members 
+                  ( ("best_clock" type
+                       (:members 
+                          ( ("std::chrono::high_resolution_clock" variable (:type "int") (reparse-symbol classsubparts) [1236 1271])
+                            ("std::chrono::steady_clock" variable (:type "int") (reparse-symbol classsubparts) [1297 1323])
+                            ("std::conditional::type" variable (:type "int") (reparse-symbol classsubparts) [1341 1417]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [1191 1420])
+                    ("best_clock::type" variable (:type "int") (reparse-symbol namespacesubparts) [1435 1452])
+                    ("clock::time_point" variable (:type "int") (reparse-symbol namespacesubparts) [1472 1490])
+                    ("clock::duration" variable (:type "int") (reparse-symbol namespacesubparts) [1508 1524])
+                    ("Printer" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [1526 1540])
+                    ("State" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [1556 1563])
+                            ("m_name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1568 1587])
+                            ("m_num_iters_left" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1592 1618])
+                            ("m_num_iters" variable
+                               (:constant-flag t
+                                :type ("uint64_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1623 1650])
+                            ("m_num_evals" variable
+                               (:constant-flag t
+                                :type ("uint64_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1655 1682])
+                            ("m_elapsed_results" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("double" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [1687 1725])
+                            ("m_start_time" variable (:type ("time_point" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1730 1754])
+                            ("UpdateTimer" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("finish_time" variable (:type ("time_point" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1777 1800]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [1760 1801])
+                            ("State" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1813 1830])
+                                    ("num_evals" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1831 1850])
+                                    ("num_iters" variable (:type "double") (reparse-symbol arg-sub-list) [1851 1868])
+                                    ("printer" variable
+                                       (:reference 1
+                                        :type ("Printer" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1869 1886]))                                  
+                                :type ("State" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1807 1982])
+                            ("KeepRunning" function
+                               (:typemodifiers ("inline")
+                                :type "bool")
+                                (reparse-symbol classsubparts) [1988 2271]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [1542 2274])
+                    ("BenchFunction" variable (:type "int") (reparse-symbol namespacesubparts) [2312 2326])
+                    ("BenchRunner" type
+                       (:members 
+                          ( ("Bench" type
+                               (:members 
+                                  ( ("func" variable (:type ("BenchFunction" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2375 2394])
+                                    ("num_iters_for_one_second" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2403 2437]))                                  
+                                :type "struct")
+                                (reparse-symbol classsubparts) [2352 2444])
+                            ("BenchmarkMap" type
+                               (:typedef ("std::map" type
+                                     (:template-specifier 
+                                        ( ("std::string" type nil nil nil)
+                                          ("Bench" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil)
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [2449 2499])
+                            ("benchmarks" function
+                               (:prototype-flag t
+                                :typemodifiers ("static")
+                                :type ("BenchmarkMap" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2504 2538])
+                            ("public" label nil (reparse-symbol classsubparts) [2540 2547])
+                            ("BenchRunner" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2564 2581])
+                                    ("func" variable (:type ("BenchFunction" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2582 2601])
+                                    ("num_iters_for_one_second" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2602 2636]))                                  
+                                :type ("BenchRunner" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2552 2637])
+                            ("RunAll" function
+                               (:prototype-flag t
+                                :typemodifiers ("static")
+                                :arguments 
+                                  ( ("printer" variable
+                                       (:reference 1
+                                        :type ("Printer" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2662 2679])
+                                    ("num_evals" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2680 2699])
+                                    ("scaling" variable (:type "double") (reparse-symbol arg-sub-list) [2700 2715])
+                                    ("filter" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2716 2742])
+                                    ("is_list_only" variable (:type "bool") (reparse-symbol arg-sub-list) [2743 2761]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2643 2762]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [2328 2765])
+                    ("Printer" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [2825 2832])
+                            ("Printer" function
+                               (:destructor-flag t
+                                :typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [2837 2858])
+                            ("header" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [2863 2889])
+                            ("result" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("state" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("State" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2914 2933]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2894 2938])
+                            ("footer" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [2943 2969]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [2809 2972])
+                    ("ConsolePrinter" type
+                       (:superclasses 
+                          ( ("Printer" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [3069 3076])
+                            ("header" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [3081 3095])
+                            ("result" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("state" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("State" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3112 3131]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [3100 3132])
+                            ("footer" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [3137 3151]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [3029 3154])
+                    ("PlotlyPrinter" type
+                       (:superclasses 
+                          ( ("Printer" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [3230 3237])
+                            ("PlotlyPrinter" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("plotly_url" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3256 3279])
+                                    ("width" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3280 3294])
+                                    ("height" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3295 3310]))                                  
+                                :type ("PlotlyPrinter" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3242 3311])
+                            ("header" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [3316 3330])
+                            ("result" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("state" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("State" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3347 3366]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [3335 3367])
+                            ("footer" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [3372 3386])
+                            ("private" label nil (reparse-symbol classsubparts) [3388 3396])
+                            ("m_plotly_url" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3401 3426])
+                            ("m_width" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3431 3447])
+                            ("m_height" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3452 3469]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [3191 3472]))                  
+                :type "namespace")
+                nil [1084 3474])
+            ("BENCHMARK" variable (:constant-flag t) nil [3826 3835]))          
+      :file "bench.h"
+      :pointmax 4030
+      :fsize 4029
+      :lastmodtime '(23128 22951 0 0)
+      :unmatched-syntax '((punctuation 2310 . 2311) (semantic-list 2302 . 2310) (VOID 2298 . 2302) (punctuation 2297 . 2298) (symbol 2289 . 2297) (punctuation 2288 . 2289) (punctuation 2287 . 2288) (symbol 2284 . 2287) (TYPEDEF 2276 . 2283) (punctuation 1506 . 1507) (symbol 1497 . 1505) (USING 1491 . 1496) (punctuation 1470 . 1471) (symbol 1459 . 1469) (USING 1453 . 1458) (punctuation 1433 . 1434) (symbol 1427 . 1432) (USING 1421 . 1426) (punctuation 1339 . 1340) (symbol 1334 . 1338) (USING 1328 . 1333) (punctuation 1295 . 1296) (symbol 1282 . 1294) (USING 1276 . 1281) (punctuation 1234 . 1235) (symbol 1221 . 1233) (USING 1215 . 1220))
+      :lexical-table 
+        '(("BENCHMARK" (spp-arg-list ("n" "num_iters_for_one_second") 3835 . 3864) . 
+              ((symbol "benchmark" 3871 . 3880) (punctuation ":" 3880 . 3881) (punctuation ":" 3881 . 3882) (symbol "BenchRunner" 3882 . 3893) (symbol "BOOST_PP_CAT" 3894 . 3906) (semantic-list "(bench_, BOOST_PP_CAT(__LINE__, n))" 3906 . 3941) (semantic-list "(BOOST_PP_STRINGIZE(n), n, (num_iters_for_one_second))" 3941 . 3995) (punctuation ";" 3995 . 3996)))
+          ("BITCOIN_BENCH_BENCH_H")
+          )
+))
+  :file "!Volumes!Transcend!bitcoin!src!bench!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

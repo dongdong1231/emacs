@@ -1,0 +1,517 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("OPENCV_FLANN_KDTREE_SINGLE_INDEX_H_" variable (:constant-flag t) nil [1680 1715])
+            ("algorithm" include (:system-flag t) nil [1717 1737])
+            ("map" include (:system-flag t) nil [1738 1752])
+            ("cassert" include (:system-flag t) nil [1753 1771])
+            ("cstring" include (:system-flag t) nil [1772 1790])
+            ("general.h" include nil nil [1792 1812])
+            ("nn_index.h" include nil nil [1813 1834])
+            ("matrix.h" include nil nil [1835 1854])
+            ("result_set.h" include nil nil [1855 1878])
+            ("heap.h" include nil nil [1879 1896])
+            ("allocator.h" include nil nil [1897 1919])
+            ("random.h" include nil nil [1920 1939])
+            ("saving.h" include nil nil [1940 1959])
+            ("cvflann" type
+               (:members 
+                  ( ("KDTreeSingleIndexParams" type
+                       (:superclasses 
+                          ( ("IndexParams" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("KDTreeSingleIndexParams" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("leaf_max_size" variable
+                                       (:default-value "10"
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [2064 2086])
+                                    ("reorder" variable
+                                       (:default-value "true"
+                                        :type "bool")
+                                        (reparse-symbol arg-sub-list) [2088 2107])
+                                    ("dim" variable
+                                       (:default-value "-1"
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [2109 2121]))                                  
+                                :type ("KDTreeSingleIndexParams" type (:type "struct") nil nil))
+                                (reparse-symbol classsubparts) [2040 2310]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [1982 2313])
+                    ("KDTreeSingleIndex" type
+                       (:template 
+                          ( ("Distance" type (:type "class") nil nil))                          
+                        :type "class"
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [2548 2555])
+                            ("ElementType" type
+                               (:typedef ("Distance::ElementType" type (:type "class") nil nil)
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [2560 2611])
+                            ("DistanceType" type
+                               (:typedef ("Distance::ResultType" type (:type "class") nil nil)
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [2616 2667])
+                            ("KDTreeSingleIndex" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("inputData" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Matrix" type
+                                             (:template-specifier 
+                                                ( ("ElementType" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [2883 2920])
+                                    ("params" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :default-value "KDTreeSingleIndexParams()"
+                                        :type ("IndexParams" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2921 2974])
+                                    ("d" variable
+                                       (:default-value "Distance()"
+                                        :type ("Distance" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2998 3021]))                                  
+                                :type ("KDTreeSingleIndex" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2865 3560])
+                            ("KDTreeSingleIndex" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("KDTreeSingleIndex" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3584 3609]))                                  
+                                :type ("KDTreeSingleIndex" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3566 3610])
+                            ("=" function
+                               (:prototype-flag t
+                                :operator-flag t
+                                :arguments 
+                                  ( ("" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("KDTreeSingleIndex" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3644 3669]))                                  
+                                :type ("KDTreeSingleIndex" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3615 3670])
+                            ("KDTreeSingleIndex" function
+                               (:destructor-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [3719 3794])
+                            ("buildIndex" function (:type "void") (reparse-symbol classsubparts) [3840 4391])
+                            ("getType" function
+                               (:methodconst-flag t
+                                :type ("flann_algorithm_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4397 4484])
+                            ("saveIndex" function
+                               (:arguments 
+                                  ( ("stream" variable
+                                       (:pointer 1
+                                        :type ("FILE" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4506 4519]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [4491 4869])
+                            ("loadIndex" function
+                               (:arguments 
+                                  ( ("stream" variable
+                                       (:pointer 1
+                                        :type ("FILE" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4891 4904]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [4876 5461])
+                            ("size" function
+                               (:methodconst-flag t
+                                :type ("size_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [5514 5567])
+                            ("veclen" function
+                               (:methodconst-flag t
+                                :type ("size_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [5636 5690])
+                            ("usedMemory" function
+                               (:methodconst-flag t
+                                :type "int")
+                                (reparse-symbol classsubparts) [5791 5948])
+                            ("knnSearch" function
+                               (:arguments 
+                                  ( ("queries" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Matrix" type
+                                             (:template-specifier 
+                                                ( ("ElementType" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [6356 6391])
+                                    ("indices" variable
+                                       (:reference 1
+                                        :type ("Matrix" type
+                                             (:template-specifier 
+                                                ( ("int" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [6392 6413])
+                                    ("dists" variable
+                                       (:reference 1
+                                        :type ("Matrix" type
+                                             (:template-specifier 
+                                                ( ("DistanceType" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [6414 6442])
+                                    ("knn" variable (:type "int") (reparse-symbol arg-sub-list) [6443 6451])
+                                    ("params" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("SearchParams" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [6452 6479]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [6341 6933])
+                            ("getParameters" function
+                               (:methodconst-flag t
+                                :type ("IndexParams" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [6939 7014])
+                            ("findNeighbors" function
+                               (:arguments 
+                                  ( ("result" variable
+                                       (:reference 1
+                                        :type ("ResultSet" type
+                                             (:template-specifier 
+                                                ( ("DistanceType" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [7427 7459])
+                                    ("vec" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("ElementType" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [7460 7483])
+                                    ("searchParams" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("SearchParams" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [7484 7517]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [7408 7780])
+                            ("private" label nil (reparse-symbol classsubparts) [7782 7790])
+                            ("Node" type
+                               (:members 
+                                  ( ("left" variable (:type "int") (reparse-symbol classsubparts) [7971 7987])
+                                    ("right" variable (:type "int") (reparse-symbol classsubparts) [7971 7987])
+                                    ("divfeat" variable (:type "int") (reparse-symbol classsubparts) [8063 8075])
+                                    ("divlow" variable (:type ("DistanceType" type (:type "class") nil nil)) (reparse-symbol classsubparts) [8152 8181])
+                                    ("divhigh" variable (:type ("DistanceType" type (:type "class") nil nil)) (reparse-symbol classsubparts) [8152 8181])
+                                    ("child1" variable
+                                       (:pointer 1
+                                        :type ("Node" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [8242 8265])
+                                    ("child2" variable
+                                       (:pointer 1
+                                        :type ("Node" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [8242 8265]))                                  
+                                :type "struct")
+                                (reparse-symbol classsubparts) [7879 8272])
+                            ("NodePtr" type
+                               (:typedef ("Node" type (:type "class") nil nil)
+                                :pointer 1
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [8277 8299])
+                            ("Interval" type
+                               (:members 
+                                  ( ("low" variable (:type ("DistanceType" type (:type "class") nil nil)) (reparse-symbol classsubparts) [8336 8359])
+                                    ("high" variable (:type ("DistanceType" type (:type "class") nil nil)) (reparse-symbol classsubparts) [8336 8359]))                                  
+                                :type "struct")
+                                (reparse-symbol classsubparts) [8306 8366])
+                            ("BoundingBox" type
+                               (:typedef ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("Interval" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil)
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [8372 8414])
+                            ("BranchSt" type
+                               (:typedef ("BranchStruct" type
+                                     (:template-specifier 
+                                        ( ("NodePtr" type nil nil nil)
+                                          ("DistanceType" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil)
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [8420 8473])
+                            ("Branch" type
+                               (:typedef ("BranchSt" type (:type "class") nil nil)
+                                :pointer 1
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [8478 8503])
+                            ("save_tree" function
+                               (:arguments 
+                                  ( ("stream" variable
+                                       (:pointer 1
+                                        :type ("FILE" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [8527 8540])
+                                    ("tree" variable (:type ("NodePtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8541 8554]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [8512 8779])
+                            ("load_tree" function
+                               (:arguments 
+                                  ( ("stream" variable
+                                       (:pointer 1
+                                        :type ("FILE" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [8801 8814])
+                                    ("tree" variable
+                                       (:reference 1
+                                        :type ("NodePtr" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [8815 8829]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [8786 9093])
+                            ("computeBoundingBox" function
+                               (:arguments 
+                                  ( ("bbox" variable
+                                       (:reference 1
+                                        :type ("BoundingBox" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [9124 9142]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [9100 9647])
+                            ("divideTree" function
+                               (:arguments 
+                                  ( ("left" variable (:type "int") (reparse-symbol arg-sub-list) [10074 10083])
+                                    ("right" variable (:type "int") (reparse-symbol arg-sub-list) [10084 10094])
+                                    ("bbox" variable
+                                       (:reference 1
+                                        :type ("BoundingBox" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [10095 10113]))                                  
+                                :type ("NodePtr" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [10055 11935])
+                            ("computeMinMax" function
+                               (:arguments 
+                                  ( ("ind" variable
+                                       (:pointer 1
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [11960 11969])
+                                    ("count" variable (:type "int") (reparse-symbol arg-sub-list) [11970 11980])
+                                    ("dim" variable (:type "int") (reparse-symbol arg-sub-list) [11981 11989])
+                                    ("min_elem" variable
+                                       (:reference 1
+                                        :type ("ElementType" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [11990 12012])
+                                    ("max_elem" variable
+                                       (:reference 1
+                                        :type ("ElementType" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [12013 12035]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [11941 12324])
+                            ("middleSplit" function
+                               (:arguments 
+                                  ( ("ind" variable
+                                       (:pointer 1
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [12347 12356])
+                                    ("count" variable (:type "int") (reparse-symbol arg-sub-list) [12357 12367])
+                                    ("index" variable
+                                       (:reference 1
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [12368 12379])
+                                    ("cutfeat" variable
+                                       (:reference 1
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [12380 12393])
+                                    ("cutval" variable
+                                       (:reference 1
+                                        :type ("DistanceType" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [12394 12415])
+                                    ("bbox" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("BoundingBox" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [12416 12440]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [12330 13913])
+                            ("middleSplit_" function
+                               (:arguments 
+                                  ( ("ind" variable
+                                       (:pointer 1
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [13938 13947])
+                                    ("count" variable (:type "int") (reparse-symbol arg-sub-list) [13948 13958])
+                                    ("index" variable
+                                       (:reference 1
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [13959 13970])
+                                    ("cutfeat" variable
+                                       (:reference 1
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [13971 13984])
+                                    ("cutval" variable
+                                       (:reference 1
+                                        :type ("DistanceType" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [13985 14006])
+                                    ("bbox" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("BoundingBox" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [14007 14031]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [13920 15473])
+                            ("planeSplit" function
+                               (:arguments 
+                                  ( ("ind" variable
+                                       (:pointer 1
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [15828 15837])
+                                    ("count" variable (:type "int") (reparse-symbol arg-sub-list) [15838 15848])
+                                    ("cutfeat" variable (:type "int") (reparse-symbol arg-sub-list) [15849 15861])
+                                    ("cutval" variable (:type ("DistanceType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15862 15882])
+                                    ("lim1" variable
+                                       (:reference 1
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [15883 15893])
+                                    ("lim2" variable
+                                       (:reference 1
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [15894 15904]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [15812 16841])
+                            ("computeInitialDistances" function
+                               (:arguments 
+                                  ( ("vec" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("ElementType" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [16884 16907])
+                                    ("dists" variable
+                                       (:reference 1
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("DistanceType" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [16908 16941]))                                  
+                                :type ("DistanceType" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [16847 17429])
+                            ("searchLevel" function
+                               (:arguments 
+                                  ( ("result_set" variable
+                                       (:reference 1
+                                        :type ("ResultSet" type
+                                             (:template-specifier 
+                                                ( ("DistanceType" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [17534 17570])
+                                    ("vec" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("ElementType" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [17571 17594])
+                                    ("node" variable
+                                       (:constant-flag t
+                                        :type ("NodePtr" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [17595 17614])
+                                    ("mindistsq" variable (:type ("DistanceType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [17615 17638])
+                                    ("dists" variable
+                                       (:reference 1
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("DistanceType" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [17660 17693])
+                                    ("epsError" variable
+                                       (:constant-flag t
+                                        :type "float")
+                                        (reparse-symbol arg-sub-list) [17694 17715]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [17517 19369])
+                            ("private" label nil (reparse-symbol classsubparts) [19371 19379])
+                            ("dataset_" variable
+                               (:constant-flag t
+                                :type ("Matrix" type
+                                     (:template-specifier 
+                                        ( ("ElementType" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [19439 19474])
+                            ("index_params_" variable (:type ("IndexParams" type (:type "class") nil nil)) (reparse-symbol classsubparts) [19480 19506])
+                            ("leaf_max_size_" variable (:type "int") (reparse-symbol classsubparts) [19512 19531])
+                            ("reorder_" variable (:type "bool") (reparse-symbol classsubparts) [19536 19550])
+                            ("vind_" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("int" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [19625 19648])
+                            ("data_" variable (:type ("Matrix" type
+                                 (:template-specifier 
+                                    ( ("ElementType" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [19654 19680])
+                            ("size_" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [19686 19699])
+                            ("dim_" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [19704 19716])
+                            ("root_node_" variable (:type ("NodePtr" type (:type "class") nil nil)) (reparse-symbol classsubparts) [19789 19808])
+                            ("root_bbox_" variable (:type ("BoundingBox" type (:type "class") nil nil)) (reparse-symbol classsubparts) [19814 19837])
+                            ("pool_" variable (:type ("PooledAllocator" type (:type "class") nil nil)) (reparse-symbol classsubparts) [20059 20081])
+                            ("distance_" variable (:type ("Distance" type (:type "class") nil nil)) (reparse-symbol classsubparts) [20087 20106]))                          
+                        :superclasses 
+                          ( ("NNIndex" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          )
+                        (reparse-symbol namespacesubparts) [2466 20109]))                  
+                :type "namespace")
+                nil [1961 20130]))          
+      :file "kdtree_single_index.h"
+      :pointmax 20177
+      :fsize 20176
+      :lastmodtime '(22878 19324 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("OPENCV_FLANN_KDTREE_SINGLE_INDEX_H_")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :file "general.h"
+      :fsize 2036
+      :lastmodtime '(22878 19324 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "nn_index.h"
+      :fsize 6075
+      :lastmodtime '(22878 19324 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "matrix.h"
+      :fsize 3286
+      :lastmodtime '(22878 19324 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "result_set.h"
+      :fsize 14947
+      :lastmodtime '(22878 19324 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "heap.h"
+      :fsize 4111
+      :lastmodtime '(22878 19324 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "allocator.h"
+      :fsize 6065
+      :lastmodtime '(22878 19324 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "random.h"
+      :fsize 3694
+      :lastmodtime '(22878 19324 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "saving.h"
+      :fsize 5826
+      :lastmodtime '(22878 19324 0 0)))
+  :file "!Users!ric!Desktop!trunk!app!qzap!service!ad_portrait!feagensvrplat!thirdparty!opencv!opencv2!flann!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

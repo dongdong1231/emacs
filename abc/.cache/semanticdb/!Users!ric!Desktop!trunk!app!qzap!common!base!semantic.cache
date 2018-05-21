@@ -1,0 +1,352 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("regex.h" include (:system-flag t) nil [93 111])
+            ("stdio.h" include (:system-flag t) nil [112 130])
+            ("sys/resource.h" include (:system-flag t) nil [131 156])
+            ("sys/time.h" include (:system-flag t) nil [157 178])
+            ("unistd.h" include (:system-flag t) nil [179 198])
+            ("algorithm" include (:system-flag t) nil [199 219])
+            ("limits" include (:system-flag t) nil [220 237])
+            ("string" include (:system-flag t) nil [238 255])
+            ("vector" include (:system-flag t) nil [256 273])
+            ("app/qzap/common/base/benchmark.h" include nil nil [274 317])
+            ("thirdparty/glog/logging.h" include nil nil [318 354])
+            ("app/qzap/common/base/walltime.h" include nil nil [355 397])
+            ("app/qzap/common/thread/mutex.h" include nil nil [398 439])
+            ("app/qzap/common/base/sysinfo.h" include nil nil [440 481])
+            ("DEFINE_string" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("benchmarks" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [497 508]))                  
+                :type "int")
+                nil [483 788])
+            ("DEFINE_int32" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("benchmark_min_iters" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [803 823]))                  
+                :type "int")
+                nil [790 891])
+            ("DEFINE_int32" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("benchmark_max_iters" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [906 926]))                  
+                :type "int")
+                nil [893 998])
+            ("DEFINE_double" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("benchmark_min_time" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1014 1033]))                  
+                :type "int")
+                nil [1000 1165])
+            ("unnamed" type
+               (:members 
+                  ( ("BenchmarkFunction" function
+                       (:prototype-flag t
+                        :function-pointer t
+                        :arguments 
+                          ( ("iterations" variable (:type "int") (reparse-symbol arg-sub-list) [1248 1263]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1222 1264])
+                    ("BenchmarkFunctionWithArg" function
+                       (:prototype-flag t
+                        :function-pointer t
+                        :arguments 
+                          ( ("iterations" variable (:type "int") (reparse-symbol arg-sub-list) [1306 1321])
+                            ("arg" variable (:type "int") (reparse-symbol arg-sub-list) [1322 1330]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1273 1331])
+                    ("Benchmark" type
+                       (:members 
+                          ( ("name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1354 1394])
+                            ("function" variable (:type ("BenchmarkFunction" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1397 1436])
+                            ("function_with_arg" variable (:type ("BenchmarkFunctionWithArg" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1439 1487])
+                            ("arg" variable (:type "int") (reparse-symbol classsubparts) [1490 1524])
+                            ("Benchmark" function
+                               (:constructor-flag t
+                                :type ("Benchmark" type (:type "struct") nil nil))
+                                (reparse-symbol classsubparts) [1528 1585])
+                            ("Run" function
+                               (:arguments 
+                                  ( ("iters" variable (:type "int") (reparse-symbol arg-sub-list) [1598 1608]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1589 1736]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [1333 1739])
+                    ("benchmark_lock" variable
+                       (:typemodifiers ("static")
+                        :type ("Mutex" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [1741 1769])
+                    ("benchmarks" variable
+                       (:pointer 1
+                        :typemodifiers ("static")
+                        :default-value "NULL"
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("Benchmark" type (:pointer 1) nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol namespacesubparts) [1770 1820])
+                    ("AddBenchmark" function
+                       (:arguments 
+                          ( ("b" variable
+                               (:pointer 1
+                                :type ("Benchmark" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1840 1853]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1822 1995])
+                    ("running_benchmark" variable
+                       (:default-value "false"
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [1997 2028])
+                    ("bytes_processed" variable
+                       (:default-value "0"
+                        :type "double")
+                        (reparse-symbol namespacesubparts) [2089 2116])
+                    ("items_processed" variable
+                       (:default-value "0"
+                        :type ("int64_t" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [2177 2205])
+                    ("report_label" variable
+                       (:dereference 1
+                        :type "char")
+                        (reparse-symbol namespacesubparts) [2280 2304])
+                    ("timers_running" variable (:type "bool") (reparse-symbol namespacesubparts) [2329 2349])
+                    ("cpu_start_time" variable (:type "double") (reparse-symbol namespacesubparts) [2380 2402])
+                    ("real_start_time" variable (:type "double") (reparse-symbol namespacesubparts) [2403 2426])
+                    ("cpu_accumulated_time" variable (:type "double") (reparse-symbol namespacesubparts) [2459 2487])
+                    ("real_accumulated_time" variable (:type "double") (reparse-symbol namespacesubparts) [2488 2517])
+                    ("Prefix" function
+                       (:pointer 1
+                        :typemodifiers ("static")
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol namespacesubparts) [2576 2671])
+                    ("RunBenchmark" function
+                       (:arguments 
+                          ( ("b" variable
+                               (:pointer 1
+                                :type ("Benchmark" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2691 2704])
+                            ("name_field_width" variable (:type "int") (reparse-symbol arg-sub-list) [2705 2726]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [2673 5305]))                  
+                :type "namespace")
+                nil [1201 5308])
+            ("BenchmarkRegisterer" function
+               (:constructor-flag t
+                :parent "BenchmarkRegisterer"
+                :arguments 
+                  ( ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [5365 5382])
+                    ("function" function
+                       (:function-pointer t
+                        :arguments 
+                          ( ("iters" variable (:type "int") (reparse-symbol arg-sub-list) [5441 5451]))                          
+                        :type "void")
+                        nil nil))                  
+                :type ("BenchmarkRegisterer" type (:type "class") nil nil))
+                nil [5324 5583])
+            ("BenchmarkRegisterer" function
+               (:constructor-flag t
+                :parent "BenchmarkRegisterer"
+                :arguments 
+                  ( ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [5626 5643])
+                    ("function" function
+                       (:function-pointer t
+                        :arguments 
+                          ( ("iters" variable (:type "int") (reparse-symbol arg-sub-list) [5702 5712])
+                            ("arg" variable (:type "int") (reparse-symbol arg-sub-list) [5713 5721]))                          
+                        :type "void")
+                        nil nil)
+                    ("arg" variable (:type "int") (reparse-symbol arg-sub-list) [5764 5772]))                  
+                :type ("BenchmarkRegisterer" type (:type "class") nil nil))
+                nil [5585 6380])
+            ("BenchmarkRegisterer" function
+               (:constructor-flag t
+                :parent "BenchmarkRegisterer"
+                :arguments 
+                  ( ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [6423 6440])
+                    ("function" function
+                       (:function-pointer t
+                        :arguments 
+                          ( ("iters" variable (:type "int") (reparse-symbol arg-sub-list) [6499 6509])
+                            ("arg" variable (:type "int") (reparse-symbol arg-sub-list) [6510 6518]))                          
+                        :type "void")
+                        nil nil)
+                    ("lo" variable (:type "int") (reparse-symbol arg-sub-list) [6561 6568])
+                    ("hi" variable (:type "int") (reparse-symbol arg-sub-list) [6610 6617]))                  
+                :type ("BenchmarkRegisterer" type (:type "class") nil nil))
+                nil [6382 7049])
+            ("call_exit" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("status" variable (:type "int") (reparse-symbol arg-sub-list) [7131 7142]))                  
+                :type "void")
+                nil [7109 7155])
+            ("RunSpecifiedBenchmarks" function (:type "void") nil [7157 8979])
+            ("SetBenchmarkBytesProcessed" function
+               (:arguments 
+                  ( ("bytes" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9013 9027]))                  
+                :type "void")
+                nil [8981 9201])
+            ("SetBenchmarkItemsProcessed" function
+               (:arguments 
+                  ( ("items" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9235 9249]))                  
+                :type "void")
+                nil [9203 9423])
+            ("SetBenchmarkLabel" function
+               (:arguments 
+                  ( ("label" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9448 9473]))                  
+                :type "void")
+                nil [9425 9673])
+            ("StopBenchmarkTiming" function (:type "void") nil [9675 9951])
+            ("StartBenchmarkTiming" function (:type "void") nil [9953 10141]))          
+      :file "benchmark.cc"
+      :pointmax 10142
+      :fsize 10141
+      :lastmodtime '(22878 19282 0 0)
+      :unmatched-syntax '((TYPEDEF 1265 . 1272) (TYPEDEF 1214 . 1221) (string 1127 . 1163) (string 1053 . 1112) (number 1034 . 1037) (string 952 . 996) (number 927 . 937) (string 845 . 889) (number 824 . 830) (string 759 . 786) (string 679 . 744) (string 602 . 664) (string 527 . 587) (string 509 . 511)))
+    (semanticdb-table "semanticdb-table"
+      :file "benchmark.h"
+      :fsize 5577
+      :lastmodtime '(22878 19282 0 0))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("APP_QZAP_COMMON_BASE_WALLTIME_H_" variable (:constant-flag t) nil [322 354])
+            ("string" include (:system-flag t) nil [356 373])
+            ("WallTime" type
+               (:typedef ("double")
+                :type "typedef")
+                nil [374 398])
+            ("WallTime_Now" function
+               (:prototype-flag t
+                :type ("WallTime" type (:type "class") nil nil))
+                nil [399 423])
+            ("WallTime_ToString" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("time" variable (:type ("WallTime" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [532 546]))                  
+                :type ("std::string" type (:type "class") nil nil))
+                nil [502 547])
+            ("WallTime_Split_Timezone" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("value" variable (:type ("WallTime" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [580 595])
+                    ("local" variable (:type "bool") (reparse-symbol arg-sub-list) [596 607])
+                    ("t" variable
+                       (:pointer 1
+                        :type ("tm" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [610 623])
+                    ("subsecond" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [624 642]))                  
+                :type "bool")
+                nil [548 643]))          
+      :file "walltime.h"
+      :pointmax 688
+      :fsize 687
+      :lastmodtime '(22878 19282 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("APP_QZAP_COMMON_BASE_WALLTIME_H_")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :file "sysinfo.h"
+      :fsize 1628
+      :lastmodtime '(22878 19282 0 0))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("app/qzap/common/base/walltime.h" include nil nil [136 178])
+            ("stdio.h" include (:system-flag t) nil [180 198])
+            ("stdint.h" include (:system-flag t) nil [199 218])
+            ("string.h" include (:system-flag t) nil [219 238])
+            ("sys/time.h" include (:system-flag t) nil [239 260])
+            ("time.h" include (:system-flag t) nil [261 278])
+            ("limits" include (:system-flag t) nil [280 297])
+            ("numeric" include (:system-flag t) nil [298 316])
+            ("string" include (:system-flag t) nil [317 334])
+            ("WallTime_PrintBuffer" type
+               (:members 
+                  ( ("buffer" variable
+                       (:dereference 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [848 864]))                  
+                :type "struct")
+                nil [816 911])
+            ("WallTime_Now" function (:type ("WallTime" type (:type "class") nil nil)) nil [931 1134])
+            ("WallTime_Split_Timezone" function
+               (:arguments 
+                  ( ("value" variable (:type ("WallTime" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1168 1183])
+                    ("local" variable (:type "bool") (reparse-symbol arg-sub-list) [1184 1195])
+                    ("t" variable
+                       (:pointer 1
+                        :type ("tm" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1198 1211])
+                    ("subsecond" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [1212 1230]))                  
+                :type "bool")
+                nil [1136 1715])
+            ("WallTime_Print_Timezone" function
+               (:pointer 1
+                :constant-flag t
+                :arguments 
+                  ( ("time" variable (:type ("WallTime" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1756 1770])
+                    ("local" variable (:type "bool") (reparse-symbol arg-sub-list) [1771 1782])
+                    ("storage" variable
+                       (:pointer 1
+                        :type ("WallTime_PrintBuffer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1785 1815]))                  
+                :type "char")
+                nil [1717 2333])
+            ("WallTime_ToString_Timezone" function
+               (:arguments 
+                  ( ("time" variable (:type ("WallTime" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2374 2388])
+                    ("local" variable (:type "bool") (reparse-symbol arg-sub-list) [2389 2400]))                  
+                :type ("std::string" type (:type "class") nil nil))
+                nil [2335 2506])
+            ("WallTime_ToString" function
+               (:arguments 
+                  ( ("time" variable (:type ("WallTime" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2599 2613]))                  
+                :type ("std::string" type (:type "class") nil nil))
+                nil [2569 2666]))          
+      :file "walltime.cc"
+      :pointmax 2667
+      :fsize 2666
+      :lastmodtime '(22878 19282 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!ric!Desktop!trunk!app!qzap!common!base!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

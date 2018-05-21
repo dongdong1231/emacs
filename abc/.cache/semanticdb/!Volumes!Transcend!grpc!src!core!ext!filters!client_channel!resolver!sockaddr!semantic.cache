@@ -1,0 +1,328 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("stdbool.h" include (:system-flag t) nil [610 630])
+            ("stdio.h" include (:system-flag t) nil [631 649])
+            ("stdlib.h" include (:system-flag t) nil [650 669])
+            ("string.h" include (:system-flag t) nil [670 689])
+            ("grpc/support/alloc.h" include (:system-flag t) nil [691 722])
+            ("grpc/support/host_port.h" include (:system-flag t) nil [723 758])
+            ("grpc/support/port_platform.h" include (:system-flag t) nil [759 798])
+            ("grpc/support/string_util.h" include (:system-flag t) nil [799 836])
+            ("src/core/ext/filters/client_channel/lb_policy_factory.h" include nil nil [838 904])
+            ("src/core/ext/filters/client_channel/parse_address.h" include nil nil [905 967])
+            ("src/core/ext/filters/client_channel/resolver_registry.h" include nil nil [968 1034])
+            ("src/core/lib/channel/channel_args.h" include nil nil [1035 1081])
+            ("src/core/lib/iomgr/combiner.h" include nil nil [1082 1122])
+            ("src/core/lib/iomgr/resolve_address.h" include nil nil [1123 1170])
+            ("src/core/lib/iomgr/unix_sockets_posix.h" include nil nil [1171 1221])
+            ("src/core/lib/slice/slice_internal.h" include nil nil [1222 1268])
+            ("src/core/lib/slice/slice_string_helpers.h" include nil nil [1269 1321])
+            ("src/core/lib/support/string.h" include nil nil [1322 1362])
+            ("sockaddr_resolver" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("base" variable (:type ("grpc_resolver" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1418 1437])
+                          ("addresses" variable
+                             (:pointer 1
+                              :type ("grpc_lb_addresses" type (:type "class") nil nil))
+                              (reparse-symbol classsubparts) [1485 1514])
+                          ("channel_args" variable
+                             (:pointer 1
+                              :type ("grpc_channel_args" type (:type "class") nil nil))
+                              (reparse-symbol classsubparts) [1539 1571])
+                          ("published" variable (:type "bool") (reparse-symbol classsubparts) [1602 1617])
+                          ("next_completion" variable
+                             (:pointer 1
+                              :type ("grpc_closure" type (:type "class") nil nil))
+                              (reparse-symbol classsubparts) [1662 1692])
+                          ("target_result" variable
+                             (:pointer 2
+                              :type ("grpc_channel_args" type (:type "class") nil nil))
+                              (reparse-symbol classsubparts) [1746 1780]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [1364 1801])
+            ("sockaddr_destroy" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("r" variable
+                       (:pointer 1
+                        :type ("grpc_resolver" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1832 1849]))                  
+                :type "void")
+                nil [1803 1850])
+            ("sockaddr_maybe_finish_next_locked" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("r" variable
+                       (:pointer 1
+                        :type ("sockaddr_resolver" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1898 1919]))                  
+                :type "void")
+                nil [1852 1920])
+            ("sockaddr_shutdown_locked" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("r" variable
+                       (:pointer 1
+                        :type ("grpc_resolver" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1959 1976]))                  
+                :type "void")
+                nil [1922 1977])
+            ("sockaddr_channel_saw_error_locked" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("r" variable
+                       (:pointer 1
+                        :type ("grpc_resolver" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2024 2041]))                  
+                :type "void")
+                nil [1978 2042])
+            ("sockaddr_next_locked" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("r" variable
+                       (:pointer 1
+                        :type ("grpc_resolver" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2076 2093])
+                    ("target_result" variable
+                       (:pointer 2
+                        :type ("grpc_channel_args" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2127 2161])
+                    ("on_complete" variable
+                       (:pointer 1
+                        :type ("grpc_closure" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2195 2221]))                  
+                :type "void")
+                nil [2043 2222])
+            ("sockaddr_resolver_vtable" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :default-value "{
+    sockaddr_destroy, sockaddr_shutdown_locked,
+    sockaddr_channel_saw_error_locked, sockaddr_next_locked}"
+                :type ("grpc_resolver_vtable" type (:type "class") nil nil))
+                nil [2224 2396])
+            ("sockaddr_shutdown_locked" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("resolver" variable
+                       (:pointer 1
+                        :type ("grpc_resolver" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2435 2459]))                  
+                :type "void")
+                nil [2398 2779])
+            ("sockaddr_channel_saw_error_locked" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("resolver" variable
+                       (:pointer 1
+                        :type ("grpc_resolver" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2827 2851]))                  
+                :type "void")
+                nil [2781 2974])
+            ("sockaddr_next_locked" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("resolver" variable
+                       (:pointer 1
+                        :type ("grpc_resolver" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3009 3033])
+                    ("target_result" variable
+                       (:pointer 2
+                        :type ("grpc_channel_args" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3067 3101])
+                    ("on_complete" variable
+                       (:pointer 1
+                        :type ("grpc_closure" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3135 3161]))                  
+                :type "void")
+                nil [2976 3367])
+            ("sockaddr_maybe_finish_next_locked" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("r" variable
+                       (:pointer 1
+                        :type ("sockaddr_resolver" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3415 3436]))                  
+                :type "void")
+                nil [3369 3781])
+            ("sockaddr_destroy" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("gr" variable
+                       (:pointer 1
+                        :type ("grpc_resolver" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3812 3830]))                  
+                :type "void")
+                nil [3783 3987])
+            ("ip_get_default_authority" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("uri" variable
+                       (:pointer 1
+                        :type ("grpc_uri" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4027 4041]))                  
+                :type "char")
+                nil [3989 4134])
+            ("ipv4_get_default_authority" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("factory" variable
+                       (:pointer 1
+                        :type ("grpc_resolver_factory" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4176 4207])
+                    ("uri" variable
+                       (:pointer 1
+                        :type ("grpc_uri" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4248 4262]))                  
+                :type "char")
+                nil [4136 4306])
+            ("ipv6_get_default_authority" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("factory" variable
+                       (:pointer 1
+                        :type ("grpc_resolver_factory" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4348 4379])
+                    ("uri" variable
+                       (:pointer 1
+                        :type ("grpc_uri" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4420 4434]))                  
+                :type "char")
+                nil [4308 4478])
+            ("do_nothing" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("ignored" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4691 4705]))                  
+                :type "void")
+                nil [4668 4708])
+            ("sockaddr_create" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("args" variable
+                       (:pointer 1
+                        :type ("grpc_resolver_args" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4748 4773])
+                    ("parse" variable (:type "bool") (reparse-symbol arg-sub-list) [4812 4920]))                  
+                :type ("grpc_resolver" type (:type "class") nil nil))
+                nil [4710 6338])
+            ("sockaddr_factory_ref" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("factory" variable
+                       (:pointer 1
+                        :type ("grpc_resolver_factory" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6392 6423]))                  
+                :type "void")
+                nil [6359 6426])
+            ("sockaddr_factory_unref" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("factory" variable
+                       (:pointer 1
+                        :type ("grpc_resolver_factory" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6463 6494]))                  
+                :type "void")
+                nil [6428 6497])
+            ("DECL_FACTORY" variable (:constant-flag t) nil [6507 6519])
+            ("ipv4_factory_create_resolver" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("factory" variable
+                       (:pointer 1
+                        :type ("grpc_resolver_factory" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) nil)
+                    ("args" variable
+                       (:pointer 1
+                        :type ("grpc_resolver_args" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) nil))                  
+                :type ("grpc_resolver" type (:type "class") nil nil))
+                nil [7288 7306])
+            ("ipv4_factory_vtable" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :default-value "DECL_FACTORY(ipv4)"
+                :type ("grpc_resolver_factory_vtable" type (:type "class") nil nil))
+                nil [7288 7306])
+            ("ipv4_resolver_factory" variable
+               (:typemodifiers ("static")
+                :default-value "DECL_FACTORY(ipv4)"
+                :type ("grpc_resolver_factory" type (:type "class") nil nil))
+                nil [7288 7307])
+            ("ipv6_factory_create_resolver" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("factory" variable
+                       (:pointer 1
+                        :type ("grpc_resolver_factory" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) nil)
+                    ("args" variable
+                       (:pointer 1
+                        :type ("grpc_resolver_args" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) nil))                  
+                :type ("grpc_resolver" type (:type "class") nil nil))
+                nil [7308 7326])
+            ("ipv6_factory_vtable" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :default-value "DECL_FACTORY(ipv6)"
+                :type ("grpc_resolver_factory_vtable" type (:type "class") nil nil))
+                nil [7308 7326])
+            ("ipv6_resolver_factory" variable
+               (:typemodifiers ("static")
+                :default-value "DECL_FACTORY(ipv6)"
+                :type ("grpc_resolver_factory" type (:type "class") nil nil))
+                nil [7308 7327])
+            ("grpc_resolver_sockaddr_init" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [7362 7367]))                  
+                :type "void")
+                nil [7329 7572])
+            ("grpc_resolver_sockaddr_shutdown" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [7611 7616]))                  
+                :type "void")
+                nil [7574 7619]))          
+      :file "sockaddr_resolver.cc"
+      :pointmax 7620
+      :fsize 7619
+      :lastmodtime '(23085 58366 0 0)
+      :unmatched-syntax '((semantic-list 4822 . 4920))
+      :lexical-table 
+        '(("DECL_FACTORY" (spp-arg-list ("name") 6519 . 6525) . 
+              ((STATIC "static" 6579 . 6585) (symbol "grpc_resolver" 6586 . 6599) (punctuation "*" 6599 . 6600) (spp-symbol-merge ((symbol "name" 6601 . 6605) (symbol "_factory_create_resolver" 6607 . 6631)) 6601 . 6631) (semantic-list "(                     \\
+      grpc_resolver_factory* factory, grpc_resolver_args* args)" 6631 . 6718) (semantic-list "{           \\
+    return sockaddr_create(args, grpc_parse_##name);                        \\
+  }" 6719 . 6814) (STATIC "static" 6891 . 6897) (CONST "const" 6898 . 6903) (symbol "grpc_resolver_factory_vtable" 6904 . 6932) (spp-symbol-merge ((symbol "name" 6933 . 6937) (symbol "_factory_vtable" 6939 . 6954)) 6933 . 6954) (punctuation "=" 6955 . 6956) (semantic-list "{       \\
+      sockaddr_factory_ref, sockaddr_factory_unref,                         \\
+      name##_factory_create_resolver, name##_get_default_authority, #name}" 6957 . 7119) (punctuation ";" 7119 . 7120) (STATIC "static" 7125 . 7131) (symbol "grpc_resolver_factory" 7132 . 7153) (spp-symbol-merge ((symbol "name" 7154 . 7158) (symbol "_resolver_factory" 7160 . 7177)) 7154 . 7177) (punctuation "=" 7178 . 7179) (semantic-list "{                  \\
+      &name##_factory_vtable}" 7180 . 7230)))
+          ("name"nil ;; bogus macro found.
+)
+          )
+))
+  :file "!Volumes!Transcend!grpc!src!core!ext!filters!client_channel!resolver!sockaddr!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

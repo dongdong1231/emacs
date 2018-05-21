@@ -1,0 +1,222 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("dsp/ctr/ctr_predictor.h" include nil nil [73 107])
+            ("math.h" include (:system-flag t) nil [109 126])
+            ("algorithm" include (:system-flag t) nil [128 148])
+            ("common/base/array_size.h" include nil nil [150 185])
+            ("common/base/string/algorithm.h" include nil nil [186 227])
+            ("thirdparty/glog/logging.h" include nil nil [228 264])
+            ("thirdparty/gflags/gflags.h" include nil nil [265 302])
+            ("dsp/ctr/common.h" include nil nil [304 331])
+            ("dsp/ctr/data/index_data.h" include nil nil [332 368])
+            ("dsp/ctr/feature/utility.h" include nil nil [369 405])
+            ("dsp/ctr/lr_model.h" include nil nil [406 435])
+            ("dsp/proto/ctr/ctr_service.pb.h" include nil nil [436 477])
+            ("dsp/proto/publish/publish.pb.h" include nil nil [478 519])
+            ("DEFINE_double" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("pctr_upper_bound" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [535 552]))                  
+                :type "int")
+                nil [521 588])
+            ("DEFINE_double" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("pctr_lower_bound" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [603 620]))                  
+                :type "int")
+                nil [589 656])
+            ("DEFINE_double" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("ee_pctr_value" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [671 685]))                  
+                :type "int")
+                nil [657 722])
+            ("DEFINE_double" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("pctr_exploration_exploitation_ratio" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [737 773]))                  
+                :type "int")
+                nil [723 831])
+            ("DEFINE_int64" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("pctr_exploration_selection_number" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [845 879]))                  
+                :type "int")
+                nil [832 933])
+            ("DEFINE_int64" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("pctr_exploration_impression_threshold" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [947 985]))                  
+                :type "int")
+                nil [934 1043])
+            ("yd" type
+               (:members 
+                  ( ("ctr" type
+                       (:members 
+                          ( ("random_" function
+                               (:prototype-flag t
+                                :parent "CtrPredictor"
+                                :type ("ThreadLocalValue" type
+                                     (:template-specifier 
+                                        ( ("PseudoRandom" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol namespacesubparts) [1077 1133])
+                            ("unnamed" type
+                               (:members 
+                                  ( ("kFeatureGroups" function
+                                       (:prototype-flag t
+                                        :constant-flag t
+                                        :arguments 
+                                          ( ("" variable (:type ("kFeaturesForCreativeSelection" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1199 1229])
+                                            ("" variable (:type ("kFeaturesForCreativeSelection" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1234 1265])
+                                            ("" variable (:type ("ARRAY_SIZE" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1266 1307]))                                          
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("std::string" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol namespacesubparts) [1148 1309])
+                                    ("kDefaultAdGroup" variable
+                                       (:typemodifiers ("static")
+                                        :constant-flag t
+                                        :type ("publish::AdGroup" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [1311 1357]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [1135 1360])
+                            ("CtrPredictor" function
+                               (:constructor-flag t
+                                :parent "CtrPredictor"
+                                :arguments 
+                                  ( ("index_data" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("IndexData" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1403 1431])
+                                    ("experiment" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("experiment::Experiment" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1459 1500])
+                                    ("ctr_exponent" variable
+                                       (:constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [1528 1554])
+                                    ("stat_model_impression_threshold" variable
+                                       (:constant-flag t
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1582 1629])
+                                    ("model_combination_factor" variable
+                                       (:constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [1657 1695])
+                                    ("model" variable
+                                       (:pointer 1
+                                        :type ("LrModel" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1723 1738])
+                                    ("stat_model" variable
+                                       (:pointer 1
+                                        :type ("LrModel" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1766 1786])
+                                    ("ee_model" variable
+                                       (:pointer 1
+                                        :type ("LrModel" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1814 1832])
+                                    ("creative_model" variable
+                                       (:pointer 1
+                                        :type ("LrModel" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1860 1884]))                                  
+                                :type ("CtrPredictor" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [1376 2490])
+                            ("Init" function
+                               (:parent "CtrPredictor"
+                                :arguments 
+                                  ( ("request" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("CtrRequest" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2516 2542]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [2492 4193])
+                            ("PredictCtr" function
+                               (:parent "CtrPredictor"
+                                :arguments 
+                                  ( ("response" variable
+                                       (:pointer 1
+                                        :type ("CtrResponse" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4225 4247]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [4195 10032])
+                            ("GenerateDebugInfo" function
+                               (:methodconst-flag t
+                                :parent "CtrPredictor"
+                                :arguments 
+                                  ( ("ad_context" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("AdContext" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [10071 10099])
+                                    ("features" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("std::string" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [10137 10178])
+                                    ("debug_info" variable
+                                       (:pointer 1
+                                        :type ("PredictionDebugInfo" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [10216 10248]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [10034 11338])
+                            ("SplitFeature" function
+                               (:methodconst-flag t
+                                :parent "CtrPredictor"
+                                :arguments 
+                                  ( ("feature" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [11372 11399])
+                                    ("group_id" variable
+                                       (:pointer 1
+                                        :type ("uint32_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [11432 11451])
+                                    ("feature_name" variable
+                                       (:pointer 1
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [11484 11510]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [11340 11697]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1060 11700]))                  
+                :type "namespace")
+                nil [1045 11720]))          
+      :file "ctr_predictor.cc"
+      :pointmax 11738
+      :fsize 11879
+      :lastmodtime '(23012 3556 0 0)
+      :unmatched-syntax '((semantic-list 1276 . 1307) (punctuation 1264 . 1265) (number 1130 . 1131) (string 1002 . 1041) (number 986 . 987) (string 896 . 931) (number 880 . 881) (string 792 . 829) (number 775 . 776) (punctuation 774 . 775) (string 693 . 720) (number 686 . 691) (string 624 . 654) (number 621 . 622) (string 556 . 586) (number 553 . 554)))
+    (semanticdb-table "semanticdb-table"
+      :file "ctr_predictor.h"
+      :fsize 2508
+      :lastmodtime '(23012 3556 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "common.h"
+      :fsize 1012
+      :lastmodtime '(23012 3556 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "lr_model.h"
+      :fsize 3114
+      :lastmodtime '(23012 3556 0 0)))
+  :file "!Volumes!Transcend!trunk!dsp!ctr!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

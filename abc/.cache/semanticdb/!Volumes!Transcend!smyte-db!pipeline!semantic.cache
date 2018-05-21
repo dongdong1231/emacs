@@ -1,0 +1,679 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("PIPELINE_REDISHANDLER_H_" variable (:constant-flag t) nil [42 66])
+            ("atomic" include (:system-flag t) nil [68 85])
+            ("chrono" include (:system-flag t) nil [86 103])
+            ("memory" include (:system-flag t) nil [104 121])
+            ("mutex" include (:system-flag t) nil [122 138])
+            ("sstream" include (:system-flag t) nil [139 157])
+            ("unordered_map" include (:system-flag t) nil [158 182])
+            ("string" include (:system-flag t) nil [183 200])
+            ("utility" include (:system-flag t) nil [201 219])
+            ("vector" include (:system-flag t) nil [220 237])
+            ("codec/RedisMessage.h" include nil nil [239 270])
+            ("folly/Conv.h" include nil nil [271 294])
+            ("folly/SocketAddress.h" include nil nil [295 327])
+            ("glog/logging.h" include nil nil [328 353])
+            ("infra/kafka/ConsumerHelper.h" include nil nil [354 393])
+            ("rocksdb/db.h" include nil nil [394 417])
+            ("rocksdb/statistics.h" include nil nil [418 449])
+            ("pipeline/DatabaseManager.h" include nil nil [450 487])
+            ("wangle/channel/Handler.h" include nil nil [488 523])
+            ("pipeline" type
+               (:members 
+                  ( ("RedisHandler" type
+                       (:superclasses 
+                          ( ("wangle::HandlerAdapter" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [622 629])
+                            ("errorInvalidInteger" function
+                               (:typemodifiers ("static")
+                                :type ("codec::RedisValue" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [790 933])
+                            ("errorSyntaxError" function
+                               (:typemodifiers ("static")
+                                :type ("codec::RedisValue" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [936 1049])
+                            ("errorNotRedisArray" function
+                               (:typemodifiers ("static")
+                                :type ("codec::RedisValue" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1052 1187])
+                            ("internalServerError" function
+                               (:typemodifiers ("static")
+                                :type ("codec::RedisValue" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1190 1315])
+                            ("simpleStringOk" function
+                               (:typemodifiers ("static")
+                                :type ("codec::RedisValue" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1318 1426])
+                            ("parseInt" function
+                               (:typemodifiers ("static")
+                                :arguments 
+                                  ( ("value" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1451 1476])
+                                    ("intValue" variable
+                                       (:pointer 1
+                                        :type ("int64_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1477 1495]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [1430 1641])
+                            ("nowMs" function
+                               (:typemodifiers ("static")
+                                :type ("int64_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1645 1809])
+                            ("connectionOpened" function
+                               (:typemodifiers ("static")
+                                :type "void")
+                                (reparse-symbol classsubparts) [1813 1867])
+                            ("connectionClosed" function
+                               (:typemodifiers ("static")
+                                :type "void")
+                                (reparse-symbol classsubparts) [1870 1924])
+                            ("getConnectionCount" function
+                               (:typemodifiers ("static")
+                                :type ("size_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1927 1990])
+                            ("RedisHandler" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("databaseManager" variable (:type ("std::shared_ptr" type
+                                         (:template-specifier 
+                                            ( ("DatabaseManager" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol arg-sub-list) [2073 2122])
+                                    ("consumerHelper" variable (:type ("std::shared_ptr" type
+                                         (:template-specifier 
+                                            ( ("infra::kafka::ConsumerHelper" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol arg-sub-list) [2138 2199]))                                  
+                                :type ("RedisHandler" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2060 2277])
+                            ("RedisHandler" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("databaseManager" variable (:type ("std::shared_ptr" type
+                                         (:template-specifier 
+                                            ( ("DatabaseManager" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol arg-sub-list) [2303 2352]))                                  
+                                :type ("RedisHandler" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2290 2402])
+                            ("RedisHandler" function
+                               (:destructor-flag t
+                                :typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [2406 2432])
+                            ("override" variable (:type "int") (reparse-symbol classsubparts) [2485 2494])
+                            ("handleCommand" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("key" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3424 3436])
+                                    ("cmdNameLower" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3437 3469])
+                                    ("cmd" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("std::string" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [3470 3506])
+                                    ("ctx" variable
+                                       (:pointer 1
+                                        :type ("Context" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3536 3549]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [3397 4022])
+                            ("allowAsyncCommandHandler" function
+                               (:methodconst-flag t
+                                :typemodifiers ("virtual")
+                                :type "bool")
+                                (reparse-symbol classsubparts) [4309 4378])
+                            ("protected" label nil (reparse-symbol classsubparts) [4381 4391])
+                            ("RedisValue" function
+                               (:parent "codec"
+                                :arguments 
+                                  ( ("" variable (:type ("RedisHandler" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4440 4453]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [4421 4507])
+                            ("CommandHandler" type
+                               (:template 
+                                  ( ("FuncType" type (:type "class") nil nil))                                  
+                                :type "struct"
+                                :members 
+                                  ( ("handlerFunc" variable
+                                       (:default-value "nullptr"
+                                        :type ("FuncType" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [4570 4601])
+                                    ("minArgs" variable
+                                       (:default-value "0"
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [4606 4622])
+                                    ("maxArgs" variable
+                                       (:default-value "0"
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [4627 4643])
+                                    ("CommandHandler" function
+                                       (:constructor-flag t
+                                        :arguments 
+                                          ( ("_handlerFunc" variable (:type ("FuncType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4663 4685])
+                                            ("_minArgs" variable (:type "int") (reparse-symbol arg-sub-list) [4686 4699])
+                                            ("_maxArgs" variable (:type "int") (reparse-symbol arg-sub-list) [4700 4713]))                                          
+                                        :type ("CommandHandler" type (:type "struct") nil nil))
+                                        (reparse-symbol classsubparts) [4648 4790]))                                  )
+                                (reparse-symbol classsubparts) [4511 4795])
+                            ("std::unordered_map" variable (:type "int") (reparse-symbol classsubparts) [4878 4950])
+                            ("GenericCommandHandlerTable" variable (:type "int") (reparse-symbol classsubparts) [5019 5066])
+                            ("kWrongNumArgsTemplate" variable
+                               (:dereference 1
+                                :default-value "\"Wrong number of arguments for '{}' command\""
+                                :type "char")
+                                (reparse-symbol classsubparts) [5087 5163])
+                            ("mergeWithDefaultCommandHandlerTable" function
+                               (:typemodifiers ("static")
+                                :arguments 
+                                  ( ("newTable" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("CommandHandlerTable" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5300 5336]))                                  
+                                :type ("CommandHandlerTable" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [5237 6288])
+                            ("getPeerAddressPortStr" function
+                               (:typemodifiers ("static")
+                                :arguments 
+                                  ( ("ctx" variable
+                                       (:pointer 1
+                                        :type ("Context" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [6333 6346]))                                  
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [6292 6554])
+                            ("verifyCommandHandler" function
+                               (:template 
+                                  ( ("CommandHandlerFuncType" type (:type "class") nil nil))                                  
+                                :type "bool"
+                                :arguments 
+                                  ( ("key" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6708 6720])
+                                    ("cmdNameLower" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [6721 6753])
+                                    ("cmd" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("std::string" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [6754 6790])
+                                    ("commandHandler" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("CommandHandler" type
+                                             (:template-specifier 
+                                                ( ("CommandHandlerFuncType" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [6819 6880])
+                                    ("ctx" variable
+                                       (:pointer 1
+                                        :type ("Context" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [6881 6894]))                                  )
+                                (reparse-symbol classsubparts) [6637 7107])
+                            ("processCommandHandlerResult" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("key" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7216 7228])
+                                    ("" variable
+                                       (:reference 1
+                                        :type ("codec::RedisValue" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [7229 7248])
+                                    ("" variable (:type ("result" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7249 7256])
+                                    ("ctx" variable
+                                       (:pointer 1
+                                        :type ("Context" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [7257 7270]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [7175 7625])
+                            ("getCommandHandlerTable" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :methodconst-flag t
+                                :typemodifiers ("virtual")
+                                :constant-flag t
+                                :type ("CommandHandlerTable" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [7725 7795])
+                            ("db" function
+                               (:methodconst-flag t
+                                :pointer 1
+                                :type ("rocksdb::DB" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [7799 7857])
+                            ("databaseManager" function
+                               (:methodconst-flag t
+                                :type ("std::shared_ptr" type
+                                     (:template-specifier 
+                                        ( ("DatabaseManager" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [7860 7945])
+                            ("errorResp" function
+                               (:arguments 
+                                  ( ("" variable
+                                       (:reference 1
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [7977 7990])
+                                    ("" variable (:type ("msg" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7991 7995]))                                  
+                                :type ("codec::RedisValue" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [7949 8131])
+                            ("writeError" function
+                               (:arguments 
+                                  ( ("key" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8151 8163])
+                                    ("" variable
+                                       (:reference 1
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [8164 8177])
+                                    ("" variable (:type ("msg" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8178 8182])
+                                    ("ctx" variable
+                                       (:pointer 1
+                                        :type ("Context" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [8183 8196]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [8135 8346])
+                            ("appendToInfoOutput" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("ss" variable
+                                       (:pointer 1
+                                        :type ("std::stringstream" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [8444 8466]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [8412 8467])
+                            ("validateArgCount" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("cmd" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("std::string" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [8652 8688])
+                                    ("minArgs" variable (:type "int") (reparse-symbol arg-sub-list) [8689 8701])
+                                    ("maxArgs" variable (:type "int") (reparse-symbol arg-sub-list) [8702 8714]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [8630 8715])
+                            ("private" label nil (reparse-symbol classsubparts) [8718 8726])
+                            ("monitors_" variable
+                               (:typemodifiers ("static")
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("Context" type (:pointer 1) nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [8729 8768])
+                            ("monitorMutex_" variable
+                               (:typemodifiers ("static")
+                                :type ("std::mutex" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [8771 8803])
+                            ("connectionCount_" variable
+                               (:typemodifiers ("static")
+                                :type ("std::atomic" type
+                                     (:template-specifier 
+                                        ( ("size_t" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [8806 8850])
+                            ("compactCommand" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("cmd" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("std::string" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [8887 8923])
+                                    ("ctx" variable
+                                       (:pointer 1
+                                        :type ("Context" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [8924 8937]))                                  
+                                :type ("codec::RedisValue" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [8854 8938])
+                            ("freezeCommand" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("cmd" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("std::string" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [8973 9009])
+                                    ("ctx" variable
+                                       (:pointer 1
+                                        :type ("Context" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [9010 9023]))                                  
+                                :type ("codec::RedisValue" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [8941 9024])
+                            ("getMetaCommand" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("cmd" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("std::string" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [9060 9096])
+                                    ("ctx" variable
+                                       (:pointer 1
+                                        :type ("Context" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [9097 9110]))                                  
+                                :type ("codec::RedisValue" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [9027 9111])
+                            ("infoCommand" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("cmd" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("std::string" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [9144 9180])
+                                    ("ctx" variable
+                                       (:pointer 1
+                                        :type ("Context" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [9181 9194]))                                  
+                                :type ("codec::RedisValue" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [9114 9195])
+                            ("monitorCommand" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("cmd" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("std::string" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [9231 9267])
+                                    ("ctx" variable
+                                       (:pointer 1
+                                        :type ("Context" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [9268 9281]))                                  
+                                :type ("codec::RedisValue" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [9198 9282])
+                            ("pingCommand" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("cmd" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("std::string" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [9315 9351])
+                                    ("ctx" variable
+                                       (:pointer 1
+                                        :type ("Context" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [9352 9365]))                                  
+                                :type ("codec::RedisValue" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [9285 9366])
+                            ("readyCommand" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("cmd" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("std::string" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [9400 9436])
+                                    ("ctx" variable
+                                       (:pointer 1
+                                        :type ("Context" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [9437 9450]))                                  
+                                :type ("codec::RedisValue" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [9369 9451])
+                            ("setReadyCommand" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("cmd" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("std::string" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [9488 9524])
+                                    ("ctx" variable
+                                       (:pointer 1
+                                        :type ("Context" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [9525 9538]))                                  
+                                :type ("codec::RedisValue" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [9454 9539])
+                            ("selectCommand" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("cmd" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("std::string" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [9574 9610])
+                                    ("ctx" variable
+                                       (:pointer 1
+                                        :type ("Context" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [9611 9624]))                                  
+                                :type ("codec::RedisValue" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [9542 9625])
+                            ("setMetaCommand" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("cmd" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("std::string" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [9661 9697])
+                                    ("ctx" variable
+                                       (:pointer 1
+                                        :type ("Context" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [9698 9711]))                                  
+                                :type ("codec::RedisValue" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [9628 9712])
+                            ("sleepCommand" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("cmd" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("std::string" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [9746 9782])
+                                    ("ctx" variable
+                                       (:pointer 1
+                                        :type ("Context" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [9783 9796]))                                  
+                                :type ("codec::RedisValue" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [9715 9797])
+                            ("thawCommand" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("cmd" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("std::string" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [9830 9866])
+                                    ("ctx" variable
+                                       (:pointer 1
+                                        :type ("Context" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [9867 9880]))                                  
+                                :type ("codec::RedisValue" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [9800 9881])
+                            ("waitForCommitCommand" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("cmd" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("std::string" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [9923 9959])
+                                    ("ctx" variable
+                                       (:pointer 1
+                                        :type ("Context" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [9960 9973]))                                  
+                                :type ("codec::RedisValue" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [9884 9974])
+                            ("broadcastCmd" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("cmd" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("std::string" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [9996 10032])
+                                    ("ctx" variable
+                                       (:pointer 1
+                                        :type ("Context" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [10033 10046]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [9978 10047])
+                            ("outputStatistics" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("name" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [10072 10096])
+                                    ("histData" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("rocksdb::HistogramData" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [10097 10136])
+                                    ("ss" variable
+                                       (:pointer 1
+                                        :type ("std::stringstream" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [10137 10159]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [10050 10160])
+                            ("removeMonitor" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("ctx" variable
+                                       (:pointer 1
+                                        :type ("Context" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [10182 10195]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [10163 10196])
+                            ("writeToMonitorContext" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("cmd" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("std::string" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [10226 10262])
+                                    ("monitorAddr" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [10263 10294])
+                                    ("ctx" variable
+                                       (:pointer 1
+                                        :type ("Context" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [10295 10308]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [10199 10309])
+                            ("databaseManager_" variable (:type ("std::shared_ptr" type
+                                 (:template-specifier 
+                                    ( ("DatabaseManager" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [10313 10363])
+                            ("consumerHelper_" variable (:type ("std::shared_ptr" type
+                                 (:template-specifier 
+                                    ( ("infra::kafka::ConsumerHelper" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [10366 10428]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [547 10431]))                  
+                :type "namespace")
+                nil [525 10434]))          
+      :file "RedisHandler.h"
+      :pointmax 10495
+      :fsize 10494
+      :lastmodtime '(23241 35544 0 0)
+      :unmatched-syntax '((punctuation 8176 . 8177) (punctuation 7989 . 7990) (punctuation 7247 . 7248) (symbol 5077 . 5086) (STATIC 5070 . 5076) (punctuation 5017 . 5018) (symbol 4997 . 5016) (USING 4991 . 4996) (punctuation 4876 . 4877) (symbol 4849 . 4875) (USING 4843 . 4848) (punctuation 4839 . 4840) (symbol 4817 . 4839) (TYPENAME 4808 . 4816) (punctuation 4807 . 4808) (TEMPLATE 4798 . 4806) (punctuation 4507 . 4508) (punctuation 4454 . 4455) (punctuation 4453 . 4454) (punctuation 4452 . 4453) (punctuation 4419 . 4420) (symbol 4400 . 4418) (USING 4394 . 4399) (semantic-list 2697 . 2984) (symbol 2688 . 2696) (semantic-list 2673 . 2687) (symbol 2668 . 2673) (punctuation 2666 . 2667) (symbol 2662 . 2666) (punctuation 2661 . 2662) (punctuation 2660 . 2661) (symbol 2655 . 2660) (punctuation 2654 . 2655) (symbol 2648 . 2654) (punctuation 2647 . 2648) (punctuation 2646 . 2647) (symbol 2641 . 2646) (semantic-list 2622 . 2637) (symbol 2613 . 2621) (semantic-list 2570 . 2612) (symbol 2557 . 2570) (VOID 2552 . 2556) (semantic-list 2534 . 2549) (symbol 2525 . 2533) (semantic-list 2510 . 2524) (symbol 2503 . 2510) (VOID 2498 . 2502) (semantic-list 2445 . 2484) (symbol 2441 . 2445) (VOID 2436 . 2440) (EXPLICIT 2281 . 2289))
+      :lexical-table 
+        '(("PIPELINE_REDISHANDLER_H_")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :file "DatabaseManager.h"
+      :fsize 4858
+      :lastmodtime '(23241 35544 0 0)))
+  :file "!Volumes!Transcend!smyte-db!pipeline!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

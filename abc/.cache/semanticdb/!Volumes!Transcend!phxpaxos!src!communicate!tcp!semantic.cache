@@ -1,0 +1,1981 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("event_loop.h" include nil nil [758 781])
+            ("tcp_acceptor.h" include nil nil [782 807])
+            ("tcp_client.h" include nil nil [808 831])
+            ("utils_include.h" include nil nil [832 858])
+            ("phxpaxos" type
+               (:members 
+                  ( ("TcpRead" type
+                       (:superclasses 
+                          ( ("Thread" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [914 921])
+                            ("TcpRead" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("poNetWork" variable
+                                       (:pointer 1
+                                        :type ("NetWork" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [934 954]))                                  
+                                :type ("TcpRead" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [926 955])
+                            ("TcpRead" function
+                               (:prototype-flag t
+                                :destructor-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [960 971])
+                            ("Init" function
+                               (:prototype-flag t
+                                :type "int")
+                                (reparse-symbol classsubparts) [977 988])
+                            ("run" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [994 1005])
+                            ("Stop" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [1011 1023])
+                            ("GetEventLoop" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :type ("EventLoop" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1029 1056])
+                            ("private" label nil (reparse-symbol classsubparts) [1058 1066])
+                            ("m_oEventLoop" variable (:type ("EventLoop" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1071 1094]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [882 1097])
+                    ("TcpWrite" type
+                       (:superclasses 
+                          ( ("Thread" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [1179 1186])
+                            ("TcpWrite" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("poNetWork" variable
+                                       (:pointer 1
+                                        :type ("NetWork" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1200 1220]))                                  
+                                :type ("TcpWrite" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1191 1221])
+                            ("TcpWrite" function
+                               (:prototype-flag t
+                                :destructor-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [1226 1238])
+                            ("Init" function
+                               (:prototype-flag t
+                                :type "int")
+                                (reparse-symbol classsubparts) [1244 1255])
+                            ("run" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [1261 1272])
+                            ("Stop" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [1278 1290])
+                            ("AddMessage" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("sIP" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1311 1335])
+                                    ("iPort" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1336 1352])
+                                    ("sMessage" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1353 1382]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [1296 1383])
+                            ("private" label nil (reparse-symbol classsubparts) [1385 1393])
+                            ("m_oTcpClient" variable (:type ("TcpClient" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1398 1421])
+                            ("m_oEventLoop" variable (:type ("EventLoop" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1426 1449]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [1146 1452])
+                    ("TcpIOThread" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [1475 1482])
+                            ("TcpIOThread" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("poNetWork" variable
+                                       (:pointer 1
+                                        :type ("NetWork" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1499 1519]))                                  
+                                :type ("TcpIOThread" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1487 1520])
+                            ("TcpIOThread" function
+                               (:prototype-flag t
+                                :destructor-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [1525 1540])
+                            ("Init" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("sListenIp" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1555 1585])
+                                    ("iListenPort" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1586 1608])
+                                    ("iIOThreadCount" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1609 1634]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [1546 1635])
+                            ("Start" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [1641 1654])
+                            ("Stop" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [1660 1672])
+                            ("AddMessage" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("iGroupIdx" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1693 1713])
+                                    ("sIP" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1714 1738])
+                                    ("iPort" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1739 1755])
+                                    ("sMessage" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1756 1785]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [1678 1786])
+                            ("private" label nil (reparse-symbol classsubparts) [1788 1796])
+                            ("m_poNetWork" variable
+                               (:pointer 1
+                                :type ("NetWork" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1801 1823])
+                            ("m_oTcpAcceptor" variable (:type ("TcpAcceptor" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1828 1855])
+                            ("m_vecTcpRead" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("TcpRead" type (:pointer 1) nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [1860 1896])
+                            ("m_vecTcpWrite" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("TcpWrite" type (:pointer 1) nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [1901 1939])
+                            ("m_bIsStarted" variable (:type "bool") (reparse-symbol classsubparts) [1944 1962]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [1454 1965]))                  
+                :type "namespace")
+                nil [860 1972]))          
+      :file "tcp.h"
+      :pointmax 1973
+      :fsize 1972
+      :lastmodtime '(23072 47985 0 0)
+      :unmatched-syntax '((symbol 752 . 756) (symbol 745 . 751) (punctuation 744 . 745)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("map" include (:system-flag t) nil [749 763])
+            ("sys/epoll.h" include (:system-flag t) nil [764 786])
+            ("timer.h" include nil nil [787 805])
+            ("notify.h" include nil nil [806 825])
+            ("phxpaxos" type
+               (:members 
+                  ( ("MAX_EVENTS" variable (:constant-flag t) (reparse-symbol namespacesubparts) [857 867])
+                    ("Event" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [874 886])
+                    ("TcpAcceptor" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [887 905])
+                    ("TcpClient" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [906 922])
+                    ("MessageEvent" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [923 942])
+                    ("NetWork" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [943 957])
+                    ("EventLoop" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [977 984])
+                            ("EventLoop" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("poNetWork" variable
+                                       (:pointer 1
+                                        :type ("NetWork" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [999 1019]))                                  
+                                :type ("EventLoop" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [989 1020])
+                            ("EventLoop" function
+                               (:prototype-flag t
+                                :destructor-flag t
+                                :typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [1025 1046])
+                            ("Init" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("iEpollLength" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1061 1084]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [1052 1085])
+                            ("ModEvent" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("poEvent" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("Event" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1105 1127])
+                                    ("iEvents" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1128 1146]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1091 1147])
+                            ("RemoveEvent" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("poEvent" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("Event" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1170 1192]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1153 1193])
+                            ("StartLoop" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [1199 1216])
+                            ("Stop" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [1222 1234])
+                            ("OnError" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("iEvents" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1253 1271])
+                                    ("poEvent" variable
+                                       (:pointer 1
+                                        :type ("Event" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1272 1288]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1240 1289])
+                            ("OneLoop" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("iTimeoutMs" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1316 1337]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1295 1338])
+                            ("public" label nil (reparse-symbol classsubparts) [1340 1347])
+                            ("SetTcpClient" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("poTcpClient" variable
+                                       (:pointer 1
+                                        :type ("TcpClient" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1370 1394]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1352 1395])
+                            ("JumpoutEpollWait" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [1401 1425])
+                            ("public" label nil (reparse-symbol classsubparts) [1427 1434])
+                            ("AddTimer" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("poEvent" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("Event" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1453 1475])
+                                    ("iTimeout" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1476 1495])
+                                    ("iType" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1496 1512])
+                                    ("iTimerID" variable
+                                       (:reference 1
+                                        :type ("uint32_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1513 1533]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [1439 1534])
+                            ("RemoveTimer" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("iTimerID" variable
+                                       (:constant-flag t
+                                        :type ("uint32_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1557 1581]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1540 1582])
+                            ("DealwithTimeout" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("iNextTimeout" variable
+                                       (:reference 1
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1609 1628]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1588 1629])
+                            ("DealwithTimeoutOne" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("iTimerID" variable
+                                       (:constant-flag t
+                                        :type ("uint32_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1659 1683])
+                                    ("iType" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1684 1700]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1635 1701])
+                            ("public" label nil (reparse-symbol classsubparts) [1703 1710])
+                            ("AddEvent" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("iFD" variable (:type "int") (reparse-symbol arg-sub-list) [1729 1737])
+                                    ("oAddr" variable (:type ("SocketAddress" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1738 1758]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1715 1759])
+                            ("CreateEvent" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [1765 1784])
+                            ("ClearEvent" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [1790 1808])
+                            ("GetActiveEventCount" function
+                               (:prototype-flag t
+                                :type "int")
+                                (reparse-symbol classsubparts) [1814 1840])
+                            ("public" label nil (reparse-symbol classsubparts) [1842 1849])
+                            ("EventCtx" type
+                               (:members 
+                                  ( ("m_poEvent" variable
+                                       (:pointer 1
+                                        :type ("Event" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1892 1910])
+                                    ("m_iEvents" variable (:type "int") (reparse-symbol classsubparts) [1919 1933]))                                  
+                                :type "struct")
+                                (reparse-symbol classsubparts) [1854 1951])
+                            ("EventCtx_t" type
+                               (:typedef ("EventCtx" type (:type "struct") nil nil)
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [1854 1951])
+                            ("private" label nil (reparse-symbol classsubparts) [1953 1961])
+                            ("m_bIsEnd" variable (:type "bool") (reparse-symbol classsubparts) [1966 1980])
+                            ("protected" label nil (reparse-symbol classsubparts) [1982 1992])
+                            ("m_iEpollFd" variable (:type "int") (reparse-symbol classsubparts) [1997 2012])
+                            ("m_EpollEvents" variable
+                               (:dereference 1
+                                :type ("epoll_event" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2017 2055])
+                            ("m_mapEvent" variable (:type ("std::map" type
+                                 (:template-specifier 
+                                    ( ("int" type nil nil nil)
+                                      ("EventCtx_t" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [2060 2097])
+                            ("m_poNetWork" variable
+                               (:pointer 1
+                                :type ("NetWork" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2102 2124])
+                            ("m_poTcpClient" variable
+                               (:pointer 1
+                                :type ("TcpClient" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2129 2155])
+                            ("m_poNotify" variable
+                               (:pointer 1
+                                :type ("Notify" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2160 2180])
+                            ("protected" label nil (reparse-symbol classsubparts) [2182 2192])
+                            ("m_oTimer" variable (:type ("Timer" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2197 2212])
+                            ("m_mapTimerID2FD" variable (:type ("std::map" type
+                                 (:template-specifier 
+                                    ( ("uint32_t" type nil nil nil)
+                                      ("int" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [2217 2257])
+                            ("m_oFDQueue" variable (:type ("std::queue" type
+                                 (:template-specifier 
+                                    ( ("std::pair" type (:template-specifier 
+                                        ( ("int" type nil nil nil)
+                                          ("SocketAddress" type nil nil nil))                                        ) nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [2263 2317])
+                            ("m_oMutex" variable (:type ("std::mutex" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2322 2342])
+                            ("m_vecCreatedEvent" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("MessageEvent" type (:pointer 1) nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [2347 2393]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [959 2396]))                  
+                :type "namespace")
+                nil [827 2399]))          
+      :file "event_loop.h"
+      :pointmax 2400
+      :fsize 2399
+      :lastmodtime '(23253 43851 0 0)
+      :unmatched-syntax '((symbol 743 . 747) (symbol 736 . 742) (punctuation 735 . 736) (symbol 743 . 747) (symbol 736 . 742) (punctuation 735 . 736) (symbol 752 . 756) (symbol 745 . 751) (punctuation 744 . 745))
+      :lexical-table 
+        '(("MAX_EVENTS" . ((number "1024" 868 . 872)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("vector" include (:system-flag t) nil [749 766])
+            ("mutex" include (:system-flag t) nil [767 783])
+            ("utils_include.h" include nil nil [784 810])
+            ("message_event.h" include nil nil [811 837])
+            ("phxpaxos" type
+               (:members 
+                  ( ("EventLoop" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [861 877])
+                    ("NetWork" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [878 892])
+                    ("TcpAcceptor" type
+                       (:superclasses 
+                          ( ("Thread" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [930 937])
+                            ("TcpAcceptor" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :type ("TcpAcceptor" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [942 956])
+                            ("TcpAcceptor" function
+                               (:prototype-flag t
+                                :destructor-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [961 976])
+                            ("Listen" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("sListenIP" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [994 1024])
+                                    ("iListenPort" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1025 1047]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [982 1048])
+                            ("run" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [1054 1065])
+                            ("Stop" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [1071 1083])
+                            ("AddEventLoop" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("poEventLoop" variable
+                                       (:pointer 1
+                                        :type ("EventLoop" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1107 1131]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1089 1132])
+                            ("AddEvent" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("iFD" variable (:type "int") (reparse-symbol arg-sub-list) [1152 1160])
+                                    ("oAddr" variable (:type ("SocketAddress" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1161 1181]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1138 1182])
+                            ("private" label nil (reparse-symbol classsubparts) [1184 1192])
+                            ("m_oSocket" variable (:type ("ServerSocket" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1197 1220])
+                            ("m_vecEventLoop" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("EventLoop" type (:pointer 1) nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [1225 1265])
+                            ("private" label nil (reparse-symbol classsubparts) [1267 1275])
+                            ("m_bIsEnd" variable (:type "bool") (reparse-symbol classsubparts) [1280 1294])
+                            ("m_bIsStarted" variable (:type "bool") (reparse-symbol classsubparts) [1299 1317]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [894 1320]))                  
+                :type "namespace")
+                nil [839 1323]))          
+      :file "tcp_acceptor.h"
+      :pointmax 1324
+      :fsize 1323
+      :lastmodtime '(23253 48659 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("string" include (:system-flag t) nil [758 775])
+            ("map" include (:system-flag t) nil [776 790])
+            ("mutex" include (:system-flag t) nil [791 807])
+            ("message_event.h" include nil nil [808 834])
+            ("utils_include.h" include nil nil [835 861])
+            ("phxpaxos" type
+               (:members 
+                  ( ("EventLoop" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [885 901])
+                    ("NetWork" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [902 916])
+                    ("TcpClient" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [936 943])
+                            ("TcpClient" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("poEventLoop" variable
+                                       (:pointer 1
+                                        :type ("EventLoop" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [971 995])
+                                    ("poNetWork" variable
+                                       (:pointer 1
+                                        :type ("NetWork" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1008 1028]))                                  
+                                :type ("TcpClient" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [948 1029])
+                            ("TcpClient" function
+                               (:prototype-flag t
+                                :destructor-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [1034 1047])
+                            ("AddMessage" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("sIP" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1068 1092])
+                                    ("iPort" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1093 1109])
+                                    ("sMessage" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1110 1139]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [1053 1140])
+                            ("DealWithWrite" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [1146 1167])
+                            ("private" label nil (reparse-symbol classsubparts) [1169 1177])
+                            ("GetEvent" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :arguments 
+                                  ( ("sIP" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1206 1230])
+                                    ("iPort" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1231 1247]))                                  
+                                :type ("MessageEvent" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1182 1248])
+                            ("CreateEvent" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :arguments 
+                                  ( ("llNodeID" variable
+                                       (:constant-flag t
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1285 1309])
+                                    ("sIP" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1310 1334])
+                                    ("iPort" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1335 1351]))                                  
+                                :type ("MessageEvent" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1258 1352])
+                            ("private" label nil (reparse-symbol classsubparts) [1354 1362])
+                            ("m_poEventLoop" variable
+                               (:pointer 1
+                                :type ("EventLoop" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1367 1393])
+                            ("m_poNetWork" variable
+                               (:pointer 1
+                                :type ("NetWork" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1398 1420])
+                            ("private" label nil (reparse-symbol classsubparts) [1422 1430])
+                            ("m_mapEvent" variable (:type ("std::map" type
+                                 (:template-specifier 
+                                    ( ("uint64_t" type nil nil nil)
+                                      ("MessageEvent" type (:pointer 1) nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [1435 1481])
+                            ("m_vecEvent" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("MessageEvent" type (:pointer 1) nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [1486 1525])
+                            ("m_oMutex" variable (:type ("std::mutex" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1530 1550]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [918 1558]))                  
+                :type "namespace")
+                nil [863 1565]))          
+      :file "tcp_client.h"
+      :pointmax 1566
+      :fsize 1565
+      :lastmodtime '(23072 47985 0 0)
+      :unmatched-syntax '((symbol 752 . 756) (symbol 745 . 751) (punctuation 744 . 745)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("tcp.h" include nil nil [744 760])
+            ("phxpaxos/network.h" include nil nil [761 790])
+            ("phxpaxos" type
+               (:members 
+                  ( ("TcpRead" function
+                       (:constructor-flag t
+                        :parent "TcpRead"
+                        :arguments 
+                          ( ("poNetWork" variable
+                               (:pointer 1
+                                :type ("NetWork" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [833 853]))                          
+                        :type ("TcpRead" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [814 887])
+                    ("TcpRead" function
+                       (:destructor-flag t
+                        :parent "TcpRead"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [889 914])
+                    ("Init" function
+                       (:parent "TcpRead"
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [916 978])
+                    ("run" function
+                       (:parent "TcpRead"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [980 1035])
+                    ("Stop" function
+                       (:parent "TcpRead"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1037 1136])
+                    ("GetEventLoop" function
+                       (:pointer 1
+                        :parent "TcpRead"
+                        :type ("EventLoop" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [1138 1205])
+                    ("TcpWrite" function
+                       (:constructor-flag t
+                        :parent "TcpWrite"
+                        :arguments 
+                          ( ("poNetWork" variable
+                               (:pointer 1
+                                :type ("NetWork" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1286 1306]))                          
+                        :type ("TcpWrite" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [1265 1426])
+                    ("TcpWrite" function
+                       (:destructor-flag t
+                        :parent "TcpWrite"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1428 1455])
+                    ("Init" function
+                       (:parent "TcpWrite"
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [1457 1520])
+                    ("run" function
+                       (:parent "TcpWrite"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1522 1578])
+                    ("Stop" function
+                       (:parent "TcpWrite"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1580 1681])
+                    ("AddMessage" function
+                       (:parent "TcpWrite"
+                        :arguments 
+                          ( ("sIP" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1710 1734])
+                            ("iPort" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [1735 1751])
+                            ("sMessage" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1752 1781]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [1683 1843])
+                    ("TcpIOThread" function
+                       (:constructor-flag t
+                        :parent "TcpIOThread"
+                        :arguments 
+                          ( ("poNetWork" variable
+                               (:pointer 1
+                                :type ("NetWork" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1930 1950]))                          
+                        :type ("TcpIOThread" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [1903 2157])
+                    ("TcpIOThread" function
+                       (:destructor-flag t
+                        :parent "TcpIOThread"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [2159 2356])
+                    ("Stop" function
+                       (:parent "TcpIOThread"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [2358 2685])
+                    ("Init" function
+                       (:parent "TcpIOThread"
+                        :arguments 
+                          ( ("sListenIp" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2711 2741])
+                            ("iListenPort" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [2742 2764])
+                            ("iIOThreadCount" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [2765 2790]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [2687 3591])
+                    ("Start" function
+                       (:parent "TcpIOThread"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [3593 3846])
+                    ("AddMessage" function
+                       (:parent "TcpIOThread"
+                        :arguments 
+                          ( ("iGroupIdx" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [3878 3898])
+                            ("sIP" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3899 3923])
+                            ("iPort" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [3924 3940])
+                            ("sMessage" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3941 3970]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [3848 4098]))                  
+                :type "namespace")
+                nil [792 4101]))          
+      :file "tcp.cpp"
+      :pointmax 4104
+      :fsize 4103
+      :lastmodtime '(23072 47985 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("event_base.h" include nil nil [749 772])
+            ("string" include (:system-flag t) nil [773 790])
+            ("phxpaxos" type
+               (:members 
+                  ( ("EventLoop" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [814 830])
+                    ("Notify" type
+                       (:superclasses 
+                          ( ("Event" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [862 869])
+                            ("Notify" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("poEventLoop" variable
+                                       (:pointer 1
+                                        :type ("EventLoop" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [881 905]))                                  
+                                :type ("Notify" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [874 906])
+                            ("Notify" function
+                               (:prototype-flag t
+                                :destructor-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [911 921])
+                            ("Init" function
+                               (:prototype-flag t
+                                :type "int")
+                                (reparse-symbol classsubparts) [927 938])
+                            ("GetSocketFd" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :type "int")
+                                (reparse-symbol classsubparts) [944 968])
+                            ("GetSocketHost" function
+                               (:prototype-flag t
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [974 1010])
+                            ("SendNotify" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [1016 1034])
+                            ("OnRead" function
+                               (:prototype-flag t
+                                :type "int")
+                                (reparse-symbol classsubparts) [1040 1053])
+                            ("OnError" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("bNeedDelete" variable
+                                       (:reference 1
+                                        :type "bool")
+                                        (reparse-symbol arg-sub-list) [1072 1091]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1059 1092])
+                            ("private" label nil (reparse-symbol classsubparts) [1094 1102])
+                            ("m_iPipeFD" variable
+                               (:dereference 1
+                                :type "int")
+                                (reparse-symbol classsubparts) [1107 1124])
+                            ("m_sHost" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1129 1149]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [832 1152]))                  
+                :type "namespace")
+                nil [792 1155]))          
+      :file "notify.h"
+      :pointmax 1156
+      :fsize 1155
+      :lastmodtime '(23253 48778 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("tcp_client.h" include nil nil [744 767])
+            ("commdef.h" include nil nil [768 788])
+            ("phxpaxos/network.h" include nil nil [789 818])
+            ("event_loop.h" include nil nil [819 842])
+            ("phxpaxos" type
+               (:members 
+                  ( ("TcpClient" function
+                       (:constructor-flag t
+                        :parent "TcpClient"
+                        :arguments 
+                          ( ("poEventLoop" variable
+                               (:pointer 1
+                                :type ("EventLoop" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [889 913])
+                            ("poNetWork" variable
+                               (:pointer 1
+                                :type ("NetWork" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [914 934]))                          
+                        :type ("TcpClient" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [866 1025])
+                    ("TcpClient" function
+                       (:destructor-flag t
+                        :parent "TcpClient"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1027 1127])
+                    ("AddMessage" function
+                       (:parent "TcpClient"
+                        :arguments 
+                          ( ("sIP" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1157 1181])
+                            ("iPort" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [1182 1198])
+                            ("sMessage" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1199 1228]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [1129 1482])
+                    ("GetEvent" function
+                       (:pointer 1
+                        :parent "TcpClient"
+                        :arguments 
+                          ( ("sIP" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1521 1545])
+                            ("iPort" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [1546 1562]))                          
+                        :type ("MessageEvent" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [1484 1890])
+                    ("CreateEvent" function
+                       (:pointer 1
+                        :parent "TcpClient"
+                        :arguments 
+                          ( ("llNodeID" variable
+                               (:constant-flag t
+                                :type ("uint64_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1932 1956])
+                            ("sIP" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1957 1981])
+                            ("iPort" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [1982 1998]))                          
+                        :type ("MessageEvent" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [1892 2534])
+                    ("DealWithWrite" function
+                       (:parent "TcpClient"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [2536 2765]))                  
+                :type "namespace")
+                nil [844 2772]))          
+      :file "tcp_client.cpp"
+      :pointmax 2775
+      :fsize 2774
+      :lastmodtime '(23072 47985 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("mutex" include (:system-flag t) nil [758 774])
+            ("event_base.h" include nil nil [775 798])
+            ("utils_include.h" include nil nil [799 825])
+            ("commdef.h" include nil nil [826 846])
+            ("comm_include.h" include nil nil [847 872])
+            ("phxpaxos" type
+               (:members 
+                  ( ("EventLoop" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [896 912])
+                    ("NetWork" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [913 927])
+                    ("MessageEventType" type
+                       (:members 
+                          ( ("MessageEventType_RECV" variable
+                               (:constant-flag t
+                                :default-value (981 982)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [957 982])
+                            ("MessageEventType_SEND" variable
+                               (:constant-flag t
+                                :default-value (1012 1013)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [988 1013]))                          
+                        :type "enum")
+                        (reparse-symbol namespacesubparts) [929 1017])
+                    ("MessageEventTimerType" type
+                       (:members 
+                          ( ("MessageEventTimerType_Reconnect" variable
+                               (:constant-flag t
+                                :default-value (1086 1087)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [1052 1087]))                          
+                        :type "enum")
+                        (reparse-symbol namespacesubparts) [1019 1091])
+                    ("MessageEvent" type
+                       (:superclasses 
+                          ( ("Event" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [1129 1136])
+                            ("MessageEvent" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("Type" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1167 1182])
+                                    ("fd" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1195 1208])
+                                    ("oAddr" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("SocketAddress" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1222 1250])
+                                    ("poEventLoop" variable
+                                       (:pointer 1
+                                        :type ("EventLoop" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1264 1288])
+                                    ("poNetWork" variable
+                                       (:pointer 1
+                                        :type ("NetWork" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1301 1321]))                                  
+                                :type ("MessageEvent" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1141 1322])
+                            ("MessageEvent" function
+                               (:prototype-flag t
+                                :destructor-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [1327 1343])
+                            ("AddMessage" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("sMessage" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1364 1393]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [1349 1394])
+                            ("GetSocketFd" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :type "int")
+                                (reparse-symbol classsubparts) [1400 1424])
+                            ("GetSocketHost" function
+                               (:prototype-flag t
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1434 1470])
+                            ("OnRead" function
+                               (:prototype-flag t
+                                :type "int")
+                                (reparse-symbol classsubparts) [1476 1489])
+                            ("OnWrite" function
+                               (:prototype-flag t
+                                :type "int")
+                                (reparse-symbol classsubparts) [1495 1509])
+                            ("OnTimeout" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("iTimerID" variable
+                                       (:constant-flag t
+                                        :type ("uint32_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1530 1554])
+                                    ("iType" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1555 1571]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1515 1572])
+                            ("OnError" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("bNeedDelete" variable
+                                       (:reference 1
+                                        :type "bool")
+                                        (reparse-symbol arg-sub-list) [1591 1610]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1578 1611])
+                            ("OpenWrite" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [1617 1634])
+                            ("IsActive" function
+                               (:prototype-flag t
+                                :constant-flag t
+                                :type "bool")
+                                (reparse-symbol classsubparts) [1640 1662])
+                            ("private" label nil (reparse-symbol classsubparts) [1664 1672])
+                            ("ReadLeft" function
+                               (:prototype-flag t
+                                :type "int")
+                                (reparse-symbol classsubparts) [1677 1692])
+                            ("ReadDone" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("oBytesBuffer" variable
+                                       (:reference 1
+                                        :type ("BytesBuffer" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1712 1739])
+                                    ("iLen" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1740 1755]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1698 1756])
+                            ("WriteLeft" function
+                               (:prototype-flag t
+                                :type "int")
+                                (reparse-symbol classsubparts) [1766 1782])
+                            ("WriteDone" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [1788 1805])
+                            ("DoOnWrite" function
+                               (:prototype-flag t
+                                :type "int")
+                                (reparse-symbol classsubparts) [1811 1827])
+                            ("ReConnect" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [1833 1850])
+                            ("private" label nil (reparse-symbol classsubparts) [1852 1860])
+                            ("m_oSocket" variable (:type ("Socket" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1865 1882])
+                            ("m_oAddr" variable (:type ("SocketAddress" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1891 1913])
+                            ("m_sHost" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1918 1938])
+                            ("m_poNetWork" variable
+                               (:pointer 1
+                                :type ("NetWork" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1943 1965])
+                            ("m_iType" variable (:type "int") (reparse-symbol classsubparts) [1970 1982])
+                            ("private" label nil (reparse-symbol classsubparts) [1984 1992])
+                            ("m_sReadHeadBuffer" variable
+                               (:dereference 1
+                                :type "char")
+                                (reparse-symbol classsubparts) [1997 2033])
+                            ("m_iLastReadHeadPos" variable (:type "int") (reparse-symbol classsubparts) [2038 2061])
+                            ("m_oReadCacheBuffer" variable (:type ("BytesBuffer" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2066 2097])
+                            ("m_iLastReadPos" variable (:type "int") (reparse-symbol classsubparts) [2102 2121])
+                            ("m_iLeftReadLen" variable (:type "int") (reparse-symbol classsubparts) [2126 2145])
+                            ("m_oWriteCacheBuffer" variable (:type ("BytesBuffer" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2151 2183])
+                            ("m_iLastWritePos" variable (:type "int") (reparse-symbol classsubparts) [2188 2208])
+                            ("m_iLeftWriteLen" variable (:type "int") (reparse-symbol classsubparts) [2213 2233])
+                            ("QueueData" type
+                               (:members 
+                                  ( ("llEnqueueAbsTime" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2270 2296])
+                                    ("psValue" variable
+                                       (:pointer 1
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [2305 2327]))                                  
+                                :type "struct")
+                                (reparse-symbol classsubparts) [2239 2334])
+                            ("m_oInQueue" variable (:type ("std::queue" type
+                                 (:template-specifier 
+                                    ( ("QueueData" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [2344 2377])
+                            ("m_iQueueMemSize" variable (:type "int") (reparse-symbol classsubparts) [2382 2402])
+                            ("m_oMutex" variable (:type ("std::mutex" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2407 2427])
+                            ("m_llLastActiveTime" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2433 2461])
+                            ("private" label nil (reparse-symbol classsubparts) [2463 2471])
+                            ("m_iReconnectTimeoutID" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2476 2507]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [1093 2510]))                  
+                :type "namespace")
+                nil [874 2513]))          
+      :file "message_event.h"
+      :pointmax 2514
+      :fsize 2513
+      :lastmodtime '(23072 47985 0 0)
+      :unmatched-syntax '((symbol 752 . 756) (symbol 745 . 751) (punctuation 744 . 745)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("commdef.h" include nil nil [749 769])
+            ("phxpaxos" type
+               (:members 
+                  ( ("EventLoop" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [793 809])
+                    ("Event" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [825 832])
+                            ("Event" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("poEventLoop" variable
+                                       (:pointer 1
+                                        :type ("EventLoop" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [843 867]))                                  
+                                :type ("Event" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [837 868])
+                            ("Event" function
+                               (:prototype-flag t
+                                :destructor-flag t
+                                :typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [873 890])
+                            ("GetSocketFd" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :methodconst-flag t
+                                :typemodifiers ("virtual")
+                                :type "int")
+                                (reparse-symbol classsubparts) [896 932])
+                            ("GetSocketHost" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [938 986])
+                            ("OnRead" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :type "int")
+                                (reparse-symbol classsubparts) [992 1013])
+                            ("OnWrite" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :type "int")
+                                (reparse-symbol classsubparts) [1019 1041])
+                            ("OnError" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("bNeedDelete" variable
+                                       (:reference 1
+                                        :type "bool")
+                                        (reparse-symbol arg-sub-list) [1068 1087]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1047 1092])
+                            ("OnTimeout" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("iTimerID" variable
+                                       (:constant-flag t
+                                        :type ("uint32_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1121 1145])
+                                    ("iType" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1146 1162]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1098 1163])
+                            ("public" label nil (reparse-symbol classsubparts) [1165 1172])
+                            ("AddEvent" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("iEvents" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1191 1209]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1177 1210])
+                            ("RemoveEvent" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("iEvents" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1233 1251]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1216 1252])
+                            ("JumpoutEpollWait" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [1258 1282])
+                            ("IsDestroy" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :constant-flag t
+                                :type "bool")
+                                (reparse-symbol classsubparts) [1288 1317])
+                            ("Destroy" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [1323 1338])
+                            ("public" label nil (reparse-symbol classsubparts) [1340 1347])
+                            ("AddTimer" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("iTimeoutMs" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1366 1387])
+                                    ("iType" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1388 1404])
+                                    ("iTimerID" variable
+                                       (:reference 1
+                                        :type ("uint32_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1405 1425]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1352 1426])
+                            ("RemoveTimer" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("iTimerID" variable
+                                       (:constant-flag t
+                                        :type ("uint32_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1449 1473]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1432 1474])
+                            ("protected" label nil (reparse-symbol classsubparts) [1476 1486])
+                            ("m_iEvents" variable (:type "int") (reparse-symbol classsubparts) [1491 1505])
+                            ("m_poEventLoop" variable
+                               (:pointer 1
+                                :type ("EventLoop" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1510 1536])
+                            ("m_bIsDestroy" variable (:type "bool") (reparse-symbol classsubparts) [1542 1560]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [811 1563]))                  
+                :type "namespace")
+                nil [771 1566]))          
+      :file "event_base.h"
+      :pointmax 1567
+      :fsize 1566
+      :lastmodtime '(23253 44747 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("message_event.h" include nil nil [735 761])
+            ("commdef.h" include nil nil [762 782])
+            ("phxpaxos/network.h" include nil nil [783 812])
+            ("event_loop.h" include nil nil [813 836])
+            ("comm_include.h" include nil nil [837 862])
+            ("phxpaxos" type
+               (:members 
+                  ( ("MessageEvent" function
+                       (:constructor-flag t
+                        :parent "MessageEvent"
+                        :arguments 
+                          ( ("iType" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [924 940])
+                            ("fd" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [949 962])
+                            ("oAddr" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("SocketAddress" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [971 999])
+                            ("poEventLoop" variable
+                               (:pointer 1
+                                :type ("EventLoop" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1008 1032])
+                            ("poNetWork" variable
+                               (:pointer 1
+                                :type ("NetWork" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1041 1061]))                          
+                        :type ("MessageEvent" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [886 1566])
+                    ("MessageEvent" function
+                       (:destructor-flag t
+                        :parent "MessageEvent"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1568 1750])
+                    ("GetSocketFd" function
+                       (:methodconst-flag t
+                        :parent "MessageEvent"
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [1752 1835])
+                    ("GetSocketHost" function
+                       (:parent "MessageEvent"
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [1837 1912])
+                    ("IsActive" function
+                       (:parent "MessageEvent"
+                        :constant-flag t
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [1914 2185])
+                    ("AddMessage" function
+                       (:parent "MessageEvent"
+                        :arguments 
+                          ( ("sMessage" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2218 2247]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [2187 2964])
+                    ("ReadDone" function
+                       (:parent "MessageEvent"
+                        :arguments 
+                          ( ("oBytesBuffer" variable
+                               (:reference 1
+                                :type ("BytesBuffer" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2996 3023])
+                            ("iLen" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [3024 3039]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [2966 3193])
+                    ("ReadLeft" function
+                       (:parent "MessageEvent"
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [3195 3710])
+                    ("OnRead" function
+                       (:parent "MessageEvent"
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [3712 5629])
+                    ("OpenWrite" function
+                       (:parent "MessageEvent"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [5631 5991])
+                    ("WriteDone" function
+                       (:parent "MessageEvent"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [5993 6076])
+                    ("WriteLeft" function
+                       (:parent "MessageEvent"
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [6078 6658])
+                    ("OnWrite" function
+                       (:parent "MessageEvent"
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [6660 7026])
+                    ("DoOnWrite" function
+                       (:parent "MessageEvent"
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [7028 9156])
+                    ("OnError" function
+                       (:parent "MessageEvent"
+                        :arguments 
+                          ( ("bNeedDelete" variable
+                               (:reference 1
+                                :type "bool")
+                                (reparse-symbol arg-sub-list) [9187 9206]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [9158 9987])
+                    ("OnTimeout" function
+                       (:parent "MessageEvent"
+                        :arguments 
+                          ( ("iTimerID" variable
+                               (:constant-flag t
+                                :type ("uint32_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [10020 10044])
+                            ("iType" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [10045 10061]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [9989 10220])
+                    ("ReConnect" function
+                       (:parent "MessageEvent"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [10222 10581]))                  
+                :type "namespace")
+                nil [864 10584]))          
+      :file "message_event.cpp"
+      :pointmax 10585
+      :fsize 10584
+      :lastmodtime '(23253 47831 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("event_base.h" include nil nil [744 767])
+            ("event_loop.h" include nil nil [768 791])
+            ("phxpaxos" type
+               (:members 
+                  ( ("Event" function
+                       (:constructor-flag t
+                        :parent "Event"
+                        :arguments 
+                          ( ("poEventLoop" variable
+                               (:pointer 1
+                                :type ("EventLoop" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [830 854]))                          
+                        :type ("Event" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [815 932])
+                    ("Event" function
+                       (:destructor-flag t
+                        :parent "Event"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [934 955])
+                    ("OnRead" function
+                       (:parent "Event"
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [957 1021])
+                    ("OnWrite" function
+                       (:parent "Event"
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [1023 1088])
+                    ("OnTimeout" function
+                       (:parent "Event"
+                        :arguments 
+                          ( ("iTimerID" variable
+                               (:constant-flag t
+                                :type ("uint32_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1114 1138])
+                            ("iType" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [1139 1155]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1090 1183])
+                    ("JumpoutEpollWait" function
+                       (:parent "Event"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1185 1260])
+                    ("AddEvent" function
+                       (:parent "Event"
+                        :arguments 
+                          ( ("iEvents" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [1285 1303]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1262 1482])
+                    ("RemoveEvent" function
+                       (:parent "Event"
+                        :arguments 
+                          ( ("iEvents" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [1510 1528]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1484 1812])
+                    ("AddTimer" function
+                       (:parent "Event"
+                        :arguments 
+                          ( ("iTimeoutMs" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [1837 1858])
+                            ("iType" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [1859 1875])
+                            ("iTimerID" variable
+                               (:reference 1
+                                :type ("uint32_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1876 1896]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1814 1964])
+                    ("RemoveTimer" function
+                       (:parent "Event"
+                        :arguments 
+                          ( ("iTimerID" variable
+                               (:constant-flag t
+                                :type ("uint32_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1992 2016]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1966 2062])
+                    ("Destroy" function
+                       (:parent "Event"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [2064 2116])
+                    ("IsDestroy" function
+                       (:methodconst-flag t
+                        :parent "Event"
+                        :constant-flag t
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [2118 2184]))                  
+                :type "namespace")
+                nil [793 2187]))          
+      :file "event_base.cpp"
+      :pointmax 2190
+      :fsize 2189
+      :lastmodtime '(23072 47985 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("event_loop.h" include nil nil [735 758])
+            ("event_base.h" include nil nil [759 782])
+            ("tcp_acceptor.h" include nil nil [783 808])
+            ("tcp_client.h" include nil nil [809 832])
+            ("comm_include.h" include nil nil [833 858])
+            ("message_event.h" include nil nil [859 885])
+            ("phxpaxos/network.h" include nil nil [886 915])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [917 937])
+            ("phxpaxos" type
+               (:members 
+                  ( ("EventLoop" function
+                       (:constructor-flag t
+                        :parent "EventLoop"
+                        :arguments 
+                          ( ("poNetWork" variable
+                               (:pointer 1
+                                :type ("NetWork" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [984 1004]))                          
+                        :type ("EventLoop" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [961 1188])
+                    ("EventLoop" function
+                       (:destructor-flag t
+                        :parent "EventLoop"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1190 1237])
+                    ("JumpoutEpollWait" function
+                       (:parent "EventLoop"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1239 1309])
+                    ("SetTcpClient" function
+                       (:parent "EventLoop"
+                        :arguments 
+                          ( ("poTcpClient" variable
+                               (:pointer 1
+                                :type ("TcpClient" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1342 1366]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1311 1403])
+                    ("Init" function
+                       (:parent "EventLoop"
+                        :arguments 
+                          ( ("iEpollLength" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [1427 1450]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [1405 1783])
+                    ("ModEvent" function
+                       (:parent "EventLoop"
+                        :arguments 
+                          ( ("poEvent" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("Event" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1812 1834])
+                            ("iEvents" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [1835 1853]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1785 2695])
+                    ("RemoveEvent" function
+                       (:parent "EventLoop"
+                        :arguments 
+                          ( ("poEvent" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("Event" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2727 2749]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [2697 3382])
+                    ("StartLoop" function
+                       (:parent "EventLoop"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [3384 3900])
+                    ("Stop" function
+                       (:parent "EventLoop"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [3902 3951])
+                    ("OneLoop" function
+                       (:parent "EventLoop"
+                        :arguments 
+                          ( ("iTimeoutMs" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [3979 4000]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [3953 5047])
+                    ("OnError" function
+                       (:parent "EventLoop"
+                        :arguments 
+                          ( ("iEvents" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [5075 5093])
+                            ("poEvent" variable
+                               (:pointer 1
+                                :type ("Event" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5094 5110]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [5049 5465])
+                    ("AddTimer" function
+                       (:parent "EventLoop"
+                        :arguments 
+                          ( ("poEvent" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("Event" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5494 5516])
+                            ("iTimeout" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [5517 5536])
+                            ("iType" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [5537 5553])
+                            ("iTimerID" variable
+                               (:reference 1
+                                :type ("uint32_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5554 5574]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [5467 6073])
+                    ("RemoveTimer" function
+                       (:parent "EventLoop"
+                        :arguments 
+                          ( ("iTimerID" variable
+                               (:constant-flag t
+                                :type ("uint32_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6105 6129]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [6075 6262])
+                    ("DealwithTimeoutOne" function
+                       (:parent "EventLoop"
+                        :arguments 
+                          ( ("iTimerID" variable
+                               (:constant-flag t
+                                :type ("uint32_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6301 6325])
+                            ("iType" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [6326 6342]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [6264 6774])
+                    ("DealwithTimeout" function
+                       (:parent "EventLoop"
+                        :arguments 
+                          ( ("iNextTimeout" variable
+                               (:reference 1
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [6810 6829]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [6776 7248])
+                    ("AddEvent" function
+                       (:parent "EventLoop"
+                        :arguments 
+                          ( ("iFD" variable (:type "int") (reparse-symbol arg-sub-list) [7277 7285])
+                            ("oAddr" variable (:type ("SocketAddress" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7286 7306]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [7250 7408])
+                    ("CreateEvent" function
+                       (:parent "EventLoop"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [7410 8015])
+                    ("ClearEvent" function
+                       (:parent "EventLoop"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [8017 8315])
+                    ("GetActiveEventCount" function
+                       (:parent "EventLoop"
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [8317 8473]))                  
+                :type "namespace")
+                nil [939 8476]))          
+      :file "event_loop.cpp"
+      :pointmax 8477
+      :fsize 8476
+      :lastmodtime '(23253 44937 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("stdio.h" include (:system-flag t) nil [735 753])
+            ("tcp_acceptor.h" include nil nil [754 779])
+            ("commdef.h" include nil nil [780 800])
+            ("event_loop.h" include nil nil [801 824])
+            ("phxpaxos/network.h" include nil nil [825 854])
+            ("message_event.h" include nil nil [855 881])
+            ("comm_include.h" include nil nil [882 907])
+            ("poll.h" include (:system-flag t) nil [908 925])
+            ("phxpaxos" type
+               (:members 
+                  ( ("TcpAcceptor" function
+                       (:constructor-flag t
+                        :parent "TcpAcceptor"
+                        :type ("TcpAcceptor" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [949 1029])
+                    ("TcpAcceptor" function
+                       (:destructor-flag t
+                        :parent "TcpAcceptor"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1031 1064])
+                    ("Listen" function
+                       (:parent "TcpAcceptor"
+                        :arguments 
+                          ( ("sListenIP" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1093 1123])
+                            ("iListenPort" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [1124 1146]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1066 1227])
+                    ("Stop" function
+                       (:parent "TcpAcceptor"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1229 1334])
+                    ("run" function
+                       (:parent "TcpAcceptor"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1336 2340])
+                    ("AddEventLoop" function
+                       (:parent "TcpAcceptor"
+                        :arguments 
+                          ( ("poEventLoop" variable
+                               (:pointer 1
+                                :type ("EventLoop" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2375 2399]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [2342 2446])
+                    ("AddEvent" function
+                       (:parent "TcpAcceptor"
+                        :arguments 
+                          ( ("iFD" variable (:type "int") (reparse-symbol arg-sub-list) [2477 2485])
+                            ("oAddr" variable (:type ("SocketAddress" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2486 2506]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [2448 3083]))                  
+                :type "namespace")
+                nil [927 3086]))          
+      :file "tcp_acceptor.cpp"
+      :pointmax 3087
+      :fsize 3086
+      :lastmodtime '(23253 48766 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("notify.h" include nil nil [735 754])
+            ("commdef.h" include nil nil [755 775])
+            ("assert.h" include (:system-flag t) nil [776 795])
+            ("unistd.h" include (:system-flag t) nil [796 815])
+            ("fcntl.h" include (:system-flag t) nil [816 834])
+            ("sys/epoll.h" include (:system-flag t) nil [835 857])
+            ("phxpaxos" type
+               (:members 
+                  ( ("Notify" function
+                       (:constructor-flag t
+                        :parent "Notify"
+                        :arguments 
+                          ( ("poEventLoop" variable
+                               (:pointer 1
+                                :type ("EventLoop" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [898 922]))                          
+                        :type ("Notify" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [881 1021])
+                    ("Notify" function
+                       (:destructor-flag t
+                        :parent "Notify"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1023 1175])
+                    ("Init" function
+                       (:parent "Notify"
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [1177 1461])
+                    ("GetSocketFd" function
+                       (:methodconst-flag t
+                        :parent "Notify"
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [1463 1525])
+                    ("GetSocketHost" function
+                       (:parent "Notify"
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [1527 1596])
+                    ("SendNotify" function
+                       (:parent "Notify"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1598 1783])
+                    ("OnRead" function
+                       (:parent "Notify"
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [1785 1951])
+                    ("OnError" function
+                       (:parent "Notify"
+                        :arguments 
+                          ( ("bNeedDelete" variable
+                               (:reference 1
+                                :type "bool")
+                                (reparse-symbol arg-sub-list) [1976 1995]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1953 2024]))                  
+                :type "namespace")
+                nil [859 2027]))          
+      :file "notify.cpp"
+      :pointmax 2028
+      :fsize 2027
+      :lastmodtime '(23253 48786 0 0)
+      :unmatched-syntax nil))
+  :file "!Volumes!Transcend!phxpaxos!src!communicate!tcp!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,93 @@
+# 入口
+include/grpc++/impl/grpc_library.h
+
+GrpcLibrary -|> GrpcLibraryInterface
+GrpcLibraryCodegen仅有ctor/dtor函数，分别调用GrpcLibraryInterface对象的init和shutdown函数
+如果派生类gRPC被初始化，则必须派生自GrpcLibraryCodegen类
+
+整个gRPC只会有一个实例，在需要用到GrpcLibraryCodegen类时， 通过在多处实例化GrpcLibraryInitializer静态对象，确保对全局GRPC进行初始化
+
+grpc::GrpcLibraryInterface* grpc::g_glip;
+grpc::CoreCodegenInterface* grpc::g_core_codegen_interface;
+
+init.cc:
+grpc_init:
+    do_basic_init
+    gpr_time_init
+    grpc_stats_init
+    grpc_slice_intern_init
+    grpc_mdctx_global_init
+    注册一些跟踪类
+    grpc_security_pre_init
+    grpc_iomgr_init
+    grpc_timers_global_init
+    grpc_handshaker_factory_registry_init
+    grpc_security_init
+    再对注册的plugin进行初始化
+    grpc_register_security_filters
+    register_builtin_channel_init
+    grpc_tracer_init
+    grpc_channel_init_finalize
+    grpc_iomgr_start
+
+-> do_basic_init
+do_basic_init:
+  gpr_log_verbosity_init:
+    初始化日志，通过环境变量GRPC_VERBOSITY导入，可为DEBUG|INFO|ERROR，若为空，则默认为ERROR
+  grpc_register_built_in_plugins:
+    注册plugins，最多不超过MAX_PLUGINS个（128)
+      grpc_http_filters_init:
+        注册grpc_compression_trace
+        注册channel的初始化stage，priority越小，权限越高
+        channel的类型：
+          // normal top-half client channel with load-balancing, connection management
+          GRPC_CLIENT_CHANNEL,
+          // bottom-half of a client channel: everything that happens post-load
+          // balancing (bound to a specific transport)
+          GRPC_CLIENT_SUBCHANNEL,
+          // a permanently broken client channel
+          GRPC_CLIENT_LAME_CHANNEL,
+          // a directly connected client channel (without load-balancing, directly talks
+          // to a transport)
+          GRPC_CLIENT_DIRECT_CHANNEL,
+          // server side channel
+          GRPC_SERVER_CHANNEL,
+        最终是将相应的filter挂到channel_stack_builder的filter_node中
+        对GRPC_CLIENT_SUBCHANNEL|GRPC_CLIENT_DIRECT_CHANNEL|GRPC_SERVER_CHANNEL注册compress_filter
+        对GRPC_CLIENT_SUBCHANNEL|GRPC_CLIENT_DIRECT_CHANNEL注册grpc_http_client_filter
+        对 GRPC_SERVER_CHANNEL注册grpc_http_server_filter
+        grpc_channel_filter:
+
+      grpc_http_filters_shutdown);
+      grpc_chttp2_plugin_init,
+      grpc_chttp2_plugin_shutdown);
+      grpc_tsi_gts_init,
+      grpc_tsi_gts_shutdown);
+      grpc_deadline_filter_init,
+      grpc_deadline_filter_shutdown);
+      grpc_client_channel_init,
+      grpc_client_channel_shutdown);
+      grpc_inproc_plugin_init,
+      grpc_inproc_plugin_shutdown);
+      grpc_resolver_fake_init,
+      grpc_resolver_fake_shutdown);
+      grpc_lb_policy_grpclb_init,
+      grpc_lb_policy_grpclb_shutdown);
+      grpc_lb_policy_pick_first_init,
+      grpc_lb_policy_pick_first_shutdown);
+      grpc_lb_policy_round_robin_init,
+      grpc_lb_policy_round_robin_shutdown);
+      grpc_resolver_dns_ares_init,
+      grpc_resolver_dns_ares_shutdown);
+      grpc_resolver_dns_native_init,
+      grpc_resolver_dns_native_shutdown);
+      grpc_resolver_sockaddr_init,
+      grpc_resolver_sockaddr_shutdown);
+      grpc_server_load_reporting_plugin_init,
+      grpc_server_load_reporting_plugin_shutdown);
+      grpc_max_age_filter_init,
+      grpc_max_age_filter_shutdown);
+      grpc_message_size_filter_init,
+      grpc_message_size_filter_shutdown);
+      grpc_workaround_cronet_compression_filter_init,
+      grpc_workaround_cronet_compression_filter_shutdown);

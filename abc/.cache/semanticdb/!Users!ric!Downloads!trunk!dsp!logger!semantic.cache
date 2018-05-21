@@ -1,0 +1,1301 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("dsp/logger/logger_impl.h" include nil nil [75 110])
+            ("sys/time.h" include (:system-flag t) nil [112 133])
+            ("stdlib.h" include (:system-flag t) nil [134 153])
+            ("atomic" include (:system-flag t) nil [155 172])
+            ("map" include (:system-flag t) nil [173 187])
+            ("set" include (:system-flag t) nil [188 202])
+            ("string" include (:system-flag t) nil [203 220])
+            ("utility" include (:system-flag t) nil [221 239])
+            ("dsp/logger/kafka_sender.h" include nil nil [241 277])
+            ("common/file/file.h" include nil nil [278 307])
+            ("thirdparty/leveldb/cache.h" include nil nil [308 345])
+            ("thirdparty/leveldb/options.h" include nil nil [346 385])
+            ("thirdparty/gflags/gflags.h" include nil nil [386 423])
+            ("poppy/rpc_channel.h" include nil nil [424 454])
+            ("poppy/rpc_client.h" include nil nil [455 484])
+            ("DECLARE_int32" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("logger_v" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [500 509]))                  
+                :type "int")
+                nil [486 510])
+            ("DEFINE_int32" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("sync_per_batch_count" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [524 545]))                  
+                :type "int")
+                nil [511 590])
+            ("DEFINE_bool" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("stat_in_counter" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [603 619])
+                    ("" variable (:type ("true" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [620 625]))                  
+                :type "int")
+                nil [591 648])
+            ("DEFINE_bool" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("stat_out_counter" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [661 678])
+                    ("" variable (:type ("true" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [679 684]))                  
+                :type "int")
+                nil [649 708])
+            ("DEFINE_string" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("logger_stat_server" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [723 742]))                  
+                :type "int")
+                nil [709 777])
+            ("DEFINE_int32" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("log_sample" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [791 802]))                  
+                :type "int")
+                nil [778 823])
+            ("yd" type
+               (:members 
+                  ( ("dsp" type
+                       (:members 
+                          ( ("LoggerImpl" function
+                               (:constructor-flag t
+                                :parent "LoggerImpl"
+                                :arguments 
+                                  ( ("func" variable (:type ("timepartition_func" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [881 905]))                                  
+                                :type ("LoggerImpl" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [858 1068])
+                            ("LoggerImpl" function
+                               (:destructor-flag t
+                                :parent "LoggerImpl"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [1070 1351])
+                            ("Initialize" function
+                               (:parent "LoggerImpl"
+                                :arguments 
+                                  ( ("options" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("yd::dsp::logger::LoggerOptions" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1384 1430]))                                  
+                                :type ("int32_t" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [1353 2253])
+                            ("InitLeveldb" function
+                               (:parent "LoggerImpl"
+                                :type ("int32_t" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [2255 3805])
+                            ("RunKafkaSender" function
+                               (:typemodifiers ("static")
+                                :arguments 
+                                  ( ("sender" variable
+                                       (:pointer 1
+                                        :type ("KafkaSender" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3834 3854]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [3807 3875])
+                            ("InitKafkaBackend" function
+                               (:parent "LoggerImpl"
+                                :type ("int32_t" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [3877 4645])
+                            ("Logger" function
+                               (:parent "LoggerImpl"
+                                :arguments 
+                                  ( ("data" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4671 4695]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [4647 5706])
+                            ("Logger" function
+                               (:parent "LoggerImpl"
+                                :arguments 
+                                  ( ("msg" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("google::protobuf::Message" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5732 5769]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [5708 5928])
+                            ("GetKeyFromTime" function
+                               (:methodconst-flag t
+                                :parent "LoggerImpl"
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [5930 6142])
+                            ("SendBackgroup" function
+                               (:parent "LoggerImpl"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [6144 6276])
+                            ("ResendBackgroup" function
+                               (:parent "LoggerImpl"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [6278 6405])
+                            ("DeleteBackgroup" function
+                               (:parent "LoggerImpl"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [6407 6527])
+                            ("SendToKafka" function
+                               (:parent "LoggerImpl"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [6529 7190])
+                            ("SendToKafka" function
+                               (:parent "LoggerImpl"
+                                :arguments 
+                                  ( ("send_list" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::set" type
+                                             (:template-specifier 
+                                                ( ("std::string" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [7221 7260]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [7192 7847])
+                            ("DeleteHadSentData" function
+                               (:parent "LoggerImpl"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [7849 9455])
+                            ("ResendToKafka" function
+                               (:parent "LoggerImpl"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [9457 10161])
+                            ("Stop" function
+                               (:parent "LoggerImpl"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [10163 10231])
+                            ("SendLastRecords" function
+                               (:parent "LoggerImpl"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [10233 11371])
+                            ("Stat" function
+                               (:parent "LoggerImpl"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [11373 11504])
+                            ("Report" function
+                               (:parent "LoggerImpl"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [11507 12912]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [840 12915]))                  
+                :type "namespace")
+                nil [825 12935]))          
+      :file "logger_impl.cpp"
+      :pointmax 12986
+      :fsize 12985
+      :lastmodtime '(22848 41038 0 0)
+      :unmatched-syntax '((string 809 . 821) (number 803 . 807) (string 747 . 775) (string 743 . 745) (string 685 . 706) (string 626 . 646) (string 551 . 588) (number 546 . 549)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("DSP_LOGGER_LOGGER_IMPL_H_" variable (:constant-flag t) nil [118 143])
+            ("stdint.h" include (:system-flag t) nil [145 164])
+            ("atomic" include (:system-flag t) nil [166 183])
+            ("condition_variable" include (:system-flag t) nil [184 213])
+            ("map" include (:system-flag t) nil [214 228])
+            ("mutex" include (:system-flag t) nil [229 245])
+            ("set" include (:system-flag t) nil [246 260])
+            ("string" include (:system-flag t) nil [261 278])
+            ("thread" include (:system-flag t) nil [279 296])
+            ("thirdparty/leveldb/db.h" include nil nil [298 332])
+            ("dsp/logger/logger_option.pb.h" include nil nil [333 373])
+            ("google" type
+               (:members 
+                  ( ("protobuf" type
+                       (:members 
+                          ( ("Message" type
+                               (:prototype t
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [415 429]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [394 431]))                  
+                :type "namespace")
+                nil [375 456])
+            ("yd" type
+               (:members 
+                  ( ("dsp" type
+                       (:members 
+                          ( ("timepartition_func" function
+                               (:prototype-flag t
+                                :function-pointer t
+                                :arguments 
+                                  ( ("data" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [567 591]))                                  
+                                :type ("int32_t" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [537 592])
+                            ("KafkaSender" type
+                               (:prototype t
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [594 612])
+                            ("LoggerImpl" type
+                               (:members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [633 640])
+                                    ("LoggerImpl" function
+                                       (:prototype-flag t
+                                        :constructor-flag t
+                                        :arguments 
+                                          ( ("func" variable (:type ("timepartition_func" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [663 687]))                                          
+                                        :type ("LoggerImpl" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [652 688])
+                                    ("LoggerImpl" function
+                                       (:prototype-flag t
+                                        :destructor-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [691 705])
+                                    ("Initialize" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("options" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("yd::dsp::logger::LoggerOptions" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [728 774]))                                          
+                                        :type ("int32_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [709 775])
+                                    ("Logger" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("data" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [790 814]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [778 815])
+                                    ("Logger" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("msg" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("google::protobuf::Message" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [830 867]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [818 868])
+                                    ("SendBackgroup" function
+                                       (:prototype-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [872 893])
+                                    ("DeleteBackgroup" function
+                                       (:prototype-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [896 919])
+                                    ("ResendBackgroup" function
+                                       (:prototype-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [922 945])
+                                    ("Stop" function
+                                       (:prototype-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [948 960])
+                                    ("Stat" function
+                                       (:prototype-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [964 976])
+                                    ("private" label nil (reparse-symbol classsubparts) [979 987])
+                                    ("GetKeyFromTime" function
+                                       (:prototype-flag t
+                                        :methodconst-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [990 1025])
+                                    ("SendToKafka" function
+                                       (:prototype-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1028 1047])
+                                    ("ResendToKafka" function
+                                       (:prototype-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1050 1071])
+                                    ("SendToKafka" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("send_list" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::set" type
+                                                     (:template-specifier 
+                                                        ( ("std::string" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [1091 1130]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1074 1131])
+                                    ("DeleteHadSentData" function
+                                       (:prototype-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1134 1159])
+                                    ("SendLastRecords" function
+                                       (:prototype-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1162 1185])
+                                    ("InitLeveldb" function
+                                       (:prototype-flag t
+                                        :type ("int32_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1188 1210])
+                                    ("InitKafkaBackend" function
+                                       (:prototype-flag t
+                                        :type ("int32_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1213 1240])
+                                    ("Report" function
+                                       (:prototype-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1243 1257])
+                                    ("private" label nil (reparse-symbol classsubparts) [1260 1268])
+                                    ("count_mutex_" variable (:type ("std::mutex" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1271 1295])
+                                    ("hour_in_count_" variable (:type ("std::map" type
+                                         (:template-specifier 
+                                            ( ("int32_t" type nil nil nil)
+                                              ("uint64_t" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [1298 1341])
+                                    ("hour_out_count_" variable (:type ("std::map" type
+                                         (:template-specifier 
+                                            ( ("int32_t" type nil nil nil)
+                                              ("uint64_t" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [1344 1388])
+                                    ("db_" variable
+                                       (:pointer 1
+                                        :type ("leveldb::DB" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1392 1409])
+                                    ("iter_" variable
+                                       (:pointer 1
+                                        :type ("leveldb::Iterator" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1412 1437])
+                                    ("write_options_" variable (:type ("leveldb::WriteOptions" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1440 1477])
+                                    ("need_send_list_mutex_" variable (:type ("std::mutex" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1481 1514])
+                                    ("need_send_list_cond_" variable (:type ("std::condition_variable" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1517 1562])
+                                    ("need_send_list_" variable (:type ("std::set" type
+                                         (:template-specifier 
+                                            ( ("std::string" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [1565 1603])
+                                    ("options_" variable (:type ("yd::dsp::logger::LoggerOptions" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1607 1647])
+                                    ("kafka_client_" variable
+                                       (:pointer 1
+                                        :type ("KafkaSender" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1650 1677])
+                                    ("kafka_poll_thread_" variable (:type ("std::shared_ptr" type
+                                         (:template-specifier 
+                                            ( ("std::thread" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [1680 1728])
+                                    ("stop_" variable (:type "bool") (reparse-symbol classsubparts) [1731 1742])
+                                    ("need_recover_" variable (:type "bool") (reparse-symbol classsubparts) [1745 1764])
+                                    ("last_resend_count_" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1767 1794])
+                                    ("batch_send_count_" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1797 1824])
+                                    ("batch_send_interval_" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1827 1856])
+                                    ("func_" variable (:type ("timepartition_func" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1860 1885]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [613 1888]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [494 1891]))                  
+                :type "namespace")
+                nil [479 1911]))          
+      :file "logger_impl.h"
+      :pointmax 2004
+      :fsize 2029
+      :lastmodtime '(22840 64121 0 0)
+      :unmatched-syntax '((EXPLICIT 643 . 651) (TYPEDEF 529 . 536))
+      :lexical-table 
+        '(("DSP_LOGGER_LOGGER_IMPL_H_")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("DSP_LOGGER_KAFKA_SENDER_H_" variable (:constant-flag t) nil [119 145])
+            ("stdint.h" include (:system-flag t) nil [147 166])
+            ("string" include (:system-flag t) nil [167 184])
+            ("set" include (:system-flag t) nil [185 199])
+            ("mutex" include (:system-flag t) nil [200 216])
+            ("condition_variable" include (:system-flag t) nil [217 246])
+            ("thirdparty/librdkafka/src/rdkafka.h" include (:typemodifiers ("extern" "\"C\"")) (reparse-symbol extern-c-contents) [311 357])
+            ("thirdparty/librdkafka/src/rdkafka_int.h" include (:typemodifiers ("extern" "\"C\"")) (reparse-symbol extern-c-contents) [260 310])
+            ("google" type
+               (:members 
+                  ( ("protobuf" type
+                       (:members 
+                          ( ("Message" type
+                               (:prototype t
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [401 415]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [380 417]))                  
+                :type "namespace")
+                nil [361 419])
+            ("yd" type
+               (:members 
+                  ( ("dsp" type
+                       (:members 
+                          ( ("kafka_state" type
+                               (:typedef ("" type
+                                     (:members 
+                                        ( ("KAFKA_STATE_DOWN" variable
+                                             (:constant-flag t
+                                              :type "int")
+                                              (reparse-symbol enumsubparts) [674 691])
+                                          ("KAFKA_STATE_UP" variable
+                                             (:constant-flag t
+                                              :type "int")
+                                              (reparse-symbol enumsubparts) [694 710]))                                        
+                                      :type "enum")
+                                      nil nil)
+                                :type "typedef")
+                                (reparse-symbol namespacesubparts) [657 723])
+                            ("KafkaSender" type
+                               (:members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [746 753])
+                                    ("KafkaSender" function
+                                       (:prototype-flag t
+                                        :constructor-flag t
+                                        :type ("KafkaSender" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [756 770])
+                                    ("KafkaSender" function
+                                       (:prototype-flag t
+                                        :destructor-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [773 788])
+                                    ("InitRdkafka" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("broker_list" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [838 869])
+                                            ("topic" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [870 895])
+                                            ("batch_send_count" variable (:type "int") (reparse-symbol arg-sub-list) [918 939])
+                                            ("batch_send_interval" variable (:type "int") (reparse-symbol arg-sub-list) [940 964])
+                                            ("batch_delete_count" variable (:type "int") (reparse-symbol arg-sub-list) [987 1010])
+                                            ("batch_delete_interval" variable (:type "int") (reparse-symbol arg-sub-list) [1011 1037]))                                          
+                                        :type ("int32_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [818 1038])
+                                    ("Send" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("id" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1055 1067])
+                                            ("msg" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("google::protobuf::Message" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1083 1120]))                                          
+                                        :type ("int32_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1042 1121])
+                                    ("Send" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("id" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1137 1149])
+                                            ("data" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1165 1189]))                                          
+                                        :type ("int32_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1124 1190])
+                                    ("MsgDelivered" function
+                                       (:prototype-flag t
+                                        :typemodifiers ("static")
+                                        :arguments 
+                                          ( ("rk" variable
+                                               (:pointer 1
+                                                :type ("rd_kafka_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1257 1272])
+                                            ("payload" variable
+                                               (:pointer 1
+                                                :type "void")
+                                                (reparse-symbol arg-sub-list) [1273 1287])
+                                            ("len" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1288 1299])
+                                            ("error_code" variable (:type ("rd_kafka_resp_err_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1327 1358])
+                                            ("opaque" variable
+                                               (:pointer 1
+                                                :type "void")
+                                                (reparse-symbol arg-sub-list) [1359 1372])
+                                            ("msg_opaque" variable
+                                               (:pointer 1
+                                                :type "void")
+                                                (reparse-symbol arg-sub-list) [1400 1417]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1232 1418])
+                                    ("RdkafkaLogger" function
+                                       (:prototype-flag t
+                                        :typemodifiers ("static")
+                                        :arguments 
+                                          ( ("rk" variable
+                                               (:pointer 1
+                                                :constant-flag t
+                                                :type ("rd_kafka_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1448 1469])
+                                            ("level" variable (:type "int") (reparse-symbol arg-sub-list) [1470 1480])
+                                            ("fac" variable
+                                               (:pointer 1
+                                                :constant-flag t
+                                                :type "char")
+                                                (reparse-symbol arg-sub-list) [1509 1525])
+                                            ("buf" variable
+                                               (:pointer 1
+                                                :constant-flag t
+                                                :type "char")
+                                                (reparse-symbol arg-sub-list) [1526 1542]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1422 1543])
+                                    ("WaitHadSendList" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("result" variable
+                                               (:reference 1
+                                                :type ("std::set" type
+                                                     (:template-specifier 
+                                                        ( ("uint64_t" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [1568 1595]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1547 1596])
+                                    ("WaitResendList" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("result" variable
+                                               (:reference 1
+                                                :type ("std::set" type
+                                                     (:template-specifier 
+                                                        ( ("uint64_t" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [1619 1646]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1599 1647])
+                                    ("Run" function
+                                       (:prototype-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1651 1662])
+                                    ("Stop" function
+                                       (:prototype-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1666 1678])
+                                    ("WaitSendList" function
+                                       (:prototype-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1682 1702])
+                                    ("PostSendList" function
+                                       (:prototype-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1705 1725])
+                                    ("private" label nil (reparse-symbol classsubparts) [1728 1736])
+                                    ("CloseRdkafka" function
+                                       (:prototype-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1739 1759])
+                                    ("private" label nil (reparse-symbol classsubparts) [1762 1770])
+                                    ("rdkafka_handle_" variable
+                                       (:pointer 1
+                                        :type ("rd_kafka_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1791 1819])
+                                    ("rdkafka_topic_handle_" variable
+                                       (:pointer 1
+                                        :type ("rd_kafka_topic_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1847 1887])
+                                    ("brokerlist_" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2078 2102])
+                                    ("topic_" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2123 2142])
+                                    ("kafka_conf_" variable
+                                       (:pointer 1
+                                        :type ("rd_kafka_conf_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [2171 2200])
+                                    ("topic_conf_" variable
+                                       (:pointer 1
+                                        :type ("rd_kafka_topic_conf_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [2235 2270])
+                                    ("partition_" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2295 2315])
+                                    ("msg_id_" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2335 2352])
+                                    ("round_msg_cnt_" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2417 2441])
+                                    ("round_msg_not_sent_" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2495 2524])
+                                    ("kafka_state_" variable (:type ("kafka_state" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2528 2553])
+                                    ("failure_threshold_" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2619 2647])
+                                    ("resend_list_" variable (:type ("std::set" type
+                                         (:template-specifier 
+                                            ( ("uint64_t" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [2691 2723])
+                                    ("resend_list_mutex_" variable (:type ("std::mutex" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2726 2756])
+                                    ("resend_list_cond_" variable (:type ("std::condition_variable" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2759 2801])
+                                    ("had_send_list_mutex_" variable (:type ("std::mutex" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2805 2837])
+                                    ("had_send_list_cond_" variable (:type ("std::condition_variable" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2840 2884])
+                                    ("had_send_list_" variable (:type ("std::set" type
+                                         (:template-specifier 
+                                            ( ("uint64_t" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [2887 2921])
+                                    ("batch_send_count_" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2925 2952])
+                                    ("batch_send_interval_" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2955 2984])
+                                    ("batch_delete_count_" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2988 3017])
+                                    ("batch_delete_interval_" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3020 3051])
+                                    ("stop_" variable (:type "bool") (reparse-symbol classsubparts) [3055 3066]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [725 3069]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [436 3072]))                  
+                :type "namespace")
+                nil [421 3092]))          
+      :file "kafka_sender.h"
+      :pointmax 3184
+      :fsize 3183
+      :lastmodtime '(22875 14484 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("DSP_LOGGER_KAFKA_SENDER_H_")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("DSP_LOGGER_LOGGER_H_" variable (:constant-flag t) nil [171 191])
+            ("string" include (:system-flag t) nil [193 210])
+            ("memory" include (:system-flag t) nil [211 228])
+            ("google" type
+               (:members 
+                  ( ("protobuf" type
+                       (:members 
+                          ( ("Message" type
+                               (:prototype t
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [270 284]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [249 286]))                  
+                :type "namespace")
+                nil [230 311])
+            ("yd" type
+               (:members 
+                  ( ("dsp" type
+                       (:members 
+                          ( ("LoggerAgent" type
+                               (:prototype t
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [366 384])
+                            ("Logger" type
+                               (:members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [402 409])
+                                    ("Logger" function
+                                       (:prototype-flag t
+                                        :constructor-flag t
+                                        :type ("Logger" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [412 421])
+                                    ("Logger" function
+                                       (:prototype-flag t
+                                        :destructor-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [424 434])
+                                    ("Init" function
+                                       (:prototype-flag t
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [438 449])
+                                    ("Log" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("data" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [461 485]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [452 486])
+                                    ("Log" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("message" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("google::protobuf::Message" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [498 539]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [489 540])
+                                    ("private" label nil (reparse-symbol classsubparts) [543 551])
+                                    ("logger_agent_" variable (:type ("std::unique_ptr" type
+                                         (:template-specifier 
+                                            ( ("LoggerAgent" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [554 597]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [386 600]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [349 603]))                  
+                :type "namespace")
+                nil [334 623]))          
+      :file "logger.h"
+      :pointmax 674
+      :fsize 721
+      :lastmodtime '(22840 64121 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("DSP_LOGGER_LOGGER_H_")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("DSP_LOGGER_LOGGER_AGENT_H_" variable (:constant-flag t) nil [119 145])
+            ("stdint.h" include (:system-flag t) nil [146 165])
+            ("string" include (:system-flag t) nil [166 183])
+            ("thread" include (:system-flag t) nil [184 201])
+            ("dsp/logger/logger_option.pb.h" include nil nil [202 242])
+            ("google" type
+               (:members 
+                  ( ("protobuf" type
+                       (:members 
+                          ( ("Message" type
+                               (:prototype t
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [283 297]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [262 299]))                  
+                :type "namespace")
+                nil [243 324])
+            ("yd" type
+               (:members 
+                  ( ("dsp" type
+                       (:members 
+                          ( ("timepartition_func" function
+                               (:prototype-flag t
+                                :function-pointer t
+                                :arguments 
+                                  ( ("data" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [435 459]))                                  
+                                :type ("int32_t" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [405 460])
+                            ("LoggerImpl" type
+                               (:prototype t
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [462 479])
+                            ("LoggerAgent" type
+                               (:members 
+                                  ( ("private" label nil (reparse-symbol classsubparts) [501 509])
+                                    ("kMaxOpenFileNumber" variable
+                                       (:typemodifiers ("static")
+                                        :constant-flag t
+                                        :default-value "256"
+                                        :type ("int32_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [568 614])
+                                    ("kBatchSendCount" variable
+                                       (:typemodifiers ("static")
+                                        :constant-flag t
+                                        :default-value "100"
+                                        :type ("int32_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [673 716])
+                                    ("kBatchSendInterval" variable
+                                       (:typemodifiers ("static")
+                                        :constant-flag t
+                                        :default-value "50"
+                                        :type ("int32_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [719 764])
+                                    ("kBatchDeleteCount" variable
+                                       (:typemodifiers ("static")
+                                        :constant-flag t
+                                        :default-value "100"
+                                        :type ("int32_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [774 819])
+                                    ("kBatchDeleteInterval" variable
+                                       (:typemodifiers ("static")
+                                        :constant-flag t
+                                        :default-value "50"
+                                        :type ("int32_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [822 869])
+                                    ("public" label nil (reparse-symbol classsubparts) [879 886])
+                                    ("LoggerAgent" function
+                                       (:prototype-flag t
+                                        :constructor-flag t
+                                        :arguments 
+                                          ( ("options" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("yd::dsp::logger::LoggerOptions" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [910 956])
+                                            ("func" variable
+                                               (:default-value "nullptr"
+                                                :type ("timepartition_func" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [961 994]))                                          
+                                        :type ("LoggerAgent" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [898 996])
+                                    ("LoggerAgent" function
+                                       (:prototype-flag t
+                                        :destructor-flag t
+                                        :typemodifiers ("virtual")
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [999 1022])
+                                    ("Initialize" function
+                                       (:prototype-flag t
+                                        :type ("int32_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1026 1047])
+                                    ("Logger" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("data" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1063 1087]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1051 1088])
+                                    ("Logger" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("msg" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("google::protobuf::Message" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1103 1140]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1091 1141])
+                                    ("private" label nil (reparse-symbol classsubparts) [1144 1152])
+                                    ("CheckOptionValid" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("options" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("yd::dsp::logger::LoggerOptions" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1177 1223]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [1155 1224])
+                                    ("private" label nil (reparse-symbol classsubparts) [1227 1235])
+                                    ("impl_" variable
+                                       (:pointer 1
+                                        :type ("LoggerImpl" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1238 1256])
+                                    ("options_" variable (:type ("yd::dsp::logger::LoggerOptions" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1259 1299])
+                                    ("logger_send_thread_" variable (:type ("std::shared_ptr" type
+                                         (:template-specifier 
+                                            ( ("std::thread" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [1302 1351])
+                                    ("logger_resend_thread_" variable (:type ("std::shared_ptr" type
+                                         (:template-specifier 
+                                            ( ("std::thread" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [1354 1405])
+                                    ("logger_delete_thread_" variable (:type ("std::shared_ptr" type
+                                         (:template-specifier 
+                                            ( ("std::thread" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [1408 1459])
+                                    ("logger_stat_thread_" variable (:type ("std::shared_ptr" type
+                                         (:template-specifier 
+                                            ( ("std::thread" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [1462 1511])
+                                    ("timepartition_func_" variable (:type ("timepartition_func" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1514 1553]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [480 1556]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [362 1559]))                  
+                :type "namespace")
+                nil [347 1579]))          
+      :file "logger_agent.h"
+      :pointmax 1676
+      :fsize 1701
+      :lastmodtime '(22840 64121 0 0)
+      :unmatched-syntax '((EXPLICIT 889 . 897) (punctuation 669 . 670) (number 665 . 669) (punctuation 664 . 665) (number 660 . 664) (punctuation 659 . 660) (number 657 . 659) (punctuation 655 . 656) (symbol 638 . 654) (symbol 630 . 637) (CONST 624 . 629) (STATIC 617 . 623) (punctuation 564 . 565) (number 560 . 564) (punctuation 559 . 560) (number 555 . 559) (punctuation 554 . 555) (number 552 . 554) (punctuation 550 . 551) (symbol 533 . 549) (symbol 525 . 532) (CONST 519 . 524) (STATIC 512 . 518) (TYPEDEF 397 . 404))
+      :lexical-table 
+        '(("DSP_LOGGER_LOGGER_AGENT_H_")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("dsp/logger/logger.h" include nil nil [73 103])
+            ("thirdparty/gflags/gflags.h" include nil nil [105 142])
+            ("thirdparty/glog/logging.h" include nil nil [143 179])
+            ("thirdparty/protobuf/message.h" include nil nil [180 220])
+            ("dsp/common/load_protobuf_data.h" include nil nil [221 263])
+            ("dsp/logger/logger_agent.h" include nil nil [264 300])
+            ("DEFINE_bool" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("logger_use_glog" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [314 330])
+                    ("" variable (:type ("false" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [331 337]))                  
+                :type "int")
+                nil [302 365])
+            ("DEFINE_string" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("logger_config_file_path" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [380 404]))                  
+                :type "int")
+                nil [366 436])
+            ("DEFINE_int32" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("logger_v" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [450 459]))                  
+                :type "int")
+                nil [437 493])
+            ("yd" type
+               (:members 
+                  ( ("dsp" type
+                       (:members 
+                          ( ("Logger" function
+                               (:constructor-flag t
+                                :parent "Logger"
+                                :type ("Logger" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [527 547])
+                            ("Logger" function
+                               (:destructor-flag t
+                                :parent "Logger"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [549 570])
+                            ("Init" function
+                               (:parent "Logger"
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [572 1053])
+                            ("Log" function
+                               (:parent "Logger"
+                                :arguments 
+                                  ( ("data" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1072 1096]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [1055 1318])
+                            ("Log" function
+                               (:parent "Logger"
+                                :arguments 
+                                  ( ("message" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("google::protobuf::Message" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1337 1378]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [1320 1620]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [510 1623]))                  
+                :type "namespace")
+                nil [495 1643]))          
+      :file "logger.cc"
+      :pointmax 1661
+      :fsize 1663
+      :lastmodtime '(22877 46653 0 0)
+      :unmatched-syntax '((string 464 . 491) (number 460 . 462) (string 409 . 434) (string 405 . 407) (string 338 . 363)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("signal.h" include (:system-flag t) nil [76 95])
+            ("errno.h" include (:system-flag t) nil [96 114])
+            ("thread" include (:system-flag t) nil [115 132])
+            ("chrono" include (:system-flag t) nil [172 189])
+            ("set" include (:system-flag t) nil [222 236])
+            ("string" include (:system-flag t) nil [237 254])
+            ("thirdparty/protobuf/message.h" include nil nil [255 295])
+            ("thirdparty/glog/logging.h" include nil nil [296 332])
+            ("dsp/logger/kafka_sender.h" include nil nil [333 369])
+            ("google" using (:type ("google" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [371 394])
+            ("google::protobuf" using (:type ("google::protobuf" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [395 428])
+            ("DECLARE_int32" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("logger_v" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [443 452]))                  
+                :type "int")
+                nil [429 453])
+            ("DEFINE_bool" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("use_gzip_compression" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [466 487])
+                    ("" variable (:type ("true" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [488 493]))                  
+                :type "int")
+                nil [454 518])
+            ("yd" type
+               (:members 
+                  ( ("dsp" type
+                       (:members 
+                          ( ("KafkaSender" function
+                               (:constructor-flag t
+                                :parent "KafkaSender"
+                                :type ("KafkaSender" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [551 906])
+                            ("KafkaSender" function
+                               (:destructor-flag t
+                                :parent "KafkaSender"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [908 957])
+                            ("InitRdkafka" function
+                               (:parent "KafkaSender"
+                                :arguments 
+                                  ( ("broker_list" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [992 1023])
+                                    ("topic" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1057 1082])
+                                    ("batch_send_count" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1116 1141])
+                                    ("batch_send_interval" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1175 1203])
+                                    ("batch_delete_count" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1237 1264])
+                                    ("batch_delete_interval" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1298 1328]))                                  
+                                :type ("int32_t" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [959 4163])
+                            ("Send" function
+                               (:parent "KafkaSender"
+                                :arguments 
+                                  ( ("id" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4191 4203])
+                                    ("msg" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("google::protobuf::Message" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4230 4267]))                                  
+                                :type ("int32_t" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [4165 4585])
+                            ("Send" function
+                               (:parent "KafkaSender"
+                                :arguments 
+                                  ( ("id" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4613 4625])
+                                    ("data" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4652 4676]))                                  
+                                :type ("int32_t" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [4587 6085])
+                            ("MsgDelivered" function
+                               (:parent "KafkaSender"
+                                :arguments 
+                                  ( ("rk" variable
+                                       (:pointer 1
+                                        :type ("rd_kafka_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [6154 6169])
+                                    ("payload" variable
+                                       (:pointer 1
+                                        :type "void")
+                                        (reparse-symbol arg-sub-list) [6170 6184])
+                                    ("len" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6185 6196])
+                                    ("error_code" variable (:type ("rd_kafka_resp_err_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6228 6259])
+                                    ("opaque" variable
+                                       (:pointer 1
+                                        :type "void")
+                                        (reparse-symbol arg-sub-list) [6260 6273])
+                                    ("msg_opaque" variable
+                                       (:pointer 1
+                                        :type "void")
+                                        (reparse-symbol arg-sub-list) [6305 6322]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [6123 7382])
+                            ("RdkafkaLogger" function
+                               (:parent "KafkaSender"
+                                :arguments 
+                                  ( ("rk" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("rd_kafka_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [7417 7438])
+                                    ("level" variable (:type "int") (reparse-symbol arg-sub-list) [7439 7449])
+                                    ("fac" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [7482 7498])
+                                    ("buf" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [7499 7515]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [7385 7908])
+                            ("WaitHadSendList" function
+                               (:parent "KafkaSender"
+                                :arguments 
+                                  ( ("result" variable
+                                       (:reference 1
+                                        :type ("std::set" type
+                                             (:template-specifier 
+                                                ( ("uint64_t" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [7944 7971]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [7910 8314])
+                            ("WaitResendList" function
+                               (:parent "KafkaSender"
+                                :arguments 
+                                  ( ("result" variable
+                                       (:reference 1
+                                        :type ("std::set" type
+                                             (:template-specifier 
+                                                ( ("uint64_t" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [8349 8376]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [8316 8697])
+                            ("Run" function
+                               (:parent "KafkaSender"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [8699 8926])
+                            ("CloseRdkafka" function
+                               (:parent "KafkaSender"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [8928 9217])
+                            ("Stop" function
+                               (:parent "KafkaSender"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [9219 9263]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [534 9265]))                  
+                :type "namespace")
+                nil [519 9285]))          
+      :file "kafka_sender.cpp"
+      :pointmax 9337
+      :fsize 9336
+      :lastmodtime '(22875 15329 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("string" include (:system-flag t) nil [76 93])
+            ("thread" include (:system-flag t) nil [94 111])
+            ("dsp/logger/logger_agent.h" include nil nil [113 149])
+            ("dsp/logger/logger_impl.h" include nil nil [150 185])
+            ("dsp/proto/log/log.pb.h" include nil nil [186 219])
+            ("dsp/common/datetime_utility.h" include nil nil [220 260])
+            ("DEFINE_int32" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("write_buffer_size" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [275 293]))                  
+                :type "int")
+                nil [262 330])
+            ("DEFINE_int32" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("cache_buffer_size" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [344 362]))                  
+                :type "int")
+                nil [331 399])
+            ("yd" type
+               (:members 
+                  ( ("dsp" type
+                       (:members 
+                          ( ("log_timepartition" function
+                               (:arguments 
+                                  ( ("data" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [458 482]))                                  
+                                :type ("int32_t" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [432 757])
+                            ("LoggerAgent" function
+                               (:constructor-flag t
+                                :parent "LoggerAgent"
+                                :arguments 
+                                  ( ("options" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("yd::dsp::logger::LoggerOptions" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [784 830])
+                                    ("func" variable (:type ("timepartition_func" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [833 857]))                                  
+                                :type ("LoggerAgent" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [759 2185])
+                            ("LoggerAgent" function
+                               (:destructor-flag t
+                                :parent "LoggerAgent"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [2187 2830])
+                            ("RunSendBackgroup" function
+                               (:typemodifiers ("static")
+                                :arguments 
+                                  ( ("logger" variable
+                                       (:pointer 1
+                                        :type ("LoggerImpl" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2861 2880]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [2832 2911])
+                            ("RunResendBackgroup" function
+                               (:typemodifiers ("static")
+                                :arguments 
+                                  ( ("logger" variable
+                                       (:pointer 1
+                                        :type ("LoggerImpl" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2944 2963]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [2913 2996])
+                            ("RunDeleteBackgroup" function
+                               (:typemodifiers ("static")
+                                :arguments 
+                                  ( ("logger" variable
+                                       (:pointer 1
+                                        :type ("LoggerImpl" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3029 3048]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [2998 3081])
+                            ("RunStatBackgroup" function
+                               (:typemodifiers ("static")
+                                :arguments 
+                                  ( ("logger" variable
+                                       (:pointer 1
+                                        :type ("LoggerImpl" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3112 3131]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [3083 3153])
+                            ("Initialize" function
+                               (:parent "LoggerAgent"
+                                :type ("int32_t" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [3155 3642])
+                            ("Logger" function
+                               (:parent "LoggerAgent"
+                                :arguments 
+                                  ( ("data" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3669 3693]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [3644 3720])
+                            ("Logger" function
+                               (:parent "LoggerAgent"
+                                :arguments 
+                                  ( ("msg" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("google::protobuf::Message" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3747 3784]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [3722 3810])
+                            ("CheckOptionValid" function
+                               (:parent "LoggerAgent"
+                                :arguments 
+                                  ( ("options" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("yd::dsp::logger::LoggerOptions" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3852 3898]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [3812 4535]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [415 4538]))                  
+                :type "namespace")
+                nil [400 4558]))          
+      :file "logger_agent.cpp"
+      :pointmax 4610
+      :fsize 4599
+      :lastmodtime '(22876 48485 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!ric!Downloads!trunk!dsp!logger!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

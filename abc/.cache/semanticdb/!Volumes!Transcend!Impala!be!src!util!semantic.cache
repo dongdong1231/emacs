@@ -1,0 +1,1684 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("IMPALA_RLE_ENCODING_H" variable (:constant-flag t) nil [841 862])
+            ("math.h" include (:system-flag t) nil [864 881])
+            ("common/compiler-util.h" include nil nil [883 916])
+            ("util/bit-stream-utils.inline.h" include nil nil [917 958])
+            ("util/bit-util.h" include nil nil [959 985])
+            ("impala" type
+               (:members 
+                  ( ("RleDecoder" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [3803 3810])
+                            ("RleDecoder" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("buffer" variable
+                                       (:pointer 1
+                                        :type ("uint8_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3956 3972])
+                                    ("buffer_len" variable (:type "int") (reparse-symbol arg-sub-list) [3973 3988])
+                                    ("bit_width" variable (:type "int") (reparse-symbol arg-sub-list) [3989 4003]))                                  
+                                :type ("RleDecoder" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3945 4232])
+                            ("RleDecoder" function
+                               (:constructor-flag t
+                                :type ("RleDecoder" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4236 4268])
+                            ("Reset" function
+                               (:arguments 
+                                  ( ("buffer" variable
+                                       (:pointer 1
+                                        :type ("uint8_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4283 4299])
+                                    ("buffer_len" variable (:type "int") (reparse-symbol arg-sub-list) [4300 4315])
+                                    ("bit_width" variable (:type "int") (reparse-symbol arg-sub-list) [4316 4330]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [4272 4558])
+                            ("Get" function
+                               (:template 
+                                  ( ("T" type (:type "class") nil nil))                                  
+                                :type "bool"
+                                :arguments 
+                                  ( ("val" variable
+                                       (:pointer 1
+                                        :type ("T" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4658 4665]))                                  
+                                :prototype-flag t)
+                                (reparse-symbol classsubparts) [4626 4666])
+                            ("protected" label nil (reparse-symbol classsubparts) [4669 4679])
+                            ("NextCounts" function
+                               (:template 
+                                  ( ("T" type (:type "class") nil nil))                                  
+                                :type "bool"
+                                :prototype-flag t)
+                                (reparse-symbol classsubparts) [4787 4828])
+                            ("bit_reader_" variable (:type ("BitReader" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4832 4854])
+                            ("bit_width_" variable (:type "int") (reparse-symbol classsubparts) [4932 4947])
+                            ("current_value_" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4950 4974])
+                            ("repeat_count_" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4977 5000])
+                            ("literal_count_" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5003 5027]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [3783 5030])
+                    ("RleEncoder" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [5546 5553])
+                            ("RleEncoder" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("buffer" variable
+                                       (:pointer 1
+                                        :type ("uint8_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5965 5981])
+                                    ("buffer_len" variable (:type "int") (reparse-symbol arg-sub-list) [5982 5997])
+                                    ("bit_width" variable (:type "int") (reparse-symbol arg-sub-list) [5998 6012]))                                  
+                                :type ("RleEncoder" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [5954 6291])
+                            ("MinBufferSize" function
+                               (:typemodifiers ("static")
+                                :arguments 
+                                  ( ("bit_width" variable (:type "int") (reparse-symbol arg-sub-list) [6528 6542]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [6503 6955])
+                            ("MaxBufferSize" function
+                               (:typemodifiers ("static")
+                                :arguments 
+                                  ( ("bit_width" variable (:type "int") (reparse-symbol arg-sub-list) [7058 7072])
+                                    ("num_values" variable (:type "int") (reparse-symbol arg-sub-list) [7073 7088]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [7033 7381])
+                            ("Put" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("value" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7535 7550]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [7526 7551])
+                            ("Flush" function
+                               (:prototype-flag t
+                                :type "int")
+                                (reparse-symbol classsubparts) [7662 7674])
+                            ("Clear" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [7721 7734])
+                            ("buffer" function
+                               (:pointer 1
+                                :type ("uint8_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [7781 7831])
+                            ("len" function (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [7834 7887])
+                            ("buffer_full" function
+                               (:methodconst-flag t
+                                :type "bool")
+                                (reparse-symbol classsubparts) [7890 7939])
+                            ("private" label nil (reparse-symbol classsubparts) [7942 7950])
+                            ("FlushBufferedValues" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("done" variable (:type "bool") (reparse-symbol arg-sub-list) [8461 8471]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [8436 8472])
+                            ("FlushLiteralRun" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("update_indicator_byte" variable (:type "bool") (reparse-symbol arg-sub-list) [8661 8688]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [8640 8689])
+                            ("FlushRepeatedRun" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [8748 8772])
+                            ("CheckBufferFull" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [8929 8952])
+                            ("MAX_VALUES_PER_LITERAL_RUN" variable
+                               (:typemodifiers ("static")
+                                :constant-flag t
+                                :default-value "(1 << 6) * 8"
+                                :type "int")
+                                (reparse-symbol classsubparts) [9076 9135])
+                            ("bit_width_" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol classsubparts) [9214 9235])
+                            ("bit_writer_" variable (:type ("BitWriter" type (:type "class") nil nil)) (reparse-symbol classsubparts) [9264 9286])
+                            ("buffer_full_" variable (:type "bool") (reparse-symbol classsubparts) [9358 9376])
+                            ("max_run_byte_size_" variable (:type "int") (reparse-symbol classsubparts) [9431 9454])
+                            ("buffered_values_" variable
+                               (:dereference 1
+                                :type ("int64_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [9636 9664])
+                            ("num_buffered_values_" variable (:type "int") (reparse-symbol classsubparts) [9711 9736])
+                            ("current_value_" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [10007 10030])
+                            ("repeat_count_" variable (:type "int") (reparse-symbol classsubparts) [10033 10051])
+                            ("literal_count_" variable (:type "int") (reparse-symbol classsubparts) [10297 10316])
+                            ("literal_indicator_byte_" variable
+                               (:pointer 1
+                                :type ("uint8_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [10522 10555]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [5526 10558])
+                    ("Get" function
+                       (:parent "RleDecoder"
+                        :typemodifiers ("inline")
+                        :arguments 
+                          ( ("val" variable
+                               (:pointer 1
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [10758 10765]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [10730 11411])
+                    ("NextCounts" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type "bool"
+                        :parent "RleDecoder")
+                        (reparse-symbol namespacesubparts) [11413 12177])
+                    ("Put" function
+                       (:parent "RleEncoder"
+                        :typemodifiers ("inline")
+                        :arguments 
+                          ( ("value" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12363 12378]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [12335 13207])
+                    ("FlushLiteralRun" function
+                       (:parent "RleEncoder"
+                        :typemodifiers ("inline")
+                        :arguments 
+                          ( ("update_indicator_byte" variable (:type "bool") (reparse-symbol arg-sub-list) [13249 13276]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [13209 14392])
+                    ("FlushRepeatedRun" function
+                       (:parent "RleEncoder"
+                        :typemodifiers ("inline")
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [14394 14818])
+                    ("FlushBufferedValues" function
+                       (:parent "RleEncoder"
+                        :typemodifiers ("inline")
+                        :arguments 
+                          ( ("done" variable (:type "bool") (reparse-symbol arg-sub-list) [15016 15026]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [14972 15953])
+                    ("Flush" function
+                       (:parent "RleEncoder"
+                        :typemodifiers ("inline")
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [15955 16897])
+                    ("CheckBufferFull" function
+                       (:parent "RleEncoder"
+                        :typemodifiers ("inline")
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [16899 17095])
+                    ("Clear" function
+                       (:parent "RleEncoder"
+                        :typemodifiers ("inline")
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [17097 17306]))                  
+                :type "namespace")
+                nil [987 17309]))          
+      :file "rle-encoding.h"
+      :pointmax 17317
+      :fsize 17317
+      :lastmodtime '(22941 8952 0 0)
+      :unmatched-syntax '((symbol 10716 . 10729) (punctuation 10714 . 10715) (symbol 10713 . 10714) (TYPENAME 10704 . 10712) (punctuation 10703 . 10704) (TEMPLATE 10694 . 10702))
+      :lexical-table 
+        '(("IMPALA_RLE_ENCODING_H")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :file "bit-stream-utils.inline.h"
+      :fsize 5305
+      :lastmodtime '(22941 8952 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "bit-util.h"
+      :fsize 13892
+      :lastmodtime '(22941 8952 0 0))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("IMPALA_UTIL_FAST_HASH_TABLE_H" variable (:constant-flag t) nil [850 879])
+            ("algorithm" include (:system-flag t) nil [881 901])
+            ("common/status.h" include nil nil [903 929])
+            ("util/bit-util.h" include nil nil [930 956])
+            ("util/hash-util.h" include nil nil [957 984])
+            ("impala" type
+               (:members 
+                  ( ("FixedSizeHashTable" type
+                       (:template 
+                          ( ("K" type (:type "class") nil nil)
+                            ("V" type (:type "class") nil nil))                          
+                        :type "class"
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [2010 2017])
+                            ("FixedSizeHashTable" function
+                               (:constructor-flag t
+                                :type ("FixedSizeHashTable" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2020 2095])
+                            ("Init" function
+                               (:arguments 
+                                  ( ("min_capacity" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2187 2209])
+                                    ("hash_seed" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2210 2229]))                                  
+                                :type ("Status" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2175 2833])
+                            ("FixedSizeHashTable" function
+                               (:destructor-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [2837 2931])
+                            ("Clear" function (:type "void") (reparse-symbol classsubparts) [2998 3105])
+                            ("Find" function
+                               (:methodconst-flag t
+                                :arguments 
+                                  ( ("key" variable
+                                       (:constant-flag t
+                                        :type ("K" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3215 3227])
+                                    ("val" variable
+                                       (:pointer 1
+                                        :type ("V" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3228 3235]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [3204 3364])
+                            ("Insert" function
+                               (:arguments 
+                                  ( ("key" variable
+                                       (:constant-flag t
+                                        :type ("K" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3479 3491])
+                                    ("val" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("V" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3492 3505]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [3467 3656])
+                            ("InsertIfNotPresent" function
+                               (:arguments 
+                                  ( ("key" variable
+                                       (:constant-flag t
+                                        :type ("K" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3801 3813])
+                                    ("val" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("V" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3814 3827]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [3777 4017])
+                            ("FindOrInsert" function
+                               (:pointer 1
+                                :arguments 
+                                  ( ("key" variable
+                                       (:constant-flag t
+                                        :type ("K" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4162 4174])
+                                    ("default_val" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("V" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4175 4196]))                                  
+                                :type ("V" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4146 4401])
+                            ("size" function
+                               (:methodconst-flag t
+                                :type ("uint32_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4405 4444])
+                            ("capacity" function
+                               (:methodconst-flag t
+                                :type ("uint32_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4448 4495])
+                            ("private" label nil (reparse-symbol classsubparts) [4498 4506])
+                            ("Entry" type
+                               (:members 
+                                  ( ("key" variable (:type ("K" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4528 4534])
+                                    ("val" variable (:type ("V" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4539 4545]))                                  
+                                :type "struct")
+                                (reparse-symbol classsubparts) [4509 4550])
+                            ("tbl_" variable
+                               (:pointer 1
+                                :type ("Entry" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4612 4624])
+                            ("capacity_" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4674 4693])
+                            ("size_" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4732 4747])
+                            ("hash_seed_" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4791 4811])
+                            ("FindEntry" function
+                               (:methodconst-flag t
+                                :pointer 1
+                                :arguments 
+                                  ( ("key" variable (:type ("K" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4833 4839]))                                  
+                                :type ("Entry" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4815 5450]))                          )
+                        (reparse-symbol namespacesubparts) [1948 5453]))                  
+                :type "namespace")
+                nil [986 5456]))          
+      :file "fixed-size-hash-table.h"
+      :pointmax 5465
+      :fsize 5464
+      :lastmodtime '(22941 8952 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("IMPALA_UTIL_FAST_HASH_TABLE_H")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :file "hash-util.h"
+      :fsize 9623
+      :lastmodtime '(22941 8952 0 0))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("IMPALA_UTIL_JNI_UTIL_H" variable (:constant-flag t) nil [843 865])
+            ("jni.h" include (:system-flag t) nil [867 883])
+            ("string" include (:system-flag t) nil [884 901])
+            ("vector" include (:system-flag t) nil [902 919])
+            ("common/status.h" include nil nil [921 947])
+            ("gen-cpp/Frontend_types.h" include nil nil [948 983])
+            ("THROW_IF_ERROR_WITH_LOGGING" variable (:constant-flag t) nil [993 1020])
+            ("THROW_IF_ERROR" variable (:constant-flag t) nil [1314 1328])
+            ("THROW_IF_ERROR_RET" variable (:constant-flag t) nil [1543 1561])
+            ("THROW_IF_EXC" variable (:constant-flag t) nil [1787 1799])
+            ("RETURN_IF_EXC" variable (:constant-flag t) nil [2376 2389])
+            ("EXIT_IF_EXC" variable (:constant-flag t) nil [2860 2871])
+            ("RETURN_ERROR_IF_EXC" variable (:constant-flag t) nil [3329 3348])
+            ("getJNIEnv" function
+               (:type ("JNIEnv" type (:type "class") nil nil)
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [3591 3596]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3566 3597])
+            ("impala" type
+               (:members 
+                  ( ("Status" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [3621 3634])
+                    ("JniLocalFrame" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [3956 3963])
+                            ("JniLocalFrame" function
+                               (:constructor-flag t
+                                :type ("JniLocalFrame" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3966 3996])
+                            ("JniLocalFrame" function
+                               (:destructor-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [3999 4064])
+                            ("WARN_UNUSED_RESULT" variable (:type "int") (reparse-symbol classsubparts) [4402 4421])
+                            ("private" label nil (reparse-symbol classsubparts) [4424 4432])
+                            ("env_" variable
+                               (:pointer 1
+                                :type ("JNIEnv" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4435 4448]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [3933 4451])
+                    ("JniMethodDescriptor" type
+                       (:members 
+                          ( ("name" variable
+                               (:constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4579 4602])
+                            ("signature" variable
+                               (:constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4639 4667])
+                            ("method_id" variable
+                               (:pointer 1
+                                :type ("jmethodID" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4698 4719]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [4506 4722])
+                    ("JniUtfCharGuard" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [4849 4856])
+                            ("JniUtfCharGuard" function
+                               (:constructor-flag t
+                                :type ("JniUtfCharGuard" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4910 4951])
+                            ("JniUtfCharGuard" function
+                               (:destructor-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [5009 5108])
+                            ("create" function
+                               (:prototype-flag t
+                                :typemodifiers ("static")
+                                :arguments 
+                                  ( ("env" variable
+                                       (:pointer 1
+                                        :type ("JNIEnv" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5340 5352])
+                                    ("jstr" variable (:type ("jstring" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5353 5366])
+                                    ("out" variable
+                                       (:pointer 1
+                                        :type ("JniUtfCharGuard" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5367 5388]))                                  
+                                :type ("Status" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [5319 5389])
+                            ("get" function
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol classsubparts) [5478 5517])
+                            ("private" label nil (reparse-symbol classsubparts) [5519 5527])
+                            ("env" variable
+                               (:pointer 1
+                                :type ("JNIEnv" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [5530 5542])
+                            ("jstr" variable (:type ("jstring" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5545 5558])
+                            ("utf_chars" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol classsubparts) [5561 5583])
+                            ("DISALLOW_COPY_AND_ASSIGN" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("" variable (:type ("JniUtfCharGuard" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5611 5627]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [5586 5628]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [4824 5631])
+                    ("JniUtil" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [6602 6609])
+                            ("InitLibhdfs" function
+                               (:prototype-flag t
+                                :typemodifiers ("static")
+                                :type "void")
+                                (reparse-symbol classsubparts) [6656 6682])
+                            ("WARN_UNUSED_RESULT" variable (:type "int") (reparse-symbol classsubparts) [6777 6796])
+                            ("ClassExists" function
+                               (:prototype-flag t
+                                :typemodifiers ("static")
+                                :arguments 
+                                  ( ("env" variable
+                                       (:pointer 1
+                                        :type ("JNIEnv" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [7047 7059])
+                                    ("class_str" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [7060 7082]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [7023 7083])
+                            ("MethodExists" function
+                               (:prototype-flag t
+                                :typemodifiers ("static")
+                                :arguments 
+                                  ( ("env" variable
+                                       (:pointer 1
+                                        :type ("JNIEnv" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [7354 7366])
+                                    ("class_ref" variable (:type ("jclass" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7367 7384])
+                                    ("method_str" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [7391 7414])
+                                    ("method_signature" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [7415 7444]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [7329 7445])
+                            ("WARN_UNUSED_RESULT" variable (:type "int") (reparse-symbol classsubparts) [7836 7855])
+                            ("WARN_UNUSED_RESULT" variable (:type "int") (reparse-symbol classsubparts) [8235 8254])
+                            ("LocalToGlobalRef" function
+                               (:template 
+                                  ( ("jobject_subclass" type (:type "class") nil nil))                                  
+                                :type ("Status" type (:type "class") nil nil)
+                                :arguments 
+                                  ( ("env" variable
+                                       (:pointer 1
+                                        :type ("JNIEnv" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [8898 8910])
+                                    ("local_ref" variable (:type ("jobject" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8911 8929])
+                                    ("global_ref" variable
+                                       (:pointer 1
+                                        :type ("jobject_subclass" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [8930 8959]))                                  
+                                :typemodifiers ("static"))
+                                (reparse-symbol classsubparts) [8821 9050])
+                            ("throwable_to_string_id" function
+                               (:typemodifiers ("static")
+                                :type ("jmethodID" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [9054 9131])
+                            ("throwable_to_stack_trace_id" function
+                               (:typemodifiers ("static")
+                                :type ("jmethodID" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [9134 9221])
+                            ("jni_util_class" function
+                               (:typemodifiers ("static")
+                                :type ("jclass" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [9270 9325])
+                            ("internal_exc_class" function
+                               (:typemodifiers ("static")
+                                :type ("jclass" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [9380 9443])
+                            ("WARN_UNUSED_RESULT" variable (:type "int") (reparse-symbol classsubparts) [9766 9785])
+                            ("WARN_UNUSED_RESULT" variable (:type "int") (reparse-symbol classsubparts) [10017 10036])
+                            ("WARN_UNUSED_RESULT" variable (:type "int") (reparse-symbol classsubparts) [10275 10294])
+                            ("WARN_UNUSED_RESULT" variable (:type "int") (reparse-symbol classsubparts) [10614 10633])
+                            ("WARN_UNUSED_RESULT" variable (:type "int") (reparse-symbol classsubparts) [10826 10845])
+                            ("CallJniMethod" function
+                               (:template 
+                                  ( ("T" type (:type "class") nil nil))                                  
+                                :type ("Status" type (:type "class") nil nil)
+                                :arguments 
+                                  ( ("obj" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("jobject" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [11297 11316])
+                                    ("method" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("jmethodID" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [11317 11341])
+                                    ("arg" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("T" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [11342 11355]))                                  
+                                :typemodifiers ("static"))
+                                (reparse-symbol classsubparts) [11245 11691])
+                            ("CallJniMethod" function
+                               (:template 
+                                  ( ("R" type (:type "class") nil nil))                                  
+                                :type ("Status" type (:type "class") nil nil)
+                                :arguments 
+                                  ( ("obj" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("jobject" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [11747 11766])
+                                    ("method" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("jmethodID" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [11767 11791])
+                                    ("response" variable
+                                       (:pointer 1
+                                        :type ("R" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [11792 11804]))                                  
+                                :typemodifiers ("static"))
+                                (reparse-symbol classsubparts) [11695 12159])
+                            ("CallJniMethod" function
+                               (:template 
+                                  ( ("T" type (:type "class") nil nil)
+                                    ("R" type (:type "class") nil nil))                                  
+                                :type ("Status" type (:type "class") nil nil)
+                                :arguments 
+                                  ( ("obj" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("jobject" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [12227 12246])
+                                    ("method" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("jmethodID" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [12247 12271])
+                                    ("arg" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("T" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [12278 12291])
+                                    ("response" variable
+                                       (:pointer 1
+                                        :type ("R" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [12292 12304]))                                  
+                                :typemodifiers ("static"))
+                                (reparse-symbol classsubparts) [12163 12776])
+                            ("CallJniMethod" function
+                               (:template 
+                                  ( ("T" type (:type "class") nil nil)
+                                    ("R" type (:type "class") nil nil))                                  
+                                :type ("Status" type (:type "class") nil nil)
+                                :arguments 
+                                  ( ("obj" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("jobject" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [12844 12863])
+                                    ("method" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("jmethodID" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [12864 12888])
+                                    ("args" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("vector" type
+                                             (:template-specifier 
+                                                ( ("T" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [12895 12917])
+                                    ("response" variable
+                                       (:pointer 1
+                                        :type ("R" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [12918 12930]))                                  
+                                :typemodifiers ("static"))
+                                (reparse-symbol classsubparts) [12780 13822])
+                            ("CallJniMethod" function
+                               (:template 
+                                  ( ("T" type (:type "class") nil nil))                                  
+                                :type ("Status" type (:type "class") nil nil)
+                                :arguments 
+                                  ( ("obj" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("jobject" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [13878 13897])
+                                    ("method" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("jmethodID" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [13898 13922])
+                                    ("arg" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("T" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [13929 13942])
+                                    ("response" variable
+                                       (:pointer 1
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [13943 13965]))                                  
+                                :typemodifiers ("static"))
+                                (reparse-symbol classsubparts) [13826 14619])
+                            ("private" label nil (reparse-symbol classsubparts) [14622 14630])
+                            ("jni_util_cl_" variable
+                               (:typemodifiers ("static")
+                                :type ("jclass" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [14633 14660])
+                            ("internal_exc_cl_" variable
+                               (:typemodifiers ("static")
+                                :type ("jclass" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [14663 14694])
+                            ("throwable_to_string_id_" variable
+                               (:typemodifiers ("static")
+                                :type ("jmethodID" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [14697 14738])
+                            ("throwable_to_stack_trace_id_" variable
+                               (:typemodifiers ("static")
+                                :type ("jmethodID" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [14741 14787])
+                            ("get_jvm_metrics_id_" variable
+                               (:typemodifiers ("static")
+                                :type ("jmethodID" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [14790 14827])
+                            ("get_jvm_threads_id_" variable
+                               (:typemodifiers ("static")
+                                :type ("jmethodID" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [14830 14867]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [6585 14870]))                  
+                :type "namespace")
+                nil [3601 14873]))          
+      :file "jni-util.h"
+      :pointmax 14882
+      :fsize 14881
+      :lastmodtime '(22941 8952 0 0)
+      :unmatched-syntax '((semantic-list 11023 . 11241) (symbol 11004 . 11022) (semantic-list 10951 . 11003) (symbol 10938 . 10951) (symbol 10931 . 10937) (STATIC 10924 . 10930) (semantic-list 10744 . 10825) (symbol 10725 . 10744) (symbol 10718 . 10724) (STATIC 10711 . 10717) (semantic-list 10532 . 10613) (symbol 10519 . 10532) (symbol 10512 . 10518) (STATIC 10505 . 10511) (semantic-list 10190 . 10274) (symbol 10173 . 10190) (symbol 10166 . 10172) (STATIC 10159 . 10165) (semantic-list 9940 . 10016) (symbol 9927 . 9940) (symbol 9920 . 9926) (STATIC 9913 . 9919) (semantic-list 9691 . 9765) (symbol 9673 . 9691) (symbol 9666 . 9672) (STATIC 9659 . 9665) (semantic-list 8175 . 8234) (symbol 8159 . 8175) (symbol 8152 . 8158) (STATIC 8145 . 8151) (semantic-list 7773 . 7835) (symbol 7756 . 7773) (symbol 7749 . 7755) (STATIC 7742 . 7748) (semantic-list 6774 . 6776) (symbol 6770 . 6774) (symbol 6763 . 6769) (STATIC 6756 . 6762) (semantic-list 4364 . 4401) (symbol 4360 . 4364) (symbol 4353 . 4359))
+      :lexical-table 
+        '(("EXIT_IF_EXC" (spp-arg-list ("env") 2871 . 2876) . 
+              ((DO "do" 2881 . 2883) (semantic-list "{ \\
+    jthrowable exc = (env)->ExceptionOccurred(); \\
+    if (exc != NULL) { \\
+      jstring stack = (jstring) env->CallStaticObjectMethod(JniUtil::jni_util_class(), \\
+          (JniUtil::throwable_to_stack_trace_id()), exc); \\
+      jboolean is_copy; \\
+      const char* c_stack = \\
+          reinterpret_cast<const char*>((env)->GetStringUTFChars(stack, &is_copy)); \\
+      LOG(FATAL) << string(c_stack); \\
+    } \\
+  }" 2884 . 3305) (WHILE "while" 3306 . 3311) (semantic-list "(false)" 3312 . 3319)))
+          ("RETURN_ERROR_IF_EXC" (spp-arg-list ("env") 3348 . 3353) . 
+              ((DO "do" 3358 . 3360) (semantic-list "{ \\
+    jthrowable exc = (env)->ExceptionOccurred(); \\
+    if (exc != NULL) return JniUtil::GetJniExceptionMsg(env);\\
+  }" 3361 . 3482) (WHILE "while" 3483 . 3488) (semantic-list "(false)" 3489 . 3496)))
+          ("RETURN_IF_EXC" (spp-arg-list ("env") 2389 . 2394) . 
+              ((DO "do" 2399 . 2401) (semantic-list "{ \\
+    jthrowable exc = (env)->ExceptionOccurred(); \\
+    if (exc != NULL) { \\
+      jstring stack = (jstring) env->CallStaticObjectMethod(JniUtil::jni_util_class(), \\
+          (JniUtil::throwable_to_stack_trace_id()), exc); \\
+      jboolean is_copy; \\
+      const char* c_stack = \\
+          reinterpret_cast<const char*>((env)->GetStringUTFChars(stack, &is_copy)); \\
+      VLOG(1) << string(c_stack); \\
+      return; \\
+    } \\
+  }" 2402 . 2836) (WHILE "while" 2837 . 2842) (semantic-list "(false)" 2843 . 2850)))
+          ("THROW_IF_EXC" (spp-arg-list ("env" "exc_class") 1799 . 1815) . 
+              ((DO "do" 1820 . 1822) (semantic-list "{ \\
+    jthrowable exc = (env)->ExceptionOccurred(); \\
+    if (exc != NULL) { \\
+      DCHECK((throwable_to_string_id_) != NULL); \\
+      jstring stack = (jstring) env->CallStaticObjectMethod(JniUtil::jni_util_class(), \\
+          (JniUtil::throwable_to_stack_trace_id()), exc); \\
+      jboolean is_copy; \\
+      const char* c_stack = \\
+          reinterpret_cast<const char*>((env)->GetStringUTFChars(stack, &is_copy)); \\
+      (env)->ExceptionClear(); \\
+      (env)->ThrowNew((exc_class), c_stack); \\
+      return; \\
+    } \\
+  }" 1823 . 2352) (WHILE "while" 2353 . 2358) (semantic-list "(false)" 2359 . 2366)))
+          ("IMPALA_UTIL_JNI_UTIL_H")
+          ("THROW_IF_ERROR_RET" (spp-arg-list ("stmt" "env" "impala_exc_cl" "ret") 1561 . 1592) . 
+              ((DO "do" 1597 . 1599) (semantic-list "{ \\
+    Status status = (stmt); \\
+    if (!status.ok()) { \\
+      (env)->ThrowNew((impala_exc_cl), status.GetDetail().c_str()); \\
+      return (ret); \\
+    } \\
+  }" 1600 . 1763) (WHILE "while" 1764 . 1769) (semantic-list "(false)" 1770 . 1777)))
+          ("THROW_IF_ERROR_WITH_LOGGING" (spp-arg-list ("stmt" "env" "adaptor") 1020 . 1040) . 
+              ((DO "do" 1045 . 1047) (semantic-list "{ \\
+    Status status = (stmt); \\
+    if (!status.ok()) { \\
+      (adaptor)->WriteErrorLog(); \\
+      (adaptor)->WriteFileErrors(); \\
+      (env)->ThrowNew((adaptor)->impala_exc_cl(), status.GetDetail().c_str()); \\
+      return; \\
+    } \\
+  }" 1048 . 1290) (WHILE "while" 1291 . 1296) (semantic-list "(false)" 1297 . 1304)))
+          ("THROW_IF_ERROR" (spp-arg-list ("stmt" "env" "impala_exc_cl") 1328 . 1354) . 
+              ((DO "do" 1359 . 1361) (semantic-list "{ \\
+    Status status = (stmt); \\
+    if (!status.ok()) { \\
+      (env)->ThrowNew((impala_exc_cl), status.GetDetail().c_str()); \\
+      return; \\
+    } \\
+  }" 1362 . 1519) (WHILE "while" 1520 . 1525) (semantic-list "(false)" 1526 . 1533)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("util/jni-util.h" include nil nil [803 829])
+            ("hdfs.h" include (:system-flag t) nil [831 848])
+            ("sstream" include (:system-flag t) nil [849 867])
+            ("common/status.h" include nil nil [869 895])
+            ("rpc/jni-thrift-util.h" include nil nil [896 928])
+            ("common/names.h" include nil nil [930 955])
+            ("impala" type
+               (:members 
+                  ( ("create" function
+                       (:parent "JniUtfCharGuard"
+                        :arguments 
+                          ( ("env" variable
+                               (:pointer 1
+                                :type ("JNIEnv" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1008 1020])
+                            ("jstr" variable (:type ("jstring" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1021 1034])
+                            ("out" variable
+                               (:pointer 1
+                                :type ("JniUtfCharGuard" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1035 1056]))                          
+                        :type ("Status" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [977 1636])
+                    ("JniUtil::jni_util_cl_" variable
+                       (:default-value "NULL"
+                        :type ("jclass" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [1638 1674])
+                    ("JniUtil::internal_exc_cl_" variable
+                       (:default-value "NULL"
+                        :type ("jclass" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [1675 1715])
+                    ("JniUtil::get_jvm_metrics_id_" variable
+                       (:default-value "NULL"
+                        :type ("jmethodID" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [1716 1762])
+                    ("JniUtil::get_jvm_threads_id_" variable
+                       (:default-value "NULL"
+                        :type ("jmethodID" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [1763 1809])
+                    ("JniUtil::throwable_to_string_id_" variable
+                       (:default-value "NULL"
+                        :type ("jmethodID" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [1810 1860])
+                    ("JniUtil::throwable_to_stack_trace_id_" variable
+                       (:default-value "NULL"
+                        :type ("jmethodID" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [1861 1916])
+                    ("push" function
+                       (:parent "JniLocalFrame"
+                        :arguments 
+                          ( ("env" variable
+                               (:pointer 1
+                                :type ("JNIEnv" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1945 1957])
+                            ("max_local_ref" variable (:type "int") (reparse-symbol arg-sub-list) [1958 1976]))                          
+                        :type ("Status" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [1918 2194])
+                    ("ClassExists" function
+                       (:parent "JniUtil"
+                        :arguments 
+                          ( ("env" variable
+                               (:pointer 1
+                                :type ("JNIEnv" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2222 2234])
+                            ("class_str" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [2235 2257]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [2196 2471])
+                    ("MethodExists" function
+                       (:parent "JniUtil"
+                        :arguments 
+                          ( ("env" variable
+                               (:pointer 1
+                                :type ("JNIEnv" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2500 2512])
+                            ("class_ref" variable (:type ("jclass" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2513 2530])
+                            ("method_str" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [2531 2554])
+                            ("method_signature" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [2559 2588]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [2473 2786])
+                    ("GetGlobalClassRef" function
+                       (:parent "JniUtil"
+                        :arguments 
+                          ( ("env" variable
+                               (:pointer 1
+                                :type ("JNIEnv" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2822 2834])
+                            ("class_str" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [2835 2857])
+                            ("class_ref" variable
+                               (:pointer 1
+                                :type ("jclass" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2858 2876]))                          
+                        :type ("Status" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [2788 3123])
+                    ("LocalToGlobalRef" function
+                       (:parent "JniUtil"
+                        :arguments 
+                          ( ("env" variable
+                               (:pointer 1
+                                :type ("JNIEnv" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3158 3170])
+                            ("local_ref" variable (:type ("jobject" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3171 3189])
+                            ("global_ref" variable
+                               (:pointer 1
+                                :type ("jobject" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3190 3210]))                          
+                        :type ("Status" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [3125 3311])
+                    ("Init" function
+                       (:parent "JniUtil"
+                        :type ("Status" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [3313 6188])
+                    ("InitLibhdfs" function
+                       (:parent "JniUtil"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [6190 6402])
+                    ("GetJniExceptionMsg" function
+                       (:parent "JniUtil"
+                        :arguments 
+                          ( ("env" variable
+                               (:pointer 1
+                                :type ("JNIEnv" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6439 6451])
+                            ("log_stack" variable (:type "bool") (reparse-symbol arg-sub-list) [6452 6467])
+                            ("prefix" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6468 6489]))                          
+                        :type ("Status" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [6404 7270])
+                    ("GetJvmMetrics" function
+                       (:parent "JniUtil"
+                        :arguments 
+                          ( ("request" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TGetJvmMetricsRequest" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7302 7339])
+                            ("result" variable
+                               (:pointer 1
+                                :type ("TGetJvmMetricsResponse" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7344 7375]))                          
+                        :type ("Status" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [7272 7468])
+                    ("GetJvmThreadsInfo" function
+                       (:parent "JniUtil"
+                        :arguments 
+                          ( ("request" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TGetJvmThreadsInfoRequest" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7504 7545])
+                            ("result" variable
+                               (:pointer 1
+                                :type ("TGetJvmThreadsInfoResponse" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7550 7585]))                          
+                        :type ("Status" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [7470 7678])
+                    ("LoadJniMethod" function
+                       (:parent "JniUtil"
+                        :arguments 
+                          ( ("env" variable
+                               (:pointer 1
+                                :type ("JNIEnv" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7710 7722])
+                            ("jni_class" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("jclass" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7723 7747])
+                            ("descriptor" variable
+                               (:pointer 1
+                                :type ("JniMethodDescriptor" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7752 7784]))                          
+                        :type ("Status" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [7680 7960])
+                    ("LoadStaticJniMethod" function
+                       (:parent "JniUtil"
+                        :arguments 
+                          ( ("env" variable
+                               (:pointer 1
+                                :type ("JNIEnv" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7998 8010])
+                            ("jni_class" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("jclass" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [8011 8035])
+                            ("descriptor" variable
+                               (:pointer 1
+                                :type ("JniMethodDescriptor" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [8040 8072]))                          
+                        :type ("Status" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [7962 8254]))                  
+                :type "namespace")
+                nil [957 8256]))          
+      :file "jni-util.cc"
+      :pointmax 8257
+      :fsize 8256
+      :lastmodtime '(22941 8952 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("IMPALA_UTIL_LOGGING_SUPPORT_H" variable (:constant-flag t) nil [849 878])
+            ("util/jni-util.h" include nil nil [880 906])
+            ("gen-cpp/Logging_types.h" include nil nil [907 941])
+            ("impala" type
+               (:members 
+                  ( ("Webserver" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [963 979])
+                    ("InitJvmLoggingSupport" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1195 1224])
+                    ("FlagToTLogLevel" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("flag" variable (:type "int") (reparse-symbol arg-sub-list) [1383 1392]))                          
+                        :type ("TLogLevel::type" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [1351 1393])
+                    ("RegisterLogLevelCallbacks" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("webserver" variable
+                               (:pointer 1
+                                :type ("Webserver" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1647 1668])
+                            ("register_log4j_handlers" variable (:type "bool") (reparse-symbol arg-sub-list) [1669 1698]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1616 1699])
+                    ("LoggingSupport" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [1725 1732])
+                            ("DeleteOldLogs" function
+                               (:prototype-flag t
+                                :typemodifiers ("static")
+                                :arguments 
+                                  ( ("path_pattern" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1950 1982])
+                                    ("max_log_files" variable (:type "int") (reparse-symbol arg-sub-list) [1983 2001]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1924 2002]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [1701 2005]))                  
+                :type "namespace")
+                nil [943 2008]))          
+      :file "logging-support.h"
+      :pointmax 2016
+      :fsize 2015
+      :lastmodtime '(22941 8952 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("IMPALA_UTIL_LOGGING_SUPPORT_H")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("IMPALA_UTIL_DEBUG_UTIL_H" variable (:constant-flag t) nil [844 868])
+            ("ostream" include (:system-flag t) nil [870 888])
+            ("string" include (:system-flag t) nil [889 906])
+            ("sstream" include (:system-flag t) nil [907 925])
+            ("thrift/protocol/TDebugProtocol.h" include (:system-flag t) nil [927 970])
+            ("gen-cpp/JniCatalog_types.h" include nil nil [972 1009])
+            ("gen-cpp/Descriptors_types.h" include nil nil [1010 1048])
+            ("gen-cpp/Exprs_types.h" include nil nil [1049 1081])
+            ("gen-cpp/Frontend_types.h" include nil nil [1082 1117])
+            ("gen-cpp/PlanNodes_types.h" include nil nil [1118 1154])
+            ("gen-cpp/RuntimeProfile_types.h" include nil nil [1155 1196])
+            ("gen-cpp/ImpalaService_types.h" include nil nil [1197 1237])
+            ("gen-cpp/parquet_types.h" include nil nil [1238 1272])
+            ("runtime/descriptors.h" include nil nil [1274 1306])
+            ("impala" type
+               (:members 
+                  ( ("RowDescriptor" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [1346 1366])
+                    ("TableDescriptor" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [1367 1389])
+                    ("TupleDescriptor" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [1390 1412])
+                    ("Tuple" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [1413 1425])
+                    ("TupleRow" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [1426 1441])
+                    ("RowBatch" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [1442 1457])
+                    ("<<" function
+                       (:prototype-flag t
+                        :operator-flag t
+                        :arguments 
+                          ( ("os" variable
+                               (:reference 1
+                                :type ("std::ostream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1484 1501])
+                            ("op" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TFunctionBinaryType::type" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1502 1538]))                          
+                        :type ("std::ostream" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [1459 1539])
+                    ("<<" function
+                       (:prototype-flag t
+                        :operator-flag t
+                        :arguments 
+                          ( ("os" variable
+                               (:reference 1
+                                :type ("std::ostream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1565 1582])
+                            ("id" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TUniqueId" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1583 1603]))                          
+                        :type ("std::ostream" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [1540 1604])
+                    ("<<" function
+                       (:prototype-flag t
+                        :operator-flag t
+                        :arguments 
+                          ( ("os" variable
+                               (:reference 1
+                                :type ("std::ostream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1630 1647])
+                            ("type" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("THdfsFileFormat::type" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1648 1682]))                          
+                        :type ("std::ostream" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [1605 1683])
+                    ("<<" function
+                       (:prototype-flag t
+                        :operator-flag t
+                        :arguments 
+                          ( ("os" variable
+                               (:reference 1
+                                :type ("std::ostream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1709 1726])
+                            ("type" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("THdfsCompression::type" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1727 1762]))                          
+                        :type ("std::ostream" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [1684 1763])
+                    ("<<" function
+                       (:prototype-flag t
+                        :operator-flag t
+                        :arguments 
+                          ( ("os" variable
+                               (:reference 1
+                                :type ("std::ostream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1789 1806])
+                            ("type" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TStmtType::type" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1807 1835]))                          
+                        :type ("std::ostream" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [1764 1836])
+                    ("<<" function
+                       (:prototype-flag t
+                        :operator-flag t
+                        :arguments 
+                          ( ("os" variable
+                               (:reference 1
+                                :type ("std::ostream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1862 1879])
+                            ("type" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TUnit::type" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1880 1904]))                          
+                        :type ("std::ostream" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [1837 1905])
+                    ("<<" function
+                       (:prototype-flag t
+                        :operator-flag t
+                        :arguments 
+                          ( ("os" variable
+                               (:reference 1
+                                :type ("std::ostream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1931 1948])
+                            ("type" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TMetricKind::type" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1949 1979]))                          
+                        :type ("std::ostream" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [1906 1980])
+                    ("<<" function
+                       (:prototype-flag t
+                        :operator-flag t
+                        :arguments 
+                          ( ("os" variable
+                               (:reference 1
+                                :type ("std::ostream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2006 2023])
+                            ("type" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("beeswax::QueryState::type" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2024 2062]))                          
+                        :type ("std::ostream" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [1981 2063])
+                    ("<<" function
+                       (:prototype-flag t
+                        :operator-flag t
+                        :arguments 
+                          ( ("os" variable
+                               (:reference 1
+                                :type ("std::ostream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2089 2106])
+                            ("type" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("parquet::Encoding::type" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2107 2143]))                          
+                        :type ("std::ostream" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [2064 2144])
+                    ("<<" function
+                       (:prototype-flag t
+                        :operator-flag t
+                        :arguments 
+                          ( ("os" variable
+                               (:reference 1
+                                :type ("std::ostream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2170 2187])
+                            ("type" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("parquet::CompressionCodec::type" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2188 2232]))                          
+                        :type ("std::ostream" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [2145 2233])
+                    ("<<" function
+                       (:prototype-flag t
+                        :operator-flag t
+                        :arguments 
+                          ( ("os" variable
+                               (:reference 1
+                                :type ("std::ostream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2259 2276])
+                            ("type" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("parquet::Type::type" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2277 2309]))                          
+                        :type ("std::ostream" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [2234 2310])
+                    ("PrintTuple" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("t" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("Tuple" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2335 2350])
+                            ("d" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TupleDescriptor" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2351 2376]))                          
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [2312 2377])
+                    ("PrintRow" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("row" variable
+                               (:pointer 1
+                                :type ("TupleRow" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2399 2413])
+                            ("d" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("RowDescriptor" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2414 2437]))                          
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [2378 2438])
+                    ("PrintBatch" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("batch" variable
+                               (:pointer 1
+                                :type ("RowBatch" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2462 2478]))                          
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [2439 2479])
+                    ("PrintId" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("id" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TUniqueId" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2500 2520])
+                            ("separator" variable
+                               (:reference 1
+                                :constant-flag t
+                                :default-value "\":\""
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2521 2555]))                          
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [2480 2557])
+                    ("PrintPlanNodeType" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("type" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TPlanNodeType::type" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2588 2620]))                          
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [2558 2621])
+                    ("PrintTCatalogObjectType" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("type" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TCatalogObjectType::type" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2658 2695]))                          
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [2622 2696])
+                    ("PrintTDdlType" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("type" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TDdlType::type" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2723 2750]))                          
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [2697 2751])
+                    ("PrintTCatalogOpType" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("type" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TCatalogOpType::type" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2784 2817]))                          
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [2752 2818])
+                    ("PrintTReplicaPreference" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("type" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TReplicaPreference::type" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2855 2892]))                          
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [2819 2893])
+                    ("PrintTSessionType" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("type" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TSessionType::type" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2924 2955]))                          
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [2894 2956])
+                    ("PrintTStmtType" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("type" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TStmtType::type" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2984 3012]))                          
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [2957 3013])
+                    ("PrintQueryState" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("type" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("beeswax::QueryState::type" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3042 3080]))                          
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [3014 3081])
+                    ("PrintEncoding" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("type" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("parquet::Encoding::type" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3108 3144]))                          
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [3082 3145])
+                    ("PrintAsHex" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("bytes" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [3169 3187])
+                            ("len" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3188 3200]))                          
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [3146 3201])
+                    ("PrintTMetricKind" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("type" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TMetricKind::type" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3231 3261]))                          
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [3202 3262])
+                    ("PrintTUnit" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("type" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TUnit::type" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3286 3310]))                          
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [3263 3311])
+                    ("PrintTImpalaQueryOptions" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("type" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TImpalaQueryOptions::type" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3349 3387]))                          
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [3312 3388])
+                    ("PrintPath" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("tbl_desc" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TableDescriptor" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3493 3525])
+                            ("path" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("SchemaPath" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3526 3549]))                          
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [3471 3550])
+                    ("PrintSubPath" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("tbl_desc" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TableDescriptor" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3656 3688])
+                            ("path" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("SchemaPath" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3689 3712])
+                            ("end_path_idx" variable (:type "int") (reparse-symbol arg-sub-list) [3717 3734]))                          
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [3631 3735])
+                    ("PrintNumericPath" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("path" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("SchemaPath" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3837 3860]))                          
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [3808 3861])
+                    ("PrintThrift" function
+                       (:template 
+                          ( ("ThriftStruct" type (:type "class") nil nil))                          
+                        :type ("std::string" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("t" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("ThriftStruct" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3980 4002]))                          )
+                        (reparse-symbol namespacesubparts) [3924 4053])
+                    ("ParseId" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("s" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4233 4254])
+                            ("id" variable
+                               (:pointer 1
+                                :type ("TUniqueId" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4255 4269]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [4220 4270])
+                    ("GetBuildVersion" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("compact" variable
+                               (:default-value "false"
+                                :type "bool")
+                                (reparse-symbol arg-sub-list) [4490 4510]))                          
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [4462 4512])
+                    ("GetVersionString" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("compact" variable
+                               (:default-value "false"
+                                :type "bool")
+                                (reparse-symbol arg-sub-list) [4613 4633]))                          
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [4584 4635])
+                    ("GetStackTrace" function
+                       (:prototype-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [4807 4835])
+                    ("GetBackendString" function
+                       (:prototype-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [4918 4949])
+                    ("FILE_CHECK" variable (:constant-flag t) (reparse-symbol namespacesubparts) [5416 5426])
+                    ("FILE_CHECK_EQ" variable (:constant-flag t) (reparse-symbol namespacesubparts) [5448 5461])
+                    ("FILE_CHECK_NE" variable (:constant-flag t) (reparse-symbol namespacesubparts) [5492 5505])
+                    ("FILE_CHECK_GT" variable (:constant-flag t) (reparse-symbol namespacesubparts) [5536 5549])
+                    ("FILE_CHECK_LT" variable (:constant-flag t) (reparse-symbol namespacesubparts) [5580 5593])
+                    ("FILE_CHECK_GE" variable (:constant-flag t) (reparse-symbol namespacesubparts) [5624 5637])
+                    ("FILE_CHECK_LE" variable (:constant-flag t) (reparse-symbol namespacesubparts) [5668 5681]))                  
+                :type "namespace")
+                nil [1326 5706]))          
+      :file "debug-util.h"
+      :pointmax 5715
+      :fsize 5714
+      :lastmodtime '(22941 8952 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("FILE_CHECK_GE" (spp-arg-list ("a" "b") 5637 . 5643) . ((symbol "DCHECK_GE" 5644 . 5653) (semantic-list "(a, b)" 5653 . 5659)))
+          ("IMPALA_UTIL_DEBUG_UTIL_H")
+          ("FILE_CHECK_GT" (spp-arg-list ("a" "b") 5549 . 5555) . ((symbol "DCHECK_GT" 5556 . 5565) (semantic-list "(a, b)" 5565 . 5571)))
+          ("FILE_CHECK_LE" (spp-arg-list ("a" "b") 5681 . 5687) . ((symbol "DCHECK_LE" 5688 . 5697) (semantic-list "(a, b)" 5697 . 5703)))
+          ("FILE_CHECK_LT" (spp-arg-list ("a" "b") 5593 . 5599) . ((symbol "DCHECK_LT" 5600 . 5609) (semantic-list "(a, b)" 5609 . 5615)))
+          ("FILE_CHECK_EQ" (spp-arg-list ("a" "b") 5461 . 5467) . ((symbol "DCHECK_EQ" 5468 . 5477) (semantic-list "(a, b)" 5477 . 5483)))
+          ("FILE_CHECK" (spp-arg-list ("a") 5426 . 5429) . ((symbol "DCHECK" 5430 . 5436) (semantic-list "(a)" 5436 . 5439)))
+          ("FILE_CHECK_NE" (spp-arg-list ("a" "b") 5505 . 5511) . ((symbol "DCHECK_NE" 5512 . 5521) (semantic-list "(a, b)" 5521 . 5527)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("IMPALA_SERVICE_SIMPLE_LOGGER_H" variable (:constant-flag t) nil [850 880])
+            ("fstream" include (:system-flag t) nil [882 900])
+            ("boost/thread/mutex.hpp" include (:system-flag t) nil [901 934])
+            ("common/status.h" include nil nil [936 962])
+            ("impala" type
+               (:members 
+                  ( ("SimpleLogger" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [1292 1299])
+                            ("SimpleLogger" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("log_dir_" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1315 1343])
+                                    ("log_file_name_prefix_" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1344 1385])
+                                    ("max_entries_per_file" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1392 1422])
+                                    ("max_log_files" variable
+                                       (:default-value "0"
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1423 1444]))                                  
+                                :type ("SimpleLogger" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1302 1446])
+                            ("Init" function
+                               (:prototype-flag t
+                                :type ("Status" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1660 1674])
+                            ("AppendEntry" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("entry" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1941 1966]))                                  
+                                :type ("Status" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1922 1967])
+                            ("Flush" function
+                               (:prototype-flag t
+                                :type ("Status" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2124 2139])
+                            ("private" label nil (reparse-symbol classsubparts) [2142 2150])
+                            ("log_file_lock_" variable (:type ("boost::mutex" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2220 2248])
+                            ("log_dir_" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2278 2299])
+                            ("log_file_name_prefix_" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2334 2368])
+                            ("num_log_file_entries_" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2476 2507])
+                            ("max_entries_per_file_" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2626 2657])
+                            ("max_log_files_" variable (:type "int") (reparse-symbol classsubparts) [2734 2753])
+                            ("log_file_" variable (:type ("std::ofstream" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2801 2825])
+                            ("log_file_name_" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2857 2884])
+                            ("GenerateLogFileName" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [3054 3081])
+                            ("FlushInternal" function
+                               (:prototype-flag t
+                                :type ("Status" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3202 3225])
+                            ("RotateLogFiles" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [3291 3313]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [1270 3316]))                  
+                :type "namespace")
+                nil [964 3318]))          
+      :file "simple-logger.h"
+      :pointmax 3326
+      :fsize 3325
+      :lastmodtime '(22941 8952 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("IMPALA_SERVICE_SIMPLE_LOGGER_H")
+          )
+))
+  :file "!Volumes!Transcend!Impala!be!src!util!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,136 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode java-mode
+      :tags 
+        '( ("com.yesdat.dereplication" package nil nil [76 109])
+            ("org.apache.hadoop.hbase.client.*" include nil nil [111 151])
+            ("com.yesdat.proto.YDDereplicationConfig.*" include nil nil [152 200])
+            ("DereplicationMain" type
+               (:typemodifiers ("public")
+                :members 
+                  ( ("logger" variable
+                       (:typemodifiers ("private" "static" "final")
+                        :type "Logger")
+                        (reparse-symbol class_member_declaration) [240 319])
+                    ("config" variable
+                       (:typemodifiers ("private" "static")
+                        :type "DereplicationConfig")
+                        (reparse-symbol class_member_declaration) [324 373])
+                    ("kafkaServer" variable
+                       (:typemodifiers ("private" "static")
+                        :type "KafkaServer")
+                        (reparse-symbol class_member_declaration) [378 424])
+                    ("threadPool" variable
+                       (:typemodifiers ("private" "static")
+                        :type "ExecutorService")
+                        (reparse-symbol class_member_declaration) [429 505])
+                    ("checkAndPut" function
+                       (:arguments 
+                          ( ("row" variable
+                               (:dereference 1
+                                :type "byte")
+                                (reparse-symbol formal_parameters) [532 542])
+                            ("family" variable
+                               (:dereference 1
+                                :type "byte")
+                                (reparse-symbol formal_parameters) [568 581])
+                            ("qualifier" variable
+                               (:dereference 1
+                                :type "byte")
+                                (reparse-symbol formal_parameters) [607 623])
+                            ("value" variable
+                               (:dereference 1
+                                :type "byte")
+                                (reparse-symbol formal_parameters) [649 661])
+                            ("put" variable (:type "Put") (reparse-symbol formal_parameters) [687 694]))                          
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [512 696]))                  
+                :type "class")
+                nil [203 700]))          
+      :file "Depulication.java"
+      :pointmax 701
+      :fsize 700
+      :lastmodtime '(22856 34966 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode java-mode
+      :tags 
+        '( ("com.yesdat.dereplication" package nil nil [76 109])
+            ("org.apache.hadoop.hbase.client.*" include nil nil [111 151])
+            ("com.yesdat.proto.YDDereplicationConfig.*" include nil nil [152 200])
+            ("DereplicationLogic" type
+               (:typemodifiers ("public" "abstract")
+                :interfaces ("Runnable")
+                :members 
+                  ( ("Logger" variable
+                       (:typemodifiers ("private" "static" "final")
+                        :type "Logger")
+                        (reparse-symbol class_member_declaration) [269 349])
+                    ("srcTopic" variable
+                       (:typemodifiers ("private")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [354 378])
+                    ("destTopic" variable
+                       (:typemodifiers ("private")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [383 408])
+                    ("log" variable
+                       (:typemodifiers ("private")
+                        :type "DspLog")
+                        (reparse-symbol class_member_declaration) [413 432])
+                    ("DereplicationLogic" function
+                       (:constructor-flag t
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("srcTopic" variable (:type "String") (reparse-symbol formal_parameters) [464 479])
+                            ("destTopic" variable (:type "String") (reparse-symbol formal_parameters) [481 497])
+                            ("log" variable (:type "DspLog") (reparse-symbol formal_parameters) [499 509]))                          )
+                        (reparse-symbol class_member_declaration) [437 613])
+                    ("run" function
+                       (:typemodifiers ("public")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [633 845])
+                    ("GetTableAndRowkey" function
+                       (:typemodifiers ("public" "abstract")
+                        :arguments 
+                          ( ("msg" variable (:type "Message") (reparse-symbol formal_parameters) [890 901])
+                            ("table" variable (:type "String") (reparse-symbol formal_parameters) [903 915])
+                            ("rowKey" variable (:type "String") (reparse-symbol formal_parameters) [917 930]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [851 932]))                  
+                :type "class")
+                nil [202 934]))          
+      :file "DereplicationLogic.java"
+      :pointmax 936
+      :fsize 935
+      :lastmodtime '(22856 37990 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode java-mode
+      :tags 
+        '( ("com.yesdat.dereplication" package nil nil [76 109])
+            ("dsp.log.YdDspLog.*" include nil nil [110 136])
+            ("DspLogDereplicationLogic" type
+               (:typemodifiers ("public")
+                :members 
+                  ( ("GetTableAndRowkey" function
+                       (:arguments 
+                          ( ("msg" variable (:type "com.google.protobuf.Message") (reparse-symbol formal_parameters) [221 252])
+                            ("table" variable (:type "String") (reparse-symbol formal_parameters) [254 266])
+                            ("rowKey" variable (:type "String") (reparse-symbol formal_parameters) [268 281]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [198 487]))                  
+                :type "class")
+                nil [138 491]))          
+      :file "DspLogDereplicationLogic.java"
+      :pointmax 493
+      :fsize 492
+      :lastmodtime '(22857 58305 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!ric!Downloads!trunk!java!com!yesdat!dereplication!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

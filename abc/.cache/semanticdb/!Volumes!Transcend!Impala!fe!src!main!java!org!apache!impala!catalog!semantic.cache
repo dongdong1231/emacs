@@ -1,0 +1,771 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode java-mode
+      :tags 
+        '( ("org.apache.impala.catalog" package nil nil [803 837])
+            ("com.google.common.base.Preconditions" include nil nil [839 883])
+            ("java.util.concurrent.atomic.AtomicBoolean" include nil nil [885 934])
+            ("org.apache.hadoop.fs.Path" include nil nil [936 969])
+            ("org.apache.hadoop.hive.metastore.api.MetaException" include nil nil [970 1028])
+            ("org.apache.hadoop.hive.metastore.api.NoSuchObjectException" include nil nil [1029 1095])
+            ("org.apache.log4j.Logger" include nil nil [1096 1127])
+            ("org.apache.thrift.TException" include nil nil [1128 1164])
+            ("org.apache.impala.catalog.MetaStoreClientPool.MetaStoreClient" include nil nil [1166 1235])
+            ("org.apache.impala.common.ImpalaException" include nil nil [1236 1284])
+            ("org.apache.impala.thrift.TCatalogObject" include nil nil [1285 1332])
+            ("org.apache.impala.thrift.TCatalogObjectType" include nil nil [1333 1384])
+            ("org.apache.impala.thrift.TDataSource" include nil nil [1385 1429])
+            ("org.apache.impala.thrift.TDatabase" include nil nil [1430 1472])
+            ("org.apache.impala.thrift.TFunction" include nil nil [1473 1515])
+            ("org.apache.impala.thrift.TPrivilege" include nil nil [1516 1559])
+            ("org.apache.impala.thrift.TRole" include nil nil [1560 1598])
+            ("org.apache.impala.thrift.TTable" include nil nil [1599 1638])
+            ("org.apache.impala.thrift.TUniqueId" include nil nil [1639 1681])
+            ("org.apache.impala.thrift.TUpdateCatalogCacheRequest" include nil nil [1682 1741])
+            ("org.apache.impala.thrift.TUpdateCatalogCacheResponse" include nil nil [1742 1802])
+            ("ImpaladCatalog" type
+               (:typemodifiers ("public")
+                :superclasses "Catalog"
+                :members 
+                  ( ("LOG" variable
+                       (:typemodifiers ("private" "static" "final")
+                        :type "Logger")
+                        (reparse-symbol class_member_declaration) [3681 3754])
+                    ("INITIAL_CATALOG_SERVICE_ID" variable
+                       (:typemodifiers ("private" "static" "final")
+                        :type "TUniqueId")
+                        (reparse-symbol class_member_declaration) [3757 3839])
+                    ("catalogServiceId_" variable
+                       (:typemodifiers ("private")
+                        :type "TUniqueId")
+                        (reparse-symbol class_member_declaration) [3953 4018])
+                    ("lastSyncedCatalogVersion_" variable
+                       (:typemodifiers ("private")
+                        :type "long")
+                        (reparse-symbol class_member_declaration) [4322 4395])
+                    ("isReady_" variable
+                       (:typemodifiers ("private" "final")
+                        :type "AtomicBoolean")
+                        (reparse-symbol class_member_declaration) [4486 4550])
+                    ("catalogDeltaLog_" variable
+                       (:typemodifiers ("private" "final")
+                        :type "CatalogDeltaLog")
+                        (reparse-symbol class_member_declaration) [4640 4711])
+                    ("catalogUpdateEventNotifier_" variable
+                       (:typemodifiers ("private" "final")
+                        :type "Object")
+                        (reparse-symbol class_member_declaration) [4804 4868])
+                    ("defaultKuduMasterHosts_" variable
+                       (:typemodifiers ("private" "final")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [4996 5041])
+                    ("ImpaladCatalog" function
+                       (:constructor-flag t
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("defaultKuduMasterHosts" variable (:type "String") (reparse-symbol formal_parameters) [5180 5209]))                          )
+                        (reparse-symbol class_member_declaration) [5158 5283])
+                    ("isTopLevelCatalogObject" function
+                       (:typemodifiers ("private")
+                        :arguments 
+                          ( ("catalogObject" variable (:type "TCatalogObject") (reparse-symbol formal_parameters) [5472 5500]))                          
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [5432 5778])
+                    ("updateCatalog" function
+                       (:throws ("CatalogException")
+                        :typemodifiers ("public" "synchronized")
+                        :arguments 
+                          ( ("req" variable (:type "TUpdateCatalogCacheRequest") (reparse-symbol formal_parameters) [6840 6870]))                          
+                        :type "TUpdateCatalogCacheResponse")
+                        (reparse-symbol class_member_declaration) [6773 9379])
+                    ("waitForCatalogUpdate" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("timeoutMs" variable (:type "long") (reparse-symbol formal_parameters) [9701 9715]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [9668 9909])
+                    ("getTable" function
+                       (:throws ("CatalogException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("dbName" variable (:type "String") (reparse-symbol formal_parameters) [10245 10258])
+                            ("tableName" variable (:type "String") (reparse-symbol formal_parameters) [10260 10276]))                          
+                        :type "Table")
+                        (reparse-symbol class_member_declaration) [10223 10848])
+                    ("getTablePath" function
+                       (:throws ("NoSuchObjectException" "MetaException" "TException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("msTbl" variable (:type "org.apache.hadoop.hive.metastore.api.Table") (reparse-symbol formal_parameters) [11351 11399]))                          
+                        :type "Path")
+                        (reparse-symbol class_member_declaration) [11326 12020])
+                    ("addCatalogObject" function
+                       (:throws ("TableLoadingException" "DatabaseNotFoundException")
+                        :typemodifiers ("private")
+                        :arguments 
+                          ( ("catalogObject" variable (:type "TCatalogObject") (reparse-symbol formal_parameters) [12428 12456]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [12398 14556])
+                    ("removeCatalogObject" function
+                       (:typemodifiers ("private")
+                        :arguments 
+                          ( ("catalogObject" variable (:type "TCatalogObject") (reparse-symbol formal_parameters) [15203 15231])
+                            ("currentCatalogUpdateVersion" variable (:type "long") (reparse-symbol formal_parameters) [15239 15271]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [15170 17150])
+                    ("addDb" function
+                       (:typemodifiers ("private")
+                        :arguments 
+                          ( ("thriftDb" variable (:type "TDatabase") (reparse-symbol formal_parameters) [17173 17191])
+                            ("catalogVersion" variable (:type "long") (reparse-symbol formal_parameters) [17193 17212]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [17154 17482])
+                    ("addTable" function
+                       (:throws ("TableLoadingException")
+                        :typemodifiers ("private")
+                        :arguments 
+                          ( ("thriftTable" variable (:type "TTable") (reparse-symbol formal_parameters) [17508 17526])
+                            ("catalogVersion" variable (:type "long") (reparse-symbol formal_parameters) [17528 17547]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [17486 17972])
+                    ("addFunction" function
+                       (:typemodifiers ("private")
+                        :arguments 
+                          ( ("fn" variable (:type "TFunction") (reparse-symbol formal_parameters) [18001 18013])
+                            ("catalogVersion" variable (:type "long") (reparse-symbol formal_parameters) [18015 18034]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [17976 18553])
+                    ("addDataSource" function
+                       (:typemodifiers ("private")
+                        :arguments 
+                          ( ("thrift" variable (:type "TDataSource") (reparse-symbol formal_parameters) [18584 18602])
+                            ("catalogVersion" variable (:type "long") (reparse-symbol formal_parameters) [18604 18623]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [18557 18770])
+                    ("removeDataSource" function
+                       (:typemodifiers ("private")
+                        :arguments 
+                          ( ("thrift" variable (:type "TDataSource") (reparse-symbol formal_parameters) [18804 18822])
+                            ("dropCatalogVersion" variable (:type "long") (reparse-symbol formal_parameters) [18824 18847]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [18774 18894])
+                    ("removeDb" function
+                       (:typemodifiers ("private")
+                        :arguments 
+                          ( ("thriftDb" variable (:type "TDatabase") (reparse-symbol formal_parameters) [18920 18938])
+                            ("dropCatalogVersion" variable (:type "long") (reparse-symbol formal_parameters) [18940 18963]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [18898 19117])
+                    ("removeTable" function
+                       (:typemodifiers ("private")
+                        :arguments 
+                          ( ("thriftTable" variable (:type "TTable") (reparse-symbol formal_parameters) [19146 19164])
+                            ("dropCatalogVersion" variable (:type "long") (reparse-symbol formal_parameters) [19166 19189]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [19121 19505])
+                    ("removeFunction" function
+                       (:typemodifiers ("private")
+                        :arguments 
+                          ( ("thriftFn" variable (:type "TFunction") (reparse-symbol formal_parameters) [19537 19555])
+                            ("dropCatalogVersion" variable (:type "long") (reparse-symbol formal_parameters) [19557 19580]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [19509 20026])
+                    ("removeRole" function
+                       (:typemodifiers ("private")
+                        :arguments 
+                          ( ("thriftRole" variable (:type "TRole") (reparse-symbol formal_parameters) [20054 20070])
+                            ("dropCatalogVersion" variable (:type "long") (reparse-symbol formal_parameters) [20072 20095]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [20030 20375])
+                    ("removePrivilege" function
+                       (:typemodifiers ("private")
+                        :arguments 
+                          ( ("thriftPrivilege" variable (:type "TPrivilege") (reparse-symbol formal_parameters) [20408 20434])
+                            ("dropCatalogVersion" variable (:type "long") (reparse-symbol formal_parameters) [20436 20459]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [20379 20892])
+                    ("isReady" function
+                       (:typemodifiers ("public")
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [21082 21133])
+                    ("setIsReady" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("isReady" variable (:type "boolean") (reparse-symbol formal_parameters) [21188 21203]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [21165 21231])
+                    ("getAuthPolicy" function
+                       (:typemodifiers ("public")
+                        :type "AuthorizationPolicy")
+                        (reparse-symbol class_member_declaration) [21234 21300])
+                    ("getDefaultKuduMasterHosts" function
+                       (:typemodifiers ("public")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [21303 21380]))                  
+                :type "class")
+                nil [3633 21382]))          
+      :file "ImpaladCatalog.java"
+      :pointmax 21383
+      :fsize 21382
+      :lastmodtime '(22925 26281 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode java-mode
+      :tags 
+        '( ("org.apache.impala.catalog" package nil nil [803 837])
+            ("com.google.common.base.Joiner" include nil nil [839 876])
+            ("com.google.common.base.Preconditions" include nil nil [877 921])
+            ("com.google.common.collect.Lists" include nil nil [922 961])
+            ("java.util.Collections" include nil nil [963 992])
+            ("java.util.Comparator" include nil nil [993 1021])
+            ("java.util.List" include nil nil [1022 1044])
+            ("java.util.concurrent.ConcurrentHashMap" include nil nil [1045 1091])
+            ("java.util.concurrent.atomic.AtomicReference" include nil nil [1092 1143])
+            ("org.apache.impala.analysis.FunctionName" include nil nil [1145 1192])
+            ("org.apache.impala.catalog.MetaStoreClientPool.MetaStoreClient" include nil nil [1193 1262])
+            ("org.apache.impala.thrift.TCatalogObject" include nil nil [1263 1310])
+            ("org.apache.impala.thrift.TFunction" include nil nil [1311 1353])
+            ("org.apache.impala.thrift.TPartitionKeyValue" include nil nil [1354 1405])
+            ("org.apache.impala.thrift.TTableName" include nil nil [1406 1449])
+            ("org.apache.impala.util.PatternMatcher" include nil nil [1450 1495])
+            ("org.apache.log4j.Logger" include nil nil [1496 1527])
+            ("Catalog" type
+               (:typemodifiers ("public" "abstract")
+                :members 
+                  ( ("INITIAL_CATALOG_VERSION" variable
+                       (:typemodifiers ("public" "final" "static")
+                        :type "long")
+                        (reparse-symbol class_member_declaration) [2593 2647])
+                    ("DEFAULT_DB" variable
+                       (:typemodifiers ("public" "static" "final")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [2650 2700])
+                    ("BUILTINS_DB" variable
+                       (:typemodifiers ("public" "static" "final")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [2703 2763])
+                    ("metaStoreClientPool_" variable
+                       (:typemodifiers ("protected" "final")
+                        :type "MetaStoreClientPool")
+                        (reparse-symbol class_member_declaration) [2767 2862])
+                    ("authPolicy_" variable
+                       (:typemodifiers ("protected")
+                        :type "AuthorizationPolicy")
+                        (reparse-symbol class_member_declaration) [2984 3054])
+                    ("builtinsDb_" variable
+                       (:typemodifiers ("private" "static")
+                        :type "Db")
+                        (reparse-symbol class_member_declaration) [3459 3489])
+                    ("Catalog" function
+                       (:constructor-flag t
+                        :typemodifiers ("public"))
+                        (reparse-symbol class_member_declaration) [3816 3972])
+                    ("Catalog" function
+                       (:constructor-flag t
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("numClients" variable (:type "int") (reparse-symbol formal_parameters) [4318 4332])
+                            ("initialCnxnTimeoutSec" variable (:type "int") (reparse-symbol formal_parameters) [4334 4359]))                          )
+                        (reparse-symbol class_member_declaration) [4303 4451])
+                    ("getBuiltinsDb" function
+                       (:typemodifiers ("public")
+                        :type "Db")
+                        (reparse-symbol class_member_declaration) [4455 4504])
+                    ("addDb" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("db" variable (:type "Db") (reparse-symbol formal_parameters) [4728 4733]))                          
+                        :type "Db")
+                        (reparse-symbol class_member_declaration) [4712 4803])
+                    ("getDb" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("dbName" variable (:type "String") (reparse-symbol formal_parameters) [4973 4986]))                          
+                        :type "Db")
+                        (reparse-symbol class_member_declaration) [4957 5187])
+                    ("removeDb" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("dbName" variable (:type "String") (reparse-symbol formal_parameters) [5404 5417]))                          
+                        :type "Db")
+                        (reparse-symbol class_member_declaration) [5385 5480])
+                    ("getDbs" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("matcher" variable (:type "PatternMatcher") (reparse-symbol formal_parameters) [5568 5590]))                          )
+                        (reparse-symbol class_member_declaration) [5561 5673])
+                    ("getTable" function
+                       (:throws ("CatalogException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("dbName" variable (:type "String") (reparse-symbol formal_parameters) [5853 5866])
+                            ("tableName" variable (:type "String") (reparse-symbol formal_parameters) [5868 5884]))                          
+                        :type "Table")
+                        (reparse-symbol class_member_declaration) [5831 6093])
+                    ("removeTable" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("tableName" variable (:type "TTableName") (reparse-symbol formal_parameters) [6263 6283]))                          
+                        :type "Table")
+                        (reparse-symbol class_member_declaration) [6238 6491])
+                    ("getTableNames" function
+                       (:constructor-flag t
+                        :throws ("DatabaseNotFoundException")
+                        :arguments 
+                          ( ("dbName" variable (:type "String") (reparse-symbol formal_parameters) [6682 6695])
+                            ("matcher" variable (:type "PatternMatcher") (reparse-symbol formal_parameters) [6697 6719]))                          )
+                        (reparse-symbol class_member_declaration) [6668 7009])
+                    ("containsTable" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("dbName" variable (:type "String") (reparse-symbol formal_parameters) [7200 7213])
+                            ("tableName" variable (:type "String") (reparse-symbol formal_parameters) [7215 7231]))                          
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [7171 7328])
+                    ("addDataSource" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("dataSource" variable (:type "DataSource") (reparse-symbol formal_parameters) [7565 7586]))                          
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [7536 7634])
+                    ("removeDataSource" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("dataSourceName" variable (:type "String") (reparse-symbol formal_parameters) [7835 7856]))                          
+                        :type "DataSource")
+                        (reparse-symbol class_member_declaration) [7800 7973])
+                    ("getDataSource" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("dataSourceName" variable (:type "String") (reparse-symbol formal_parameters) [8058 8079]))                          
+                        :type "DataSource")
+                        (reparse-symbol class_member_declaration) [8026 8193])
+                    ("getDataSources" function (:constructor-flag t) (reparse-symbol class_member_declaration) [8271 8330])
+                    ("getDataSourceNames" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("pattern" variable (:type "String") (reparse-symbol formal_parameters) [8598 8612]))                          )
+                        (reparse-symbol class_member_declaration) [8579 8735])
+                    ("getDataSources" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("matcher" variable (:type "PatternMatcher") (reparse-symbol formal_parameters) [8841 8863]))                          )
+                        (reparse-symbol class_member_declaration) [8826 8947])
+                    ("addFunction" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("fn" variable (:type "Function") (reparse-symbol formal_parameters) [9364 9375]))                          
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [9337 9479])
+                    ("getFunction" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("desc" variable (:type "Function") (reparse-symbol formal_parameters) [10083 10096])
+                            ("mode" variable (:type "Function.CompareMode") (reparse-symbol formal_parameters) [10098 10123]))                          
+                        :type "Function")
+                        (reparse-symbol class_member_declaration) [10055 10236])
+                    ("getBuiltin" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("desc" variable (:type "Function") (reparse-symbol formal_parameters) [10274 10287])
+                            ("mode" variable (:type "Function.CompareMode") (reparse-symbol formal_parameters) [10289 10314]))                          
+                        :type "Function")
+                        (reparse-symbol class_member_declaration) [10240 10369])
+                    ("removeFunction" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("desc" variable (:type "Function") (reparse-symbol formal_parameters) [10597 10610]))                          
+                        :type "Function")
+                        (reparse-symbol class_member_declaration) [10566 10720])
+                    ("containsFunction" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("name" variable (:type "FunctionName") (reparse-symbol formal_parameters) [10863 10880]))                          
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [10831 11006])
+                    ("addHdfsCachePool" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("cachePool" variable (:type "HdfsCachePool") (reparse-symbol formal_parameters) [11100 11123]))                          
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [11068 11173])
+                    ("getHdfsCachePool" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("poolName" variable (:type "String") (reparse-symbol formal_parameters) [11330 11345]))                          
+                        :type "HdfsCachePool")
+                        (reparse-symbol class_member_declaration) [11292 11394])
+                    ("close" function
+                       (:typemodifiers ("public")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [11530 11583])
+                    ("getMetaStoreClient" function
+                       (:typemodifiers ("public")
+                        :type "MetaStoreClient")
+                        (reparse-symbol class_member_declaration) [11674 11762])
+                    ("filterStringsByPattern" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("" variable (:type "candidates") (reparse-symbol formal_parameters) [11994 12004])
+                            ("matcher" variable (:type "PatternMatcher") (reparse-symbol formal_parameters) [12012 12034]))                          )
+                        (reparse-symbol class_member_declaration) [11954 12326])
+                    ("CATALOG_OBJECT_ORDER" variable
+                       (:typemodifiers ("private" "static" "final")
+                        :type "CatalogObjectOrder")
+                        (reparse-symbol class_member_declaration) [12577 12665])
+                    ("filterCatalogObjectsByPattern" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("" variable (:type "candidates") (reparse-symbol formal_parameters) [12928 12938])
+                            ("matcher" variable (:type "PatternMatcher") (reparse-symbol formal_parameters) [12940 12962]))                          )
+                        (reparse-symbol class_member_declaration) [12869 13245])
+                    ("getHdfsPartition" function
+                       (:throws ("CatalogException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("dbName" variable (:type "String") (reparse-symbol formal_parameters) [13287 13300])
+                            ("tableName" variable (:type "String") (reparse-symbol formal_parameters) [13302 13318])
+                            ("msPart" variable (:type "org.apache.hadoop.hive.metastore.api.Partition") (reparse-symbol formal_parameters) [13326 13379]))                          
+                        :type "HdfsPartition")
+                        (reparse-symbol class_member_declaration) [13249 13962])
+                    ("getHdfsPartition" function
+                       (:throws ("CatalogException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("dbName" variable (:type "String") (reparse-symbol formal_parameters) [14486 14499])
+                            ("tableName" variable (:type "String") (reparse-symbol formal_parameters) [14501 14517])
+                            ("" variable (:type "partitionSpec") (reparse-symbol formal_parameters) [14550 14563]))                          
+                        :type "HdfsPartition")
+                        (reparse-symbol class_member_declaration) [14448 15194])
+                    ("containsHdfsPartition" function
+                       (:throws ("CatalogException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("dbName" variable (:type "String") (reparse-symbol formal_parameters) [15635 15648])
+                            ("tableName" variable (:type "String") (reparse-symbol formal_parameters) [15650 15666])
+                            ("" variable (:type "partitionSpec") (reparse-symbol formal_parameters) [15699 15712]))                          
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [15598 15897])
+                    ("getTCatalogObject" function
+                       (:throws ("CatalogException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("objectDesc" variable (:type "TCatalogObject") (reparse-symbol formal_parameters) [16218 16243]))                          
+                        :type "TCatalogObject")
+                        (reparse-symbol class_member_declaration) [16178 20173])
+                    ("isDefaultDb" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("dbName" variable (:type "String") (reparse-symbol formal_parameters) [20211 20224]))                          
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [20177 20283]))                  
+                :type "class")
+                nil [2529 20285]))          
+      :file "Catalog.java"
+      :pointmax 20286
+      :fsize 20285
+      :lastmodtime '(22925 26281 0 0)
+      :unmatched-syntax '((GT 15697 . 15698) (IDENTIFIER 15674 . 15678) (LT 15678 . 15679) (GT 14548 . 14549) (IDENTIFIER 14525 . 14529) (LT 14529 . 14530) (GT 12926 . 12927) (EXTENDS 12917 . 12924) (QUESTION 12915 . 12916) (IDENTIFIER 12906 . 12914) (LT 12914 . 12915) (GT 12867 . 12868) (LT 12865 . 12866) (GT 12859 . 12860) (EXTENDS 12838 . 12845) (PRIVATE 12827 . 12834) (LT 12835 . 12836) (GT 12405 . 12406) (PRIVATE 12330 . 12337) (LT 12391 . 12392) (GT 11992 . 11993) (IDENTIFIER 11977 . 11985) (LT 11985 . 11986) (GT 11952 . 11953) (PRIVATE 11933 . 11940) (LT 11945 . 11946) (GT 8824 . 8825) (PUBLIC 8802 . 8808) (LT 8813 . 8814) (GT 8577 . 8578) (PUBLIC 8559 . 8565) (LT 8570 . 8571) (GT 8269 . 8270) (PUBLIC 8247 . 8253) (LT 8258 . 8259) (GT 6666 . 6667) (PUBLIC 6648 . 6654) (LT 6659 . 6660) (GT 5559 . 5560) (PUBLIC 5545 . 5551) (LT 5556 . 5557) (SEMICOLON 3811 . 3812) (PAREN_BLOCK 3804 . 3811) (GT 3803 . 3804) (LT 3789 . 3790) (NEW 3767 . 3770) (EQ 3759 . 3760) (GT 3741 . 3742) (LT 3727 . 3728) (SEMICOLON 3580 . 3581) (GT 3566 . 3567) (PROTECTED 3521 . 3530) (LT 3555 . 3556) (SEMICOLON 3419 . 3420) (PAREN_BLOCK 3371 . 3419) (RSHIFT 3369 . 3371) (COMMA 3365 . 3366) (LT 3358 . 3359) (LT 3340 . 3341) (NEW 3321 . 3324) (EQ 3313 . 3314) (RSHIFT 3301 . 3303) (COMMA 3297 . 3298) (LT 3290 . 3291) (PROTECTED 3247 . 3256) (LT 3272 . 3273)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode java-mode
+      :tags 
+        '( ("org.apache.impala.catalog" package nil nil [803 837])
+            ("java.util.List" include nil nil [839 861])
+            ("org.apache.impala.analysis.FunctionName" include nil nil [863 910])
+            ("org.apache.impala.analysis.HdfsUri" include nil nil [911 953])
+            ("org.apache.impala.common.AnalysisException" include nil nil [954 1004])
+            ("org.apache.impala.common.InternalException" include nil nil [1005 1055])
+            ("org.apache.impala.service.FeSupport" include nil nil [1056 1099])
+            ("org.apache.impala.thrift.TAggregateFunction" include nil nil [1100 1151])
+            ("org.apache.impala.thrift.TCatalogObject" include nil nil [1152 1199])
+            ("org.apache.impala.thrift.TCatalogObjectType" include nil nil [1200 1251])
+            ("org.apache.impala.thrift.TColumnType" include nil nil [1252 1296])
+            ("org.apache.impala.thrift.TFunction" include nil nil [1297 1339])
+            ("org.apache.impala.thrift.TFunctionBinaryType" include nil nil [1340 1392])
+            ("org.apache.impala.thrift.TFunctionCategory" include nil nil [1393 1443])
+            ("org.apache.impala.thrift.TScalarFunction" include nil nil [1444 1492])
+            ("org.apache.impala.thrift.TSymbolLookupParams" include nil nil [1493 1545])
+            ("org.apache.impala.thrift.TSymbolLookupResult" include nil nil [1546 1598])
+            ("org.apache.impala.thrift.TSymbolType" include nil nil [1599 1643])
+            ("com.google.common.base.Joiner" include nil nil [1644 1681])
+            ("com.google.common.base.Preconditions" include nil nil [1682 1726])
+            ("com.google.common.collect.Lists" include nil nil [1727 1766])
+            ("Function" type
+               (:typemodifiers ("public")
+                :interfaces ("CatalogObject")
+                :members 
+                  ( ("name_" variable
+                       (:typemodifiers ("private")
+                        :type "FunctionName")
+                        (reparse-symbol class_member_declaration) [3961 3988])
+                    ("retType_" variable
+                       (:typemodifiers ("private" "final")
+                        :type "Type")
+                        (reparse-symbol class_member_declaration) [3992 4020])
+                    ("argTypes_" variable
+                       (:dereference 1
+                        :typemodifiers ("private")
+                        :type "Type")
+                        (reparse-symbol class_member_declaration) [4110 4135])
+                    ("hasVarArgs_" variable
+                       (:typemodifiers ("private")
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [4271 4299])
+                    ("userVisible_" variable
+                       (:typemodifiers ("private")
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [4488 4517])
+                    ("location_" variable
+                       (:typemodifiers ("private")
+                        :type "HdfsUri")
+                        (reparse-symbol class_member_declaration) [4617 4643])
+                    ("binaryType_" variable
+                       (:typemodifiers ("private")
+                        :type "TFunctionBinaryType")
+                        (reparse-symbol class_member_declaration) [4646 4686])
+                    ("isPersistent_" variable
+                       (:typemodifiers ("private")
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [4859 4889])
+                    ("catalogVersion_" variable
+                       (:typemodifiers ("private")
+                        :type "long")
+                        (reparse-symbol class_member_declaration) [4892 4956])
+                    ("Function" function
+                       (:constructor-flag t
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("name" variable (:type "FunctionName") (reparse-symbol formal_parameters) [4976 4993])
+                            ("argTypes" variable
+                               (:dereference 1
+                                :type "Type")
+                                (reparse-symbol formal_parameters) [4995 5010])
+                            ("retType" variable (:type "Type") (reparse-symbol formal_parameters) [5018 5030])
+                            ("varArgs" variable (:type "boolean") (reparse-symbol formal_parameters) [5032 5047]))                          )
+                        (reparse-symbol class_member_declaration) [4960 5369])
+                    ("Function" function
+                       (:constructor-flag t
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("name" variable (:type "FunctionName") (reparse-symbol formal_parameters) [5389 5406])
+                            ("" variable (:type "args") (reparse-symbol formal_parameters) [5419 5423])
+                            ("retType" variable (:type "Type") (reparse-symbol formal_parameters) [5431 5443])
+                            ("varArgs" variable (:type "boolean") (reparse-symbol formal_parameters) [5445 5460]))                          )
+                        (reparse-symbol class_member_declaration) [5373 5663])
+                    ("createFunction" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("db" variable (:type "String") (reparse-symbol formal_parameters) [5798 5807])
+                            ("fnName" variable (:type "String") (reparse-symbol formal_parameters) [5809 5822])
+                            ("" variable (:type "args") (reparse-symbol formal_parameters) [5835 5839])
+                            ("retType" variable (:type "Type") (reparse-symbol formal_parameters) [5847 5859])
+                            ("varArgs" variable (:type "boolean") (reparse-symbol formal_parameters) [5861 5876])
+                            ("fnType" variable (:type "TFunctionBinaryType") (reparse-symbol formal_parameters) [5878 5904]))                          
+                        :type "Function")
+                        (reparse-symbol class_member_declaration) [5760 6050])
+                    ("getFunctionName" function
+                       (:typemodifiers ("public")
+                        :type "FunctionName")
+                        (reparse-symbol class_member_declaration) [6054 6109])
+                    ("functionName" function
+                       (:typemodifiers ("public")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [6112 6172])
+                    ("dbName" function
+                       (:typemodifiers ("public")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [6175 6223])
+                    ("getReturnType" function
+                       (:typemodifiers ("public")
+                        :type "Type")
+                        (reparse-symbol class_member_declaration) [6226 6274])
+                    ("getArgs" function
+                       (:typemodifiers ("public")
+                        :type "Type[]")
+                        (reparse-symbol class_member_declaration) [6277 6322])
+                    ("getNumArgs" function
+                       (:typemodifiers ("public")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [6380 6432])
+                    ("getLocation" function
+                       (:typemodifiers ("public")
+                        :type "HdfsUri")
+                        (reparse-symbol class_member_declaration) [6435 6485])
+                    ("getBinaryType" function
+                       (:typemodifiers ("public")
+                        :type "TFunctionBinaryType")
+                        (reparse-symbol class_member_declaration) [6488 6554])
+                    ("hasVarArgs" function
+                       (:typemodifiers ("public")
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [6557 6608])
+                    ("isPersistent" function
+                       (:typemodifiers ("public")
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [6611 6666])
+                    ("userVisible" function
+                       (:typemodifiers ("public")
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [6669 6722])
+                    ("getVarArgsType" function
+                       (:typemodifiers ("public")
+                        :type "Type")
+                        (reparse-symbol class_member_declaration) [6725 6898])
+                    ("setLocation" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("loc" variable (:type "HdfsUri") (reparse-symbol formal_parameters) [6926 6937]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [6902 6959])
+                    ("setBinaryType" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("type" variable (:type "TFunctionBinaryType") (reparse-symbol formal_parameters) [6988 7012]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [6962 7037])
+                    ("setHasVarArgs" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("v" variable (:type "boolean") (reparse-symbol formal_parameters) [7066 7075]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [7040 7097])
+                    ("setIsPersistent" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("v" variable (:type "boolean") (reparse-symbol formal_parameters) [7128 7137]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [7100 7161])
+                    ("setUserVisible" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("b" variable (:type "boolean") (reparse-symbol formal_parameters) [7191 7200]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [7164 7223])
+                    ("signatureString" function
+                       (:typemodifiers ("public")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [7346 7614])
+                    ("equals" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("o" variable (:type "Object") (reparse-symbol formal_parameters) [7652 7660]))                          
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [7630 7774])
+                    ("compare" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("other" variable (:type "Function") (reparse-symbol formal_parameters) [7841 7855])
+                            ("mode" variable (:type "CompareMode") (reparse-symbol formal_parameters) [7857 7873]))                          
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [7818 8241])
+                    ("isSuperTypeOf" function
+                       (:typemodifiers ("private")
+                        :arguments 
+                          ( ("other" variable (:type "Function") (reparse-symbol formal_parameters) [8518 8532])
+                            ("strict" variable (:type "boolean") (reparse-symbol formal_parameters) [8534 8548]))                          
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [8488 9363])
+                    ("promoteCharsToStrings" function
+                       (:typemodifiers ("public")
+                        :type "Function")
+                        (reparse-symbol class_member_declaration) [9435 9729])
+                    ("isIdentical" function
+                       (:typemodifiers ("private")
+                        :arguments 
+                          ( ("o" variable (:type "Function") (reparse-symbol formal_parameters) [9761 9771]))                          
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [9733 10097])
+                    ("isIndistinguishable" function
+                       (:typemodifiers ("private")
+                        :arguments 
+                          ( ("o" variable (:type "Function") (reparse-symbol formal_parameters) [10137 10147]))                          
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [10101 12022])
+                    ("getCatalogObjectType" function
+                       (:typemodifiers ("public")
+                        :type "TCatalogObjectType")
+                        (reparse-symbol class_member_declaration) [12038 12126])
+                    ("getCatalogVersion" function
+                       (:typemodifiers ("public")
+                        :type "long")
+                        (reparse-symbol class_member_declaration) [12142 12201])
+                    ("setCatalogVersion" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("newVersion" variable (:type "long") (reparse-symbol formal_parameters) [12247 12262]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [12217 12297])
+                    ("getName" function
+                       (:typemodifiers ("public")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [12313 12377])
+                    ("toSql" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("ifNotExists" variable (:type "boolean") (reparse-symbol formal_parameters) [12449 12468]))                          
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [12429 12484])
+                    ("toTCatalogObject" function
+                       (:typemodifiers ("public")
+                        :type "TCatalogObject")
+                        (reparse-symbol class_member_declaration) [12488 12731])
+                    ("toThrift" function
+                       (:typemodifiers ("public")
+                        :type "TFunction")
+                        (reparse-symbol class_member_declaration) [12735 13241])
+                    ("fromThrift" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("fn" variable (:type "TFunction") (reparse-symbol formal_parameters) [13279 13291]))                          
+                        :type "Function")
+                        (reparse-symbol class_member_declaration) [13245 14904])
+                    ("isLoaded" function
+                       (:typemodifiers ("public")
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [14920 14962])
+                    ("lookupSymbol" function
+                       (:throws ("AnalysisException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("symbol" variable (:type "String") (reparse-symbol formal_parameters) [15286 15299])
+                            ("symbolType" variable (:type "TSymbolType") (reparse-symbol formal_parameters) [15301 15323])
+                            ("retArgType" variable (:type "Type") (reparse-symbol formal_parameters) [15325 15340])
+                            ("hasVarArgs" variable (:type "boolean") (reparse-symbol formal_parameters) [15348 15366])
+                            ("" variable (:type "argTypes") (reparse-symbol formal_parameters) [15376 15384]))                          
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [15259 17081])
+                    ("lookupSymbol" function
+                       (:throws ("AnalysisException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("symbol" variable (:type "String") (reparse-symbol formal_parameters) [17112 17125])
+                            ("symbolType" variable (:type "TSymbolType") (reparse-symbol formal_parameters) [17127 17149]))                          
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [17085 17362])
+                    ("getUdfType" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("t" variable (:type "Type") (reparse-symbol formal_parameters) [17398 17404]))                          
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [17366 18093])
+                    ("categoryMatch" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("fn" variable (:type "Function") (reparse-symbol formal_parameters) [18217 18228])
+                            ("category" variable (:type "TFunctionCategory") (reparse-symbol formal_parameters) [18230 18256]))                          
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [18181 18696]))                  
+                :type "class")
+                nil [2174 18698]))          
+      :file "Function.java"
+      :pointmax 18699
+      :fsize 18698
+      :lastmodtime '(22940 56294 0 0)
+      :unmatched-syntax '((DOT 15374 . 15375) (IDENTIFIER 15368 . 15372) (DOT 15373 . 15374) (GT 5833 . 5834) (IDENTIFIER 5824 . 5828) (LT 5828 . 5829) (GT 5417 . 5418) (IDENTIFIER 5408 . 5412) (LT 5412 . 5413))))
+  :file "!Volumes!Transcend!Impala!fe!src!main!java!org!apache!impala!catalog!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

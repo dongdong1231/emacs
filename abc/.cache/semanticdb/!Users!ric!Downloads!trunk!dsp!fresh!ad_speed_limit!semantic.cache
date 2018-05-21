@@ -1,0 +1,839 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("time.h" include (:system-flag t) nil [88 105])
+            ("unistd.h" include (:system-flag t) nil [106 125])
+            ("thread" include (:system-flag t) nil [127 144])
+            ("iostream" include (:system-flag t) nil [145 164])
+            ("algorithm" include (:system-flag t) nil [165 185])
+            ("utility" include (:system-flag t) nil [186 204])
+            ("map" include (:system-flag t) nil [205 219])
+            ("list" include (:system-flag t) nil [220 235])
+            ("string" include (:system-flag t) nil [236 253])
+            ("vector" include (:system-flag t) nil [254 271])
+            ("set" include (:system-flag t) nil [272 286])
+            ("thirdparty/gflags/gflags.h" include nil nil [287 324])
+            ("thirdparty/glog/logging.h" include nil nil [325 361])
+            ("dsp/common/load_protobuf_data.h" include nil nil [362 404])
+            ("dsp/common/datetime_utility.h" include nil nil [405 445])
+            ("dsp/fresh/ad_speed_limit/log_process.h" include nil nil [446 495])
+            ("DEFINE_int32" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("batch_count" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [510 522]))                  
+                :type "int")
+                nil [497 594])
+            ("DEFINE_int32" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("campaign_speed_threshold" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [608 633]))                  
+                :type "int")
+                nil [595 688])
+            ("DEFINE_string" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("ad_blocked_feature_bin_name" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [703 731]))                  
+                :type "int")
+                nil [689 791])
+            ("dsp" type
+               (:members 
+                  ( ("fresh" type
+                       (:members 
+                          ( ("LogProcess::run_" variable
+                               (:default-value "true"
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [829 858])
+                            ("BackgroupDeleteDeprecatedDataThread" function
+                               (:arguments 
+                                  ( ("arg" variable
+                                       (:pointer 1
+                                        :type "void")
+                                        (reparse-symbol arg-sub-list) [901 911]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [860 1003])
+                            ("BackgroudPullThread" function
+                               (:arguments 
+                                  ( ("arg" variable
+                                       (:pointer 1
+                                        :type "void")
+                                        (reparse-symbol arg-sub-list) [1030 1040]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [1005 1124])
+                            ("StatThread" function
+                               (:arguments 
+                                  ( ("arg" variable
+                                       (:pointer 1
+                                        :type "void")
+                                        (reparse-symbol arg-sub-list) [1142 1152]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [1126 1223])
+                            ("Init" function
+                               (:parent "LogProcess"
+                                :arguments 
+                                  ( ("kafka_consumer_conf" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1247 1286])
+                                    ("aerospike_conf" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1308 1342])
+                                    ("interested_tail" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::set" type
+                                             (:template-specifier 
+                                                ( ("int32_t" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [1364 1405]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [1225 3328])
+                            ("Stat" function
+                               (:parent "LogProcess"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [3330 4078])
+                            ("PullLogBackground" function
+                               (:parent "LogProcess"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [4080 4585])
+                            ("Process" function
+                               (:parent "LogProcess"
+                                :type ("int32_t" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [4587 6804])
+                            ("GenerateBlockedFeature" function
+                               (:parent "LogProcess"
+                                :arguments 
+                                  ( ("result" variable
+                                       (:pointer 1
+                                        :type ("std::map" type
+                                             (:template-specifier 
+                                                ( ("std::string" type nil nil nil)
+                                                  ("yd::common::BlockedFeature" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [6854 6912]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [6806 7951])
+                            ("UpdateAsd" function
+                               (:parent "LogProcess"
+                                :arguments 
+                                  ( ("data" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::map" type
+                                             (:template-specifier 
+                                                ( ("std::string" type nil nil nil)
+                                                  ("yd::common::BlockedFeature" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [7989 8051]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [7953 9032])
+                            ("DeleteDeprecatedAdFeature" function
+                               (:parent "LogProcess"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [9034 9262]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [810 9265]))                  
+                :type "namespace")
+                nil [794 9288]))          
+      :file "log_process.cc"
+      :pointmax 9308
+      :fsize 9307
+      :lastmodtime '(22854 11955 0 0)
+      :unmatched-syntax '((string 760 . 789) (string 732 . 744) (string 654 . 686) (number 634 . 639) (string 542 . 592) (number 523 . 527) (string 760 . 789) (string 732 . 744) (string 654 . 686) (number 634 . 639) (string 542 . 592) (number 523 . 527)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("DSP_FRESH_AD_SPEED_LIMIT_LOG_PROCESS_H_" variable (:constant-flag t) nil [145 184])
+            ("condition_variable" include (:system-flag t) nil [186 215])
+            ("list" include (:system-flag t) nil [216 231])
+            ("map" include (:system-flag t) nil [232 246])
+            ("memory" include (:system-flag t) nil [247 264])
+            ("mutex" include (:system-flag t) nil [265 281])
+            ("utility" include (:system-flag t) nil [282 300])
+            ("set" include (:system-flag t) nil [301 315])
+            ("string" include (:system-flag t) nil [316 333])
+            ("vector" include (:system-flag t) nil [334 351])
+            ("dsp/proto/log/log.pb.h" include nil nil [352 385])
+            ("dsp/fresh/proto/user_stat.pb.h" include nil nil [386 427])
+            ("dsp/common/kafka_consumer.h" include nil nil [428 466])
+            ("dsp/import_hbase/hbase_client.h" include nil nil [467 509])
+            ("dsp/fresh/common/aerospike_output.h" include nil nil [510 556])
+            ("dsp/fresh/common/kafka_output.h" include nil nil [557 599])
+            ("dsp/proto/common/user_id.pb.h" include nil nil [600 640])
+            ("dsp/proto/common/blocked_feature.pb.h" include nil nil [641 689])
+            ("dsp" type
+               (:members 
+                  ( ("fresh" type
+                       (:members 
+                          ( ("LogProcess" type
+                               (:members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [746 753])
+                                    ("LogProcess" function
+                                       (:constructor-flag t
+                                        :type ("LogProcess" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [756 771])
+                                    ("LogProcess" function
+                                       (:destructor-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [774 822])
+                                    ("Init" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("kafka_consumer_conf" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [836 875])
+                                            ("aerospike_conf" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [888 922])
+                                            ("interested_tail" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::set" type
+                                                     (:template-specifier 
+                                                        ( ("int32_t" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [935 976]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [826 977])
+                                    ("Process" function
+                                       (:prototype-flag t
+                                        :type ("int32_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [980 998])
+                                    ("PullLogBackground" function
+                                       (:prototype-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1001 1026])
+                                    ("Stat" function
+                                       (:prototype-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1029 1041])
+                                    ("DeleteDeprecatedAdFeature" function
+                                       (:prototype-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1044 1077])
+                                    ("private" label nil (reparse-symbol classsubparts) [1080 1088])
+                                    ("GenerateBlockedFeature" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("result" variable
+                                               (:pointer 1
+                                                :type ("std::map" type
+                                                     (:template-specifier 
+                                                        ( ("std::string" type nil nil nil)
+                                                          ("yd::common::BlockedFeature" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [1127 1185]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1091 1186])
+                                    ("UpdateAsd" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("data" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::map" type
+                                                     (:template-specifier 
+                                                        ( ("std::string" type nil nil nil)
+                                                          ("yd::common::BlockedFeature" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [1204 1266]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1189 1267])
+                                    ("private" label nil (reparse-symbol classsubparts) [1270 1278])
+                                    ("kafka_consumer_" variable (:type ("std::shared_ptr" type
+                                         (:template-specifier 
+                                            ( ("dsp::common::KafkaConsumer" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [1281 1341])
+                                    ("asd_output_" variable (:type ("dsp::fresh::AerospikeOutput" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1344 1384])
+                                    ("interested_tail_" variable (:type ("std::set" type
+                                         (:template-specifier 
+                                            ( ("int32_t" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [1388 1423])
+                                    ("history_data_" variable (:type ("std::map" type
+                                         (:template-specifier 
+                                            ( ("time_t" type nil nil nil)
+                                              ("std::map" type (:template-specifier 
+                                                ( ("std::pair" type (:template-specifier 
+                                                    ( ("uint32_t" type nil nil nil)
+                                                      ("uint64_t" type nil nil nil))                                                    ) nil nil)
+                                                  ("int32_t" type nil nil nil))                                                ) nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [1426 1511])
+                                    ("cond_" variable (:type ("std::condition_variable" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1514 1544])
+                                    ("mutex_" variable (:type ("std::mutex" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1547 1565])
+                                    ("log_queue_" variable (:type ("std::list" type
+                                         (:template-specifier 
+                                            ( ("std::map" type
+                                                 (:pointer 1
+                                                  :template-specifier 
+                                                    ( ("std::string" type nil nil nil)
+                                                      ("std::list" type (:template-specifier 
+                                                        ( ("std::string" type nil nil nil))                                                        ) nil nil))                                                    )
+                                                  nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [1568 1637])
+                                    ("last_update_time_utc_" variable (:type ("time_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1640 1669])
+                                    ("accumulate_record_count_" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1672 1705])
+                                    ("public" label nil (reparse-symbol classsubparts) [1708 1715])
+                                    ("run_" variable
+                                       (:typemodifiers ("static")
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [1718 1735]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [726 1738]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [707 1741]))                  
+                :type "namespace")
+                nil [691 1764]))          
+      :file "log_process.h"
+      :pointmax 1836
+      :fsize 1835
+      :lastmodtime '(22852 37275 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("DSP_FRESH_AD_SPEED_LIMIT_LOG_PROCESS_H_")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("set" include (:system-flag t) nil [330 344])
+            ("string" include (:system-flag t) nil [345 362])
+            ("vector" include (:system-flag t) nil [363 380])
+            ("common/base/string/algorithm.h" include nil nil [381 422])
+            ("common/base/module.h" include nil nil [423 454])
+            ("common/utility/pidfile.h" include nil nil [455 490])
+            ("dsp/fresh/ad_speed_limit/log_process.h" include nil nil [491 540])
+            ("DEFINE_string" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("kafka_consumer_config" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [556 578]))                  
+                :type "int")
+                nil [542 643])
+            ("DEFINE_string" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("aerospike_config" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [658 675]))                  
+                :type "int")
+                nil [644 716])
+            ("DEFINE_string" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("interested_tail" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [731 747]))                  
+                :type "int")
+                nil [717 831])
+            ("SignalIntHandler" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("sig" variable (:type "int") (reparse-symbol arg-sub-list) [862 870]))                  
+                :type "void")
+                nil [833 914])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [926 935])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [936 949]))                  
+                :type "int")
+                nil [917 1602]))          
+      :file "main.cpp"
+      :pointmax 1603
+      :fsize 1786
+      :lastmodtime '(22851 47041 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [88 107])
+            ("common/base/module.h" include nil nil [120 152])
+            ("common/base/string/algorithm.h" include nil nil [153 194])
+            ("common/encoding/base64.h" include nil nil [195 230])
+            ("common/encoding/hex.h" include nil nil [231 263])
+            ("dsp/aerospike/aerospike_cluster.h" include nil nil [265 309])
+            ("dsp/aerospike/aerospike_client.h" include nil nil [310 353])
+            ("dsp/proto/common/blocked_feature.pb.h" include nil nil [354 402])
+            ("yd::aerospike" using (:type ("yd::aerospike" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [404 434])
+            ("DEFINE_string" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("seed_host" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [461 471]))                  
+                :type "int")
+                nil [447 510])
+            ("DEFINE_int32" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("seed_port" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [524 534]))                  
+                :type "int")
+                nil [511 562])
+            ("DEFINE_int32" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("op_timeout_ms" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [576 590]))                  
+                :type "int")
+                nil [563 628])
+            ("DEFINE_string" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("namespace_name" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [644 659]))                  
+                :type "int")
+                nil [630 696])
+            ("DEFINE_string" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("set_name" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [711 720]))                  
+                :type "int")
+                nil [697 757])
+            ("DEFINE_int32" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("last_n_minute" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [772 786]))                  
+                :type "int")
+                nil [759 836])
+            ("InitCluster" function
+               (:arguments 
+                  ( ("cluster" variable
+                       (:pointer 1
+                        :type ("AerospikeCluster" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [855 881]))                  
+                :type "void")
+                nil [838 1193])
+            ("InitClient" function
+               (:arguments 
+                  ( ("cluster" variable
+                       (:pointer 1
+                        :type ("AerospikeCluster" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1211 1237])
+                    ("client" variable
+                       (:pointer 1
+                        :type ("AerospikeClient" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1238 1262]))                  
+                :type "void")
+                nil [1195 1615])
+            ("DebugCluster" function (:type "bool") nil [1617 1785])
+            ("BuildKey" function
+               (:arguments 
+                  ( ("keys" variable
+                       (:pointer 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("std::string" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1801 1832]))                  
+                :type "void")
+                nil [1787 2198])
+            ("DebugQuery" function (:type "bool") nil [2201 3068])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [3079 3088])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3089 3102]))                  
+                :type "int")
+                nil [3070 3166]))          
+      :file "check_campaign.cc"
+      :pointmax 3167
+      :fsize 3166
+      :lastmodtime '(22864 56358 0 0)
+      :unmatched-syntax '((string 791 . 834) (number 787 . 789) (string 735 . 755) (string 721 . 733) (string 668 . 694) (string 660 . 666) (string 596 . 626) (number 591 . 594) (string 541 . 560) (number 535 . 539) (string 489 . 508) (string 472 . 487)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("DSP_FRESH_AD_SPEED_LIMIT_CAMPAIGN_SPEED_LIMIT_H_" variable (:constant-flag t) nil [327 375])
+            ("map" include (:system-flag t) nil [377 391])
+            ("memory" include (:system-flag t) nil [392 409])
+            ("set" include (:system-flag t) nil [410 424])
+            ("string" include (:system-flag t) nil [425 442])
+            ("utility" include (:system-flag t) nil [443 461])
+            ("common/base/counter.h" include nil nil [463 495])
+            ("common/system/concurrency/blocking_queue.h" include nil nil [496 549])
+            ("dsp/common/kafka_consumer.h" include nil nil [550 588])
+            ("dsp/fresh/common/aerospike_output.h" include nil nil [589 635])
+            ("dsp/fresh/common/kafka_output.h" include nil nil [636 678])
+            ("dsp/proto/common/blocked_feature.pb.h" include nil nil [679 727])
+            ("dsp" type
+               (:members 
+                  ( ("fresh" type
+                       (:members 
+                          ( ("CampaignSpeedLimit" type
+                               (:members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [793 800])
+                                    ("CampaignSpeedLimit" function
+                                       (:prototype-flag t
+                                        :constructor-flag t
+                                        :type ("CampaignSpeedLimit" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [803 824])
+                                    ("CampaignSpeedLimit" function
+                                       (:prototype-flag t
+                                        :destructor-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [827 849])
+                                    ("Init" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("kafka_consumer_conf" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [862 901])
+                                            ("aerospike_conf" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [914 948])
+                                            ("interested_tail" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::set" type
+                                                     (:template-specifier 
+                                                        ( ("int32_t" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [961 1002]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [852 1003])
+                                    ("Produce" function
+                                       (:prototype-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1006 1021])
+                                    ("Consume" function
+                                       (:prototype-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1024 1039])
+                                    ("PollLogAndParse" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("log_data" variable
+                                               (:pointer 1
+                                                :type ("std::map" type
+                                                     (:template-specifier 
+                                                        ( ("time_t" type nil nil nil)
+                                                          ("std::map" type (:template-specifier 
+                                                            ( ("std::pair" type (:template-specifier 
+                                                                ( ("uint32_t" type nil nil nil)
+                                                                  ("uint64_t" type nil nil nil))                                                                ) nil nil)
+                                                              ("int32_t" type nil nil nil))                                                            ) nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [1069 1150]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [1043 1151])
+                                    ("GenerateBlockedFeature" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("log_data" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::map" type
+                                                     (:template-specifier 
+                                                        ( ("time_t" type nil nil nil)
+                                                          ("std::map" type (:template-specifier 
+                                                            ( ("std::pair" type (:template-specifier 
+                                                                ( ("uint32_t" type nil nil nil)
+                                                                  ("uint64_t" type nil nil nil))                                                                ) nil nil)
+                                                              ("int32_t" type nil nil nil))                                                            ) nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [1190 1279])
+                                            ("map_result" variable
+                                               (:pointer 1
+                                                :type ("std::map" type
+                                                     (:template-specifier 
+                                                        ( ("time_t" type nil nil nil)
+                                                          ("std::map" type (:template-specifier 
+                                                            ( ("std::string" type nil nil nil)
+                                                              ("yd::common::BlockedFeature" type nil nil nil))                                                            ) nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [1286 1372]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1155 1373])
+                                    ("UpdateAsd" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("data" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::pair" type
+                                                     (:template-specifier 
+                                                        ( ("time_t" type nil nil nil)
+                                                          ("std::map" type (:template-specifier 
+                                                            ( ("std::string" type nil nil nil)
+                                                              ("std::string" type nil nil nil))                                                            ) nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [1398 1464]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1376 1465])
+                                    ("Stop" function
+                                       (:prototype-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1469 1481])
+                                    ("private" label nil (reparse-symbol classsubparts) [1484 1492])
+                                    ("kafka_consumer_" variable (:type ("std::unique_ptr" type
+                                         (:template-specifier 
+                                            ( ("dsp::common::KafkaConsumer" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [1495 1555])
+                                    ("asd_output_" variable (:type ("dsp::fresh::AerospikeOutput" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1558 1598])
+                                    ("queue_" variable (:type ("BlockingQueue" type
+                                         (:template-specifier 
+                                            ( ("std::pair" type (:template-specifier 
+                                                ( ("time_t" type nil nil nil)
+                                                  ("std::map" type (:template-specifier 
+                                                    ( ("std::string" type nil nil nil)
+                                                      ("yd::common::BlockedFeature" type nil nil nil))                                                    ) nil nil))                                                ) nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [1602 1695])
+                                    ("interested_tail_" variable (:type ("std::set" type
+                                         (:template-specifier 
+                                            ( ("int32_t" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [1698 1733])
+                                    ("thread_" variable (:type ("std::unique_ptr" type
+                                         (:template-specifier 
+                                            ( ("Thread" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [1736 1768])
+                                    ("last_parse_time_utc_" variable (:type ("time_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1771 1799])
+                                    ("public" label nil (reparse-symbol classsubparts) [1802 1809])
+                                    ("run_" variable
+                                       (:typemodifiers ("static")
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [1812 1829]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [765 1832]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [746 1835]))                  
+                :type "namespace")
+                nil [730 1857]))          
+      :file "campaign_speed_limit.h"
+      :pointmax 1937
+      :fsize 2146
+      :lastmodtime '(22865 56279 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("DSP_FRESH_AD_SPEED_LIMIT_CAMPAIGN_SPEED_LIMIT_H_")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("time.h" include (:system-flag t) nil [93 110])
+            ("list" include (:system-flag t) nil [111 126])
+            ("string" include (:system-flag t) nil [127 144])
+            ("utility" include (:system-flag t) nil [145 163])
+            ("common/base/closure.h" include nil nil [165 197])
+            ("common/system/concurrency/thread.h" include nil nil [198 243])
+            ("dsp/common/load_protobuf_data.h" include nil nil [244 286])
+            ("dsp/proto/log/log.pb.h" include nil nil [287 320])
+            ("thirdparty/gflags/gflags.h" include nil nil [321 358])
+            ("thirdparty/glog/logging.h" include nil nil [359 395])
+            ("dsp/fresh/ad_speed_limit/campaign_speed_limit.h" include nil nil [397 455])
+            ("DEFINE_int32" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("block_feature_queue_capacity" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [470 499]))                  
+                :type "int")
+                nil [457 554])
+            ("DEFINE_int32" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("time_interval_in_second" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [568 592]))                  
+                :type "int")
+                nil [555 667])
+            ("DEFINE_int32" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("process_time_win_notice_time_interval_in_second" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [681 729]))                  
+                :type "int")
+                nil [668 810])
+            ("DEFINE_int32" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("campaign_speed_threshold" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [824 849]))                  
+                :type "int")
+                nil [811 904])
+            ("DEFINE_bool" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("is_test" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [918 926])
+                    ("" variable (:type ("true" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [927 932]))                  
+                :type "int")
+                nil [906 972])
+            ("dsp" type
+               (:members 
+                  ( ("fresh" type
+                       (:members 
+                          ( ("CampaignSpeedLimit::run_" variable
+                               (:default-value "true"
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [1009 1046])
+                            ("CampaignSpeedLimit" function
+                               (:constructor-flag t
+                                :parent "CampaignSpeedLimit"
+                                :type ("CampaignSpeedLimit" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [1048 1263])
+                            ("CampaignSpeedLimit" function
+                               (:destructor-flag t
+                                :parent "CampaignSpeedLimit"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [1265 1402])
+                            ("Init" function
+                               (:parent "CampaignSpeedLimit"
+                                :arguments 
+                                  ( ("kafka_consumer_conf" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1434 1473])
+                                    ("aerospike_conf" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1504 1538])
+                                    ("interested_tail" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::set" type
+                                             (:template-specifier 
+                                                ( ("int32_t" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [1569 1610]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [1404 3212])
+                            ("Produce" function
+                               (:parent "CampaignSpeedLimit"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [3214 4066])
+                            ("Consume" function
+                               (:parent "CampaignSpeedLimit"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [4068 4485])
+                            ("PollLogAndParse" function
+                               (:parent "CampaignSpeedLimit"
+                                :arguments 
+                                  ( ("log_data" variable
+                                       (:pointer 1
+                                        :type ("std::map" type
+                                             (:template-specifier 
+                                                ( ("time_t" type nil nil nil)
+                                                  ("std::map" type (:template-specifier 
+                                                    ( ("std::pair" type (:template-specifier 
+                                                        ( ("uint32_t" type nil nil nil)
+                                                          ("uint64_t" type nil nil nil))                                                        ) nil nil)
+                                                      ("int32_t" type nil nil nil))                                                    ) nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [4533 4614]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [4487 7217])
+                            ("GenerateBlockedFeature" function
+                               (:parent "CampaignSpeedLimit"
+                                :arguments 
+                                  ( ("log_data" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::map" type
+                                             (:template-specifier 
+                                                ( ("time_t" type nil nil nil)
+                                                  ("std::map" type (:template-specifier 
+                                                    ( ("std::pair" type (:template-specifier 
+                                                        ( ("uint32_t" type nil nil nil)
+                                                          ("uint64_t" type nil nil nil))                                                        ) nil nil)
+                                                      ("int32_t" type nil nil nil))                                                    ) nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [7272 7359])
+                                    ("map_result" variable
+                                       (:pointer 1
+                                        :type ("std::map" type
+                                             (:template-specifier 
+                                                ( ("time_t" type nil nil nil)
+                                                  ("std::map" type (:template-specifier 
+                                                    ( ("std::string" type nil nil nil)
+                                                      ("yd::common::BlockedFeature" type nil nil nil))                                                    ) nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [7364 7448]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [7219 8467])
+                            ("UpdateAsd" function
+                               (:parent "CampaignSpeedLimit"
+                                :arguments 
+                                  ( ("data" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::pair" type
+                                             (:template-specifier 
+                                                ( ("time_t" type nil nil nil)
+                                                  ("std::map" type (:template-specifier 
+                                                    ( ("std::string" type nil nil nil)
+                                                      ("std::string" type nil nil nil))                                                    ) nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [8509 8575]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [8469 9243])
+                            ("Stop" function
+                               (:parent "CampaignSpeedLimit"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [9245 9296]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [990 9299]))                  
+                :type "namespace")
+                nil [974 9321]))          
+      :file "campaign_speed_limit.cc"
+      :pointmax 9340
+      :fsize 9557
+      :lastmodtime '(22865 56279 0 0)
+      :unmatched-syntax '((string 933 . 970) (string 870 . 902) (number 850 . 855) (string 748 . 808) (number 730 . 733) (string 610 . 665) (number 593 . 595) (string 518 . 552) (number 500 . 503)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("string" include (:system-flag t) nil [93 110])
+            ("thirdparty/gflags/gflags.h" include nil nil [112 149])
+            ("thirdparty/glog/logging.h" include nil nil [150 186])
+            ("thirdparty/gtest/gtest.h" include nil nil [187 222])
+            ("dsp/fresh/ad_speed_limit/campaign_speed_limit.h" include nil nil [224 282])
+            ("TEST" function
+               (:arguments 
+                  ( ("" variable (:type ("CampaignSpeedLimit" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [290 309])
+                    ("" variable (:type ("GenerateBlockedFeature" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [310 333]))                  
+                :type "int")
+                nil [285 1335]))          
+      :file "campaign_speed_limit_test.cc"
+      :pointmax 1336
+      :fsize 1335
+      :lastmodtime '(22865 56279 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!ric!Downloads!trunk!dsp!fresh!ad_speed_limit!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

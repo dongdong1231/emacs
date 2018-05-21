@@ -1,0 +1,1080 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("dsp/common/kafka_consumer.h" include nil nil [76 114])
+            ("arpa/inet.h" include (:system-flag t) nil [115 137])
+            ("chrono" include (:system-flag t) nil [139 156])
+            ("sstream" include (:system-flag t) nil [157 175])
+            ("algorithm" include (:system-flag t) nil [176 196])
+            ("common/system/time/stopwatch.h" include nil nil [198 239])
+            ("common/base/scoped_ptr.h" include nil nil [240 275])
+            ("common/base/string/string_number.h" include nil nil [276 321])
+            ("common/crypto/hash/crc.h" include nil nil [322 357])
+            ("common/system/time/datetime.h" include nil nil [358 398])
+            ("common/zookeeper/client/zookeeper_session.h" include nil nil [399 453])
+            ("thirdparty/jsoncpp/reader.h" include nil nil [454 492])
+            ("thirdparty/jsoncpp/value.h" include nil nil [493 530])
+            ("thirdparty/jsoncpp/writer.h" include nil nil [531 569])
+            ("thirdparty/sms/top-sdk-c/sendsms.h" include nil nil [570 615])
+            ("DEFINE_string" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("recv_list" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [631 641]))                  
+                :type "int")
+                nil [617 674])
+            ("dsp" type
+               (:members 
+                  ( ("common" type
+                       (:members 
+                          ( ("KafkaConsumer::run_" variable
+                               (:default-value "true"
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [712 744])
+                            ("KafkaConsumer::exit_eof_" variable
+                               (:default-value "false"
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [745 783])
+                            ("KafkaConsumer::eof_cnt_" variable
+                               (:default-value "0"
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [784 816])
+                            ("KafkaConsumer::partition_cnt_" variable
+                               (:default-value "0"
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [817 855])
+                            ("KafkaConsumer::msg_cnt_" variable
+                               (:default-value "0"
+                                :type ("int64_t" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [856 892])
+                            ("KafkaConsumer::msg_bytes_" variable
+                               (:default-value "0"
+                                :type ("int64_t" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [893 931])
+                            ("KafkaConsumer" function
+                               (:constructor-flag t
+                                :parent "KafkaConsumer"
+                                :arguments 
+                                  ( ("group_id" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [962 990])
+                                    ("zookeeper" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [993 1022])
+                                    ("topic_list" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::set" type
+                                             (:template-specifier 
+                                                ( ("std::string" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [1025 1065])
+                                    ("auto_commit" variable (:type "bool") (reparse-symbol arg-sub-list) [1068 1085])
+                                    ("batch" variable (:type "bool") (reparse-symbol arg-sub-list) [1086 1097])
+                                    ("batch_num" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1098 1116]))                                  
+                                :type ("KafkaConsumer" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [933 1515])
+                            ("KafkaConsumer" function
+                               (:destructor-flag t
+                                :parent "KafkaConsumer"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [1517 1562])
+                            ("Initialize" function
+                               (:parent "KafkaConsumer"
+                                :arguments 
+                                  ( ("total_batch" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1598 1618]))                                  
+                                :type ("int32_t" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [1564 3601])
+                            ("Poll" function
+                               (:parent "KafkaConsumer"
+                                :arguments 
+                                  ( ("timeout_ms" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3631 3650])
+                                    ("result" variable
+                                       (:reference 1
+                                        :type ("std::map" type
+                                             (:template-specifier 
+                                                ( ("std::string" type nil nil nil)
+                                                  ("std::list" type (:template-specifier 
+                                                    ( ("std::string" type nil nil nil))                                                    ) nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [3653 3707]))                                  
+                                :type ("int32_t" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [3603 5402])
+                            ("CommitOffset" function
+                               (:parent "KafkaConsumer"
+                                :type ("int32_t" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [5405 5498])
+                            ("event_cb" function
+                               (:parent "KafkaConsumer::EventCbWrapper"
+                                :arguments 
+                                  ( ("event" variable
+                                       (:reference 1
+                                        :type ("RdKafka::Event" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5545 5567]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [5500 6615])
+                            ("rebalance_cb" function
+                               (:parent "KafkaConsumer::RebalanceCbWrapper"
+                                :arguments 
+                                  ( ("consumer" variable
+                                       (:pointer 1
+                                        :type ("RdKafka::KafkaConsumer" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [6674 6707])
+                                    ("err" variable (:type ("RdKafka::ErrorCode" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6710 6733])
+                                    ("partitions" variable
+                                       (:reference 1
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("RdKafka::TopicPartition" type (:pointer 1) nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [6736 6786]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [6618 7217])
+                            ("offset_commit_cb" function
+                               (:parent "KafkaConsumer::OffsetCommitCbWrapper"
+                                :arguments 
+                                  ( ("err" variable (:type ("RdKafka::ErrorCode" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7282 7305])
+                                    ("offsets" variable
+                                       (:reference 1
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("RdKafka::TopicPartition" type (:pointer 1) nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [7308 7355]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [7219 7585])
+                            ("GetBrokers" function
+                               (:parent "KafkaConsumer"
+                                :arguments 
+                                  ( ("zookeeper" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [7621 7650]))                                  
+                                :type ("int32_t" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [7587 9206])
+                            ("SendAlarmMsg" function
+                               (:parent "KafkaConsumer"
+                                :arguments 
+                                  ( ("msg" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [9244 9267]))                                  
+                                :type ("int32_t" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [9208 9789]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [692 9792]))                  
+                :type "namespace")
+                nil [676 9815]))          
+      :file "kafka_consumer.cc"
+      :pointmax 9834
+      :fsize 9833
+      :lastmodtime '(22876 45375 0 0)
+      :unmatched-syntax '((string 657 . 672) (string 642 . 655)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("DSP_COMMON_KAFKA_CONSUMER_H_" variable (:constant-flag t) nil [120 148])
+            ("list" include (:system-flag t) nil [149 164])
+            ("map" include (:system-flag t) nil [165 179])
+            ("memory" include (:system-flag t) nil [180 197])
+            ("set" include (:system-flag t) nil [198 212])
+            ("string" include (:system-flag t) nil [213 230])
+            ("thread" include (:system-flag t) nil [231 248])
+            ("utility" include (:system-flag t) nil [249 267])
+            ("vector" include (:system-flag t) nil [268 285])
+            ("common/base/string/algorithm.h" include nil nil [287 328])
+            ("thirdparty/librdkafka/src-cpp/rdkafkacpp.h" include nil nil [329 382])
+            ("dsp" type
+               (:members 
+                  ( ("common" type
+                       (:members 
+                          ( ("KafkaConsumer" type
+                               (:members 
+                                  ( ("private" label nil (reparse-symbol classsubparts) [443 451])
+                                    ("EventCbWrapper" friend nil (reparse-symbol classsubparts) [454 481])
+                                    ("EventCbWrapper" type
+                                       (:superclasses 
+                                          ( ("RdKafka::EventCb" type
+                                               (:protection "public"
+                                                :type "class")
+                                                nil nil))                                          
+                                        :members 
+                                          ( ("public" label nil (reparse-symbol classsubparts) [537 544])
+                                            ("override" variable (:type "int") (reparse-symbol classsubparts) [586 595]))                                          
+                                        :type "class")
+                                        (reparse-symbol classsubparts) [485 600])
+                                    ("RebalanceCbWrapper" friend nil (reparse-symbol classsubparts) [603 634])
+                                    ("RebalanceCbWrapper" type
+                                       (:superclasses 
+                                          ( ("RdKafka::RebalanceCb" type
+                                               (:protection "public"
+                                                :type "class")
+                                                nil nil))                                          
+                                        :members 
+                                          ( ("public" label nil (reparse-symbol classsubparts) [698 705])
+                                            ("override" variable (:type "int") (reparse-symbol classsubparts) [849 858]))                                          
+                                        :type "class")
+                                        (reparse-symbol classsubparts) [638 863])
+                                    ("OffsetCommitCbWrapper" friend nil (reparse-symbol classsubparts) [866 900])
+                                    ("OffsetCommitCbWrapper" type
+                                       (:superclasses 
+                                          ( ("RdKafka::OffsetCommitCb" type
+                                               (:protection "public"
+                                                :type "class")
+                                                nil nil))                                          
+                                        :members 
+                                          ( ("public" label nil (reparse-symbol classsubparts) [970 977])
+                                            ("override" variable (:type "int") (reparse-symbol classsubparts) [1082 1091]))                                          
+                                        :type "class")
+                                        (reparse-symbol classsubparts) [904 1096])
+                                    ("public" label nil (reparse-symbol classsubparts) [1100 1107])
+                                    ("KafkaConsumer" function
+                                       (:prototype-flag t
+                                        :constructor-flag t
+                                        :arguments 
+                                          ( ("group_id" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1124 1152])
+                                            ("zookeeper" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1157 1186])
+                                            ("topic_list" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::set" type
+                                                     (:template-specifier 
+                                                        ( ("std::string" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [1191 1231])
+                                            ("auto_commit" variable
+                                               (:default-value "true"
+                                                :type "bool")
+                                                (reparse-symbol arg-sub-list) [1236 1259])
+                                            ("batch" variable
+                                               (:default-value "true"
+                                                :type "bool")
+                                                (reparse-symbol arg-sub-list) [1265 1282])
+                                            ("batch_num" variable
+                                               (:default-value "1000"
+                                                :type ("int32_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1288 1312]))                                          
+                                        :type ("KafkaConsumer" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1110 1314])
+                                    ("KafkaConsumer" function
+                                       (:prototype-flag t
+                                        :destructor-flag t
+                                        :typemodifiers ("virtual")
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1317 1342])
+                                    ("Initialize" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("total_batch" variable
+                                               (:default-value "100"
+                                                :type ("int32_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1364 1389]))                                          
+                                        :type ("int32_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1345 1391])
+                                    ("Poll" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("timeout_ms" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1409 1428])
+                                            ("result" variable
+                                               (:reference 1
+                                                :type ("std::map" type
+                                                     (:template-specifier 
+                                                        ( ("std::string" type nil nil nil)
+                                                          ("std::list" type (:template-specifier 
+                                                            ( ("std::string" type nil nil nil))                                                            ) nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [1433 1487]))                                          
+                                        :type ("int32_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1395 1488])
+                                    ("CommitOffset" function
+                                       (:prototype-flag t
+                                        :type ("int32_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1491 1514])
+                                    ("Stop" function (:type "void") (reparse-symbol classsubparts) [1517 1552])
+                                    ("public" label nil (reparse-symbol classsubparts) [1555 1562])
+                                    ("SendAlarmMsg" function
+                                       (:prototype-flag t
+                                        :typemodifiers ("static")
+                                        :arguments 
+                                          ( ("msg" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1593 1616]))                                          
+                                        :type ("int32_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1565 1617])
+                                    ("private" label nil (reparse-symbol classsubparts) [1620 1628])
+                                    ("GetBrokers" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("zookeeper" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1650 1679]))                                          
+                                        :type ("int32_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1631 1680])
+                                    ("private" label nil (reparse-symbol classsubparts) [1683 1691])
+                                    ("group_id_" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1694 1716])
+                                    ("brokers_" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1719 1740])
+                                    ("topic_list_" variable (:type ("std::set" type
+                                         (:template-specifier 
+                                            ( ("std::string" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [1743 1777])
+                                    ("stop_" variable (:type "bool") (reparse-symbol classsubparts) [1780 1791])
+                                    ("auto_commit_" variable (:type "bool") (reparse-symbol classsubparts) [1795 1813])
+                                    ("batch_" variable (:type "bool") (reparse-symbol classsubparts) [1816 1828])
+                                    ("batch_num_" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1831 1850])
+                                    ("total_batch_" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1853 1874])
+                                    ("invoke_count_" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1878 1900])
+                                    ("consume_record_count_" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1903 1933])
+                                    ("run_" variable
+                                       (:typemodifiers ("static")
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [1937 1954])
+                                    ("exit_eof_" variable
+                                       (:typemodifiers ("static")
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [1957 1979])
+                                    ("eof_cnt_" variable
+                                       (:typemodifiers ("static")
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [1982 2002])
+                                    ("partition_cnt_" variable
+                                       (:typemodifiers ("static")
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [2005 2031])
+                                    ("msg_cnt_" variable
+                                       (:typemodifiers ("static")
+                                        :type ("int64_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [2034 2058])
+                                    ("msg_bytes_" variable
+                                       (:typemodifiers ("static")
+                                        :type ("int64_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [2061 2087])
+                                    ("timeout_ms_" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2090 2110])
+                                    ("consumer_" variable (:type ("std::shared_ptr" type
+                                         (:template-specifier 
+                                            ( ("RdKafka::KafkaConsumer" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [2113 2163]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [420 2166]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [400 2169]))                  
+                :type "namespace")
+                nil [384 2192]))          
+      :file "kafka_consumer.h"
+      :pointmax 2255
+      :fsize 2254
+      :lastmodtime '(22869 48237 0 0)
+      :unmatched-syntax '((semantic-list 1003 . 1081) (symbol 987 . 1003) (VOID 982 . 986) (semantic-list 1003 . 1081) (symbol 987 . 1003) (VOID 982 . 986) (punctuation 900 . 901) (semantic-list 727 . 848) (symbol 715 . 727) (VOID 710 . 714) (semantic-list 727 . 848) (symbol 715 . 727) (VOID 710 . 714) (punctuation 634 . 635) (semantic-list 562 . 585) (symbol 554 . 562) (VOID 549 . 553) (semantic-list 562 . 585) (symbol 554 . 562) (VOID 549 . 553) (punctuation 481 . 482))
+      :lexical-table 
+        '(("DSP_COMMON_KAFKA_CONSUMER_H_")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("DSP_COMMON_DATETIME_UTILITY_H_" variable (:constant-flag t) nil [122 152])
+            ("stdint.h" include (:system-flag t) nil [154 173])
+            ("string" include (:system-flag t) nil [174 191])
+            ("dsp" type
+               (:members 
+                  ( ("common" type
+                       (:members 
+                          ( ("DateToGmtime" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("YYYYMMDD" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [252 270])
+                                    ("t" variable
+                                       (:reference 1
+                                        :type ("uint32_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [271 283]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [234 284])
+                            ("DateToLocaltime" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("YYYYMMDD" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [310 328])
+                                    ("t" variable
+                                       (:reference 1
+                                        :type ("uint32_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [329 341]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [289 342])
+                            ("UnixtimeToGmDate" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("t" variable (:type ("time_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [369 378])
+                                    ("YYYYMMDD" variable
+                                       (:reference 1
+                                        :type ("uint32_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [379 398]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [347 399])
+                            ("UnixtimeToLocalDate" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("t" variable (:type ("time_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [429 438])
+                                    ("YYYYMMDD" variable
+                                       (:reference 1
+                                        :type ("uint32_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [439 458]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [404 459])
+                            ("UnixtimeToGmDateTime" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("t" variable (:type ("time_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [519 528])
+                                    ("YYYYMMDDHH" variable
+                                       (:reference 1
+                                        :type ("uint32_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [529 550]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [493 551])
+                            ("UnixtimeToGmDateTime" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("t" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [582 593])
+                                    ("YYYYMMDDHHMM" variable
+                                       (:reference 1
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [594 617]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [556 618])
+                            ("UnixtimeToLocalDateTime" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("t" variable (:type ("time_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [652 661])
+                                    ("YYYYMMDDHH" variable
+                                       (:reference 1
+                                        :type ("uint32_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [662 683]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [623 684])
+                            ("UnixtimeToLocalDateTime" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("t" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [718 729])
+                                    ("YYYYMMDDHHMM" variable
+                                       (:reference 1
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [730 753]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [689 754])
+                            ("LocalDateTimeToUnixtime" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("YYYYMMDDHHMM" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [788 810])
+                                    ("v" variable
+                                       (:reference 1
+                                        :type ("uint32_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [811 822]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [759 823])
+                            ("CompareDate" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("d1" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [879 901])
+                                    ("d2" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [902 914]))                                  
+                                :type ("int32_t" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [859 915])
+                            ("CompareDate" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("d1" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [968 980])
+                                    ("d2" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [981 1003]))                                  
+                                :type ("int32_t" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [948 1004])
+                            ("ConvertUint32ToDate" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("d" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1066 1077])
+                                    ("date" variable
+                                       (:reference 1
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1078 1096]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [1041 1097])
+                            ("ConvertDateToUint32" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("date" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1158 1182])
+                                    ("result" variable
+                                       (:reference 1
+                                        :type ("uint32_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1183 1200]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [1133 1201]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [211 1206]))                  
+                :type "namespace")
+                nil [193 1228]))          
+      :file "datetime_utility.h"
+      :pointmax 1290
+      :fsize 1289
+      :lastmodtime '(22840 64123 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("DSP_COMMON_DATETIME_UTILITY_H_")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("DSP_COMMON_LOAD_PROTOBUF_DATA_H_" variable (:constant-flag t) nil [124 156])
+            ("string" include (:system-flag t) nil [157 174])
+            ("fstream" include (:system-flag t) nil [175 193])
+            ("sstream" include (:system-flag t) nil [194 212])
+            ("stdio.h" include (:system-flag t) nil [213 231])
+            ("thirdparty/protobuf/text_format.h" include nil nil [232 276])
+            ("common/base/string/algorithm.h" include nil nil [277 318])
+            ("thirdparty/glog/logging.h" include nil nil [319 355])
+            ("common/compress/block_compression_codec.h" include nil nil [356 408])
+            ("dsp" type
+               (:members 
+                  ( ("common" type
+                       (:members 
+                          ( ("LoadProtobufDataFromString" function
+                               (:template 
+                                  ( ("Type" type (:type "class") nil nil))                                  
+                                :type ("int32_t" type (:type "class") nil nil)
+                                :arguments 
+                                  ( ("data" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [502 526])
+                                    ("message" variable
+                                       (:pointer 1
+                                        :type ("Type" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [527 541]))                                  )
+                                (reparse-symbol namespacesubparts) [446 721])
+                            ("LoadProtobufDataFromFile" function
+                               (:template 
+                                  ( ("Type" type (:type "class") nil nil))                                  
+                                :type ("int32_t" type (:type "class") nil nil)
+                                :arguments 
+                                  ( ("filename" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [777 805])
+                                    ("message" variable
+                                       (:pointer 1
+                                        :type ("Type" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [806 820]))                                  )
+                                (reparse-symbol namespacesubparts) [723 1112])
+                            ("LoadProtobufDataFromFile" function
+                               (:template 
+                                  ( ("Type" type (:type "class") nil nil))                                  
+                                :type ("int32_t" type (:type "class") nil nil)
+                                :arguments 
+                                  ( ("in" variable
+                                       (:pointer 1
+                                        :type ("FILE" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1170 1179])
+                                    ("message" variable
+                                       (:pointer 1
+                                        :type ("Type" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1180 1194]))                                  )
+                                (reparse-symbol namespacesubparts) [1114 1733]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [426 1737]))                  
+                :type "namespace")
+                nil [410 1760]))          
+      :file "load_protobuf_data.h"
+      :pointmax 1826
+      :fsize 1825
+      :lastmodtime '(22840 64123 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("DSP_COMMON_LOAD_PROTOBUF_DATA_H_")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("DSP_COMMON_SEQUENCE_TASK_POOL_H_" variable (:constant-flag t) nil [124 156])
+            ("thirdparty/glog/logging.h" include nil nil [157 193])
+            ("stdint.h" include (:system-flag t) nil [194 213])
+            ("mutex" include (:system-flag t) nil [214 230])
+            ("atomic" include (:system-flag t) nil [231 248])
+            ("condition_variable" include (:system-flag t) nil [249 278])
+            ("map" include (:system-flag t) nil [279 293])
+            ("list" include (:system-flag t) nil [294 309])
+            ("dsp" type
+               (:members 
+                  ( ("common" type
+                       (:members 
+                          ( ("SequenceTaskPool" type
+                               (:template 
+                                  ( ("TaskType" type (:type "class") nil nil))                                  
+                                :type "class"
+                                :members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [416 423])
+                                    ("SequenceTaskPool" function
+                                       (:constructor-flag t
+                                        :type ("SequenceTaskPool" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [430 476])
+                                    ("SequenceTaskPool" function
+                                       (:destructor-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [483 512])
+                                    ("FetchTask" function (:type ("TaskType" type (:type "class") nil nil)) (reparse-symbol classsubparts) [521 999])
+                                    ("EnqueueTask" function
+                                       (:arguments 
+                                          ( ("id" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1024 1036])
+                                            ("task" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("TaskType" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1037 1058]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1007 1638])
+                                    ("DequeueTask" function
+                                       (:arguments 
+                                          ( ("id" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1663 1675])
+                                            ("task" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("TaskType" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1676 1697]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1646 2657])
+                                    ("IsEmpty" function (:type "bool") (reparse-symbol classsubparts) [2665 2802])
+                                    ("private" label nil (reparse-symbol classsubparts) [2808 2816])
+                                    ("total_count_" variable (:type ("std::atomic" type
+                                         (:template-specifier 
+                                            ( ("int32_t" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [2877 2911])
+                                    ("pool_" variable (:type ("std::map" type
+                                         (:template-specifier 
+                                            ( ("uint64_t" type nil nil nil)
+                                              ("std::list" type (:template-specifier 
+                                                ( ("TaskType" type nil nil nil))                                                ) nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [2918 2964])
+                                    ("ready_list_" variable (:type ("std::list" type
+                                         (:template-specifier 
+                                            ( ("TaskType" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [2971 3003])
+                                    ("ready_list_mutex_" variable (:type ("std::mutex" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3010 3039])
+                                    ("ready_list_cond_" variable (:type ("std::condition_variable" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3046 3087]))                                  )
+                                (reparse-symbol namespacesubparts) [352 3094]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [329 3098]))                  
+                :type "namespace")
+                nil [311 3121]))          
+      :file "sequence_task_pool.h"
+      :pointmax 3188
+      :fsize 3187
+      :lastmodtime '(22865 56161 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("DSP_COMMON_SEQUENCE_TASK_POOL_H_")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("DSP_COMMON_CRYPT_STRING_UTILITY_H_" variable (:constant-flag t) nil [151 185])
+            ("string" include (:system-flag t) nil [187 204])
+            ("thirdparty/protobuf/message.h" include nil nil [206 246])
+            ("yd" type
+               (:members 
+                  ( ("common" type
+                       (:members 
+                          ( ("EncoderHolder" type
+                               (:prototype t
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [283 303])
+                            ("CryptStringUtility" type
+                               (:members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [333 340])
+                                    ("EncryptMessage" function
+                                       (:prototype-flag t
+                                        :typemodifiers ("static")
+                                        :arguments 
+                                          ( ("encoder" variable
+                                               (:pointer 1
+                                                :type ("EncoderHolder" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [467 490])
+                                            ("inner" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("google::protobuf::Message" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [520 559])
+                                            ("output" variable
+                                               (:pointer 1
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [589 609]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [440 610])
+                                    ("DecryptMessage" function
+                                       (:prototype-flag t
+                                        :typemodifiers ("static")
+                                        :arguments 
+                                          ( ("encoder" variable
+                                               (:pointer 1
+                                                :type ("EncoderHolder" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [733 756])
+                                            ("input" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [786 811])
+                                            ("message" variable
+                                               (:pointer 1
+                                                :type ("google::protobuf::Message" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [841 876]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [706 877])
+                                    ("AddPadding" function
+                                       (:prototype-flag t
+                                        :typemodifiers ("static")
+                                        :arguments 
+                                          ( ("b64_string" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [911 941]))                                          
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [881 942]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [305 945]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [263 948]))                  
+                :type "namespace")
+                nil [248 971]))          
+      :file "crypt_string_utility.h"
+      :pointmax 1036
+      :fsize 1157
+      :lastmodtime '(22840 64123 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("DSP_COMMON_CRYPT_STRING_UTILITY_H_")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("common/encoding/base64.h" include nil nil [73 108])
+            ("thirdparty/glog/logging.h" include nil nil [109 145])
+            ("dsp/common/crypt_string_utility.h" include nil nil [147 191])
+            ("dsp/common/session_codec.h" include nil nil [192 229])
+            ("dsp/proto/trace_info/trace_info.pb.h" include nil nil [230 277])
+            ("DEFINE_bool" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("trim_tail_equal" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [291 307])
+                    ("" variable (:type ("false" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [308 314]))                  
+                :type "int")
+                nil [279 334])
+            ("yd" type
+               (:members 
+                  ( ("common" type
+                       (:members 
+                          ( ("EncryptMessage" function
+                               (:parent "CryptStringUtility"
+                                :arguments 
+                                  ( ("encoder" variable
+                                       (:pointer 1
+                                        :type ("EncoderHolder" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [415 438])
+                                    ("inner" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("google::protobuf::Message" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [443 482])
+                                    ("output" variable
+                                       (:pointer 1
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [487 507]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [370 1221])
+                            ("AddPadding" function
+                               (:parent "CryptStringUtility"
+                                :arguments 
+                                  ( ("b64_string" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1319 1349]))                                  
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [1276 1516])
+                            ("DecryptMessage" function
+                               (:parent "CryptStringUtility"
+                                :arguments 
+                                  ( ("encoder" variable
+                                       (:pointer 1
+                                        :type ("EncoderHolder" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1563 1586])
+                                    ("input" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1591 1616])
+                                    ("message" variable
+                                       (:pointer 1
+                                        :type ("google::protobuf::Message" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1621 1656]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [1518 2166]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [350 2169]))                  
+                :type "namespace")
+                nil [335 2192]))          
+      :file "crypt_string_utility.cc"
+      :pointmax 2224
+      :fsize 2209
+      :lastmodtime '(22865 56114 0 0)
+      :unmatched-syntax '((number 2223 . 2224) (symbol 2218 . 2222) (punctuation 2217 . 2218) (symbol 2211 . 2217) (string 315 . 332) (symbol 2218 . 2222) (punctuation 2217 . 2218) (symbol 2211 . 2217) (string 315 . 332) (string 315 . 332)))
+    (semanticdb-table "semanticdb-table"
+      :file "session_codec.h"
+      :fsize 2708
+      :lastmodtime '(22840 64123 0 0))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("DSP_COMMON_SERVICE_LIST_HELPER_H_" variable (:constant-flag t) nil [123 156])
+            ("string" include (:system-flag t) nil [158 175])
+            ("vector" include (:system-flag t) nil [176 193])
+            ("common/base/scoped_ptr.h" include nil nil [195 230])
+            ("common/base/string/algorithm.h" include nil nil [231 272])
+            ("common/system/concurrency/event.h" include nil nil [273 317])
+            ("poppy/rpc_channel.h" include nil nil [318 348])
+            ("poppy/rpc_client.h" include nil nil [349 378])
+            ("yd" type
+               (:members 
+                  ( ("common" type
+                       (:members 
+                          ( ("ServiceWrapper" type
+                               (:template 
+                                  ( ("T" type (:type "class") nil nil))                                  
+                                :type "class"
+                                :members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [460 467])
+                                    ("Reset" function
+                                       (:arguments 
+                                          ( ("address" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [526 553])
+                                            ("timeout_in_ms" variable
+                                               (:default-value "1"
+                                                :type ("uint32_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [554 580]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [515 874])
+                                    ("stub" function
+                                       (:methodconst-flag t
+                                        :pointer 1
+                                        :type ("T" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [878 923])
+                                    ("private" label nil (reparse-symbol classsubparts) [926 934])
+                                    ("client_" variable (:type ("scoped_ptr" type
+                                         (:template-specifier 
+                                            ( ("poppy::RpcClient" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [937 974])
+                                    ("channel_" variable (:type ("scoped_ptr" type
+                                         (:template-specifier 
+                                            ( ("poppy::RpcChannel" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [977 1016])
+                                    ("stub_" variable (:type ("scoped_ptr" type
+                                         (:template-specifier 
+                                            ( ("T" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [1019 1039]))                                  )
+                                (reparse-symbol namespacesubparts) [415 1042])
+                            ("ServiceList" type
+                               (:template 
+                                  ( ("T" type (:type "class") nil nil))                                  
+                                :type "class"
+                                :members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [1412 1419])
+                                    ("ServiceList" function
+                                       (:constructor-flag t
+                                        :arguments 
+                                          ( ("addresses" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1443 1472])
+                                            ("timeout_in_ms" variable
+                                               (:default-value "1"
+                                                :type ("uint32_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1496 1522]))                                          
+                                        :type ("ServiceList" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1431 1775])
+                                    ("stub" function
+                                       (:methodconst-flag t
+                                        :pointer 1
+                                        :arguments 
+                                          ( ("index" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1787 1802]))                                          
+                                        :type ("T" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1779 1869])
+                                    ("size" function
+                                       (:methodconst-flag t
+                                        :type ("uint32_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1873 1918])
+                                    ("private" label nil (reparse-symbol classsubparts) [1921 1929])
+                                    ("data_" variable (:type ("scoped_array" type
+                                         (:template-specifier 
+                                            ( ("ServiceWrapper" type (:template-specifier 
+                                                ( ("T" type nil nil nil))                                                ) nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [1932 1971])
+                                    ("size_" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1974 1989]))                                  )
+                                (reparse-symbol namespacesubparts) [1370 1992])
+                            ("AsyncResult" type
+                               (:members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [2015 2022])
+                                    ("AsyncResult" function
+                                       (:constructor-flag t
+                                        :type ("AsyncResult" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [2025 2057])
+                                    ("Done" function (:type "void") (reparse-symbol classsubparts) [2060 2095])
+                                    ("Wait" function
+                                       (:arguments 
+                                          ( ("milli_seconds" variable (:type "int") (reparse-symbol arg-sub-list) [2108 2126]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [2098 2171])
+                                    ("private" label nil (reparse-symbol classsubparts) [2174 2182])
+                                    ("event_" variable (:type ("AutoResetEvent" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2185 2207]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [1994 2210]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [395 2213]))                  
+                :type "namespace")
+                nil [380 2236]))          
+      :file "service_list_helper.h"
+      :pointmax 2300
+      :fsize 2299
+      :lastmodtime '(22840 64123 0 0)
+      :unmatched-syntax '((EXPLICIT 1422 . 1430))
+      :lexical-table 
+        '(("DSP_COMMON_SERVICE_LIST_HELPER_H_")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("string" include (:system-flag t) nil [75 92])
+            ("dsp" type
+               (:members 
+                  ( ("common" type
+                       (:members 
+                          ( ("GenerateUniqueTextId" function
+                               (:prototype-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [129 164])
+                            ("GenerateUniqueTextId" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("" variable (:type "char") (reparse-symbol arg-sub-list) [191 205]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [165 211])
+                            ("GetRouteInfoByString" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("id" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [239 261])
+                                    ("db_idx" variable
+                                       (:reference 1
+                                        :type ("int32_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [262 278])
+                                    ("tbl_idx" variable
+                                       (:reference 1
+                                        :type ("int32_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [305 322])
+                                    ("db_num" variable
+                                       (:default-value "100"
+                                        :type ("int32_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [323 343])
+                                    ("tbl_num" variable
+                                       (:default-value "10"
+                                        :type ("int32_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [371 391]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [213 393])
+                            ("GetRouteInfoByBigint" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("id" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [420 432])
+                                    ("db_idx" variable
+                                       (:reference 1
+                                        :type ("int32_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [433 449])
+                                    ("tbl_idx" variable
+                                       (:reference 1
+                                        :type ("int32_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [476 493])
+                                    ("db_num" variable
+                                       (:default-value "100"
+                                        :type ("int32_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [494 514])
+                                    ("tbl_num" variable
+                                       (:default-value "10"
+                                        :type ("int32_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [542 562]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [394 564]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [109 567]))                  
+                :type "namespace")
+                nil [93 590]))          
+      :file "generate_id.h"
+      :pointmax 609
+      :fsize 608
+      :lastmodtime '(22840 64123 0 0)
+      :unmatched-syntax '((semantic-list 205 . 209) (semantic-list 196 . 205))))
+  :file "!Users!ric!Downloads!trunk!dsp!common!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

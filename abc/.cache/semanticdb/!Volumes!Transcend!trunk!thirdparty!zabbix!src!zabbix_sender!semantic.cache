@@ -1,0 +1,495 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("common.h" include nil nil [778 797])
+            ("threads.h" include nil nil [799 819])
+            ("comms.h" include nil nil [820 838])
+            ("cfg.h" include nil nil [839 855])
+            ("log.h" include nil nil [856 872])
+            ("zbxgetopt.h" include nil nil [873 895])
+            ("zbxjson.h" include nil nil [896 916])
+            ("../libs/zbxcrypto/tls.h" include nil nil [917 951])
+            ("zbxnix.h" include nil nil [970 990])
+            ("progname" variable
+               (:pointer 1
+                :constant-flag t
+                :default-value "NULL"
+                :type "char")
+                nil [999 1027])
+            ("title_message" variable
+               (:dereference 1
+                :constant-flag t
+                :default-value "\"zabbix_sender\""
+                :type "char")
+                nil [1028 1073])
+            ("syslog_app_name" variable
+               (:dereference 1
+                :constant-flag t
+                :default-value "\"zabbix_sender\""
+                :type "char")
+                nil [1074 1121])
+            ("usage_message" variable
+               (:pointer 1
+                :dereference 1
+                :constant-flag t
+                :default-value "{
+  \"[-v]\", \"-z server\", \"[-p port]\", \"[-I IP-address]\", \"-s host\", \"-k key\", \"-o value\", NULL,
+  \"[-v]\", \"-z server\", \"[-p port]\", \"[-I IP-address]\", \"[-s host]\", \"[-T]\", \"[-r]\", \"-i input-file\", NULL,
+  \"[-v]\", \"-c config-file\", \"[-z server]\", \"[-p port]\", \"[-I IP-address]\", \"[-s host]\", \"-k key\", \"-o value\",
+  NULL,
+  \"[-v]\", \"-c config-file\", \"[-z server]\", \"[-p port]\", \"[-I IP-address]\", \"[-s host]\", \"[-T]\", \"[-r]\",
+  \"-i input-file\", NULL,
+#if defined(HAVE_POLARSSL) || defined(HAVE_GNUTLS) || defined(HAVE_OPENSSL)
+  \"[-v]\", \"-z server\", \"[-p port]\", \"[-I IP-address]\", \"-s host\", \"--tls-connect cert\", \"--tls-ca-file CA-file\",
+  \"[--tls-crl-file CRL-file]\", \"[--tls-server-cert-issuer cert-issuer]\",
+  \"[--tls-server-cert-subject cert-subject]\", \"--tls-cert-file cert-file\", \"--tls-key-file key-file\", \"-k key\",
+  \"-o value\", NULL,
+  \"[-v]\", \"-z server\", \"[-p port]\", \"[-I IP-address]\", \"[-s host]\", \"--tls-connect cert\", \"--tls-ca-file CA-file\",
+  \"[--tls-crl-file CRL-file]\", \"[--tls-server-cert-issuer cert-issuer]\",
+  \"[--tls-server-cert-subject cert-subject]\", \"--tls-cert-file cert-file\", \"--tls-key-file key-file\", \"[-T]\",
+  \"[-r]\", \"-i input-file\", NULL,
+  \"[-v]\", \"-c config-file [-z server]\", \"[-p port]\", \"[-I IP-address]\", \"[-s host]\", \"--tls-connect cert\",
+  \"--tls-ca-file CA-file\", \"[--tls-crl-file CRL-file]\", \"[--tls-server-cert-issuer cert-issuer]\",
+  \"[--tls-server-cert-subject cert-subject]\", \"--tls-cert-file cert-file\", \"--tls-key-file key-file\", \"-k key\",
+  \"-o value\", NULL,
+  \"[-v]\", \"-c config-file\", \"[-z server]\", \"[-p port]\", \"[-I IP-address]\", \"[-s host]\", \"--tls-connect cert\",
+  \"--tls-ca-file CA-file\", \"[--tls-crl-file CRL-file]\", \"[--tls-server-cert-issuer cert-issuer]\",
+  \"[--tls-server-cert-subject cert-subject]\", \"--tls-cert-file cert-file\", \"--tls-key-file key-file\", \"[-T]\",
+  \"[-r]\", \"-i input-file\", NULL,
+  \"[-v]\", \"-z server\", \"[-p port]\", \"[-I IP-address]\", \"-s host\", \"--tls-connect psk\",
+  \"--tls-psk-identity PSK-identity\", \"--tls-psk-file PSK-file\", \"-k key\", \"-o value\", NULL,
+  \"[-v]\", \"-z server\", \"[-p port]\", \"[-I IP-address]\", \"[-s host]\", \"--tls-connect psk\",
+  \"--tls-psk-identity PSK-identity\", \"--tls-psk-file PSK-file\", \"[-T]\", \"[-r]\", \"-i input-file\", NULL,
+  \"[-v]\", \"-c config-file\", \"[-z server]\", \"[-p port]\", \"[-I IP-address]\", \"[-s host]\", \"--tls-connect psk\",
+  \"--tls-psk-identity PSK-identity\", \"--tls-psk-file PSK-file\", \"-k key\", \"-o value\", NULL,
+  \"[-v]\", \"-c config-file\", \"[-z server]\", \"[-p port]\", \"[-I IP-address]\", \"[-s host]\", \"--tls-connect psk\",
+  \"--tls-psk-identity PSK-identity\", \"--tls-psk-file PSK-file\", \"[-T]\", \"[-r]\", \"-i input-file\", NULL,
+#endif
+  \"-h\", NULL,
+  \"-V\", NULL,
+  NULL	/* end of text */
+}"
+                :type "char")
+                nil [1123 3862])
+            ("program_type" variable
+               (:default-value "ZBX_PROGRAM_TYPE_SENDER"
+                :type "unsigned char")
+                nil [3864 3917])
+            ("help_message" variable
+               (:pointer 1
+                :dereference 1
+                :constant-flag t
+                :default-value "{
+  \"Utility for sending monitoring data to Zabbix server or proxy.\",
+  \"\",
+  \"General options:\",
+  \"  -c --config config-file    Path to Zabbix agentd configuration file\",
+  \"\",
+  \"  -z --zabbix-server server  Hostname or IP address of Zabbix server or proxy\",
+  \"                             to send data to. When used together with --config,\",
+  \"                             overrides the first entry of \\\"ServerActive\\\"\",
+  \"                             parameter specified in agentd configuration file\",
+  \"\",
+  \"  -p --port port             Specify port number of trapper process of Zabbix\",
+  \"                             server or proxy. When used together with --config,\",
+  \"                             overrides the port of the first entry of\",
+  \"                             \\\"ServerActive\\\" parameter specified in agentd\",
+  \"                             configuration file (default: \" ZBX_DEFAULT_SERVER_PORT_STR \")\",
+  \"\",
+  \"  -I --source-address IP-address   Specify source IP address. When used\",
+  \"                             together with --config, overrides \\\"SourceIP\\\"\",
+  \"                             parameter specified in agentd configuration file\",
+  \"\",
+  \"  -s --host host             Specify host name the item belongs to (as\",
+  \"                             registered in Zabbix frontend). Host IP address\",
+  \"                             and DNS name will not work. When used together\",
+  \"                             with --config, overrides \\\"Hostname\\\" parameter\",
+  \"                             specified in agentd configuration file\",
+  \"\",
+  \"  -k --key key               Specify item key\",
+  \"  -o --value value           Specify item value\",
+  \"\",
+  \"  -i --input-file input-file   Load values from input file. Specify - for\",
+  \"                             standard input. Each line of file contains\",
+  \"                             whitespace delimited: <host> <key> <value>.\",
+  \"                             Specify - in <host> to use hostname from\",
+  \"                             configuration file or --host argument\",
+  \"\",
+  \"  -T --with-timestamps       Each line of file contains whitespace delimited:\",
+  \"                             <host> <key> <timestamp> <value>. This can be used\",
+  \"                             with --input-file option. Timestamp should be\",
+  \"                             specified in Unix timestamp format\",
+  \"\",
+  \"  -r --real-time             Send metrics one by one as soon as they are\",
+  \"                             received. This can be used when reading from\",
+  \"                             standard input\",
+  \"\",
+  \"  -v --verbose               Verbose mode, -vv for more details\",
+  \"\",
+  \"  -h --help                  Display this help message\",
+  \"  -V --version               Display version number\",
+  \"\",
+  \"TLS connection options:\",
+#if defined(HAVE_POLARSSL) || defined(HAVE_GNUTLS) || defined(HAVE_OPENSSL)
+  \"  --tls-connect value        How to connect to server or proxy. Values:\",
+  \"                               unencrypted - connect without encryption\",
+  \"                                             (default)\",
+  \"                               psk         - connect using TLS and a pre-shared\",
+  \"                                             key\",
+  \"                               cert        - connect using TLS and a\",
+  \"                                             certificate\",
+  \"\",
+  \"  --tls-ca-file CA-file      Full pathname of a file containing the top-level\",
+  \"                             CA(s) certificates for peer certificate\",
+  \"                             verification\",
+  \"\",
+  \"  --tls-crl-file CRL-file    Full pathname of a file containing revoked\",
+  \"                             certificates\",
+  \"\",
+  \"  --tls-server-cert-issuer cert-issuer   Allowed server certificate issuer\",
+  \"\",
+  \"  --tls-server-cert-subject cert-subject   Allowed server certificate subject\",
+  \"\",
+  \"  --tls-cert-file cert-file  Full pathname of a file containing the certificate\",
+  \"                             or certificate chain\",
+  \"\",
+  \"  --tls-key-file key-file    Full pathname of a file containing the private key\",
+  \"\",
+  \"  --tls-psk-identity PSK-identity   Unique, case sensitive string used to\",
+  \"                             identify the pre-shared key\",
+  \"\",
+  \"  --tls-psk-file PSK-file    Full pathname of a file containing the pre-shared\",
+  \"                             key\",
+#else
+  \"  Not available. This Zabbix sender was compiled without TLS support\",
+#endif
+  \"\",
+  \"Example(s):\",
+  \"  zabbix_sender -z 127.0.0.1 -s \\\"Linux DB3\\\" -k db.connections -o 43\",
+#if defined(HAVE_POLARSSL) || defined(HAVE_GNUTLS) || defined(HAVE_OPENSSL)
+  \"\",
+  \"  zabbix_sender -z 127.0.0.1 -s \\\"Linux DB3\\\" -k db.connections -o 43 \\\\\",
+  \"    --tls-connect cert --tls-ca-file /home/zabbix/zabbix_ca_file \\\\\",
+  \"    --tls-server-cert-issuer \\\\\",
+  \"    \\\"CN=Signing CA,OU=IT operations,O=Example Corp,DC=example,DC=com\\\" \\\\\",
+  \"    --tls-server-cert-subject \\\\\",
+  \"    \\\"CN=Zabbix proxy,OU=IT operations,O=Example Corp,DC=example,DC=com\\\" \\\\\",
+  \"    --tls-cert-file /home/zabbix/zabbix_agentd.crt \\\\\",
+  \"    --tls-key-file /home/zabbix/zabbix_agentd.key\",
+  \"\",
+  \"  zabbix_sender -z 127.0.0.1 -s \\\"Linux DB3\\\" -k db.connections -o 43 \\\\\",
+  \"    --tls-connect psk --tls-psk-identity \\\"PSK ID Zabbix agentd\\\" \\\\\",
+  \"    --tls-psk-file /home/zabbix/zabbix_agentd.psk\",
+#endif
+  NULL	/* end of text */
+}"
+                :type "char")
+                nil [3919 9404])
+            ("configured_tls_connect_mode" variable
+               (:default-value "ZBX_TCP_SEC_UNENCRYPTED"
+                :type "unsigned int")
+                nil [9427 9494])
+            ("configured_tls_accept_modes" variable
+               (:default-value "ZBX_TCP_SEC_UNENCRYPTED"
+                :type "unsigned int")
+                nil [9495 9562])
+            ("CONFIG_TLS_CONNECT" variable
+               (:pointer 1
+                :default-value "NULL"
+                :type "char")
+                nil [9630 9663])
+            ("CONFIG_TLS_ACCEPT" variable
+               (:pointer 1
+                :default-value "NULL"
+                :type "char")
+                nil [9664 9696])
+            ("CONFIG_TLS_CA_FILE" variable
+               (:pointer 1
+                :default-value "NULL"
+                :type "char")
+                nil [9758 9791])
+            ("CONFIG_TLS_CRL_FILE" variable
+               (:pointer 1
+                :default-value "NULL"
+                :type "char")
+                nil [9792 9826])
+            ("CONFIG_TLS_SERVER_CERT_ISSUER" variable
+               (:pointer 1
+                :default-value "NULL"
+                :type "char")
+                nil [9827 9870])
+            ("CONFIG_TLS_SERVER_CERT_SUBJECT" variable
+               (:pointer 1
+                :default-value "NULL"
+                :type "char")
+                nil [9871 9915])
+            ("CONFIG_TLS_CERT_FILE" variable
+               (:pointer 1
+                :default-value "NULL"
+                :type "char")
+                nil [9916 9951])
+            ("CONFIG_TLS_KEY_FILE" variable
+               (:pointer 1
+                :default-value "NULL"
+                :type "char")
+                nil [9952 9986])
+            ("CONFIG_TLS_PSK_IDENTITY" variable
+               (:pointer 1
+                :default-value "NULL"
+                :type "char")
+                nil [9987 10024])
+            ("CONFIG_TLS_PSK_FILE" variable
+               (:pointer 1
+                :default-value "NULL"
+                :type "char")
+                nil [10025 10059])
+            ("CONFIG_PASSIVE_FORKS" variable
+               (:default-value "0"
+                :type "int")
+                nil [10061 10091])
+            ("CONFIG_ACTIVE_FORKS" variable
+               (:default-value "0"
+                :type "int")
+                nil [10153 10182])
+            ("longopts" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :default-value "{
+  {\"config\",			1,	NULL,	'c'},
+  {\"zabbix-server\",		1,	NULL,	'z'},
+  {\"port\",			1,	NULL,	'p'},
+  {\"host\",			1,	NULL,	's'},
+  {\"source-address\",		1,	NULL,	'I'},
+  {\"key\",				1,	NULL,	'k'},
+  {\"value\",			1,	NULL,	'o'},
+  {\"input-file\",			1,	NULL,	'i'},
+  {\"with-timestamps\",		0,	NULL,	'T'},
+  {\"real-time\",			0,	NULL,	'r'},
+  {\"verbose\",			0,	NULL,	'v'},
+  {\"help\",			0,	NULL,	'h'},
+  {\"version\",			0,	NULL,	'V'},
+  {\"tls-connect\",			1,	NULL,	'1'},
+  {\"tls-ca-file\",			1,	NULL,	'2'},
+  {\"tls-crl-file\",		1,	NULL,	'3'},
+  {\"tls-server-cert-issuer\",	1,	NULL,	'4'},
+  {\"tls-server-cert-subject\",	1,	NULL,	'5'},
+  {\"tls-cert-file\",		1,	NULL,	'6'},
+  {\"tls-key-file\",		1,	NULL,	'7'},
+  {\"tls-psk-identity\",		1,	NULL,	'8'},
+  {\"tls-psk-file\",		1,	NULL,	'9'},
+  {NULL}
+}"
+                :type ("zbx_option" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [10292 11093])
+            ("shortopts" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :default-value "\"c:I:z:p:s:k:o:Ti:rvhV\""
+                :type "char")
+                nil [11115 11165])
+            ("CONFIG_LOG_LEVEL" variable
+               (:typemodifiers ("static")
+                :default-value "LOG_LEVEL_CRIT"
+                :type "int")
+                nil [11202 11247])
+            ("INPUT_FILE" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :default-value "NULL"
+                :type "char")
+                nil [11249 11280])
+            ("WITH_TIMESTAMPS" variable
+               (:typemodifiers ("static")
+                :default-value "0"
+                :type "int")
+                nil [11281 11312])
+            ("REAL_TIME" variable
+               (:typemodifiers ("static")
+                :default-value "0"
+                :type "int")
+                nil [11313 11338])
+            ("CONFIG_SOURCE_IP" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :default-value "NULL"
+                :type "char")
+                nil [11340 11378])
+            ("ZABBIX_SERVER" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :default-value "NULL"
+                :type "char")
+                nil [11379 11414])
+            ("ZABBIX_SERVER_PORT" variable
+               (:typemodifiers ("static")
+                :default-value "0"
+                :type "unsigned short")
+                nil [11415 11460])
+            ("ZABBIX_HOSTNAME" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :default-value "NULL"
+                :type "char")
+                nil [11461 11498])
+            ("ZABBIX_KEY" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :default-value "NULL"
+                :type "char")
+                nil [11499 11531])
+            ("ZABBIX_KEY_VALUE" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :default-value "NULL"
+                :type "char")
+                nil [11532 11570])
+            ("send_signal_handler" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("sig" variable (:type "int") (reparse-symbol arg-sub-list) [11627 11635]))                  
+                :type "void")
+                nil [11595 11858])
+            ("ZBX_THREAD_SENDVAL_ARGS" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("source_ip" variable
+                             (:pointer 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [11886 11903])
+                          ("server" variable
+                             (:pointer 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [11906 11920])
+                          ("port" variable (:type "unsigned short") (reparse-symbol classsubparts) [11923 11943])
+                          ("json" variable (:type ("zbx_json" type
+                               (:prototype t
+                                :type "struct")
+                                nil nil)) (reparse-symbol classsubparts) [11946 11967])
+                          ("sync_timestamp" variable (:type "int") (reparse-symbol classsubparts) [12116 12136]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [11867 12165])
+            ("SUCCEED_PARTIAL" variable (:constant-flag t) nil [12175 12190])
+            ("update_exit_status" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("old_status" variable (:type "int") (reparse-symbol arg-sub-list) [13025 13040])
+                    ("new_status" variable (:type "int") (reparse-symbol arg-sub-list) [13041 13056]))                  
+                :type "int")
+                nil [12995 13320])
+            ("get_string" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :arguments 
+                  ( ("p" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [14553 14567])
+                    ("buf" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [14568 14578])
+                    ("bufsize" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14579 14594]))                  
+                :type "char")
+                nil [14523 16207])
+            ("check_response" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("response" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [17676 17691]))                  
+                :type "int")
+                nil [17650 18355])
+            ("ZBX_THREAD_ENTRY" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type ("send_value" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [18381 18392])
+                    ("" variable (:type ("args" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [18393 18398]))                  
+                :type "int")
+                nil [18357 20752])
+            ("zbx_fill_from_config_file" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("dst" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [20792 20803])
+                    ("src" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [20804 20814]))                  
+                :type "void")
+                nil [20754 20995])
+            ("zbx_load_config" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("config_file" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [21028 21052]))                  
+                :type "void")
+                nil [20997 24309])
+            ("parse_commandline" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [24341 24350])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [24351 24363]))                  
+                :type "void")
+                nil [24311 38602])
+            ("zbx_fgets_alloc" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("buffer" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [39914 39928])
+                    ("buffer_alloc" variable
+                       (:pointer 1
+                        :type ("size_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [39929 39950])
+                    ("fp" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [39951 39960]))                  
+                :type "char")
+                nil [39885 40523])
+            ("VALUES_MAX" variable (:constant-flag t) nil [40681 40691])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [40706 40715])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [40716 40728]))                  
+                :type "int")
+                nil [40697 50374]))          
+      :file "zabbix_sender.c"
+      :pointmax 50375
+      :fsize 50374
+      :lastmodtime '(23086 30412 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("VALUES_MAX" . ((number "250" 40692 . 40695)))
+          ("SUCCEED_PARTIAL" . ((number "2" 12191 . 12192)))
+          )
+))
+  :file "!Volumes!Transcend!trunk!thirdparty!zabbix!src!zabbix_sender!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,686 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("src/core/lib/slice/slice_internal.h" include nil nil [605 651])
+            ("grpc/slice.h" include (:system-flag t) nil [653 676])
+            ("grpc/support/alloc.h" include (:system-flag t) nil [677 708])
+            ("grpc/support/log.h" include (:system-flag t) nil [709 738])
+            ("string.h" include (:system-flag t) nil [740 759])
+            ("src/core/lib/iomgr/exec_ctx.h" include nil nil [761 801])
+            ("grpc_slice_to_c_string" function
+               (:pointer 1
+                :arguments 
+                  ( ("slice" variable (:type ("grpc_slice" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [832 849]))                  
+                :type "char")
+                nil [803 1037])
+            ("grpc_empty_slice" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1067 1072]))                  
+                :type ("grpc_slice" type (:type "class") nil nil))
+                nil [1039 1165])
+            ("grpc_slice_copy" function
+               (:arguments 
+                  ( ("s" variable (:type ("grpc_slice" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1194 1207]))                  
+                :type ("grpc_slice" type (:type "class") nil nil))
+                nil [1167 1378])
+            ("grpc_slice_ref_internal" function
+               (:arguments 
+                  ( ("slice" variable (:type ("grpc_slice" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1415 1432]))                  
+                :type ("grpc_slice" type (:type "class") nil nil))
+                nil [1380 1529])
+            ("grpc_slice_unref_internal" function
+               (:arguments 
+                  ( ("slice" variable (:type ("grpc_slice" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1562 1579]))                  
+                :type "void")
+                nil [1531 1662])
+            ("grpc_slice_ref" function
+               (:arguments 
+                  ( ("slice" variable (:type ("grpc_slice" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1707 1724]))                  
+                :type ("grpc_slice" type (:type "class") nil nil))
+                nil [1681 1769])
+            ("grpc_slice_unref" function
+               (:arguments 
+                  ( ("slice" variable (:type ("grpc_slice" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1810 1827]))                  
+                :type "void")
+                nil [1788 1898])
+            ("noop_ref" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("unused" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2009 2022]))                  
+                :type "void")
+                nil [1988 2025])
+            ("noop_unref" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("unused" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2049 2062]))                  
+                :type "void")
+                nil [2026 2065])
+            ("noop_refcount_vtable" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :default-value "{
+    noop_ref, noop_unref, grpc_slice_default_eq_impl,
+    grpc_slice_default_hash_impl}"
+                :type ("grpc_slice_refcount_vtable" type (:type "class") nil nil))
+                nil [2067 2220])
+            ("noop_refcount" variable
+               (:typemodifiers ("static")
+                :default-value "{&noop_refcount_vtable,
+                                            &noop_refcount}"
+                :type ("grpc_slice_refcount" type (:type "class") nil nil))
+                nil [2221 2348])
+            ("grpc_slice_from_static_buffer" function
+               (:arguments 
+                  ( ("s" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2391 2405])
+                    ("len" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2406 2417]))                  
+                :type ("grpc_slice" type (:type "class") nil nil))
+                nil [2350 2575])
+            ("grpc_slice_from_static_string" function
+               (:arguments 
+                  ( ("s" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2618 2632]))                  
+                :type ("grpc_slice" type (:type "class") nil nil))
+                nil [2577 2690])
+            ("new_slice_refcount" type
+               (:members 
+                  ( ("rc" variable (:type ("grpc_slice_refcount" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2867 2890])
+                    ("refs" variable (:type ("gpr_refcount" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2893 2911])
+                    ("user_destroy" function
+                       (:prototype-flag t
+                        :function-pointer t
+                        :arguments 
+                          ( ("" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [2935 2941]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2914 2942])
+                    ("user_data" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol classsubparts) [2945 2961]))                  
+                :type "struct")
+                nil [2829 2983])
+            ("new_slice_refcount" type
+               (:typedef ("new_slice_refcount" type (:type "struct") nil nil)
+                :type "typedef")
+                nil [2829 2983])
+            ("new_slice_ref" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("p" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3011 3019]))                  
+                :type "void")
+                nil [2985 3094])
+            ("new_slice_unref" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("p" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3124 3132]))                  
+                :type "void")
+                nil [3096 3271])
+            ("new_slice_vtable" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :default-value "{
+    new_slice_ref, new_slice_unref, grpc_slice_default_eq_impl,
+    grpc_slice_default_hash_impl}"
+                :type ("grpc_slice_refcount_vtable" type (:type "class") nil nil))
+                nil [3273 3432])
+            ("grpc_slice_new_with_user_data" function
+               (:arguments 
+                  ( ("p" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3475 3483])
+                    ("len" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3484 3495])
+                    ("destroy" function
+                       (:function-pointer t
+                        :arguments 
+                          ( ("" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [3553 3559]))                          
+                        :type "void")
+                        nil nil)
+                    ("user_data" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3602 3618]))                  
+                :type ("grpc_slice" type (:type "class") nil nil))
+                nil [3434 4023])
+            ("grpc_slice_new" function
+               (:arguments 
+                  ( ("p" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4051 4059])
+                    ("len" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4060 4071])
+                    ("destroy" function
+                       (:function-pointer t
+                        :arguments 
+                          ( ("" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [4088 4094]))                          
+                        :type "void")
+                        nil nil))                  
+                :type ("grpc_slice" type (:type "class") nil nil))
+                nil [4025 4224])
+            ("new_with_len_slice_refcount" type
+               (:members 
+                  ( ("rc" variable (:type ("grpc_slice_refcount" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4419 4442])
+                    ("refs" variable (:type ("gpr_refcount" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4445 4463])
+                    ("user_data" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol classsubparts) [4466 4482])
+                    ("user_length" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4485 4504])
+                    ("user_destroy" function
+                       (:prototype-flag t
+                        :function-pointer t
+                        :arguments 
+                          ( ("" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [4528 4534])
+                            ("" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4535 4542]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [4507 4543]))                  
+                :type "struct")
+                nil [4372 4574])
+            ("new_with_len_slice_refcount" type
+               (:typedef ("new_with_len_slice_refcount" type (:type "struct") nil nil)
+                :type "typedef")
+                nil [4372 4574])
+            ("new_with_len_ref" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("p" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4605 4613]))                  
+                :type "void")
+                nil [4576 4706])
+            ("new_with_len_unref" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("p" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4739 4747]))                  
+                :type "void")
+                nil [4708 4920])
+            ("new_with_len_vtable" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :default-value "{
+    new_with_len_ref, new_with_len_unref, grpc_slice_default_eq_impl,
+    grpc_slice_default_hash_impl}"
+                :type ("grpc_slice_refcount_vtable" type (:type "class") nil nil))
+                nil [4922 5090])
+            ("grpc_slice_new_with_len" function
+               (:arguments 
+                  ( ("p" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [5127 5135])
+                    ("len" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5136 5147])
+                    ("destroy" function
+                       (:function-pointer t
+                        :arguments 
+                          ( ("" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [5199 5205])
+                            ("" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5206 5213]))                          
+                        :type "void")
+                        nil nil))                  
+                :type ("grpc_slice" type (:type "class") nil nil))
+                nil [5092 5667])
+            ("grpc_slice_from_copied_buffer" function
+               (:arguments 
+                  ( ("source" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [5710 5729])
+                    ("length" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5730 5744]))                  
+                :type ("grpc_slice" type (:type "class") nil nil))
+                nil [5669 5913])
+            ("grpc_slice_from_copied_string" function
+               (:arguments 
+                  ( ("source" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [5956 5975]))                  
+                :type ("grpc_slice" type (:type "class") nil nil))
+                nil [5915 6043])
+            ("malloc_refcount" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("base" variable (:type ("grpc_slice_refcount" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6064 6089])
+                          ("refs" variable (:type ("gpr_refcount" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6092 6110]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [6045 6129])
+            ("malloc_ref" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("p" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [6154 6162]))                  
+                :type "void")
+                nil [6131 6231])
+            ("malloc_unref" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("p" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [6258 6266]))                  
+                :type "void")
+                nil [6233 6364])
+            ("malloc_vtable" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :default-value "{
+    malloc_ref, malloc_unref, grpc_slice_default_eq_impl,
+    grpc_slice_default_hash_impl}"
+                :type ("grpc_slice_refcount_vtable" type (:type "class") nil nil))
+                nil [6366 6516])
+            ("grpc_slice_malloc_large" function
+               (:arguments 
+                  ( ("length" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6553 6567]))                  
+                :type ("grpc_slice" type (:type "class") nil nil))
+                nil [6518 7729])
+            ("grpc_slice_malloc" function
+               (:arguments 
+                  ( ("length" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7760 7774]))                  
+                :type ("grpc_slice" type (:type "class") nil nil))
+                nil [7731 8048])
+            ("grpc_slice_sub_no_ref" function
+               (:arguments 
+                  ( ("source" variable (:type ("grpc_slice" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8083 8101])
+                    ("begin" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8102 8115])
+                    ("end" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8116 8127]))                  
+                :type ("grpc_slice" type (:type "class") nil nil))
+                nil [8050 8835])
+            ("grpc_slice_sub" function
+               (:arguments 
+                  ( ("source" variable (:type ("grpc_slice" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8863 8881])
+                    ("begin" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8882 8895])
+                    ("end" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8896 8907]))                  
+                :type ("grpc_slice" type (:type "class") nil nil))
+                nil [8837 9347])
+            ("grpc_slice_split_tail_maybe_ref" function
+               (:arguments 
+                  ( ("source" variable
+                       (:pointer 1
+                        :type ("grpc_slice" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9392 9411])
+                    ("split" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9412 9425])
+                    ("ref_whom" variable (:type ("grpc_slice_ref_whom" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9469 9498]))                  
+                :type ("grpc_slice" type (:type "class") nil nil))
+                nil [9349 11338])
+            ("grpc_slice_split_tail" function
+               (:arguments 
+                  ( ("source" variable
+                       (:pointer 1
+                        :type ("grpc_slice" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11373 11392])
+                    ("split" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11393 11406]))                  
+                :type ("grpc_slice" type (:type "class") nil nil))
+                nil [11340 11488])
+            ("grpc_slice_split_head" function
+               (:arguments 
+                  ( ("source" variable
+                       (:pointer 1
+                        :type ("grpc_slice" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11523 11542])
+                    ("split" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11543 11556]))                  
+                :type ("grpc_slice" type (:type "class") nil nil))
+                nil [11490 12967])
+            ("grpc_slice_default_eq_impl" function
+               (:arguments 
+                  ( ("a" variable (:type ("grpc_slice" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13000 13013])
+                    ("b" variable (:type ("grpc_slice" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13014 13027]))                  
+                :type "int")
+                nil [12969 13258])
+            ("grpc_slice_eq" function
+               (:arguments 
+                  ( ("a" variable (:type ("grpc_slice" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13278 13291])
+                    ("b" variable (:type ("grpc_slice" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13292 13305]))                  
+                :type "int")
+                nil [13260 13475])
+            ("grpc_slice_cmp" function
+               (:arguments 
+                  ( ("a" variable (:type ("grpc_slice" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13496 13509])
+                    ("b" variable (:type ("grpc_slice" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13510 13523]))                  
+                :type "int")
+                nil [13477 13718])
+            ("grpc_slice_str_cmp" function
+               (:arguments 
+                  ( ("a" variable (:type ("grpc_slice" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13743 13756])
+                    ("b" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [13757 13771]))                  
+                :type "int")
+                nil [13720 13935])
+            ("grpc_slice_is_equivalent" function
+               (:arguments 
+                  ( ("a" variable (:type ("grpc_slice" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13966 13979])
+                    ("b" variable (:type ("grpc_slice" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13980 13993]))                  
+                :type "int")
+                nil [13937 14215])
+            ("grpc_slice_buf_start_eq" function
+               (:arguments 
+                  ( ("a" variable (:type ("grpc_slice" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14245 14258])
+                    ("b" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [14259 14273])
+                    ("len" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14274 14285]))                  
+                :type "int")
+                nil [14217 14388])
+            ("grpc_slice_rchr" function
+               (:arguments 
+                  ( ("s" variable (:type ("grpc_slice" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14410 14423])
+                    ("c" variable (:type "char") (reparse-symbol arg-sub-list) [14424 14431]))                  
+                :type "int")
+                nil [14390 14587])
+            ("grpc_slice_chr" function
+               (:arguments 
+                  ( ("s" variable (:type ("grpc_slice" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14608 14621])
+                    ("c" variable (:type "char") (reparse-symbol arg-sub-list) [14622 14629]))                  
+                :type "int")
+                nil [14589 14799])
+            ("grpc_slice_slice" function
+               (:arguments 
+                  ( ("haystack" variable (:type ("grpc_slice" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14822 14842])
+                    ("needle" variable (:type ("grpc_slice" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14843 14861]))                  
+                :type "int")
+                nil [14801 15613])
+            ("grpc_slice_dup" function
+               (:arguments 
+                  ( ("a" variable (:type ("grpc_slice" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15641 15654]))                  
+                :type ("grpc_slice" type (:type "class") nil nil))
+                nil [15615 15828]))          
+      :file "slice.cc"
+      :pointmax 15829
+      :fsize 15828
+      :lastmodtime '(23087 42005 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :file "slice_internal.h"
+      :fsize 1873
+      :lastmodtime '(23087 42005 0 0))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("grpc/slice_buffer.h" include (:system-flag t) nil [605 635])
+            ("grpc/support/port_platform.h" include (:system-flag t) nil [636 675])
+            ("string.h" include (:system-flag t) nil [677 696])
+            ("grpc/support/alloc.h" include (:system-flag t) nil [698 729])
+            ("grpc/support/log.h" include (:system-flag t) nil [730 759])
+            ("grpc/support/useful.h" include (:system-flag t) nil [760 792])
+            ("src/core/lib/slice/slice_internal.h" include nil nil [794 840])
+            ("GROW" variable (:constant-flag t) nil [918 922])
+            ("maybe_embiggen" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("sb" variable
+                       (:pointer 1
+                        :type ("grpc_slice_buffer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [968 990]))                  
+                :type "void")
+                nil [941 2020])
+            ("grpc_slice_buffer_init" function
+               (:arguments 
+                  ( ("sb" variable
+                       (:pointer 1
+                        :type ("grpc_slice_buffer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2050 2072]))                  
+                :type "void")
+                nil [2022 2209])
+            ("grpc_slice_buffer_destroy_internal" function
+               (:arguments 
+                  ( ("exec_ctx" variable
+                       (:pointer 1
+                        :type ("grpc_exec_ctx" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2251 2275])
+                    ("sb" variable
+                       (:pointer 1
+                        :type ("grpc_slice_buffer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2316 2338]))                  
+                :type "void")
+                nil [2211 2477])
+            ("grpc_slice_buffer_destroy" function
+               (:arguments 
+                  ( ("sb" variable
+                       (:pointer 1
+                        :type ("grpc_slice_buffer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2510 2532]))                  
+                :type "void")
+                nil [2479 2671])
+            ("grpc_slice_buffer_tiny_add" function
+               (:pointer 1
+                :arguments 
+                  ( ("sb" variable
+                       (:pointer 1
+                        :type ("grpc_slice_buffer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2709 2731])
+                    ("n" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2732 2741]))                  
+                :type ("uint8_t" type (:type "class") nil nil))
+                nil [2673 3336])
+            ("grpc_slice_buffer_add_indexed" function
+               (:arguments 
+                  ( ("sb" variable
+                       (:pointer 1
+                        :type ("grpc_slice_buffer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3375 3397])
+                    ("s" variable (:type ("grpc_slice" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3398 3411]))                  
+                :type ("size_t" type (:type "class") nil nil))
+                nil [3338 3561])
+            ("grpc_slice_buffer_add" function
+               (:arguments 
+                  ( ("sb" variable
+                       (:pointer 1
+                        :type ("grpc_slice_buffer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3590 3612])
+                    ("s" variable (:type ("grpc_slice" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3613 3626]))                  
+                :type "void")
+                nil [3563 5169])
+            ("grpc_slice_buffer_addn" function
+               (:arguments 
+                  ( ("sb" variable
+                       (:pointer 1
+                        :type ("grpc_slice_buffer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5199 5221])
+                    ("s" variable
+                       (:pointer 1
+                        :type ("grpc_slice" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5222 5236])
+                    ("n" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5237 5246]))                  
+                :type "void")
+                nil [5171 5331])
+            ("grpc_slice_buffer_pop" function
+               (:arguments 
+                  ( ("sb" variable
+                       (:pointer 1
+                        :type ("grpc_slice_buffer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5360 5382]))                  
+                :type "void")
+                nil [5333 5502])
+            ("grpc_slice_buffer_reset_and_unref_internal" function
+               (:arguments 
+                  ( ("exec_ctx" variable
+                       (:pointer 1
+                        :type ("grpc_exec_ctx" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5552 5576])
+                    ("sb" variable
+                       (:pointer 1
+                        :type ("grpc_slice_buffer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5625 5647]))                  
+                :type "void")
+                nil [5504 5795])
+            ("grpc_slice_buffer_reset_and_unref" function
+               (:arguments 
+                  ( ("sb" variable
+                       (:pointer 1
+                        :type ("grpc_slice_buffer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5836 5858]))                  
+                :type "void")
+                nil [5797 6005])
+            ("grpc_slice_buffer_swap" function
+               (:arguments 
+                  ( ("a" variable
+                       (:pointer 1
+                        :type ("grpc_slice_buffer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6035 6056])
+                    ("b" variable
+                       (:pointer 1
+                        :type ("grpc_slice_buffer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6057 6078]))                  
+                :type "void")
+                nil [6007 7775])
+            ("grpc_slice_buffer_move_into" function
+               (:arguments 
+                  ( ("src" variable
+                       (:pointer 1
+                        :type ("grpc_slice_buffer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7810 7833])
+                    ("dst" variable
+                       (:pointer 1
+                        :type ("grpc_slice_buffer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7867 7890]))                  
+                :type "void")
+                nil [7777 8211])
+            ("slice_buffer_move_first_maybe_ref" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("src" variable
+                       (:pointer 1
+                        :type ("grpc_slice_buffer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8259 8282])
+                    ("n" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8283 8292])
+                    ("dst" variable
+                       (:pointer 1
+                        :type ("grpc_slice_buffer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8339 8362])
+                    ("incref" variable (:type "bool") (reparse-symbol arg-sub-list) [8409 8421]))                  
+                :type "void")
+                nil [8213 9595])
+            ("grpc_slice_buffer_move_first" function
+               (:arguments 
+                  ( ("src" variable
+                       (:pointer 1
+                        :type ("grpc_slice_buffer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9631 9654])
+                    ("n" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9655 9664])
+                    ("dst" variable
+                       (:pointer 1
+                        :type ("grpc_slice_buffer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9699 9722]))                  
+                :type "void")
+                nil [9597 9782])
+            ("grpc_slice_buffer_move_first_no_ref" function
+               (:arguments 
+                  ( ("src" variable
+                       (:pointer 1
+                        :type ("grpc_slice_buffer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9825 9848])
+                    ("n" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9849 9858])
+                    ("dst" variable
+                       (:pointer 1
+                        :type ("grpc_slice_buffer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9900 9923]))                  
+                :type "void")
+                nil [9784 9984])
+            ("grpc_slice_buffer_move_first_into_buffer" function
+               (:arguments 
+                  ( ("exec_ctx" variable
+                       (:pointer 1
+                        :type ("grpc_exec_ctx" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10032 10056])
+                    ("src" variable
+                       (:pointer 1
+                        :type ("grpc_slice_buffer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10103 10126])
+                    ("n" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10127 10136])
+                    ("dst" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [10183 10193]))                  
+                :type "void")
+                nil [9986 10901])
+            ("grpc_slice_buffer_trim_end" function
+               (:arguments 
+                  ( ("sb" variable
+                       (:pointer 1
+                        :type ("grpc_slice_buffer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10935 10957])
+                    ("n" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10958 10967])
+                    ("garbage" variable
+                       (:pointer 1
+                        :type ("grpc_slice_buffer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11000 11027]))                  
+                :type "void")
+                nil [10903 11621])
+            ("grpc_slice_buffer_take_first" function
+               (:arguments 
+                  ( ("sb" variable
+                       (:pointer 1
+                        :type ("grpc_slice_buffer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11663 11685]))                  
+                :type ("grpc_slice" type (:type "class") nil nil))
+                nil [11623 11853])
+            ("grpc_slice_buffer_undo_take_first" function
+               (:arguments 
+                  ( ("sb" variable
+                       (:pointer 1
+                        :type ("grpc_slice_buffer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11894 11916])
+                    ("slice" variable (:type ("grpc_slice" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11956 11973]))                  
+                :type "void")
+                nil [11855 12075]))          
+      :file "slice_buffer.cc"
+      :pointmax 12076
+      :fsize 11702
+      :lastmodtime '(23087 42005 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("GROW" (spp-arg-list ("x") 922 . 925) . ((semantic-list "(3 * (x) / 2)" 926 . 939)))
+          )
+))
+  :file "!Volumes!Transcend!grpc!src!core!lib!slice!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

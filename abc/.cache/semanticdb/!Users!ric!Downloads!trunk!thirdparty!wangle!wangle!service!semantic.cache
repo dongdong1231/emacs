@@ -1,0 +1,240 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("folly/futures/Future.h" include (:system-flag t) nil [324 357])
+            ("folly/Memory.h" include (:system-flag t) nil [358 383])
+            ("wangle/bootstrap/ServerBootstrap.h" include (:system-flag t) nil [385 430])
+            ("wangle/bootstrap/ClientBootstrap.h" include (:system-flag t) nil [431 476])
+            ("wangle/channel/Pipeline.h" include (:system-flag t) nil [477 513])
+            ("wangle/channel/AsyncSocketHandler.h" include (:system-flag t) nil [514 560])
+            ("wangle" type
+               (:members 
+                  ( ("Service" type
+                       (:template 
+                          ( ("Req" type (:type "class") nil nil)
+                            ("Resp" type (:type "class") nil nil))                          
+                        :type "class"
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [773 780])
+                            ("()" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :operator-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("request" variable (:type ("Req" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [822 834]))                                  
+                                :type ("folly::Future" type
+                                     (:template-specifier 
+                                        ( ("Resp" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [783 839])
+                            ("close" function
+                               (:typemodifiers ("virtual")
+                                :type ("folly::Future" type
+                                     (:template-specifier 
+                                        ( ("folly::Unit" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [874 954])
+                            ("isAvailable" function
+                               (:typemodifiers ("virtual")
+                                :type "bool")
+                                (reparse-symbol classsubparts) [957 1006]))                          )
+                        (reparse-symbol namespacesubparts) [711 1009])
+                    ("ServiceFilter" type
+                       (:template 
+                          ( ("ReqA" type (:type "class") nil nil)
+                            ("RespA" type (:type "class") nil nil)
+                            ("ReqB" type (:type "class") nil nil)
+                            ("RespB" type (:type "class") nil nil))                          
+                        :type "class"
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [1770 1777])
+                            ("ServiceFilter" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("service" variable (:type ("std::shared_ptr" type
+                                         (:template-specifier 
+                                            ( ("Service" type (:template-specifier 
+                                                ( ("ReqB" type nil nil nil)
+                                                  ("RespB" type nil nil nil))                                                ) nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol arg-sub-list) [1803 1849]))                                  
+                                :type ("ServiceFilter" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1789 1878])
+                            ("protected" label nil (reparse-symbol classsubparts) [2076 2086])
+                            ("service_" variable (:type ("std::shared_ptr" type
+                                 (:template-specifier 
+                                    ( ("Service" type (:template-specifier 
+                                        ( ("ReqB" type nil nil nil)
+                                          ("RespB" type nil nil nil))                                        ) nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [2089 2136]))                          
+                        :superclasses 
+                          ( ("Service" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          )
+                        (reparse-symbol namespacesubparts) [1619 2139])
+                    ("ServiceFactory" type
+                       (:template 
+                          ( ("Pipeline" type (:type "class") nil nil)
+                            ("Req" type (:type "class") nil nil)
+                            ("Resp" type (:type "class") nil nil))                          
+                        :type "class"
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [2433 2440])
+                            ("()" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :operator-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("client" variable (:type ("std::shared_ptr" type
+                                         (:template-specifier 
+                                            ( ("ClientBootstrap" type (:template-specifier 
+                                                ( ("Pipeline" type nil nil nil))                                                ) nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol arg-sub-list) [2518 2568]))                                  
+                                :type ("folly::Future" type
+                                     (:template-specifier 
+                                        ( ("std::shared_ptr" type (:template-specifier 
+                                            ( ("Service" type (:template-specifier 
+                                                ( ("Req" type nil nil nil)
+                                                  ("Resp" type nil nil nil))                                                ) nil nil))                                            ) nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [2443 2573]))                          )
+                        (reparse-symbol namespacesubparts) [2351 2617])
+                    ("ConstFactory" type
+                       (:template 
+                          ( ("Pipeline" type (:type "class") nil nil)
+                            ("Req" type (:type "class") nil nil)
+                            ("Resp" type (:type "class") nil nil))                          
+                        :type "class"
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [2745 2752])
+                            ("ConstFactory" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("service" variable (:type ("std::shared_ptr" type
+                                         (:template-specifier 
+                                            ( ("Service" type (:template-specifier 
+                                                ( ("Req" type nil nil nil)
+                                                  ("Resp" type nil nil nil))                                                ) nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol arg-sub-list) [2777 2821]))                                  
+                                :type ("ConstFactory" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2764 2850])
+                            ("private" label nil (reparse-symbol classsubparts) [3017 3025])
+                            ("service_" variable (:type ("std::shared_ptr" type
+                                 (:template-specifier 
+                                    ( ("Service" type (:template-specifier 
+                                        ( ("Req" type nil nil nil)
+                                          ("Resp" type nil nil nil))                                        ) nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [3028 3073]))                          
+                        :superclasses 
+                          ( ("ServiceFactory" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          )
+                        (reparse-symbol namespacesubparts) [2620 3076])
+                    ("ServiceFactoryFilter" type
+                       (:template 
+                          ( ("Pipeline" type (:type "class") nil nil)
+                            ("ReqA" type (:type "class") nil nil)
+                            ("RespA" type (:type "class") nil nil)
+                            ("ReqB" type (:type "class") nil nil)
+                            ("RespB" type (:type "class") nil nil))                          
+                        :type "class"
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [3271 3278])
+                            ("ServiceFactoryFilter" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("serviceFactory" variable (:type ("std::shared_ptr" type
+                                         (:template-specifier 
+                                            ( ("ServiceFactory" type (:template-specifier 
+                                                ( ("Pipeline" type nil nil nil)
+                                                  ("ReqB" type nil nil nil)
+                                                  ("RespB" type nil nil nil))                                                ) nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol arg-sub-list) [3316 3386]))                                  
+                                :type ("ServiceFactoryFilter" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3290 3440])
+                            ("protected" label nil (reparse-symbol classsubparts) [3490 3500])
+                            ("serviceFactory_" variable (:type ("std::shared_ptr" type
+                                 (:template-specifier 
+                                    ( ("ServiceFactory" type (:template-specifier 
+                                        ( ("Pipeline" type nil nil nil)
+                                          ("ReqB" type nil nil nil)
+                                          ("RespB" type nil nil nil))                                        ) nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [3503 3574]))                          
+                        :superclasses 
+                          ( ("ServiceFactory" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          )
+                        (reparse-symbol namespacesubparts) [3078 3577])
+                    ("FactoryToService" type
+                       (:template 
+                          ( ("Pipeline" type (:type "class") nil nil)
+                            ("Req" type (:type "class") nil nil)
+                            ("Resp" type (:type "class") nil nil))                          
+                        :type "class"
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [3697 3704])
+                            ("FactoryToService" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("factory" variable (:type ("std::shared_ptr" type
+                                         (:template-specifier 
+                                            ( ("ServiceFactory" type (:template-specifier 
+                                                ( ("Pipeline" type nil nil nil)
+                                                  ("Req" type nil nil nil)
+                                                  ("Resp" type nil nil nil))                                                ) nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol arg-sub-list) [3738 3799]))                                  
+                                :type ("FactoryToService" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3716 3828])
+                            ("private" label nil (reparse-symbol classsubparts) [4186 4194])
+                            ("factory_" variable (:type ("std::shared_ptr" type
+                                 (:template-specifier 
+                                    ( ("ServiceFactory" type (:template-specifier 
+                                        ( ("Pipeline" type nil nil nil)
+                                          ("Req" type nil nil nil)
+                                          ("Resp" type nil nil nil))                                        ) nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [4197 4259]))                          
+                        :superclasses 
+                          ( ("Service" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          )
+                        (reparse-symbol namespacesubparts) [3579 4262]))                  
+                :type "namespace")
+                nil [562 4266]))          
+      :file "Service.h"
+      :pointmax 4287
+      :fsize 4286
+      :lastmodtime '(22900 7662 0 0)
+      :unmatched-syntax '((semantic-list 3927 . 4183) (symbol 3918 . 3926) (semantic-list 3904 . 3917) (semantic-list 3902 . 3904) (OPERATOR 3894 . 3902) (punctuation 3892 . 3893) (symbol 3888 . 3892) (punctuation 3887 . 3888) (symbol 3881 . 3887) (punctuation 3880 . 3881) (punctuation 3879 . 3880) (symbol 3874 . 3879) (punctuation 3869 . 3870) (DEFAULT 3862 . 3869) (punctuation 3860 . 3861) (symbol 3851 . 3859) (semantic-list 3848 . 3850) (symbol 3832 . 3848) (punctuation 3831 . 3832) (EXPLICIT 3707 . 3715) (punctuation 3486 . 3487) (DEFAULT 3479 . 3486) (punctuation 3477 . 3478) (symbol 3468 . 3476) (semantic-list 3465 . 3467) (symbol 3445 . 3465) (punctuation 3444 . 3445) (EXPLICIT 3281 . 3289) (semantic-list 2989 . 3015) (symbol 2980 . 2988) (semantic-list 2915 . 2979) (semantic-list 2913 . 2915) (OPERATOR 2905 . 2913) (punctuation 2903 . 2904) (punctuation 2902 . 2903) (punctuation 2901 . 2902) (symbol 2897 . 2901) (punctuation 2895 . 2896) (symbol 2892 . 2895) (punctuation 2891 . 2892) (symbol 2884 . 2891) (punctuation 2883 . 2884) (symbol 2873 . 2883) (punctuation 2872 . 2873) (punctuation 2871 . 2872) (symbol 2868 . 2871) (punctuation 2867 . 2868) (symbol 2861 . 2867) (punctuation 2860 . 2861) (punctuation 2859 . 2860) (symbol 2854 . 2859) (EXPLICIT 2755 . 2763) (punctuation 2612 . 2613) (DEFAULT 2605 . 2612) (punctuation 2603 . 2604) (semantic-list 2600 . 2602) (symbol 2586 . 2600) (punctuation 2585 . 2586) (VIRTUAL 2577 . 2584) (semantic-list 2032 . 2073) (symbol 2023 . 2031) (semantic-list 2020 . 2022) (symbol 2009 . 2020) (BOOL 2004 . 2008) (semantic-list 1965 . 2000) (symbol 1956 . 1964) (semantic-list 1953 . 1955) (symbol 1948 . 1953) (punctuation 1946 . 1947) (symbol 1942 . 1946) (punctuation 1941 . 1942) (punctuation 1940 . 1941) (symbol 1935 . 1940) (punctuation 1934 . 1935) (symbol 1928 . 1934) (punctuation 1927 . 1928) (punctuation 1926 . 1927) (symbol 1921 . 1926) (punctuation 1916 . 1917) (DEFAULT 1909 . 1916) (punctuation 1907 . 1908) (symbol 1898 . 1906) (semantic-list 1895 . 1897) (symbol 1882 . 1895) (punctuation 1881 . 1882) (EXPLICIT 1780 . 1788) (punctuation 870 . 871) (DEFAULT 863 . 870) (punctuation 861 . 862) (semantic-list 858 . 860) (symbol 851 . 858) (punctuation 850 . 851) (VIRTUAL 842 . 849) (symbol 318 . 322) (symbol 311 . 317) (punctuation 310 . 311)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags nil
+      :file "ClientDispatcher.h"
+      :pointmax 3364
+      :fsize 3363
+      :lastmodtime '(22900 7662 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!ric!Downloads!trunk!thirdparty!wangle!wangle!service!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

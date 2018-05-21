@@ -1,0 +1,1294 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("app/qzap/service/scoring3/scorer/baseline_scorer/baseline_scorer.h" include nil nil [106 183])
+            ("iostream" include (:system-flag t) nil [184 203])
+            ("iomanip" include (:system-flag t) nil [204 222])
+            ("thirdparty/glog/logging.h" include nil nil [223 259])
+            ("thirdparty/gflags/gflags.h" include nil nil [260 297])
+            ("app/qzap/service/scoring3/common/protobuf_utils.h" include nil nil [298 358])
+            ("app/qzap/service/scoring3/scorer/baseline_scorer/bucketing/bucketing_processor.h" include nil nil [359 450])
+            ("app/qzap/service/scoring3/scorer/baseline_scorer/filter/filter_processor.h" include nil nil [451 536])
+            ("app/qzap/service/scoring3/scorer/baseline_scorer/ranking/ranking_processor.h" include nil nil [537 624])
+            ("app/qzap/service/scoring3/scorer/baseline_scorer/scoring/scoring_processor.h" include nil nil [625 712])
+            ("DEFINE_string" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("baseline_scorer_config" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [728 751]))                  
+                :type "int")
+                nil [714 760])
+            ("DEFINE_bool" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("baseline_scorer_time_track" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [773 800])
+                    ("" variable (:type ("false" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [801 807]))                  
+                :type "int")
+                nil [761 812])
+            ("QZAP" type
+               (:members 
+                  ( ("SCORING3" type
+                       (:members 
+                          ( ("REGISTER_SCORER" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("" variable (:type ("BaselineScorer" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [869 884]))                                  
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [853 885])
+                            ("BaselineScorer" function
+                               (:constructor-flag t
+                                :parent "BaselineScorer"
+                                :type ("BaselineScorer" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [1291 3039])
+                            ("BaselineScorer" function
+                               (:destructor-flag t
+                                :parent "BaselineScorer"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [3041 3150])
+                            ("InitQueryWithTime" function
+                               (:parent "BaselineScorer"
+                                :arguments 
+                                  ( ("request" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("qzap::retrieval::RetrievalRequest" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3190 3239])
+                                    ("proc_time" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3240 3259]))                                  
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [3152 3323])
+                            ("TopN" function
+                               (:parent "BaselineScorer"
+                                :arguments 
+                                  ( ("request" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("qzap::retrieval::RetrievalRequest" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3387 3436])
+                                    ("retriever" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("Retriever" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3441 3468])
+                                    ("local_index" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("LocalIndex" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3473 3503])
+                                    ("local_index_size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3508 3532])
+                                    ("topn" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3537 3551])
+                                    ("result" variable
+                                       (:pointer 1
+                                        :type ("ScoredResult" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3556 3577])
+                                    ("global_interface" variable
+                                       (:pointer 1
+                                        :type ("GlobalInterface" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3582 3616]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [3356 3734])
+                            ("SET_TIME_TRACK" variable (:constant-flag t) (reparse-symbol namespacesubparts) [3744 3758])
+                            ("BeginQuery" function
+                               (:parent "BaselineScorer"
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [3936 4064])
+                            ("DoQuery" function
+                               (:parent "BaselineScorer"
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [4066 4188])
+                            ("EndQuery" function
+                               (:parent "BaselineScorer"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [4190 4579]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [831 4582]))                  
+                :type "namespace")
+                nil [814 4607]))          
+      :file "baseline_scorer.cc"
+      :pointmax 4627
+      :fsize 4818
+      :lastmodtime '(22878 19689 0 0)
+      :unmatched-syntax '((string 808 . 810) (string 756 . 758) (string 752 . 754))
+      :lexical-table 
+        '(("SET_TIME_TRACK" (spp-arg-list ("index") 3758 . 3765) . 
+              ((DO "do" 3770 . 3772) (semantic-list "{\\
+    if (FLAGS_baseline_scorer_time_track) {\\
+      DCHECK_LT(index, arraysize(time_track_));\\
+      time_track_[index] = WallTime_Now();\\
+    }\\
+  }" 3773 . 3924) (WHILE "while" 3925 . 3930) (semantic-list "(0)" 3931 . 3934)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("APP_QZAP_SERVICE_SCORING3_SCORER_BASELINE_SCORER_BASELINE_SCORER_H" variable (:constant-flag t) nil [189 255])
+            ("app/qzap/common/base/walltime.h" include nil nil [257 299])
+            ("app/qzap/service/scoring3/framework/base_scorer.h" include nil nil [300 360])
+            ("app/qzap/service/scoring3/config/baseline_config.pb.h" include nil nil [361 425])
+            ("app/qzap/service/scoring3/data_accessor/accessor_provider.h" include nil nil [426 496])
+            ("app/qzap/service/scoring3/scorer/baseline_scorer/feature_data_assigner.h" include nil nil [497 580])
+            ("app/qzap/service/scoring3/scorer/baseline_scorer/washing/baseline_washing_policy.h" include nil nil [581 674])
+            ("QZAP" type
+               (:members 
+                  ( ("SCORING3" type
+                       (:members 
+                          ( ("BaselineScorer" type
+                               (:superclasses 
+                                  ( ("BaseScorer" type
+                                       (:protection "public"
+                                        :type "class")
+                                        nil nil))                                  
+                                :members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [811 818])
+                                    ("BaselineScorer" function
+                                       (:prototype-flag t
+                                        :constructor-flag t
+                                        :type ("BaselineScorer" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [821 838])
+                                    ("BaselineScorer" function
+                                       (:prototype-flag t
+                                        :destructor-flag t
+                                        :typemodifiers ("virtual")
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [841 867])
+                                    ("InitQueryWithTime" function
+                                       (:prototype-flag t
+                                        :typemodifiers ("virtual")
+                                        :arguments 
+                                          ( ("request" variable
+                                               (:pointer 1
+                                                :constant-flag t
+                                                :type ("qzap::retrieval::RetrievalRequest" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [900 949])
+                                            ("proc_time" variable
+                                               (:constant-flag t
+                                                :type ("uint32_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [950 975]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [870 976])
+                                    ("CutScoringIndexNum" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("left_time" variable (:type "double") (reparse-symbol arg-sub-list) [1002 1019])
+                                            ("local_index_size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1020 1044]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [979 1045])
+                                    ("TopN" function
+                                       (:prototype-flag t
+                                        :typemodifiers ("virtual")
+                                        :arguments 
+                                          ( ("request" variable
+                                               (:pointer 1
+                                                :constant-flag t
+                                                :type ("qzap::retrieval::RetrievalRequest" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1066 1115])
+                                            ("retriever" variable
+                                               (:pointer 1
+                                                :constant-flag t
+                                                :type ("Retriever" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1136 1163])
+                                            ("local_index" variable
+                                               (:pointer 1
+                                                :constant-flag t
+                                                :type ("LocalIndex" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1184 1214])
+                                            ("local_index_size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1235 1259])
+                                            ("topn" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1280 1294])
+                                            ("result" variable
+                                               (:pointer 1
+                                                :type ("ScoredResult" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1315 1336])
+                                            ("global_interface" variable
+                                               (:pointer 1
+                                                :type ("GlobalInterface" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1357 1391]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [1048 1392])
+                                    ("protected" label nil (reparse-symbol classsubparts) [1395 1405])
+                                    ("BeginQuery" function
+                                       (:prototype-flag t
+                                        :typemodifiers ("virtual")
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [1408 1434])
+                                    ("DoQuery" function
+                                       (:prototype-flag t
+                                        :typemodifiers ("virtual")
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [1437 1460])
+                                    ("EndQuery" function
+                                       (:prototype-flag t
+                                        :typemodifiers ("virtual")
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1463 1487])
+                                    ("private" label nil (reparse-symbol classsubparts) [1490 1498])
+                                    ("config_" variable (:type ("QZAP::SCORING3::CONFIG::BaselineScorerConfig" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1503 1556])
+                                    ("washing_policy_" variable (:type ("QZAP::SCORING3::BaselineWashingPolicy" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1561 1615])
+                                    ("feature_data_assigner_" variable (:type ("QZAP::SCORING3::BaselineFeatureDataAssigner" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1620 1687])
+                                    ("time_track_" variable
+                                       (:dereference 1
+                                        :type ("WallTime" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1703 1727]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [767 1730]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [693 1733]))                  
+                :type "namespace")
+                nil [676 1758]))          
+      :file "baseline_scorer.h"
+      :pointmax 1857
+      :fsize 1890
+      :lastmodtime '(22878 19689 0 0)
+      :unmatched-syntax '((punctuation 1619 . 1620) (punctuation 1618 . 1619) (punctuation 1560 . 1561) (punctuation 1559 . 1560) (punctuation 1502 . 1503) (punctuation 1501 . 1502))
+      :lexical-table 
+        '(("APP_QZAP_SERVICE_SCORING3_SCORER_BASELINE_SCORER_BASELINE_SCORER_H")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("APP_QZAP_SERVICE_SCORING3_SCORER_BASELINE_SCORER_BASELINE_FEATURE_DATA_ASSIGNER_H" variable (:constant-flag t) nil [204 285])
+            ("string" include (:system-flag t) nil [287 304])
+            ("vector" include (:system-flag t) nil [305 322])
+            ("map" include (:system-flag t) nil [323 337])
+            ("utility" include (:system-flag t) nil [338 356])
+            ("thirdparty/gtest/gtest_prod.h" include nil nil [358 398])
+            ("app/qzap/common/base/scoped_ptr.h" include nil nil [400 444])
+            ("app/qzap/service/strategy_data_platform/scoring_feature/scoring_feature_conf.pb.h" include nil nil [446 538])
+            ("app/qzap/service/strategy_data_platform/scoring_feature/api/scoring_feature_data.h" include nil nil [539 632])
+            ("app/qzap/service/sunfish/id_parser/include/feature_type_code.h" include nil nil [634 707])
+            ("app/qzap/service/sunfish/attachment/ad_quality_data.h" include nil nil [708 772])
+            ("app/qzap/service/scoring3/config/baseline_config.pb.h" include nil nil [774 838])
+            ("app/qzap/service/scoring3/common/baseline_indexer_data_reader.h" include nil nil [839 913])
+            ("app/qzap/service/scoring3/data_accessor/feature_data_assigner.h" include nil nil [914 988])
+            ("app/qzap/service/scoring3/scorer/baseline_scorer/common.h" include nil nil [989 1057])
+            ("app/qzap/service/scoring3/scorer/baseline_scorer/data_assigner_define.h" include nil nil [1058 1140])
+            ("UserTargetConv" type
+               (:prototype t
+                :type "class")
+                nil [1142 1163])
+            ("ExposureStrategy" type
+               (:prototype t
+                :type "struct")
+                nil [1164 1188])
+            ("Retriever" type
+               (:prototype t
+                :type "class")
+                nil [1189 1205])
+            ("QueryParser_Token" type
+               (:prototype t
+                :type "struct")
+                nil [1206 1231])
+            ("qzap" type
+               (:members 
+                  ( ("retrieval" type
+                       (:members 
+                          ( ("QzapCoordinate" type
+                               (:prototype t
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [1272 1293]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1250 1295]))                  
+                :type "namespace")
+                nil [1233 1321])
+            ("gdt" type
+               (:members 
+                  ( ("sunfish" type
+                       (:members 
+                          ( ("IncrementData" type
+                               (:prototype t
+                                :type "struct")
+                                (reparse-symbol namespacesubparts) [1378 1399]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1358 1401]))                  
+                :type "namespace")
+                nil [1342 1425])
+            ("QZAP" type
+               (:members 
+                  ( ("SCORING3" type
+                       (:members 
+                          ( ("BaselineFeatureDataAssigner" type
+                               (:superclasses 
+                                  ( ("FeatureDataAssigner" type
+                                       (:protection "public"
+                                        :type "class")
+                                        nil nil))                                  
+                                :members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [1637 1644])
+                                    ("BaselineFeatureDataAssigner" function
+                                       (:prototype-flag t
+                                        :constructor-flag t
+                                        :type ("BaselineFeatureDataAssigner" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1647 1677])
+                                    ("BaselineFeatureDataAssigner" function
+                                       (:prototype-flag t
+                                        :destructor-flag t
+                                        :typemodifiers ("virtual")
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1680 1719])
+                                    ("Init" function
+                                       (:prototype-flag t
+                                        :typemodifiers ("virtual")
+                                        :arguments 
+                                          ( ("config" variable
+                                               (:reference 1
+                                                :type ("google::protobuf::Message" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1748 1782]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [1722 1783])
+                                    ("UnInit" function
+                                       (:prototype-flag t
+                                        :typemodifiers ("virtual")
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1786 1808])
+                                    ("Bind" function
+                                       (:prototype-flag t
+                                        :typemodifiers ("virtual")
+                                        :arguments 
+                                          ( ("query_accessor" variable
+                                               (:pointer 1
+                                                :type ("QueryAccessor" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1829 1859]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [1811 1860])
+                                    ("Assign" function
+                                       (:prototype-flag t
+                                        :typemodifiers ("virtual")
+                                        :arguments 
+                                          ( ("ad_accessor" variable
+                                               (:pointer 1
+                                                :type ("AdAccessor" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1883 1907]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [1863 1908])
+                                    ("AssignMatchInfo" function
+                                       (:prototype-flag t
+                                        :typemodifiers ("virtual")
+                                        :arguments 
+                                          ( ("accessor_provider" variable
+                                               (:pointer 1
+                                                :type ("AccessorProvider" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1940 1976]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [1911 1977])
+                                    ("InitQuery" function
+                                       (:typemodifiers ("virtual")
+                                        :arguments 
+                                          ( ("query_accessor" variable
+                                               (:pointer 1
+                                                :type ("QueryAccessor" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2019 2049]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [1996 2099])
+                                    ("private" label nil (reparse-symbol classsubparts) [2102 2110])
+                                    ("InitNewAdFeature" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("config" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("QZAP::log_analyzer::FeatureConfig" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2135 2183]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [2113 2184])
+                                    ("GetCtr1AdFeature" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("key" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("QZAP::log_analyzer::AdFeatureKey" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2210 2254])
+                                            ("value" variable
+                                               (:pointer 1
+                                                :type ("QZAP::log_analyzer::AdFeatureValue" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2255 2297]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [2188 2298])
+                                    ("GetCtr1UserFeature" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("key" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("QZAP::log_analyzer::UserFeatureKey" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2325 2371])
+                                            ("value" variable
+                                               (:pointer 1
+                                                :type ("QZAP::log_analyzer::UserFeatureValue" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2372 2416]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [2301 2417])
+                                    ("GetSponsorRate" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("ad_accessor" variable
+                                               (:pointer 1
+                                                :type ("AdAccessor" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2441 2465]))                                          
+                                        :type "float")
+                                        (reparse-symbol classsubparts) [2420 2466])
+                                    ("private" label nil (reparse-symbol classsubparts) [2469 2477])
+                                    ("InternalAssignMatchInfoCompatible" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("accessor_provider" variable
+                                               (:pointer 1
+                                                :type ("AccessorProvider" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2530 2566]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [2491 2567])
+                                    ("InternalAssignMatchInfo" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("accessor_provider" variable
+                                               (:pointer 1
+                                                :type ("AccessorProvider" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2607 2643]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [2578 2644])
+                                    ("HandleUserStatusToken" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("token_id" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2696 2714])
+                                            ("target_id" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2719 2738])
+                                            ("status" variable (:type "int") (reparse-symbol arg-sub-list) [2739 2750])
+                                            ("feature_type" variable (:type ("qzap_feature_type::eFeatureType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2755 2800])
+                                            ("accessor_provider" variable
+                                               (:pointer 1
+                                                :type ("AccessorProvider" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2805 2841])
+                                            ("token_log" variable
+                                               (:pointer 1
+                                                :type ("std::ostream" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2846 2870]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [2669 2871])
+                                    ("HandleLBSTokenCompatible" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("token_id" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2904 2922])
+                                            ("target_id" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2927 2946])
+                                            ("feature_type" variable (:type ("qzap_feature_type::eFeatureType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2951 2996])
+                                            ("accessor_provider" variable
+                                               (:pointer 1
+                                                :type ("AccessorProvider" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3001 3037])
+                                            ("token_log" variable
+                                               (:pointer 1
+                                                :type ("std::ostream" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3042 3066]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [2874 3067])
+                                    ("HandleUserQQToken" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("token_id" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3127 3145])
+                                            ("target_id" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3150 3169])
+                                            ("feature_type" variable (:type ("qzap_feature_type::eFeatureType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3174 3219])
+                                            ("accessor_provider" variable
+                                               (:pointer 1
+                                                :type ("AccessorProvider" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3224 3260])
+                                            ("token_log" variable
+                                               (:pointer 1
+                                                :type ("std::ostream" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3265 3289]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [3104 3290])
+                                    ("HandleOtherToken" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("token_id" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3315 3333])
+                                            ("target_id" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3338 3357])
+                                            ("feature_type" variable (:type ("qzap_feature_type::eFeatureType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3362 3407])
+                                            ("accessor_provider" variable
+                                               (:pointer 1
+                                                :type ("AccessorProvider" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3412 3448])
+                                            ("token_log" variable
+                                               (:pointer 1
+                                                :type ("std::ostream" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3453 3477]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [3293 3478])
+                                    ("HandleRealtimeToken" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("token_id" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3567 3585])
+                                            ("target_id" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3590 3609])
+                                            ("accessor_provider" variable
+                                               (:pointer 1
+                                                :type ("AccessorProvider" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3614 3650])
+                                            ("token_log" variable
+                                               (:pointer 1
+                                                :type ("std::ostream" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3655 3679]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [3537 3680])
+                                    ("HandleTimelinessToken" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("token_id" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3716 3734])
+                                            ("token" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("QueryParser_Token" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3739 3770])
+                                            ("accessor_provider" variable
+                                               (:pointer 1
+                                                :type ("AccessorProvider" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3775 3811])
+                                            ("token_log" variable
+                                               (:pointer 1
+                                                :type ("std::ostream" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3816 3840]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [3684 3841])
+                                    ("PrepareForMatchInfo" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("query_accessor" variable
+                                               (:pointer 1
+                                                :type ("QueryAccessor" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3871 3901]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [3846 3902])
+                                    ("WriteExperimentCallback" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("query_accessor" variable
+                                               (:pointer 1
+                                                :type ("QueryAccessor" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3962 3992]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [3933 3993])
+                                    ("HandleBusiness" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("query_accessor" variable
+                                               (:pointer 1
+                                                :type ("QueryAccessor" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [4027 4057]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [4007 4058])
+                                    ("HandleQueryInfo" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("query_accessor" variable
+                                               (:pointer 1
+                                                :type ("QueryAccessor" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [4100 4130]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [4079 4131])
+                                    ("private" label nil (reparse-symbol classsubparts) [4134 4142])
+                                    ("LoadConfig" function
+                                       (:template 
+                                          ( ("T" type (:type "class") nil nil))                                          
+                                        :type "bool"
+                                        :arguments 
+                                          ( ("config_file" variable
+                                               (:pointer 1
+                                                :constant-flag t
+                                                :type "char")
+                                                (reparse-symbol arg-sub-list) [4192 4216])
+                                            ("config" variable
+                                               (:pointer 1
+                                                :type ("T" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [4217 4227]))                                          
+                                        :typemodifiers ("static")
+                                        :prototype-flag t)
+                                        (reparse-symbol classsubparts) [4145 4228])
+                                    ("CopyExposureStrategy" function
+                                       (:template 
+                                          ( ("T" type (:type "class") nil nil))                                          
+                                        :type "void"
+                                        :arguments 
+                                          ( ("src" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("T" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [4333 4346])
+                                            ("dest" variable
+                                               (:pointer 1
+                                                :type ("SiteExposureProb" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [4353 4376]))                                          
+                                        :typemodifiers ("static"))
+                                        (reparse-symbol classsubparts) [4270 4841])
+                                    ("FRIEND_TEST" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("" variable (:type ("BaselineFeatureDataAssignerTest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4856 4888])
+                                            ("" variable (:type ("CopyExposureStrategy" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4889 4910]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [4844 4911])
+                                    ("CopyExposureStrategyExtend" function
+                                       (:typemodifiers ("static")
+                                        :arguments 
+                                          ( ("src" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("gdt::sunfish::ExposureStrategyExtend" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [5062 5110])
+                                            ("dest" variable
+                                               (:pointer 1
+                                                :type ("SiteExposureProb" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [5117 5140]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [5016 5725])
+                                    ("FRIEND_TEST" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("" variable (:type ("BaselineFeatureDataAssignerTest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5740 5772])
+                                            ("" variable (:type ("CopyExposureStrategyExtend" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5773 5800]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [5728 5801])
+                                    ("CopyTraning2SiteExposureProb" function
+                                       (:typemodifiers ("static")
+                                        :arguments 
+                                          ( ("old_data" variable
+                                               (:pointer 1
+                                                :constant-flag t
+                                                :type ("ExpandFeatureDataOld" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [5876 5913])
+                                            ("dest" variable
+                                               (:pointer 1
+                                                :type ("SiteExposureProb" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [5920 5943]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [5828 6547])
+                                    ("FRIEND_TEST" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("" variable (:type ("BaselineFeatureDataAssignerTest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6562 6594])
+                                            ("" variable (:type ("CopyTraning2SiteExposureProb" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6595 6624]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [6550 6625])
+                                    ("CaculateNewAdExploreProbability" function
+                                       (:prototype-flag t
+                                        :typemodifiers ("static")
+                                        :arguments 
+                                          ( ("day" variable (:type "int") (reparse-symbol arg-sub-list) [6688 6696])
+                                            ("day0_prob" variable (:type "int") (reparse-symbol arg-sub-list) [6697 6711])
+                                            ("day1_prob" variable (:type "int") (reparse-symbol arg-sub-list) [6712 6726]))                                          
+                                        :type ("uint32_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [6640 6727])
+                                    ("FRIEND_TEST" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("" variable (:type ("BaselineFeatureDataAssignerTest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6742 6774])
+                                            ("" variable (:type ("CaculateNewAdExploreProbability" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6775 6807]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [6730 6808])
+                                    ("CheckIsNewAd" function
+                                       (:prototype-flag t
+                                        :typemodifiers ("static")
+                                        :arguments 
+                                          ( ("incr_data" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("gdt::sunfish::IncrementData" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [6855 6900])
+                                            ("adindex" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6907 6924])
+                                            ("pos_id" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6925 6941]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [6823 6942])
+                                    ("FRIEND_TEST" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("" variable (:type ("BaselineFeatureDataAssignerTest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6957 6989])
+                                            ("" variable (:type ("CheckIsNewAd" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6990 7003]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [6945 7004])
+                                    ("AttainPosCtr" function
+                                       (:prototype-flag t
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [7022 7042])
+                                    ("private" label nil (reparse-symbol classsubparts) [7045 7053])
+                                    ("scoring_feature_data_" variable (:type ("QZAP::log_analyzer::ScoringFeatureData" type (:type "class") nil nil)) (reparse-symbol classsubparts) [7114 7175])
+                                    ("baseline_indexer_data_" variable (:type ("BaselineIndexerDataReader" type (:type "class") nil nil)) (reparse-symbol classsubparts) [7178 7227])
+                                    ("pos_id_" variable (:type "int") (reparse-symbol classsubparts) [7248 7260])
+                                    ("ctr_alg_id_" variable (:type "int") (reparse-symbol classsubparts) [7263 7279])
+                                    ("now_time_" variable (:type ("time_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [7282 7299])
+                                    ("PosCtrInfo" type
+                                       (:members 
+                                          ( ("has_value" variable (:type "bool") (reparse-symbol classsubparts) [7339 7354])
+                                            ("ctr" variable (:type "float") (reparse-symbol classsubparts) [7359 7369])
+                                            ("cvr" variable (:type "float") (reparse-symbol classsubparts) [7374 7384])
+                                            ("PosCtrInfo" function
+                                               (:constructor-flag t
+                                                :typemodifiers ("inline")
+                                                :type ("PosCtrInfo" type (:type "struct") nil nil))
+                                                (reparse-symbol classsubparts) [7390 7432])
+                                            ("Reset" function
+                                               (:typemodifiers ("inline")
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [7437 7545]))                                          
+                                        :type "struct")
+                                        (reparse-symbol classsubparts) [7315 7550])
+                                    ("pos_ctr_info_" variable (:type ("PosCtrInfo" type (:type "class") nil nil)) (reparse-symbol classsubparts) [7553 7578])
+                                    ("FRIEND_TEST" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("" variable (:type ("BaselineFeatureDataAssignerTest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7593 7625])
+                                            ("" variable (:type ("PosCtrInfo" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7626 7637]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [7581 7638])
+                                    ("raw_crtsize_" variable (:type ("std::vector" type
+                                         (:template-specifier 
+                                            ( ("uint32_t" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [7656 7691])
+                                    ("src_switch_" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [7774 7794])
+                                    ("offline_data_selector_" variable (:type "int") (reparse-symbol classsubparts) [7808 7835])
+                                    ("exposure_prob_from_incremental_" variable (:type "int") (reparse-symbol classsubparts) [7863 7899])
+                                    ("new_ad_adjustment_algorithm_" variable (:type "int") (reparse-symbol classsubparts) [7930 7963])
+                                    ("new_ad_day0_explore_probability_" variable (:type "int") (reparse-symbol classsubparts) [7981 8018])
+                                    ("new_ad_day1_explore_probability_" variable (:type "int") (reparse-symbol classsubparts) [8035 8072])
+                                    ("use_filter_code_from_incremental_" variable (:type "int") (reparse-symbol classsubparts) [8089 8127])
+                                    ("use_new_ad_data_from_incremental_" variable (:type "int") (reparse-symbol classsubparts) [8146 8184])
+                                    ("try_to_attain_pos_ctr_" variable (:type "int") (reparse-symbol classsubparts) [8204 8231])
+                                    ("id2coordinate_" variable (:type ("std::map" type
+                                         (:template-specifier 
+                                            ( ("uint64_t" type nil nil nil)
+                                              ("qzap::retrieval::QzapCoordinate" type
+                                                 (:pointer 1
+                                                  :constant-flag t)
+                                                  nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [8264 8338])
+                                    ("id2lbs_" variable (:type ("std::map" type
+                                         (:template-specifier 
+                                            ( ("uint64_t" type nil nil nil)
+                                              ("std::pair" type (:template-specifier 
+                                                ( ("uint64_t" type nil nil nil)
+                                                  ("uint64_t" type nil nil nil))                                                ) nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [8353 8412])
+                                    ("lbs2token_id_" variable (:type ("std::map" type
+                                         (:template-specifier 
+                                            ( ("std::pair" type (:template-specifier 
+                                                ( ("uint64_t" type nil nil nil)
+                                                  ("uint64_t" type nil nil nil))                                                ) nil nil)
+                                              ("std::vector" type (:template-specifier 
+                                                ( ("uint32_t" type nil nil nil))                                                ) nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [8427 8505])
+                                    ("user_targetid_converter_" variable (:type ("scoped_ptr" type
+                                         (:template-specifier 
+                                            ( ("UserTargetConv" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [8508 8560])
+                                    ("retriever_" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("Retriever" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [8563 8591])
+                                    ("ad_feature_key_" variable (:type ("AdFeatureKey" type (:type "class") nil nil)) (reparse-symbol classsubparts) [8607 8636])
+                                    ("ad_feature_value_" variable (:type ("AdFeatureValue" type (:type "class") nil nil)) (reparse-symbol classsubparts) [8639 8672])
+                                    ("user_feature_key_" variable (:type ("UserFeatureKey" type (:type "class") nil nil)) (reparse-symbol classsubparts) [8675 8708])
+                                    ("user_feature_value_" variable (:type ("UserFeatureValue" type (:type "class") nil nil)) (reparse-symbol classsubparts) [8711 8748]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [1571 8751]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1462 8754]))                  
+                :type "namespace")
+                nil [1445 8779]))          
+      :file "feature_data_assigner.h"
+      :pointmax 8894
+      :fsize 9561
+      :lastmodtime '(22878 19689 0 0)
+      :unmatched-syntax '((punctuation 1747 . 1748) (punctuation 1746 . 1747) (CONST 1740 . 1745))
+      :lexical-table 
+        '(("APP_QZAP_SERVICE_SCORING3_SCORER_BASELINE_SCORER_BASELINE_FEATURE_DATA_ASSIGNER_H")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("sstream" include (:system-flag t) nil [153 171])
+            ("fstream" include (:system-flag t) nil [172 190])
+            ("thirdparty/glog/stl_logging.h" include nil nil [192 232])
+            ("thirdparty/gflags/gflags.h" include nil nil [233 270])
+            ("thirdparty/glog/logging.h" include nil nil [271 307])
+            ("thirdparty/glog/stl_logging.h" include nil nil [308 348])
+            ("thirdparty/protobuf/text_format.h" include nil nil [349 393])
+            ("thirdparty/protobuf/io/zero_copy_stream_impl.h" include nil nil [394 451])
+            ("app/qzap/common/cpp/include/AlarmLog.h" include nil nil [453 502])
+            ("app/qzap/common/cpp/include/exp_paramset_define.h" include nil nil [503 563])
+            ("app/qzap/common/utility/hash.h" include nil nil [564 605])
+            ("app/qzap/proto/common/qzap_common.pb.h" include nil nil [606 655])
+            ("app/qzap/service/sunfish/attachment/gdt_meta.h" include nil nil [657 714])
+            ("app/qzap/service/sunfish/attachment/attachment.h" include nil nil [715 774])
+            ("app/qzap/service/sunfish/attachment/gdt_global_attachment.h" include nil nil [775 845])
+            ("app/qzap/service/sunfish/attachment/global_attachment.h" include nil nil [846 912])
+            ("app/qzap/service/sunfish/attachment/ad_extension.h" include nil nil [913 974])
+            ("app/qzap/service/sunfish/attachment/ad_quality_data.h" include nil nil [975 1039])
+            ("app/qzap/service/sunfish/attachment/ad_sponsor_policy.h" include nil nil [1040 1106])
+            ("app/qzap/service/sunfish/id_parser/include/user_targetid_converter.h" include nil nil [1107 1186])
+            ("app/qzap/service/sunfish/server/include/retrieval_resource.h" include nil nil [1187 1258])
+            ("app/qzap/service/sunfish/targeting/include/query_parser.h" include nil nil [1259 1327])
+            ("app/qzap/service/sunfish/targeting/include/repository_space_define.h" include nil nil [1328 1407])
+            ("app/qzap/service/scoring3/common/protobuf_utils.h" include nil nil [1409 1469])
+            ("app/qzap/service/scoring3/data_accessor/accessor_provider.h" include nil nil [1470 1540])
+            ("app/qzap/service/scoring3/data_accessor/exp_param_define.h" include nil nil [1541 1610])
+            ("app/qzap/service/scoring3/scorer/baseline_scorer/feature_data_assigner.h" include nil nil [1611 1694])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [1696 1716])
+            ("qzap::retrieval" using (:type ("qzap::retrieval" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [1717 1749])
+            ("DEFINE_string" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("log_tokens_to_file" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1787 1806]))                  
+                :type "int")
+                nil [1773 1842])
+            ("DEFINE_bool" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("baseline_scorer_disable_match_info" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1876 1911])
+                    ("" variable (:type ("false" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1912 1918]))                  
+                :type "int")
+                nil [1864 1943])
+            ("DEFINE_bool" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("baseline_scorer_match_info_compatible" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1980 2018])
+                    ("" variable (:type ("false" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2019 2025]))                  
+                :type "int")
+                nil [1968 2053])
+            ("DEFINE_int32" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("baseline_mobile_qqcom_flow_allocation" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2095 2133]))                  
+                :type "int")
+                nil [2082 2155])
+            ("DEFINE_int32" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("baseline_mobile_qqcom_flow_random" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2233 2267]))                  
+                :type "int")
+                nil [2220 2337])
+            ("DEFINE_string" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("scoring_feature_config" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2367 2390]))                  
+                :type "int")
+                nil [2353 2409])
+            ("DECLARE_bool" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("timeliness_control" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2423 2442]))                  
+                :type "int")
+                nil [2410 2443])
+            ("QZAP" type
+               (:members 
+                  ( ("SCORING3" type
+                       (:members 
+                          ( ("SetMatchInfo" function
+                               (:typemodifiers ("static")
+                                :arguments 
+                                  ( ("feature_type" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("qzap_feature_type::eFeatureType" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2569 2621])
+                                    ("match_id" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2626 2651])
+                                    ("match_info" variable
+                                       (:pointer 1
+                                        :type ("MatchInfo" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2656 2678]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [2539 6069])
+                            ("MatchInfoDebugString" function
+                               (:typemodifiers ("static")
+                                :arguments 
+                                  ( ("match_info" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("MatchInfo" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [6135 6163]))                                  
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [6095 6782])
+                            ("BaselineFeatureDataAssigner" function
+                               (:constructor-flag t
+                                :parent "BaselineFeatureDataAssigner"
+                                :type ("BaselineFeatureDataAssigner" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [6784 6845])
+                            ("BaselineFeatureDataAssigner" function
+                               (:destructor-flag t
+                                :parent "BaselineFeatureDataAssigner"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [6847 6909])
+                            ("Init" function
+                               (:parent "BaselineFeatureDataAssigner"
+                                :arguments 
+                                  ( ("config" variable
+                                       (:reference 1
+                                        :type ("google::protobuf::Message" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [7434 7468]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [7387 8343])
+                            ("UnInit" function
+                               (:parent "BaselineFeatureDataAssigner"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [8345 8390])
+                            ("Bind" function
+                               (:parent "BaselineFeatureDataAssigner"
+                                :arguments 
+                                  ( ("query_accessor" variable
+                                       (:pointer 1
+                                        :type ("QueryAccessor" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [8807 8837]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [8768 13731])
+                            ("Assign" function
+                               (:parent "BaselineFeatureDataAssigner"
+                                :arguments 
+                                  ( ("ad_accessor" variable
+                                       (:pointer 1
+                                        :type ("AdAccessor" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [14118 14142]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [14077 28811])
+                            ("InitNewAdFeature" function
+                               (:parent "BaselineFeatureDataAssigner"
+                                :arguments 
+                                  ( ("config" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("QZAP::log_analyzer::FeatureConfig" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [28869 28917]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [28813 29046])
+                            ("GetCtr1AdFeature" function
+                               (:parent "BaselineFeatureDataAssigner"
+                                :arguments 
+                                  ( ("key" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("AdFeatureKey" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [29099 29123])
+                                    ("value" variable
+                                       (:pointer 1
+                                        :type ("AdFeatureValue" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [29124 29146]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [29048 29463])
+                            ("GetCtr1UserFeature" function
+                               (:parent "BaselineFeatureDataAssigner"
+                                :arguments 
+                                  ( ("key" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("UserFeatureKey" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [29518 29544])
+                                    ("value" variable
+                                       (:pointer 1
+                                        :type ("UserFeatureValue" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [29545 29569]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [29465 29637])
+                            ("LoadConfig" function
+                               (:template 
+                                  ( ("T" type (:type "class") nil nil))                                  
+                                :type "bool"
+                                :arguments 
+                                  ( ("config_file" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [29706 29730])
+                                    ("config" variable
+                                       (:pointer 1
+                                        :type ("T" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [29731 29741]))                                  
+                                :parent "BaselineFeatureDataAssigner")
+                                (reparse-symbol namespacesubparts) [29639 30218])
+                            ("AssignMatchInfo" function
+                               (:parent "BaselineFeatureDataAssigner"
+                                :arguments 
+                                  ( ("accessor_provider" variable
+                                       (:pointer 1
+                                        :type ("AccessorProvider" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [30275 30311]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [30220 31023])
+                            ("HandleQueryInfo" function
+                               (:parent "BaselineFeatureDataAssigner"
+                                :arguments 
+                                  ( ("query_accessor" variable
+                                       (:pointer 1
+                                        :type ("QueryAccessor" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [31080 31110]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [31025 34148])
+                            ("LOG_TOKENS_READY" variable (:constant-flag t) (reparse-symbol namespacesubparts) [34166 34182])
+                            ("LOG_TOKENS" variable (:constant-flag t) (reparse-symbol namespacesubparts) [34582 34592])
+                            ("LOG_LBS_TOKENS" variable (:constant-flag t) (reparse-symbol namespacesubparts) [35164 35178])
+                            ("InternalAssignMatchInfoCompatible" function
+                               (:parent "BaselineFeatureDataAssigner"
+                                :arguments 
+                                  ( ("accessor_provider" variable
+                                       (:pointer 1
+                                        :type ("AccessorProvider" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [36155 36191]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [36082 37524])
+                            ("InternalAssignMatchInfo" function
+                               (:parent "BaselineFeatureDataAssigner"
+                                :arguments 
+                                  ( ("accessor_provider" variable
+                                       (:pointer 1
+                                        :type ("AccessorProvider" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [37589 37625]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [37526 42327])
+                            ("HandleRealtimeToken" function
+                               (:parent "BaselineFeatureDataAssigner"
+                                :arguments 
+                                  ( ("token_id" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [42388 42406])
+                                    ("target_id" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [42411 42430])
+                                    ("accessor_provider" variable
+                                       (:pointer 1
+                                        :type ("AccessorProvider" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [42435 42471])
+                                    ("token_log" variable
+                                       (:pointer 1
+                                        :type ("std::ostream" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [42476 42500]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [42329 43135])
+                            ("HandleTimelinessToken" function
+                               (:parent "BaselineFeatureDataAssigner"
+                                :arguments 
+                                  ( ("token_id" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [43198 43216])
+                                    ("token" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("QueryParser_Token" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [43217 43248])
+                                    ("accessor_provider" variable
+                                       (:pointer 1
+                                        :type ("AccessorProvider" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [43253 43289])
+                                    ("token_log" variable
+                                       (:pointer 1
+                                        :type ("std::ostream" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [43290 43314]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [43137 44143])
+                            ("HandleUserStatusToken" function
+                               (:parent "BaselineFeatureDataAssigner"
+                                :arguments 
+                                  ( ("token_id" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [44206 44224])
+                                    ("target_id" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [44229 44248])
+                                    ("status" variable (:type "int") (reparse-symbol arg-sub-list) [44253 44264])
+                                    ("feature_type" variable (:type ("qzap_feature_type::eFeatureType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [44269 44314])
+                                    ("accessor_provider" variable
+                                       (:pointer 1
+                                        :type ("AccessorProvider" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [44319 44355])
+                                    ("token_log" variable
+                                       (:pointer 1
+                                        :type ("std::ostream" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [44360 44384]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [44145 45107])
+                            ("HandleLBSTokenCompatible" function
+                               (:parent "BaselineFeatureDataAssigner"
+                                :arguments 
+                                  ( ("token_id" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [45173 45191])
+                                    ("target_id" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [45196 45215])
+                                    ("feature_type" variable (:type ("qzap_feature_type::eFeatureType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [45220 45265])
+                                    ("accessor_provider" variable
+                                       (:pointer 1
+                                        :type ("AccessorProvider" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [45270 45306])
+                                    ("token_log" variable
+                                       (:pointer 1
+                                        :type ("std::ostream" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [45311 45335]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [45109 46527])
+                            ("HandleUserQQToken" function
+                               (:parent "BaselineFeatureDataAssigner"
+                                :arguments 
+                                  ( ("token_id" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [46581 46599])
+                                    ("target_id" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [46604 46623])
+                                    ("feature_type" variable (:type ("qzap_feature_type::eFeatureType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [46628 46673])
+                                    ("accessor_provider" variable
+                                       (:pointer 1
+                                        :type ("AccessorProvider" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [46678 46714])
+                                    ("token_log" variable
+                                       (:pointer 1
+                                        :type ("std::ostream" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [46719 46743]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [46529 47748])
+                            ("HandleOtherToken" function
+                               (:parent "BaselineFeatureDataAssigner"
+                                :arguments 
+                                  ( ("token_id" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [47806 47824])
+                                    ("target_id" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [47829 47848])
+                                    ("feature_type" variable (:type ("qzap_feature_type::eFeatureType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [47853 47898])
+                                    ("accessor_provider" variable
+                                       (:pointer 1
+                                        :type ("AccessorProvider" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [47903 47939])
+                                    ("token_log" variable
+                                       (:pointer 1
+                                        :type ("std::ostream" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [47944 47968]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [47750 48873])
+                            ("PrepareForMatchInfo" function
+                               (:parent "BaselineFeatureDataAssigner"
+                                :arguments 
+                                  ( ("query_accessor" variable
+                                       (:pointer 1
+                                        :type ("QueryAccessor" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [48934 48964]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [48875 49993])
+                            ("WriteExperimentCallback" function
+                               (:parent "BaselineFeatureDataAssigner"
+                                :arguments 
+                                  ( ("query_accessor" variable
+                                       (:pointer 1
+                                        :type ("QueryAccessor" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [50058 50088]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [49995 50484])
+                            ("HandleBusiness" function
+                               (:parent "BaselineFeatureDataAssigner"
+                                :arguments 
+                                  ( ("query_accessor" variable
+                                       (:pointer 1
+                                        :type ("QueryAccessor" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [50535 50565]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [50486 52682])
+                            ("CaculateNewAdExploreProbability" function
+                               (:parent "BaselineFeatureDataAssigner"
+                                :arguments 
+                                  ( ("day" variable (:type "int") (reparse-symbol arg-sub-list) [52763 52771])
+                                    ("day0_prob" variable (:type "int") (reparse-symbol arg-sub-list) [52842 52856])
+                                    ("day1_prob" variable (:type "int") (reparse-symbol arg-sub-list) [52927 52941]))                                  
+                                :type ("uint32_t" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [52693 53254])
+                            ("GetSponsorRate" function
+                               (:parent "BaselineFeatureDataAssigner"
+                                :arguments 
+                                  ( ("ad_accessor" variable
+                                       (:pointer 1
+                                        :type ("AdAccessor" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [53306 53330]))                                  
+                                :type "float")
+                                (reparse-symbol namespacesubparts) [53256 53980])
+                            ("CheckIsNewAd" function
+                               (:parent "BaselineFeatureDataAssigner"
+                                :arguments 
+                                  ( ("incr_data" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("gdt::sunfish::IncrementData" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [54034 54079])
+                                    ("adindex" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [54084 54101])
+                                    ("pos_id" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [54102 54118]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [53982 55263])
+                            ("AttainPosCtr" function
+                               (:parent "BaselineFeatureDataAssigner"
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [55265 56048]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [2462 56051]))                  
+                :type "namespace")
+                nil [2445 56076]))          
+      :file "feature_data_assigner.cc"
+      :pointmax 56104
+      :fsize 59097
+      :lastmodtime '(22878 19689 0 0)
+      :unmatched-syntax '((punctuation 7433 . 7434) (punctuation 7432 . 7433) (CONST 7426 . 7431) (string 2395 . 2407) (string 2391 . 2393) (string 2276 . 2335) (number 2269 . 2270) (punctuation 2268 . 2269) (string 2142 . 2153) (number 2134 . 2140) (string 2026 . 2051) (string 1919 . 1941) (string 1811 . 1840) (string 1807 . 1809))
+      :lexical-table 
+        '(("LOG_LBS_TOKENS" (spp-arg-list ("itor" "jtor" "ofs" "id1" "id2") 35178 . 35205) . 
+              ((DO "do" 35210 . 35212) (semantic-list "{\\
+    if (ofs != NULL) {\\
+      (*ofs) << \"token[\" << id1 << \",\" << id2 << \"]=[\";\\
+      itor->SeekToFirst();\\
+      jtor->SeekToFirst();\\
+      while (it->IsValid() && jt->IsValid()) {\\
+        const LocalIndex local_index1 = it->GetLocalIndex();\\
+        const LocalIndex local_index2 = jt->GetLocalIndex();\\
+        if (local_index1 < local_index2) {\\
+          it->Next();\\
+        } else if (local_index1 > local_index2) {\\
+          jt->Next();\\
+        } else {\\
+          it->Next();\\
+          jt->Next();\\
+          AdAccessor *ad = accessor_provider->GetAdAccessorByLocalIndex(local_index1);\\
+          if (ad == NULL) {\\
+            LOG(INFO) << \"AdAccessor not found, local_index=[\" << local_index1 << \"]\";\\
+            continue;\\
+          }\\
+          (*ofs) << ad->GetAdIndex() << \",\";\\
+        }\\
+      }\\
+      (*ofs) << \"]\\n\";\\
+    }\\
+  }" 35213 . 36071) (WHILE "while" 36072 . 36077) (semantic-list "(0)" 36077 . 36080)))
+          ("LOG_TOKENS_READY" (spp-arg-list ("os_var_name") 34182 . 34195) . 
+              ((symbol "scoped_ptr" 34200 . 34210) (punctuation "<" 34210 . 34211) (symbol "std" 34211 . 34214) (punctuation ":" 34214 . 34215) (punctuation ":" 34215 . 34216) (symbol "ofstream" 34216 . 34224) (punctuation ">" 34224 . 34225) (symbol "os_var_name" 34226 . 34237) (punctuation ";" 34237 . 34238) (IF "if" 34242 . 34244) (semantic-list "(!FLAGS_log_tokens_to_file.empty())" 34245 . 34280) (semantic-list "{\\
+    os_var_name.reset(new std::ofstream(FLAGS_log_tokens_to_file.c_str()));\\
+    CHECK_NOTNULL(os_var_name.get());\\
+    if (!os_var_name->is_open()) {\\
+      VLOG(2) << \"open token_log failed \" << FLAGS_log_tokens_to_file;\\
+      os_var_name.reset();\\
+    }\\
+  }" 34281 . 34546)))
+          ("LOG_TOKENS" (spp-arg-list ("itor" "ofs" "id") 34592 . 34607) . 
+              ((DO "do" 34612 . 34614) (semantic-list "{\\
+    if (ofs != NULL) {\\
+      (*ofs) << \"token[\" << id << \"]=[\";\\
+      itor->SeekToFirst();\\
+      while (itor->IsValid()) {\\
+        const LocalIndex local_index = itor->GetLocalIndex();\\
+        itor->Next();\\
+        AdAccessor *ad = accessor_provider->GetAdAccessorByLocalIndex(local_index);\\
+        if (ad == NULL) {\\
+          VLOG(2) << \"AdAccessor not found, local_index=[\" << local_index << \"]\";\\
+          continue;\\
+        }\\
+        (*ofs) << ad->GetAdIndex() << \",\";\\
+      }\\
+      (*ofs) << \"]\\n\";\\
+    }\\
+  }" 34615 . 35145) (WHILE "while" 35146 . 35151) (semantic-list "(0)" 35151 . 35154)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :file "common.h"
+      :fsize 16451
+      :lastmodtime '(22878 19689 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "data_assigner_define.h"
+      :fsize 1465
+      :lastmodtime '(22878 19689 0 0)))
+  :file "!Users!ric!Desktop!trunk!app!qzap!service!scoring3!scorer!baseline_scorer!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

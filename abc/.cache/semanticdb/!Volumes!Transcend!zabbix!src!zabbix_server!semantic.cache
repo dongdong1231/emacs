@@ -1,0 +1,618 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("common.h" include nil nil [778 797])
+            ("cfg.h" include nil nil [894 910])
+            ("pid.h" include nil nil [911 927])
+            ("db.h" include nil nil [928 943])
+            ("dbcache.h" include nil nil [944 964])
+            ("zbxdbupgrade.h" include nil nil [965 990])
+            ("log.h" include nil nil [991 1007])
+            ("zbxgetopt.h" include nil nil [1008 1030])
+            ("mutexs.h" include nil nil [1031 1050])
+            ("sysinfo.h" include nil nil [1052 1072])
+            ("zbxmodules.h" include nil nil [1073 1096])
+            ("zbxserver.h" include nil nil [1097 1119])
+            ("zbxnix.h" include nil nil [1121 1140])
+            ("daemon.h" include nil nil [1141 1160])
+            ("zbxself.h" include nil nil [1161 1181])
+            ("../libs/zbxnix/control.h" include nil nil [1182 1217])
+            ("alerter/alerter.h" include nil nil [1219 1247])
+            ("alerter/alert_manager.h" include nil nil [1248 1282])
+            ("dbsyncer/dbsyncer.h" include nil nil [1283 1313])
+            ("dbconfig/dbconfig.h" include nil nil [1314 1344])
+            ("discoverer/discoverer.h" include nil nil [1345 1379])
+            ("httppoller/httppoller.h" include nil nil [1380 1414])
+            ("housekeeper/housekeeper.h" include nil nil [1415 1451])
+            ("pinger/pinger.h" include nil nil [1452 1478])
+            ("poller/poller.h" include nil nil [1479 1505])
+            ("timer/timer.h" include nil nil [1506 1530])
+            ("trapper/trapper.h" include nil nil [1531 1559])
+            ("snmptrapper/snmptrapper.h" include nil nil [1560 1596])
+            ("escalator/escalator.h" include nil nil [1597 1629])
+            ("proxypoller/proxypoller.h" include nil nil [1630 1666])
+            ("selfmon/selfmon.h" include nil nil [1667 1695])
+            ("vmware/vmware.h" include nil nil [1696 1722])
+            ("taskmanager/taskmanager.h" include nil nil [1723 1759])
+            ("preprocessor/preproc_manager.h" include nil nil [1760 1801])
+            ("preprocessor/preproc_worker.h" include nil nil [1802 1842])
+            ("events.h" include nil nil [1843 1862])
+            ("valuecache.h" include nil nil [1863 1886])
+            ("setproctitle.h" include nil nil [1887 1912])
+            ("../libs/zbxcrypto/tls.h" include nil nil [1913 1947])
+            ("zbxipcservice.h" include nil nil [1948 1974])
+            ("DEFAULT_CONFIG_FILE" variable (:constant-flag t) nil [2138 2157])
+            ("progname" variable
+               (:pointer 1
+                :constant-flag t
+                :default-value "NULL"
+                :type "char")
+                nil [2192 2220])
+            ("title_message" variable
+               (:dereference 1
+                :constant-flag t
+                :default-value "\"zabbix_server\""
+                :type "char")
+                nil [2221 2266])
+            ("syslog_app_name" variable
+               (:dereference 1
+                :constant-flag t
+                :default-value "\"zabbix_server\""
+                :type "char")
+                nil [2267 2314])
+            ("usage_message" variable
+               (:pointer 1
+                :dereference 1
+                :constant-flag t
+                :default-value "{
+	\"[-c config-file]\", NULL,
+	\"[-c config-file]\", \"-R runtime-option\", NULL,
+	\"-h\", NULL,
+	\"-V\", NULL,
+	NULL	/* end of text */
+}"
+                :type "char")
+                nil [2315 2474])
+            ("help_message" variable
+               (:pointer 1
+                :dereference 1
+                :constant-flag t
+                :default-value "{
+	\"The core daemon of Zabbix software.\",
+	\"\",
+	\"Options:\",
+	\"  -c --config config-file        Path to the configuration file\",
+	\"                                 (default: \\\"\" DEFAULT_CONFIG_FILE \"\\\")\",
+	\"  -f --foreground                Run Zabbix server in foreground\",
+	\"  -R --runtime-control runtime-option   Perform administrative functions\",
+	\"\",
+	\"    Runtime control options:\",
+	\"      \" ZBX_CONFIG_CACHE_RELOAD \"        Reload configuration cache\",
+	\"      \" ZBX_HOUSEKEEPER_EXECUTE \"        Execute the housekeeper\",
+	\"      \" ZBX_LOG_LEVEL_INCREASE \"=target  Increase log level, affects all processes if\",
+	\"                                 target is not specified\",
+	\"      \" ZBX_LOG_LEVEL_DECREASE \"=target  Decrease log level, affects all processes if\",
+	\"                                 target is not specified\",
+	\"\",
+	\"      Log level control targets:\",
+	\"        pid                      Process identifier\",
+	\"        process-type             All processes of specified type (e.g., poller)\",
+	\"        process-type,N           Process type and number (e.g., poller,3)\",
+	\"\",
+	\"  -h --help                      Display this help message\",
+	\"  -V --version                   Display version number\",
+	NULL	/* end of text */
+}"
+                :type "char")
+                nil [2476 3750])
+            ("longopts" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :default-value "{
+	{\"config\",		1,	NULL,	'c'},
+	{\"foreground\",		0,	NULL,	'f'},
+	{\"runtime-control\",	1,	NULL,	'R'},
+	{\"help\",		0,	NULL,	'h'},
+	{\"version\",		0,	NULL,	'V'},
+	{NULL}
+}"
+                :type ("zbx_option" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [3799 4000])
+            ("shortopts" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :default-value "\"c:hVR:f\""
+                :type "char")
+                nil [4022 4058])
+            ("threads_num" variable
+               (:default-value "0"
+                :type "int")
+                nil [4095 4115])
+            ("threads" variable
+               (:pointer 1
+                :default-value "NULL"
+                :type ("pid_t" type (:type "class") nil nil))
+                nil [4116 4138])
+            ("program_type" variable
+               (:default-value "ZBX_PROGRAM_TYPE_SERVER"
+                :type "unsigned char")
+                nil [4140 4194])
+            ("process_type" variable
+               (:default-value "ZBX_PROCESS_TYPE_UNKNOWN"
+                :type "unsigned char")
+                nil [4195 4250])
+            ("process_num" variable
+               (:default-value "0"
+                :type "int")
+                nil [4251 4273])
+            ("server_num" variable
+               (:default-value "0"
+                :type "int")
+                nil [4274 4295])
+            ("CONFIG_ALERTER_FORKS" variable
+               (:default-value "3"
+                :type "int")
+                nil [4297 4327])
+            ("CONFIG_DISCOVERER_FORKS" variable
+               (:default-value "1"
+                :type "int")
+                nil [4328 4361])
+            ("CONFIG_HOUSEKEEPER_FORKS" variable
+               (:default-value "1"
+                :type "int")
+                nil [4362 4395])
+            ("CONFIG_PINGER_FORKS" variable
+               (:default-value "1"
+                :type "int")
+                nil [4396 4425])
+            ("CONFIG_POLLER_FORKS" variable
+               (:default-value "5"
+                :type "int")
+                nil [4426 4455])
+            ("CONFIG_UNREACHABLE_POLLER_FORKS" variable
+               (:default-value "1"
+                :type "int")
+                nil [4456 4496])
+            ("CONFIG_HTTPPOLLER_FORKS" variable
+               (:default-value "1"
+                :type "int")
+                nil [4497 4530])
+            ("CONFIG_IPMIPOLLER_FORKS" variable
+               (:default-value "0"
+                :type "int")
+                nil [4531 4564])
+            ("CONFIG_TIMER_FORKS" variable
+               (:default-value "1"
+                :type "int")
+                nil [4565 4593])
+            ("CONFIG_TRAPPER_FORKS" variable
+               (:default-value "5"
+                :type "int")
+                nil [4594 4624])
+            ("CONFIG_SNMPTRAPPER_FORKS" variable
+               (:default-value "0"
+                :type "int")
+                nil [4625 4658])
+            ("CONFIG_JAVAPOLLER_FORKS" variable
+               (:default-value "0"
+                :type "int")
+                nil [4659 4692])
+            ("CONFIG_ESCALATOR_FORKS" variable
+               (:default-value "1"
+                :type "int")
+                nil [4693 4725])
+            ("CONFIG_SELFMON_FORKS" variable
+               (:default-value "1"
+                :type "int")
+                nil [4726 4756])
+            ("CONFIG_DATASENDER_FORKS" variable
+               (:default-value "0"
+                :type "int")
+                nil [4757 4790])
+            ("CONFIG_HEARTBEAT_FORKS" variable
+               (:default-value "0"
+                :type "int")
+                nil [4791 4823])
+            ("CONFIG_COLLECTOR_FORKS" variable
+               (:default-value "0"
+                :type "int")
+                nil [4824 4856])
+            ("CONFIG_PASSIVE_FORKS" variable
+               (:default-value "0"
+                :type "int")
+                nil [4857 4887])
+            ("CONFIG_ACTIVE_FORKS" variable
+               (:default-value "0"
+                :type "int")
+                nil [4888 4917])
+            ("CONFIG_TASKMANAGER_FORKS" variable
+               (:default-value "1"
+                :type "int")
+                nil [4918 4951])
+            ("CONFIG_IPMIMANAGER_FORKS" variable
+               (:default-value "0"
+                :type "int")
+                nil [4952 4985])
+            ("CONFIG_ALERTMANAGER_FORKS" variable
+               (:default-value "1"
+                :type "int")
+                nil [4986 5020])
+            ("CONFIG_PREPROCMAN_FORKS" variable
+               (:default-value "1"
+                :type "int")
+                nil [5021 5054])
+            ("CONFIG_PREPROCESSOR_FORKS" variable
+               (:default-value "3"
+                :type "int")
+                nil [5055 5089])
+            ("CONFIG_LISTEN_PORT" variable
+               (:default-value "ZBX_DEFAULT_SERVER_PORT"
+                :type "int")
+                nil [5091 5141])
+            ("CONFIG_LISTEN_IP" variable
+               (:pointer 1
+                :default-value "NULL"
+                :type "char")
+                nil [5142 5173])
+            ("CONFIG_SOURCE_IP" variable
+               (:pointer 1
+                :default-value "NULL"
+                :type "char")
+                nil [5174 5205])
+            ("CONFIG_TRAPPER_TIMEOUT" variable
+               (:default-value "300"
+                :type "int")
+                nil [5206 5240])
+            ("CONFIG_HOUSEKEEPING_FREQUENCY" variable
+               (:default-value "1"
+                :type "int")
+                nil [5242 5280])
+            ("CONFIG_MAX_HOUSEKEEPER_DELETE" variable
+               (:default-value "5000"
+                :type "int")
+                nil [5281 5322])
+            ("CONFIG_HISTSYNCER_FORKS" variable
+               (:default-value "4"
+                :type "int")
+                nil [5369 5402])
+            ("CONFIG_HISTSYNCER_FREQUENCY" variable
+               (:default-value "1"
+                :type "int")
+                nil [5403 5439])
+            ("CONFIG_CONFSYNCER_FORKS" variable
+               (:default-value "1"
+                :type "int")
+                nil [5440 5473])
+            ("CONFIG_CONFSYNCER_FREQUENCY" variable
+               (:default-value "60"
+                :type "int")
+                nil [5474 5511])
+            ("CONFIG_VMWARE_FORKS" variable
+               (:default-value "0"
+                :type "int")
+                nil [5513 5542])
+            ("CONFIG_VMWARE_FREQUENCY" variable
+               (:default-value "60"
+                :type "int")
+                nil [5543 5577])
+            ("CONFIG_VMWARE_PERF_FREQUENCY" variable
+               (:default-value "60"
+                :type "int")
+                nil [5578 5616])
+            ("CONFIG_VMWARE_TIMEOUT" variable
+               (:default-value "10"
+                :type "int")
+                nil [5617 5649])
+            ("CONFIG_CONF_CACHE_SIZE" variable
+               (:default-value "8 * ZBX_MEBIBYTE"
+                :type ("zbx_uint64_t" type (:type "class") nil nil))
+                nil [5651 5707])
+            ("CONFIG_HISTORY_CACHE_SIZE" variable
+               (:default-value "16 * ZBX_MEBIBYTE"
+                :type ("zbx_uint64_t" type (:type "class") nil nil))
+                nil [5708 5767])
+            ("CONFIG_HISTORY_INDEX_CACHE_SIZE" variable
+               (:default-value "4 * ZBX_MEBIBYTE"
+                :type ("zbx_uint64_t" type (:type "class") nil nil))
+                nil [5768 5832])
+            ("CONFIG_TRENDS_CACHE_SIZE" variable
+               (:default-value "4 * ZBX_MEBIBYTE"
+                :type ("zbx_uint64_t" type (:type "class") nil nil))
+                nil [5833 5890])
+            ("CONFIG_VALUE_CACHE_SIZE" variable
+               (:default-value "8 * ZBX_MEBIBYTE"
+                :type ("zbx_uint64_t" type (:type "class") nil nil))
+                nil [5891 5948])
+            ("CONFIG_VMWARE_CACHE_SIZE" variable
+               (:default-value "8 * ZBX_MEBIBYTE"
+                :type ("zbx_uint64_t" type (:type "class") nil nil))
+                nil [5949 6006])
+            ("CONFIG_UNREACHABLE_PERIOD" variable
+               (:default-value "45"
+                :type "int")
+                nil [6008 6043])
+            ("CONFIG_UNREACHABLE_DELAY" variable
+               (:default-value "15"
+                :type "int")
+                nil [6044 6078])
+            ("CONFIG_UNAVAILABLE_DELAY" variable
+               (:default-value "60"
+                :type "int")
+                nil [6079 6113])
+            ("CONFIG_LOG_LEVEL" variable
+               (:default-value "LOG_LEVEL_WARNING"
+                :type "int")
+                nil [6114 6156])
+            ("CONFIG_ALERT_SCRIPTS_PATH" variable
+               (:pointer 1
+                :default-value "NULL"
+                :type "char")
+                nil [6157 6196])
+            ("CONFIG_EXTERNALSCRIPTS" variable
+               (:pointer 1
+                :default-value "NULL"
+                :type "char")
+                nil [6197 6234])
+            ("CONFIG_TMPDIR" variable
+               (:pointer 1
+                :default-value "NULL"
+                :type "char")
+                nil [6235 6264])
+            ("CONFIG_FPING_LOCATION" variable
+               (:pointer 1
+                :default-value "NULL"
+                :type "char")
+                nil [6265 6301])
+            ("CONFIG_FPING6_LOCATION" variable
+               (:pointer 1
+                :default-value "NULL"
+                :type "char")
+                nil [6302 6339])
+            ("CONFIG_DBHOST" variable
+               (:pointer 1
+                :default-value "NULL"
+                :type "char")
+                nil [6340 6369])
+            ("CONFIG_DBNAME" variable
+               (:pointer 1
+                :default-value "NULL"
+                :type "char")
+                nil [6370 6399])
+            ("CONFIG_DBSCHEMA" variable
+               (:pointer 1
+                :default-value "NULL"
+                :type "char")
+                nil [6400 6430])
+            ("CONFIG_DBUSER" variable
+               (:pointer 1
+                :default-value "NULL"
+                :type "char")
+                nil [6431 6460])
+            ("CONFIG_DBPASSWORD" variable
+               (:pointer 1
+                :default-value "NULL"
+                :type "char")
+                nil [6461 6493])
+            ("CONFIG_DBSOCKET" variable
+               (:pointer 1
+                :default-value "NULL"
+                :type "char")
+                nil [6494 6524])
+            ("CONFIG_DBPORT" variable
+               (:default-value "0"
+                :type "int")
+                nil [6525 6549])
+            ("CONFIG_ENABLE_REMOTE_COMMANDS" variable
+               (:default-value "0"
+                :type "int")
+                nil [6550 6588])
+            ("CONFIG_LOG_REMOTE_COMMANDS" variable
+               (:default-value "0"
+                :type "int")
+                nil [6589 6624])
+            ("CONFIG_UNSAFE_USER_PARAMETERS" variable
+               (:default-value "0"
+                :type "int")
+                nil [6625 6663])
+            ("CONFIG_SNMPTRAP_FILE" variable
+               (:pointer 1
+                :default-value "NULL"
+                :type "char")
+                nil [6665 6700])
+            ("CONFIG_JAVA_GATEWAY" variable
+               (:pointer 1
+                :default-value "NULL"
+                :type "char")
+                nil [6702 6736])
+            ("CONFIG_JAVA_GATEWAY_PORT" variable
+               (:default-value "ZBX_DEFAULT_GATEWAY_PORT"
+                :type "int")
+                nil [6737 6793])
+            ("CONFIG_SSH_KEY_LOCATION" variable
+               (:pointer 1
+                :default-value "NULL"
+                :type "char")
+                nil [6795 6832])
+            ("CONFIG_LOG_SLOW_QUERIES" variable
+               (:default-value "0"
+                :type "int")
+                nil [6834 6867])
+            ("CONFIG_SERVER_STARTUP_TIME" variable
+               (:default-value "0"
+                :type "int")
+                nil [6891 6926])
+            ("CONFIG_PROXYPOLLER_FORKS" variable
+               (:default-value "1"
+                :type "int")
+                nil [6961 6994])
+            ("CONFIG_PROXYCONFIG_FREQUENCY" variable
+               (:default-value "SEC_PER_HOUR"
+                :type "int")
+                nil [7109 7157])
+            ("CONFIG_PROXYDATA_FREQUENCY" variable
+               (:default-value "1"
+                :type "int")
+                nil [7158 7193])
+            ("CONFIG_LOAD_MODULE_PATH" variable
+               (:pointer 1
+                :default-value "NULL"
+                :type "char")
+                nil [7204 7241])
+            ("CONFIG_LOAD_MODULE" variable
+               (:pointer 2
+                :default-value "NULL"
+                :type "char")
+                nil [7242 7276])
+            ("CONFIG_USER" variable
+               (:pointer 1
+                :default-value "NULL"
+                :type "char")
+                nil [7278 7305])
+            ("CONFIG_SSL_CA_LOCATION" variable
+               (:pointer 1
+                :default-value "NULL"
+                :type "char")
+                nil [7328 7365])
+            ("CONFIG_SSL_CERT_LOCATION" variable
+               (:pointer 1
+                :default-value "NULL"
+                :type "char")
+                nil [7366 7404])
+            ("CONFIG_SSL_KEY_LOCATION" variable
+               (:pointer 1
+                :default-value "NULL"
+                :type "char")
+                nil [7405 7442])
+            ("configured_tls_connect_mode" variable
+               (:default-value "ZBX_TCP_SEC_UNENCRYPTED"
+                :type "unsigned int")
+                nil [7465 7532])
+            ("configured_tls_accept_modes" variable
+               (:default-value "ZBX_TCP_SEC_UNENCRYPTED"
+                :type "unsigned int")
+                nil [7605 7672])
+            ("CONFIG_TLS_CA_FILE" variable
+               (:pointer 1
+                :default-value "NULL"
+                :type "char")
+                nil [7745 7778])
+            ("CONFIG_TLS_CRL_FILE" variable
+               (:pointer 1
+                :default-value "NULL"
+                :type "char")
+                nil [7779 7813])
+            ("CONFIG_TLS_CERT_FILE" variable
+               (:pointer 1
+                :default-value "NULL"
+                :type "char")
+                nil [7814 7849])
+            ("CONFIG_TLS_KEY_FILE" variable
+               (:pointer 1
+                :default-value "NULL"
+                :type "char")
+                nil [7850 7884])
+            ("CONFIG_SOCKET_PATH" variable
+               (:pointer 1
+                :default-value "NULL"
+                :type "char")
+                nil [8297 8330])
+            ("get_process_info_by_thread" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("local_server_num" variable (:type "int") (reparse-symbol arg-sub-list) [8363 8384])
+                    ("local_process_type" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [8385 8419])
+                    ("local_process_num" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [8420 8443]))                  
+                :type "int")
+                nil [8332 8444])
+            ("get_process_info_by_thread" function
+               (:arguments 
+                  ( ("local_server_num" variable (:type "int") (reparse-symbol arg-sub-list) [8477 8498])
+                    ("local_process_type" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [8499 8533])
+                    ("local_process_num" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [8534 8557]))                  
+                :type "int")
+                nil [8446 13602])
+            ("zbx_set_defaults" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [14354 14359]))                  
+                :type "void")
+                nil [14325 16033])
+            ("zbx_validate_config" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("task" variable
+                       (:pointer 1
+                        :type ("ZBX_TASK_EX" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16788 16806]))                  
+                :type "void")
+                nil [16756 19198])
+            ("zbx_load_config" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("task" variable
+                       (:pointer 1
+                        :type ("ZBX_TASK_EX" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [20429 20447]))                  
+                :type "void")
+                nil [20401 27117])
+            ("zbx_free_config" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [27708 27713]))                  
+                :type "void")
+                nil [27680 27755])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [28487 28496])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [28497 28509]))                  
+                :type "int")
+                nil [28478 30682])
+            ("MAIN_ZABBIX_ENTRY" function
+               (:arguments 
+                  ( ("flags" variable (:type "int") (reparse-symbol arg-sub-list) [30706 30716]))                  
+                :type "int")
+                nil [30684 40577])
+            ("zbx_on_exit" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [40596 40601]))                  
+                :type "void")
+                nil [40579 41775]))          
+      :file "server.c"
+      :pointmax 41776
+      :fsize 41775
+      :lastmodtime '(22952 1149 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("DEFAULT_CONFIG_FILE" . ((symbol "SYSCONFDIR" 2158 . 2168) (string "\"/zabbix_server.conf\"" 2169 . 2190)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :file "events.h"
+      :fsize 2387
+      :lastmodtime '(22952 1150 0 0)))
+  :file "!Volumes!Transcend!zabbix!src!zabbix_server!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

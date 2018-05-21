@@ -1,0 +1,530 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("memory" include (:system-flag t) nil [75 92])
+            ("iostream" include (:system-flag t) nil [93 112])
+            ("string" include (:system-flag t) nil [113 130])
+            ("thread" include (:system-flag t) nil [131 148])
+            ("thirdparty/glog/logging.h" include nil nil [149 185])
+            ("dsp/nameservice/server/name_service_server.h" include nil nil [186 241])
+            ("thirdparty/phxpaxos/include/phxpaxos/util.h" include nil nil [242 296])
+            ("thirdparty/phxpaxos/plugin/include/phxpaxos_plugin/logger_google.h" include nil nil [297 374])
+            ("common/file/file.h" include nil nil [375 404])
+            ("DEFINE_string" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("paxos_storage_path" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [420 439]))                  
+                :type "int")
+                nil [406 470])
+            ("DEFINE_int32" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("paxos_group_count" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [484 502]))                  
+                :type "int")
+                nil [471 528])
+            ("DEFINE_string" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("paxos_self_node" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [543 559]))                  
+                :type "int")
+                nil [529 591])
+            ("DEFINE_string" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("paxos_node_list" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [606 622]))                  
+                :type "int")
+                nil [592 665])
+            ("dsp" type
+               (:members 
+                  ( ("ns" type
+                       (:members 
+                          ( ("NameServiceServer" function
+                               (:constructor-flag t
+                                :parent "NameServiceServer"
+                                :arguments 
+                                  ( ("mpscq" variable
+                                       (:pointer 1
+                                        :type ("MPSCQueue" type
+                                             (:template-specifier 
+                                                ( ("RequestNode" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [735 765]))                                  
+                                :type ("NameServiceServer" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [698 977])
+                            ("NameServiceServer" function
+                               (:destructor-flag t
+                                :parent "NameServiceServer"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [979 1021])
+                            ("RunPaxos" function
+                               (:parent "NameServiceServer"
+                                :type ("int32_t" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [1023 2314])
+                            ("Register" function
+                               (:parent "NameServiceServer"
+                                :arguments 
+                                  ( ("request" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2352 2379]))                                  
+                                :type ("int32_t" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [2316 2883]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [682 2887]))                  
+                :type "namespace")
+                nil [666 2896]))          
+      :file "name_service_server.cc"
+      :pointmax 2905
+      :fsize 2904
+      :lastmodtime '(23079 35396 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("DSP_NAMESERVICE_NAME_SERVICE_SM_H_" variable (:constant-flag t) nil [127 161])
+            ("mutex" include (:system-flag t) nil [162 178])
+            ("stdint.h" include (:system-flag t) nil [179 198])
+            ("common/system/concurrency/mpscq.h" include nil nil [199 243])
+            ("thirdparty/phxpaxos/include/phxpaxos/sm.h" include nil nil [244 296])
+            ("dsp" type
+               (:members 
+                  ( ("ns" type
+                       (:members 
+                          ( ("NameServiceSMCtx" type
+                               (:members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [355 362])
+                                    ("ret_" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [365 378]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [329 381])
+                            ("RequestNode" type
+                               (:superclasses 
+                                  ( ("Node" type
+                                       (:protection "public"
+                                        :type "class")
+                                        nil nil))                                  
+                                :members 
+                                  ( ("RequestNode" function
+                                       (:constructor-flag t
+                                        :arguments 
+                                          ( ("data" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [432 456]))                                          
+                                        :type ("RequestNode" type (:type "struct") nil nil))
+                                        (reparse-symbol classsubparts) [420 480])
+                                    ("RequestNode" function
+                                       (:constructor-flag t
+                                        :type ("RequestNode" type (:type "struct") nil nil))
+                                        (reparse-symbol classsubparts) [483 499])
+                                    ("request_data" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [502 527]))                                  
+                                :type "struct")
+                                (reparse-symbol namespacesubparts) [383 530])
+                            ("NameServiceSM" type
+                               (:superclasses 
+                                  ( ("phxpaxos::StateMachine" type
+                                       (:protection "public"
+                                        :type "class")
+                                        nil nil))                                  
+                                :members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [587 594])
+                                    ("NameServiceSM" function
+                                       (:prototype-flag t
+                                        :constructor-flag t
+                                        :arguments 
+                                          ( ("mpscq" variable
+                                               (:pointer 1
+                                                :type ("MPSCQueue" type
+                                                     (:template-specifier 
+                                                        ( ("RequestNode" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [611 641]))                                          
+                                        :type ("NameServiceSM" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [597 642])
+                                    ("override" variable (:type "int") (reparse-symbol classsubparts) [773 782])
+                                    ("override" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [796 811])
+                                    ("private" label nil (reparse-symbol classsubparts) [814 822])
+                                    ("mpscq_" variable
+                                       (:pointer 1
+                                        :type ("MPSCQueue" type
+                                             (:template-specifier 
+                                                ( ("RequestNode" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol classsubparts) [825 856]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [532 859]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [313 863]))                  
+                :type "namespace")
+                nil [297 872]))          
+      :file "name_service_sm.h"
+      :pointmax 929
+      :fsize 928
+      :lastmodtime '(23079 36964 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("DSP_NAMESERVICE_NAME_SERVICE_SM_H_")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("dsp/nameservice/server/name_service_sm.h" include nil nil [75 126])
+            ("thirdparty/glog/logging.h" include nil nil [127 163])
+            ("dsp" type
+               (:members 
+                  ( ("ns" type
+                       (:members 
+                          ( ("NameServiceSM" function
+                               (:constructor-flag t
+                                :parent "NameServiceSM"
+                                :arguments 
+                                  ( ("mpscq" variable
+                                       (:pointer 1
+                                        :type ("MPSCQueue" type
+                                             (:template-specifier 
+                                                ( ("RequestNode" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [225 255]))                                  
+                                :type ("NameServiceSM" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [196 275])
+                            ("Execute" function
+                               (:parent "NameServiceSM"
+                                :arguments 
+                                  ( ("groupIdx" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [305 324])
+                                    ("instanceID" variable
+                                       (:constant-flag t
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [325 351])
+                                    ("paxosValue" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [380 410])
+                                    ("ctx" variable
+                                       (:pointer 1
+                                        :type ("phxpaxos::SMCtx" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [439 460]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [277 803])
+                            ("SMID" function
+                               (:methodconst-flag t
+                                :parent "NameServiceSM"
+                                :constant-flag t
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [805 852]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [180 855]))                  
+                :type "namespace")
+                nil [164 864]))          
+      :file "name_service_sm.cc"
+      :pointmax 873
+      :fsize 872
+      :lastmodtime '(23079 26920 0 0)
+      :unmatched-syntax nil)
+
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("DSP_NAMESERVICE_NAME_SERVICE_SERVER_H_" variable (:constant-flag t) nil [130 168])
+            ("thirdparty/phxpaxos/include/phxpaxos/node.h" include nil nil [170 224])
+            ("dsp/nameservice/server/name_service_sm.h" include nil nil [225 276])
+            ("common/system/concurrency/mpscq.h" include nil nil [277 321])
+            ("string" include (:system-flag t) nil [322 339])
+            ("vector" include (:system-flag t) nil [340 357])
+            ("atomic" include (:system-flag t) nil [358 375])
+            ("dsp" type
+               (:members 
+                  ( ("ns" type
+                       (:members 
+                          ( ("NameServiceServer" type
+                               (:members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [437 444])
+                                    ("NameServiceServer" function
+                                       (:prototype-flag t
+                                        :constructor-flag t
+                                        :arguments 
+                                          ( ("mpscq" variable
+                                               (:pointer 1
+                                                :type ("MPSCQueue" type
+                                                     (:template-specifier 
+                                                        ( ("RequestNode" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [465 495]))                                          
+                                        :type ("NameServiceServer" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [447 496])
+                                    ("NameServiceServer" function
+                                       (:prototype-flag t
+                                        :destructor-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [499 520])
+                                    ("RunPaxos" function
+                                       (:prototype-flag t
+                                        :type ("int32_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [524 543])
+                                    ("Register" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("request" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [563 590]))                                          
+                                        :type ("int32_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [546 591])
+                                    ("private" label nil (reparse-symbol classsubparts) [594 602])
+                                    ("self_node_" variable (:type ("phxpaxos::NodeInfo" type (:type "class") nil nil)) (reparse-symbol classsubparts) [605 635])
+                                    ("node_list_" variable (:type ("phxpaxos::NodeInfoList" type (:type "class") nil nil)) (reparse-symbol classsubparts) [638 672])
+                                    ("paxos_node_" variable
+                                       (:pointer 1
+                                        :type ("phxpaxos::Node" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [676 704])
+                                    ("name_service_sm_" variable (:type ("NameServiceSM" type (:type "class") nil nil)) (reparse-symbol classsubparts) [707 738])
+                                    ("mpscq_" variable
+                                       (:pointer 1
+                                        :type ("MPSCQueue" type
+                                             (:template-specifier 
+                                                ( ("RequestNode" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol classsubparts) [741 772])
+                                    ("group_idx_" variable (:type ("std::atomic" type
+                                         (:template-specifier 
+                                            ( ("int32_t" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [775 807]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [410 810]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [394 815]))                  
+                :type "namespace")
+                nil [378 824]))          
+      :file "name_service_server.h"
+      :pointmax 885
+      :fsize 884
+      :lastmodtime '(23079 44475 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("DSP_NAMESERVICE_NAME_SERVICE_SERVER_H_")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("DSP_NAMESERVICE_NAME_SERVICE_IMPL_H_" variable (:constant-flag t) nil [128 164])
+            ("dsp/nameservice/proto/name_service.pb.h" include nil nil [166 216])
+            ("thirdparty/sqlite-3.4.0/sqlite3.h" include nil nil [217 261])
+            ("common/system/concurrency/thread.h" include nil nil [262 307])
+            ("dsp/nameservice/server/name_service_server.h" include nil nil [308 363])
+            ("dsp" type
+               (:members 
+                  ( ("ns" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol namespacesubparts) [421 429])
+                            ("ns::v1::NameService" variable (:type "int") (reparse-symbol namespacesubparts) [430 1290]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [381 1293]))                  
+                :type "namespace")
+                nil [365 1302]))          
+      :file "name_service_impl.h"
+      :pointmax 1361
+      :fsize 1360
+      :lastmodtime '(23078 25525 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("DSP_NAMESERVICE_NAME_SERVICE_IMPL_H_")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("dsp/nameservice/server/name_service_impl.h" include nil nil [76 129])
+            ("common/base/string/algorithm.h" include nil nil [130 171])
+            ("common/base/string/format.h" include nil nil [172 210])
+            ("chrono" include (:system-flag t) nil [211 228])
+            ("dsp" type
+               (:members 
+                  ( ("ns" type
+                       (:members 
+                          ( ("DEFINE_string" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("" variable (:type ("name_service_storage_db" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [275 299]))                                  
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [261 331])
+                            ("NameServiceImpl::mpscq_" variable (:type ("MPSCQueue" type
+                                 (:template-specifier 
+                                    ( ("RequestNode" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol namespacesubparts) [332 379])
+                            ("NameServiceImpl::server_" variable
+                               (:pointer 1
+                                :default-value "nullptr"
+                                :type ("NameServiceServer" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [380 434])
+                            ("NameServiceImpl::sqlite_" variable
+                               (:pointer 1
+                                :default-value "nullptr"
+                                :type ("sqlite3" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [435 479])
+                            ("NameServiceImpl::update_name_service_thread_" variable (:type ("Thread" type (:type "class") nil nil)) (reparse-symbol namespacesubparts) [481 533])
+                            ("FillResult" function
+                               (:arguments 
+                                  ( ("arg" variable
+                                       (:pointer 1
+                                        :type "void")
+                                        (reparse-symbol arg-sub-list) [555 565])
+                                    ("cnt" variable (:type "int") (reparse-symbol arg-sub-list) [566 574])
+                                    ("column_text" variable
+                                       (:pointer 2
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [575 594])
+                                    ("column_name" variable
+                                       (:pointer 2
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [595 614]))                                  
+                                :type ("int32_t" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [536 916])
+                            ("Initialize" function
+                               (:parent "NameServiceImpl"
+                                :type ("int32_t" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [919 1666])
+                            ("NameServiceImpl" function
+                               (:constructor-flag t
+                                :parent "NameServiceImpl"
+                                :type ("NameServiceImpl" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [1668 1705])
+                            ("NameServiceImpl" function
+                               (:destructor-flag t
+                                :parent "NameServiceImpl"
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [1707 1745])
+                            ("Register" function
+                               (:parent "NameServiceImpl"
+                                :arguments 
+                                  ( ("controller" variable
+                                       (:pointer 1
+                                        :type ("google::protobuf::RpcController" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1778 1822])
+                                    ("request" variable
+                                       (:pointer 1
+                                        :type ("ns::v1::RegisterRequest" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1862 1895])
+                                    ("response" variable
+                                       (:pointer 1
+                                        :type ("ns::v1::RegisterResponse" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1929 1964])
+                                    ("done" variable
+                                       (:pointer 1
+                                        :type ("google::protobuf::Closure" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1996 2028]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [1747 2677])
+                            ("Discovery" function
+                               (:parent "NameServiceImpl"
+                                :arguments 
+                                  ( ("controller" variable
+                                       (:pointer 1
+                                        :type ("google::protobuf::RpcController" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2711 2755])
+                                    ("request" variable
+                                       (:pointer 1
+                                        :type ("ns::v1::DiscoveryRequest" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2796 2830])
+                                    ("response" variable
+                                       (:pointer 1
+                                        :type ("ns::v1::DiscoveryResponse" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2865 2901])
+                                    ("done" variable
+                                       (:pointer 1
+                                        :type ("google::protobuf::Closure" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2934 2966]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [2679 3933])
+                            ("PrepareEnvironment" function
+                               (:parent "NameServiceImpl"
+                                :type ("int32_t" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [3936 4732])
+                            ("UpdateNameService" function
+                               (:parent "NameServiceImpl"
+                                :arguments 
+                                  ( ("arg" variable
+                                       (:pointer 1
+                                        :type "void")
+                                        (reparse-symbol arg-sub-list) [4775 4785])
+                                    ("param" variable (:type "unsigned long long") (reparse-symbol arg-sub-list) [4786 4811]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [4735 6078]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [246 6082]))                  
+                :type "namespace")
+                nil [230 6091]))          
+      :file "name_service_impl.cc"
+      :pointmax 6100
+      :fsize 6099
+      :lastmodtime '(23079 44798 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("dsp/nameservice/server/name_service_impl.h" include nil nil [76 129])
+            ("common/base/module.h" include nil nil [130 161])
+            ("common/base/string/concat.h" include nil nil [162 200])
+            ("poppy/rpc_server.h" include nil nil [201 230])
+            ("common/utility/pidfile.h" include nil nil [231 266])
+            ("DEFINE_string" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("server_ip" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [282 292]))                  
+                :type "int")
+                nil [268 325])
+            ("DEFINE_int32" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("server_port" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [339 351]))                  
+                :type "int")
+                nil [326 389])
+            ("g_quit" variable
+               (:default-value "false"
+                :type "bool")
+                nil [391 411])
+            ("SignalIntHandler" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("sig" variable (:type "int") (reparse-symbol arg-sub-list) [442 450]))                  
+                :type "void")
+                nil [413 471])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [486 499])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [500 512]))                  
+                :type ("int32_t" type (:type "class") nil nil))
+                nil [473 1586]))          
+      :file "main.cc"
+      :pointmax 1587
+      :fsize 1586
+      :lastmodtime '(23078 35933 0 0)
+      :unmatched-syntax nil))
+  :file "!Volumes!Transcend!trunk!dsp!nameservice!server!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

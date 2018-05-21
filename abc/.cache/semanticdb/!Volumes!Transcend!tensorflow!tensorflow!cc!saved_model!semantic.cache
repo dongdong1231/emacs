@@ -1,0 +1,450 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("TENSORFLOW_CC_SAVED_MODEL_LOADER_H_" variable (:constant-flag t) nil [786 821])
+            ("string" include (:system-flag t) nil [823 840])
+            ("unordered_set" include (:system-flag t) nil [841 865])
+            ("tensorflow/core/lib/core/status.h" include nil nil [867 911])
+            ("tensorflow/core/protobuf/meta_graph.pb.h" include nil nil [912 963])
+            ("tensorflow/core/public/session.h" include nil nil [964 1007])
+            ("tensorflow" type
+               (:members 
+                  ( ("SavedModelBundle" type
+                       (:members 
+                          ( ("session" variable (:type ("std::unique_ptr" type
+                                 (:template-specifier 
+                                    ( ("Session" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [1135 1168])
+                            ("meta_graph_def" variable (:type ("MetaGraphDef" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1171 1199])
+                            ("SavedModelBundle" function
+                               (:destructor-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [1352 1440]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [1107 1476])
+                    ("LoadSavedModel" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("session_options" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("SessionOptions" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1799 1837])
+                            ("run_options" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("RunOptions" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1860 1890])
+                            ("export_dir" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1891 1916])
+                            ("tags" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::unordered_set" type
+                                     (:template-specifier 
+                                        ( ("string" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [1939 1978])
+                            ("bundle" variable
+                               (:pointer 1
+                                :type ("SavedModelBundle" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2001 2032]))                          
+                        :type ("Status" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [1777 2033])
+                    ("MaybeSavedModelDirectory" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("export_dir" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2425 2450]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [2395 2451]))                  
+                :type "namespace")
+                nil [1009 2454]))          
+      :file "loader.h"
+      :pointmax 2528
+      :fsize 2527
+      :lastmodtime '(23270 58611 0 0)
+      :unmatched-syntax '((punctuation 1472 . 1473) (DEFAULT 1465 . 1472) (punctuation 1463 . 1464) (semantic-list 1460 . 1462) (symbol 1444 . 1460))
+      :lexical-table 
+        '(("TENSORFLOW_CC_SAVED_MODEL_LOADER_H_")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("tensorflow/cc/saved_model/loader.h" include nil nil [671 716])
+            ("unordered_set" include (:system-flag t) nil [718 742])
+            ("tensorflow/cc/saved_model/constants.h" include nil nil [744 792])
+            ("tensorflow/core/lib/io/path.h" include nil nil [793 833])
+            ("tensorflow/core/lib/monitoring/counter.h" include nil nil [834 885])
+            ("tensorflow/core/lib/strings/strcat.h" include nil nil [886 933])
+            ("tensorflow/core/platform/env.h" include nil nil [934 975])
+            ("tensorflow/core/platform/protobuf_internal.h" include nil nil [976 1031])
+            ("tensorflow/core/protobuf/saved_model.pb.h" include nil nil [1032 1084])
+            ("tensorflow/core/protobuf/saver.pb.h" include nil nil [1085 1131])
+            ("tensorflow/core/public/session.h" include nil nil [1132 1175])
+            ("tensorflow/core/public/session_options.h" include nil nil [1176 1227])
+            ("tensorflow/core/util/tensor_bundle/naming.h" include nil nil [1228 1282])
+            ("tensorflow" type
+               (:members 
+                  ( ("unnamed" type
+                       (:members 
+                          ( ("load_attempt_count" variable
+                               (:pointer 1
+                                :default-value "monitoring::Counter<2>::New(
+    \"/tensorflow/cc/saved_model/load_attempt_count\",
+    \"The number of times a SavedModel was successfully loaded.\", \"model_path\",
+    \"status\")"
+                                :type ("auto" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [1320 1522])
+                            ("load_latency" variable
+                               (:pointer 1
+                                :default-value "monitoring::Counter<1>::New(
+    \"/tensorflow/cc/saved_model/load_latency\",
+    \"Latency in microseconds for SavedModels that were successfully loaded.\",
+    \"model_path\")"
+                                :type ("auto" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [1523 1716])
+                            ("kLoadAttemptFail" variable
+                               (:dereference 1
+                                :default-value "\"fail\""
+                                :type "char")
+                                (reparse-symbol namespacesubparts) [1727 1760])
+                            ("kLoadAttemptSuccess" variable
+                               (:dereference 1
+                                :default-value "\"success\""
+                                :type "char")
+                                (reparse-symbol namespacesubparts) [1771 1810])
+                            ("ReadSavedModel" function
+                               (:arguments 
+                                  ( ("export_dir" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1834 1859])
+                                    ("saved_model_proto" variable
+                                       (:pointer 1
+                                        :type ("SavedModel" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1860 1890]))                                  
+                                :type ("Status" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [1812 2628])
+                            ("GetTagsAsString" function
+                               (:arguments 
+                                  ( ("tags" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::unordered_set" type
+                                             (:template-specifier 
+                                                ( ("string" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [2653 2692]))                                  
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [2630 2913])
+                            ("FindMetaGraphDefToLoad" function
+                               (:arguments 
+                                  ( ("saved_model_proto" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("SavedModel" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2945 2981])
+                                    ("tags" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::unordered_set" type
+                                             (:template-specifier 
+                                                ( ("string" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [3012 3051])
+                                    ("meta_graph_def_to_load" variable
+                                       (:pointer 1
+                                        :type ("MetaGraphDef" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3082 3119]))                                  
+                                :type ("Status" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [2915 3857])
+                            ("LoadMetaGraphIntoSession" function
+                               (:arguments 
+                                  ( ("meta_graph_def" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("MetaGraphDef" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3891 3926])
+                                    ("session_options" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("SessionOptions" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3959 3997])
+                                    ("session" variable
+                                       (:pointer 1
+                                        :type ("std::unique_ptr" type
+                                             (:template-specifier 
+                                                ( ("Session" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [4030 4064]))                                  
+                                :type ("Status" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [3859 4249])
+                            ("CreateStringTensor" function
+                               (:arguments 
+                                  ( ("value" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4277 4297]))                                  
+                                :type ("Tensor" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [4251 4400])
+                            ("AddAssetsTensorsToInputs" function
+                               (:arguments 
+                                  ( ("export_dir" variable
+                                       (:constant-flag t
+                                        :type ("StringPiece" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4432 4461])
+                                    ("asset_file_defs" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("AssetFileDef" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [4492 4541])
+                                    ("inputs" variable
+                                       (:pointer 1
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("std::pair" type (:template-specifier 
+                                                    ( ("string" type nil nil nil)
+                                                      ("Tensor" type nil nil nil))                                                    ) nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [4572 4619]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [4402 4968])
+                            ("HasMainOp" function
+                               (:arguments 
+                                  ( ("meta_graph_def" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("MetaGraphDef" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4985 5020]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [4970 5218])
+                            ("RunMainOp" function
+                               (:arguments 
+                                  ( ("run_options" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("RunOptions" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5237 5267])
+                                    ("export_dir" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5268 5293])
+                                    ("meta_graph_def" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("MetaGraphDef" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5311 5346])
+                                    ("asset_file_defs" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("AssetFileDef" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [5364 5413])
+                                    ("session" variable
+                                       (:pointer 1
+                                        :type ("Session" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5431 5448]))                                  
+                                :type ("Status" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [5220 6274])
+                            ("RunRestore" function
+                               (:arguments 
+                                  ( ("run_options" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("RunOptions" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [6294 6324])
+                                    ("export_dir" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [6325 6350])
+                                    ("restore_op_name" variable
+                                       (:constant-flag t
+                                        :type ("StringPiece" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [6369 6403])
+                                    ("variable_filename_const_op_name" variable
+                                       (:constant-flag t
+                                        :type ("StringPiece" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [6422 6472])
+                                    ("asset_file_defs" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("AssetFileDef" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [6491 6540])
+                                    ("session" variable
+                                       (:pointer 1
+                                        :type ("Session" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [6559 6576]))                                  
+                                :type ("Status" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [6276 7960])
+                            ("RunLegacyInitOp" function
+                               (:arguments 
+                                  ( ("run_options" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("RunOptions" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [7985 8015])
+                                    ("export_dir" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [8016 8041])
+                                    ("meta_graph_def" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("MetaGraphDef" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [8065 8100])
+                                    ("asset_file_defs" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("AssetFileDef" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [8124 8173])
+                                    ("session" variable
+                                       (:pointer 1
+                                        :type ("Session" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [8197 8214]))                                  
+                                :type ("Status" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [7962 9106])
+                            ("GetAssetFileDefs" function
+                               (:arguments 
+                                  ( ("meta_graph_def" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("MetaGraphDef" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [9132 9167])
+                                    ("asset_file_defs" variable
+                                       (:pointer 1
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("AssetFileDef" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [9192 9235]))                                  
+                                :type ("Status" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [9108 9771])
+                            ("LoadSavedModelInternal" function
+                               (:arguments 
+                                  ( ("session_options" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("SessionOptions" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [9803 9841])
+                                    ("run_options" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("RunOptions" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [9872 9902])
+                                    ("export_dir" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [9933 9958])
+                                    ("tags" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::unordered_set" type
+                                             (:template-specifier 
+                                                ( ("string" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [9989 10028])
+                                    ("bundle" variable
+                                       (:pointer 1
+                                        :type ("SavedModelBundle" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [10059 10090]))                                  
+                                :type ("Status" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [9773 11585]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1307 11588])
+                    ("LoadSavedModel" function
+                       (:arguments 
+                          ( ("session_options" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("SessionOptions" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [11626 11664])
+                            ("run_options" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("RunOptions" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [11687 11717])
+                            ("export_dir" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [11718 11743])
+                            ("tags" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::unordered_set" type
+                                     (:template-specifier 
+                                        ( ("string" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [11766 11805])
+                            ("bundle" variable
+                               (:pointer 1
+                                :type ("SavedModelBundle" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [11828 11859]))                          
+                        :type ("Status" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [11604 12913])
+                    ("MaybeSavedModelDirectory" function
+                       (:arguments 
+                          ( ("export_dir" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [12945 12970]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [12915 13295]))                  
+                :type "namespace")
+                nil [1284 13298]))          
+      :file "loader.cc"
+      :pointmax 13324
+      :fsize 13323
+      :lastmodtime '(23270 58611 0 0)
+      :unmatched-syntax '((symbol 1761 . 1770) (symbol 1717 . 1726)))
+    (semanticdb-table "semanticdb-table"
+      :file "constants.h"
+      :fsize 1788
+      :lastmodtime '(23270 58611 0 0)))
+  :file "!Volumes!Transcend!tensorflow!tensorflow!cc!saved_model!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,2314 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("string" include (:system-flag t) nil [749 766])
+            ("vector" include (:system-flag t) nil [767 784])
+            ("typeinfo" include (:system-flag t) nil [785 804])
+            ("stdint.h" include (:system-flag t) nil [805 824])
+            ("inttypes.h" include (:system-flag t) nil [825 846])
+            ("phxpaxos" type
+               (:members 
+                  ( ("SMCtx" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [884 891])
+                            ("SMCtx" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :type ("SMCtx" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [896 904])
+                            ("SMCtx" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("iSMID" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [915 931])
+                                    ("pCtx" variable
+                                       (:pointer 1
+                                        :type "void")
+                                        (reparse-symbol arg-sub-list) [932 944]))                                  
+                                :type ("SMCtx" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [909 945])
+                            ("m_iSMID" variable (:type "int") (reparse-symbol classsubparts) [951 963])
+                            ("m_pCtx" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol classsubparts) [968 982]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [870 985])
+                    ("CheckpointFileInfo" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [1062 1069])
+                            ("m_sFilePath" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1074 1098])
+                            ("m_llFileSize" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1103 1123]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [1035 1126])
+                    ("CheckpointFileInfoList" type
+                       (:typedef ("std::vector" type
+                             (:template-specifier 
+                                ( ("CheckpointFileInfo" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :type "typedef")
+                        (reparse-symbol namespacesubparts) [1128 1191])
+                    ("NoCheckpoint" variable
+                       (:constant-flag t
+                        :default-value "(uint64_t)-1"
+                        :type ("uint64_t" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [1240 1283])
+                    ("StateMachine" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [1306 1313])
+                            ("StateMachine" function
+                               (:destructor-flag t
+                                :typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [1318 1344])
+                            ("SMID" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :methodconst-flag t
+                                :typemodifiers ("virtual")
+                                :type "int")
+                                (reparse-symbol classsubparts) [1405 1434])
+                            ("Execute" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("iGroupIdx" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1961 1981])
+                                    ("llInstanceID" variable
+                                       (:constant-flag t
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1982 2010])
+                                    ("sPaxosValue" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2023 2055])
+                                    ("poSMCtx" variable
+                                       (:pointer 1
+                                        :type ("SMCtx" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2056 2072]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [1940 2077])
+                            ("ExecuteForCheckpoint" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("iGroupIdx" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [2117 2137])
+                                    ("llInstanceID" variable
+                                       (:constant-flag t
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2138 2166])
+                                    ("sPaxosValue" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2179 2211]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [2083 2212])
+                            ("GetCheckpointInstanceID" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("iGroupIdx" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [2448 2468]))                                  
+                                :type ("uint64_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2407 2475])
+                            ("LockCheckpointState" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :type "int")
+                                (reparse-symbol classsubparts) [2604 2638])
+                            ("GetCheckpointState" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("iGroupIdx" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [2780 2800])
+                                    ("sDirPath" variable
+                                       (:reference 1
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2801 2824])
+                                    ("vecFileList" variable
+                                       (:reference 1
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("std::string" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [2837 2876]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [2749 2877])
+                            ("UnLockCheckpointState" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [2883 2920])
+                            ("LoadCheckpointState" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("iGroupIdx" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [3258 3278])
+                                    ("sCheckpointTmpFileDirPath" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3279 3325])
+                                    ("vecFileList" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("std::string" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [3338 3383])
+                                    ("llCheckpointInstanceID" variable
+                                       (:constant-flag t
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3384 3422]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [3226 3423])
+                            ("BeforePropose" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("iGroupIdx" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [3885 3905])
+                                    ("sValue" variable
+                                       (:reference 1
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3906 3927]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [3858 3928])
+                            ("NeedCallBeforePropose" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :type "bool")
+                                (reparse-symbol classsubparts) [4155 4192]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [1285 4195]))                  
+                :type "namespace")
+                nil [848 4198]))          
+      :file "sm.h"
+      :pointmax 4199
+      :fsize 4198
+      :lastmodtime '(23079 26969 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("thirdparty/phxpaxos/include/phxpaxos/sm.h" include nil nil [749 801])
+            ("thirdparty/phxpaxos/include/phxpaxos/options.h" include nil nil [802 859])
+            ("typeinfo" include (:system-flag t) nil [860 879])
+            ("inttypes.h" include (:system-flag t) nil [880 901])
+            ("map" include (:system-flag t) nil [902 916])
+            ("vector" include (:system-flag t) nil [917 934])
+            ("phxpaxos" type
+               (:members 
+                  ( ("NetWork" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [958 972])
+                    ("Node" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [1037 1044])
+                            ("Node" function
+                               (:constructor-flag t
+                                :type ("Node" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1049 1059])
+                            ("Node" function
+                               (:destructor-flag t
+                                :typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [1064 1083])
+                            ("RunNode" function
+                               (:prototype-flag t
+                                :typemodifiers ("static")
+                                :arguments 
+                                  ( ("oOptions" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Options" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1269 1294])
+                                    ("" variable
+                                       (:pointer 1
+                                        :type ("Node" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1295 1302])
+                                    ("" variable (:type ("poNode" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1303 1310]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [1250 1311])
+                            ("Propose" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("iGroupIdx" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1358 1378])
+                                    ("sValue" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1379 1406])
+                                    ("llInstanceID" variable
+                                       (:reference 1
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1407 1431]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [1338 1436])
+                            ("Propose" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("iGroupIdx" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1462 1482])
+                                    ("sValue" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1483 1510])
+                                    ("llInstanceID" variable
+                                       (:reference 1
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1511 1535])
+                                    ("poSMCtx" variable
+                                       (:pointer 1
+                                        :type ("SMCtx" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1536 1552]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [1442 1557])
+                            ("GetNowInstanceID" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("iGroupIdx" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1597 1617]))                                  
+                                :type ("uint64_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1563 1622])
+                            ("GetMinChosenInstanceID" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("iGroupIdx" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1668 1688]))                                  
+                                :type ("uint64_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1628 1693])
+                            ("GetMyNodeID" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :methodconst-flag t
+                                :typemodifiers ("virtual")
+                                :type ("nodeid_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1699 1740])
+                            ("BatchPropose" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("iGroupIdx" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [2103 2123])
+                                    ("sValue" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2124 2151])
+                                    ("llInstanceID" variable
+                                       (:reference 1
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2164 2188])
+                                    ("iBatchIndex" variable
+                                       (:reference 1
+                                        :type ("uint32_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2189 2212]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [2078 2217])
+                            ("BatchPropose" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("iGroupIdx" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [2248 2268])
+                                    ("sValue" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2269 2296])
+                                    ("llInstanceID" variable
+                                       (:reference 1
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2297 2321])
+                                    ("iBatchIndex" variable
+                                       (:reference 1
+                                        :type ("uint32_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2334 2357])
+                                    ("poSMCtx" variable
+                                       (:pointer 1
+                                        :type ("SMCtx" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2358 2374]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [2223 2379])
+                            ("SetBatchCount" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("iGroupIdx" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [2544 2564])
+                                    ("iBatchCount" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [2565 2587]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2517 2592])
+                            ("SetBatchDelayTimeMs" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("iGroupIdx" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [2631 2651])
+                                    ("iBatchDelayTimeMs" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [2652 2680]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2598 2685])
+                            ("AddStateMachine" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("poSM" variable
+                                       (:pointer 1
+                                        :type ("StateMachine" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2799 2819]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2770 2824])
+                            ("AddStateMachine" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("iGroupIdx" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [2859 2879])
+                                    ("poSM" variable
+                                       (:pointer 1
+                                        :type ("StateMachine" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2880 2900]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2830 2905])
+                            ("SetTimeoutMs" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("iTimeoutMs" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [2960 2981]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2934 2986])
+                            ("SetHoldPaxosLogCount" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("llHoldCount" variable
+                                       (:constant-flag t
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3249 3276]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [3215 3281])
+                            ("PauseCheckpointReplayer" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [3563 3606])
+                            ("ContinueCheckpointReplayer" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [3643 3689])
+                            ("PausePaxosLogCleaner" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [3855 3895])
+                            ("ContinuePaxosLogCleaner" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [3942 3985])
+                            ("ShowMembership" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("iGroupIdx" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [4063 4083])
+                                    ("vecNodeInfoList" variable
+                                       (:reference 1
+                                        :type ("NodeInfoList" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4084 4115]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [4036 4120])
+                            ("AddMember" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("iGroupIdx" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [4186 4206])
+                                    ("oNode" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("NodeInfo" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4207 4230]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [4164 4235])
+                            ("RemoveMember" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("iGroupIdx" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [4309 4329])
+                                    ("oNode" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("NodeInfo" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4330 4353]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [4284 4358])
+                            ("ChangeMember" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("iGroupIdx" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [4442 4462])
+                                    ("oFromNode" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("NodeInfo" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4463 4490])
+                                    ("oToNode" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("NodeInfo" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4491 4516]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [4417 4521])
+                            ("GetMaster" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("iGroupIdx" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [4595 4615]))                                  
+                                :type ("NodeInfo" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4568 4620])
+                            ("GetMasterWithVersion" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("iGroupIdx" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [4707 4727])
+                                    ("llVersion" variable
+                                       (:reference 1
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4728 4749]))                                  
+                                :type ("NodeInfo" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4669 4754])
+                            ("IsIMMaster" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("iGroupIdx" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [4811 4831]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [4787 4836])
+                            ("SetMasterLease" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("iGroupIdx" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [4869 4889])
+                                    ("iLeaseTimeMs" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [4890 4913]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [4842 4918])
+                            ("DropMaster" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("iGroupIdx" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [4947 4967]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [4924 4972])
+                            ("SetMaxHoldThreads" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("iGroupIdx" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [5321 5341])
+                                    ("iMaxHoldThreads" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [5342 5368]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [5290 5373])
+                            ("SetProposeWaitTimeThresholdMS" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("iGroupIdx" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [5546 5566])
+                                    ("iWaitTimeThresholdMS" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [5567 5598]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [5503 5603])
+                            ("SetLogSync" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("iGroupIdx" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [5650 5670])
+                                    ("bLogSync" variable
+                                       (:constant-flag t
+                                        :type "bool")
+                                        (reparse-symbol arg-sub-list) [5671 5691]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [5626 5696])
+                            ("GetInstanceValue" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("iGroupIdx" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [5865 5885])
+                                    ("llInstanceID" variable
+                                       (:constant-flag t
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5886 5914])
+                                    ("vecValues" variable
+                                       (:reference 1
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("std::pair" type (:template-specifier 
+                                                    ( ("std::string" type nil nil nil)
+                                                      ("int" type nil nil nil))                                                    ) nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [5927 5981]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [5836 5986])
+                            ("protected" label nil (reparse-symbol classsubparts) [5988 5998])
+                            ("NetWork" friend nil (reparse-symbol classsubparts) [6003 6023])
+                            ("OnReceiveMessage" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("pcMessage" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [6059 6082])
+                                    ("iMessageLen" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [6083 6105]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [6030 6110]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [1024 6113]))                  
+                :type "namespace")
+                nil [936 6116]))          
+      :file "node.h"
+      :pointmax 6117
+      :fsize 6116
+      :lastmodtime '(23079 26817 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("thirdparty/phxpaxos/include/phxpaxos/def.h" include nil nil [749 802])
+            ("thirdparty/phxpaxos/include/phxpaxos/sm.h" include nil nil [803 855])
+            ("thirdparty/phxpaxos/include/phxpaxos/network.h" include nil nil [856 913])
+            ("thirdparty/phxpaxos/include/phxpaxos/storage.h" include nil nil [914 971])
+            ("thirdparty/phxpaxos/include/phxpaxos/log.h" include nil nil [972 1025])
+            ("functional" include (:system-flag t) nil [1026 1047])
+            ("vector" include (:system-flag t) nil [1048 1065])
+            ("typeinfo" include (:system-flag t) nil [1066 1085])
+            ("inttypes.h" include (:system-flag t) nil [1086 1107])
+            ("thirdparty/phxpaxos/include/phxpaxos/breakpoint.h" include nil nil [1108 1168])
+            ("phxpaxos" type
+               (:members 
+                  ( ("LogStorage" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [1192 1209])
+                    ("NetWork" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [1210 1224])
+                    ("StateMachine" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [1225 1244])
+                    ("nodeid_t" type
+                       (:typedef ("uint64_t" type (:type "class") nil nil)
+                        :type "typedef")
+                        (reparse-symbol namespacesubparts) [1246 1272])
+                    ("nullnode" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :default-value "0"
+                        :type ("nodeid_t" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [1273 1308])
+                    ("NodeInfo" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [1376 1383])
+                            ("NodeInfo" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :type ("NodeInfo" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1388 1399])
+                            ("NodeInfo" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("iNodeID" variable
+                                       (:constant-flag t
+                                        :type ("nodeid_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1413 1436]))                                  
+                                :type ("NodeInfo" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1404 1437])
+                            ("NodeInfo" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("sIP" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1451 1475])
+                                    ("iPort" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1476 1492]))                                  
+                                :type ("NodeInfo" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1442 1493])
+                            ("NodeInfo" function
+                               (:destructor-flag t
+                                :typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [1498 1521])
+                            ("GetNodeID" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :constant-flag t
+                                :type ("nodeid_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1527 1554])
+                            ("GetIP" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1559 1593])
+                            ("GetPort" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :constant-flag t
+                                :type "int")
+                                (reparse-symbol classsubparts) [1598 1618])
+                            ("SetIPPort" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("sIP" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1639 1663])
+                                    ("iPort" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1664 1680]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1624 1681])
+                            ("SetNodeID" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("iNodeID" variable
+                                       (:constant-flag t
+                                        :type ("nodeid_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1701 1724]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1686 1725])
+                            ("private" label nil (reparse-symbol classsubparts) [1727 1735])
+                            ("MakeNodeID" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [1740 1758])
+                            ("ParseNodeID" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [1763 1782])
+                            ("m_iNodeID" variable (:type ("nodeid_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1788 1807])
+                            ("m_sIP" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1812 1830])
+                            ("m_iPort" variable (:type "int") (reparse-symbol classsubparts) [1835 1847]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [1359 1850])
+                    ("FollowerNodeInfo" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [1877 1884])
+                            ("oMyNode" variable (:type ("NodeInfo" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1889 1906])
+                            ("oFollowNode" variable (:type ("NodeInfo" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1911 1932]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [1852 1935])
+                    ("NodeInfoList" type
+                       (:typedef ("std::vector" type
+                             (:template-specifier 
+                                ( ("NodeInfo" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :type "typedef")
+                        (reparse-symbol namespacesubparts) [1937 1980])
+                    ("FollowerNodeInfoList" type
+                       (:typedef ("std::vector" type
+                             (:template-specifier 
+                                ( ("FollowerNodeInfo" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :type "typedef")
+                        (reparse-symbol namespacesubparts) [1981 2040])
+                    ("GroupSMInfo" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [2113 2120])
+                            ("GroupSMInfo" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :type ("GroupSMInfo" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2125 2139])
+                            ("iGroupIdx" variable (:type "int") (reparse-symbol classsubparts) [2204 2218])
+                            ("vecSMList" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("StateMachine" type (:pointer 1) nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [2296 2334])
+                            ("bIsUseMaster" variable (:type "bool") (reparse-symbol classsubparts) [2494 2512]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [2093 2516])
+                    ("GroupSMInfoList" type
+                       (:typedef ("std::vector" type
+                             (:template-specifier 
+                                ( ("GroupSMInfo" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :type "typedef")
+                        (reparse-symbol namespacesubparts) [2518 2567])
+                    ("MembershipChangeCallback" variable (:type "int") (reparse-symbol namespacesubparts) [2677 2702])
+                    ("MasterChangeCallback" variable (:type "int") (reparse-symbol namespacesubparts) [2778 2799])
+                    ("Options" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [2868 2875])
+                            ("Options" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :type ("Options" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2880 2890])
+                            ("poLogStorage" variable
+                               (:pointer 1
+                                :type ("LogStorage" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2976 3002])
+                            ("sLogStoragePath" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3086 3114])
+                            ("bSync" variable (:type "bool") (reparse-symbol classsubparts) [3640 3651])
+                            ("iSyncInterval" variable (:type "int") (reparse-symbol classsubparts) [3841 3859])
+                            ("poNetWork" variable
+                               (:pointer 1
+                                :type ("NetWork" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3910 3930])
+                            ("iUDPMaxSize" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4145 4164])
+                            ("iIOThreadCount" variable (:type "int") (reparse-symbol classsubparts) [4248 4267])
+                            ("iGroupCount" variable (:type "int") (reparse-symbol classsubparts) [4543 4559])
+                            ("oMyNode" variable (:type ("NodeInfo" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4607 4624])
+                            ("vecNodeInfoList" variable (:type ("NodeInfoList" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4718 4747])
+                            ("bUseMembership" variable (:type "bool") (reparse-symbol classsubparts) [5377 5397])
+                            ("pMembershipChangeCallback" variable (:type ("MembershipChangeCallback" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5494 5545])
+                            ("pMasterChangeCallback" variable (:type ("MasterChangeCallback" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5638 5681])
+                            ("vecGroupSMInfoList" variable (:type ("GroupSMInfoList" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5824 5859])
+                            ("poBreakpoint" variable
+                               (:pointer 1
+                                :type ("Breakpoint" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [5880 5906])
+                            ("bIsLargeValueMode" variable (:type "bool") (reparse-symbol classsubparts) [6128 6151])
+                            ("vecFollowerNodeInfoList" variable (:type ("FollowerNodeInfoList" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6332 6377])
+                            ("pLogFunc" variable (:type ("LogFunc" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6514 6531])
+                            ("eLogLevel" variable (:type ("LogLevel" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6743 6762])
+                            ("bUseCheckpointReplayer" variable (:type "bool") (reparse-symbol classsubparts) [6866 6894])
+                            ("bUseBatchPropose" variable (:type "bool") (reparse-symbol classsubparts) [7010 7032])
+                            ("bOpenChangeValueBeforePropose" variable (:type "bool") (reparse-symbol classsubparts) [7176 7211]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [2852 7214]))                  
+                :type "namespace")
+                nil [1170 7217]))          
+      :file "options.h"
+      :pointmax 7218
+      :fsize 7217
+      :lastmodtime '(23079 26846 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("string" include (:system-flag t) nil [758 775])
+            ("phxpaxos" type
+               (:members 
+                  ( ("ProposerBP" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [818 825])
+                            ("ProposerBP" function
+                               (:destructor-flag t
+                                :typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [830 855])
+                            ("NewProposal" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("sValue" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [885 912]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [860 916])
+                            ("NewProposalSkipPrepare" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [921 962])
+                            ("Prepare" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [967 993])
+                            ("OnPrepareReply" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [998 1031])
+                            ("OnPrepareReplyButNotPreparing" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [1036 1084])
+                            ("OnPrepareReplyNotSameProposalIDMsg" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [1089 1142])
+                            ("PreparePass" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("iUseTimeMs" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1172 1193]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1147 1197])
+                            ("PrepareNotPass" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [1202 1235])
+                            ("Accept" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [1240 1265])
+                            ("OnAcceptReply" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [1270 1302])
+                            ("OnAcceptReplyButNotAccepting" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [1307 1354])
+                            ("OnAcceptReplyNotSameProposalIDMsg" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [1359 1411])
+                            ("AcceptPass" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("iUseTimeMs" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1440 1461]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1416 1465])
+                            ("AcceptNotPass" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [1470 1502])
+                            ("PrepareTimeout" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [1507 1540])
+                            ("AcceptTimeout" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [1545 1577]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [799 1580])
+                    ("AcceptorBP" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [1601 1608])
+                            ("AcceptorBP" function
+                               (:destructor-flag t
+                                :typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [1613 1638])
+                            ("OnPrepare" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [1643 1671])
+                            ("OnPreparePass" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [1676 1708])
+                            ("OnPreparePersistFail" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [1713 1752])
+                            ("OnPrepareReject" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [1757 1791])
+                            ("OnAccept" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [1796 1823])
+                            ("OnAcceptPass" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [1828 1859])
+                            ("OnAcceptPersistFail" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [1864 1902])
+                            ("OnAcceptReject" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [1907 1940]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [1582 1943])
+                    ("LearnerBP" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [1963 1970])
+                            ("LearnerBP" function
+                               (:destructor-flag t
+                                :typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [1975 1999])
+                            ("AskforLearn" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [2004 2034])
+                            ("OnAskforLearn" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [2039 2071])
+                            ("OnAskforLearnGetLockFail" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [2076 2119])
+                            ("SendNowInstanceID" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [2124 2160])
+                            ("OnSendNowInstanceID" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [2165 2203])
+                            ("ComfirmAskForLearn" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [2208 2245])
+                            ("OnComfirmAskForLearn" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [2250 2289])
+                            ("OnComfirmAskForLearnGetLockFail" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [2294 2344])
+                            ("SendLearnValue" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [2349 2382])
+                            ("OnSendLearnValue" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [2387 2422])
+                            ("SendLearnValue_Ack" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [2427 2464])
+                            ("OnSendLearnValue_Ack" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [2469 2508])
+                            ("ProposerSendSuccess" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [2513 2551])
+                            ("OnProposerSendSuccess" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [2556 2596])
+                            ("OnProposerSendSuccessNotAcceptYet" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [2601 2653])
+                            ("OnProposerSendSuccessBallotNotSame" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [2658 2711])
+                            ("OnProposerSendSuccessSuccessLearn" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [2716 2768])
+                            ("SenderAckTimeout" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [2773 2808])
+                            ("SenderAckDelay" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [2813 2846])
+                            ("SenderSendOnePaxosLog" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [2851 2891]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [1945 2894])
+                    ("InstanceBP" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [2915 2922])
+                            ("InstanceBP" function
+                               (:destructor-flag t
+                                :typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [2927 2952])
+                            ("NewInstance" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [2957 2987])
+                            ("SendMessage" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [2992 3022])
+                            ("BroadcastMessage" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [3027 3062])
+                            ("OnNewValueCommitTimeout" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [3067 3109])
+                            ("OnReceive" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [3114 3142])
+                            ("OnReceiveParseError" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [3147 3185])
+                            ("OnReceivePaxosMsg" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [3190 3226])
+                            ("OnReceivePaxosMsgNodeIDNotValid" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [3231 3281])
+                            ("OnReceivePaxosMsgTypeNotValid" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [3286 3334])
+                            ("OnReceivePaxosProposerMsgInotsame" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [3339 3391])
+                            ("OnReceivePaxosAcceptorMsgInotsame" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [3396 3448])
+                            ("OnReceivePaxosAcceptorMsgAddRetry" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [3453 3505])
+                            ("OnInstanceLearned" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [3510 3546])
+                            ("OnInstanceLearnedNotMyCommit" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [3551 3598])
+                            ("OnInstanceLearnedIsMyCommit" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("iUseTimeMs" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [3644 3665]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [3603 3669])
+                            ("OnInstanceLearnedSMExecuteFail" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [3674 3723])
+                            ("ChecksumLogicFail" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [3728 3764]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [2896 3767])
+                    ("CommiterBP" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [3788 3795])
+                            ("CommiterBP" function
+                               (:destructor-flag t
+                                :typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [3800 3825])
+                            ("NewValue" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [3830 3857])
+                            ("NewValueConflict" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [3862 3897])
+                            ("NewValueGetLockTimeout" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [3902 3943])
+                            ("NewValueGetLockReject" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [3948 3988])
+                            ("NewValueGetLockOK" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("iUseTimeMs" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [4024 4045]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [3993 4049])
+                            ("NewValueCommitOK" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("iUseTimeMs" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [4084 4105]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [4054 4109])
+                            ("NewValueCommitFail" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [4114 4151])
+                            ("BatchPropose" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [4157 4188])
+                            ("BatchProposeOK" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [4193 4226])
+                            ("BatchProposeFail" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [4231 4266])
+                            ("BatchProposeWaitTimeMs" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("iWaitTimeMs" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [4307 4329]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [4271 4333])
+                            ("BatchProposeDoPropose" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("iBatchCount" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [4373 4395]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [4338 4399]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [3769 4402])
+                    ("IOLoopBP" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [4421 4428])
+                            ("IOLoopBP" function
+                               (:destructor-flag t
+                                :typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [4433 4456])
+                            ("OneLoop" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [4461 4487])
+                            ("EnqueueMsg" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [4492 4521])
+                            ("EnqueueMsgRejectByFullQueue" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [4526 4572])
+                            ("EnqueueRetryMsg" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [4577 4611])
+                            ("EnqueueRetryMsgRejectByFullQueue" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [4616 4667])
+                            ("OutQueueMsg" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [4672 4702])
+                            ("DealWithRetryMsg" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [4707 4742]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [4404 4745])
+                    ("NetworkBP" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [4765 4772])
+                            ("NetworkBP" function
+                               (:destructor-flag t
+                                :typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [4777 4801])
+                            ("TcpEpollLoop" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [4806 4837])
+                            ("TcpOnError" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [4842 4871])
+                            ("TcpAcceptFd" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [4876 4906])
+                            ("TcpQueueFull" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [4911 4942])
+                            ("TcpReadOneMessageOk" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("iLen" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [4980 4995]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [4947 4999])
+                            ("TcpOnReadMessageLenError" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [5004 5047])
+                            ("TcpReconnect" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [5052 5083])
+                            ("TcpOutQueue" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("iDelayMs" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [5113 5132]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [5088 5136])
+                            ("SendRejectByTooLargeSize" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [5141 5184])
+                            ("Send" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("sMessage" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5207 5236]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [5189 5240])
+                            ("SendTcp" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("sMessage" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5266 5295]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [5245 5299])
+                            ("SendUdp" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("sMessage" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5325 5354]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [5304 5358])
+                            ("SendMessageNodeIDNotFound" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [5363 5407])
+                            ("UDPReceive" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("iRecvLen" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [5436 5455]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [5412 5459])
+                            ("UDPRealSend" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("sMessage" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5489 5518]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [5464 5522])
+                            ("UDPQueueFull" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [5527 5558]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [4747 5561])
+                    ("LogStorageBP" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [5584 5591])
+                            ("LogStorageBP" function
+                               (:destructor-flag t
+                                :typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [5596 5623])
+                            ("LevelDBGetNotExist" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [5628 5665])
+                            ("LevelDBGetFail" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [5670 5703])
+                            ("FileIDToValueFail" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [5708 5744])
+                            ("ValueToFileIDFail" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [5749 5785])
+                            ("LevelDBPutFail" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [5790 5823])
+                            ("LevelDBPutOK" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("iUseTimeMs" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [5854 5875]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [5828 5879])
+                            ("AppendDataFail" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [5884 5917])
+                            ("AppendDataOK" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("iWriteLen" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [5948 5968])
+                                    ("iUseTimeMs" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [5969 5990]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [5922 5994])
+                            ("GetFileChecksumNotEquel" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [5999 6041]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [5563 6044])
+                    ("AlgorithmBaseBP" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [6070 6077])
+                            ("AlgorithmBaseBP" function
+                               (:destructor-flag t
+                                :typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [6082 6112])
+                            ("UnPackHeaderLenTooLong" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [6117 6158])
+                            ("UnPackChecksumNotSame" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [6163 6203])
+                            ("HeaderGidNotSame" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [6208 6243]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [6046 6246])
+                    ("CheckpointBP" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [6269 6276])
+                            ("CheckpointBP" function
+                               (:destructor-flag t
+                                :typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [6281 6308])
+                            ("NeedAskforCheckpoint" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [6313 6352])
+                            ("SendCheckpointOneBlock" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [6357 6398])
+                            ("OnSendCheckpointOneBlock" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [6403 6446])
+                            ("SendCheckpointBegin" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [6451 6489])
+                            ("SendCheckpointEnd" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [6494 6530])
+                            ("ReceiveCheckpointDone" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [6535 6575])
+                            ("ReceiveCheckpointAndLoadFail" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [6580 6627])
+                            ("ReceiveCheckpointAndLoadSucc" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [6632 6679]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [6248 6682])
+                    ("MasterBP" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [6701 6708])
+                            ("MasterBP" function
+                               (:destructor-flag t
+                                :typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [6713 6736])
+                            ("TryBeMaster" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [6741 6771])
+                            ("TryBeMasterProposeFail" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [6776 6817])
+                            ("SuccessBeMaster" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [6822 6856])
+                            ("OtherBeMaster" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [6861 6893])
+                            ("DropMaster" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [6898 6927])
+                            ("MasterSMInconsistent" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [6932 6971]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [6684 6974])
+                    ("BP" variable (:constant-flag t) (reparse-symbol namespacesubparts) [6984 6986])
+                    ("Breakpoint" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [7033 7040])
+                            ("Breakpoint" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :type ("Breakpoint" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [7045 7058])
+                            ("Breakpoint" function
+                               (:destructor-flag t
+                                :typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [7064 7089])
+                            ("SetInstance" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("poBreakpoint" variable
+                                       (:pointer 1
+                                        :type ("Breakpoint" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [7112 7138]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [7095 7139])
+                            ("Instance" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :typemodifiers ("static")
+                                :type ("Breakpoint" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [7145 7176])
+                            ("GetProposerBP" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :typemodifiers ("virtual")
+                                :type ("ProposerBP" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [7186 7223])
+                            ("GetAcceptorBP" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :typemodifiers ("virtual")
+                                :type ("AcceptorBP" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [7233 7270])
+                            ("GetLearnerBP" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :typemodifiers ("virtual")
+                                :type ("LearnerBP" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [7276 7311])
+                            ("GetInstanceBP" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :typemodifiers ("virtual")
+                                :type ("InstanceBP" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [7317 7354])
+                            ("GetCommiterBP" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :typemodifiers ("virtual")
+                                :type ("CommiterBP" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [7360 7397])
+                            ("GetIOLoopBP" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :typemodifiers ("virtual")
+                                :type ("IOLoopBP" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [7403 7436])
+                            ("GetNetworkBP" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :typemodifiers ("virtual")
+                                :type ("NetworkBP" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [7442 7477])
+                            ("GetLogStorageBP" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :typemodifiers ("virtual")
+                                :type ("LogStorageBP" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [7483 7524])
+                            ("GetAlgorithmBaseBP" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :typemodifiers ("virtual")
+                                :type ("AlgorithmBaseBP" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [7530 7577])
+                            ("GetCheckpointBP" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :typemodifiers ("virtual")
+                                :type ("CheckpointBP" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [7583 7624])
+                            ("GetMasterBP" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :typemodifiers ("virtual")
+                                :type ("MasterBP" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [7630 7663])
+                            ("public" label nil (reparse-symbol classsubparts) [7665 7672])
+                            ("m_oProposerBP" variable (:type ("ProposerBP" type (:type "class") nil nil)) (reparse-symbol classsubparts) [7677 7702])
+                            ("m_oAcceptorBP" variable (:type ("AcceptorBP" type (:type "class") nil nil)) (reparse-symbol classsubparts) [7707 7732])
+                            ("m_oLearnerBP" variable (:type ("LearnerBP" type (:type "class") nil nil)) (reparse-symbol classsubparts) [7737 7760])
+                            ("m_oInstanceBP" variable (:type ("InstanceBP" type (:type "class") nil nil)) (reparse-symbol classsubparts) [7765 7790])
+                            ("m_oCommiterBP" variable (:type ("CommiterBP" type (:type "class") nil nil)) (reparse-symbol classsubparts) [7795 7820])
+                            ("m_oIOLoopBP" variable (:type ("IOLoopBP" type (:type "class") nil nil)) (reparse-symbol classsubparts) [7825 7846])
+                            ("m_oNetworkBP" variable (:type ("NetworkBP" type (:type "class") nil nil)) (reparse-symbol classsubparts) [7851 7874])
+                            ("m_oLogStorageBP" variable (:type ("LogStorageBP" type (:type "class") nil nil)) (reparse-symbol classsubparts) [7879 7908])
+                            ("m_oAlgorithmBaseBP" variable (:type ("AlgorithmBaseBP" type (:type "class") nil nil)) (reparse-symbol classsubparts) [7913 7948])
+                            ("m_oCheckpointBP" variable (:type ("CheckpointBP" type (:type "class") nil nil)) (reparse-symbol classsubparts) [7953 7982])
+                            ("m_oMasterBP" variable (:type ("MasterBP" type (:type "class") nil nil)) (reparse-symbol classsubparts) [7987 8008])
+                            ("m_poBreakpoint" variable
+                               (:pointer 1
+                                :typemodifiers ("static")
+                                :type ("Breakpoint" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [8014 8049]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [7013 8052]))                  
+                :type "namespace")
+                nil [777 8059]))          
+      :file "breakpoint.h"
+      :pointmax 8060
+      :fsize 8059
+      :lastmodtime '(23076 41254 0 0)
+      :unmatched-syntax '((symbol 752 . 756) (symbol 745 . 751) (punctuation 744 . 745))
+      :lexical-table 
+        '(("BP" . ((semantic-list "(Breakpoint::Instance())" 6987 . 7011)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("phxpaxos" type
+               (:members 
+                  ( ("SYSTEM_V_SMID" variable (:constant-flag t) (reparse-symbol namespacesubparts) [788 801])
+                    ("MASTER_V_SMID" variable (:constant-flag t) (reparse-symbol namespacesubparts) [820 833])
+                    ("BATCH_PROPOSE_SMID" variable (:constant-flag t) (reparse-symbol namespacesubparts) [852 870])
+                    ("PaxosTryCommitRet" type
+                       (:members 
+                          ( ("PaxosTryCommitRet_OK" variable
+                               (:constant-flag t
+                                :default-value (934 935)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [911 935])
+                            ("PaxosTryCommitRet_Reject" variable
+                               (:constant-flag t
+                                :default-value (968 970)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [941 970])
+                            ("PaxosTryCommitRet_Conflict" variable
+                               (:constant-flag t
+                                :default-value (1005 1007)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [976 1007])
+                            ("PaxosTryCommitRet_ExecuteFail" variable
+                               (:constant-flag t
+                                :default-value (1045 1047)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [1013 1047])
+                            ("PaxosTryCommitRet_Follower_Cannot_Commit" variable
+                               (:constant-flag t
+                                :default-value (1096 1098)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [1053 1098])
+                            ("PaxosTryCommitRet_Im_Not_In_Membership" variable
+                               (:constant-flag t
+                                :default-value (1146 1148)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [1104 1148])
+                            ("PaxosTryCommitRet_Value_Size_TooLarge" variable
+                               (:constant-flag t
+                                :default-value (1194 1196)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [1154 1196])
+                            ("PaxosTryCommitRet_Timeout" variable
+                               (:constant-flag t
+                                :default-value (1230 1233)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [1202 1233])
+                            ("PaxosTryCommitRet_TooManyThreadWaiting_Reject" variable
+                               (:constant-flag t
+                                :default-value (1287 1290)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [1239 1290]))                          
+                        :type "enum")
+                        (reparse-symbol namespacesubparts) [882 1294])
+                    ("PaxosNodeFunctionRet" type
+                       (:members 
+                          ( ("Paxos_SystemError" variable
+                               (:constant-flag t
+                                :default-value (1348 1350)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [1328 1350])
+                            ("Paxos_GroupIdxWrong" variable
+                               (:constant-flag t
+                                :default-value (1378 1380)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [1356 1380])
+                            ("Paxos_MembershipOp_GidNotSame" variable
+                               (:constant-flag t
+                                :default-value (1418 1422)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [1386 1422])
+                            ("Paxos_MembershipOp_VersionConflit" variable
+                               (:constant-flag t
+                                :default-value (1464 1468)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [1428 1468])
+                            ("Paxos_MembershipOp_NoGid" variable
+                               (:constant-flag t
+                                :default-value (1501 1505)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [1474 1505])
+                            ("Paxos_MembershipOp_Add_NodeExist" variable
+                               (:constant-flag t
+                                :default-value (1546 1550)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [1511 1550])
+                            ("Paxos_MembershipOp_Remove_NodeNotExist" variable
+                               (:constant-flag t
+                                :default-value (1597 1601)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [1556 1601])
+                            ("Paxos_MembershipOp_Change_NoChange" variable
+                               (:constant-flag t
+                                :default-value (1644 1648)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [1607 1648])
+                            ("Paxos_GetInstanceValue_Value_NotExist" variable
+                               (:constant-flag t
+                                :default-value (1694 1698)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [1654 1698])
+                            ("Paxos_GetInstanceValue_Value_Not_Chosen_Yet" variable
+                               (:constant-flag t
+                                :default-value (1750 1754)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [1704 1754]))                          
+                        :type "enum")
+                        (reparse-symbol namespacesubparts) [1296 1758]))                  
+                :type "namespace")
+                nil [758 1761]))          
+      :file "def.h"
+      :pointmax 1763
+      :fsize 1762
+      :lastmodtime '(23076 41254 0 0)
+      :unmatched-syntax '((symbol 752 . 756) (symbol 745 . 751) (punctuation 744 . 745))
+      :lexical-table 
+        '(("BATCH_PROPOSE_SMID" . ((number "100000002" 871 . 880)))
+          ("SYSTEM_V_SMID" . ((number "100000000" 802 . 811)))
+          ("MASTER_V_SMID" . ((number "100000001" 834 . 843)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("stdarg.h" include (:system-flag t) nil [758 777])
+            ("functional" include (:system-flag t) nil [778 799])
+            ("phxpaxos" type
+               (:members 
+                  ( ("LogLevel" type (:type "class") (reparse-symbol namespacesubparts) [828 969])
+                    ("LogFunc" variable (:type "int") (reparse-symbol namespacesubparts) [1035 1043]))                  
+                :type "namespace")
+                nil [801 1050]))          
+      :file "log.h"
+      :pointmax 1051
+      :fsize 1050
+      :lastmodtime '(23076 41254 0 0)
+      :unmatched-syntax '((punctuation 1033 . 1034) (semantic-list 998 . 1032) (VOID 994 . 998) (punctuation 992 . 993) (symbol 984 . 992) (punctuation 983 . 984) (punctuation 982 . 983) (symbol 979 . 982) (TYPEDEF 971 . 978) (punctuation 965 . 966) (number 964 . 965) (punctuation 962 . 963) (symbol 945 . 961) (punctuation 939 . 940) (number 938 . 939) (punctuation 936 . 937) (symbol 922 . 935) (punctuation 916 . 917) (number 915 . 916) (punctuation 913 . 914) (symbol 896 . 912) (punctuation 890 . 891) (number 889 . 890) (punctuation 887 . 888) (symbol 872 . 886) (punctuation 866 . 867) (number 865 . 866) (punctuation 863 . 864) (symbol 849 . 862) (ENUM 823 . 827) (symbol 752 . 756) (symbol 745 . 751) (punctuation 744 . 745)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("string" include (:system-flag t) nil [758 775])
+            ("typeinfo" include (:system-flag t) nil [776 795])
+            ("inttypes.h" include (:system-flag t) nil [796 817])
+            ("phxpaxos" type
+               (:members 
+                  ( ("Node" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [903 914])
+                    ("NetWork" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [932 939])
+                            ("NetWork" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :type ("NetWork" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [944 954])
+                            ("NetWork" function
+                               (:destructor-flag t
+                                :typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [959 980])
+                            ("RunNetWork" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [1071 1101])
+                            ("StopNetWork" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [1187 1218])
+                            ("SendMessageTCP" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("iGroupIdx" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1251 1271])
+                                    ("sIp" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1272 1296])
+                                    ("iPort" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1297 1313])
+                                    ("sMessage" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1314 1343]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [1224 1348])
+                            ("SendMessageUDP" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("iGroupIdx" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1381 1401])
+                                    ("sIp" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1402 1426])
+                                    ("iPort" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1427 1443])
+                                    ("sMessage" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1444 1473]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [1354 1478])
+                            ("OnReceiveMessage" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("pcMessage" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [1607 1630])
+                                    ("iMessageLen" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1631 1653]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [1586 1654])
+                            ("private" label nil (reparse-symbol classsubparts) [1656 1664])
+                            ("Node" friend nil (reparse-symbol classsubparts) [1669 1686])
+                            ("m_poNode" variable
+                               (:pointer 1
+                                :type ("Node" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1692 1708]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [916 1711]))                  
+                :type "namespace")
+                nil [819 1718]))          
+      :file "network.h"
+      :pointmax 1719
+      :fsize 1718
+      :lastmodtime '(23076 41254 0 0)
+      :unmatched-syntax '((punctuation 1686 . 1687) (symbol 752 . 756) (symbol 745 . 751) (punctuation 744 . 745)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("string" include (:system-flag t) nil [758 775])
+            ("typeinfo" include (:system-flag t) nil [776 795])
+            ("inttypes.h" include (:system-flag t) nil [796 817])
+            ("phxpaxos" type
+               (:members 
+                  ( ("WriteOptions" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [1041 1048])
+                            ("WriteOptions" function
+                               (:constructor-flag t
+                                :type ("WriteOptions" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1053 1085])
+                            ("bSync" variable (:type "bool") (reparse-symbol classsubparts) [1090 1101]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [1020 1104])
+                    ("LogStorage" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [1125 1132])
+                            ("LogStorage" function
+                               (:destructor-flag t
+                                :typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [1137 1161])
+                            ("GetLogStorageDirPath" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :constant-flag t
+                                :arguments 
+                                  ( ("iGroupIdx" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1214 1234]))                                  
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1167 1239])
+                            ("Get" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("iGroupIdx" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1261 1281])
+                                    ("llInstanceID" variable
+                                       (:constant-flag t
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1282 1310])
+                                    ("sValue" variable
+                                       (:reference 1
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1311 1332]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [1245 1337])
+                            ("Put" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("oWriteOptions" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("WriteOptions" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1359 1394])
+                                    ("iGroupIdx" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1395 1415])
+                                    ("llInstanceID" variable
+                                       (:constant-flag t
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1416 1444])
+                                    ("sValue" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1445 1472]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [1343 1477])
+                            ("Del" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("oWriteOptions" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("WriteOptions" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1499 1534])
+                                    ("iGroupIdx" variable (:type "int") (reparse-symbol arg-sub-list) [1535 1549])
+                                    ("llInstanceID" variable
+                                       (:constant-flag t
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1550 1578]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [1483 1583])
+                            ("GetMaxInstanceID" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("iGroupIdx" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1618 1638])
+                                    ("llInstanceID" variable
+                                       (:reference 1
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1639 1663]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [1589 1668])
+                            ("SetMinChosenInstanceID" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("oWriteOptions" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("WriteOptions" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1709 1744])
+                                    ("iGroupIdx" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1745 1765])
+                                    ("llMinInstanceID" variable
+                                       (:constant-flag t
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1766 1797]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [1674 1802])
+                            ("GetMinChosenInstanceID" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("iGroupIdx" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1843 1863])
+                                    ("llMinInstanceID" variable
+                                       (:reference 1
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1864 1891]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [1808 1896])
+                            ("ClearAllLog" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("iGroupIdx" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1926 1946]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [1902 1951])
+                            ("SetSystemVariables" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("oWriteOptions" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("WriteOptions" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1988 2023])
+                                    ("iGroupIdx" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [2024 2044])
+                                    ("sBuffer" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2045 2073]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [1957 2078])
+                            ("GetSystemVariables" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("iGroupIdx" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [2115 2135])
+                                    ("sBuffer" variable
+                                       (:reference 1
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2136 2158]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [2084 2163])
+                            ("SetMasterVariables" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("oWriteOptions" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("WriteOptions" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2200 2235])
+                                    ("iGroupIdx" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [2236 2256])
+                                    ("sBuffer" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2257 2285]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [2169 2290])
+                            ("GetMasterVariables" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("iGroupIdx" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [2327 2347])
+                                    ("sBuffer" variable
+                                       (:reference 1
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2348 2370]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [2296 2375]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [1106 2378]))                  
+                :type "namespace")
+                nil [819 2381]))          
+      :file "storage.h"
+      :pointmax 2382
+      :fsize 2381
+      :lastmodtime '(23076 41254 0 0)
+      :unmatched-syntax '((symbol 752 . 756) (symbol 745 . 751) (punctuation 744 . 745)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("THIRDPARTY_PHXPAXOS_INCLUDE_PAXPAXOS_UTIL_H_" variable (:constant-flag t) nil [136 180])
+            ("stdio.h" include (:system-flag t) nil [181 199])
+            ("string" include (:system-flag t) nil [200 217])
+            ("thirdparty/phxpaxos/include/phxpaxos/options.h" include nil nil [218 275])
+            ("parse_ipport" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("pcStr" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [301 319])
+                    ("oNodeInfo" variable
+                       (:reference 1
+                        :type ("phxpaxos::NodeInfo" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [320 351]))                  
+                :type "int")
+                nil [277 541])
+            ("parse_ipport_list" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("pcStr" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [572 590])
+                    ("vecNodeInfoList" variable
+                       (:reference 1
+                        :type ("phxpaxos::NodeInfoList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [620 660]))                  
+                :type "int")
+                nil [543 1161]))          
+      :file "util.h"
+      :pointmax 1220
+      :fsize 1219
+      :lastmodtime '(23078 24498 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("THIRDPARTY_PHXPAXOS_INCLUDE_PAXPAXOS_UTIL_H_")
+          )
+))
+  :file "!Volumes!Transcend!trunk!thirdparty!phxpaxos!include!phxpaxos!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

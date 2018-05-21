@@ -1,0 +1,92 @@
+  cc_library(
+  name = 'safe_timestamp_recorder',
+  srcs = 'safe_timestamp_recorder.cc',
+  deps = [
+    '//common/system/concurrency:concurrency',
+    '//common/system/time:time',
+  ]
+)
+
+cc_test(
+  name = 'safe_timestamp_recorder_test',
+  srcs = 'safe_timestamp_recorder_test.cc',
+  deps = [
+    ':safe_timestamp_recorder',
+  ]
+)
+
+cc_library(
+  name = 'index_data_loader',
+  srcs = [
+    'index_data_loader.cc',
+  ],
+  deps = [
+    '//dsp/publish/pipeline:path_handler',
+    '//common/base/string:string',
+    '//common/file:file',
+    '//common/file:local_file',
+  ]
+)
+
+cc_library(
+  name = 'service_impl',
+  srcs = 'service_impl.cc',
+  deps = [
+    ':safe_timestamp_recorder',
+    '//common/collection:memory_cache',
+    '//common/crypto/hash:hash',
+    '//common/file/recordio:recordio',
+    '//common/file:file',
+    '//common/system/concurrency:concurrency',
+    '//common/system/memory:memory',
+    '//common/system/time:time',
+    '//common/system:self_proc_analyser',
+    '//common/utility/auto_import_blob:auto_import_blob',
+    '//dsp/common/record_dumper:record_dumper',
+    '//dsp/experiment:experiment_manager',
+    '//dsp/index/data:index_data',
+    '//dsp/index/data:summary_data',
+    '//dsp/index/search:ad_searcher',
+    '//dsp/index/search:creative_searcher',
+    '//dsp/index/stat:filtered_reason_counter',
+    '//dsp/index/viewer:index_viewer',
+    '//dsp/index:index_data_loader',
+    '//dsp/monitor:monitor',
+    '//dsp/monitor:traffic_monitor',
+    '//dsp/proto/index:index_proto',
+    '//thirdparty/gflags:gflags',
+    '//thirdparty/glog:glog',
+  ]
+)
+
+cc_library(
+  name = 'index_server_impl',
+  srcs = 'index_server.cc',
+  deps = [
+    ':service_impl',
+    '//common/net/http:http',
+    '//common/utility/auto_import_blob:auto_import_blob_service',
+    '//dsp/index/viewer:index_viewer',
+    '//thirdparty/gflags:gflags',
+    '//thirdparty/glog:glog',
+    '//poppy:poppy',
+  ]
+)
+
+cc_binary(
+  name = 'index_server',
+  srcs = 'index_main.cc',
+  deps = [
+    ':index_server_impl',
+    '//dsp/index/reflection:reflection_context',
+    '//common/base:module',
+    '//common/file:local_file',
+    '//common/file:ndfs_file',
+    '//common/utility/auto_import_blob:auto_import_blob_service',
+    '//common/utility:pidfile',
+    '//common/system:info',
+    '//thirdparty/gflags:gflags',
+    '//thirdparty/glog:glog',
+    '//thirdparty/perftools:tcmalloc_and_profiler',
+  ]
+)

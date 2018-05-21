@@ -1,0 +1,339 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("src/core/ext/filters/max_age/max_age_filter.h" include nil nil [605 661])
+            ("limits.h" include (:system-flag t) nil [663 682])
+            ("string.h" include (:system-flag t) nil [683 702])
+            ("src/core/lib/channel/channel_args.h" include nil nil [704 750])
+            ("src/core/lib/channel/channel_stack_builder.h" include nil nil [751 806])
+            ("src/core/lib/iomgr/timer.h" include nil nil [807 844])
+            ("src/core/lib/surface/channel_init.h" include nil nil [845 891])
+            ("src/core/lib/transport/http2_errors.h" include nil nil [892 940])
+            ("DEFAULT_MAX_CONNECTION_AGE_MS" variable (:constant-flag t) nil [950 979])
+            ("DEFAULT_MAX_CONNECTION_AGE_GRACE_MS" variable (:constant-flag t) nil [996 1031])
+            ("DEFAULT_MAX_CONNECTION_IDLE_MS" variable (:constant-flag t) nil [1048 1078])
+            ("MAX_CONNECTION_AGE_JITTER" variable (:constant-flag t) nil [1095 1120])
+            ("MAX_CONNECTION_AGE_INTEGER_OPTIONS" variable (:constant-flag t) nil [1134 1168])
+            ("MAX_CONNECTION_IDLE_INTEGER_OPTIONS" variable (:constant-flag t) nil [1227 1262])
+            ("channel_data" type
+               (:members 
+                  ( ("channel_stack" variable
+                       (:pointer 1
+                        :type ("grpc_channel_stack" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1419 1453])
+                    ("max_age_timer_mu" variable (:type ("gpr_mu" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1576 1600])
+                    ("max_age_timer_pending" variable (:type "bool") (reparse-symbol classsubparts) [1667 1694])
+                    ("max_age_grace_timer_pending" variable (:type "bool") (reparse-symbol classsubparts) [1767 1800])
+                    ("max_age_timer" variable (:type ("grpc_timer" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1873 1898])
+                    ("max_age_grace_timer" variable (:type ("grpc_timer" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1991 2022])
+                    ("max_idle_timer" variable (:type ("grpc_timer" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2120 2146])
+                    ("max_connection_idle" variable (:type ("grpc_millis" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2213 2245])
+                    ("max_connection_age" variable (:type ("grpc_millis" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2293 2324])
+                    ("max_connection_age_grace" variable (:type ("grpc_millis" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2394 2431])
+                    ("close_max_idle_channel" variable (:type ("grpc_closure" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2555 2591])
+                    ("close_max_age_channel" variable (:type ("grpc_closure" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2691 2726])
+                    ("force_close_max_age_channel" variable (:type ("grpc_closure" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2830 2871])
+                    ("start_max_idle_timer_after_init" variable (:type ("grpc_closure" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2982 3027])
+                    ("start_max_age_timer_after_init" variable (:type ("grpc_closure" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3137 3181])
+                    ("start_max_age_grace_timer_after_goaway_op" variable (:type ("grpc_closure" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3260 3315])
+                    ("channel_connectivity_changed" variable (:type ("grpc_closure" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3385 3427])
+                    ("connectivity_state" variable (:type ("grpc_connectivity_state" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3477 3520])
+                    ("call_count" variable (:type ("gpr_atm" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3554 3573]))                  
+                :type "struct")
+                nil [1315 3589])
+            ("channel_data" type
+               (:typedef ("channel_data" type (:type "struct") nil nil)
+                :type "typedef")
+                nil [1315 3589])
+            ("increase_call_count" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("exec_ctx" variable
+                       (:pointer 1
+                        :type ("grpc_exec_ctx" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3757 3781])
+                    ("chand" variable
+                       (:pointer 1
+                        :type ("channel_data" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3782 3802]))                  
+                :type "void")
+                nil [3725 3927])
+            ("decrease_call_count" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("exec_ctx" variable
+                       (:pointer 1
+                        :type ("grpc_exec_ctx" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4089 4113])
+                    ("chand" variable
+                       (:pointer 1
+                        :type ("channel_data" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4114 4134]))                  
+                :type "void")
+                nil [4057 4464])
+            ("start_max_idle_timer_after_init" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("exec_ctx" variable
+                       (:pointer 1
+                        :type ("grpc_exec_ctx" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4510 4534])
+                    ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4535 4545])
+                    ("error" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4590 4608]))                  
+                :type "void")
+                nil [4466 5038])
+            ("start_max_age_timer_after_init" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("exec_ctx" variable
+                       (:pointer 1
+                        :type ("grpc_exec_ctx" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5083 5107])
+                    ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [5108 5118])
+                    ("error" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5162 5180]))                  
+                :type "void")
+                nil [5040 6032])
+            ("start_max_age_grace_timer_after_goaway_op" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("exec_ctx" variable
+                       (:pointer 1
+                        :type ("grpc_exec_ctx" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6088 6112])
+                    ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [6167 6177])
+                    ("error" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6232 6250]))                  
+                :type "void")
+                nil [6034 6928])
+            ("close_max_idle_channel" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("exec_ctx" variable
+                       (:pointer 1
+                        :type ("grpc_exec_ctx" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6965 6989])
+                    ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [6990 7000])
+                    ("error" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7036 7054]))                  
+                :type "void")
+                nil [6930 7860])
+            ("close_max_age_channel" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("exec_ctx" variable
+                       (:pointer 1
+                        :type ("grpc_exec_ctx" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7896 7920])
+                    ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [7921 7931])
+                    ("error" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7966 7984]))                  
+                :type "void")
+                nil [7862 8977])
+            ("force_close_max_age_channel" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("exec_ctx" variable
+                       (:pointer 1
+                        :type ("grpc_exec_ctx" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9019 9043])
+                    ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [9044 9054])
+                    ("error" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9095 9113]))                  
+                :type "void")
+                nil [8979 9872])
+            ("channel_connectivity_changed" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("exec_ctx" variable
+                       (:pointer 1
+                        :type ("grpc_exec_ctx" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9915 9939])
+                    ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [9940 9950])
+                    ("error" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9992 10010]))                  
+                :type "void")
+                nil [9874 11035])
+            ("add_random_max_connection_age_jitter_and_convert_to_grpc_millis" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("value" variable (:type "int") (reparse-symbol arg-sub-list) [11425 11435]))                  
+                :type ("grpc_millis" type (:type "class") nil nil))
+                nil [11342 11978])
+            ("init_call_elem" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("exec_ctx" variable
+                       (:pointer 1
+                        :type ("grpc_exec_ctx" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12047 12071])
+                    ("elem" variable
+                       (:pointer 1
+                        :type ("grpc_call_element" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12106 12130])
+                    ("args" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grpc_call_element_args" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12165 12200]))                  
+                :type ("grpc_error" type (:type "class") nil nil))
+                nil [12013 12329])
+            ("destroy_call_elem" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("exec_ctx" variable
+                       (:pointer 1
+                        :type ("grpc_exec_ctx" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12393 12417])
+                    ("elem" variable
+                       (:pointer 1
+                        :type ("grpc_call_element" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12418 12442])
+                    ("final_info" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grpc_call_final_info" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12473 12512])
+                    ("ignored" variable
+                       (:pointer 1
+                        :type ("grpc_closure" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12543 12565]))                  
+                :type "void")
+                nil [12363 12668])
+            ("init_channel_elem" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("exec_ctx" variable
+                       (:pointer 1
+                        :type ("grpc_exec_ctx" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12743 12767])
+                    ("elem" variable
+                       (:pointer 1
+                        :type ("grpc_channel_element" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12805 12832])
+                    ("args" variable
+                       (:pointer 1
+                        :type ("grpc_channel_element_args" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12870 12902]))                  
+                :type ("grpc_error" type (:type "class") nil nil))
+                nil [12706 17245])
+            ("destroy_channel_elem" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("exec_ctx" variable
+                       (:pointer 1
+                        :type ("grpc_exec_ctx" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [17315 17339])
+                    ("elem" variable
+                       (:pointer 1
+                        :type ("grpc_channel_element" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [17373 17400]))                  
+                :type "void")
+                nil [17282 17403])
+            ("grpc_max_age_filter" variable
+               (:constant-flag t
+                :default-value "{
+    grpc_call_next_op,
+    grpc_channel_next_op,
+    0, /* sizeof_call_data */
+    init_call_elem,
+    grpc_call_stack_ignore_set_pollset_or_pollset_set,
+    destroy_call_elem,
+    sizeof(channel_data),
+    init_channel_elem,
+    destroy_channel_elem,
+    grpc_channel_next_get_info,
+    \"max_age\"}"
+                :type ("grpc_channel_filter" type (:type "class") nil nil))
+                nil [17405 17754])
+            ("maybe_add_max_age_filter" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("exec_ctx" variable
+                       (:pointer 1
+                        :type ("grpc_exec_ctx" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [17793 17817])
+                    ("builder" variable
+                       (:pointer 1
+                        :type ("grpc_channel_stack_builder" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [17855 17891])
+                    ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [17929 17939]))                  
+                :type "bool")
+                nil [17756 18578])
+            ("grpc_max_age_filter_init" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [18621 18626]))                  
+                :type "void")
+                nil [18591 18828])
+            ("grpc_max_age_filter_shutdown" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [18875 18880]))                  
+                :type "void")
+                nil [18841 18883]))          
+      :file "max_age_filter.cc"
+      :pointmax 18884
+      :fsize 18883
+      :lastmodtime '(23050 35617 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("DEFAULT_MAX_CONNECTION_AGE_MS" . ((symbol "INT_MAX" 980 . 987)))
+          ("DEFAULT_MAX_CONNECTION_AGE_GRACE_MS" . ((symbol "INT_MAX" 1032 . 1039)))
+          ("MAX_CONNECTION_AGE_INTEGER_OPTIONS" . ((semantic-list "{ DEFAULT_MAX_CONNECTION_AGE_MS, 1, INT_MAX }" 1173 . 1218)))
+          ("DEFAULT_MAX_CONNECTION_IDLE_MS" . ((symbol "INT_MAX" 1079 . 1086)))
+          ("MAX_CONNECTION_AGE_JITTER" . ((number "0.1" 1121 . 1124)))
+          ("MAX_CONNECTION_IDLE_INTEGER_OPTIONS" . ((semantic-list "{ DEFAULT_MAX_CONNECTION_IDLE_MS, 1, INT_MAX }" 1267 . 1313)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :file "max_age_filter.h"
+      :fsize 941
+      :lastmodtime '(23013 48469 0 0)))
+  :file "!Volumes!Transcend!grpc!src!core!ext!filters!max_age!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

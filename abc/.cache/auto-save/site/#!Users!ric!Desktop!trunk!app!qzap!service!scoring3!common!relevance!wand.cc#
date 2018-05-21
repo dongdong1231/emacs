@@ -1,0 +1,187 @@
+#include "app/qzap/service/scoring3/common/relevance/wand.h"
+#include <string>
+#include <queue>
+#include "thirdparty/glog/logging.h"
+#include "app/qzap/service/scoring3/common/relevance/utility.h"
+
+namespace QZAP {
+namespace RELEVANCE {
+
+REGISTER_RELEVANCE_RESOLVER("wand", Wand);
+
+namespace {
+inline bool operator<= (const LocalIndex &local_index,
+                        const LocalIndexWrapper &wrapper) {
+  return !wrapper.LessThan(local_index);
+}
+}  // namespace
+
+bool Wand::Resolve(
+    const PostingList &posting_list,
+    uint32_t topn,
+    Filter *filter,
+    Scorer *scorer,
+    std::vector<Result> *result) {
+  shared_ptr<Iterator> itor(NewIterator(posting_list));
+  CHECK_NOTNULL(itor.get());
+  std::priority_queue<Result, std::vector<Result>, Result::Compare> local_result;
+  float threshold = 0.0F;  // initial value?
+  itor->Next(threshold);
+
+  while (itor->Valid()) {
+    const LocalIndex local_index = itor->GetLocalIndex();
+    const PostingList& local_posting_list = itor->GetPostingList();
+
+    if (!filter->ShouldFilter(local_index, local_posting_list)) {
+      Result res;
+      res.local_index = local_index;
+      res.score = scorer->Evaluate(local_index, local_posting_list);
+      if (local_result.size() < topn) {
+        local_result.push(res);
+      } else {
+        if (local_result.top().score < res.score) {
+          local_result.pop();
+          local_result.push(res);
+          threshold = local_result.top().score;
+          VLOG(2) << "update threshold=[" << threshold << "]";
+        } else {
+          VLOG(2) << "local_index=[" << local_index << "] "
+              << "is filtered by score, "
+              << "self=[" << res.score << "], "
+              << "top=[" << local_result.top().score << "]";
+        }
+      }
+    } else {
+      VLOG(2) << "local_index=[" << local_index << "] "
+              << "is filtered";
+    }
+    itor->Next(threshold);
+  }
+
+  bool ret = !local_result.empty();
+  if (result) {
+    while (!local_result.empty()) {
+      result->push_back(local_result.top());
+      local_result.pop();
+    }
+  }
+  return ret;
+}
+
+bool Wand::FindPivotToken(
+    const PostingList &posting_list,
+    float threshold, size_t *pivot_index) {
+  float ub_sum = 0.0F;
+  for (size_t i = 0; i < posting_list.size(); ++i) {
+    ub_sum += posting_list[i]->UB();
+    if (ub_sum > threshold) {  // in paper, use >
+      *pivot_index = i;
+      return true;
+    }
+  }
+  return false;
+}
+
+size_t Wand::PickTokenForSkipping(
+    const PostingList &posting_list,
+    size_t pivot_index,
+    bool filter_pivot) {
+  CHECK_LE(pivot_index, posting_list.size());
+  size_t pick_index = 0;
+  const LocalIndex pivot = posting_list[pivot_index]->GetLocalIndex();
+  float max_value = -1.0F;
+  for (size_t i = 0; i <= pivot_index; ++i) {
+    const shared_ptr<PostingListIterator> &posting = posting_list[i];
+    float current_value = posting->IDF();  // picking UB is better?
+    if (current_value > max_value &&
+       (!filter_pivot || pivot != posting->GetLocalIndex())) {
+      max_value = current_value;
+      pick_index = i;
+    }
+  }
+  return pick_index;
+}
+
+class Wand_Iterator : public Wand::Iterator {
+ public:
+  Wand_Iterator(const PostingList &posting_list)
+      : posting_list_(posting_list),
+        valid_(true),
+        last_threshold_(-1.0F) {
+    for (size_t i = 0; i < posting_list_.size(); ++i) {
+      posting_list_[i]->Seek(0);
+    }
+    SortPostingList(&posting_list_);
+  }
+  virtual ~Wand_Iterator() {
+  }
+
+  virtual void Next(float threshold) {
+    // 确保threshold是不递减的
+    CHECK(last_threshold_ <= threshold && this->Valid())
+      << "last_threshold=[" << last_threshold_ << "], "
+      << "threshold=[" << threshold << "]";
+    last_threshold_ = threshold;
+
+    while (true) {
+      size_t pivot_index = 0;
+      if (!Wand::FindPivotToken(posting_list_, threshold, &pivot_index)) {
+        VLOG(2) << "no pivot found";
+        valid_ = false;
+        break;
+      }
+
+      shared_ptr<PostingListIterator> &pivot_posting = posting_list_[pivot_index];
+      const LocalIndex pivot = pivot_posting->GetLocalIndex();
+      VLOG(2) << "pivot_index=[" << pivot_index << "], "
+              << "pivot=[" << pivot << "]";
+
+      if (pivot <= current_local_index_) {
+        size_t pick_index = Wand::PickTokenForSkipping(posting_list_, pivot_index, false);
+        shared_ptr<PostingListIterator> &pick_posting = posting_list_[pick_index];
+        pick_posting->Seek(current_local_index_.local_index() + 1);
+        AdjustPostingList(pick_index, &posting_list_);
+        continue;
+      }
+      if (pivot != posting_list_[0]->GetLocalIndex()) {
+        size_t pick_index = Wand::PickTokenForSkipping(posting_list_, pivot_index, true);
+        shared_ptr<PostingListIterator> &pick_posting = posting_list_[pick_index];
+        pick_posting->Seek(pivot);
+        AdjustPostingList(pick_index, &posting_list_);
+        continue;
+      }
+      // make sure
+      CHECK(current_local_index_.LessThan(pivot) && pivot == posting_list_[0]->GetLocalIndex())
+        << "current_local_index=[" << current_local_index_.DebugString() << "], "
+        << "pivot=[" << pivot << "], "
+        << "first=[" << posting_list_[0]->GetLocalIndex() << "]";
+      current_local_index_.set_local_index(pivot);
+      VLOG(2) << "current_local_index=[" << current_local_index_.DebugString() << "]";
+      break;
+    }
+  }
+  virtual bool Valid() const {
+    return valid_;
+  }
+  virtual LocalIndex GetLocalIndex() const {
+    CHECK(this->Valid());
+    return current_local_index_.local_index();
+  }
+  virtual const PostingList& GetPostingList() const {
+    CHECK(this->Valid());
+    return posting_list_;
+  }
+
+ private:
+  PostingList posting_list_;
+  bool valid_;
+  LocalIndexWrapper current_local_index_;
+  float last_threshold_;
+};
+
+Wand::Iterator* Wand::NewIterator(const PostingList &posting_list) {
+  return new Wand_Iterator(posting_list);
+}
+
+}  // namespace RELEVANCE
+}  // namespace QZAP

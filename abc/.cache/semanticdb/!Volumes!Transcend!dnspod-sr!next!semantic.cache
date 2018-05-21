@@ -1,0 +1,821 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode makefile-bsdmake-mode
+      :tags 
+        '( ("storage" function (:arguments ("storage.c")) nil [1 48])
+            ("clean" function nil nil [48 80]))          
+      :file "Makefile"
+      :pointmax 80
+      :fsize 79
+      :lastmodtime '(23042 49142 0 0)
+      :unmatched-syntax '((shell-command 56 . 79) (bol 55 . 55)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("_STORAGE_H" variable (:constant-flag t) nil [108 118])
+            ("stdio.h" include (:system-flag t) nil [120 138])
+            ("stdlib.h" include (:system-flag t) nil [139 158])
+            ("ctype.h" include (:system-flag t) nil [159 177])
+            ("string.h" include (:system-flag t) nil [178 197])
+            ("stdint.h" include (:system-flag t) nil [198 217])
+            ("pthread.h" include (:system-flag t) nil [218 238])
+            ("sys/time.h" include (:system-flag t) nil [239 260])
+            ("DEBUG_TIMES" variable (:constant-flag t) nil [271 282])
+            ("HASH_TABLE_SIZE" variable (:constant-flag t) nil [297 312])
+            ("MULTI_HASH" variable (:constant-flag t) nil [330 340])
+            ("MAX_RECORD_SIZE" variable (:constant-flag t) nil [353 368])
+            ("RED" variable (:constant-flag t) nil [385 388])
+            ("BLACK" variable (:constant-flag t) nil [401 406])
+            ("uchar" type
+               (:typedef ("unsigned char")
+                :type "typedef")
+                nil [413 441])
+            ("uint" type
+               (:typedef ("unsigned int")
+                :type "typedef")
+                nil [442 468])
+            ("hashval_t" type
+               (:typedef ("uint64_t" type (:type "class") nil nil)
+                :type "typedef")
+                nil [469 496])
+            ("hashfunc" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("data" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [527 544])
+                    ("len" variable (:type "int") (reparse-symbol arg-sub-list) [545 553]))                  
+                :type ("hashval_t" type (:type "class") nil nil))
+                nil [506 554])
+            ("comparefunc" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [582 595])
+                    ("" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [596 609]))                  
+                :type "int")
+                nil [563 610])
+            ("comprbt" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [634 641])
+                    ("" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [642 649]))                  
+                :type "int")
+                nil [619 650])
+            ("rbnode" type
+               (:members 
+                  ( ("parent" variable
+                       (:pointer 1
+                        :type ("rbnode" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [673 695])
+                    ("left" variable
+                       (:pointer 1
+                        :type ("rbnode" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [700 720])
+                    ("right" variable
+                       (:pointer 1
+                        :type ("rbnode" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [725 746])
+                    ("color" variable (:type "int") (reparse-symbol classsubparts) [751 761])
+                    ("key" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol classsubparts) [766 776]))                  
+                :type "struct")
+                nil [653 779])
+            ("hlp" type
+               (:members 
+                  ( ("key" variable
+                       (:pointer 1
+                        :type ("uchar" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [799 810])
+                    ("len" variable (:type "int") (reparse-symbol classsubparts) [815 823])
+                    ("ttl" variable
+                       (:pointer 1
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [828 842])
+                    ("val" variable
+                       (:pointer 1
+                        :type ("uchar" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [847 858])
+                    ("vlen" variable (:type "int") (reparse-symbol classsubparts) [863 872]))                  
+                :type "struct")
+                nil [782 915])
+            ("hentry" type
+               (:members 
+                  ( ("ttl" variable (:type ("rbnode" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [938 956])
+                    ("val" variable
+                       (:pointer 1
+                        :type ("uchar" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [961 972])
+                    ("next" variable
+                       (:pointer 1
+                        :type ("hentry" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [1031 1051])
+                    ("key" variable
+                       (:dereference 1
+                        :type ("uchar" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1056 1069]))                  
+                :type "struct")
+                nil [918 1072])
+            ("hdata" type
+               (:members 
+                  ( ("list" variable
+                       (:pointer 1
+                        :type ("hentry" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [1094 1114])
+                    ("lock" variable (:type ("pthread_mutex_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1119 1140]))                  
+                :type "struct")
+                nil [1075 1143])
+            ("mvalue" type
+               (:members 
+                  ( ("len" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1192 1205])
+                    ("val" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1210 1223])
+                    ("data" variable
+                       (:dereference 1
+                        :type ("uchar" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1228 1242]))                  
+                :type "struct")
+                nil [1172 1245])
+            ("htable" type
+               (:members 
+                  ( ("lock" variable (:type ("pthread_mutex_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1268 1289])
+                    ("table" variable
+                       (:pointer 1
+                        :type ("hdata" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [1314 1334])
+                    ("size" variable (:type ("uint" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1339 1360])
+                    ("mask" variable (:type ("uint" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1339 1360])
+                    ("now" variable (:type ("uint" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1339 1360])
+                    ("h" variable
+                       (:pointer 1
+                        :type ("hashfunc" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1365 1377])
+                    ("c" variable
+                       (:pointer 1
+                        :type ("comparefunc" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1382 1397]))                  
+                :type "struct")
+                nil [1248 1400])
+            ("rbtree" type
+               (:members 
+                  ( ("root" variable
+                       (:pointer 1
+                        :type ("rbnode" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [1423 1448])
+                    ("nil" variable (:type ("rbnode" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [1423 1448])
+                    ("lock" variable (:type ("pthread_mutex_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1453 1474])
+                    ("size" variable (:type ("uint" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1479 1489])
+                    ("c" variable
+                       (:pointer 1
+                        :type ("comprbt" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1494 1505]))                  
+                :type "struct")
+                nil [1403 1508])
+            ("htable_create" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("h" variable
+                       (:pointer 1
+                        :type ("hashfunc" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1589 1602])
+                    ("c" variable
+                       (:pointer 1
+                        :type ("comparefunc" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1603 1619])
+                    ("" variable (:type "int") (reparse-symbol arg-sub-list) [1620 1624]))                  
+                :type ("htable" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [1560 1625])
+            ("htable_insert" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type ("htable" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1681 1697])
+                    ("" variable
+                       (:pointer 1
+                        :type ("hentry" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1698 1714])
+                    ("" variable (:type "int") (reparse-symbol arg-sub-list) [1715 1719])
+                    ("" variable (:type "int") (reparse-symbol arg-sub-list) [1720 1724]))                  
+                :type "int")
+                nil [1663 1725])
+            ("htable_delete" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("ht" variable
+                       (:pointer 1
+                        :type ("htable" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1775 1793])
+                    ("" variable
+                       (:pointer 1
+                        :type ("uchar" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1794 1802])
+                    ("" variable (:type "int") (reparse-symbol arg-sub-list) [1803 1807]))                  
+                :type ("hentry" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [1746 1808])
+            ("htable_find" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type ("htable" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1859 1875])
+                    ("" variable
+                       (:pointer 1
+                        :type ("uchar" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1876 1884])
+                    ("" variable (:type "int") (reparse-symbol arg-sub-list) [1885 1889])
+                    ("" variable
+                       (:pointer 1
+                        :type ("uchar" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1890 1898])
+                    ("" variable (:type "int") (reparse-symbol arg-sub-list) [1899 1903]))                  
+                :type "int")
+                nil [1843 1904])
+            ("create_rbtree" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("c" variable
+                       (:pointer 1
+                        :type ("comprbt" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1954 1966]))                  
+                :type ("rbtree" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [1925 1967])
+            ("delete_node" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("rbt" variable
+                       (:pointer 1
+                        :type ("rbtree" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2064 2083])
+                    ("" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2084 2091]))                  
+                :type "void")
+                nil [2046 2092])
+            ("insert_node" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("rbt" variable
+                       (:pointer 1
+                        :type ("rbtree" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2155 2174])
+                    ("nd" variable
+                       (:pointer 1
+                        :type ("rbnode" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2175 2193]))                  
+                :type "int")
+                nil [2139 2194])
+            ("find_node" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("rbt" variable
+                       (:pointer 1
+                        :type ("rbtree" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2262 2281])
+                    ("key" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2282 2292]))                  
+                :type ("rbnode" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [2237 2293])
+            ("min_node" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("rbt" variable
+                       (:pointer 1
+                        :type ("rbtree" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2347 2366]))                  
+                :type ("rbnode" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [2323 2367])
+            ("records" type
+               (:members 
+                  ( ("rbt" variable
+                       (:pointer 1
+                        :type ("rbtree" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [2391 2410])
+                    ("ht" variable
+                       (:pointer 1
+                        :type ("htable" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [2415 2433])
+                    ("lock" variable (:type ("pthread_mutex_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2438 2459]))                  
+                :type "struct")
+                nil [2370 2462]))          
+      :file "storage.h"
+      :pointmax 2472
+      :fsize 2471
+      :lastmodtime '(23042 49142 0 0)
+      :unmatched-syntax '((TYPEDEF 611 . 618) (TYPEDEF 555 . 562) (TYPEDEF 498 . 505))
+      :lexical-table 
+        '(("MAX_RECORD_SIZE" . ((semantic-list "(3000)" 369 . 375)))
+          ("DEBUG_TIMES" . ((semantic-list "(100)" 283 . 288)))
+          ("HASH_TABLE_SIZE" . ((semantic-list "(65536)" 314 . 321)))
+          ("BLACK" . ((semantic-list "(0)" 407 . 410)))
+          ("MULTI_HASH" . ((semantic-list "(8)" 341 . 344)))
+          ("_STORAGE_H")
+          ("RED" . ((semantic-list "(1)" 389 . 392)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("storage.h" include nil nil [32 52])
+            ("left_rotate" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("rbt" variable
+                       (:pointer 1
+                        :type ("rbtree" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [124 143])
+                    ("node" variable
+                       (:pointer 1
+                        :type ("rbnode" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [144 164]))                  
+                :type "void")
+                nil [100 558])
+            ("right_rotate" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("rbt" variable
+                       (:pointer 1
+                        :type ("rbtree" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [586 605])
+                    ("node" variable
+                       (:pointer 1
+                        :type ("rbnode" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [606 626]))                  
+                :type "void")
+                nil [561 1022])
+            ("insert_fixup" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("rbt" variable
+                       (:pointer 1
+                        :type ("rbtree" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1050 1069])
+                    ("nd" variable
+                       (:pointer 1
+                        :type ("rbnode" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1070 1088]))                  
+                :type "void")
+                nil [1025 2378])
+            ("find_node" function
+               (:pointer 1
+                :arguments 
+                  ( ("rbt" variable
+                       (:pointer 1
+                        :type ("rbtree" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2479 2498])
+                    ("key" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2499 2509]))                  
+                :type ("rbnode" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [2453 2880])
+            ("insert_node" function
+               (:arguments 
+                  ( ("rbt" variable
+                       (:pointer 1
+                        :type ("rbtree" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2899 2918])
+                    ("nd" variable
+                       (:pointer 1
+                        :type ("rbnode" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2919 2937]))                  
+                :type "int")
+                nil [2883 3623])
+            ("rbt_successor" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("rbt" variable
+                       (:pointer 1
+                        :type ("rbtree" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3663 3682])
+                    ("nd" variable
+                       (:pointer 1
+                        :type ("rbnode" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3683 3701]))                  
+                :type ("rbnode" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [3626 4038])
+            ("delete_fixup" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("rbt" variable
+                       (:pointer 1
+                        :type ("rbtree" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4066 4085])
+                    ("nd" variable
+                       (:pointer 1
+                        :type ("rbnode" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4086 4104]))                  
+                :type "void")
+                nil [4041 6067])
+            ("min_node" function
+               (:pointer 1
+                :arguments 
+                  ( ("rbt" variable
+                       (:pointer 1
+                        :type ("rbtree" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [6095 6114]))                  
+                :type ("rbnode" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [6070 6381])
+            ("delete_node" function
+               (:pointer 1
+                :arguments 
+                  ( ("rbt" variable
+                       (:pointer 1
+                        :type ("rbtree" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [6427 6446])
+                    ("key" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [6447 6457]))                  
+                :type "void")
+                nil [6408 7308])
+            ("create_rbtree" function
+               (:pointer 1
+                :arguments 
+                  ( ("c" variable
+                       (:pointer 1
+                        :type ("comprbt" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7341 7353]))                  
+                :type ("rbtree" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [7311 7688])
+            ("deep_copy" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("from" variable
+                       (:pointer 1
+                        :type ("uchar" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7712 7725])
+                    ("to" variable
+                       (:pointer 1
+                        :type ("uchar" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7726 7737])
+                    ("tlen" variable (:type "int") (reparse-symbol arg-sub-list) [7738 7747]))                  
+                :type "int")
+                nil [7691 7947])
+            ("murmur" function
+               (:arguments 
+                  ( ("key" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [7980 7996])
+                    ("len" variable (:type "int") (reparse-symbol arg-sub-list) [7997 8005]))                  
+                :type ("hashval_t" type (:type "class") nil nil))
+                nil [7963 9040])
+            ("htable_create" function
+               (:pointer 1
+                :arguments 
+                  ( ("h" variable
+                       (:pointer 1
+                        :type ("hashfunc" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9139 9152])
+                    ("c" variable
+                       (:pointer 1
+                        :type ("comparefunc" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9153 9169])
+                    ("size" variable (:type "int") (reparse-symbol arg-sub-list) [9170 9179]))                  
+                :type ("htable" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [9109 10035])
+            ("htable_find" function
+               (:arguments 
+                  ( ("ht" variable
+                       (:pointer 1
+                        :type ("htable" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [10054 10072])
+                    ("key" variable
+                       (:pointer 1
+                        :type ("uchar" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10073 10085])
+                    ("klen" variable (:type "int") (reparse-symbol arg-sub-list) [10086 10095])
+                    ("buffer" variable
+                       (:pointer 1
+                        :type ("uchar" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10096 10111])
+                    ("vlen" variable (:type "int") (reparse-symbol arg-sub-list) [10124 10133]))                  
+                :type "int")
+                nil [10038 11176])
+            ("htable_delete" function
+               (:pointer 1
+                :arguments 
+                  ( ("ht" variable
+                       (:pointer 1
+                        :type ("htable" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [11209 11227])
+                    ("key" variable
+                       (:pointer 1
+                        :type ("uchar" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11228 11240])
+                    ("klen" variable (:type "int") (reparse-symbol arg-sub-list) [11241 11250]))                  
+                :type ("hentry" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [11179 12450])
+            ("htable_insert" function
+               (:arguments 
+                  ( ("ht" variable
+                       (:pointer 1
+                        :type ("htable" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [12614 12632])
+                    ("he" variable
+                       (:pointer 1
+                        :type ("hentry" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [12633 12651])
+                    ("klen" variable (:type "int") (reparse-symbol arg-sub-list) [12652 12661])
+                    ("rpl" variable (:type "int") (reparse-symbol arg-sub-list) [12662 12670]))                  
+                :type "int")
+                nil [12596 14028])
+            ("domain_compare" function
+               (:arguments 
+                  ( ("k1" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [14050 14065])
+                    ("k2" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [14066 14081]))                  
+                :type "int")
+                nil [14031 14489])
+            ("compare_ttl" function
+               (:arguments 
+                  ( ("t1" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [14508 14517])
+                    ("t2" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [14518 14527]))                  
+                :type "int")
+                nil [14492 14839])
+            ("record_insert" function
+               (:arguments 
+                  ( ("r" variable
+                       (:pointer 1
+                        :type ("records" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [14860 14878])
+                    ("h" variable
+                       (:pointer 1
+                        :type ("hlp" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [14879 14893]))                  
+                :type "int")
+                nil [14842 15742])
+            ("record_find" function
+               (:arguments 
+                  ( ("r" variable
+                       (:pointer 1
+                        :type ("records" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [15761 15779])
+                    ("h" variable
+                       (:pointer 1
+                        :type ("hlp" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [15780 15794]))                  
+                :type "int")
+                nil [15745 15862])
+            ("record_delete" function
+               (:arguments 
+                  ( ("r" variable
+                       (:pointer 1
+                        :type ("records" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [15883 15901])
+                    ("h" variable
+                       (:pointer 1
+                        :type ("hlp" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [15902 15916]))                  
+                :type "int")
+                nil [15865 16478])
+            ("ttl_find_and_delete" function
+               (:arguments 
+                  ( ("r" variable
+                       (:pointer 1
+                        :type ("records" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [16505 16523])
+                    ("h" variable
+                       (:pointer 1
+                        :type ("hlp" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [16524 16538]))                  
+                :type "int")
+                nil [16481 16918])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [16930 16939])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [16940 16952]))                  
+                :type "int")
+                nil [16921 18709]))          
+      :file "storage.c"
+      :pointmax 18710
+      :fsize 18709
+      :lastmodtime '(23042 49142 0 0)
+      :unmatched-syntax nil))
+  :file "!Volumes!Transcend!dnspod-sr!next!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

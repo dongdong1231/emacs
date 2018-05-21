@@ -1,0 +1,140 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("boost/asio.hpp" include (:system-flag t) nil [296 321])
+            ("boost/bind.hpp" include (:system-flag t) nil [322 347])
+            ("boost/enable_shared_from_this.hpp" include (:system-flag t) nil [348 392])
+            ("boost/shared_ptr.hpp" include (:system-flag t) nil [393 424])
+            ("iostream" include (:system-flag t) nil [425 444])
+            ("vector" include (:system-flag t) nil [445 462])
+            ("boost::asio::ip::tcp" using (:type ("boost::asio::ip::tcp" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [464 491])
+            ("shared_const_buffer" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [573 580])
+                    ("shared_const_buffer" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("data" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [647 671]))                          
+                        :type ("shared_const_buffer" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [627 784])
+                    ("value_type" type
+                       (:typedef ("boost::asio::const_buffer" type (:type "class") nil nil)
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [841 886])
+                    ("const_iterator" type
+                       (:typedef ("boost::asio::const_buffer" type (:type "class") nil nil)
+                        :pointer 1
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [889 945])
+                    ("begin" function
+                       (:methodconst-flag t
+                        :pointer 1
+                        :constant-flag t
+                        :type ("boost::asio::const_buffer" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [948 1015])
+                    ("end" function
+                       (:methodconst-flag t
+                        :pointer 1
+                        :constant-flag t
+                        :type ("boost::asio::const_buffer" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1018 1087])
+                    ("private" label nil (reparse-symbol classsubparts) [1089 1097])
+                    ("data_" variable (:type ("boost::shared_ptr" type
+                         (:template-specifier 
+                            ( ("std::vector" type (:template-specifier 
+                                ( ("char" type nil nil nil))                                ) nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [1100 1144])
+                    ("buffer_" variable (:type ("boost::asio::const_buffer" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1147 1181]))                  
+                :type "class")
+                nil [545 1184])
+            ("session" type
+               (:superclasses 
+                  ( ("boost::enable_shared_from_this" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [1253 1260])
+                    ("session" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("io_context" variable
+                               (:reference 1
+                                :type ("boost::asio::io_context" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1271 1307]))                          
+                        :type ("session" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1263 1341])
+                    ("socket" function (:type ("tcp::socket" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1345 1394])
+                    ("start" function (:type "void") (reparse-symbol classsubparts) [1398 1657])
+                    ("handle_write" function (:type "void") (reparse-symbol classsubparts) [1661 1688])
+                    ("private" label nil (reparse-symbol classsubparts) [1690 1698])
+                    ("socket_" variable (:type ("tcp::socket" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1754 1774]))                  
+                :type "class")
+                nil [1186 1777])
+            ("session_ptr" type
+               (:typedef ("boost::shared_ptr" type
+                     (:template-specifier 
+                        ( ("session" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :type "typedef")
+                nil [1779 1826])
+            ("server" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [1843 1850])
+                    ("server" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("io_context" variable
+                               (:reference 1
+                                :type ("boost::asio::io_context" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1860 1896])
+                            ("port" variable (:type "short") (reparse-symbol arg-sub-list) [1897 1908]))                          
+                        :type ("server" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1853 2221])
+                    ("handle_accept" function
+                       (:arguments 
+                          ( ("new_session" variable (:type ("session_ptr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2244 2268])
+                            ("error" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("boost::system::error_code" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2275 2314]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2225 2587])
+                    ("private" label nil (reparse-symbol classsubparts) [2589 2597])
+                    ("io_context_" variable (:type ("boost::asio::io_context" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2600 2637])
+                    ("acceptor_" variable (:type ("tcp::acceptor" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2640 2664]))                  
+                :type "class")
+                nil [1828 2667])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [2678 2687])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2688 2701]))                  
+                :type "int")
+                nil [2669 3067]))          
+      :file "reference_counted.cpp"
+      :pointmax 3068
+      :fsize 3067
+      :lastmodtime '(23202 13741 0 0)
+      :unmatched-syntax '((EXPLICIT 618 . 626) (EXPLICIT 618 . 626))))
+  :file "!Volumes!Transcend!asio!example!cpp03!buffers!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

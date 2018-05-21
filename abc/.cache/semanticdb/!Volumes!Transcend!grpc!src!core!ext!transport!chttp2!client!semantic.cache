@@ -1,0 +1,180 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("GRPC_CORE_EXT_TRANSPORT_CHTTP2_CLIENT_CHTTP2_CONNECTOR_H" variable (:constant-flag t) nil [678 734])
+            ("src/core/ext/filters/client_channel/connector.h" include nil nil [736 794])
+            ("grpc_chttp2_connector_create" function
+               (:prototype-flag t
+                :pointer 1
+                :type ("grpc_connector" type (:type "class") nil nil))
+                nil [796 843]))          
+      :file "chttp2_connector.h"
+      :pointmax 915
+      :fsize 914
+      :lastmodtime '(23079 46125 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("GRPC_CORE_EXT_TRANSPORT_CHTTP2_CLIENT_CHTTP2_CONNECTOR_H")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("src/core/ext/transport/chttp2/client/chttp2_connector.h" include nil nil [605 671])
+            ("grpc/grpc.h" include (:system-flag t) nil [673 695])
+            ("string.h" include (:system-flag t) nil [697 716])
+            ("grpc/slice_buffer.h" include (:system-flag t) nil [718 748])
+            ("grpc/support/alloc.h" include (:system-flag t) nil [749 780])
+            ("grpc/support/string_util.h" include (:system-flag t) nil [781 818])
+            ("src/core/ext/filters/client_channel/connector.h" include nil nil [820 878])
+            ("src/core/ext/filters/client_channel/http_connect_handshaker.h" include nil nil [879 951])
+            ("src/core/ext/filters/client_channel/subchannel.h" include nil nil [952 1011])
+            ("src/core/ext/transport/chttp2/transport/chttp2_transport.h" include nil nil [1012 1081])
+            ("src/core/lib/channel/channel_args.h" include nil nil [1082 1128])
+            ("src/core/lib/channel/handshaker.h" include nil nil [1129 1173])
+            ("src/core/lib/channel/handshaker_registry.h" include nil nil [1174 1227])
+            ("src/core/lib/iomgr/tcp_client.h" include nil nil [1228 1270])
+            ("src/core/lib/slice/slice_internal.h" include nil nil [1271 1317])
+            ("chttp2_connector" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("base" variable (:type ("grpc_connector" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1338 1358])
+                          ("mu" variable (:type ("gpr_mu" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1362 1372])
+                          ("refs" variable (:type ("gpr_refcount" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1375 1393])
+                          ("shutdown" variable (:type "bool") (reparse-symbol classsubparts) [1397 1411])
+                          ("connecting" variable (:type "bool") (reparse-symbol classsubparts) [1414 1430])
+                          ("notify" variable
+                             (:pointer 1
+                              :type ("grpc_closure" type (:type "class") nil nil))
+                              (reparse-symbol classsubparts) [1434 1455])
+                          ("args" variable (:type ("grpc_connect_in_args" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1458 1484])
+                          ("result" variable
+                             (:pointer 1
+                              :type ("grpc_connect_out_args" type (:type "class") nil nil))
+                              (reparse-symbol classsubparts) [1487 1517])
+                          ("endpoint" variable
+                             (:pointer 1
+                              :type ("grpc_endpoint" type (:type "class") nil nil))
+                              (reparse-symbol classsubparts) [1521 1545])
+                          ("connected" variable (:type ("grpc_closure" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1588 1611])
+                          ("handshake_mgr" variable
+                             (:pointer 1
+                              :type ("grpc_handshake_manager" type (:type "class") nil nil))
+                              (reparse-symbol classsubparts) [1615 1653]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [1319 1673])
+            ("chttp2_connector_ref" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("con" variable
+                       (:pointer 1
+                        :type ("grpc_connector" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1708 1728]))                  
+                :type "void")
+                nil [1675 1801])
+            ("chttp2_connector_unref" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("con" variable
+                       (:pointer 1
+                        :type ("grpc_connector" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1838 1858]))                  
+                :type "void")
+                nil [1803 2178])
+            ("chttp2_connector_shutdown" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("con" variable
+                       (:pointer 1
+                        :type ("grpc_connector" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2218 2238])
+                    ("why" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2239 2255]))                  
+                :type "void")
+                nil [2180 2754])
+            ("on_handshake_done" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2786 2796])
+                    ("error" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2797 2815]))                  
+                :type "void")
+                nil [2756 6058])
+            ("start_handshake_locked" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("c" variable
+                       (:pointer 1
+                        :type ("chttp2_connector" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6095 6115]))                  
+                :type "void")
+                nil [6060 6630])
+            ("connected" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [6654 6664])
+                    ("error" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6665 6683]))                  
+                :type "void")
+                nil [6632 7471])
+            ("chttp2_connector_connect" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("con" variable
+                       (:pointer 1
+                        :type ("grpc_connector" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7510 7530])
+                    ("args" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grpc_connect_in_args" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7568 7601])
+                    ("result" variable
+                       (:pointer 1
+                        :type ("grpc_connect_out_args" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7639 7669])
+                    ("notify" variable
+                       (:pointer 1
+                        :type ("grpc_closure" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7707 7728]))                  
+                :type "void")
+                nil [7473 8396])
+            ("chttp2_connector_vtable" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :default-value "{
+    chttp2_connector_ref, chttp2_connector_unref, chttp2_connector_shutdown,
+    chttp2_connector_connect}"
+                :type ("grpc_connector_vtable" type (:type "class") nil nil))
+                nil [8398 8568])
+            ("grpc_chttp2_connector_create" function
+               (:pointer 1
+                :type ("grpc_connector" type (:type "class") nil nil))
+                nil [8570 8803]))          
+      :file "chttp2_connector.cc"
+      :pointmax 8804
+      :fsize 8803
+      :lastmodtime '(23085 58367 0 0)
+      :unmatched-syntax nil))
+  :file "!Volumes!Transcend!grpc!src!core!ext!transport!chttp2!client!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

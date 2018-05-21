@@ -1,0 +1,210 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("phxpaxos/node.h" include nil nil [758 784])
+            ("string" include (:system-flag t) nil [785 802])
+            ("vector" include (:system-flag t) nil [803 820])
+            ("phxpaxos_plugin/logger_google.h" include nil nil [821 863])
+            ("phxpaxos/options.h" include nil nil [864 893])
+            ("phxelection" type
+               (:members 
+                  ( ("PhxElection" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [940 947])
+                            ("PhxElection" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("oMyNode" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("phxpaxos::NodeInfo" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [964 999])
+                                    ("vecNodeList" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("phxpaxos::NodeInfoList" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1000 1043]))                                  
+                                :type ("PhxElection" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [952 1044])
+                            ("PhxElection" function
+                               (:prototype-flag t
+                                :destructor-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [1049 1064])
+                            ("RunPaxos" function
+                               (:prototype-flag t
+                                :type "int")
+                                (reparse-symbol classsubparts) [1070 1085])
+                            ("GetMaster" function
+                               (:prototype-flag t
+                                :constant-flag t
+                                :type ("phxpaxos::NodeInfo" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1091 1128])
+                            ("GetMasterWithVersion" function
+                               (:prototype-flag t
+                                :constant-flag t
+                                :arguments 
+                                  ( ("llVersion" variable
+                                       (:reference 1
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1180 1201]))                                  
+                                :type ("phxpaxos::NodeInfo" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1134 1202])
+                            ("IsIMMaster" function
+                               (:prototype-flag t
+                                :constant-flag t
+                                :type "bool")
+                                (reparse-symbol classsubparts) [1212 1236])
+                            ("OnMasterChange" function
+                               (:prototype-flag t
+                                :typemodifiers ("static")
+                                :arguments 
+                                  ( ("iGroupIdx" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1269 1289])
+                                    ("oNewMaster" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("phxpaxos::NodeInfo" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1290 1328])
+                                    ("llVersion" variable
+                                       (:constant-flag t
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1329 1354]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1242 1355])
+                            ("private" label nil (reparse-symbol classsubparts) [1357 1365])
+                            ("MakeLogStoragePath" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("sLogStoragePath" variable
+                                       (:reference 1
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1393 1423]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [1370 1424])
+                            ("private" label nil (reparse-symbol classsubparts) [1426 1434])
+                            ("m_oMyNode" variable (:type ("phxpaxos::NodeInfo" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1439 1468])
+                            ("m_vecNodeList" variable (:type ("phxpaxos::NodeInfoList" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1473 1510])
+                            ("m_poPaxosNode" variable
+                               (:pointer 1
+                                :type ("phxpaxos::Node" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1516 1547]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [920 1550]))                  
+                :type "namespace")
+                nil [895 1557]))          
+      :file "election.h"
+      :pointmax 1560
+      :fsize 1559
+      :lastmodtime '(23072 47985 0 0)
+      :unmatched-syntax '((symbol 752 . 756) (symbol 745 . 751) (punctuation 744 . 745)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("election.h" include nil nil [744 765])
+            ("assert.h" include (:system-flag t) nil [766 785])
+            ("string" include (:system-flag t) nil [786 803])
+            ("unistd.h" include (:system-flag t) nil [804 823])
+            ("sys/types.h" include (:system-flag t) nil [824 846])
+            ("sys/stat.h" include (:system-flag t) nil [847 868])
+            ("fcntl.h" include (:system-flag t) nil [869 887])
+            ("phxpaxos" using (:type ("phxpaxos" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [889 914])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [915 935])
+            ("phxelection" type
+               (:members 
+                  ( ("PhxElection" function
+                       (:constructor-flag t
+                        :parent "PhxElection"
+                        :arguments 
+                          ( ("oMyNode" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("phxpaxos::NodeInfo" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [989 1024])
+                            ("vecNodeList" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("phxpaxos::NodeInfoList" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1025 1068]))                          
+                        :type ("PhxElection" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [962 1149])
+                    ("PhxElection" function
+                       (:destructor-flag t
+                        :parent "PhxElection"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1151 1210])
+                    ("MakeLogStoragePath" function
+                       (:parent "PhxElection"
+                        :arguments 
+                          ( ("sLogStoragePath" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1250 1280]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [1212 1750])
+                    ("OnMasterChange" function
+                       (:parent "PhxElection"
+                        :arguments 
+                          ( ("iGroupIdx" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [1787 1807])
+                            ("oNewMaster" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("NodeInfo" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1808 1836])
+                            ("llVersion" variable
+                               (:constant-flag t
+                                :type ("uint64_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1837 1862]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1752 2028])
+                    ("RunPaxos" function
+                       (:parent "PhxElection"
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [2030 2891])
+                    ("GetMaster" function
+                       (:parent "PhxElection"
+                        :constant-flag t
+                        :type ("phxpaxos::NodeInfo" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [2893 3028])
+                    ("GetMasterWithVersion" function
+                       (:parent "PhxElection"
+                        :constant-flag t
+                        :arguments 
+                          ( ("llVersion" variable
+                               (:reference 1
+                                :type ("uint64_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3091 3112]))                          
+                        :type ("phxpaxos::NodeInfo" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [3030 3178])
+                    ("IsIMMaster" function
+                       (:parent "PhxElection"
+                        :constant-flag t
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [3180 3263]))                  
+                :type "namespace")
+                nil [937 3266]))          
+      :file "election.cpp"
+      :pointmax 3269
+      :fsize 3268
+      :lastmodtime '(23072 47985 0 0)
+      :unmatched-syntax nil))
+  :file "!Volumes!Transcend!phxpaxos!sample!phxelection!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,632 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode java-mode
+      :tags 
+        '( ("org.apache.parquet.column.values.dictionary" package nil nil [812 864])
+            ("java.io.IOException" include nil nil [1061 1088])
+            ("java.nio.ByteBuffer" include nil nil [1089 1116])
+            ("org.apache.parquet.Preconditions" include nil nil [1118 1158])
+            ("org.apache.parquet.column.Dictionary" include nil nil [1159 1203])
+            ("org.apache.parquet.column.page.DictionaryPage" include nil nil [1204 1257])
+            ("org.apache.parquet.column.values.plain.PlainValuesReader.DoublePlainValuesReader" include nil nil [1258 1346])
+            ("org.apache.parquet.column.values.plain.PlainValuesReader.FloatPlainValuesReader" include nil nil [1347 1434])
+            ("org.apache.parquet.column.values.plain.PlainValuesReader.IntegerPlainValuesReader" include nil nil [1435 1524])
+            ("org.apache.parquet.column.values.plain.PlainValuesReader.LongPlainValuesReader" include nil nil [1525 1611])
+            ("org.apache.parquet.io.ParquetDecodingException" include nil nil [1612 1666])
+            ("org.apache.parquet.io.api.Binary" include nil nil [1667 1707])
+            ("PlainValuesDictionary" type
+               (:typemodifiers ("public" "abstract")
+                :superclasses "Dictionary"
+                :members 
+                  ( ("PlainValuesDictionary" function
+                       (:constructor-flag t
+                        :throws ("IOException")
+                        :typemodifiers ("protected")
+                        :arguments 
+                          ( ("dictionaryPage" variable (:type "DictionaryPage") (reparse-symbol formal_parameters) [1994 2023]))                          )
+                        (reparse-symbol class_member_declaration) [1962 2327])
+                    ("PlainBinaryDictionary" type
+                       (:typemodifiers ("public" "static")
+                        :superclasses "PlainValuesDictionary"
+                        :members 
+                          ( ("binaryDictionaryContent" variable
+                               (:dereference 1
+                                :typemodifiers ("private")
+                                :type "Binary")
+                                (reparse-symbol class_member_declaration) [2490 2538])
+                            ("PlainBinaryDictionary" function
+                               (:constructor-flag t
+                                :throws ("IOException")
+                                :typemodifiers ("public")
+                                :arguments 
+                                  ( ("dictionaryPage" variable (:type "DictionaryPage") (reparse-symbol formal_parameters) [2869 2898]))                                  )
+                                (reparse-symbol class_member_declaration) [2840 2960])
+                            ("PlainBinaryDictionary" function
+                               (:constructor-flag t
+                                :throws ("IOException")
+                                :typemodifiers ("public")
+                                :arguments 
+                                  ( ("dictionaryPage" variable (:type "DictionaryPage") (reparse-symbol formal_parameters) [3542 3571])
+                                    ("length" variable (:type "Integer") (reparse-symbol formal_parameters) [3573 3587]))                                  )
+                                (reparse-symbol class_member_declaration) [3513 4962])
+                            ("decodeToBinary" function
+                               (:typemodifiers ("public")
+                                :arguments 
+                                  ( ("id" variable (:type "int") (reparse-symbol formal_parameters) [5011 5017]))                                  
+                                :type "Binary")
+                                (reparse-symbol class_member_declaration) [4982 5068])
+                            ("toString" function
+                               (:typemodifiers ("public")
+                                :type "String")
+                                (reparse-symbol class_member_declaration) [5088 5391])
+                            ("getMaxId" function
+                               (:typemodifiers ("public")
+                                :type "int")
+                                (reparse-symbol class_member_declaration) [5411 5489]))                          
+                        :type "class")
+                        (reparse-symbol class_member_declaration) [2411 5494])
+                    ("PlainLongDictionary" type
+                       (:typemodifiers ("public" "static")
+                        :superclasses "PlainValuesDictionary"
+                        :members 
+                          ( ("longDictionaryContent" variable
+                               (:dereference 1
+                                :typemodifiers ("private")
+                                :type "long")
+                                (reparse-symbol class_member_declaration) [5660 5704])
+                            ("PlainLongDictionary" function
+                               (:constructor-flag t
+                                :throws ("IOException")
+                                :typemodifiers ("public")
+                                :arguments 
+                                  ( ("dictionaryPage" variable (:type "DictionaryPage") (reparse-symbol formal_parameters) [5809 5838]))                                  )
+                                (reparse-symbol class_member_declaration) [5782 6371])
+                            ("decodeToLong" function
+                               (:typemodifiers ("public")
+                                :arguments 
+                                  ( ("id" variable (:type "int") (reparse-symbol formal_parameters) [6416 6422]))                                  
+                                :type "long")
+                                (reparse-symbol class_member_declaration) [6391 6471])
+                            ("toString" function
+                               (:typemodifiers ("public")
+                                :type "String")
+                                (reparse-symbol class_member_declaration) [6491 6788])
+                            ("getMaxId" function
+                               (:typemodifiers ("public")
+                                :type "int")
+                                (reparse-symbol class_member_declaration) [6808 6884]))                          
+                        :type "class")
+                        (reparse-symbol class_member_declaration) [5583 6889])
+                    ("PlainDoubleDictionary" type
+                       (:typemodifiers ("public" "static")
+                        :superclasses "PlainValuesDictionary"
+                        :members 
+                          ( ("doubleDictionaryContent" variable
+                               (:dereference 1
+                                :typemodifiers ("private")
+                                :type "double")
+                                (reparse-symbol class_member_declaration) [7059 7107])
+                            ("PlainDoubleDictionary" function
+                               (:constructor-flag t
+                                :throws ("IOException")
+                                :typemodifiers ("public")
+                                :arguments 
+                                  ( ("dictionaryPage" variable (:type "DictionaryPage") (reparse-symbol formal_parameters) [7214 7243]))                                  )
+                                (reparse-symbol class_member_declaration) [7185 7769])
+                            ("decodeToDouble" function
+                               (:typemodifiers ("public")
+                                :arguments 
+                                  ( ("id" variable (:type "int") (reparse-symbol formal_parameters) [7818 7824]))                                  
+                                :type "double")
+                                (reparse-symbol class_member_declaration) [7789 7875])
+                            ("toString" function
+                               (:typemodifiers ("public")
+                                :type "String")
+                                (reparse-symbol class_member_declaration) [7895 8198])
+                            ("getMaxId" function
+                               (:typemodifiers ("public")
+                                :type "int")
+                                (reparse-symbol class_member_declaration) [8218 8296]))                          
+                        :type "class")
+                        (reparse-symbol class_member_declaration) [6980 8301])
+                    ("PlainIntegerDictionary" type
+                       (:typemodifiers ("public" "static")
+                        :superclasses "PlainValuesDictionary"
+                        :members 
+                          ( ("intDictionaryContent" variable
+                               (:dereference 1
+                                :typemodifiers ("private")
+                                :type "int")
+                                (reparse-symbol class_member_declaration) [8473 8515])
+                            ("PlainIntegerDictionary" function
+                               (:constructor-flag t
+                                :throws ("IOException")
+                                :typemodifiers ("public")
+                                :arguments 
+                                  ( ("dictionaryPage" variable (:type "DictionaryPage") (reparse-symbol formal_parameters) [8623 8652]))                                  )
+                                (reparse-symbol class_member_declaration) [8593 9160])
+                            ("decodeToInt" function
+                               (:typemodifiers ("public")
+                                :arguments 
+                                  ( ("id" variable (:type "int") (reparse-symbol formal_parameters) [9203 9209]))                                  
+                                :type "int")
+                                (reparse-symbol class_member_declaration) [9180 9257])
+                            ("toString" function
+                               (:typemodifiers ("public")
+                                :type "String")
+                                (reparse-symbol class_member_declaration) [9277 9575])
+                            ("getMaxId" function
+                               (:typemodifiers ("public")
+                                :type "int")
+                                (reparse-symbol class_member_declaration) [9595 9670]))                          
+                        :type "class")
+                        (reparse-symbol class_member_declaration) [8393 9675])
+                    ("PlainFloatDictionary" type
+                       (:typemodifiers ("public" "static")
+                        :superclasses "PlainValuesDictionary"
+                        :members 
+                          ( ("floatDictionaryContent" variable
+                               (:dereference 1
+                                :typemodifiers ("private")
+                                :type "float")
+                                (reparse-symbol class_member_declaration) [9843 9889])
+                            ("PlainFloatDictionary" function
+                               (:constructor-flag t
+                                :throws ("IOException")
+                                :typemodifiers ("public")
+                                :arguments 
+                                  ( ("dictionaryPage" variable (:type "DictionaryPage") (reparse-symbol formal_parameters) [9995 10024]))                                  )
+                                (reparse-symbol class_member_declaration) [9967 10567])
+                            ("decodeToFloat" function
+                               (:typemodifiers ("public")
+                                :arguments 
+                                  ( ("id" variable (:type "int") (reparse-symbol formal_parameters) [10614 10620]))                                  
+                                :type "float")
+                                (reparse-symbol class_member_declaration) [10587 10670])
+                            ("toString" function
+                               (:typemodifiers ("public")
+                                :type "String")
+                                (reparse-symbol class_member_declaration) [10690 10990])
+                            ("getMaxId" function
+                               (:typemodifiers ("public")
+                                :type "int")
+                                (reparse-symbol class_member_declaration) [11010 11087]))                          
+                        :type "class")
+                        (reparse-symbol class_member_declaration) [9765 11092]))                  
+                :type "class")
+                nil [1786 11095]))          
+      :file "PlainValuesDictionary.java"
+      :pointmax 11096
+      :fsize 11095
+      :lastmodtime '(23115 11492 0 0)
+      :unmatched-syntax '((IDENTIFIER 1053 . 1058) (DOT 1052 . 1053) (IDENTIFIER 1044 . 1052) (DOT 1043 . 1044) (IDENTIFIER 1037 . 1043) (DOT 1036 . 1037) (IDENTIFIER 1029 . 1036) (DOT 1028 . 1029) (IDENTIFIER 1022 . 1028) (DOT 1021 . 1022) (IMPORT 1004 . 1010) (STATIC 1011 . 1017) (IDENTIFIER 1018 . 1021) (IDENTIFIER 986 . 1002) (DOT 985 . 986) (IDENTIFIER 977 . 985) (DOT 976 . 977) (IDENTIFIER 970 . 976) (DOT 969 . 970) (IDENTIFIER 962 . 969) (DOT 961 . 962) (IDENTIFIER 955 . 961) (DOT 954 . 955) (IMPORT 937 . 943) (STATIC 944 . 950) (IDENTIFIER 951 . 954) (IDENTIFIER 916 . 935) (DOT 915 . 916) (IDENTIFIER 905 . 915) (DOT 904 . 905) (IDENTIFIER 899 . 904) (DOT 898 . 899) (IDENTIFIER 891 . 898) (DOT 890 . 891) (IDENTIFIER 884 . 890) (DOT 883 . 884) (IMPORT 866 . 872) (STATIC 873 . 879) (IDENTIFIER 880 . 883)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode java-mode
+      :tags 
+        '( ("org.apache.parquet.column.values.dictionary" package nil nil [812 864])
+            ("it.unimi.dsi.fastutil.doubles.Double2IntLinkedOpenHashMap" include nil nil [924 989])
+            ("it.unimi.dsi.fastutil.doubles.Double2IntMap" include nil nil [990 1041])
+            ("it.unimi.dsi.fastutil.doubles.DoubleIterator" include nil nil [1042 1094])
+            ("it.unimi.dsi.fastutil.floats.Float2IntLinkedOpenHashMap" include nil nil [1095 1158])
+            ("it.unimi.dsi.fastutil.floats.Float2IntMap" include nil nil [1159 1208])
+            ("it.unimi.dsi.fastutil.floats.FloatIterator" include nil nil [1209 1259])
+            ("it.unimi.dsi.fastutil.ints.Int2IntLinkedOpenHashMap" include nil nil [1260 1319])
+            ("it.unimi.dsi.fastutil.ints.Int2IntMap" include nil nil [1320 1365])
+            ("it.unimi.dsi.fastutil.longs.Long2IntLinkedOpenHashMap" include nil nil [1366 1427])
+            ("it.unimi.dsi.fastutil.longs.Long2IntMap" include nil nil [1428 1475])
+            ("it.unimi.dsi.fastutil.longs.LongIterator" include nil nil [1476 1524])
+            ("it.unimi.dsi.fastutil.objects.Object2IntLinkedOpenHashMap" include nil nil [1525 1590])
+            ("it.unimi.dsi.fastutil.objects.Object2IntMap" include nil nil [1591 1642])
+            ("it.unimi.dsi.fastutil.objects.ObjectIterator" include nil nil [1643 1695])
+            ("java.io.IOException" include nil nil [1697 1724])
+            ("java.util.ArrayList" include nil nil [1725 1752])
+            ("java.util.Iterator" include nil nil [1753 1779])
+            ("java.util.List" include nil nil [1780 1802])
+            ("org.apache.parquet.bytes.ByteBufferAllocator" include nil nil [1804 1856])
+            ("org.apache.parquet.bytes.BytesInput" include nil nil [1857 1900])
+            ("org.apache.parquet.bytes.BytesUtils" include nil nil [1901 1944])
+            ("org.apache.parquet.bytes.CapacityByteArrayOutputStream" include nil nil [1945 2007])
+            ("org.apache.parquet.column.Encoding" include nil nil [2008 2050])
+            ("org.apache.parquet.column.page.DictionaryPage" include nil nil [2051 2104])
+            ("org.apache.parquet.column.values.RequiresFallback" include nil nil [2105 2162])
+            ("org.apache.parquet.column.values.ValuesWriter" include nil nil [2163 2216])
+            ("org.apache.parquet.column.values.dictionary.IntList.IntIterator" include nil nil [2217 2288])
+            ("org.apache.parquet.column.values.plain.FixedLenByteArrayPlainValuesWriter" include nil nil [2289 2370])
+            ("org.apache.parquet.column.values.plain.PlainValuesWriter" include nil nil [2371 2435])
+            ("org.apache.parquet.column.values.rle.RunLengthBitPackingHybridEncoder" include nil nil [2436 2513])
+            ("org.apache.parquet.io.ParquetEncodingException" include nil nil [2514 2568])
+            ("org.apache.parquet.io.api.Binary" include nil nil [2569 2609])
+            ("org.slf4j.Logger" include nil nil [2611 2635])
+            ("org.slf4j.LoggerFactory" include nil nil [2636 2667])
+            ("DictionaryValuesWriter" type
+               (:typemodifiers ("public" "abstract")
+                :interfaces ("RequiresFallback")
+                :superclasses "ValuesWriter"
+                :members 
+                  ( ("LOG" variable
+                       (:typemodifiers ("private" "static" "final")
+                        :type "Logger")
+                        (reparse-symbol class_member_declaration) [2925 3013])
+                    ("MAX_DICTIONARY_ENTRIES" variable
+                       (:typemodifiers ("private" "static" "final")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [3108 3180])
+                    ("MIN_INITIAL_SLAB_SIZE" variable
+                       (:typemodifiers ("private" "static" "final")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [3183 3235])
+                    ("encodingForDataPage" variable
+                       (:typemodifiers ("private" "final")
+                        :type "Encoding")
+                        (reparse-symbol class_member_declaration) [3279 3322])
+                    ("encodingForDictionaryPage" variable
+                       (:typemodifiers ("protected" "final")
+                        :type "Encoding")
+                        (reparse-symbol class_member_declaration) [3372 3423])
+                    ("maxDictionaryByteSize" variable
+                       (:typemodifiers ("protected" "final")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [3528 3570])
+                    ("dictionaryTooBig" variable
+                       (:typemodifiers ("protected")
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [3633 3668])
+                    ("dictionaryByteSize" variable
+                       (:typemodifiers ("protected")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [3743 3776])
+                    ("lastUsedDictionaryByteSize" variable
+                       (:typemodifiers ("protected")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [3910 3951])
+                    ("lastUsedDictionarySize" variable
+                       (:typemodifiers ("protected")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [4085 4122])
+                    ("encodedValues" variable
+                       (:typemodifiers ("protected")
+                        :type "IntList")
+                        (reparse-symbol class_member_declaration) [4160 4208])
+                    ("firstPage" variable
+                       (:typemodifiers ("protected")
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [4273 4308])
+                    ("allocator" variable
+                       (:typemodifiers ("protected")
+                        :type "ByteBufferAllocator")
+                        (reparse-symbol class_member_declaration) [4312 4352])
+                    ("DictionaryValuesWriter" function
+                       (:constructor-flag t
+                        :typemodifiers ("protected")
+                        :arguments 
+                          ( ("maxDictionaryByteSize" variable (:type "int") (reparse-symbol formal_parameters) [4709 4734])
+                            ("encodingForDataPage" variable (:type "Encoding") (reparse-symbol formal_parameters) [4736 4764])
+                            ("encodingForDictionaryPage" variable (:type "Encoding") (reparse-symbol formal_parameters) [4766 4800])
+                            ("allocator" variable (:type "ByteBufferAllocator") (reparse-symbol formal_parameters) [4802 4831]))                          )
+                        (reparse-symbol class_member_declaration) [4676 5042])
+                    ("dictPage" function
+                       (:typemodifiers ("protected")
+                        :arguments 
+                          ( ("dictPageWriter" variable (:type "ValuesWriter") (reparse-symbol formal_parameters) [5080 5107]))                          
+                        :type "DictionaryPage")
+                        (reparse-symbol class_member_declaration) [5046 5281])
+                    ("shouldFallBack" function
+                       (:typemodifiers ("public")
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [5297 5549])
+                    ("isCompressionSatisfying" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("rawSize" variable (:type "long") (reparse-symbol formal_parameters) [5604 5616])
+                            ("encodedSize" variable (:type "long") (reparse-symbol formal_parameters) [5618 5634]))                          
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [5565 5698])
+                    ("fallBackAllValuesTo" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("writer" variable (:type "ValuesWriter") (reparse-symbol formal_parameters) [5746 5765]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [5714 6041])
+                    ("fallBackDictionaryEncodedData" function
+                       (:typemodifiers ("abstract" "protected")
+                        :arguments 
+                          ( ("writer" variable (:type "ValuesWriter") (reparse-symbol formal_parameters) [6099 6118]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [6045 6120])
+                    ("getBufferedSize" function
+                       (:typemodifiers ("public")
+                        :type "long")
+                        (reparse-symbol class_member_declaration) [6136 6208])
+                    ("getAllocatedSize" function
+                       (:typemodifiers ("public")
+                        :type "long")
+                        (reparse-symbol class_member_declaration) [6224 6345])
+                    ("getBytes" function
+                       (:typemodifiers ("public")
+                        :type "BytesInput")
+                        (reparse-symbol class_member_declaration) [6361 7608])
+                    ("getEncoding" function
+                       (:typemodifiers ("public")
+                        :type "Encoding")
+                        (reparse-symbol class_member_declaration) [7624 7691])
+                    ("reset" function
+                       (:typemodifiers ("public")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [7707 7780])
+                    ("close" function
+                       (:typemodifiers ("public")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [7796 7962])
+                    ("resetDictionary" function
+                       (:typemodifiers ("public")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [7978 8141])
+                    ("clearDictionaryContent" function
+                       (:typemodifiers ("protected" "abstract")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [8207 8256])
+                    ("getDictionarySize" function
+                       (:typemodifiers ("protected" "abstract")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [8299 8342])
+                    ("memUsageString" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("prefix" variable (:type "String") (reparse-symbol formal_parameters) [8387 8400]))                          
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [8358 8691])
+                    ("PlainBinaryDictionaryValuesWriter" type
+                       (:typemodifiers ("public" "static")
+                        :superclasses "DictionaryValuesWriter"
+                        :members 
+                          ( ("PlainBinaryDictionaryValuesWriter" function
+                               (:constructor-flag t
+                                :typemodifiers ("public")
+                                :arguments 
+                                  ( ("maxDictionaryByteSize" variable (:type "int") (reparse-symbol formal_parameters) [9046 9071])
+                                    ("encodingForDataPage" variable (:type "Encoding") (reparse-symbol formal_parameters) [9073 9101])
+                                    ("encodingForDictionaryPage" variable (:type "Encoding") (reparse-symbol formal_parameters) [9103 9137])
+                                    ("allocator" variable (:type "ByteBufferAllocator") (reparse-symbol formal_parameters) [9139 9168]))                                  )
+                                (reparse-symbol class_member_declaration) [9005 9326])
+                            ("writeBytes" function
+                               (:typemodifiers ("public")
+                                :arguments 
+                                  ( ("v" variable (:type "Binary") (reparse-symbol formal_parameters) [9369 9377]))                                  
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [9346 9687])
+                            ("toDictPageAndClose" function
+                               (:typemodifiers ("public")
+                                :type "DictionaryPage")
+                                (reparse-symbol class_member_declaration) [9707 10365])
+                            ("getDictionarySize" function
+                               (:typemodifiers ("public")
+                                :type "int")
+                                (reparse-symbol class_member_declaration) [10385 10468])
+                            ("clearDictionaryContent" function
+                               (:typemodifiers ("protected")
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [10488 10574])
+                            ("fallBackDictionaryEncodedData" function
+                               (:typemodifiers ("public")
+                                :arguments 
+                                  ( ("writer" variable (:type "ValuesWriter") (reparse-symbol formal_parameters) [10636 10655]))                                  
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [10594 11152]))                          
+                        :type "class")
+                        (reparse-symbol class_member_declaration) [8712 11156])
+                    ("PlainFixedLenArrayDictionaryValuesWriter" type
+                       (:typemodifiers ("public" "static")
+                        :superclasses "PlainBinaryDictionaryValuesWriter"
+                        :members 
+                          ( ("length" variable
+                               (:typemodifiers ("private" "final")
+                                :type "int")
+                                (reparse-symbol class_member_declaration) [11287 11312])
+                            ("PlainFixedLenArrayDictionaryValuesWriter" function
+                               (:constructor-flag t
+                                :typemodifiers ("public")
+                                :arguments 
+                                  ( ("maxDictionaryByteSize" variable (:type "int") (reparse-symbol formal_parameters) [11418 11443])
+                                    ("length" variable (:type "int") (reparse-symbol formal_parameters) [11445 11455])
+                                    ("encodingForDataPage" variable (:type "Encoding") (reparse-symbol formal_parameters) [11457 11485])
+                                    ("encodingForDictionaryPage" variable (:type "Encoding") (reparse-symbol formal_parameters) [11487 11521])
+                                    ("allocator" variable (:type "ByteBufferAllocator") (reparse-symbol formal_parameters) [11523 11552]))                                  )
+                                (reparse-symbol class_member_declaration) [11370 11684])
+                            ("writeBytes" function
+                               (:typemodifiers ("public")
+                                :arguments 
+                                  ( ("value" variable (:type "Binary") (reparse-symbol formal_parameters) [11727 11739]))                                  
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [11704 11999])
+                            ("toDictPageAndClose" function
+                               (:typemodifiers ("public")
+                                :type "DictionaryPage")
+                                (reparse-symbol class_member_declaration) [12019 12719]))                          
+                        :type "class")
+                        (reparse-symbol class_member_declaration) [11177 12723])
+                    ("PlainLongDictionaryValuesWriter" type
+                       (:typemodifiers ("public" "static")
+                        :superclasses "DictionaryValuesWriter"
+                        :members 
+                          ( ("longDictionaryContent" variable
+                               (:typemodifiers ("private")
+                                :type "Long2IntMap")
+                                (reparse-symbol class_member_declaration) [12877 12953])
+                            ("PlainLongDictionaryValuesWriter" function
+                               (:constructor-flag t
+                                :typemodifiers ("public")
+                                :arguments 
+                                  ( ("maxDictionaryByteSize" variable (:type "int") (reparse-symbol formal_parameters) [13050 13075])
+                                    ("encodingForDataPage" variable (:type "Encoding") (reparse-symbol formal_parameters) [13077 13105])
+                                    ("encodingForDictionaryPage" variable (:type "Encoding") (reparse-symbol formal_parameters) [13107 13141])
+                                    ("allocator" variable (:type "ByteBufferAllocator") (reparse-symbol formal_parameters) [13143 13172]))                                  )
+                                (reparse-symbol class_member_declaration) [13011 13328])
+                            ("writeLong" function
+                               (:typemodifiers ("public")
+                                :arguments 
+                                  ( ("v" variable (:type "long") (reparse-symbol formal_parameters) [13370 13376]))                                  
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [13348 13607])
+                            ("toDictPageAndClose" function
+                               (:typemodifiers ("public")
+                                :type "DictionaryPage")
+                                (reparse-symbol class_member_declaration) [13627 14246])
+                            ("getDictionarySize" function
+                               (:typemodifiers ("public")
+                                :type "int")
+                                (reparse-symbol class_member_declaration) [14266 14347])
+                            ("clearDictionaryContent" function
+                               (:typemodifiers ("protected")
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [14367 14451])
+                            ("fallBackDictionaryEncodedData" function
+                               (:typemodifiers ("public")
+                                :arguments 
+                                  ( ("writer" variable (:type "ValuesWriter") (reparse-symbol formal_parameters) [14513 14532]))                                  
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [14471 15138]))                          
+                        :type "class")
+                        (reparse-symbol class_member_declaration) [12744 15142])
+                    ("PlainDoubleDictionaryValuesWriter" type
+                       (:typemodifiers ("public" "static")
+                        :superclasses "DictionaryValuesWriter"
+                        :members 
+                          ( ("doubleDictionaryContent" variable
+                               (:typemodifiers ("private")
+                                :type "Double2IntMap")
+                                (reparse-symbol class_member_declaration) [15298 15380])
+                            ("PlainDoubleDictionaryValuesWriter" function
+                               (:constructor-flag t
+                                :typemodifiers ("public")
+                                :arguments 
+                                  ( ("maxDictionaryByteSize" variable (:type "int") (reparse-symbol formal_parameters) [15479 15504])
+                                    ("encodingForDataPage" variable (:type "Encoding") (reparse-symbol formal_parameters) [15506 15534])
+                                    ("encodingForDictionaryPage" variable (:type "Encoding") (reparse-symbol formal_parameters) [15536 15570])
+                                    ("allocator" variable (:type "ByteBufferAllocator") (reparse-symbol formal_parameters) [15572 15601]))                                  )
+                                (reparse-symbol class_member_declaration) [15438 15759])
+                            ("writeDouble" function
+                               (:typemodifiers ("public")
+                                :arguments 
+                                  ( ("v" variable (:type "double") (reparse-symbol formal_parameters) [15803 15811]))                                  
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [15779 16048])
+                            ("toDictPageAndClose" function
+                               (:typemodifiers ("public")
+                                :type "DictionaryPage")
+                                (reparse-symbol class_member_declaration) [16068 16699])
+                            ("getDictionarySize" function
+                               (:typemodifiers ("public")
+                                :type "int")
+                                (reparse-symbol class_member_declaration) [16719 16802])
+                            ("clearDictionaryContent" function
+                               (:typemodifiers ("protected")
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [16822 16908])
+                            ("fallBackDictionaryEncodedData" function
+                               (:typemodifiers ("public")
+                                :arguments 
+                                  ( ("writer" variable (:type "ValuesWriter") (reparse-symbol formal_parameters) [16970 16989]))                                  
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [16928 17611]))                          
+                        :type "class")
+                        (reparse-symbol class_member_declaration) [15163 17615])
+                    ("PlainIntegerDictionaryValuesWriter" type
+                       (:typemodifiers ("public" "static")
+                        :superclasses "DictionaryValuesWriter"
+                        :members 
+                          ( ("intDictionaryContent" variable
+                               (:typemodifiers ("private")
+                                :type "Int2IntMap")
+                                (reparse-symbol class_member_declaration) [17772 17845])
+                            ("PlainIntegerDictionaryValuesWriter" function
+                               (:constructor-flag t
+                                :typemodifiers ("public")
+                                :arguments 
+                                  ( ("maxDictionaryByteSize" variable (:type "int") (reparse-symbol formal_parameters) [17945 17970])
+                                    ("encodingForDataPage" variable (:type "Encoding") (reparse-symbol formal_parameters) [17972 18000])
+                                    ("encodingForDictionaryPage" variable (:type "Encoding") (reparse-symbol formal_parameters) [18002 18036])
+                                    ("allocator" variable (:type "ByteBufferAllocator") (reparse-symbol formal_parameters) [18038 18067]))                                  )
+                                (reparse-symbol class_member_declaration) [17903 18222])
+                            ("writeInteger" function
+                               (:typemodifiers ("public")
+                                :arguments 
+                                  ( ("v" variable (:type "int") (reparse-symbol formal_parameters) [18267 18272]))                                  
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [18242 18500])
+                            ("toDictPageAndClose" function
+                               (:typemodifiers ("public")
+                                :type "DictionaryPage")
+                                (reparse-symbol class_member_declaration) [18520 19164])
+                            ("getDictionarySize" function
+                               (:typemodifiers ("public")
+                                :type "int")
+                                (reparse-symbol class_member_declaration) [19184 19264])
+                            ("clearDictionaryContent" function
+                               (:typemodifiers ("protected")
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [19284 19367])
+                            ("fallBackDictionaryEncodedData" function
+                               (:typemodifiers ("public")
+                                :arguments 
+                                  ( ("writer" variable (:type "ValuesWriter") (reparse-symbol formal_parameters) [19429 19448]))                                  
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [19387 20050]))                          
+                        :type "class")
+                        (reparse-symbol class_member_declaration) [17636 20054])
+                    ("PlainFloatDictionaryValuesWriter" type
+                       (:typemodifiers ("public" "static")
+                        :superclasses "DictionaryValuesWriter"
+                        :members 
+                          ( ("floatDictionaryContent" variable
+                               (:typemodifiers ("private")
+                                :type "Float2IntMap")
+                                (reparse-symbol class_member_declaration) [20209 20288])
+                            ("PlainFloatDictionaryValuesWriter" function
+                               (:constructor-flag t
+                                :typemodifiers ("public")
+                                :arguments 
+                                  ( ("maxDictionaryByteSize" variable (:type "int") (reparse-symbol formal_parameters) [20386 20411])
+                                    ("encodingForDataPage" variable (:type "Encoding") (reparse-symbol formal_parameters) [20413 20441])
+                                    ("encodingForDictionaryPage" variable (:type "Encoding") (reparse-symbol formal_parameters) [20443 20477])
+                                    ("allocator" variable (:type "ByteBufferAllocator") (reparse-symbol formal_parameters) [20479 20508]))                                  )
+                                (reparse-symbol class_member_declaration) [20346 20665])
+                            ("writeFloat" function
+                               (:typemodifiers ("public")
+                                :arguments 
+                                  ( ("v" variable (:type "float") (reparse-symbol formal_parameters) [20708 20715]))                                  
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [20685 20949])
+                            ("toDictPageAndClose" function
+                               (:typemodifiers ("public")
+                                :type "DictionaryPage")
+                                (reparse-symbol class_member_declaration) [20969 21594])
+                            ("getDictionarySize" function
+                               (:typemodifiers ("public")
+                                :type "int")
+                                (reparse-symbol class_member_declaration) [21614 21696])
+                            ("clearDictionaryContent" function
+                               (:typemodifiers ("protected")
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [21716 21801])
+                            ("fallBackDictionaryEncodedData" function
+                               (:typemodifiers ("public")
+                                :arguments 
+                                  ( ("writer" variable (:type "ValuesWriter") (reparse-symbol formal_parameters) [21863 21882]))                                  
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [21821 22496]))                          
+                        :type "class")
+                        (reparse-symbol class_member_declaration) [20075 22500]))                  
+                :type "class")
+                nil [2827 22503]))          
+      :file "DictionaryValuesWriter.java"
+      :pointmax 22504
+      :fsize 22503
+      :lastmodtime '(23115 11492 0 0)
+      :unmatched-syntax '((SEMICOLON 8946 . 8947) (PAREN_BLOCK 8944 . 8946) (GT 8943 . 8944) (LT 8936 . 8937) (NEW 8905 . 8908) (EQ 8903 . 8904) (GT 8877 . 8878) (PROTECTED 8847 . 8856) (LT 8870 . 8871) (SEMICOLON 4625 . 4626) (PAREN_BLOCK 4623 . 4625) (GT 4622 . 4623) (LT 4589 . 4590) (NEW 4576 . 4579) (EQ 4574 . 4575) (GT 4563 . 4564) (PRIVATE 4518 . 4525) (LT 4530 . 4531) (IDENTIFIER 916 . 922) (DOT 915 . 916) (IDENTIFIER 905 . 915) (DOT 904 . 905) (IDENTIFIER 899 . 904) (DOT 898 . 899) (IDENTIFIER 891 . 898) (DOT 890 . 891) (IDENTIFIER 884 . 890) (DOT 883 . 884) (IMPORT 866 . 872) (STATIC 873 . 879) (IDENTIFIER 880 . 883) (SEMICOLON 8946 . 8947) (PAREN_BLOCK 8944 . 8946) (GT 8943 . 8944) (LT 8936 . 8937) (NEW 8905 . 8908) (EQ 8903 . 8904) (GT 8877 . 8878) (PROTECTED 8847 . 8856) (LT 8870 . 8871) (SEMICOLON 4625 . 4626) (PAREN_BLOCK 4623 . 4625) (GT 4622 . 4623) (LT 4589 . 4590) (NEW 4576 . 4579) (EQ 4574 . 4575) (GT 4563 . 4564) (PRIVATE 4518 . 4525) (LT 4530 . 4531) (IDENTIFIER 916 . 922) (DOT 915 . 916) (IDENTIFIER 905 . 915) (DOT 904 . 905) (IDENTIFIER 899 . 904) (DOT 898 . 899) (IDENTIFIER 891 . 898) (DOT 890 . 891) (IDENTIFIER 884 . 890) (DOT 883 . 884) (IMPORT 866 . 872) (STATIC 873 . 879) (IDENTIFIER 880 . 883))))
+  :file "!Volumes!Transcend!parquet-mr!parquet-column!src!main!java!org!apache!parquet!column!values!dictionary!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

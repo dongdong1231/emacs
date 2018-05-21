@@ -1,0 +1,17 @@
+Each log file contains a 4-byte magic number, followed by a set of events that describe data modifications:
+0xfe 0x62 0x69 0x6e
+event(The header bytes provide information about the type of event, when it was generated, by which server, and so forth; The data bytes provide information specific to the type of event, such as a particular data modification.)
+The first event is a descriptor event that describes the format version of the file (the format used to write events in the file).
+The remaining events are interpreted according to the version.
+The final event is a log-rotation event that specifies the next binary log filename.
+//format description log event
+struct FormatDescriptionLogEvent {
+  uint32_t created;
+  uint16_t binlog_version;
+  char server_version[50];
+  uint8_t common_header_len;
+  uint8_t post_header_len;
+  uint8_t server_version_split[3];
+  uint8_t number_of_event_types;
+
+};

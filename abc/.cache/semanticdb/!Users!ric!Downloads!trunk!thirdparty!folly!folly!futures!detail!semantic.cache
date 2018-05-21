@@ -1,0 +1,175 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("atomic" include (:system-flag t) nil [612 629])
+            ("mutex" include (:system-flag t) nil [630 646])
+            ("folly/MicroSpinLock.h" include (:system-flag t) nil [647 679])
+            ("folly" type
+               (:members 
+                  ( ("detail" type
+                       (:members 
+                          ( ("FSM" type
+                               (:template 
+                                  ( ("Enum" type (:type "class") nil nil))                                  
+                                :type "class"
+                                :members 
+                                  ( ("private" label nil (reparse-symbol classsubparts) [872 880])
+                                    ("folly::MicroSpinLock" variable (:type "int") (reparse-symbol classsubparts) [1086 1107])
+                                    ("mutex_" variable (:type ("Mutex" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1110 1127])
+                                    ("state_" variable (:type ("std::atomic" type
+                                         (:template-specifier 
+                                            ( ("Enum" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [1402 1427])
+                                    ("public" label nil (reparse-symbol classsubparts) [1429 1436])
+                                    ("FSM" function
+                                       (:constructor-flag t
+                                        :arguments 
+                                          ( ("startState" variable (:type ("Enum" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1452 1468]))                                          
+                                        :type ("FSM" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1448 1492])
+                                    ("updateState" function
+                                       (:template 
+                                          ( ("F" type (:type "class") nil nil))                                          
+                                        :type "bool"
+                                        :arguments 
+                                          ( ("A" variable (:type ("Enum" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1801 1808])
+                                            ("B" variable (:type ("Enum" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1809 1816])
+                                            ("action" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("F" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1817 1833]))                                          )
+                                        (reparse-symbol classsubparts) [1763 2100])
+                                    ("updateState" function
+                                       (:template 
+                                          ( ("F1" type (:type "class") nil nil)
+                                            ("F2" type (:type "class") nil nil))                                          
+                                        :type "bool"
+                                        :arguments 
+                                          ( ("A" variable (:type ("Enum" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3182 3189])
+                                            ("B" variable (:type ("Enum" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3190 3197])
+                                            ("protectedAction" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("F1" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3217 3243])
+                                            ("unprotectedAction" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("F2" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3244 3272]))                                          )
+                                        (reparse-symbol classsubparts) [3133 3402]))                                  )
+                                (reparse-symbol namespacesubparts) [838 3405])
+                            ("FSM_START" variable (:constant-flag t) (reparse-symbol namespacesubparts) [3415 3424])
+                            ("FSM_UPDATE2" variable (:constant-flag t) (reparse-symbol namespacesubparts) [3533 3544])
+                            ("FSM_UPDATE" variable (:constant-flag t) (reparse-symbol namespacesubparts) [3680 3690])
+                            ("FSM_CASE" variable (:constant-flag t) (reparse-symbol namespacesubparts) [3754 3762])
+                            ("FSM_CASE2" variable (:constant-flag t) (reparse-symbol namespacesubparts) [3856 3865])
+                            ("FSM_BREAK" variable (:constant-flag t) (reparse-symbol namespacesubparts) [4018 4027])
+                            ("FSM_END" variable (:constant-flag t) (reparse-symbol namespacesubparts) [4056 4063]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [699 4071]))                  
+                :type "namespace")
+                nil [681 4072]))          
+      :file "FSM.h"
+      :pointmax 4090
+      :fsize 4089
+      :lastmodtime '(22873 63939 0 0)
+      :unmatched-syntax '((semantic-list 1527 . 1583) (symbol 1518 . 1526) (CONST 1512 . 1517) (semantic-list 1509 . 1511) (symbol 1501 . 1509) (symbol 1496 . 1500) (EXPLICIT 1439 . 1447) (punctuation 1084 . 1085) (symbol 1078 . 1083) (USING 1072 . 1077) (symbol 606 . 610) (symbol 599 . 605) (punctuation 598 . 599))
+      :lexical-table 
+        '(("FSM_CASE2" (spp-arg-list ("fsm" "a" "b" "protectedAction" "unprotectedAction") 3865 . 3912) . 
+              ((CASE "case" 3917 . 3921) (semantic-list "(a)" 3922 . 3925) (punctuation ":" 3925 . 3926) (symbol "FSM_UPDATE2" 3933 . 3944) (semantic-list "(fsm, (b), (protectedAction), (unprotectedAction))" 3944 . 3994) (punctuation ";" 3994 . 3995) (BREAK "break" 4002 . 4007) (punctuation ";" 4007 . 4008)))
+          ("FSM_UPDATE" (spp-arg-list ("fsm" "b" "action") 3690 . 3706) . ((symbol "FSM_UPDATE2" 3707 . 3718) (semantic-list "(fsm, (b), (action), []{})" 3718 . 3744)))
+          ("FSM_START" (spp-arg-list ("fsm") 3424 . 3429) . 
+              ((open-paren "{" 3430 . 3431) (BOOL "bool" 3437 . 3441) (symbol "done" 3442 . 3446) (punctuation "=" 3447 . 3448) (symbol "false" 3449 . 3454) (punctuation ";" 3454 . 3455) (WHILE "while" 3462 . 3467) (semantic-list "(!done)" 3468 . 3475) (open-paren "{" 3476 . 3477) (symbol "auto" 3478 . 3482) (symbol "state" 3483 . 3488) (punctuation "=" 3489 . 3490) (symbol "fsm" 3491 . 3494) (punctuation "." 3494 . 3495) (symbol "getState" 3495 . 3503) (semantic-list "()" 3503 . 3505) (punctuation ";" 3505 . 3506) (SWITCH "switch" 3507 . 3513) (semantic-list "(state)" 3514 . 3521) (open-paren "{" 3522 . 3523)))
+          ("FSM_UPDATE2" (spp-arg-list ("fsm" "b" "protectedAction" "unprotectedAction") 3544 . 3588) . 
+              ((symbol "done" 3595 . 3599) (punctuation "=" 3600 . 3601) (symbol "fsm" 3602 . 3605) (punctuation "." 3605 . 3606) (symbol "updateState" 3606 . 3617) (semantic-list "(state, (b), (protectedAction), (unprotectedAction))" 3617 . 3669) (punctuation ";" 3669 . 3670)))
+          ("FSM_CASE" (spp-arg-list ("fsm" "a" "b" "action") 3762 . 3781) . 
+              ((CASE "case" 3786 . 3790) (semantic-list "(a)" 3791 . 3794) (punctuation ":" 3794 . 3795) (symbol "FSM_UPDATE" 3802 . 3812) (semantic-list "(fsm, (b), (action))" 3812 . 3832) (punctuation ";" 3832 . 3833) (BREAK "break" 3840 . 3845) (punctuation ";" 3845 . 3846)))
+          ("FSM_BREAK" . 
+              ((symbol "done" 4028 . 4032) (punctuation "=" 4033 . 4034) (symbol "true" 4035 . 4039) (punctuation ";" 4039 . 4040) (BREAK "break" 4041 . 4046) (punctuation ";" 4046 . 4047)))
+          ("FSM_END" . 
+              ((close-paren "}" 4064 . 4065) (close-paren "}" 4065 . 4066) (close-paren "}" 4066 . 4067)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("atomic" include (:system-flag t) nil [612 629])
+            ("mutex" include (:system-flag t) nil [630 646])
+            ("stdexcept" include (:system-flag t) nil [647 667])
+            ("vector" include (:system-flag t) nil [668 685])
+            ("folly/Executor.h" include (:system-flag t) nil [687 714])
+            ("folly/Function.h" include (:system-flag t) nil [715 742])
+            ("folly/MicroSpinLock.h" include (:system-flag t) nil [743 775])
+            ("folly/Optional.h" include (:system-flag t) nil [776 803])
+            ("folly/ScopeGuard.h" include (:system-flag t) nil [804 833])
+            ("folly/Try.h" include (:system-flag t) nil [834 856])
+            ("folly/futures/FutureException.h" include (:system-flag t) nil [857 899])
+            ("folly/futures/detail/FSM.h" include (:system-flag t) nil [900 937])
+            ("folly/io/async/Request.h" include (:system-flag t) nil [939 974])
+            ("folly" type
+               (:members 
+                  ( ("detail" type
+                       (:members 
+                          ( ("State" type
+                               (:superclasses 
+                                  ( ("uint8_t" type
+                                       (:protection "unspecified"
+                                        :type "class")
+                                        nil nil))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [1409 1491])
+                            ("final" variable (:type ("Core" type
+                                 (:prototype t
+                                  :type "class")
+                                  nil nil)) (reparse-symbol namespacesubparts) [2700 12386])
+                            ("collectVariadicHelper" function
+                               (:arguments 
+                                  ( ("" variable
+                                       (:constant-flag t
+                                        :type ("std::shared_ptr" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [12473 12495])
+                                    ("" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12495 12497])
+                                    ("" variable (:type ("Ts" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12497 12500]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [12446 12535])
+                            ("collectVariadicHelper" function
+                               (:arguments 
+                                  ( ("" variable
+                                       (:constant-flag t
+                                        :type ("std::shared_ptr" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [12668 12690])
+                                    ("" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12690 12692])
+                                    ("" variable (:type ("Ts" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12692 12695])
+                                    ("" variable (:type ("ctx" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12701 12705])
+                                    ("" variable
+                                       (:reference 1
+                                        :type ("THead" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [12733 12740])
+                                    ("" variable (:type ("head" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12741 12746])
+                                    ("" variable
+                                       (:reference 1
+                                        :type ("TTail" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [12747 12754])
+                                    ("" variable (:type ("tail" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12758 12763]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [12641 13100]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [994 13103]))                  
+                :type "namespace")
+                nil [976 13104]))          
+      :file "Core.h"
+      :pointmax 13122
+      :fsize 13121
+      :lastmodtime '(22873 63939 0 0)
+      :unmatched-syntax '((punctuation 12756 . 12757) (punctuation 12755 . 12756) (punctuation 12754 . 12755) (punctuation 12753 . 12754) (punctuation 12739 . 12740) (punctuation 12699 . 12700) (punctuation 12698 . 12699) (punctuation 12697 . 12698) (punctuation 12696 . 12697) (punctuation 12695 . 12696) (punctuation 12694 . 12695) (punctuation 12691 . 12692) (punctuation 12689 . 12690) (punctuation 12639 . 12640) (symbol 12634 . 12639) (punctuation 12632 . 12633) (punctuation 12631 . 12632) (punctuation 12630 . 12631) (TYPENAME 12622 . 12630) (punctuation 12620 . 12621) (symbol 12615 . 12620) (TYPENAME 12606 . 12614) (punctuation 12594 . 12595) (symbol 12592 . 12594) (punctuation 12590 . 12591) (punctuation 12589 . 12590) (punctuation 12588 . 12589) (TYPENAME 12580 . 12588) (punctuation 12578 . 12579) (symbol 12577 . 12578) (CLASS 12571 . 12576) (punctuation 12569 . 12570) (punctuation 12568 . 12569) (punctuation 12567 . 12568) (punctuation 12566 . 12567) (TYPENAME 12557 . 12565) (punctuation 12556 . 12557) (TEMPLATE 12547 . 12555) (punctuation 12546 . 12547) (TEMPLATE 12537 . 12545) (punctuation 12504 . 12505) (punctuation 12503 . 12504) (punctuation 12502 . 12503) (punctuation 12501 . 12502) (punctuation 12500 . 12501) (punctuation 12499 . 12500) (punctuation 12496 . 12497) (punctuation 12494 . 12495) (punctuation 12444 . 12445) (symbol 12442 . 12444) (punctuation 12440 . 12441) (punctuation 12439 . 12440) (punctuation 12438 . 12439) (TYPENAME 12430 . 12438) (punctuation 12428 . 12429) (symbol 12427 . 12428) (CLASS 12421 . 12426) (punctuation 12419 . 12420) (punctuation 12418 . 12419) (punctuation 12417 . 12418) (punctuation 12416 . 12417) (TYPENAME 12408 . 12416) (punctuation 12407 . 12408) (TEMPLATE 12398 . 12406) (punctuation 12397 . 12398) (TEMPLATE 12388 . 12396) (punctuation 1487 . 1488) (symbol 1483 . 1487) (punctuation 1479 . 1480) (symbol 1474 . 1479) (punctuation 1470 . 1471) (symbol 1458 . 1470) (punctuation 1454 . 1455) (symbol 1444 . 1454) (punctuation 1440 . 1441) (symbol 1435 . 1440) (ENUM 1404 . 1408) (symbol 606 . 610) (symbol 599 . 605) (punctuation 598 . 599))))
+  :file "!Users!ric!Downloads!trunk!thirdparty!folly!folly!futures!detail!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

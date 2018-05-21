@@ -1,0 +1,461 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("CHAT_MESSAGE_HPP" variable (:constant-flag t) nil [319 335])
+            ("cstdio" include (:system-flag t) nil [337 354])
+            ("cstdlib" include (:system-flag t) nil [355 373])
+            ("cstring" include (:system-flag t) nil [374 392])
+            ("chat_message" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [415 422])
+                    ("" type
+                       (:members 
+                          ( ("header_length" variable
+                               (:constant-flag t
+                                :default-value (448 449)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [432 449]))                          
+                        :type "enum")
+                        (reparse-symbol classsubparts) [425 452])
+                    ("" type
+                       (:members 
+                          ( ("max_body_length" variable
+                               (:constant-flag t
+                                :default-value (480 483)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [462 483]))                          
+                        :type "enum")
+                        (reparse-symbol classsubparts) [455 486])
+                    ("chat_message" function
+                       (:constructor-flag t
+                        :type ("chat_message" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [490 534])
+                    ("data" function
+                       (:methodconst-flag t
+                        :pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol classsubparts) [538 588])
+                    ("data" function
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [592 630])
+                    ("length" function
+                       (:methodconst-flag t
+                        :type ("size_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [634 704])
+                    ("body" function
+                       (:methodconst-flag t
+                        :pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol classsubparts) [708 774])
+                    ("body" function
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [778 832])
+                    ("body_length" function
+                       (:methodconst-flag t
+                        :type ("size_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [836 895])
+                    ("body_length" function
+                       (:arguments 
+                          ( ("new_length" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [916 934]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [899 1051])
+                    ("decode_header" function (:type "bool") (reparse-symbol classsubparts) [1055 1363])
+                    ("encode_header" function (:type "void") (reparse-symbol classsubparts) [1367 1590])
+                    ("private" label nil (reparse-symbol classsubparts) [1592 1600])
+                    ("data_" variable
+                       (:dereference 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [1603 1647])
+                    ("body_length_" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1650 1670]))                  
+                :type "class")
+                nil [394 1673]))          
+      :file "chat_message.hpp"
+      :pointmax 1702
+      :fsize 1701
+      :lastmodtime '(23202 13741 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("CHAT_MESSAGE_HPP")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("cstdlib" include (:system-flag t) nil [284 302])
+            ("deque" include (:system-flag t) nil [303 319])
+            ("iostream" include (:system-flag t) nil [320 339])
+            ("boost/bind.hpp" include (:system-flag t) nil [340 365])
+            ("boost/asio.hpp" include (:system-flag t) nil [366 391])
+            ("boost/thread/thread.hpp" include (:system-flag t) nil [392 426])
+            ("chat_message.hpp" include nil nil [427 454])
+            ("boost::asio::ip::tcp" using (:type ("boost::asio::ip::tcp" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [456 483])
+            ("chat_message_queue" type
+               (:typedef ("std::deque" type
+                     (:template-specifier 
+                        ( ("chat_message" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :type "typedef")
+                nil [485 537])
+            ("chat_client" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [559 566])
+                    ("chat_client" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("io_context" variable
+                               (:reference 1
+                                :type ("boost::asio::io_context" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [581 617])
+                            ("endpoints" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("tcp::resolver::results_type" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [624 669]))                          
+                        :type ("chat_client" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [569 887])
+                    ("write" function
+                       (:arguments 
+                          ( ("msg" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("chat_message" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [902 926]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [891 1026])
+                    ("close" function (:type "void") (reparse-symbol classsubparts) [1030 1137])
+                    ("private" label nil (reparse-symbol classsubparts) [1139 1147])
+                    ("handle_connect" function
+                       (:arguments 
+                          ( ("error" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("boost::system::error_code" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1171 1210]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1151 1473])
+                    ("handle_read_header" function
+                       (:arguments 
+                          ( ("error" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("boost::system::error_code" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1501 1540]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1477 1865])
+                    ("handle_read_body" function
+                       (:arguments 
+                          ( ("error" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("boost::system::error_code" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1891 1930]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1869 2323])
+                    ("do_write" function
+                       (:arguments 
+                          ( ("msg" variable (:type ("chat_message" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2341 2358]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2327 2734])
+                    ("handle_write" function
+                       (:arguments 
+                          ( ("error" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("boost::system::error_code" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2756 2795]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2738 3204])
+                    ("do_close" function (:type "void") (reparse-symbol classsubparts) [3208 3252])
+                    ("private" label nil (reparse-symbol classsubparts) [3254 3262])
+                    ("io_context_" variable (:type ("boost::asio::io_context" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3265 3302])
+                    ("socket_" variable (:type ("tcp::socket" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3305 3325])
+                    ("read_msg_" variable (:type ("chat_message" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3328 3351])
+                    ("write_msgs_" variable (:type ("chat_message_queue" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3354 3385]))                  
+                :type "class")
+                nil [539 3388])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [3399 3408])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3409 3422]))                  
+                :type "int")
+                nil [3390 4304]))          
+      :file "chat_client.cpp"
+      :pointmax 4305
+      :fsize 4304
+      :lastmodtime '(23202 13741 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("cstdlib" include (:system-flag t) nil [296 314])
+            ("cstring" include (:system-flag t) nil [315 333])
+            ("iostream" include (:system-flag t) nil [334 353])
+            ("boost/array.hpp" include (:system-flag t) nil [354 380])
+            ("boost/bind.hpp" include (:system-flag t) nil [381 406])
+            ("boost/asio.hpp" include (:system-flag t) nil [407 432])
+            ("chat_message.hpp" include nil nil [433 460])
+            ("main" function (:type "int") nil [5726 5739]))          
+      :file "posix_chat_client.cpp"
+      :pointmax 5798
+      :fsize 5797
+      :lastmodtime '(23202 13741 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("algorithm" include (:system-flag t) nil [284 304])
+            ("cstdlib" include (:system-flag t) nil [305 323])
+            ("deque" include (:system-flag t) nil [324 340])
+            ("iostream" include (:system-flag t) nil [341 360])
+            ("list" include (:system-flag t) nil [361 376])
+            ("set" include (:system-flag t) nil [377 391])
+            ("boost/bind.hpp" include (:system-flag t) nil [392 417])
+            ("boost/shared_ptr.hpp" include (:system-flag t) nil [418 449])
+            ("boost/enable_shared_from_this.hpp" include (:system-flag t) nil [450 494])
+            ("boost/asio.hpp" include (:system-flag t) nil [495 520])
+            ("chat_message.hpp" include nil nil [521 548])
+            ("boost::asio::ip::tcp" using (:type ("boost::asio::ip::tcp" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [550 577])
+            ("chat_message_queue" type
+               (:typedef ("std::deque" type
+                     (:template-specifier 
+                        ( ("chat_message" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :type "typedef")
+                nil [653 705])
+            ("chat_participant" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [806 813])
+                    ("chat_participant" function
+                       (:destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [816 846])
+                    ("deliver" function
+                       (:pure-virtual-flag t
+                        :prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("msg" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("chat_message" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [870 894]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [849 899]))                  
+                :type "class")
+                nil [781 902])
+            ("chat_participant_ptr" type
+               (:typedef ("boost::shared_ptr" type
+                     (:template-specifier 
+                        ( ("chat_participant" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :type "typedef")
+                nil [904 969])
+            ("chat_room" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [1063 1070])
+                    ("join" function
+                       (:arguments 
+                          ( ("participant" variable (:type ("chat_participant_ptr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1083 1116]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1073 1290])
+                    ("leave" function
+                       (:arguments 
+                          ( ("participant" variable (:type ("chat_participant_ptr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1305 1338]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1294 1384])
+                    ("deliver" function
+                       (:arguments 
+                          ( ("msg" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("chat_message" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1401 1425]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1388 1682])
+                    ("private" label nil (reparse-symbol classsubparts) [1684 1692])
+                    ("participants_" variable (:type ("std::set" type
+                         (:template-specifier 
+                            ( ("chat_participant_ptr" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [1695 1740])
+                    ("" type
+                       (:members 
+                          ( ("max_recent_msgs" variable
+                               (:constant-flag t
+                                :default-value (1768 1771)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [1750 1771]))                          
+                        :type "enum")
+                        (reparse-symbol classsubparts) [1743 1774])
+                    ("recent_msgs_" variable (:type ("chat_message_queue" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1777 1809]))                  
+                :type "class")
+                nil [1045 1812])
+            ("chat_session" type
+               (:superclasses 
+                  ( ("chat_participant" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil)
+                    ("boost::enable_shared_from_this" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [1994 2001])
+                    ("chat_session" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("io_context" variable
+                               (:reference 1
+                                :type ("boost::asio::io_context" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2017 2053])
+                            ("room" variable
+                               (:reference 1
+                                :type ("chat_room" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2054 2070]))                          
+                        :type ("chat_session" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2004 2123])
+                    ("socket" function (:type ("tcp::socket" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2127 2176])
+                    ("start" function (:type "void") (reparse-symbol classsubparts) [2180 2481])
+                    ("deliver" function
+                       (:arguments 
+                          ( ("msg" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("chat_message" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2498 2522]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2485 2913])
+                    ("handle_read_header" function
+                       (:arguments 
+                          ( ("error" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("boost::system::error_code" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2941 2980]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2917 3341])
+                    ("handle_read_body" function
+                       (:arguments 
+                          ( ("error" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("boost::system::error_code" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3367 3406]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3345 3776])
+                    ("handle_write" function
+                       (:arguments 
+                          ( ("error" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("boost::system::error_code" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3798 3837]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3780 4282])
+                    ("private" label nil (reparse-symbol classsubparts) [4284 4292])
+                    ("socket_" variable (:type ("tcp::socket" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4295 4315])
+                    ("room_" variable (:type ("chat_room" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4318 4335])
+                    ("read_msg_" variable (:type ("chat_message" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4338 4361])
+                    ("write_msgs_" variable (:type ("chat_message_queue" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4364 4395]))                  
+                :type "class")
+                nil [1888 4398])
+            ("chat_session_ptr" type
+               (:typedef ("boost::shared_ptr" type
+                     (:template-specifier 
+                        ( ("chat_session" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :type "typedef")
+                nil [4400 4457])
+            ("chat_server" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [4553 4560])
+                    ("chat_server" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("io_context" variable
+                               (:reference 1
+                                :type ("boost::asio::io_context" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4575 4611])
+                            ("endpoint" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("tcp::endpoint" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4618 4648]))                          
+                        :type ("chat_server" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4563 4745])
+                    ("start_accept" function (:type "void") (reparse-symbol classsubparts) [4749 5012])
+                    ("handle_accept" function
+                       (:arguments 
+                          ( ("session" variable (:type ("chat_session_ptr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5035 5060])
+                            ("error" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("boost::system::error_code" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5067 5106]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [5016 5187])
+                    ("private" label nil (reparse-symbol classsubparts) [5189 5197])
+                    ("io_context_" variable (:type ("boost::asio::io_context" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5200 5237])
+                    ("acceptor_" variable (:type ("tcp::acceptor" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5240 5264])
+                    ("room_" variable (:type ("chat_room" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5267 5283]))                  
+                :type "class")
+                nil [4533 5286])
+            ("chat_server_ptr" type
+               (:typedef ("boost::shared_ptr" type
+                     (:template-specifier 
+                        ( ("chat_server" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :type "typedef")
+                nil [5288 5343])
+            ("chat_server_list" type
+               (:typedef ("std::list" type
+                     (:template-specifier 
+                        ( ("chat_server_ptr" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :type "typedef")
+                nil [5344 5396])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [5481 5490])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [5491 5504]))                  
+                :type "int")
+                nil [5472 6072]))          
+      :file "chat_server.cpp"
+      :pointmax 6073
+      :fsize 6072
+      :lastmodtime '(23202 13741 0 0)
+      :unmatched-syntax nil))
+  :file "!Volumes!Transcend!asio!example!cpp03!chat!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

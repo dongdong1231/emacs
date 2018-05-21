@@ -1,0 +1,1182 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("SCHEDULING_QUERY_SCHEDULE_H" variable (:constant-flag t) nil [847 874])
+            ("vector" include (:system-flag t) nil [876 893])
+            ("string" include (:system-flag t) nil [894 911])
+            ("unordered_map" include (:system-flag t) nil [912 936])
+            ("boost/scoped_ptr.hpp" include (:system-flag t) nil [937 968])
+            ("common/global-types.h" include nil nil [970 1002])
+            ("common/status.h" include nil nil [1003 1029])
+            ("util/promise.h" include nil nil [1030 1055])
+            ("util/container-util.h" include nil nil [1056 1088])
+            ("util/runtime-profile.h" include nil nil [1089 1122])
+            ("gen-cpp/Types_types.h" include nil nil [1123 1155])
+            ("gen-cpp/Frontend_types.h" include nil nil [1180 1215])
+            ("impala" type
+               (:members 
+                  ( ("Coordinator" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [1237 1255])
+                    ("FragmentExecParams" type
+                       (:prototype t
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [1256 1282])
+                    ("FInstanceExecParams" type
+                       (:prototype t
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [1283 1310])
+                    ("PerNodeScanRanges" type
+                       (:typedef ("std::map" type
+                             (:template-specifier 
+                                ( ("TPlanNodeId" type nil nil nil)
+                                  ("std::vector" type (:template-specifier 
+                                    ( ("TScanRangeParams" type nil nil nil))                                    ) nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :type "typedef")
+                        (reparse-symbol namespacesubparts) [1363 1442])
+                    ("FragmentScanRangeAssignment" type
+                       (:typedef ("std::unordered_map" type
+                             (:template-specifier 
+                                ( ("TNetworkAddress" type nil nil nil)
+                                  ("PerNodeScanRanges" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :type "typedef")
+                        (reparse-symbol namespacesubparts) [1575 1670])
+                    ("BackendExecParams" type
+                       (:members 
+                          ( ("instance_params" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("FInstanceExecParams" type
+                                         (:pointer 1
+                                          :constant-flag t)
+                                          nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [2107 2163])
+                            ("min_reservation_bytes" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2556 2586])
+                            ("initial_reservation_total_claims" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2906 2947]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [1848 2950])
+                    ("PerBackendExecParams" type
+                       (:typedef ("std::map" type
+                             (:template-specifier 
+                                ( ("TNetworkAddress" type nil nil nil)
+                                  ("BackendExecParams" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :type "typedef")
+                        (reparse-symbol namespacesubparts) [3039 3113])
+                    ("FInstanceExecParams" type
+                       (:members 
+                          ( ("instance_id" variable (:type ("TUniqueId" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3253 3275])
+                            ("host" variable (:type ("TNetworkAddress" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3278 3299])
+                            ("per_node_scan_ranges" variable (:type ("PerNodeScanRanges" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3323 3362])
+                            ("per_fragment_instance_idx" variable (:type "int") (reparse-symbol classsubparts) [3454 3484])
+                            ("sender_id" variable (:type "int") (reparse-symbol classsubparts) [3629 3643])
+                            ("fragment_exec_params" variable
+                               (:constant-flag t
+                                :type ("FragmentExecParams" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3683 3730])
+                            ("fragment" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :constant-flag t
+                                :type ("TPlanFragment" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3733 3771])
+                            ("FInstanceExecParams" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("instance_id" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("TUniqueId" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3795 3824])
+                                    ("host" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("TNetworkAddress" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3825 3853])
+                                    ("per_fragment_instance_idx" variable (:type "int") (reparse-symbol arg-sub-list) [3860 3890])
+                                    ("fragment_exec_params" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("FragmentExecParams" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3891 3938]))                                  
+                                :type ("FInstanceExecParams" type (:type "struct") nil nil))
+                                (reparse-symbol classsubparts) [3775 4115]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [3222 4118])
+                    ("FragmentExecParams" type
+                       (:members 
+                          ( ("destinations" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("TPlanFragmentDestination" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [4252 4303])
+                            ("per_exch_num_senders" variable (:type ("std::map" type
+                                 (:template-specifier 
+                                    ( ("PlanNodeId" type nil nil nil)
+                                      ("int" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [4406 4453])
+                            ("scan_range_assignment" variable (:type ("FragmentScanRangeAssignment" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4602 4652])
+                            ("is_coord_fragment" variable (:type "bool") (reparse-symbol classsubparts) [4656 4679])
+                            ("fragment" variable
+                               (:constant-flag t
+                                :type ("TPlanFragment" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4682 4712])
+                            ("input_fragments" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("FragmentIdx" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [4715 4756])
+                            ("instance_exec_params" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("FInstanceExecParams" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [4759 4813])
+                            ("FragmentExecParams" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("fragment" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("TPlanFragment" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4836 4866]))                                  
+                                :type ("FragmentExecParams" type (:type "struct") nil nil))
+                                (reparse-symbol classsubparts) [4817 4920])
+                            ("GetInstanceIdxs" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("int" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [4992 5033]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [4179 5036])
+                    ("QuerySchedule" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [5561 5568])
+                            ("QuerySchedule" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("query_id" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("TUniqueId" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5585 5611])
+                                    ("request" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("TQueryExecRequest" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5612 5645])
+                                    ("query_options" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("TQueryOptions" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5652 5687])
+                                    ("summary_profile" variable
+                                       (:pointer 1
+                                        :type ("RuntimeProfile" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5688 5720])
+                                    ("query_events" variable
+                                       (:pointer 1
+                                        :type ("RuntimeProfile::EventSequence" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5727 5771]))                                  
+                                :type ("QuerySchedule" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [5571 5772])
+                            ("Validate" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [5936 5958])
+                            ("query_id" function
+                               (:methodconst-flag t
+                                :constant-flag t
+                                :type ("TUniqueId" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [5962 6017])
+                            ("request" function
+                               (:methodconst-flag t
+                                :constant-flag t
+                                :type ("TQueryExecRequest" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [6020 6081])
+                            ("query_options" function
+                               (:methodconst-flag t
+                                :constant-flag t
+                                :type ("TQueryOptions" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [6084 6153])
+                            ("request_pool" function
+                               (:methodconst-flag t
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [6156 6221])
+                            ("set_request_pool" function
+                               (:arguments 
+                                  ( ("pool_name" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [6246 6275]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [6224 6306])
+                            ("GetPerHostMemoryEstimate" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :type ("int64_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [6605 6646])
+                            ("GetClusterMemoryEstimate" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :type ("int64_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [6737 6778])
+                            ("IncNumScanRanges" function
+                               (:arguments 
+                                  ( ("delta" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6875 6889]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [6853 6920])
+                            ("GetCoordFragment" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :pointer 1
+                                :constant-flag t
+                                :type ("TPlanFragment" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [6994 7040])
+                            ("GetTPlanFragments" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :arguments 
+                                  ( ("fragments" variable
+                                       (:pointer 1
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("TPlanFragment" type
+                                                     (:pointer 1
+                                                      :constant-flag t)
+                                                      nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [7136 7181]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [7113 7188])
+                            ("num_scan_ranges" function
+                               (:methodconst-flag t
+                                :type ("int64_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [7192 7252])
+                            ("GetFragmentIdx" function
+                               (:methodconst-flag t
+                                :arguments 
+                                  ( ("id" variable (:type ("PlanNodeId" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7342 7356]))                                  
+                                :type ("FragmentIdx" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [7315 7411])
+                            ("GetNumFragmentInstances" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :type "int")
+                                (reparse-symbol classsubparts) [7480 7516])
+                            ("GetNextInstanceId" function
+                               (:prototype-flag t
+                                :type ("TUniqueId" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [7922 7952])
+                            ("GetContainingFragment" function
+                               (:methodconst-flag t
+                                :constant-flag t
+                                :arguments 
+                                  ( ("node_id" variable (:type ("PlanNodeId" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7999 8018]))                                  
+                                :type ("TPlanFragment" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [7956 8202])
+                            ("GetNode" function
+                               (:methodconst-flag t
+                                :constant-flag t
+                                :arguments 
+                                  ( ("id" variable (:type ("PlanNodeId" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8231 8245]))                                  
+                                :type ("TPlanNode" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [8206 8385])
+                            ("per_backend_exec_params" function
+                               (:methodconst-flag t
+                                :constant-flag t
+                                :type ("PerBackendExecParams" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [8389 8491])
+                            ("fragment_exec_params" function
+                               (:methodconst-flag t
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("FragmentExecParams" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [8494 8601])
+                            ("GetFragmentExecParams" function
+                               (:methodconst-flag t
+                                :constant-flag t
+                                :arguments 
+                                  ( ("idx" variable (:type ("FragmentIdx" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8652 8668]))                                  
+                                :type ("FragmentExecParams" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [8604 8719])
+                            ("GetFragmentExecParams" function
+                               (:pointer 1
+                                :arguments 
+                                  ( ("idx" variable (:type ("FragmentIdx" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8764 8780]))                                  
+                                :type ("FragmentExecParams" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [8722 8826])
+                            ("GetCoordInstanceExecParams" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :constant-flag t
+                                :type ("FInstanceExecParams" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [8830 8892])
+                            ("is_admitted" function
+                               (:methodconst-flag t
+                                :type "bool")
+                                (reparse-symbol classsubparts) [8896 8945])
+                            ("set_is_admitted" function
+                               (:arguments 
+                                  ( ("is_admitted" variable (:type "bool") (reparse-symbol arg-sub-list) [8969 8986]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [8948 9018])
+                            ("summary_profile" function
+                               (:pointer 1
+                                :type ("RuntimeProfile" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [9021 9083])
+                            ("query_events" function
+                               (:pointer 1
+                                :type ("RuntimeProfile::EventSequence" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [9086 9157])
+                            ("set_per_backend_exec_params" function
+                               (:arguments 
+                                  ( ("params" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("PerBackendExecParams" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [9194 9229]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [9161 9274])
+                            ("private" label nil (reparse-symbol classsubparts) [9277 9285])
+                            ("query_id_" variable
+                               (:constant-flag t
+                                :type ("TUniqueId" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [9427 9454])
+                            ("request_" variable
+                               (:constant-flag t
+                                :type ("TQueryExecRequest" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [9457 9491])
+                            ("query_options_" variable
+                               (:constant-flag t
+                                :type ("TQueryOptions" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [9543 9579])
+                            ("summary_profile_" variable
+                               (:pointer 1
+                                :type ("RuntimeProfile" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [9622 9655])
+                            ("query_events_" variable
+                               (:pointer 1
+                                :type ("RuntimeProfile::EventSequence" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [9658 9703])
+                            ("plan_node_to_fragment_idx_" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("int32_t" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [9774 9822])
+                            ("plan_node_to_plan_node_idx_" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("int32_t" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [9900 9949])
+                            ("fragment_exec_params_" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("FragmentExecParams" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [10101 10155])
+                            ("per_backend_exec_params_" variable (:type ("PerBackendExecParams" type (:type "class") nil nil)) (reparse-symbol classsubparts) [10305 10351])
+                            ("num_scan_ranges_" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [10404 10429])
+                            ("next_instance_id_" variable (:type ("TUniqueId" type (:type "class") nil nil)) (reparse-symbol classsubparts) [10491 10519])
+                            ("request_pool_" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [10592 10618])
+                            ("is_admitted_" variable (:type "bool") (reparse-symbol classsubparts) [10684 10702])
+                            ("Init" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [10904 10916]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [5538 10919]))                  
+                :type "namespace")
+                nil [1217 10922]))          
+      :file "query-schedule.h"
+      :pointmax 10931
+      :fsize 10930
+      :lastmodtime '(22940 56292 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("SCHEDULING_QUERY_SCHEDULE_H")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("SCHEDULING_SCHEDULER_H" variable (:constant-flag t) nil [842 864])
+            ("list" include (:system-flag t) nil [866 881])
+            ("string" include (:system-flag t) nil [882 899])
+            ("vector" include (:system-flag t) nil [900 917])
+            ("boost/heap/binomial_heap.hpp" include (:system-flag t) nil [918 957])
+            ("boost/thread/mutex.hpp" include (:system-flag t) nil [958 991])
+            ("boost/unordered_map.hpp" include (:system-flag t) nil [992 1026])
+            ("gtest/gtest_prod.h" include (:system-flag t) nil [1027 1056])
+            ("common/global-types.h" include nil nil [1077 1109])
+            ("common/status.h" include nil nil [1110 1136])
+            ("gen-cpp/PlanNodes_types.h" include nil nil [1137 1173])
+            ("gen-cpp/StatestoreService_types.h" include nil nil [1174 1218])
+            ("gen-cpp/Types_types.h" include nil nil [1219 1251])
+            ("rapidjson/document.h" include nil nil [1275 1306])
+            ("rpc/thrift-util.h" include nil nil [1307 1335])
+            ("scheduling/backend-config.h" include nil nil [1336 1374])
+            ("scheduling/query-schedule.h" include nil nil [1375 1413])
+            ("scheduling/request-pool-service.h" include nil nil [1414 1458])
+            ("statestore/statestore-subscriber.h" include nil nil [1459 1504])
+            ("util/metrics.h" include nil nil [1505 1530])
+            ("util/network-util.h" include nil nil [1531 1561])
+            ("util/runtime-profile.h" include nil nil [1562 1595])
+            ("util/webserver.h" include nil nil [1596 1623])
+            ("impala" type
+               (:members 
+                  ( ("test" type
+                       (:members 
+                          ( ("SchedulerWrapper" type
+                               (:prototype t
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [1662 1685]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1645 1687])
+                    ("Scheduler" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [3033 3040])
+                            ("IMPALA_MEMBERSHIP_TOPIC" variable
+                               (:typemodifiers ("static")
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3043 3092])
+                            ("BackendList" type
+                               (:typedef ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("TBackendDescriptor" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil)
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [3130 3182])
+                            ("Scheduler" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("subscriber" variable
+                                       (:pointer 1
+                                        :type ("StatestoreSubscriber" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3473 3506])
+                                    ("backend_id" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3507 3537])
+                                    ("backend_address" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("TNetworkAddress" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3544 3583])
+                                    ("metrics" variable
+                                       (:pointer 1
+                                        :type ("MetricGroup" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3584 3605])
+                                    ("webserver" variable
+                                       (:pointer 1
+                                        :type ("Webserver" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3606 3627])
+                                    ("request_pool_service" variable
+                                       (:pointer 1
+                                        :type ("RequestPoolService" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3634 3675]))                                  
+                                :type ("Scheduler" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3463 3676])
+                            ("Init" function
+                               (:prototype-flag t
+                                :type ("impala::Status" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3863 3885])
+                            ("Schedule" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("schedule" variable
+                                       (:pointer 1
+                                        :type ("QuerySchedule" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4027 4051]))                                  
+                                :type ("Status" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4011 4052])
+                            ("private" label nil (reparse-symbol classsubparts) [4055 4063])
+                            ("NextExecutorPerHost" type
+                               (:typedef ("boost::unordered_map" type
+                                     (:template-specifier 
+                                        ( ("IpAddr" type nil nil nil)
+                                          ("BackendConfig::BackendList::const_iterator" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil)
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [4231 4338])
+                            ("ExecutorsConfigPtr" type
+                               (:typedef ("std::shared_ptr" type
+                                     (:template-specifier 
+                                        ( ("BackendConfig" type (:constant-flag t) nil nil))                                        
+                                      :type "class")
+                                      nil nil)
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [4342 4406])
+                            ("ExecutorAssignmentInfo" type
+                               (:members 
+                                  ( ("assigned_bytes" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4672 4695])
+                                    ("random_rank" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [4820 4842])
+                                    ("ip" variable (:type ("IpAddr" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4884 4894])
+                                    (">" function
+                                       (:methodconst-flag t
+                                        :operator-flag t
+                                        :arguments 
+                                          ( ("rhs" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("ExecutorAssignmentInfo" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [5002 5036]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [4987 5204]))                                  
+                                :type "struct")
+                                (reparse-symbol classsubparts) [4583 5209])
+                            ("AssignmentHeap" type
+                               (:typedef ("boost::heap::binomial_heap" type
+                                     (:template-specifier 
+                                        ( ("ExecutorAssignmentInfo" type nil nil nil)
+                                          ("boost::heap::compare" type (:template-specifier 
+                                            ( ("std::greater" type (:template-specifier 
+                                                ( ("ExecutorAssignmentInfo" type nil nil nil))                                                ) nil nil))                                            ) nil nil))                                        
+                                      :type "class")
+                                      nil nil)
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [5611 5757])
+                            ("ExecutorHandleMap" type
+                               (:typedef ("boost::unordered_map" type
+                                     (:template-specifier 
+                                        ( ("IpAddr" type nil nil nil)
+                                          ("AssignmentHeap::handle_type" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil)
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [5836 5920])
+                            ("AddressableAssignmentHeap" type
+                               (:members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [6270 6277])
+                                    ("executor_heap" function
+                                       (:methodconst-flag t
+                                        :constant-flag t
+                                        :type ("AssignmentHeap" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [6282 6352])
+                                    ("executor_handles" function
+                                       (:methodconst-flag t
+                                        :constant-flag t
+                                        :type ("ExecutorHandleMap" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [6357 6436])
+                                    ("InsertOrUpdate" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("ip" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("IpAddr" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [6462 6479])
+                                            ("assigned_bytes" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6480 6503])
+                                            ("rank" variable (:type "int") (reparse-symbol arg-sub-list) [6504 6513]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [6442 6514])
+                                    ("size" function
+                                       (:methodconst-flag t
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [6576 6622])
+                                    ("top" function
+                                       (:methodconst-flag t
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [6642 6686])
+                                    ("find" function
+                                       (:methodconst-flag t
+                                        :arguments 
+                                          ( ("ip" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("IpAddr" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [6762 6779]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [6757 6824])
+                                    ("end" function
+                                       (:methodconst-flag t
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [6844 6891])
+                                    ("private" label nil (reparse-symbol classsubparts) [6896 6904])
+                                    ("executor_heap_" variable (:type ("AssignmentHeap" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6949 6979])
+                                    ("executor_handles_" variable (:type ("ExecutorHandleMap" type (:type "class") nil nil)) (reparse-symbol classsubparts) [7033 7069]))                                  
+                                :type "class")
+                                (reparse-symbol classsubparts) [6233 7074])
+                            ("AssignmentCtx" type
+                               (:members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [7599 7606])
+                                    ("AssignmentCtx" function
+                                       (:prototype-flag t
+                                        :constructor-flag t
+                                        :arguments 
+                                          ( ("executor_config" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("BackendConfig" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [7625 7662])
+                                            ("total_assignments" variable
+                                               (:pointer 1
+                                                :type ("IntCounter" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [7663 7693])
+                                            ("total_local_assignments" variable
+                                               (:pointer 1
+                                                :type ("IntCounter" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [7702 7738]))                                          
+                                        :type ("AssignmentCtx" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [7611 7739])
+                                    ("SelectLocalExecutor" function
+                                       (:prototype-flag t
+                                        :pointer 1
+                                        :constant-flag t
+                                        :arguments 
+                                          ( ("data_locations" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::vector" type
+                                                     (:template-specifier 
+                                                        ( ("IpAddr" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [8140 8182])
+                                            ("break_ties_by_rank" variable (:type "bool") (reparse-symbol arg-sub-list) [8183 8207]))                                          
+                                        :type ("IpAddr" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [8097 8208])
+                                    ("SelectRemoteExecutor" function
+                                       (:prototype-flag t
+                                        :pointer 1
+                                        :constant-flag t
+                                        :type ("IpAddr" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [8521 8558])
+                                    ("GetNextUnusedExecutorAndIncrement" function
+                                       (:prototype-flag t
+                                        :pointer 1
+                                        :constant-flag t
+                                        :type ("IpAddr" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [8769 8819])
+                                    ("SelectExecutorOnHost" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("executor_ip" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("IpAddr" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [8941 8967])
+                                            ("executor" variable
+                                               (:pointer 1
+                                                :type ("TBackendDescriptor" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [8968 8997]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [8915 8998])
+                                    ("RecordScanRangeAssignment" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("executor" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("TBackendDescriptor" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [9427 9462])
+                                            ("node_id" variable (:type ("PlanNodeId" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9463 9482])
+                                            ("host_list" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("vector" type
+                                                     (:template-specifier 
+                                                        ( ("TNetworkAddress" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [9491 9532])
+                                            ("scan_range_locations" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("TScanRangeLocationList" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [9541 9592])
+                                            ("assignment" variable
+                                               (:pointer 1
+                                                :type ("FragmentScanRangeAssignment" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [9601 9641]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [9396 9642])
+                                    ("executor_config" function
+                                       (:methodconst-flag t
+                                        :constant-flag t
+                                        :type ("BackendConfig" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [9648 9722])
+                                    ("PrintAssignment" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("assignment" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("FragmentScanRangeAssignment" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [9807 9853]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [9786 9854])
+                                    ("private" label nil (reparse-symbol classsubparts) [9859 9867])
+                                    ("AssignmentByteCounters" type
+                                       (:members 
+                                          ( ("remote_bytes" variable
+                                               (:default-value "0"
+                                                :type ("int64_t" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [9988 10013])
+                                            ("local_bytes" variable
+                                               (:default-value "0"
+                                                :type ("int64_t" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [10020 10044])
+                                            ("cached_bytes" variable
+                                               (:default-value "0"
+                                                :type ("int64_t" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [10051 10076]))                                          
+                                        :type "struct")
+                                        (reparse-symbol classsubparts) [9950 10083])
+                                    ("executors_config_" variable
+                                       (:constant-flag t
+                                        :type ("BackendConfig" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [10170 10209])
+                                    ("assignment_heap_" variable (:type ("AddressableAssignmentHeap" type (:type "class") nil nil)) (reparse-symbol classsubparts) [10375 10418])
+                                    ("random_executor_rank_" variable (:type ("boost::unordered_map" type
+                                         (:template-specifier 
+                                            ( ("IpAddr" type nil nil nil)
+                                              ("int" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [10586 10642])
+                                    ("first_unused_executor_idx_" variable (:type "int") (reparse-symbol classsubparts) [10822 10853])
+                                    ("random_executor_order_" variable (:type ("std::vector" type
+                                         (:template-specifier 
+                                            ( ("IpAddr" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [10938 10981])
+                                    ("next_executor_per_host_" variable (:type ("NextExecutorPerHost" type (:type "class") nil nil)) (reparse-symbol classsubparts) [11044 11088])
+                                    ("assignment_byte_counters_" variable (:type ("AssignmentByteCounters" type (:type "class") nil nil)) (reparse-symbol classsubparts) [11195 11244])
+                                    ("total_assignments_" variable
+                                       (:pointer 1
+                                        :type ("IntCounter" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [11296 11327])
+                                    ("total_local_assignments_" variable
+                                       (:pointer 1
+                                        :type ("IntCounter" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [11332 11369])
+                                    ("HasUnusedExecutors" function
+                                       (:prototype-flag t
+                                        :methodconst-flag t
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [11460 11492])
+                                    ("GetExecutorRank" function
+                                       (:prototype-flag t
+                                        :methodconst-flag t
+                                        :arguments 
+                                          ( ("ip" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("IpAddr" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [11558 11575]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [11538 11582]))                                  
+                                :type "class")
+                                (reparse-symbol classsubparts) [7574 11587])
+                            ("executors_config_" variable (:type ("ExecutorsConfigPtr" type (:type "class") nil nil)) (reparse-symbol classsubparts) [11969 12006])
+                            ("coord_only_backend_config_" variable (:type ("BackendConfig" type (:type "class") nil nil)) (reparse-symbol classsubparts) [12132 12173])
+                            ("executors_config_lock_" variable
+                               (:typemodifiers ("mutable")
+                                :type ("boost::mutex" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [12296 12340])
+                            ("num_assignments_" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [12444 12469])
+                            ("BackendIdMap" type
+                               (:typedef ("boost::unordered_map" type
+                                     (:template-specifier 
+                                        ( ("std::string" type nil nil nil)
+                                          ("TBackendDescriptor" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil)
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [12956 13031])
+                            ("current_executors_" variable (:type ("BackendIdMap" type (:type "class") nil nil)) (reparse-symbol classsubparts) [13034 13066])
+                            ("metrics_" variable
+                               (:pointer 1
+                                :type ("MetricGroup" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [13105 13127])
+                            ("webserver_" variable
+                               (:pointer 1
+                                :type ("Webserver" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [13179 13201])
+                            ("statestore_subscriber_" variable
+                               (:pointer 1
+                                :type ("StatestoreSubscriber" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [13404 13449])
+                            ("local_backend_id_" variable
+                               (:constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [13525 13561])
+                            ("local_backend_descriptor_" variable (:type ("TBackendDescriptor" type (:type "class") nil nil)) (reparse-symbol classsubparts) [13633 13678])
+                            ("thrift_serializer_" variable (:type ("ThriftSerializer" type (:type "class") nil nil)) (reparse-symbol classsubparts) [13682 13718])
+                            ("total_assignments_" variable
+                               (:pointer 1
+                                :type ("IntCounter" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [13745 13776])
+                            ("total_local_assignments_" variable
+                               (:pointer 1
+                                :type ("IntCounter" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [13779 13816])
+                            ("initialized_" variable
+                               (:pointer 1
+                                :type ("BooleanProperty" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [13848 13878])
+                            ("num_fragment_instances_metric_" variable
+                               (:pointer 1
+                                :type ("IntGauge" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [13916 13957])
+                            ("request_pool_service_" variable
+                               (:pointer 1
+                                :type ("RequestPoolService" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [14059 14101])
+                            ("GetExecutorsConfig" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :type ("ExecutorsConfigPtr" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [14247 14293])
+                            ("SetExecutorsConfig" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("executors_config" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("ExecutorsConfigPtr" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [14320 14363]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [14296 14364])
+                            ("UpdateMembership" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("incoming_topic_deltas" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("StatestoreSubscriber::TopicDeltaMap" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [14475 14540])
+                                    ("subscriber_topic_updates" variable
+                                       (:pointer 1
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("TTopicDelta" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [14547 14598]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [14453 14599])
+                            ("GetRequestPool" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :arguments 
+                                  ( ("user" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [14706 14730])
+                                    ("query_options" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("TQueryOptions" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [14731 14766])
+                                    ("pool" variable
+                                       (:pointer 1
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [14773 14791]))                                  
+                                :type ("Status" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [14684 14798])
+                            ("ComputeScanRangeAssignment" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("schedule" variable
+                                       (:pointer 1
+                                        :type ("QuerySchedule" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [15210 15234]))                                  
+                                :type ("Status" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [15176 15235])
+                            ("ComputeScanRangeAssignment" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("executor_config" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("BackendConfig" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [19036 19073])
+                                    ("node_id" variable (:type ("PlanNodeId" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [19080 19099])
+                                    ("node_replica_preference" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("TReplicaPreference::type" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [19100 19156])
+                                    ("node_random_replica" variable (:type "bool") (reparse-symbol arg-sub-list) [19163 19188])
+                                    ("locations" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("TScanRangeLocationList" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [19189 19242])
+                                    ("host_list" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("TNetworkAddress" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [19249 19295])
+                                    ("exec_at_coord" variable (:type "bool") (reparse-symbol arg-sub-list) [19296 19315])
+                                    ("query_options" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("TQueryOptions" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [19322 19357])
+                                    ("timer" variable
+                                       (:pointer 1
+                                        :type ("RuntimeProfile::Counter" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [19358 19389])
+                                    ("assignment" variable
+                                       (:pointer 1
+                                        :type ("FragmentScanRangeAssignment" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [19396 19436]))                                  
+                                :type ("Status" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [19002 19437])
+                            ("ComputeBackendExecParams" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("schedule" variable
+                                       (:pointer 1
+                                        :type ("QuerySchedule" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [19600 19624]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [19570 19625])
+                            ("ComputeFragmentExecParams" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("schedule" variable
+                                       (:pointer 1
+                                        :type ("QuerySchedule" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [19867 19891]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [19836 19892])
+                            ("ComputeFragmentExecParams" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("plan_exec_info" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("TPlanExecInfo" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [20128 20164])
+                                    ("fragment_params" variable
+                                       (:pointer 1
+                                        :type ("FragmentExecParams" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [20171 20207])
+                                    ("schedule" variable
+                                       (:pointer 1
+                                        :type ("QuerySchedule" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [20208 20232]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [20097 20233])
+                            ("CreateUnionInstances" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("fragment_params" variable
+                                       (:pointer 1
+                                        :type ("FragmentExecParams" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [20879 20915])
+                                    ("schedule" variable
+                                       (:pointer 1
+                                        :type ("QuerySchedule" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [20916 20940]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [20853 20941])
+                            ("CreateScanInstances" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("scan_id" variable (:type ("PlanNodeId" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [21532 21551])
+                                    ("fragment_params" variable
+                                       (:pointer 1
+                                        :type ("FragmentExecParams" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [21552 21588])
+                                    ("schedule" variable
+                                       (:pointer 1
+                                        :type ("QuerySchedule" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [21589 21613]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [21500 21614])
+                            ("CreateCollocatedInstances" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("fragment_params" variable
+                                       (:pointer 1
+                                        :type ("FragmentExecParams" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [21853 21889])
+                                    ("schedule" variable
+                                       (:pointer 1
+                                        :type ("QuerySchedule" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [21890 21914]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [21815 21915])
+                            ("FindLeftmostNode" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("plan" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("TPlan" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [22087 22105])
+                                    ("types" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("TPlanNodeType::type" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [22106 22152]))                                  
+                                :type ("PlanNodeId" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [22052 22153])
+                            ("FindLeftmostScan" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("plan" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("TPlan" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [22211 22229]))                                  
+                                :type ("PlanNodeId" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [22183 22230])
+                            ("GetScanHosts" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("scan_id" variable (:type ("TPlanNodeId" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [22317 22337])
+                                    ("params" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("FragmentExecParams" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [22338 22371])
+                                    ("scan_hosts" variable
+                                       (:pointer 1
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("TNetworkAddress" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [22378 22419]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [22299 22420])
+                            ("ContainsNode" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("plan" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("TPlan" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [22505 22523])
+                                    ("type" variable (:type ("TPlanNodeType::type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [22524 22549]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [22487 22550])
+                            ("FindNodes" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("plan" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("TPlan" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [22636 22654])
+                                    ("types" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("TPlanNodeType::type" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [22655 22701])
+                                    ("results" variable
+                                       (:pointer 1
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("TPlanNodeId" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [22708 22742]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [22621 22743])
+                            ("impala" friend nil (reparse-symbol classsubparts) [22747 22766])
+                            ("test::SchedulerWrapper" variable (:type "int") (reparse-symbol classsubparts) [22768 22791])
+                            ("FRIEND_TEST" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("" variable (:type ("SimpleAssignmentTest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [22806 22827])
+                                    ("" variable (:type ("ComputeAssignmentDeterministicNonCached" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [22828 22868]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [22794 22869])
+                            ("FRIEND_TEST" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("" variable (:type ("SimpleAssignmentTest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [22884 22905])
+                                    ("" variable (:type ("ComputeAssignmentRandomNonCached" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [22906 22939]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [22872 22940])
+                            ("FRIEND_TEST" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("" variable (:type ("SimpleAssignmentTest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [22955 22976])
+                                    ("" variable (:type ("ComputeAssignmentRandomDiskLocal" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [22977 23010]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [22943 23011])
+                            ("FRIEND_TEST" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("" variable (:type ("SimpleAssignmentTest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [23026 23047])
+                                    ("" variable (:type ("ComputeAssignmentRandomRemote" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [23048 23078]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [23014 23079]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [3014 23082]))                  
+                :type "namespace")
+                nil [1625 23085]))          
+      :file "scheduler.h"
+      :pointmax 23094
+      :fsize 23093
+      :lastmodtime '(22940 56292 0 0)
+      :unmatched-syntax '((punctuation 22767 . 22768) (punctuation 22766 . 22767) (semantic-list 6837 . 6843) (symbol 6829 . 6837) (semantic-list 6750 . 6756) (symbol 6742 . 6750) (semantic-list 6635 . 6641) (symbol 6627 . 6635) (semantic-list 6569 . 6575) (symbol 6561 . 6569) (semantic-list 6837 . 6843) (symbol 6829 . 6837) (semantic-list 6750 . 6756) (symbol 6742 . 6750) (semantic-list 6635 . 6641) (symbol 6627 . 6635) (semantic-list 6569 . 6575) (symbol 6561 . 6569))
+      :lexical-table 
+        '(("SCHEDULING_SCHEDULER_H")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :file "backend-config.h"
+      :fsize 2971
+      :lastmodtime '(22925 26280 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "request-pool-service.h"
+      :fsize 3738
+      :lastmodtime '(22925 26280 0 0)))
+  :file "!Volumes!Transcend!Impala!be!src!scheduling!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

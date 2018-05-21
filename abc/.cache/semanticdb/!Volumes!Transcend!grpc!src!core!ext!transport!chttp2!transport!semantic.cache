@@ -1,0 +1,2128 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("GRPC_CORE_EXT_TRANSPORT_CHTTP2_TRANSPORT_VARINT_H" variable (:constant-flag t) nil [671 720])
+            ("grpc/support/port_platform.h" include (:system-flag t) nil [722 761])
+            ("GRPC_CHTTP2_WRITE_VARINT" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [1753 1777])
+            ("GRPC_CHTTP2_VARINT_LENGTH" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [1486 1511])
+            ("GRPC_CHTTP2_MAX_IN_PREFIX" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [1348 1373])
+            ("grpc_chttp2_hpack_write_varint_tail" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("tail_value" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1124 1144])
+                    ("target" variable
+                       (:pointer 1
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1145 1161])
+                    ("tail_length" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1203 1224]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [1083 1225])
+            ("grpc_chttp2_hpack_varint_length" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("uint32_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("tail_value" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1060 1080]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [1019 1081]))          
+      :file "varint.h"
+      :pointmax 2732
+      :fsize 2662
+      :lastmodtime '(23079 46125 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("GRPC_CHTTP2_WRITE_VARINT" (spp-arg-list ("n" "prefix_bits" "prefix_or" "target" "length") 1777 . 1820) . 
+              ((DO "do" 1827 . 1829) (semantic-list "{                                                                        \\
+    uint8_t* tgt = target;                                                    \\
+    if ((length) == 1u) {                                                     \\
+      (tgt)[0] = (uint8_t)((prefix_or) | (n));                                \\
+    } else {                                                                  \\
+      (tgt)[0] =                                                              \\
+          (prefix_or) | (uint8_t)GRPC_CHTTP2_MAX_IN_PREFIX(prefix_bits);      \\
+      grpc_chttp2_hpack_write_varint_tail(                                    \\
+          (n)-GRPC_CHTTP2_MAX_IN_PREFIX(prefix_bits), (tgt) + 1, (length)-1); \\
+    }                                                                         \\
+  }" 1830 . 2628) (WHILE "while" 2629 . 2634) (semantic-list "(0)" 2635 . 2638)))
+          ("GRPC_CORE_EXT_TRANSPORT_CHTTP2_TRANSPORT_VARINT_H")
+          ("GRPC_CHTTP2_MAX_IN_PREFIX" (spp-arg-list ("prefix_bits") 1373 . 1386) . ((semantic-list "((uint32_t)((1 << (8 - (prefix_bits))) - 1))" 1391 . 1435)))
+          ("GRPC_CHTTP2_VARINT_LENGTH" (spp-arg-list ("n" "prefix_bits") 1511 . 1527) . ((semantic-list "((n) < GRPC_CHTTP2_MAX_IN_PREFIX(prefix_bits)   \\
+       ? 1u                                       \\
+       : grpc_chttp2_hpack_varint_length(         \\
+             (n)-GRPC_CHTTP2_MAX_IN_PREFIX(prefix_bits)))" 1532 . 1743)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("src/core/ext/transport/chttp2/transport/chttp2_transport.h" include nil nil [605 674])
+            ("src/core/lib/debug/trace.h" include nil nil [675 712])
+            ("src/core/lib/transport/metadata.h" include nil nil [713 757])
+            ("grpc_chttp2_plugin_init" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [799 804]))                  
+                :type "void")
+                nil [770 1026])
+            ("grpc_chttp2_plugin_shutdown" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1072 1077]))                  
+                :type "void")
+                nil [1039 1080]))          
+      :file "chttp2_plugin.cc"
+      :pointmax 1081
+      :fsize 839
+      :lastmodtime '(23079 46125 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("GRPC_CORE_EXT_TRANSPORT_CHTTP2_TRANSPORT_CHTTP2_TRANSPORT_H" variable (:constant-flag t) nil [681 740])
+            ("src/core/lib/debug/trace.h" include nil nil [742 779])
+            ("src/core/lib/iomgr/endpoint.h" include nil nil [780 820])
+            ("src/core/lib/transport/transport.h" include nil nil [821 866])
+            ("grpc_http_trace" variable
+               (:typemodifiers ("extern")
+                :type ("grpc_core::TraceFlag" type (:type "class") nil nil))
+                nil [868 912])
+            ("grpc_trace_http2_stream_state" variable
+               (:typemodifiers ("extern")
+                :type ("grpc_core::TraceFlag" type (:type "class") nil nil))
+                nil [913 971])
+            ("grpc_trace_chttp2_refcount" variable
+               (:typemodifiers ("extern")
+                :type ("grpc_core::DebugOnlyTraceFlag" type (:type "class") nil nil))
+                nil [972 1036])
+            ("grpc_create_chttp2_transport" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("channel_args" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grpc_channel_args" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1088 1126])
+                    ("ep" variable
+                       (:pointer 1
+                        :type ("grpc_endpoint" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1127 1145])
+                    ("is_client" variable (:type "bool") (reparse-symbol arg-sub-list) [1146 1161]))                  
+                :type ("grpc_transport" type (:type "class") nil nil))
+                nil [1038 1162])
+            ("grpc_chttp2_transport_start_reading" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("transport" variable
+                       (:pointer 1
+                        :type ("grpc_transport" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1473 1499])
+                    ("read_buffer" variable
+                       (:pointer 1
+                        :type ("grpc_slice_buffer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1500 1531])
+                    ("notify_on_receive_settings" variable
+                       (:pointer 1
+                        :type ("grpc_closure" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1536 1577]))                  
+                :type "void")
+                nil [1427 1578]))          
+      :file "chttp2_transport.h"
+      :pointmax 1653
+      :fsize 1652
+      :lastmodtime '(23085 58367 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("GRPC_CORE_EXT_TRANSPORT_CHTTP2_TRANSPORT_CHTTP2_TRANSPORT_H")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("src/core/ext/transport/chttp2/transport/chttp2_transport.h" include nil nil [605 674])
+            ("grpc/support/port_platform.h" include (:system-flag t) nil [676 715])
+            ("inttypes.h" include (:system-flag t) nil [717 738])
+            ("limits.h" include (:system-flag t) nil [739 758])
+            ("math.h" include (:system-flag t) nil [759 776])
+            ("stdio.h" include (:system-flag t) nil [777 795])
+            ("string.h" include (:system-flag t) nil [796 815])
+            ("grpc/slice_buffer.h" include (:system-flag t) nil [817 847])
+            ("grpc/support/alloc.h" include (:system-flag t) nil [848 879])
+            ("grpc/support/log.h" include (:system-flag t) nil [880 909])
+            ("grpc/support/string_util.h" include (:system-flag t) nil [910 947])
+            ("grpc/support/useful.h" include (:system-flag t) nil [948 980])
+            ("src/core/ext/transport/chttp2/transport/frame_data.h" include nil nil [982 1045])
+            ("src/core/ext/transport/chttp2/transport/internal.h" include nil nil [1046 1107])
+            ("src/core/ext/transport/chttp2/transport/varint.h" include nil nil [1108 1167])
+            ("src/core/lib/channel/channel_args.h" include nil nil [1168 1214])
+            ("src/core/lib/compression/stream_compression.h" include nil nil [1215 1271])
+            ("src/core/lib/debug/stats.h" include nil nil [1272 1309])
+            ("src/core/lib/http/parser.h" include nil nil [1310 1347])
+            ("src/core/lib/iomgr/executor.h" include nil nil [1348 1388])
+            ("src/core/lib/iomgr/timer.h" include nil nil [1389 1426])
+            ("src/core/lib/profiling/timers.h" include nil nil [1427 1469])
+            ("src/core/lib/slice/slice_internal.h" include nil nil [1470 1516])
+            ("src/core/lib/slice/slice_string_helpers.h" include nil nil [1517 1569])
+            ("src/core/lib/support/env.h" include nil nil [1570 1607])
+            ("src/core/lib/support/string.h" include nil nil [1608 1648])
+            ("src/core/lib/transport/error_utils.h" include nil nil [1649 1696])
+            ("src/core/lib/transport/http2_errors.h" include nil nil [1697 1745])
+            ("src/core/lib/transport/static_metadata.h" include nil nil [1746 1797])
+            ("src/core/lib/transport/status_conversion.h" include nil nil [1798 1851])
+            ("src/core/lib/transport/timeout_encoding.h" include nil nil [1852 1904])
+            ("src/core/lib/transport/transport.h" include nil nil [1905 1950])
+            ("src/core/lib/transport/transport_impl.h" include nil nil [1951 2001])
+            ("DEFAULT_CONNECTION_WINDOW_TARGET" variable (:constant-flag t) nil [2011 2043])
+            ("MAX_WINDOW" variable (:constant-flag t) nil [2066 2076])
+            ("MAX_WRITE_BUFFER_SIZE" variable (:constant-flag t) nil [2097 2118])
+            ("DEFAULT_MAX_HEADER_LIST_SIZE" variable (:constant-flag t) nil [2146 2174])
+            ("DEFAULT_CLIENT_KEEPALIVE_TIME_MS" variable (:constant-flag t) nil [2195 2227])
+            ("DEFAULT_CLIENT_KEEPALIVE_TIMEOUT_MS" variable (:constant-flag t) nil [2244 2279])
+            ("DEFAULT_SERVER_KEEPALIVE_TIME_MS" variable (:constant-flag t) nil [2311 2343])
+            ("DEFAULT_SERVER_KEEPALIVE_TIMEOUT_MS" variable (:constant-flag t) nil [2375 2410])
+            ("DEFAULT_KEEPALIVE_PERMIT_WITHOUT_CALLS" variable (:constant-flag t) nil [2442 2480])
+            ("KEEPALIVE_TIME_BACKOFF_MULTIPLIER" variable (:constant-flag t) nil [2495 2528])
+            ("DEFAULT_MIN_SENT_PING_INTERVAL_WITHOUT_DATA_MS" variable (:constant-flag t) nil [2540 2586])
+            ("DEFAULT_MIN_RECV_PING_INTERVAL_WITHOUT_DATA_MS" variable (:constant-flag t) nil [2618 2664])
+            ("DEFAULT_MAX_PINGS_BETWEEN_DATA" variable (:constant-flag t) nil [2696 2726])
+            ("DEFAULT_MAX_PING_STRIKES" variable (:constant-flag t) nil [2774 2798])
+            ("g_default_client_keepalive_time_ms" variable
+               (:typemodifiers ("static")
+                :default-value "DEFAULT_CLIENT_KEEPALIVE_TIME_MS"
+                :type "int")
+                nil [2802 2887])
+            ("g_default_client_keepalive_timeout_ms" variable
+               (:typemodifiers ("static")
+                :default-value "DEFAULT_CLIENT_KEEPALIVE_TIMEOUT_MS"
+                :type "int")
+                nil [2888 2979])
+            ("g_default_server_keepalive_time_ms" variable
+               (:typemodifiers ("static")
+                :default-value "DEFAULT_SERVER_KEEPALIVE_TIME_MS"
+                :type "int")
+                nil [2980 3065])
+            ("g_default_server_keepalive_timeout_ms" variable
+               (:typemodifiers ("static")
+                :default-value "DEFAULT_SERVER_KEEPALIVE_TIMEOUT_MS"
+                :type "int")
+                nil [3066 3157])
+            ("g_default_keepalive_permit_without_calls" variable
+               (:typemodifiers ("static")
+                :default-value "DEFAULT_KEEPALIVE_PERMIT_WITHOUT_CALLS"
+                :type "bool")
+                nil [3158 3256])
+            ("g_default_min_sent_ping_interval_without_data_ms" variable
+               (:typemodifiers ("static")
+                :default-value "DEFAULT_MIN_SENT_PING_INTERVAL_WITHOUT_DATA_MS"
+                :type "int")
+                nil [3258 3371])
+            ("g_default_min_recv_ping_interval_without_data_ms" variable
+               (:typemodifiers ("static")
+                :default-value "DEFAULT_MIN_RECV_PING_INTERVAL_WITHOUT_DATA_MS"
+                :type "int")
+                nil [3372 3485])
+            ("g_default_max_pings_without_data" variable
+               (:typemodifiers ("static")
+                :default-value "DEFAULT_MAX_PINGS_BETWEEN_DATA"
+                :type "int")
+                nil [3486 3563])
+            ("g_default_max_ping_strikes" variable
+               (:typemodifiers ("static")
+                :default-value "DEFAULT_MAX_PING_STRIKES"
+                :type "int")
+                nil [3564 3629])
+            ("MAX_CLIENT_STREAM_ID" variable (:constant-flag t) nil [3639 3659])
+            ("grpc_http_trace" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("false" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3709 3715]))                  
+                :type ("grpc_core::TraceFlag" type (:type "class") nil nil))
+                nil [3672 3724])
+            ("grpc_trace_chttp2_refcount" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("false" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3782 3788]))                  
+                :type ("grpc_core::DebugOnlyTraceFlag" type (:type "class") nil nil))
+                nil [3725 3865])
+            ("write_action_begin_locked" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("t" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3986 3994])
+                    ("error" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3995 4013]))                  
+                :type "void")
+                nil [3948 4014])
+            ("write_action" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("t" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4040 4048])
+                    ("error" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4049 4067]))                  
+                :type "void")
+                nil [4015 4068])
+            ("write_action_end_locked" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("t" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4105 4113])
+                    ("error" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4114 4132]))                  
+                :type "void")
+                nil [4069 4133])
+            ("read_action_locked" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("t" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4166 4174])
+                    ("error" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4175 4193]))                  
+                :type "void")
+                nil [4135 4194])
+            ("complete_fetch_locked" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("gs" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4230 4239])
+                    ("error" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4240 4258]))                  
+                :type "void")
+                nil [4196 4259])
+            ("queue_setting_update" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("t" variable
+                       (:pointer 1
+                        :type ("grpc_chttp2_transport" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4355 4380])
+                    ("id" variable (:type ("grpc_chttp2_setting_id" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4414 4440])
+                    ("value" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4441 4456]))                  
+                :type "void")
+                nil [4322 4457])
+            ("close_from_api" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("t" variable
+                       (:pointer 1
+                        :type ("grpc_chttp2_transport" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4486 4511])
+                    ("s" variable
+                       (:pointer 1
+                        :type ("grpc_chttp2_stream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4512 4534])
+                    ("error" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4562 4580]))                  
+                :type "void")
+                nil [4459 4581])
+            ("maybe_start_some_streams" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("t" variable
+                       (:pointer 1
+                        :type ("grpc_chttp2_transport" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4678 4703]))                  
+                :type "void")
+                nil [4641 4704])
+            ("connectivity_state_set" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("t" variable
+                       (:pointer 1
+                        :type ("grpc_chttp2_transport" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4741 4766])
+                    ("state" variable (:type ("grpc_connectivity_state" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4802 4832])
+                    ("error" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4868 4886])
+                    ("reason" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4887 4906]))                  
+                :type "void")
+                nil [4706 4907])
+            ("incoming_byte_stream_destroy_locked" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("byte_stream" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4957 4975])
+                    ("error_ignored" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5024 5050]))                  
+                :type "void")
+                nil [4909 5051])
+            ("incoming_byte_stream_publish_error" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("bs" variable
+                       (:pointer 1
+                        :type ("grpc_chttp2_incoming_byte_stream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5104 5141])
+                    ("error" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5142 5160]))                  
+                :type "void")
+                nil [5052 5161])
+            ("incoming_byte_stream_unref" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("bs" variable
+                       (:pointer 1
+                        :type ("grpc_chttp2_incoming_byte_stream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5201 5238]))                  
+                :type "void")
+                nil [5162 5239])
+            ("benign_reclaimer_locked" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("t" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [5277 5285])
+                    ("error" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5286 5304]))                  
+                :type "void")
+                nil [5241 5305])
+            ("destructive_reclaimer_locked" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("t" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [5347 5355])
+                    ("error" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5356 5374]))                  
+                :type "void")
+                nil [5306 5375])
+            ("post_benign_reclaimer" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("t" variable
+                       (:pointer 1
+                        :type ("grpc_chttp2_transport" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5411 5436]))                  
+                :type "void")
+                nil [5377 5437])
+            ("post_destructive_reclaimer" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("t" variable
+                       (:pointer 1
+                        :type ("grpc_chttp2_transport" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5477 5502]))                  
+                :type "void")
+                nil [5438 5503])
+            ("close_transport_locked" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("t" variable
+                       (:pointer 1
+                        :type ("grpc_chttp2_transport" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5540 5565])
+                    ("error" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5566 5584]))                  
+                :type "void")
+                nil [5505 5585])
+            ("end_all_the_calls" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("t" variable
+                       (:pointer 1
+                        :type ("grpc_chttp2_transport" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5616 5641])
+                    ("error" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5642 5660]))                  
+                :type "void")
+                nil [5586 5661])
+            ("schedule_bdp_ping_locked" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("t" variable
+                       (:pointer 1
+                        :type ("grpc_chttp2_transport" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5700 5725]))                  
+                :type "void")
+                nil [5663 5726])
+            ("start_bdp_ping_locked" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("tp" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [5761 5770])
+                    ("error" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5771 5789]))                  
+                :type "void")
+                nil [5727 5790])
+            ("finish_bdp_ping_locked" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("tp" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [5826 5835])
+                    ("error" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5836 5854]))                  
+                :type "void")
+                nil [5791 5855])
+            ("next_bdp_ping_timer_expired_locked" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("tp" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [5903 5912])
+                    ("error" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5913 5931]))                  
+                :type "void")
+                nil [5856 5932])
+            ("cancel_pings" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("t" variable
+                       (:pointer 1
+                        :type ("grpc_chttp2_transport" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5959 5984])
+                    ("error" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5985 6003]))                  
+                :type "void")
+                nil [5934 6004])
+            ("send_ping_locked" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("t" variable
+                       (:pointer 1
+                        :type ("grpc_chttp2_transport" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6034 6059])
+                    ("on_initiate" variable
+                       (:pointer 1
+                        :type ("grpc_closure" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6089 6115])
+                    ("on_complete" variable
+                       (:pointer 1
+                        :type ("grpc_closure" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6145 6171]))                  
+                :type "void")
+                nil [6005 6172])
+            ("retry_initiate_ping_locked" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("tp" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [6212 6221])
+                    ("error" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6222 6240]))                  
+                :type "void")
+                nil [6173 6241])
+            ("init_keepalive_ping_locked" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [6318 6328])
+                    ("error" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6329 6347]))                  
+                :type "void")
+                nil [6279 6348])
+            ("start_keepalive_ping_locked" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [6389 6399])
+                    ("error" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6400 6418]))                  
+                :type "void")
+                nil [6349 6419])
+            ("finish_keepalive_ping_locked" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [6461 6471])
+                    ("error" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6472 6490]))                  
+                :type "void")
+                nil [6420 6491])
+            ("keepalive_watchdog_fired_locked" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [6536 6546])
+                    ("error" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6547 6565]))                  
+                :type "void")
+                nil [6492 6566])
+            ("reset_byte_stream" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [6598 6608])
+                    ("error" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6609 6627]))                  
+                :type "void")
+                nil [6568 6628])
+            ("destruct_transport" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("t" variable
+                       (:pointer 1
+                        :type ("grpc_chttp2_transport" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6787 6812]))                  
+                :type "void")
+                nil [6756 7985])
+            ("grpc_chttp2_unref_transport" function
+               (:arguments 
+                  ( ("t" variable
+                       (:pointer 1
+                        :type ("grpc_chttp2_transport" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8035 8060])
+                    ("reason" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [8061 8080])
+                    ("file" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [8114 8131])
+                    ("line" variable (:type "int") (reparse-symbol arg-sub-list) [8132 8141]))                  
+                :type "void")
+                nil [8002 8445])
+            ("grpc_chttp2_ref_transport" function
+               (:arguments 
+                  ( ("t" variable
+                       (:pointer 1
+                        :type ("grpc_chttp2_transport" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8478 8503])
+                    ("reason" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [8504 8523])
+                    ("file" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [8555 8572])
+                    ("line" variable (:type "int") (reparse-symbol arg-sub-list) [8573 8582]))                  
+                :type "void")
+                nil [8447 8846])
+            ("get_vtable" function
+               (:prototype-flag t
+                :pointer 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [9113 9118]))                  
+                :type ("grpc_transport_vtable" type (:type "class") nil nil))
+                nil [9066 9119])
+            ("init_transport" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("t" variable
+                       (:pointer 1
+                        :type ("grpc_chttp2_transport" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9148 9173])
+                    ("channel_args" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grpc_channel_args" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9201 9239])
+                    ("ep" variable
+                       (:pointer 1
+                        :type ("grpc_endpoint" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9267 9285])
+                    ("is_client" variable (:type "bool") (reparse-symbol arg-sub-list) [9286 9301]))                  
+                :type "void")
+                nil [9121 23633])
+            ("destroy_transport_locked" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("tp" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [23672 23681])
+                    ("error" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [23682 23700]))                  
+                :type "void")
+                nil [23635 24025])
+            ("destroy_transport" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("gt" variable
+                       (:pointer 1
+                        :type ("grpc_transport" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [24057 24076]))                  
+                :type "void")
+                nil [24027 24326])
+            ("close_transport_locked" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("t" variable
+                       (:pointer 1
+                        :type ("grpc_chttp2_transport" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [24363 24388])
+                    ("error" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [24424 24442]))                  
+                :type "void")
+                nil [24328 26673])
+            ("grpc_chttp2_stream_ref" function
+               (:arguments 
+                  ( ("s" variable
+                       (:pointer 1
+                        :type ("grpc_chttp2_stream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [26718 26740])
+                    ("reason" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [26741 26760]))                  
+                :type "void")
+                nil [26690 26804])
+            ("grpc_chttp2_stream_unref" function
+               (:arguments 
+                  ( ("s" variable
+                       (:pointer 1
+                        :type ("grpc_chttp2_stream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [26835 26857])
+                    ("reason" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [26858 26877]))                  
+                :type "void")
+                nil [26805 26923])
+            ("init_stream" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("gt" variable
+                       (:pointer 1
+                        :type ("grpc_transport" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [27139 27158])
+                    ("gs" variable
+                       (:pointer 1
+                        :type ("grpc_stream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [27159 27175])
+                    ("refcount" variable
+                       (:pointer 1
+                        :type ("grpc_stream_refcount" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [27199 27230])
+                    ("server_data" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [27231 27255])
+                    ("arena" variable
+                       (:pointer 1
+                        :type ("gpr_arena" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [27279 27296]))                  
+                :type "int")
+                nil [27116 28855])
+            ("destroy_stream_locked" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("sp" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [28891 28900])
+                    ("error" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [28901 28919]))                  
+                :type "void")
+                nil [28857 30728])
+            ("destroy_stream" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("gt" variable
+                       (:pointer 1
+                        :type ("grpc_transport" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [30757 30776])
+                    ("gs" variable
+                       (:pointer 1
+                        :type ("grpc_stream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [30777 30793])
+                    ("then_schedule_closure" variable
+                       (:pointer 1
+                        :type ("grpc_closure" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [30821 30857]))                  
+                :type "void")
+                nil [30730 31609])
+            ("grpc_chttp2_parsing_lookup_stream" function
+               (:pointer 1
+                :arguments 
+                  ( ("t" variable
+                       (:pointer 1
+                        :type ("grpc_chttp2_transport" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [31665 31690])
+                    ("id" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [31745 31757]))                  
+                :type ("grpc_chttp2_stream" type (:type "class") nil nil))
+                nil [31611 31840])
+            ("grpc_chttp2_parsing_accept_stream" function
+               (:pointer 1
+                :arguments 
+                  ( ("t" variable
+                       (:pointer 1
+                        :type ("grpc_chttp2_transport" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [31896 31921])
+                    ("id" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [31976 31988]))                  
+                :type ("grpc_chttp2_stream" type (:type "class") nil nil))
+                nil [31842 32388])
+            ("write_state_name" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :arguments 
+                  ( ("st" variable (:type ("grpc_chttp2_write_state" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [32533 32560]))                  
+                :type "char")
+                nil [32497 32833])
+            ("set_write_state" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("t" variable
+                       (:pointer 1
+                        :type ("grpc_chttp2_transport" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [32863 32888])
+                    ("st" variable (:type ("grpc_chttp2_write_state" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [32917 32944])
+                    ("reason" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [32945 32964]))                  
+                :type "void")
+                nil [32835 33590])
+            ("inc_initiate_write_reason" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("reason" variable (:type ("grpc_chttp2_initiate_write_reason" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [33635 33676]))                  
+                :type "void")
+                nil [33592 36500])
+            ("grpc_chttp2_initiate_write" function
+               (:arguments 
+                  ( ("t" variable
+                       (:pointer 1
+                        :type ("grpc_chttp2_transport" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [36534 36559])
+                    ("reason" variable (:type ("grpc_chttp2_initiate_write_reason" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [36592 36633]))                  
+                :type "void")
+                nil [36502 37591])
+            ("grpc_chttp2_mark_stream_writable" function
+               (:arguments 
+                  ( ("t" variable
+                       (:pointer 1
+                        :type ("grpc_chttp2_transport" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [37631 37656])
+                    ("s" variable
+                       (:pointer 1
+                        :type ("grpc_chttp2_stream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [37695 37717]))                  
+                :type "void")
+                nil [37593 37882])
+            ("write_scheduler" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("t" variable
+                       (:pointer 1
+                        :type ("grpc_chttp2_transport" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [37931 37956])
+                    ("early_results_scheduled" variable (:type "bool") (reparse-symbol arg-sub-list) [38004 38033])
+                    ("partial_write" variable (:type "bool") (reparse-symbol arg-sub-list) [38081 38100]))                  
+                :type ("grpc_closure_scheduler" type (:type "class") nil nil))
+                nil [37884 39111])
+            ("WRITE_STATE_TUPLE_TO_INT" variable (:constant-flag t) nil [39121 39145])
+            ("begin_writing_desc" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :arguments 
+                  ( ("partial" variable (:type "bool") (reparse-symbol arg-sub-list) [39216 39229])
+                    ("inlined" variable (:type "bool") (reparse-symbol arg-sub-list) [39230 39243]))                  
+                :type "char")
+                nil [39178 39741])
+            ("write_action_begin_locked" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("gt" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [39781 39790])
+                    ("error_ignored" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [39791 39817]))                  
+                :type "void")
+                nil [39743 41132])
+            ("write_action" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("gt" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [41159 41168])
+                    ("error" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [41169 41187]))                  
+                :type "void")
+                nil [41134 41515])
+            ("write_action_end_locked" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("tp" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [41553 41562])
+                    ("error" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [41563 41581]))                  
+                :type "void")
+                nil [41517 43037])
+            ("queue_setting_update" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("t" variable
+                       (:pointer 1
+                        :type ("grpc_chttp2_transport" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [43220 43245])
+                    ("id" variable (:type ("grpc_chttp2_setting_id" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [43279 43305])
+                    ("value" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [43306 43321]))                  
+                :type "void")
+                nil [43187 43780])
+            ("grpc_chttp2_add_incoming_goaway" function
+               (:arguments 
+                  ( ("t" variable
+                       (:pointer 1
+                        :type ("grpc_chttp2_transport" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [43819 43844])
+                    ("goaway_error" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [43882 43904])
+                    ("goaway_text" variable (:type ("grpc_slice" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [43942 43965]))                  
+                :type "void")
+                nil [43782 45591])
+            ("maybe_start_some_streams" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("t" variable
+                       (:pointer 1
+                        :type ("grpc_chttp2_transport" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [45630 45655]))                  
+                :type "void")
+                nil [45593 47247])
+            ("CLOSURE_BARRIER_STATS_BIT" variable (:constant-flag t) nil [47337 47362])
+            ("CLOSURE_BARRIER_MAY_COVER_WRITE" variable (:constant-flag t) nil [47552 47583])
+            ("CLOSURE_BARRIER_FIRST_REF_BIT" variable (:constant-flag t) nil [47729 47758])
+            ("add_closure_barrier" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("closure" variable
+                       (:pointer 1
+                        :type ("grpc_closure" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [47811 47833]))                  
+                :type ("grpc_closure" type (:type "class") nil nil))
+                nil [47770 47918])
+            ("null_then_run_closure" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("closure" variable
+                       (:pointer 2
+                        :type ("grpc_closure" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [47954 47977])
+                    ("error" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [47978 47996]))                  
+                :type "void")
+                nil [47920 48082])
+            ("grpc_chttp2_complete_closure_step" function
+               (:arguments 
+                  ( ("t" variable
+                       (:pointer 1
+                        :type ("grpc_chttp2_transport" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [48123 48148])
+                    ("s" variable
+                       (:pointer 1
+                        :type ("grpc_chttp2_stream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [48188 48210])
+                    ("pclosure" variable
+                       (:pointer 2
+                        :type ("grpc_closure" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [48250 48274])
+                    ("error" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [48314 48332])
+                    ("desc" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [48333 48350]))                  
+                :type "void")
+                nil [48084 50090])
+            ("contains_non_ok_status" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("batch" variable
+                       (:pointer 1
+                        :type ("grpc_metadata_batch" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [50127 50154]))                  
+                :type "bool")
+                nil [50092 50343])
+            ("maybe_become_writable_due_to_send_msg" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("t" variable
+                       (:pointer 1
+                        :type ("grpc_chttp2_transport" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [50395 50420])
+                    ("s" variable
+                       (:pointer 1
+                        :type ("grpc_chttp2_stream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [50471 50493]))                  
+                :type "void")
+                nil [50345 50746])
+            ("add_fetched_slice_locked" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("t" variable
+                       (:pointer 1
+                        :type ("grpc_chttp2_transport" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [50785 50810])
+                    ("s" variable
+                       (:pointer 1
+                        :type ("grpc_chttp2_stream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [50848 50870]))                  
+                :type "void")
+                nil [50748 51083])
+            ("continue_fetching_send_locked" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("t" variable
+                       (:pointer 1
+                        :type ("grpc_chttp2_transport" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [51127 51152])
+                    ("s" variable
+                       (:pointer 1
+                        :type ("grpc_chttp2_stream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [51195 51217]))                  
+                :type "void")
+                nil [51085 53018])
+            ("complete_fetch_locked" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("gs" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [53054 53063])
+                    ("error" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [53064 53082]))                  
+                :type "void")
+                nil [53020 53552])
+            ("do_nothing" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [53577 53587])
+                    ("error" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [53588 53606]))                  
+                :type "void")
+                nil [53554 53609])
+            ("log_metadata" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("md_batch" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grpc_metadata_batch" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [53636 53672])
+                    ("id" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [53673 53685])
+                    ("is_client" variable (:type "bool") (reparse-symbol arg-sub-list) [53711 53726])
+                    ("is_initial" variable (:type "bool") (reparse-symbol arg-sub-list) [53727 53743]))                  
+                :type "void")
+                nil [53611 54138])
+            ("perform_stream_op_locked" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("stream_op" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [54177 54193])
+                    ("error_ignored" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [54231 54257]))                  
+                :type "void")
+                nil [54140 66187])
+            ("perform_stream_op" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("gt" variable
+                       (:pointer 1
+                        :type ("grpc_transport" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [66219 66238])
+                    ("gs" variable
+                       (:pointer 1
+                        :type ("grpc_stream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [66239 66255])
+                    ("op" variable
+                       (:pointer 1
+                        :type ("grpc_transport_stream_op_batch" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [66286 66321]))                  
+                :type "void")
+                nil [66189 67419])
+            ("cancel_pings" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("t" variable
+                       (:pointer 1
+                        :type ("grpc_chttp2_transport" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [67446 67471])
+                    ("error" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [67472 67490]))                  
+                :type "void")
+                nil [67421 67919])
+            ("send_ping_locked" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("t" variable
+                       (:pointer 1
+                        :type ("grpc_chttp2_transport" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [67950 67975])
+                    ("on_initiate" variable
+                       (:pointer 1
+                        :type ("grpc_closure" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [68005 68031])
+                    ("on_ack" variable
+                       (:pointer 1
+                        :type ("grpc_closure" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [68032 68053]))                  
+                :type "void")
+                nil [67921 68551])
+            ("retry_initiate_ping_locked" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("tp" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [68592 68601])
+                    ("error" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [68602 68620]))                  
+                :type "void")
+                nil [68553 68849])
+            ("grpc_chttp2_ack_ping" function
+               (:arguments 
+                  ( ("t" variable
+                       (:pointer 1
+                        :type ("grpc_chttp2_transport" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [68877 68902])
+                    ("id" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [68903 68915]))                  
+                :type "void")
+                nil [68851 69372])
+            ("send_goaway" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("t" variable
+                       (:pointer 1
+                        :type ("grpc_chttp2_transport" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [69398 69423])
+                    ("error" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [69424 69442]))                  
+                :type "void")
+                nil [69374 69925])
+            ("grpc_chttp2_add_ping_strike" function
+               (:arguments 
+                  ( ("t" variable
+                       (:pointer 1
+                        :type ("grpc_chttp2_transport" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [69960 69985]))                  
+                :type "void")
+                nil [69927 70626])
+            ("perform_transport_op_locked" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("stream_op" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [70668 70684])
+                    ("error_ignored" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [70725 70751]))                  
+                :type "void")
+                nil [70628 72040])
+            ("perform_transport_op" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("gt" variable
+                       (:pointer 1
+                        :type ("grpc_transport" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [72075 72094])
+                    ("op" variable
+                       (:pointer 1
+                        :type ("grpc_transport_op" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [72095 72117]))                  
+                :type "void")
+                nil [72042 72583])
+            ("grpc_chttp2_maybe_complete_recv_initial_metadata" function
+               (:arguments 
+                  ( ("t" variable
+                       (:pointer 1
+                        :type ("grpc_chttp2_transport" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [72755 72780])
+                    ("s" variable
+                       (:pointer 1
+                        :type ("grpc_chttp2_stream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [72835 72857]))                  
+                :type "void")
+                nil [72701 73457])
+            ("grpc_chttp2_maybe_complete_recv_message" function
+               (:arguments 
+                  ( ("t" variable
+                       (:pointer 1
+                        :type ("grpc_chttp2_transport" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [73504 73529])
+                    ("s" variable
+                       (:pointer 1
+                        :type ("grpc_chttp2_stream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [73575 73597]))                  
+                :type "void")
+                nil [73459 77027])
+            ("grpc_chttp2_maybe_complete_recv_trailing_metadata" function
+               (:arguments 
+                  ( ("t" variable
+                       (:pointer 1
+                        :type ("grpc_chttp2_transport" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [77084 77109])
+                    ("s" variable
+                       (:pointer 1
+                        :type ("grpc_chttp2_stream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [77165 77187]))                  
+                :type "void")
+                nil [77029 79446])
+            ("remove_stream" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("t" variable
+                       (:pointer 1
+                        :type ("grpc_chttp2_transport" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [79474 79499])
+                    ("id" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [79500 79512])
+                    ("error" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [79539 79557]))                  
+                :type "void")
+                nil [79448 80827])
+            ("grpc_chttp2_cancel_stream" function
+               (:arguments 
+                  ( ("t" variable
+                       (:pointer 1
+                        :type ("grpc_chttp2_transport" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [80860 80885])
+                    ("s" variable
+                       (:pointer 1
+                        :type ("grpc_chttp2_stream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [80886 80908])
+                    ("due_to_error" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [80940 80965]))                  
+                :type "void")
+                nil [80829 81781])
+            ("grpc_chttp2_fake_status" function
+               (:arguments 
+                  ( ("t" variable
+                       (:pointer 1
+                        :type ("grpc_chttp2_transport" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [81812 81837])
+                    ("s" variable
+                       (:pointer 1
+                        :type ("grpc_chttp2_stream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [81838 81860])
+                    ("error" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [81890 81908]))                  
+                :type "void")
+                nil [81783 83504])
+            ("add_error" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("error" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [83528 83546])
+                    ("refs" variable
+                       (:pointer 2
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [83547 83565])
+                    ("nrefs" variable
+                       (:pointer 1
+                        :type ("size_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [83566 83580]))                  
+                :type "void")
+                nil [83506 83752])
+            ("removal_error" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("extra_error" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [83787 83811])
+                    ("s" variable
+                       (:pointer 1
+                        :type ("grpc_chttp2_stream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [83812 83834])
+                    ("master_error_msg" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [83868 83897]))                  
+                :type ("grpc_error" type (:type "class") nil nil))
+                nil [83754 84348])
+            ("flush_write_list" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("t" variable
+                       (:pointer 1
+                        :type ("grpc_chttp2_transport" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [84379 84404])
+                    ("s" variable
+                       (:pointer 1
+                        :type ("grpc_chttp2_stream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [84405 84427])
+                    ("list" variable
+                       (:pointer 2
+                        :type ("grpc_chttp2_write_cb" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [84457 84485])
+                    ("error" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [84486 84504]))                  
+                :type "void")
+                nil [84350 84821])
+            ("grpc_chttp2_fail_pending_writes" function
+               (:arguments 
+                  ( ("t" variable
+                       (:pointer 1
+                        :type ("grpc_chttp2_transport" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [84860 84885])
+                    ("s" variable
+                       (:pointer 1
+                        :type ("grpc_chttp2_stream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [84923 84945])
+                    ("error" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [84946 84964]))                  
+                :type "void")
+                nil [84823 85936])
+            ("grpc_chttp2_mark_stream_closed" function
+               (:arguments 
+                  ( ("t" variable
+                       (:pointer 1
+                        :type ("grpc_chttp2_transport" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [85974 85999])
+                    ("s" variable
+                       (:pointer 1
+                        :type ("grpc_chttp2_stream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [86036 86058])
+                    ("close_reads" variable (:type "int") (reparse-symbol arg-sub-list) [86059 86075])
+                    ("close_writes" variable (:type "int") (reparse-symbol arg-sub-list) [86112 86129])
+                    ("error" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [86130 86148]))                  
+                :type "void")
+                nil [85938 87719])
+            ("close_from_api" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("t" variable
+                       (:pointer 1
+                        :type ("grpc_chttp2_transport" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [87748 87773])
+                    ("s" variable
+                       (:pointer 1
+                        :type ("grpc_chttp2_stream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [87774 87796])
+                    ("error" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [87824 87842]))                  
+                :type "void")
+                nil [87721 92200])
+            ("cancel_stream_cb_args" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("error" variable
+                             (:pointer 1
+                              :type ("grpc_error" type (:type "class") nil nil))
+                              (reparse-symbol classsubparts) [92221 92239])
+                          ("t" variable
+                             (:pointer 1
+                              :type ("grpc_chttp2_transport" type (:type "class") nil nil))
+                              (reparse-symbol classsubparts) [92242 92267]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [92202 92292])
+            ("cancel_stream_cb" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("user_data" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [92323 92339])
+                    ("key" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [92340 92353])
+                    ("stream" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [92354 92367]))                  
+                :type "void")
+                nil [92294 92563])
+            ("end_all_the_calls" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("t" variable
+                       (:pointer 1
+                        :type ("grpc_chttp2_transport" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [92595 92620])
+                    ("error" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [92621 92639]))                  
+                :type "void")
+                nil [92565 92789])
+            ("WithUrgency" function
+               (:template 
+                  ( ("F" type (:type "class") nil nil))                  
+                :type "void"
+                :arguments 
+                  ( ("t" variable
+                       (:pointer 1
+                        :type ("grpc_chttp2_transport" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [92950 92975])
+                    ("urgency" variable (:type ("grpc_core::chttp2::FlowControlAction::Urgency" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [93000 93054])
+                    ("reason" variable (:type ("grpc_chttp2_initiate_write_reason" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [93079 93120])
+                    ("action" variable (:type ("F" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [93121 93130]))                  
+                :typemodifiers ("static"))
+                nil [92907 93485])
+            ("grpc_chttp2_act_on_flowctl_action" function
+               (:arguments 
+                  ( ("action" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("grpc_core::chttp2::FlowControlAction" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [93531 93582])
+                    ("t" variable
+                       (:pointer 1
+                        :type ("grpc_chttp2_transport" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [93587 93612])
+                    ("s" variable
+                       (:pointer 1
+                        :type ("grpc_chttp2_stream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [93613 93635]))                  
+                :type "void")
+                nil [93487 94557])
+            ("try_http_parsing" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("t" variable
+                       (:pointer 1
+                        :type ("grpc_chttp2_transport" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [94595 94620]))                  
+                :type ("grpc_error" type (:type "class") nil nil))
+                nil [94559 95614])
+            ("read_action_locked" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("tp" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [95647 95656])
+                    ("error" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [95657 95675]))                  
+                :type "void")
+                nil [95616 98896])
+            ("schedule_bdp_ping_locked" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("t" variable
+                       (:pointer 1
+                        :type ("grpc_chttp2_transport" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [99053 99078]))                  
+                :type "void")
+                nil [99016 99212])
+            ("start_bdp_ping_locked" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("tp" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [99248 99257])
+                    ("error" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [99258 99276]))                  
+                :type "void")
+                nil [99214 99691])
+            ("finish_bdp_ping_locked" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("tp" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [99728 99737])
+                    ("error" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [99738 99756]))                  
+                :type "void")
+                nil [99693 100455])
+            ("next_bdp_ping_timer_expired_locked" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("tp" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [100504 100513])
+                    ("error" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [100514 100532]))                  
+                :type "void")
+                nil [100457 100804])
+            ("grpc_chttp2_config_default_keepalive_args" function
+               (:arguments 
+                  ( ("args" variable
+                       (:pointer 1
+                        :type ("grpc_channel_args" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [100853 100877])
+                    ("is_client" variable (:type "bool") (reparse-symbol arg-sub-list) [100925 100940]))                  
+                :type "void")
+                nil [100806 103404])
+            ("init_keepalive_ping_locked" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [103445 103455])
+                    ("error" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [103456 103474]))                  
+                :type "void")
+                nil [103406 104852])
+            ("start_keepalive_ping_locked" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [104894 104904])
+                    ("error" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [104905 104923]))                  
+                :type "void")
+                nil [104854 105215])
+            ("finish_keepalive_ping_locked" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [105258 105268])
+                    ("error" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [105269 105287]))                  
+                :type "void")
+                nil [105217 105875])
+            ("keepalive_watchdog_fired_locked" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [105921 105931])
+                    ("error" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [105932 105950]))                  
+                :type "void")
+                nil [105877 106800])
+            ("connectivity_state_set" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("t" variable
+                       (:pointer 1
+                        :type ("grpc_chttp2_transport" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [106940 106965])
+                    ("state" variable (:type ("grpc_connectivity_state" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [107001 107031])
+                    ("error" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [107067 107085])
+                    ("reason" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [107086 107105]))                  
+                :type "void")
+                nil [106905 107317])
+            ("set_pollset" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("gt" variable
+                       (:pointer 1
+                        :type ("grpc_transport" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [107446 107465])
+                    ("gs" variable
+                       (:pointer 1
+                        :type ("grpc_stream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [107466 107482])
+                    ("pollset" variable
+                       (:pointer 1
+                        :type ("grpc_pollset" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [107507 107529]))                  
+                :type "void")
+                nil [107422 107638])
+            ("set_pollset_set" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("gt" variable
+                       (:pointer 1
+                        :type ("grpc_transport" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [107668 107687])
+                    ("gs" variable
+                       (:pointer 1
+                        :type ("grpc_stream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [107688 107704])
+                    ("pollset_set" variable
+                       (:pointer 1
+                        :type ("grpc_pollset_set" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [107733 107763]))                  
+                :type "void")
+                nil [107640 107880])
+            ("reset_byte_stream" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [108013 108023])
+                    ("error" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [108024 108042]))                  
+                :type "void")
+                nil [107983 108628])
+            ("incoming_byte_stream_unref" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("bs" variable
+                       (:pointer 1
+                        :type ("grpc_chttp2_incoming_byte_stream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [108669 108706]))                  
+                :type "void")
+                nil [108630 108762])
+            ("incoming_byte_stream_next_locked" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("argp" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [108809 108820])
+                    ("error_ignored" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [108866 108892]))                  
+                :type "void")
+                nil [108764 110669])
+            ("incoming_byte_stream_next" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("byte_stream" variable
+                       (:pointer 1
+                        :type ("grpc_byte_stream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [110709 110739])
+                    ("max_size_hint" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [110778 110799])
+                    ("on_complete" variable
+                       (:pointer 1
+                        :type ("grpc_closure" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [110838 110864]))                  
+                :type "bool")
+                nil [110671 111627])
+            ("incoming_byte_stream_pull" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("byte_stream" variable
+                       (:pointer 1
+                        :type ("grpc_byte_stream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [111674 111704])
+                    ("slice" variable
+                       (:pointer 1
+                        :type ("grpc_slice" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [111750 111768]))                  
+                :type ("grpc_error" type (:type "class") nil nil))
+                nil [111629 113684])
+            ("incoming_byte_stream_destroy_locked" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("byte_stream" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [113734 113752])
+                    ("error_ignored" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [113801 113827]))                  
+                :type "void")
+                nil [113686 113828])
+            ("incoming_byte_stream_destroy" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("byte_stream" variable
+                       (:pointer 1
+                        :type ("grpc_byte_stream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [113871 113901]))                  
+                :type "void")
+                nil [113830 114337])
+            ("incoming_byte_stream_publish_error" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("bs" variable
+                       (:pointer 1
+                        :type ("grpc_chttp2_incoming_byte_stream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [114391 114428])
+                    ("error" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [114429 114447]))                  
+                :type "void")
+                nil [114339 114780])
+            ("grpc_chttp2_incoming_byte_stream_push" function
+               (:pointer 1
+                :arguments 
+                  ( ("bs" variable
+                       (:pointer 1
+                        :type ("grpc_chttp2_incoming_byte_stream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [114837 114874])
+                    ("slice" variable (:type ("grpc_slice" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [114875 114892])
+                    ("slice_out" variable
+                       (:pointer 1
+                        :type ("grpc_slice" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [114897 114919]))                  
+                :type ("grpc_error" type (:type "class") nil nil))
+                nil [114782 115413])
+            ("grpc_chttp2_incoming_byte_stream_finished" function
+               (:pointer 1
+                :arguments 
+                  ( ("bs" variable
+                       (:pointer 1
+                        :type ("grpc_chttp2_incoming_byte_stream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [115474 115511])
+                    ("error" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [115512 115530])
+                    ("reset_on_error" variable (:type "bool") (reparse-symbol arg-sub-list) [115535 115555]))                  
+                :type ("grpc_error" type (:type "class") nil nil))
+                nil [115415 115927])
+            ("incoming_byte_stream_shutdown" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("byte_stream" variable
+                       (:pointer 1
+                        :type ("grpc_byte_stream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [115971 116001])
+                    ("error" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [116044 116062]))                  
+                :type "void")
+                nil [115929 116269])
+            ("grpc_chttp2_incoming_byte_stream_vtable" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :default-value "{
+    incoming_byte_stream_next, incoming_byte_stream_pull,
+    incoming_byte_stream_shutdown, incoming_byte_stream_destroy}"
+                :type ("grpc_byte_stream_vtable" type (:type "class") nil nil))
+                nil [116271 116475])
+            ("incoming_byte_stream_destroy_locked" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("byte_stream" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [116525 116543])
+                    ("error_ignored" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [116592 116618]))                  
+                :type "void")
+                nil [116477 117042])
+            ("grpc_chttp2_incoming_byte_stream_create" function
+               (:pointer 1
+                :arguments 
+                  ( ("t" variable
+                       (:pointer 1
+                        :type ("grpc_chttp2_transport" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [117123 117148])
+                    ("s" variable
+                       (:pointer 1
+                        :type ("grpc_chttp2_stream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [117149 117171])
+                    ("frame_size" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [117172 117192])
+                    ("flags" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [117197 117212]))                  
+                :type ("grpc_chttp2_incoming_byte_stream" type (:type "class") nil nil))
+                nil [117044 117836])
+            ("post_benign_reclaimer" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("t" variable
+                       (:pointer 1
+                        :type ("grpc_chttp2_transport" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [117977 118002]))                  
+                :type "void")
+                nil [117943 118301])
+            ("post_destructive_reclaimer" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("t" variable
+                       (:pointer 1
+                        :type ("grpc_chttp2_transport" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [118342 118367]))                  
+                :type "void")
+                nil [118303 118685])
+            ("benign_reclaimer_locked" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [118723 118733])
+                    ("error" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [118734 118752]))                  
+                :type "void")
+                nil [118687 119880])
+            ("destructive_reclaimer_locked" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [119923 119933])
+                    ("error" variable
+                       (:pointer 1
+                        :type ("grpc_error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [119934 119952]))                  
+                :type "void")
+                nil [119882 121134])
+            ("grpc_chttp2_initiate_write_reason_string" function
+               (:pointer 1
+                :constant-flag t
+                :arguments 
+                  ( ("reason" variable (:type ("grpc_chttp2_initiate_write_reason" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [121294 121335]))                  
+                :type "char")
+                nil [121236 123221])
+            ("chttp2_get_endpoint" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("t" variable
+                       (:pointer 1
+                        :type ("grpc_transport" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [123265 123283]))                  
+                :type ("grpc_endpoint" type (:type "class") nil nil))
+                nil [123223 123329])
+            ("vtable" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :default-value "{sizeof(grpc_chttp2_stream),
+                                             \"chttp2\",
+                                             init_stream,
+                                             set_pollset,
+                                             set_pollset_set,
+                                             perform_stream_op,
+                                             perform_transport_op,
+                                             destroy_stream,
+                                             destroy_transport,
+                                             chttp2_get_endpoint}"
+                :type ("grpc_transport_vtable" type (:type "class") nil nil))
+                nil [123331 123959])
+            ("get_vtable" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [124008 124013]))                  
+                :type ("grpc_transport_vtable" type (:type "class") nil nil))
+                nil [123961 124033])
+            ("grpc_create_chttp2_transport" function
+               (:pointer 1
+                :arguments 
+                  ( ("channel_args" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("grpc_channel_args" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [124085 124123])
+                    ("ep" variable
+                       (:pointer 1
+                        :type ("grpc_endpoint" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [124124 124142])
+                    ("is_client" variable (:type "bool") (reparse-symbol arg-sub-list) [124143 124158]))                  
+                :type ("grpc_transport" type (:type "class") nil nil))
+                nil [124035 124333])
+            ("grpc_chttp2_transport_start_reading" function
+               (:arguments 
+                  ( ("transport" variable
+                       (:pointer 1
+                        :type ("grpc_transport" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [124381 124407])
+                    ("read_buffer" variable
+                       (:pointer 1
+                        :type ("grpc_slice_buffer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [124408 124439])
+                    ("notify_on_receive_settings" variable
+                       (:pointer 1
+                        :type ("grpc_closure" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [124444 124485]))                  
+                :type "void")
+                nil [124335 124903]))          
+      :file "chttp2_transport.cc"
+      :pointmax 124904
+      :fsize 124903
+      :lastmodtime '(23085 58367 0 0)
+      :unmatched-syntax '((string 3846 . 3863) (string 3716 . 3722))
+      :lexical-table 
+        '(("DEFAULT_SERVER_KEEPALIVE_TIMEOUT_MS" . ((number "20000" 2411 . 2416)))
+          ("CLOSURE_BARRIER_FIRST_REF_BIT" . ((semantic-list "(1 << 16)" 47759 . 47768)))
+          ("DEFAULT_CONNECTION_WINDOW_TARGET" . ((semantic-list "(1024 * 1024)" 2044 . 2057)))
+          ("DEFAULT_MIN_RECV_PING_INTERVAL_WITHOUT_DATA_MS" . ((number "300000" 2665 . 2671)))
+          ("DEFAULT_MAX_PINGS_BETWEEN_DATA" . ((number "0" 2727 . 2728)))
+          ("CLOSURE_BARRIER_MAY_COVER_WRITE" . ((semantic-list "(1 << 1)" 47584 . 47592)))
+          ("MAX_WRITE_BUFFER_SIZE" . ((semantic-list "(64 * 1024 * 1024)" 2119 . 2137)))
+          ("KEEPALIVE_TIME_BACKOFF_MULTIPLIER" . ((number "2" 2529 . 2530)))
+          ("MAX_CLIENT_STREAM_ID" . ((symbol "0x7fffffffu" 3660 . 3671)))
+          ("WRITE_STATE_TUPLE_TO_INT" (spp-arg-list ("p" "i") 39145 . 39151) . ((semantic-list "(2 * (int)(p) + (int)(i))" 39152 . 39177)))
+          ("DEFAULT_MAX_HEADER_LIST_SIZE" . ((semantic-list "(8 * 1024)" 2175 . 2185)))
+          ("DEFAULT_CLIENT_KEEPALIVE_TIME_MS" . ((symbol "INT_MAX" 2228 . 2235)))
+          ("DEFAULT_KEEPALIVE_PERMIT_WITHOUT_CALLS" . ((symbol "false" 2481 . 2486)))
+          ("CLOSURE_BARRIER_STATS_BIT" . ((semantic-list "(1 << 0)" 47363 . 47371)))
+          ("DEFAULT_SERVER_KEEPALIVE_TIME_MS" . ((number "7200000" 2344 . 2351)))
+          ("MAX_WINDOW" . ((symbol "0x7fffffffu" 2077 . 2088)))
+          ("DEFAULT_MIN_SENT_PING_INTERVAL_WITHOUT_DATA_MS" . ((number "300000" 2587 . 2593)))
+          ("DEFAULT_MAX_PING_STRIKES" . ((number "2" 2799 . 2800)))
+          ("DEFAULT_CLIENT_KEEPALIVE_TIMEOUT_MS" . ((number "20000" 2280 . 2285)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :file "frame_data.h"
+      :fsize 2968
+      :lastmodtime '(23085 58367 0 0))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags nil
+      :file "internal.h"
+      :pointmax 9539
+      :fsize 28416
+      :lastmodtime '(23085 58367 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("GRPC_CHTTP2_CLIENT_CONNECT_STRING" . ((string "\"PRI * HTTP/2.0\\r\\n\\r\\nSM\\r\\n\\r\\n\"" 24554 . 24588)))
+          ("GRPC_CHTTP2_UNREF_TRANSPORT" (spp-arg-list ("cl" "t" "r") 26390 . 26400) . ((symbol "grpc_chttp2_unref_transport" 26405 . 26432) (semantic-list "(cl, t, r, __FILE__, __LINE__)" 26432 . 26462)))
+          ("GRPC_CHTTP2_IF_TRACING" (spp-arg-list ("stmt") 24814 . 24820) . 
+              ((IF "if" 24825 . 24827) (semantic-list "(!(grpc_http_trace.enabled()))" 24828 . 24858) (punctuation ";" 24866 . 24867) (ELSE "else" 24903 . 24907) (symbol "stmt" 24944 . 24948)))
+          ("GRPC_CHTTP2_REF_TRANSPORT" (spp-arg-list ("t" "r") 26292 . 26298) . ((symbol "grpc_chttp2_ref_transport" 26303 . 26328) (semantic-list "(t, r, __FILE__, __LINE__)" 26328 . 26354)))
+          ("GRPC_HEADER_SIZE_IN_BYTES" . ((number "5" 24477 . 24478)))
+          ("GRPC_CHTTP2_CLIENT_CONNECT_STRLEN" . ((semantic-list "(sizeof(GRPC_CHTTP2_CLIENT_CONNECT_STRING) - 1)" 24635 . 24682)))
+          ("GRPC_CHTTP2_STREAM_UNREF" (spp-arg-list ("exec_ctx" "stream" "reason") 25632 . 25658) . ((symbol "grpc_chttp2_stream_unref" 25663 . 25687) (semantic-list "(exec_ctx, stream, reason)" 25687 . 25713)))
+          ("GRPC_CORE_EXT_TRANSPORT_CHTTP2_TRANSPORT_INTERNAL_H")
+          ("GRPC_CHTTP2_STREAM_REF" (spp-arg-list ("stream" "reason") 25540 . 25556) . ((symbol "grpc_chttp2_stream_ref" 25561 . 25583) (semantic-list "(stream, reason)" 25583 . 25599)))
+          ("MAX_SIZE_T" . ((semantic-list "(~(size_t)0)" 24498 . 24510)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :file "flow_control.h"
+      :fsize 11317
+      :lastmodtime '(23085 58367 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "frame.h"
+      :fsize 1525
+      :lastmodtime '(23079 46125 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "frame_goaway.h"
+      :fsize 2224
+      :lastmodtime '(23085 58367 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "frame_ping.h"
+      :fsize 1630
+      :lastmodtime '(23085 58367 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "frame_rst_stream.h"
+      :fsize 1654
+      :lastmodtime '(23085 58367 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "frame_settings.h"
+      :fsize 2210
+      :lastmodtime '(23085 58367 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "frame_window_update.h"
+      :fsize 1727
+      :lastmodtime '(23085 58367 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "hpack_encoder.h"
+      :fsize 3772
+      :lastmodtime '(23085 58367 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "hpack_parser.h"
+      :fsize 3810
+      :lastmodtime '(23085 58367 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "incoming_metadata.h"
+      :fsize 1843
+      :lastmodtime '(23085 58367 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "stream_map.h"
+      :fsize 2554
+      :lastmodtime '(23079 46125 0 0)))
+  :file "!Volumes!Transcend!grpc!src!core!ext!transport!chttp2!transport!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

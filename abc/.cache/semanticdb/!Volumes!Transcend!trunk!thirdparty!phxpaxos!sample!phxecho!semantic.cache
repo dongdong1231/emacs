@@ -1,0 +1,337 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("phxpaxos/sm.h" include nil nil [758 782])
+            ("phxpaxos/options.h" include nil nil [783 812])
+            ("stdio.h" include (:system-flag t) nil [813 831])
+            ("unistd.h" include (:system-flag t) nil [832 851])
+            ("phxecho" type
+               (:members 
+                  ( ("PhxEchoSMCtx" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [895 902])
+                            ("iExecuteRet" variable (:type "int") (reparse-symbol classsubparts) [907 923])
+                            ("sEchoRespValue" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [928 955])
+                            ("PhxEchoSMCtx" function
+                               (:constructor-flag t
+                                :type ("PhxEchoSMCtx" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [961 1013]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [874 1016])
+                    ("PhxEchoSM" type
+                       (:superclasses 
+                          ( ("phxpaxos::StateMachine" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [1068 1075])
+                            ("PhxEchoSM" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :type ("PhxEchoSM" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1080 1092])
+                            ("Execute" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("iGroupIdx" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1111 1131])
+                                    ("llInstanceID" variable
+                                       (:constant-flag t
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1132 1160])
+                                    ("sPaxosValue" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1174 1206])
+                                    ("poSMCtx" variable
+                                       (:pointer 1
+                                        :type ("phxpaxos::SMCtx" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1207 1233]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [1098 1234])
+                            ("SMID" function
+                               (:methodconst-flag t
+                                :constant-flag t
+                                :type "int")
+                                (reparse-symbol classsubparts) [1240 1276]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [1018 1279]))                  
+                :type "namespace")
+                nil [853 1286]))          
+      :file "echo_sm.h"
+      :pointmax 1287
+      :fsize 1286
+      :lastmodtime '(23076 41254 0 0)
+      :unmatched-syntax '((symbol 752 . 756) (symbol 745 . 751) (punctuation 744 . 745)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("echo_sm.h" include nil nil [744 764])
+            ("phxpaxos" using (:type ("phxpaxos" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [766 791])
+            ("phxecho" type
+               (:members 
+                  ( ("PhxEchoSM" function
+                       (:constructor-flag t
+                        :parent "PhxEchoSM"
+                        :type ("PhxEchoSM" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [814 842])
+                    ("Execute" function
+                       (:parent "PhxEchoSM"
+                        :arguments 
+                          ( ("iGroupIdx" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [870 890])
+                            ("llInstanceID" variable
+                               (:constant-flag t
+                                :type ("uint64_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [891 919])
+                            ("sPaxosValue" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [929 961])
+                            ("poSMCtx" variable
+                               (:pointer 1
+                                :type ("SMCtx" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [962 978]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [844 1398]))                  
+                :type "namespace")
+                nil [793 1401]))          
+      :file "echo_sm.cpp"
+      :pointmax 1403
+      :fsize 1402
+      :lastmodtime '(23076 41254 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("phxpaxos/node.h" include nil nil [749 775])
+            ("echo_sm.h" include nil nil [776 796])
+            ("string" include (:system-flag t) nil [797 814])
+            ("vector" include (:system-flag t) nil [815 832])
+            ("phxpaxos_plugin/logger_google.h" include nil nil [833 875])
+            ("phxecho" type
+               (:members 
+                  ( ("PhxEchoServer" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [919 926])
+                            ("PhxEchoServer" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("oMyNode" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("phxpaxos::NodeInfo" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [945 980])
+                                    ("vecNodeList" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("phxpaxos::NodeInfoList" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [981 1024]))                                  
+                                :type ("PhxEchoServer" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [931 1025])
+                            ("PhxEchoServer" function
+                               (:prototype-flag t
+                                :destructor-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [1030 1047])
+                            ("RunPaxos" function
+                               (:prototype-flag t
+                                :type "int")
+                                (reparse-symbol classsubparts) [1053 1068])
+                            ("Echo" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("sEchoReqValue" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1083 1117])
+                                    ("sEchoRespValue" variable
+                                       (:reference 1
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1118 1147]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [1074 1148])
+                            ("private" label nil (reparse-symbol classsubparts) [1150 1158])
+                            ("MakeLogStoragePath" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("sLogStoragePath" variable
+                                       (:reference 1
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1186 1216]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [1163 1217])
+                            ("private" label nil (reparse-symbol classsubparts) [1219 1227])
+                            ("m_oMyNode" variable (:type ("phxpaxos::NodeInfo" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1232 1261])
+                            ("m_vecNodeList" variable (:type ("phxpaxos::NodeInfoList" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1266 1303])
+                            ("m_poPaxosNode" variable
+                               (:pointer 1
+                                :type ("phxpaxos::Node" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1309 1340])
+                            ("m_oEchoSM" variable (:type ("PhxEchoSM" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1345 1365]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [897 1368]))                  
+                :type "namespace")
+                nil [877 1371]))          
+      :file "echo_server.h"
+      :pointmax 1372
+      :fsize 1371
+      :lastmodtime '(23076 45716 0 0)
+      :unmatched-syntax '((symbol 743 . 747) (symbol 736 . 742) (punctuation 735 . 736) (symbol 743 . 747) (symbol 736 . 742) (punctuation 735 . 736) (symbol 752 . 756) (symbol 745 . 751) (punctuation 744 . 745)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("echo_server.h" include nil nil [744 768])
+            ("assert.h" include (:system-flag t) nil [769 788])
+            ("string" include (:system-flag t) nil [789 806])
+            ("unistd.h" include (:system-flag t) nil [807 826])
+            ("sys/types.h" include (:system-flag t) nil [827 849])
+            ("sys/stat.h" include (:system-flag t) nil [850 871])
+            ("fcntl.h" include (:system-flag t) nil [872 890])
+            ("phxpaxos" using (:type ("phxpaxos" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [892 917])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [918 938])
+            ("phxecho" type
+               (:members 
+                  ( ("PhxEchoServer" function
+                       (:constructor-flag t
+                        :parent "PhxEchoServer"
+                        :arguments 
+                          ( ("oMyNode" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("phxpaxos::NodeInfo" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [992 1027])
+                            ("vecNodeList" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("phxpaxos::NodeInfoList" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1028 1071]))                          
+                        :type ("PhxEchoServer" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [961 1152])
+                    ("PhxEchoServer" function
+                       (:destructor-flag t
+                        :parent "PhxEchoServer"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1154 1217])
+                    ("MakeLogStoragePath" function
+                       (:parent "PhxEchoServer"
+                        :arguments 
+                          ( ("sLogStoragePath" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1259 1289]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [1219 1759])
+                    ("RunPaxos" function
+                       (:parent "PhxEchoServer"
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [1761 2874])
+                    ("Echo" function
+                       (:parent "PhxEchoServer"
+                        :arguments 
+                          ( ("sEchoReqValue" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2902 2936])
+                            ("sEchoRespValue" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2937 2966]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [2876 3570]))                  
+                :type "namespace")
+                nil [940 3577]))          
+      :file "echo_server.cpp"
+      :pointmax 3579
+      :fsize 3578
+      :lastmodtime '(23076 41254 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("echo_server.h" include nil nil [744 768])
+            ("stdio.h" include (:system-flag t) nil [769 787])
+            ("iostream" include (:system-flag t) nil [788 807])
+            ("string" include (:system-flag t) nil [808 825])
+            ("vector" include (:system-flag t) nil [826 843])
+            ("string.h" include (:system-flag t) nil [844 863])
+            ("phxpaxos/options.h" include nil nil [864 893])
+            ("phxecho" using (:type ("phxecho" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [895 919])
+            ("phxpaxos" using (:type ("phxpaxos" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [920 945])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [946 966])
+            ("parse_ipport" function
+               (:arguments 
+                  ( ("pcStr" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [985 1004])
+                    ("oNodeInfo" variable
+                       (:reference 1
+                        :type ("NodeInfo" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1005 1026]))                  
+                :type "int")
+                nil [968 1237])
+            ("parse_ipport_list" function
+               (:arguments 
+                  ( ("pcStr" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1261 1280])
+                    ("vecNodeInfoList" variable
+                       (:reference 1
+                        :type ("NodeInfoList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1281 1312]))                  
+                :type "int")
+                nil [1239 1957])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [1968 1977])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1978 1991]))                  
+                :type "int")
+                nil [1959 3157]))          
+      :file "main.cpp"
+      :pointmax 3159
+      :fsize 3158
+      :lastmodtime '(23076 41254 0 0)
+      :unmatched-syntax nil))
+  :file "!Volumes!Transcend!trunk!thirdparty!phxpaxos!sample!phxecho!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

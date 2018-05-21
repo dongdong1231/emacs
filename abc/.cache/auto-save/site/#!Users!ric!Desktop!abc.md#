@@ -1,0 +1,66 @@
+template <class _Tp, class _Dp = default_delete<_Tp> >
+class _LIBCPP_TEMPLATE_VIS unique_ptr {
+public:
+  typedef _Tp element_type;
+  typedef _Dp deleter_type;
+  typedef typename __pointer_type<_Tp, deleter_type>::type pointer;
+
+  static_assert(!is_rvalue_reference<deleter_type>::value,
+                "the specified deleter type cannot be an rvalue reference");
+
+
+template <class _Tp>
+struct _LIBCPP_TEMPLATE_VIS default_delete {
+    static_assert(!is_function<_Tp>::value,
+                  "default_delete cannot be instantiated for function types");
+#ifndef _LIBCPP_CXX03_LANG
+  _LIBCPP_INLINE_VISIBILITY constexpr default_delete() noexcept = default;
+#else
+  _LIBCPP_INLINE_VISIBILITY default_delete() {}
+#endif
+  template <class _Up>
+  _LIBCPP_INLINE_VISIBILITY
+  default_delete(const default_delete<_Up>&,
+                 typename enable_if<is_convertible<_Up*, _Tp*>::value>::type* =
+                     0) _NOEXCEPT {}
+
+  _LIBCPP_INLINE_VISIBILITY void operator()(_Tp* __ptr) const _NOEXCEPT {
+    static_assert(sizeof(_Tp) > 0,
+                  "default_delete can not delete incomplete type");
+    static_assert(!is_void<_Tp>::value,
+                  "default_delete can not delete incomplete type");
+    delete __ptr;
+  }
+};
+
+struct __pointer_type
+{
+    typedef typename _Dp::pointer type;
+};
+
+
+
+template <class _Tp, class... _Args>
+struct _LIBCPP_TEMPLATE_VIS is_constructible
+    : public __libcpp_is_constructible<_Tp, _Args...>::type {};
+
+template <class _Tp, class... _Args>
+struct __libcpp_is_constructible;
+
+template <class _Tp, class... _Args>
+struct __libcpp_is_constructible
+{
+  static_assert(sizeof...(_Args) > 1, "Wrong specialization");
+  typedef decltype(__is_constructible_helper::__test_nary<_Tp, _Args...>(0))
+      type;
+};
+
+template <class _Tp>
+struct __libcpp_is_constructible<_Tp> : __is_default_constructible<_Tp> {};
+
+template <class _Tp, class _A0>
+struct __libcpp_is_constructible<_Tp, _A0>
+    : public decltype(__is_constructible_helper::__test_unary<_Tp, _A0>(0))
+{};
+
+

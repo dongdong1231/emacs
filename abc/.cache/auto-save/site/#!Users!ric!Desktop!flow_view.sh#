@@ -1,0 +1,3 @@
+
+
+select a.bid.bid_request.openrtb_bid_request.app.bundle bundle,  imp.bidfloor bidfloor, imp.banner.w w, imp.banner.h h, count(distinct a.bid.bid_request.openrtb_bid_request.device.didmd5) id_cnt, count(1) cnt from bid_total a, a.bid.bid_request.openrtb_bid_request.imp where a.bid_trace_info.adx_info.adx_platform = 16384*2 and period >= 2018020100 group by bidfloor,   w, h , bundle order by cnt desc limit 1000;
